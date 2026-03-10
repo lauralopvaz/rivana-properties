@@ -80,7 +80,7 @@ const Listings = () => {
               <Link to={localePath('/property/oceana-residences')} className="group block bg-card border border-border rounded-sm overflow-hidden hover:border-primary/30 transition-colors">
                 <div className="aspect-[16/10] gradient-placeholder relative group-hover:scale-105 transition-transform duration-700">
                   <div className="absolute top-3 left-3 flex gap-2">
-                    <span className="text-xs font-body tracking-wider uppercase bg-deep-dark/80 backdrop-blur text-foreground px-2.5 py-1 rounded-sm">
+                    <span className="text-xs font-body tracking-wider uppercase bg-secondary/80 backdrop-blur text-secondary-foreground px-2.5 py-1 rounded-sm">
                       {p.status === 'pre-sale' ? (language === 'es' ? 'Preventa' : 'Pre-Sale') : (language === 'es' ? 'Listo' : 'Ready')}
                     </span>
                     {p.yield && (

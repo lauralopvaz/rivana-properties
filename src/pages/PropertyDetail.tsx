@@ -50,7 +50,7 @@ const PropertyDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-3">
           <div className="lg:col-span-3 aspect-[16/9] gradient-placeholder rounded-sm relative">
             <span className="absolute top-4 left-4 eyebrow text-xs bg-primary/20 px-3 py-1 rounded-sm">{language === 'es' ? 'Preventa' : 'Pre-Sale'}</span>
-            <button className="absolute top-4 right-4 text-xs font-body bg-deep-dark/80 backdrop-blur text-foreground px-3 py-1.5 rounded-sm border border-border">{language === 'es' ? 'Todas las Fotos (24)' : 'All Photos (24)'}</button>
+            <button className="absolute top-4 right-4 text-xs font-body bg-card/80 backdrop-blur text-foreground px-3 py-1.5 rounded-sm border border-border">{language === 'es' ? 'Todas las Fotos (24)' : 'All Photos (24)'}</button>
           </div>
           <div className="hidden lg:grid grid-rows-3 gap-3">
             {[1, 2, 3].map((i) => (

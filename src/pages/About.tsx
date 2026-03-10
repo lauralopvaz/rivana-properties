@@ -32,7 +32,7 @@ const About = () => {
     : 'Meet the Rivana Properties team. Boutique real estate advisory in Cancún and the Riviera Maya with over $140M in sales.';
 
   return (
-    <div className="light-page">
+    <div>
       <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en/about' : '/about'} />
 
       {/* Hero */}
@@ -60,7 +60,7 @@ const About = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <div className="bg-deep-dark text-foreground rounded-sm p-8">
+            <div className="bg-[hsl(30_15%_93%)] border border-border rounded-sm p-8">
               <div className="flex items-center gap-3 mb-6">
                 {team.slice(0, 4).map((t) => (
                   <div key={t.name} className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-sm">{t.initial}</div>
@@ -81,7 +81,7 @@ const About = () => {
       </section>
 
       {/* Manifesto */}
-      <section className="py-20 bg-deep-dark text-foreground">
+      <section className="py-20 bg-[hsl(30_15%_93%)] border-y border-border">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <p className="font-display text-3xl lg:text-4xl italic leading-relaxed">
@@ -127,7 +127,7 @@ const About = () => {
           {team.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 80}>
               <div className="bg-card border border-border rounded-sm overflow-hidden">
-                <div className="relative h-48 bg-gradient-to-br from-deep-dark to-muted flex items-center justify-center">
+                <div className="relative h-48 bg-gradient-to-br from-[hsl(30_15%_90%)] to-muted flex items-center justify-center">
                   <span className="font-display text-7xl text-primary/20">{member.initial}</span>
                   <span className="absolute bottom-3 right-3 text-xs font-body bg-muted/80 backdrop-blur text-foreground px-2 py-1 rounded-sm">{member.lang}</span>
                 </div>
@@ -155,7 +155,7 @@ const About = () => {
       </section>
 
       {/* Numbers */}
-      <section className="py-20 bg-deep-dark text-foreground">
+      <section className="py-20 bg-[hsl(30_15%_93%)] border-y border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
             {[
@@ -199,7 +199,7 @@ const About = () => {
       </section>
 
       {/* Contact */}
-      <section className="py-20 bg-deep-dark text-foreground">
+      <section className="py-20 bg-[hsl(30_15%_93%)] border-y border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <ScrollReveal>
@@ -211,9 +211,9 @@ const About = () => {
                   : 'Whether you\'re exploring your first property in México or expanding your portfolio, we\'re here to help.'}
               </p>
               <div className="space-y-3">
-                <a href="mailto:hola@rivanaproperties.com" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><span className="text-primary">✉</span> hola@rivanaproperties.com</a>
-                <a href="tel:+529981234567" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><PhoneIcon className="w-4 h-4 text-primary" /> +52 998 123 4567</a>
-                <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> WhatsApp</a>
+                <a href="mailto:rivanapropertiesmx@gmail.com" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><span className="text-primary">✉</span> rivanapropertiesmx@gmail.com</a>
+                <a href="tel:+5299811457224" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><PhoneIcon className="w-4 h-4 text-primary" /> +52 998 114 57224</a>
+                <a href="https://wa.me/5299811457224" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> WhatsApp</a>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
