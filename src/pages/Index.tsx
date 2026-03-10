@@ -99,7 +99,7 @@ const Home = () => {
               <ScrollReveal key={s.num} delay={i * 100}>
                 <div className="text-center lg:text-left">
                   <span className="font-display text-3xl lg:text-4xl text-primary">{s.num}</span>
-                  <p className="text-sm text-foreground/80 mt-3 font-body uppercase tracking-widest leading-relaxed">{s.text}</p>
+                  <p className="text-sm text-foreground mt-3 font-body uppercase tracking-widest leading-relaxed">{s.text}</p>
                 </div>
               </ScrollReveal>
             ))}
