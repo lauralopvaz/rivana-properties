@@ -204,7 +204,7 @@ const Home = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <form className="bg-card border border-border rounded-sm p-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="bg-card border border-border rounded-sm p-8 space-y-5 shadow-sm" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input placeholder={t('form.firstName')} className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
                   <input placeholder={t('form.lastName')} className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
