@@ -112,7 +112,7 @@ const Home = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('section.destinations')}</p>
-            <h2 className="mb-16">{t('section.collections')}</h2>
+            <h2 className="mb-16 text-secondary">{t('section.collections')}</h2>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -148,11 +148,11 @@ const Home = () => {
       </section>
 
       {/* ── FEATURED PROPERTIES ── */}
-      <section className="py-24 lg:py-32 bg-card/50">
+      <section className="py-24 lg:py-32 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('section.featured')}</p>
-            <h2 className="mb-16">{t('section.featuredTitle')}</h2>
+            <h2 className="mb-16 text-secondary">{t('section.featuredTitle')}</h2>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -160,11 +160,11 @@ const Home = () => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
                 <ScrollReveal key={p.name} delay={i * 100}>
-                  <Link to={localePath('/property/oceana-residences')} className="group block bg-background rounded-sm overflow-hidden shadow-sm">
+                  <Link to={localePath('/property/oceana-residences')} className="group block bg-background rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.08)] border border-border">
                     <div className="aspect-[16/10] gradient-placeholder group-hover:scale-105 transition-transform duration-700" />
                     <div className="p-6">
                       <span className="eyebrow text-xs">{zoneName}</span>
-                      <h3 className="text-xl mt-2 mb-4">{p.name}</h3>
+                      <h3 className="text-xl mt-2 mb-4 text-secondary">{p.name}</h3>
                       <div className="flex items-center gap-5 text-sm text-muted-foreground font-body mb-4">
                         <span className="flex items-center gap-1.5"><BedIcon className="w-4 h-4" /> {p.beds} {language === 'es' ? 'Rec.' : 'Beds'}</span>
                         <span className="flex items-center gap-1.5"><RulerIcon className="w-4 h-4" /> {p.area} m²</span>
@@ -191,7 +191,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <p className="eyebrow mb-4">{t('section.schedule')}</p>
-              <h2 className="mb-6">{t('section.scheduleTitle')}</h2>
+              <h2 className="mb-6 text-secondary">{t('section.scheduleTitle')}</h2>
               <p className="text-muted-foreground mb-6 max-w-md">
                 {t('section.scheduleDesc')}
               </p>
@@ -226,13 +226,13 @@ const Home = () => {
       </section>
 
       {/* ── BLOG PREVIEW ── */}
-      <section className="py-24 lg:py-32 bg-card/50 border-t border-border">
+      <section className="py-24 lg:py-32 bg-background border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="flex items-end justify-between mb-16">
               <div>
                 <p className="eyebrow mb-4">{t('section.blog')}</p>
-                <h2>{t('section.blogTitle')}</h2>
+                <h2 className="text-secondary">{t('section.blogTitle')}</h2>
               </div>
               <Link to={localePath('/journal')} className="text-sm text-primary font-body flex items-center gap-1 gold-underline">
                 {t('blog.viewAll')} <ArrowRightIcon className="w-4 h-4" />
@@ -246,7 +246,7 @@ const Home = () => {
                 <Link to={localePath(`/journal/${post.slug}`)} className="group block">
                   <div className="aspect-[16/10] gradient-placeholder-alt rounded-sm mb-4 group-hover:scale-[1.02] transition-transform duration-500" />
                   <span className="eyebrow text-xs">{post.category[language]}</span>
-                  <h4 className="mt-2 mb-3 group-hover:text-primary transition-colors">{post.title[language]}</h4>
+                  <h4 className="mt-2 mb-3 text-secondary group-hover:text-primary transition-colors">{post.title[language]}</h4>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground font-body">
                     <span>{post.date}</span>
                     <span>·</span>
