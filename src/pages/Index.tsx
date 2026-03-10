@@ -167,10 +167,10 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {sortedDestinations.map((d, i) => (
-              <ScrollReveal key={d.key} delay={i * 80} className={i === 0 ? 'md:col-span-2 lg:col-span-2' : ''}>
+              <ScrollReveal key={d.key} delay={i * 80} className={`${i === 0 ? 'md:col-span-2 lg:col-span-2' : ''} ${i === 1 ? 'h-full' : ''}`}>
                 <Link
                   to={localePath(d.basePath)}
-                  className="group block relative overflow-hidden aspect-[16/10] rounded-sm"
+                  className={`group block relative overflow-hidden rounded-sm ${i === 1 ? 'h-full min-h-[280px]' : 'aspect-[16/10]'}`}
                 >
                   <img
                     src={destinationImages[d.key]}
