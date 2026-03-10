@@ -91,7 +91,7 @@ export const Navbar = () => {
             <Link
               key={link.href}
               to={localePath(link.href)}
-              className="font-body text-sm font-semibold tracking-widest uppercase text-foreground/90 hover:text-primary transition-colors duration-300 gold-underline"
+              className="font-body text-sm font-normal tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors duration-300 gold-underline"
             >
               {link.label}
             </Link>
