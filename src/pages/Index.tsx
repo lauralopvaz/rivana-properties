@@ -177,20 +177,20 @@ const Home = () => {
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_0%/0.7)] via-[hsl(0_0%_0%/0.2)] to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_0%/0.85)] via-[hsl(0_0%_0%/0.35)] to-[hsl(0_0%_0%/0.05)]" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     {d.chips[language][0] && (
-                      <span className="inline-block text-xs font-body tracking-wider uppercase bg-primary/20 text-primary px-3 py-1 rounded-sm mb-3">
+                      <span className="inline-block text-xs font-body font-medium tracking-wider uppercase bg-primary/30 text-primary px-3 py-1 rounded-sm mb-3 backdrop-blur-sm border border-primary/20">
                         {d.chips[language][0]}
                       </span>
                     )}
-                    <h3 className="text-2xl mb-1 text-[hsl(var(--pearl))]">{d.name[language]}</h3>
-                    <div className="flex items-center gap-4 text-sm text-[hsl(var(--pearl))]/60 font-body">
+                    <h3 className="text-2xl mb-2 text-[hsl(var(--pearl))] drop-shadow-[0_1px_3px_hsl(0_0%_0%/0.5)]">{d.name[language]}</h3>
+                    <div className="flex items-center gap-4 text-sm text-[hsl(var(--pearl))]/80 font-body font-light">
                       <span>{language === 'es' ? 'Desde' : 'From'} {d.stats[1]?.val}</span>
                       <span>·</span>
                       <span>{d.stats[0]?.val} {language === 'es' ? 'propiedades' : 'properties'}</span>
                     </div>
-                    <span className="inline-flex items-center gap-1 mt-3 text-sm text-primary font-body opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="inline-flex items-center gap-1 mt-3 text-sm text-primary font-body font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {t('card.explore')} <ArrowRightIcon className="w-4 h-4" />
                     </span>
                   </div>
