@@ -68,12 +68,12 @@ export const Footer = () => {
           <div>
             <h4 className="eyebrow mb-6">{t('footer.properties')}</h4>
             <ul className="space-y-3">
-              <li><Link to={localePath('/listings')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.allListings')}</Link></li>
-              <li><Link to={localePath('/presale')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.presale')}</Link></li>
-              <li><Link to={localePath('/cancun/zona-hotelera/penthouses')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.penthouses')}</Link></li>
+              <li><Link to={localePath('/listings')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.allListings')}</Link></li>
+              <li><Link to={localePath('/presale')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.presale')}</Link></li>
+              <li><Link to={localePath('/cancun/zona-hotelera/penthouses')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.penthouses')}</Link></li>
               {/* Extra internal links to P1 destinations */}
-              <li><Link to={localePath('/cancun/zona-hotelera/condos')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Condos Zona Hotelera' : 'Hotel Zone Condos'}</Link></li>
-              <li><Link to={localePath('/cancun/costa-mujeres/preventa')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Preventa Costa Mujeres' : 'Costa Mujeres Pre-Sale'}</Link></li>
+              <li><Link to={localePath('/cancun/zona-hotelera/condos')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Condos Zona Hotelera' : 'Hotel Zone Condos'}</Link></li>
+              <li><Link to={localePath('/cancun/costa-mujeres/preventa')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Preventa Costa Mujeres' : 'Costa Mujeres Pre-Sale'}</Link></li>
             </ul>
           </div>
 
