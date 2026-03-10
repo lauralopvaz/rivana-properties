@@ -11,7 +11,7 @@ export const Footer = () => {
   const others = destinations.filter((d) => d.priority > 1);
 
   return (
-    <footer className="bg-deep-dark border-t border-border">
+    <footer className="bg-background border-t border-border">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand */}

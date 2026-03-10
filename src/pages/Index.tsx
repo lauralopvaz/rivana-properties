@@ -202,7 +202,7 @@ const Home = () => {
       </section>
 
       {/* ── FEATURED PROPERTIES ── */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-16 lg:py-20 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('section.featured')}</p>
@@ -259,7 +259,7 @@ const Home = () => {
       </section>
 
       {/* ── SCHEDULE A VISIT ── */}
-      <section className="py-24 lg:py-32 bg-background relative">
+      <section className="py-16 lg:py-20 bg-background relative">
         {/* Decorative top divider */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 flex items-center gap-4 -translate-y-1/2">
           <span className="w-16 h-px bg-primary/40" />
@@ -305,7 +305,7 @@ const Home = () => {
       </section>
 
       {/* ── BLOG PREVIEW ── */}
-      <section className="py-24 lg:py-32 bg-background border-t border-border">
+      <section className="py-16 lg:py-20 bg-background border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="flex items-end justify-between mb-16">
