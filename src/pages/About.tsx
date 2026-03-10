@@ -199,7 +199,7 @@ const About = () => {
       </section>
 
       {/* Contact */}
-      <section className="py-20 bg-deep-dark text-foreground">
+      <section className="py-20 bg-[hsl(30_15%_93%)] border-y border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <ScrollReveal>
