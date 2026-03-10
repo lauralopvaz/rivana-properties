@@ -81,7 +81,7 @@ const About = () => {
       </section>
 
       {/* Manifesto */}
-      <section className="py-20 bg-deep-dark text-foreground">
+      <section className="py-20 bg-[hsl(30_15%_93%)] border-y border-border">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <p className="font-display text-3xl lg:text-4xl italic leading-relaxed">
