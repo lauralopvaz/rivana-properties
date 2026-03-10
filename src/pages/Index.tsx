@@ -8,6 +8,7 @@ import { destinations } from '@/data/destinations';
 import { journalArticles } from '@/data/journal-articles';
 import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, LocationIcon, WavesIcon, GolfIcon, SparklesIcon, AnchorIcon, SunIcon, SwimIcon } from '@/components/icons';
 import homeHero from '@/assets/home-hero.jpg';
+import presaleHero from '@/assets/presale-hero.jpg';
 
 // Destination images
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
