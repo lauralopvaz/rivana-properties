@@ -51,7 +51,7 @@ export const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setDestOpen(!destOpen)}
-              className="font-body text-sm font-semibold tracking-widest uppercase text-foreground/90 hover:text-primary transition-colors duration-300 gold-underline flex items-center gap-1"
+              className="font-body text-sm font-normal tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors duration-300 gold-underline flex items-center gap-1"
             >
               {t('nav.destinations')}
               <svg className={`w-3 h-3 transition-transform ${destOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polyline points="6 9 12 15 18 9" /></svg>
