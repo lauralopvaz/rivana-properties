@@ -129,7 +129,7 @@ export const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-deep-dark/98 backdrop-blur-md border-t border-border animate-fade-in">
+        <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border animate-fade-in">
           <div className="flex flex-col px-6 py-8 gap-6">
             {/* Destinations section */}
             <div>
