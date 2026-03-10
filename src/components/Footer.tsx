@@ -49,14 +49,14 @@ export const Footer = () => {
             <ul className="space-y-3">
               {p1.map((d) => (
                 <li key={d.key}>
-                  <Link to={localePath(d.basePath)} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                   <Link to={localePath(d.basePath)} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">
                     {d.name[language]}
                   </Link>
                 </li>
               ))}
               {others.map((d) => (
                 <li key={d.key}>
-                  <Link to={localePath(d.basePath)} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link to={localePath(d.basePath)} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">
                     {d.name[language]}
                   </Link>
                 </li>
