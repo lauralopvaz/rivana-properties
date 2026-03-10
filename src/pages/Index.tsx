@@ -92,7 +92,7 @@ const Home = () => {
       </section>
 
       {/* ── SERVICES ── */}
-      <section className="py-16 border-y border-border bg-deep-dark">
+      <section className="py-16 border-y border-border bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((s, i) => (
