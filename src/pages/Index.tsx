@@ -41,8 +41,8 @@ const Home = () => {
     <div>
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 gradient-placeholder" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-deep-dark/80" />
+        <img src={homeHero} alt="Luxury beachfront property in Cancún" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-background/60" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center">
           <p className="eyebrow mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Luxury Real Estate Advisory
