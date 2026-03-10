@@ -37,7 +37,7 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
-        scrolled ? 'bg-background/95 backdrop-blur-md border-b border-border' : 'bg-transparent'
+        scrolled ? 'bg-background/95 backdrop-blur-md border-b border-border' : 'bg-gradient-to-b from-[hsl(0_0%_0%/0.5)] to-transparent'
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
@@ -51,7 +51,7 @@ export const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setDestOpen(!destOpen)}
-              className="font-body text-sm tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors duration-300 gold-underline flex items-center gap-1"
+              className="font-body text-sm font-semibold tracking-widest uppercase text-foreground/90 hover:text-primary transition-colors duration-300 gold-underline flex items-center gap-1"
             >
               {t('nav.destinations')}
               <svg className={`w-3 h-3 transition-transform ${destOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polyline points="6 9 12 15 18 9" /></svg>
@@ -91,7 +91,7 @@ export const Navbar = () => {
             <Link
               key={link.href}
               to={localePath(link.href)}
-              className="font-body text-sm tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors duration-300 gold-underline"
+              className="font-body text-sm font-semibold tracking-widest uppercase text-foreground/90 hover:text-primary transition-colors duration-300 gold-underline"
             >
               {link.label}
             </Link>
