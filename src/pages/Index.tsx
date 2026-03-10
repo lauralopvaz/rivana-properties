@@ -8,6 +8,7 @@ import { destinations } from '@/data/destinations';
 import { journalArticles } from '@/data/journal-articles';
 import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, LocationIcon, WavesIcon, GolfIcon, SparklesIcon, AnchorIcon, SunIcon, SwimIcon } from '@/components/icons';
 import homeHero from '@/assets/home-hero.jpg';
+import presaleHero from '@/assets/presale-hero.jpg';
 
 // Destination images
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
@@ -198,6 +199,34 @@ const Home = () => {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── PRESALE BANNER ── */}
+      <section className="relative py-28 lg:py-36 overflow-hidden">
+        <img src={presaleHero} alt={language === 'es' ? 'Proyectos en preventa' : 'Pre-sale projects'} className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-[hsl(215_65%_8%/0.7)]" />
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center">
+          <ScrollReveal>
+            <div className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center mx-auto mb-6">
+              <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+            </div>
+            <p className="eyebrow mb-4">{language === 'es' ? 'Oportunidad' : 'Opportunity'}</p>
+            <h2 className="text-[hsl(var(--pearl))] mb-4">
+              {language === 'es' ? 'Proyectos en ' : 'Pre-Sale '}
+              <em className="text-primary not-italic font-display italic">{language === 'es' ? 'Pre-Venta' : 'Projects'}</em>
+            </h2>
+            <p className="font-body text-[hsl(var(--pearl))]/70 max-w-xl mx-auto mb-8">
+              {language === 'es'
+                ? 'Accede a los mejores precios y condiciones de pago antes de que las propiedades salgan al mercado.'
+                : 'Access the best prices and payment plans before properties hit the market.'}
+            </p>
+            <Button variant="gold" size="lg" asChild>
+              <Link to={localePath('/presale')} className="uppercase tracking-widest text-sm">
+                {language === 'es' ? 'Descubrir Proyectos' : 'Discover Projects'}
+              </Link>
+            </Button>
+          </ScrollReveal>
         </div>
       </section>
 

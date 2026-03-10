@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { LocationIcon, PhoneIcon, MailIcon } from '@/components/icons';
+import { LocationIcon, PhoneIcon, MailIcon, InstagramIcon, PinterestIcon } from '@/components/icons';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { destinations } from '@/data/destinations';
 
@@ -33,6 +33,12 @@ export const Footer = () => {
               </a>
               <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <LocationIcon className="w-5 h-5" />
+              </a>
+              <a href="https://instagram.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <InstagramIcon className="w-5 h-5" />
+              </a>
+              <a href="https://pinterest.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <PinterestIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
