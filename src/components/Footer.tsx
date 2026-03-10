@@ -89,8 +89,8 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">{t('footer.rights')}</p>
-          <p className="text-xs text-muted-foreground">hola@rivanaproperties.com</p>
+          <p className="text-sm text-muted-foreground">{t('footer.rights')}</p>
+          <p className="text-sm text-muted-foreground">rivanapropertiesmx@gmail.com</p>
         </div>
       </div>
     </footer>
