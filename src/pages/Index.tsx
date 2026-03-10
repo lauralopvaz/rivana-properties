@@ -160,7 +160,7 @@ const Home = () => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
                 <ScrollReveal key={p.name} delay={i * 100}>
-                  <Link to={localePath('/property/oceana-residences')} className="group block bg-background rounded-sm overflow-hidden shadow-sm">
+                  <Link to={localePath('/property/oceana-residences')} className="group block bg-background rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.08)] border border-border">
                     <div className="aspect-[16/10] gradient-placeholder group-hover:scale-105 transition-transform duration-700" />
                     <div className="p-6">
                       <span className="eyebrow text-xs">{zoneName}</span>
