@@ -8,9 +8,9 @@ import homeHero from '@/assets/home-hero.jpg';
 /* ── Data ── */
 const services = [
   { num: '01', text: 'Facilitamos cada paso del proceso legal y notarial' },
-  { num: '02', text: 'Inventario curado de propiedades de alto retorno' },
-  { num: '03', text: 'Preventas con condiciones preferentes para nuestros clientes' },
-  { num: '04', text: 'Asesoría especializada para compradores internacionales' },
+  { num: '02', text: 'Inventario curado de propiedades con alto potencial de retorno' },
+  { num: '03', text: 'Acceso a preventas con condiciones exclusivas para nuestros clientes' },
+  { num: '04', text: 'Asesoría especializada para inversionistas internacionales' },
 ];
 
 const destinations = [
