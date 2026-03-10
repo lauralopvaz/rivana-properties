@@ -72,7 +72,7 @@ const Home = () => {
             {t('hero.tagline').split(',')[0]},{' '}
             <em className="text-primary not-italic font-display italic">{t('hero.tagline').split(',')[1]}</em>
           </h1>
-          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.6s' }}>
+          <p className="font-body text-lg text-[hsl(var(--pearl))]/80 max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.6s' }}>
             {t('hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.8s' }}>
