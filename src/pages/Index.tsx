@@ -226,7 +226,7 @@ const Home = () => {
       </section>
 
       {/* ── BLOG PREVIEW ── */}
-      <section className="py-24 lg:py-32 bg-card border-t border-border">
+      <section className="py-24 lg:py-32 bg-card/50 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="flex items-end justify-between mb-16">
