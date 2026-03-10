@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { LocationIcon, PhoneIcon, MailIcon, InstagramIcon, PinterestIcon } from '@/components/icons';
+import { PhoneIcon, MailIcon, InstagramIcon, PinterestIcon, FacebookIcon } from '@/components/icons';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { destinations } from '@/data/destinations';
 
@@ -19,25 +19,25 @@ export const Footer = () => {
             <Link to={localePath('/')} className="font-display text-3xl tracking-[4px] text-primary">
               RIVANA
             </Link>
-            <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-xs">
+            <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-xs">
               {language === 'es'
                 ? 'Tu inversión, tu legado. Asesoría inmobiliaria de lujo en Cancún y la Riviera Maya.'
                 : 'Your investment, your legacy. Luxury real estate advisory in Cancún and the Riviera Maya.'}
             </p>
             <div className="flex items-center gap-3 mt-6">
-              <a href="mailto:hola@rivanaproperties.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:rivanapropertiesmx@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <MailIcon className="w-5 h-5" />
               </a>
-              <a href="tel:+529981234567" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+5299811457224" className="text-muted-foreground hover:text-primary transition-colors">
                 <PhoneIcon className="w-5 h-5" />
               </a>
-              <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <LocationIcon className="w-5 h-5" />
+              <a href="https://www.facebook.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <FacebookIcon className="w-5 h-5" />
               </a>
-              <a href="https://instagram.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/rivana.properties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <InstagramIcon className="w-5 h-5" />
               </a>
-              <a href="https://pinterest.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://mx.pinterest.com/rivanapropertiesmx/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <PinterestIcon className="w-5 h-5" />
               </a>
             </div>
@@ -49,14 +49,14 @@ export const Footer = () => {
             <ul className="space-y-3">
               {p1.map((d) => (
                 <li key={d.key}>
-                  <Link to={localePath(d.basePath)} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                   <Link to={localePath(d.basePath)} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">
                     {d.name[language]}
                   </Link>
                 </li>
               ))}
               {others.map((d) => (
                 <li key={d.key}>
-                  <Link to={localePath(d.basePath)} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link to={localePath(d.basePath)} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">
                     {d.name[language]}
                   </Link>
                 </li>
@@ -68,12 +68,12 @@ export const Footer = () => {
           <div>
             <h4 className="eyebrow mb-6">{t('footer.properties')}</h4>
             <ul className="space-y-3">
-              <li><Link to={localePath('/listings')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.allListings')}</Link></li>
-              <li><Link to={localePath('/presale')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.presale')}</Link></li>
-              <li><Link to={localePath('/cancun/zona-hotelera/penthouses')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.penthouses')}</Link></li>
+              <li><Link to={localePath('/listings')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.allListings')}</Link></li>
+              <li><Link to={localePath('/presale')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.presale')}</Link></li>
+              <li><Link to={localePath('/cancun/zona-hotelera/penthouses')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.penthouses')}</Link></li>
               {/* Extra internal links to P1 destinations */}
-              <li><Link to={localePath('/cancun/zona-hotelera/condos')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Condos Zona Hotelera' : 'Hotel Zone Condos'}</Link></li>
-              <li><Link to={localePath('/cancun/costa-mujeres/preventa')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Preventa Costa Mujeres' : 'Costa Mujeres Pre-Sale'}</Link></li>
+              <li><Link to={localePath('/cancun/zona-hotelera/condos')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Condos Zona Hotelera' : 'Hotel Zone Condos'}</Link></li>
+              <li><Link to={localePath('/cancun/costa-mujeres/preventa')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Preventa Costa Mujeres' : 'Costa Mujeres Pre-Sale'}</Link></li>
             </ul>
           </div>
 
@@ -81,16 +81,16 @@ export const Footer = () => {
           <div>
             <h4 className="eyebrow mb-6">{t('footer.company')}</h4>
             <ul className="space-y-3">
-              <li><Link to={localePath('/about')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.aboutUs')}</Link></li>
-              <li><Link to={localePath('/journal')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.journal')}</Link></li>
-              <li><a href="mailto:hola@rivanaproperties.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.contact')}</a></li>
+              <li><Link to={localePath('/about')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.aboutUs')}</Link></li>
+              <li><Link to={localePath('/journal')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.journal')}</Link></li>
+              <li><a href="mailto:rivanapropertiesmx@gmail.com" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.contact')}</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">{t('footer.rights')}</p>
-          <p className="text-xs text-muted-foreground">hola@rivanaproperties.com</p>
+          <p className="text-sm text-muted-foreground">{t('footer.rights')}</p>
+          <p className="text-sm text-muted-foreground">rivanapropertiesmx@gmail.com</p>
         </div>
       </div>
     </footer>
