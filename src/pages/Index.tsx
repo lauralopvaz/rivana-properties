@@ -87,7 +87,7 @@ const Home = () => {
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-scroll-hint">
           <span className="w-px h-8 bg-primary/50" />
-          <span className="text-xs font-body uppercase tracking-widest text-muted-foreground">Scroll</span>
+          <span className="text-xs font-body uppercase tracking-widest text-[hsl(var(--pearl))]/60">Scroll</span>
         </div>
       </section>
 
