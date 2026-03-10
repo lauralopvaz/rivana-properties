@@ -19,25 +19,25 @@ export const Footer = () => {
             <Link to={localePath('/')} className="font-display text-3xl tracking-[4px] text-primary">
               RIVANA
             </Link>
-            <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-xs">
+            <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-xs">
               {language === 'es'
                 ? 'Tu inversión, tu legado. Asesoría inmobiliaria de lujo en Cancún y la Riviera Maya.'
                 : 'Your investment, your legacy. Luxury real estate advisory in Cancún and the Riviera Maya.'}
             </p>
             <div className="flex items-center gap-3 mt-6">
-              <a href="mailto:hola@rivanaproperties.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:rivanapropertiesmx@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <MailIcon className="w-5 h-5" />
               </a>
-              <a href="tel:+529981234567" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+5299811457224" className="text-muted-foreground hover:text-primary transition-colors">
                 <PhoneIcon className="w-5 h-5" />
               </a>
-              <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <LocationIcon className="w-5 h-5" />
+              <a href="https://www.facebook.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <FacebookIcon className="w-5 h-5" />
               </a>
-              <a href="https://instagram.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/rivana.properties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <InstagramIcon className="w-5 h-5" />
               </a>
-              <a href="https://pinterest.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://mx.pinterest.com/rivanapropertiesmx/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <PinterestIcon className="w-5 h-5" />
               </a>
             </div>
