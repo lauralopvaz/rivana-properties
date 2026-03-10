@@ -57,7 +57,7 @@ const Home = () => {
   const recentArticles = journalArticles.slice(0, 3);
 
   return (
-    <div>
+    <div className="light-page">
       <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en' : '/'} schema={schema} />
 
       {/* ── HERO ── */}
