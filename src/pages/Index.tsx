@@ -130,8 +130,8 @@ const Home = () => {
                         {d.chips[language][0]}
                       </span>
                     )}
-                    <h3 className="text-2xl mb-1">{d.name[language]}</h3>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground font-body">
+                    <h3 className="text-2xl mb-1 text-[hsl(var(--pearl))]">{d.name[language]}</h3>
+                    <div className="flex items-center gap-4 text-sm text-[hsl(var(--pearl))]/60 font-body">
                       <span>{language === 'es' ? 'Desde' : 'From'} {d.stats[1]?.val}</span>
                       <span>·</span>
                       <span>{d.stats[0]?.val} {language === 'es' ? 'propiedades' : 'properties'}</span>
