@@ -102,11 +102,11 @@
   }
 
   .gradient-placeholder {
-    background: linear-gradient(145deg, hsl(215 65% 8%), hsl(220 40% 14%), hsl(207 52% 20%));
+    background: linear-gradient(145deg, hsl(30 15% 90%), hsl(30 15% 87%), hsl(30 20% 85%));
   }
 
   .gradient-placeholder-alt {
-    background: linear-gradient(145deg, hsl(220 30% 10%), hsl(215 50% 12%), hsl(207 40% 16%));
+    background: linear-gradient(145deg, hsl(30 15% 92%), hsl(30 15% 89%), hsl(30 20% 86%));
   }
 
   .scroll-reveal {
