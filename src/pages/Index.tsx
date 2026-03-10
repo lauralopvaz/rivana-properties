@@ -164,7 +164,7 @@ const Home = () => {
                     <div className="aspect-[16/10] gradient-placeholder group-hover:scale-105 transition-transform duration-700" />
                     <div className="p-6">
                       <span className="eyebrow text-xs">{zoneName}</span>
-                      <h3 className="text-xl mt-2 mb-4">{p.name}</h3>
+                      <h3 className="text-xl mt-2 mb-4 text-secondary">{p.name}</h3>
                       <div className="flex items-center gap-5 text-sm text-muted-foreground font-body mb-4">
                         <span className="flex items-center gap-1.5"><BedIcon className="w-4 h-4" /> {p.beds} {language === 'es' ? 'Rec.' : 'Beds'}</span>
                         <span className="flex items-center gap-1.5"><RulerIcon className="w-4 h-4" /> {p.area} m²</span>
