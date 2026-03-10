@@ -81,9 +81,9 @@ export const Footer = () => {
           <div>
             <h4 className="eyebrow mb-6">{t('footer.company')}</h4>
             <ul className="space-y-3">
-              <li><Link to={localePath('/about')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.aboutUs')}</Link></li>
-              <li><Link to={localePath('/journal')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.journal')}</Link></li>
-              <li><a href="mailto:hola@rivanaproperties.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('footer.contact')}</a></li>
+              <li><Link to={localePath('/about')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.aboutUs')}</Link></li>
+              <li><Link to={localePath('/journal')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.journal')}</Link></li>
+              <li><a href="mailto:rivanapropertiesmx@gmail.com" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.contact')}</a></li>
             </ul>
           </div>
         </div>
