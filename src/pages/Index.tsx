@@ -108,7 +108,7 @@ const Home = () => {
       </section>
 
       {/* ── COLLECTIONS GRID ── */}
-      <section className="py-24 lg:py-32">
+      <section className="py-24 lg:py-32 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('section.destinations')}</p>
