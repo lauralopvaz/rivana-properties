@@ -26,8 +26,8 @@ const PreSale = () => {
           backgroundRepeat: 'no-repeat'
         }} />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-3">
+          <div className="max-w-3xl">
+            <div>
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary blink-dot" />
                 <span className="eyebrow">Pre-Sale · Now Open</span>
