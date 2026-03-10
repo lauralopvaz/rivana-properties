@@ -7,10 +7,10 @@ import homeHero from '@/assets/home-hero.jpg';
 
 /* ── Data ── */
 const services = [
-  { num: '01', text: 'Preventas privadas frente al mar' },
-  { num: '02', text: 'Acceso directo a desarrollos en la Zona Hotelera y Playa Mujeres' },
-  { num: '03', text: 'Asesoría fiscal y legal para extranjeros' },
-  { num: '04', text: 'Acompañamiento personalizado' },
+  { num: '01', text: 'Facilitamos cada paso del proceso legal y notarial' },
+  { num: '02', text: 'Inventario curado de propiedades de alto retorno' },
+  { num: '03', text: 'Preventas con condiciones preferentes para nuestros clientes' },
+  { num: '04', text: 'Asesoría especializada para compradores internacionales' },
 ];
 
 const destinations = [
