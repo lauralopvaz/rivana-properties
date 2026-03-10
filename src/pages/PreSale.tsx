@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { BedIcon, RulerIcon, TrendingUpIcon, CalendarIcon, ChatIcon } from '@/components/icons';
+import presaleHero from '@/assets/presale-hero.jpg';
 
 const PreSale = () => {
   const [showAdvisor, setShowAdvisor] = useState(false);
