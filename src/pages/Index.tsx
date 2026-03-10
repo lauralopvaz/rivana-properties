@@ -6,11 +6,11 @@ import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, LocationIcon } from '@/
 import homeHero from '@/assets/home-hero.jpg';
 
 /* ── Data ── */
-const stats = [
-  { value: '140M+', label: 'USD in Sales' },
-  { value: '280+', label: 'Clients Served' },
-  { value: '7', label: 'Destinations' },
-  { value: '18', label: 'Countries' },
+const services = [
+  { num: '01', text: 'Preventas privadas frente al mar' },
+  { num: '02', text: 'Acceso directo a desarrollos en la Zona Hotelera y Playa Mujeres' },
+  { num: '03', text: 'Asesoría fiscal y legal para extranjeros' },
+  { num: '04', text: 'Acompañamiento personalizado' },
 ];
 
 const destinations = [
