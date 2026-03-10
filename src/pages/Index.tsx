@@ -123,7 +123,7 @@ const Home = () => {
                   className="group block relative overflow-hidden aspect-[16/10] rounded-sm"
                 >
                   <div className="absolute inset-0 gradient-placeholder-alt group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-dark/90 via-deep-dark/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_0%/0.7)] via-[hsl(0_0%_0%/0.2)] to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     {d.chips[language][0] && (
                       <span className="inline-block text-xs font-body tracking-wider uppercase bg-primary/20 text-primary px-3 py-1 rounded-sm mb-3">
