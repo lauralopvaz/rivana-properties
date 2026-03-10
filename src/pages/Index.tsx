@@ -101,8 +101,13 @@ const Home = () => {
 
   const recentArticles = journalArticles.slice(0, 3);
 
+  useEffect(() => {
+    document.documentElement.classList.add('light-page');
+    return () => { document.documentElement.classList.remove('light-page'); };
+  }, []);
+
   return (
-    <div className="light-page">
+    <div>
       <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en' : '/'} schema={schema} />
 
       {/* ── HERO ── */}
