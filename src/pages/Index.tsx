@@ -246,7 +246,7 @@ const Home = () => {
                 <Link to={localePath(`/journal/${post.slug}`)} className="group block">
                   <div className="aspect-[16/10] gradient-placeholder-alt rounded-sm mb-4 group-hover:scale-[1.02] transition-transform duration-500" />
                   <span className="eyebrow text-xs">{post.category[language]}</span>
-                  <h4 className="mt-2 mb-3 group-hover:text-primary transition-colors">{post.title[language]}</h4>
+                  <h4 className="mt-2 mb-3 text-secondary group-hover:text-primary transition-colors">{post.title[language]}</h4>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground font-body">
                     <span>{post.date}</span>
                     <span>·</span>
