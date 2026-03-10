@@ -206,7 +206,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(var(--deep-dark));
+  background: hsl(30 15% 93%);
 }
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--gold) / 0.3);
