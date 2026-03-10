@@ -3,26 +3,58 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { BuyerDots } from '@/components/BuyerDots';
+import { SEOHead } from '@/components/SEOHead';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { getDestination, destinations } from '@/data/destinations';
 import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIcon, CalendarIcon, BriefcaseIcon, ChatIcon } from '@/components/icons';
 
+interface DestinationPageProps {
+  destinationKey: string;
+  subPage?: string;
+}
+
 const projects = [
-  { name: 'Oceana Residences', zone: 'Playa Mujeres', badge: 'Pre-Sale', units: 120, price: '$195K', beds: '1-3', area: '65-185', profiles: ['maria', 'investor'], featured: true },
-  { name: 'Azure Tower', zone: 'Costa Mujeres Centro', badge: 'New Launch', units: 80, price: '$245K', beds: '2-4', area: '95-220', profiles: ['pedro', 'investor'] },
-  { name: 'Mar Sereno', zone: 'Punta Sam', badge: 'Pre-Sale', units: 45, price: '$320K', beds: '2-3', area: '110-175', profiles: ['carlos', 'maria'] },
+  { name: 'Oceana Residences', zone: 'Playa Mujeres', badge: { es: 'Pre-Venta', en: 'Pre-Sale' }, units: 120, price: '$195K', beds: '1-3', area: '65-185', profiles: ['maria', 'investor'], featured: true },
+  { name: 'Azure Tower', zone: 'Costa Mujeres Centro', badge: { es: 'Nuevo Lanzamiento', en: 'New Launch' }, units: 80, price: '$245K', beds: '2-4', area: '95-220', profiles: ['pedro', 'investor'] },
+  { name: 'Mar Sereno', zone: 'Punta Sam', badge: { es: 'Pre-Venta', en: 'Pre-Sale' }, units: 45, price: '$320K', beds: '2-3', area: '110-175', profiles: ['carlos', 'maria'] },
 ];
 
-const faqs = [
-  { q: 'What is the buying process in Costa Mujeres for foreign investors?', a: 'Foreign buyers can purchase through a fideicomiso (bank trust) with full ownership rights. The process typically takes 4-6 weeks and our legal team guides you through every step.' },
-  { q: 'What are the expected rental yields in the zone?', a: 'Costa Mujeres properties average 8-12% annual rental yield, with beachfront units performing at the higher end. Pre-sale purchases can see additional 15-22% capital appreciation by delivery.' },
-  { q: '¿Es seguro invertir en Costa Mujeres?', a: 'Absolutamente. Costa Mujeres es una zona planificada con infraestructura de primer nivel, respaldada por desarrolladores establecidos y un marco legal sólido para inversores extranjeros.' },
-  { q: '¿Cuál es la plusvalía esperada para 2026?', a: 'Con el Mundial 2026, se proyecta una apreciación del 18-25% en propiedades frente al mar. Las preventas actuales ofrecen precios significativamente por debajo del valor futuro.' },
-  { q: 'What amenities are available in Costa Mujeres?', a: 'The zone features world-class golf courses, marina access, beachfront restaurants, international schools, and a new commercial district under construction.' },
-  { q: '¿Qué tipo de propiedad tiene mejor retorno?', a: 'Los estudios y departamentos de 1-2 recámaras en preventa ofrecen el mejor ROI por su alta demanda en plataformas como Airbnb, especialmente los que tienen vista al mar.' },
-];
+const faqs: Record<string, { q: string; a: string }[]> = {
+  es: [
+    { q: '¿Cuál es el proceso de compra para inversionistas extranjeros?', a: 'Los compradores extranjeros pueden adquirir a través de un fideicomiso bancario con plenos derechos de propiedad. El proceso toma 4-6 semanas y nuestro equipo legal te guía en cada paso.' },
+    { q: '¿Cuáles son los rendimientos esperados de renta?', a: 'Las propiedades promedian un rendimiento anual del 8-12%, con unidades frente al mar en el rango superior. Las compras en preventa pueden ver una apreciación adicional del 15-22% a la entrega.' },
+    { q: '¿Es seguro invertir aquí?', a: 'Absolutamente. Es una zona planificada con infraestructura de primer nivel, respaldada por desarrolladores establecidos y un marco legal sólido para inversores extranjeros.' },
+    { q: '¿Cuál es la plusvalía esperada para 2026?', a: 'Con el Mundial 2026, se proyecta una apreciación del 18-25% en propiedades frente al mar. Las preventas actuales ofrecen precios significativamente por debajo del valor futuro.' },
+  ],
+  en: [
+    { q: 'What is the buying process for foreign investors?', a: 'Foreign buyers can purchase through a fideicomiso (bank trust) with full ownership rights. The process typically takes 4-6 weeks and our legal team guides you through every step.' },
+    { q: 'What are the expected rental yields?', a: 'Properties average 8-12% annual rental yield, with beachfront units performing at the higher end. Pre-sale purchases can see additional 15-22% capital appreciation by delivery.' },
+    { q: 'Is it safe to invest here?', a: 'Absolutely. This is a master-planned zone with first-class infrastructure, backed by established developers and a solid legal framework for foreign investors.' },
+    { q: 'What is the expected appreciation for 2026?', a: 'With the 2026 World Cup, a 18-25% appreciation is projected for beachfront properties. Current pre-sales offer prices significantly below future value.' },
+  ],
+};
 
-const DestinationPage = () => {
+const buyerProfiles = {
+  es: [
+    { name: 'María', color: 'border-l-profile-maria', desc: '~45 años, profesional buscando privacidad y retorno. Compradora independiente con gusto refinado.', fit: 'Studios y condos 1BR frente al mar' },
+    { name: 'Pedro & Lucía', color: 'border-l-profile-pedro', desc: '~38-42, familia joven priorizando seguridad, escuelas y construcción de patrimonio.', fit: 'Familiares 3BR con amenidades' },
+    { name: 'Carlos', color: 'border-l-profile-carlos', desc: '~65, ejecutivo retirado buscando estilo de vida, comunidad y elegancia tropical.', fit: 'Penthouses y unidades de marina' },
+    { name: 'Inversionista Extranjero', color: 'border-l-profile-investor', desc: '35-60, pasaporte US/EU/CA. Enfoque puro en ROI, diversificación de portafolio.', fit: 'Pre-venta 1-2BR para renta' },
+  ],
+  en: [
+    { name: 'María', color: 'border-l-profile-maria', desc: '~45, professional seeking privacy and returns. Solo buyer with refined taste.', fit: 'Oceanfront studios & 1BR condos' },
+    { name: 'Pedro & Lucía', color: 'border-l-profile-pedro', desc: '~38-42, young family prioritizing security, schools, and legacy building.', fit: 'Family 3BR with amenities' },
+    { name: 'Carlos', color: 'border-l-profile-carlos', desc: '~65, retired executive seeking lifestyle, community, and tropical elegance.', fit: 'Penthouses & marina units' },
+    { name: 'Foreign Investor', color: 'border-l-profile-investor', desc: '35-60, US/EU/CA passport. Pure ROI focus, portfolio diversification.', fit: 'Pre-sale 1-2BR for rental' },
+  ],
+};
+
+const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const [showAdvisor, setShowAdvisor] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { language, localePath, t } = useLanguage();
+
+  const config = getDestination(destinationKey);
 
   useEffect(() => {
     const onScroll = () => setShowAdvisor(window.scrollY > 500);
@@ -30,16 +62,72 @@ const DestinationPage = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Scroll to top on destination change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [destinationKey, subPage]);
+
+  if (!config) return <div className="pt-32 text-center"><h1>Destination not found</h1></div>;
+
+  // Determine SEO based on subPage or main page
+  const subPageConfig = subPage ? config.subPages.find((sp) => sp.segment === subPage) : undefined;
+  const seoTitle = subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
+  const seoDescription = subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
+  const h1Text = subPageConfig ? subPageConfig.seo.h1[language] : config.seo.h1[language];
+  const currentPath = subPage ? `${config.basePath}/${subPage}` : config.basePath;
+
+  // Schema markup
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'RealEstateListing',
+    name: h1Text,
+    description: seoDescription,
+    url: `https://rivanaproperties.com${currentPath}`,
+    areaServed: {
+      '@type': 'Place',
+      name: config.name[language],
+    },
+    broker: {
+      '@type': 'RealEstateAgent',
+      name: 'Rivana Properties',
+      url: 'https://rivanaproperties.com',
+    },
+  };
+
+  const relatedDests = config.relatedDestinations
+    .map((key) => getDestination(key))
+    .filter(Boolean);
+
+  const currentFaqs = faqs[language] || faqs.es;
+  const currentBuyers = buyerProfiles[language] || buyerProfiles.es;
+
   return (
     <div>
+      <SEOHead
+        title={seoTitle}
+        description={seoDescription}
+        path={currentPath}
+        schema={schema}
+      />
+
       {/* Breadcrumb */}
       <div className="pt-24 px-6 lg:px-10 max-w-[1400px] mx-auto">
         <nav className="text-sm font-body text-muted-foreground flex items-center gap-2">
-          <Link to="/" className="hover:text-primary transition-colors">Rivana</Link>
+          <Link to={localePath('/')} className="hover:text-primary transition-colors">Rivana</Link>
+          {config.breadcrumb[language].slice(1, -1).map((crumb, i) => (
+            <span key={i} className="flex items-center gap-2">
+              <span>/</span>
+              <span>{crumb}</span>
+            </span>
+          ))}
           <span>/</span>
-          <span>Cancún</span>
-          <span>/</span>
-          <span className="text-foreground">Costa Mujeres</span>
+          <span className="text-foreground">{config.breadcrumb[language][config.breadcrumb[language].length - 1]}</span>
+          {subPageConfig && (
+            <>
+              <span>/</span>
+              <span className="text-foreground capitalize">{subPage}</span>
+            </>
+          )}
         </nav>
       </div>
 
@@ -48,43 +136,63 @@ const DestinationPage = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
             <div className="lg:col-span-3">
-              <p className="eyebrow mb-4">Destination</p>
-              <h1 className="mb-4">Costa Mujeres</h1>
-              <p className="font-display text-xl text-muted-foreground italic mb-8">The last frontier of Caribbean luxury</p>
+              <p className="eyebrow mb-4">{t('dest.destination')}</p>
+              <h1 className="mb-4">{h1Text}</h1>
+              <p className="font-display text-xl text-muted-foreground italic mb-8">{config.tagline[language]}</p>
 
               {/* Stats row */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
-                {[
-                  { val: '64', label: 'Properties' },
-                  { val: '$195K', label: 'Starting From' },
-                  { val: '22%', label: 'YoY Growth' },
-                  { val: '120+', label: 'Units Available' },
-                ].map((s) => (
-                  <div key={s.label}>
+                {config.stats.map((s) => (
+                  <div key={s.label[language]}>
                     <span className="font-display text-3xl text-primary">{s.val}</span>
-                    <p className="text-xs text-muted-foreground font-body uppercase tracking-wider mt-1">{s.label}</p>
+                    <p className="text-xs text-muted-foreground font-body uppercase tracking-wider mt-1">{s.label[language]}</p>
                   </div>
                 ))}
               </div>
 
               {/* Chips */}
               <div className="flex flex-wrap gap-2">
-                {['Pre-Sale Open', '8-12% Yield', '⚽ Mundial 2026'].map((chip) => (
+                {config.chips[language].map((chip) => (
                   <span key={chip} className="text-xs font-body tracking-wider bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-sm">
                     {chip}
                   </span>
                 ))}
               </div>
+
+              {/* Sub-page links */}
+              {config.subPages.length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-6">
+                  <Link
+                    to={localePath(config.basePath)}
+                    className={`text-xs font-body tracking-wider uppercase px-4 py-2 rounded-sm border transition-colors ${
+                      !subPage ? 'border-primary bg-primary/10 text-primary' : 'border-border text-muted-foreground hover:border-primary/30'
+                    }`}
+                  >
+                    {language === 'es' ? 'Todo' : 'All'}
+                  </Link>
+                  {config.subPages.map((sp) => (
+                    <Link
+                      key={sp.segment}
+                      to={localePath(`${config.basePath}/${sp.segment}`)}
+                      className={`text-xs font-body tracking-wider uppercase px-4 py-2 rounded-sm border transition-colors ${
+                        subPage === sp.segment ? 'border-primary bg-primary/10 text-primary' : 'border-border text-muted-foreground hover:border-primary/30'
+                      }`}
+                    >
+                      {sp.segment === 'preventa' ? (language === 'es' ? 'Preventa' : 'Pre-Sale') : sp.segment.charAt(0).toUpperCase() + sp.segment.slice(1)}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {/* Contact form in hero */}
+            {/* Contact form */}
             <div className="lg:col-span-2">
               <form className="bg-card border border-border rounded-sm p-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <h4 className="text-lg mb-2">Get Costa Mujeres Pricing</h4>
-                <input placeholder="Full Name" className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <input type="email" placeholder="Email" className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <input type="tel" placeholder="Phone" className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <Button variant="gold" className="w-full" type="submit">Request Information</Button>
+                <h4 className="text-lg mb-2">{config.formTitle[language]}</h4>
+                <input placeholder={t('form.name')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                <input type="email" placeholder={t('form.email')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                <input type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                <Button variant="gold" className="w-full" type="submit">{t('dest.requestInfo')}</Button>
               </form>
             </div>
           </div>
@@ -96,11 +204,11 @@ const DestinationPage = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <h2>Why Costa Mujeres?</h2>
+              <h2>{language === 'es' ? `¿Por qué ${config.name[language]}?` : `Why ${config.name[language]}?`}</h2>
               <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
-                <p>Costa Mujeres represents the final chapter of Cancún's Caribbean coastline development. With over 26 kilometers of pristine white-sand beaches, this master-planned zone is attracting the world's most discerning developers and investors.</p>
-                <p>Unlike its more established neighbors, Costa Mujeres offers pre-construction pricing with projected appreciation of 18-25% by 2026, driven by the FIFA World Cup and unprecedented infrastructure investment.</p>
-                <p>From boutique oceanfront condos to sprawling luxury developments, the zone caters to every investment profile — whether you're seeking passive rental income, a family legacy property, or a retirement haven in the Caribbean.</p>
+                {config.intro[language].map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
               </div>
             </div>
           </ScrollReveal>
@@ -108,50 +216,48 @@ const DestinationPage = () => {
       </section>
 
       {/* Sub-zones */}
-      <section className="py-20 bg-card">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">Sub-Zones</p>
-            <h2 className="mb-12">Zone Breakdown</h2>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { name: 'Playa Mujeres', price: '$2,200/m²', vibe: 'Resort & Golf', chips: ['Golf Course', 'Beach Club'] },
-              { name: 'Costa Mujeres Centro', price: '$1,800/m²', vibe: 'Urban Beach', chips: ['Commercial Zone', 'Marina'] },
-              { name: 'Punta Sam', price: '$1,400/m²', vibe: 'Emerging', chips: ['Pre-Sale Hub', 'Highest ROI'] },
-            ].map((zone, i) => (
-              <ScrollReveal key={zone.name} delay={i * 100}>
-                <div className="bg-muted border border-border rounded-sm p-6">
-                  <h3 className="text-xl mb-2">{zone.name}</h3>
-                  <p className="text-sm text-primary font-body mb-1">{zone.price}</p>
-                  <p className="text-sm text-muted-foreground font-body mb-4">{zone.vibe}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {zone.chips.map((c) => (
-                      <span key={c} className="text-xs font-body bg-primary/5 text-muted-foreground px-2 py-1 rounded-sm border border-border">{c}</span>
-                    ))}
+      {config.subZones && config.subZones.length > 0 && (
+        <section className="py-20 bg-card">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+            <ScrollReveal>
+              <p className="eyebrow mb-4">{t('dest.subZones')}</p>
+              <h2 className="mb-12">{t('dest.zoneBreakdown')}</h2>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {config.subZones.map((zone, i) => (
+                <ScrollReveal key={zone.name} delay={i * 100}>
+                  <div className="bg-muted border border-border rounded-sm p-6">
+                    <h3 className="text-xl mb-2">{zone.name}</h3>
+                    <p className="text-sm text-primary font-body mb-1">{zone.price}</p>
+                    <p className="text-sm text-muted-foreground font-body mb-4">{zone.vibe[language]}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {zone.chips.map((c) => (
+                        <span key={c} className="text-xs font-body bg-primary/5 text-muted-foreground px-2 py-1 rounded-sm border border-border">{c}</span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Featured Projects */}
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Featured Projects</p>
-            <h2 className="mb-12">New Developments</h2>
+            <p className="eyebrow mb-4">{t('dest.featuredProjects')}</p>
+            <h2 className="mb-12">{t('dest.newDevelopments')}</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {projects.map((p, i) => (
               <ScrollReveal key={p.name} delay={i * 100} className={p.featured ? 'lg:row-span-2' : ''}>
-                <Link to="/property/oceana-residences" className="group block bg-card border border-border rounded-sm overflow-hidden h-full">
+                <Link to={localePath('/property/oceana-residences')} className="group block bg-card border border-border rounded-sm overflow-hidden h-full">
                   <div className={`gradient-placeholder group-hover:scale-105 transition-transform duration-700 ${p.featured ? 'aspect-[4/5]' : 'aspect-[16/10]'}`}>
                     <div className="p-4">
                       <span className="text-xs font-body tracking-wider uppercase bg-primary/20 text-primary px-3 py-1 rounded-sm">
-                        {p.badge}
+                        {p.badge[language]}
                       </span>
                     </div>
                   </div>
@@ -163,11 +269,11 @@ const DestinationPage = () => {
                       <span className="flex items-center gap-1"><RulerIcon className="w-3.5 h-3.5" /> {p.area} m²</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="font-display text-xl text-primary">From {p.price}</span>
+                      <span className="font-display text-xl text-primary">{language === 'es' ? 'Desde' : 'From'} {p.price}</span>
                       <BuyerDots profiles={p.profiles} />
                     </div>
                     <span className="inline-flex items-center gap-1 mt-3 text-sm text-primary font-body">
-                      View Project <ArrowRightIcon className="w-3 h-3" />
+                      {t('dest.viewProject')} <ArrowRightIcon className="w-3 h-3" />
                     </span>
                   </div>
                 </Link>
@@ -181,15 +287,15 @@ const DestinationPage = () => {
       <section className="py-20 bg-card border-y border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Market Intelligence</p>
-            <h2 className="mb-12">Investment Data</h2>
+            <p className="eyebrow mb-4">{t('dest.marketIntelligence')}</p>
+            <h2 className="mb-12">{t('dest.investmentData')}</h2>
           </ScrollReveal>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '22%', label: 'YoY Appreciation' },
-              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '8-12%', label: 'Rental Yield' },
-              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '12M+', label: 'Tourists/Year' },
-              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '2026', label: 'World Cup Boost' },
+              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: config.stats[2]?.val || '18%', label: language === 'es' ? 'Plusvalía Anual' : 'YoY Appreciation' },
+              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '8-12%', label: language === 'es' ? 'Rendimiento Renta' : 'Rental Yield' },
+              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '12M+', label: language === 'es' ? 'Turistas/Año' : 'Tourists/Year' },
+              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '2026', label: language === 'es' ? 'Impulso Mundial' : 'World Cup Boost' },
             ].map((s, i) => (
               <ScrollReveal key={s.label} delay={i * 100}>
                 <div className="bg-muted border border-border rounded-sm p-6 text-center">
@@ -207,21 +313,16 @@ const DestinationPage = () => {
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Who Buys Here</p>
-            <h2 className="mb-12">Buyer Profiles</h2>
+            <p className="eyebrow mb-4">{t('dest.whoBuysHere')}</p>
+            <h2 className="mb-12">{t('dest.buyerProfiles')}</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: 'María', color: 'border-l-profile-maria', desc: '~45, professional seeking privacy and returns. Solo buyer with refined taste.', fit: 'Oceanfront studios & 1BR condos' },
-              { name: 'Pedro & Lucía', color: 'border-l-profile-pedro', desc: '~38-42, young family prioritizing security, schools, and legacy building.', fit: 'Family 3BR with amenities' },
-              { name: 'Carlos', color: 'border-l-profile-carlos', desc: '~65, retired executive seeking lifestyle, community, and tropical elegance.', fit: 'Penthouses & marina units' },
-              { name: 'Foreign Investor', color: 'border-l-profile-investor', desc: '35-60, US/EU/CA passport. Pure ROI focus, portfolio diversification.', fit: 'Pre-sale 1-2BR for rental' },
-            ].map((b, i) => (
+            {currentBuyers.map((b, i) => (
               <ScrollReveal key={b.name} delay={i * 100}>
                 <div className={`bg-card border border-border ${b.color} border-l-4 rounded-sm p-6`}>
                   <h4 className="text-lg mb-2">{b.name}</h4>
                   <p className="text-sm text-muted-foreground font-body mb-4">{b.desc}</p>
-                  <p className="text-xs text-primary font-body uppercase tracking-wider">Best fit: {b.fit}</p>
+                  <p className="text-xs text-primary font-body uppercase tracking-wider">{language === 'es' ? 'Ideal' : 'Best fit'}: {b.fit}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -233,11 +334,11 @@ const DestinationPage = () => {
       <section className="py-20 bg-card">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Common Questions</p>
-            <h2 className="mb-12">FAQ</h2>
+            <p className="eyebrow mb-4">{t('dest.commonQuestions')}</p>
+            <h2 className="mb-12">{t('dest.faq')}</h2>
           </ScrollReveal>
           <div className="max-w-3xl space-y-3">
-            {faqs.map((faq, i) => (
+            {currentFaqs.map((faq, i) => (
               <ScrollReveal key={i} delay={i * 60}>
                 <div className="border border-border rounded-sm">
                   <button
@@ -259,25 +360,21 @@ const DestinationPage = () => {
         </div>
       </section>
 
-      {/* Related Destinations */}
+      {/* Related Destinations — Internal linking (P1 destinations get more links) */}
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Explore More</p>
-            <h2 className="mb-12">Related Destinations</h2>
+            <p className="eyebrow mb-4">{t('dest.exploreMore')}</p>
+            <h2 className="mb-12">{t('dest.relatedDestinations')}</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { name: 'Puerto Cancún', from: '$450K', slug: 'puerto-cancun' },
-              { name: 'Zona Hotelera', from: '$320K', slug: 'zona-hotelera' },
-              { name: 'Holbox', from: '$275K', slug: 'holbox' },
-            ].map((d, i) => (
-              <ScrollReveal key={d.slug} delay={i * 100}>
-                <Link to={`/destination/${d.slug}`} className="group block aspect-[16/10] gradient-placeholder-alt rounded-sm relative overflow-hidden">
+            {relatedDests.slice(0, 3).map((d, i) => (
+              <ScrollReveal key={d!.key} delay={i * 100}>
+                <Link to={localePath(d!.basePath)} className="group block aspect-[16/10] gradient-placeholder-alt rounded-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-deep-dark/90 to-transparent" />
                   <div className="absolute bottom-0 p-6">
-                    <h3 className="text-xl mb-1">{d.name}</h3>
-                    <span className="text-sm text-muted-foreground font-body">From {d.from}</span>
+                    <h3 className="text-xl mb-1">{d!.name[language]}</h3>
+                    <span className="text-sm text-muted-foreground font-body">{language === 'es' ? 'Desde' : 'From'} {d!.stats[1]?.val}</span>
                   </div>
                 </Link>
               </ScrollReveal>
@@ -294,15 +391,15 @@ const DestinationPage = () => {
               <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-lg">A</div>
               <div>
                 <p className="text-sm font-body font-400">Alejandra Reyes</p>
-                <p className="text-xs text-muted-foreground font-body">Costa Mujeres Specialist</p>
+                <p className="text-xs text-muted-foreground font-body">{config.name[language]} Specialist</p>
               </div>
               <div className="w-px h-8 bg-border mx-2" />
               <div className="flex items-center gap-2">
                 {[
-                  { icon: <VideoIcon className="w-4 h-4" />, label: 'Virtual Call' },
-                  { icon: <PhoneIcon className="w-4 h-4" />, label: 'Schedule' },
-                  { icon: <CalendarIcon className="w-4 h-4" />, label: 'Visit' },
-                  { icon: <BriefcaseIcon className="w-4 h-4" />, label: 'Advisory' },
+                  { icon: <VideoIcon className="w-4 h-4" />, label: language === 'es' ? 'Videollamada' : 'Virtual Call' },
+                  { icon: <PhoneIcon className="w-4 h-4" />, label: language === 'es' ? 'Agendar' : 'Schedule' },
+                  { icon: <CalendarIcon className="w-4 h-4" />, label: language === 'es' ? 'Visita' : 'Visit' },
+                  { icon: <BriefcaseIcon className="w-4 h-4" />, label: language === 'es' ? 'Asesoría' : 'Advisory' },
                 ].map((a) => (
                   <button key={a.label} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors px-2 py-1">
                     {a.icon} <span className="hidden lg:inline">{a.label}</span>
@@ -311,7 +408,7 @@ const DestinationPage = () => {
               </div>
             </div>
             <div className="flex items-center gap-3 ml-auto">
-              <Button variant="gold" size="sm">Get Pricing & Floor Plans</Button>
+              <Button variant="gold" size="sm">{language === 'es' ? 'Recibir Precios' : 'Get Pricing & Floor Plans'}</Button>
               <Button variant="whatsapp" size="sm" asChild>
                 <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer">
                   <ChatIcon className="w-4 h-4" /> WhatsApp
