@@ -57,14 +57,14 @@ const Home = () => {
   const recentArticles = journalArticles.slice(0, 3);
 
   return (
-    <div>
+    <div className="light-page">
       <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en' : '/'} schema={schema} />
 
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <img src={homeHero} alt={language === 'es' ? 'Propiedad de lujo frente al mar en Cancún' : 'Luxury beachfront property in Cancún'} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/60" />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center">
+        <div className="absolute inset-0 bg-[hsl(0_0%_0%/0.35)]" />
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center text-[hsl(var(--pearl))]">
           <p className="eyebrow mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {language === 'es' ? 'Asesoría Inmobiliaria de Lujo' : 'Luxury Real Estate Advisory'}
           </p>
@@ -72,7 +72,7 @@ const Home = () => {
             {t('hero.tagline').split(',')[0]},{' '}
             <em className="text-primary not-italic font-display italic">{t('hero.tagline').split(',')[1]}</em>
           </h1>
-          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.6s' }}>
+          <p className="font-body text-lg text-[hsl(var(--pearl))]/80 max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.6s' }}>
             {t('hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.8s' }}>
@@ -87,12 +87,12 @@ const Home = () => {
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-scroll-hint">
           <span className="w-px h-8 bg-primary/50" />
-          <span className="text-xs font-body uppercase tracking-widest text-muted-foreground">Scroll</span>
+          <span className="text-xs font-body uppercase tracking-widest text-[hsl(var(--pearl))]/60">Scroll</span>
         </div>
       </section>
 
       {/* ── SERVICES ── */}
-      <section className="py-16 border-y border-border bg-deep-dark">
+      <section className="py-16 border-y border-border bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((s, i) => (
@@ -108,7 +108,7 @@ const Home = () => {
       </section>
 
       {/* ── COLLECTIONS GRID ── */}
-      <section className="py-24 lg:py-32">
+      <section className="py-24 lg:py-32 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('section.destinations')}</p>
@@ -123,15 +123,15 @@ const Home = () => {
                   className="group block relative overflow-hidden aspect-[16/10] rounded-sm"
                 >
                   <div className="absolute inset-0 gradient-placeholder-alt group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-dark/90 via-deep-dark/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_0%/0.7)] via-[hsl(0_0%_0%/0.2)] to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     {d.chips[language][0] && (
                       <span className="inline-block text-xs font-body tracking-wider uppercase bg-primary/20 text-primary px-3 py-1 rounded-sm mb-3">
                         {d.chips[language][0]}
                       </span>
                     )}
-                    <h3 className="text-2xl mb-1">{d.name[language]}</h3>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground font-body">
+                    <h3 className="text-2xl mb-1 text-[hsl(var(--pearl))]">{d.name[language]}</h3>
+                    <div className="flex items-center gap-4 text-sm text-[hsl(var(--pearl))]/60 font-body">
                       <span>{language === 'es' ? 'Desde' : 'From'} {d.stats[1]?.val}</span>
                       <span>·</span>
                       <span>{d.stats[0]?.val} {language === 'es' ? 'propiedades' : 'properties'}</span>
@@ -148,7 +148,7 @@ const Home = () => {
       </section>
 
       {/* ── FEATURED PROPERTIES ── */}
-      <section className="py-24 lg:py-32 bg-card">
+      <section className="py-24 lg:py-32 bg-card/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('section.featured')}</p>
@@ -160,7 +160,7 @@ const Home = () => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
                 <ScrollReveal key={p.name} delay={i * 100}>
-                  <Link to={localePath('/property/oceana-residences')} className="group block bg-muted rounded-sm overflow-hidden">
+                  <Link to={localePath('/property/oceana-residences')} className="group block bg-background rounded-sm overflow-hidden shadow-sm">
                     <div className="aspect-[16/10] gradient-placeholder group-hover:scale-105 transition-transform duration-700" />
                     <div className="p-6">
                       <span className="eyebrow text-xs">{zoneName}</span>
@@ -186,7 +186,7 @@ const Home = () => {
       </section>
 
       {/* ── SCHEDULE A VISIT ── */}
-      <section className="py-24 lg:py-32">
+      <section className="py-24 lg:py-32 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
@@ -204,7 +204,7 @@ const Home = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <form className="bg-card border border-border rounded-sm p-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="bg-card border border-border rounded-sm p-8 space-y-5 shadow-sm" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input placeholder={t('form.firstName')} className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
                   <input placeholder={t('form.lastName')} className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
@@ -226,7 +226,7 @@ const Home = () => {
       </section>
 
       {/* ── BLOG PREVIEW ── */}
-      <section className="py-24 lg:py-32 bg-card border-t border-border">
+      <section className="py-24 lg:py-32 bg-card/50 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="flex items-end justify-between mb-16">
