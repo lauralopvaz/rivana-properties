@@ -103,8 +103,7 @@ const Home = () => {
   const recentArticles = journalArticles.slice(0, 3);
 
   useEffect(() => {
-    document.documentElement.classList.add('light-page');
-    return () => { document.documentElement.classList.remove('light-page'); };
+    window.scrollTo(0, 0);
   }, []);
 
   return (
