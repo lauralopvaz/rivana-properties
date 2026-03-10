@@ -34,6 +34,12 @@ export const Footer = () => {
               <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <LocationIcon className="w-5 h-5" />
               </a>
+              <a href="https://instagram.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <InstagramIcon className="w-5 h-5" />
+              </a>
+              <a href="https://pinterest.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <PinterestIcon className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
