@@ -54,19 +54,6 @@ const PreSale = () => {
                 <Button variant="outline" size="lg">Download Brochure</Button>
               </div>
             </div>
-
-            {/* Availability counter */}
-            <div className="lg:col-span-2">
-              <div className="bg-card/80 backdrop-blur border border-border rounded-sm p-8 text-center">
-                <p className="eyebrow mb-2">Units Available</p>
-                <span className="font-display text-6xl text-primary">87</span>
-                <p className="text-sm text-muted-foreground font-body mt-2">of 120 total units</p>
-                <div className="w-full bg-muted rounded-full h-2 mt-4">
-                  <div className="bg-primary h-2 rounded-full" style={{ width: '27.5%' }} />
-                </div>
-                <p className="text-xs text-muted-foreground font-body mt-2">27.5% sold</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
