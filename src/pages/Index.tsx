@@ -112,7 +112,7 @@ const Home = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('section.destinations')}</p>
-            <h2 className="mb-16">{t('section.collections')}</h2>
+            <h2 className="mb-16 text-secondary">{t('section.collections')}</h2>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
