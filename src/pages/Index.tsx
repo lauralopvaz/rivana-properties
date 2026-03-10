@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { BuyerDots } from '@/components/BuyerDots';
 import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, LocationIcon } from '@/components/icons';
+import homeHero from '@/assets/home-hero.jpg';
 
 /* ── Data ── */
 const stats = [
