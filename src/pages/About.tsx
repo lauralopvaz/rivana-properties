@@ -127,7 +127,7 @@ const About = () => {
           {team.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 80}>
               <div className="bg-card border border-border rounded-sm overflow-hidden">
-                <div className="relative h-48 bg-gradient-to-br from-deep-dark to-muted flex items-center justify-center">
+                <div className="relative h-48 bg-gradient-to-br from-[hsl(30_15%_90%)] to-muted flex items-center justify-center">
                   <span className="font-display text-7xl text-primary/20">{member.initial}</span>
                   <span className="absolute bottom-3 right-3 text-xs font-body bg-muted/80 backdrop-blur text-foreground px-2 py-1 rounded-sm">{member.lang}</span>
                 </div>
