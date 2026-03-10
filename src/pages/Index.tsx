@@ -191,7 +191,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <p className="eyebrow mb-4">{t('section.schedule')}</p>
-              <h2 className="mb-6">{t('section.scheduleTitle')}</h2>
+              <h2 className="mb-6 text-secondary">{t('section.scheduleTitle')}</h2>
               <p className="text-muted-foreground mb-6 max-w-md">
                 {t('section.scheduleDesc')}
               </p>
