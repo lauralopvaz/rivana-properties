@@ -81,7 +81,7 @@ const JournalPost = () => {
 
       {/* Hero */}
       <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-28">
-        <div className="absolute inset-0 gradient-placeholder opacity-30" />
+        <div className="absolute inset-0 gradient-placeholder opacity-20" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <span className="eyebrow mb-4 inline-block">{article.category[language]}</span>
           <h1 className="mb-6">{article.title[language]}</h1>

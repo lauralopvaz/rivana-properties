@@ -211,9 +211,9 @@ const About = () => {
                   : 'Whether you\'re exploring your first property in México or expanding your portfolio, we\'re here to help.'}
               </p>
               <div className="space-y-3">
-                <a href="mailto:hola@rivanaproperties.com" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><span className="text-primary">✉</span> hola@rivanaproperties.com</a>
-                <a href="tel:+529981234567" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><PhoneIcon className="w-4 h-4 text-primary" /> +52 998 123 4567</a>
-                <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> WhatsApp</a>
+                <a href="mailto:rivanapropertiesmx@gmail.com" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><span className="text-primary">✉</span> rivanapropertiesmx@gmail.com</a>
+                <a href="tel:+5299811457224" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><PhoneIcon className="w-4 h-4 text-primary" /> +52 998 114 57224</a>
+                <a href="https://wa.me/5299811457224" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> WhatsApp</a>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
