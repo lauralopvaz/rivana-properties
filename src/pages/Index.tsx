@@ -79,7 +79,7 @@ const Home = () => {
             <Button variant="gold" size="lg" asChild>
               <Link to={localePath('/listings')}>{t('hero.explore')}</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="border-[hsl(var(--pearl))] text-[hsl(var(--pearl))] hover:bg-[hsl(var(--pearl))]/10" asChild>
               <Link to={localePath('/cancun/zona-hotelera')}>{t('hero.destinations')}</Link>
             </Button>
           </div>
@@ -99,7 +99,7 @@ const Home = () => {
               <ScrollReveal key={s.num} delay={i * 100}>
                 <div className="text-center lg:text-left">
                   <span className="font-display text-3xl lg:text-4xl text-primary">{s.num}</span>
-                  <p className="text-sm text-foreground/80 mt-3 font-body uppercase tracking-widest leading-relaxed">{s.text}</p>
+                  <p className="text-sm text-foreground mt-3 font-body uppercase tracking-widest leading-relaxed">{s.text}</p>
                 </div>
               </ScrollReveal>
             ))}
