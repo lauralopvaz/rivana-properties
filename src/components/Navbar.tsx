@@ -2,19 +2,21 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { MenuIcon, XIcon } from '@/components/icons';
-
-const navLinks = [
-  { label: 'Collections', href: '/collections' },
-  { label: 'Listings', href: '/listings' },
-  { label: 'Pre-Sale', href: '/presale' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'About', href: '/about' },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const { language, setLanguage, t } = useLanguage();
+
+  const navLinks = [
+    { label: t('nav.collections'), href: '/collections' },
+    { label: t('nav.listings'), href: '/listings' },
+    { label: t('nav.presale'), href: '/presale' },
+    { label: t('nav.blog'), href: '/blog' },
+    { label: t('nav.about'), href: '/about' },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -25,6 +27,8 @@ export const Navbar = () => {
   useEffect(() => {
     setMobileOpen(false);
   }, [location]);
+
+  const toggleLang = () => setLanguage(language === 'es' ? 'en' : 'es');
 
   return (
     <nav
@@ -48,9 +52,24 @@ export const Navbar = () => {
               {link.label}
             </Link>
           ))}
+
+          {/* Language switcher */}
+          <button
+            onClick={toggleLang}
+            className="flex items-center gap-1.5 font-body text-xs tracking-widest uppercase border border-border rounded-sm px-3 py-1.5 text-foreground/70 hover:text-primary hover:border-primary/40 transition-colors duration-300"
+            aria-label="Change language"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+            </svg>
+            {language === 'es' ? 'EN' : 'ES'}
+          </button>
+
           <Button variant="gold" size="sm" asChild>
             <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer">
-              Speak with an Advisor
+              {t('nav.advisor')}
             </a>
           </Button>
         </div>
@@ -78,9 +97,23 @@ export const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+
+            {/* Mobile language switcher */}
+            <button
+              onClick={toggleLang}
+              className="flex items-center gap-2 font-body text-sm tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              </svg>
+              {language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+            </button>
+
             <Button variant="gold" className="mt-4" asChild>
               <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer">
-                Speak with an Advisor
+                {t('nav.advisor')}
               </a>
             </Button>
           </div>
