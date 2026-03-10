@@ -79,7 +79,7 @@ const Home = () => {
             <Button variant="gold" size="lg" asChild>
               <Link to={localePath('/listings')}>{t('hero.explore')}</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="border-[hsl(var(--pearl))] text-[hsl(var(--pearl))] hover:bg-[hsl(var(--pearl))]/10" asChild>
               <Link to={localePath('/cancun/zona-hotelera')}>{t('hero.destinations')}</Link>
             </Button>
           </div>
