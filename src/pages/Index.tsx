@@ -148,7 +148,7 @@ const Home = () => {
       </section>
 
       {/* ── FEATURED PROPERTIES ── */}
-      <section className="py-24 lg:py-32 bg-card">
+      <section className="py-24 lg:py-32 bg-card/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('section.featured')}</p>
