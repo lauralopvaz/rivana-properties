@@ -17,7 +17,7 @@ const PreSale = () => {
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <img src={presaleHero} alt="Oceana Residences luxury beachfront" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/30" />
         {/* Subtle architectural silhouette */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 300V100L200 20L350 100V300' stroke='white' fill='none' stroke-width='0.5'/%3E%3Cpath d='M100 300V130L200 60L300 130V300' stroke='white' fill='none' stroke-width='0.3'/%3E%3C/svg%3E")`,
@@ -26,8 +26,8 @@ const PreSale = () => {
           backgroundRepeat: 'no-repeat'
         }} />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-3">
+          <div className="max-w-3xl">
+            <div>
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary blink-dot" />
                 <span className="eyebrow">Pre-Sale · Now Open</span>
@@ -52,19 +52,6 @@ const PreSale = () => {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button variant="gold" size="lg">Request Pricing</Button>
                 <Button variant="outline" size="lg">Download Brochure</Button>
-              </div>
-            </div>
-
-            {/* Availability counter */}
-            <div className="lg:col-span-2">
-              <div className="bg-card/80 backdrop-blur border border-border rounded-sm p-8 text-center">
-                <p className="eyebrow mb-2">Units Available</p>
-                <span className="font-display text-6xl text-primary">87</span>
-                <p className="text-sm text-muted-foreground font-body mt-2">of 120 total units</p>
-                <div className="w-full bg-muted rounded-full h-2 mt-4">
-                  <div className="bg-primary h-2 rounded-full" style={{ width: '27.5%' }} />
-                </div>
-                <p className="text-xs text-muted-foreground font-body mt-2">27.5% sold</p>
               </div>
             </div>
           </div>
