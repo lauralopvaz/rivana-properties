@@ -17,7 +17,7 @@ const PreSale = () => {
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <img src={presaleHero} alt="Oceana Residences luxury beachfront" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-foreground/20" />
+        <div className="absolute inset-0 bg-background/40" />
         {/* Subtle architectural silhouette */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 300V100L200 20L350 100V300' stroke='white' fill='none' stroke-width='0.5'/%3E%3Cpath d='M100 300V130L200 60L300 130V300' stroke='white' fill='none' stroke-width='0.3'/%3E%3C/svg%3E")`,
