@@ -6,11 +6,11 @@ import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, LocationIcon } from '@/
 import homeHero from '@/assets/home-hero.jpg';
 
 /* ── Data ── */
-const stats = [
-  { value: '140M+', label: 'USD in Sales' },
-  { value: '280+', label: 'Clients Served' },
-  { value: '7', label: 'Destinations' },
-  { value: '18', label: 'Countries' },
+const services = [
+  { num: '01', text: 'Preventas privadas frente al mar' },
+  { num: '02', text: 'Acceso directo a desarrollos en la Zona Hotelera y Playa Mujeres' },
+  { num: '03', text: 'Asesoría fiscal y legal para extranjeros' },
+  { num: '04', text: 'Acompañamiento personalizado' },
 ];
 
 const destinations = [
@@ -70,15 +70,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── STATS ── */}
+      {/* ── SERVICES ── */}
       <section className="py-16 border-y border-border bg-deep-dark">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((s, i) => (
-              <ScrollReveal key={s.label} delay={i * 100}>
-                <div className="text-center">
-                  <span className="font-display text-4xl lg:text-5xl text-primary">{s.value}</span>
-                  <p className="text-sm text-muted-foreground mt-2 font-body uppercase tracking-widest">{s.label}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((s, i) => (
+              <ScrollReveal key={s.num} delay={i * 100}>
+                <div className="text-center lg:text-left">
+                  <span className="font-display text-3xl lg:text-4xl text-primary">{s.num}</span>
+                  <p className="text-sm text-foreground/80 mt-3 font-body uppercase tracking-widest leading-relaxed">{s.text}</p>
                 </div>
               </ScrollReveal>
             ))}
