@@ -1,20 +1,65 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ScrollReveal';
-import { BuyerDots } from '@/components/BuyerDots';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { destinations } from '@/data/destinations';
 import { journalArticles } from '@/data/journal-articles';
-import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, LocationIcon } from '@/components/icons';
+import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, LocationIcon, WavesIcon, GolfIcon, SparklesIcon, AnchorIcon, SunIcon, SwimIcon } from '@/components/icons';
 import homeHero from '@/assets/home-hero.jpg';
 
+// Destination images
+import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
+import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
+import destCostaMujeres from '@/assets/dest-costa-mujeres.jpg';
+import destMayakoba from '@/assets/dest-mayakoba.jpg';
+import destPuertoMorelos from '@/assets/dest-puerto-morelos.jpg';
+import destCancunCentro from '@/assets/dest-cancun-centro.jpg';
+import destTulum from '@/assets/dest-tulum.jpg';
+
+// Property images
+import propOceana from '@/assets/prop-oceana.jpg';
+import propMarina from '@/assets/prop-marina.jpg';
+import propJade from '@/assets/prop-jade.jpg';
+import propSelva from '@/assets/prop-selva.jpg';
+
+// Journal images
+import journalRoi from '@/assets/journal-roi.jpg';
+import journalBuyer from '@/assets/journal-buyer.jpg';
+import journalWorldcup from '@/assets/journal-worldcup.jpg';
+
+const destinationImages: Record<string, string> = {
+  'zona-hotelera': destZonaHotelera,
+  'puerto-cancun': destPuertoCancun,
+  'costa-mujeres': destCostaMujeres,
+  'mayakoba': destMayakoba,
+  'puerto-morelos': destPuertoMorelos,
+  'cancun-centro': destCancunCentro,
+  'tulum': destTulum,
+};
+
+const journalImages: Record<string, string> = {
+  'cancun-roi-rental-yield': journalRoi,
+  'foreign-buyer-guide-mexico': journalBuyer,
+  'world-cup-2026-cancun-real-estate': journalWorldcup,
+};
+
 const featuredProperties = [
-  { name: 'Oceana Residences', zone: 'Costa Mujeres', beds: 3, area: 185, price: '$425K', profiles: ['maria', 'investor'], destKey: 'costa-mujeres' },
-  { name: 'Marina Towers', zone: 'Puerto Cancún', beds: 2, area: 140, price: '$510K', profiles: ['pedro', 'carlos'], destKey: 'puerto-cancun' },
-  { name: 'Jade Penthouse', zone: { es: 'Zona Hotelera', en: 'Hotel Zone' }, beds: 4, area: 320, price: '$1.2M', profiles: ['maria', 'carlos', 'investor'], destKey: 'zona-hotelera' },
-  { name: 'Selva Lofts', zone: 'Tulum', beds: 1, area: 78, price: '$195K', profiles: ['investor'], destKey: 'tulum' },
+  { name: 'Oceana Residences', zone: 'Costa Mujeres', beds: 3, area: 185, price: '$425K', amenities: ['ocean', 'pool', 'spa'], destKey: 'costa-mujeres', image: propOceana },
+  { name: 'Marina Towers', zone: 'Puerto Cancún', beds: 2, area: 140, price: '$510K', amenities: ['marina', 'pool', 'golf'], destKey: 'puerto-cancun', image: propMarina },
+  { name: 'Jade Penthouse', zone: { es: 'Zona Hotelera', en: 'Hotel Zone' }, beds: 4, area: 320, price: '$1.2M', amenities: ['ocean', 'pool', 'sunset'], destKey: 'zona-hotelera', image: propJade },
+  { name: 'Selva Lofts', zone: 'Tulum', beds: 1, area: 78, price: '$195K', amenities: ['jungle', 'pool', 'spa'], destKey: 'tulum', image: propSelva },
 ];
+
+const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
+  ocean: { icon: WavesIcon, label: { es: 'Vista al Mar', en: 'Ocean View' } },
+  pool: { icon: SwimIcon, label: { es: 'Alberca', en: 'Pool' } },
+  spa: { icon: SparklesIcon, label: { es: 'Spa', en: 'Spa' } },
+  marina: { icon: AnchorIcon, label: { es: 'Marina', en: 'Marina' } },
+  golf: { icon: GolfIcon, label: { es: 'Golf', en: 'Golf' } },
+  sunset: { icon: SunIcon, label: { es: 'Atardecer', en: 'Sunset' } },
+  jungle: { icon: SunIcon, label: { es: 'Selva', en: 'Jungle' } },
+};
 
 const Home = () => {
   const { language, t, localePath } = useLanguage();
@@ -26,7 +71,6 @@ const Home = () => {
     { num: '04', text: t('services.04') },
   ];
 
-  // Show P1 destinations first, then others
   const sortedDestinations = [...destinations].sort((a, b) => a.priority - b.priority);
 
   const seoTitle = language === 'es'
@@ -84,7 +128,6 @@ const Home = () => {
             </Button>
           </div>
         </div>
-        {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-scroll-hint">
           <span className="w-px h-8 bg-primary/50" />
           <span className="text-xs font-body uppercase tracking-widest text-[hsl(var(--pearl))]/60">Scroll</span>
@@ -122,7 +165,12 @@ const Home = () => {
                   to={localePath(d.basePath)}
                   className="group block relative overflow-hidden aspect-[16/10] rounded-sm"
                 >
-                  <div className="absolute inset-0 gradient-placeholder-alt group-hover:scale-105 transition-transform duration-700" />
+                  <img
+                    src={destinationImages[d.key]}
+                    alt={d.name[language]}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_0%/0.7)] via-[hsl(0_0%_0%/0.2)] to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     {d.chips[language][0] && (
@@ -160,8 +208,15 @@ const Home = () => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
                 <ScrollReveal key={p.name} delay={i * 100}>
-                  <Link to={localePath('/property/oceana-residences')} className="group block bg-background rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.08)] border border-border">
-                    <div className="aspect-[16/10] gradient-placeholder group-hover:scale-105 transition-transform duration-700" />
+                  <Link to={localePath('/property/oceana-residences')} className="group block bg-card rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.06)] border border-border">
+                    <div className="aspect-[16/10] overflow-hidden">
+                      <img
+                        src={p.image}
+                        alt={p.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        loading="lazy"
+                      />
+                    </div>
                     <div className="p-6">
                       <span className="eyebrow text-xs">{zoneName}</span>
                       <h3 className="text-xl mt-2 mb-4 text-secondary">{p.name}</h3>
@@ -171,7 +226,19 @@ const Home = () => {
                         <span className="flex items-center gap-1.5"><DollarIcon className="w-4 h-4" /> {p.price}</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <BuyerDots profiles={p.profiles} />
+                        <div className="flex items-center gap-3">
+                          {p.amenities.map((a) => {
+                            const amenity = amenityIcons[a];
+                            if (!amenity) return null;
+                            const Icon = amenity.icon;
+                            return (
+                              <span key={a} className="flex items-center gap-1 text-xs text-primary font-body">
+                                <Icon className="w-3.5 h-3.5" />
+                                {amenity.label[language]}
+                              </span>
+                            );
+                          })}
+                        </div>
                         <span className="text-sm text-primary font-body flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                           {t('card.view')} <ArrowRightIcon className="w-3 h-3" />
                         </span>
@@ -244,7 +311,14 @@ const Home = () => {
             {recentArticles.map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 100}>
                 <Link to={localePath(`/journal/${post.slug}`)} className="group block">
-                  <div className="aspect-[16/10] gradient-placeholder-alt rounded-sm mb-4 group-hover:scale-[1.02] transition-transform duration-500" />
+                  <div className="aspect-[16/10] rounded-sm mb-4 overflow-hidden">
+                    <img
+                      src={journalImages[post.slug] || journalRoi}
+                      alt={post.title[language]}
+                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
                   <span className="eyebrow text-xs">{post.category[language]}</span>
                   <h4 className="mt-2 mb-3 text-secondary group-hover:text-primary transition-colors">{post.title[language]}</h4>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground font-body">
