@@ -232,7 +232,7 @@ const Home = () => {
             <div className="flex items-end justify-between mb-16">
               <div>
                 <p className="eyebrow mb-4">{t('section.blog')}</p>
-                <h2>{t('section.blogTitle')}</h2>
+                <h2 className="text-secondary">{t('section.blogTitle')}</h2>
               </div>
               <Link to={localePath('/journal')} className="text-sm text-primary font-body flex items-center gap-1 gold-underline">
                 {t('blog.viewAll')} <ArrowRightIcon className="w-4 h-4" />
