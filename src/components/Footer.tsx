@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { LocationIcon, PhoneIcon, MailIcon, InstagramIcon, PinterestIcon } from '@/components/icons';
+import { PhoneIcon, MailIcon, InstagramIcon, PinterestIcon, FacebookIcon } from '@/components/icons';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { destinations } from '@/data/destinations';
 
