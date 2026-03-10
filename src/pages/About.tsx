@@ -32,7 +32,7 @@ const About = () => {
     : 'Meet the Rivana Properties team. Boutique real estate advisory in Cancún and the Riviera Maya with over $140M in sales.';
 
   return (
-    <div className="light-page">
+    <div>
       <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en/about' : '/about'} />
 
       {/* Hero */}
