@@ -63,7 +63,7 @@ const Home = () => {
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <img src={homeHero} alt={language === 'es' ? 'Propiedad de lujo frente al mar en Cancún' : 'Luxury beachfront property in Cancún'} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/60" />
+        <div className="absolute inset-0 bg-[hsl(0_0%_0%/0.35)]" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center">
           <p className="eyebrow mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {language === 'es' ? 'Asesoría Inmobiliaria de Lujo' : 'Luxury Real Estate Advisory'}
