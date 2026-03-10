@@ -155,7 +155,7 @@ const About = () => {
       </section>
 
       {/* Numbers */}
-      <section className="py-20 bg-deep-dark text-foreground">
+      <section className="py-20 bg-[hsl(30_15%_93%)] border-y border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
             {[
