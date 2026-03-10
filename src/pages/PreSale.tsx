@@ -17,7 +17,7 @@ const PreSale = () => {
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <img src={presaleHero} alt="Oceana Residences luxury beachfront" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.55)] via-[rgba(0,0,0,0.25)] to-transparent" />
         {/* Subtle architectural silhouette */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 300V100L200 20L350 100V300' stroke='white' fill='none' stroke-width='0.5'/%3E%3Cpath d='M100 300V130L200 60L300 130V300' stroke='white' fill='none' stroke-width='0.3'/%3E%3C/svg%3E")`,
@@ -30,10 +30,10 @@ const PreSale = () => {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary blink-dot" />
-                <span className="eyebrow">Pre-Sale · Now Open</span>
+                <span className="eyebrow text-white/90" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Pre-Sale · Now Open</span>
               </div>
-              <h1 className="mb-4">Oceana Residences</h1>
-              <p className="text-muted-foreground font-body text-lg mb-8 max-w-lg">
+              <h1 className="mb-4 text-white" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>Oceana Residences</h1>
+              <p className="font-body text-lg mb-8 max-w-lg text-white/85" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
                 Costa Mujeres' premier oceanfront development. 120 luxury units with unmatched Caribbean views and investment potential.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
@@ -44,8 +44,8 @@ const PreSale = () => {
                   { val: '10%', label: 'Est. Yield' },
                 ].map((s) => (
                   <div key={s.label}>
-                    <span className="font-display text-3xl text-primary">{s.val}</span>
-                    <p className="text-xs text-muted-foreground font-body uppercase tracking-wider mt-1">{s.label}</p>
+                    <span className="font-display text-3xl text-primary" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>{s.val}</span>
+                    <p className="text-xs text-white/70 font-body uppercase tracking-wider mt-1" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>{s.label}</p>
                   </div>
                 ))}
               </div>
