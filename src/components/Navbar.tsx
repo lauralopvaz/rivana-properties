@@ -13,8 +13,8 @@ export const Navbar = () => {
   const { language, setLanguage, t, localePath, switchLanguageUrl } = useLanguage();
 
   // Priority 1 destinations shown prominently
-  const p1Destinations = destinations.filter((d) => d.priority === 1);
-  const otherDestinations = destinations.filter((d) => d.priority > 1);
+  const cancunDestinations = destinations.filter((d) => ['zona-hotelera', 'puerto-cancun', 'costa-mujeres', 'cancun-centro'].includes(d.key));
+  const rivieraMayaDestinations = destinations.filter((d) => !['zona-hotelera', 'puerto-cancun', 'costa-mujeres', 'cancun-centro'].includes(d.key));
 
   const navLinks = [
     { label: t('nav.listings'), href: '/listings' },
