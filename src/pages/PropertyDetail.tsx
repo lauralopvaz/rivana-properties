@@ -328,7 +328,7 @@ const PropertyDetail = () => {
             {/* TAB: FEATURES */}
             {activeTab === 'features' && (
               <div className="animate-fade-in">
-                <div className="grid grid-cols-3 gap-x-6 gap-y-3">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-3">
                   {p.amenities.map((a) => (
                     <div key={a} className="flex items-center gap-2 py-1.5 border-b border-[rgba(0,0,0,0.04)]">
                       <span className="w-[5px] h-[5px] rounded-full bg-[#CFAE60] flex-shrink-0" />
