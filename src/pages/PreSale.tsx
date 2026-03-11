@@ -466,7 +466,7 @@ const PreSale = () => {
               {/* Close */}
               <button
                 onClick={() => setUnitModal(null)}
-                className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center border border-[rgba(0,0,0,0.12)] bg-white text-[#1C1C1C] hover:border-[#CFAE60] transition-colors cursor-pointer rounded-none"
+                className="sticky top-2 right-0 z-10 w-9 h-9 flex items-center justify-center border border-[rgba(0,0,0,0.12)] bg-white text-[#1C1C1C] hover:border-[#CFAE60] transition-colors cursor-pointer rounded-none ml-auto mr-2 mt-2 -mb-9 md:-mb-11 shrink-0"
               >
                 <XIcon className="w-4 h-4" />
               </button>
