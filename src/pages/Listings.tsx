@@ -131,18 +131,32 @@ const FilterDropdown = ({ label, activeLabel, isOpen, onToggle, children }: {
   );
 };
 
+const MXN_RATE = 17.5;
+
 const Listings = () => {
   const { localePath } = useLanguage();
   const [zone, setZone] = useState('Todas las Zonas');
   const [status, setStatus] = useState('Todo el Estatus');
   const [type, setType] = useState('Todos los Tipos');
   const [selectedAmenities, setSelectedAmenities] = useState<BadgeKey[]>([]);
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 2000000]);
+  const [currency, setCurrency] = useState<'USD' | 'MXN'>('USD');
+  const maxUsd = 2000000;
+  const maxMxn = 40000000;
+  const currentMax = currency === 'USD' ? maxUsd : maxMxn;
+  const step = currency === 'USD' ? 10000 : 100000;
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, maxUsd]);
   const [appliedAmenities, setAppliedAmenities] = useState<BadgeKey[]>([]);
-  const [appliedPrice, setAppliedPrice] = useState<[number, number]>([0, 2000000]);
+  const [appliedPrice, setAppliedPrice] = useState<[number, number]>([0, maxUsd]);
+  const [appliedCurrency, setAppliedCurrency] = useState<'USD' | 'MXN'>('USD');
   const [openFilter, setOpenFilter] = useState<string | null>(null);
 
   const toggle = useCallback((key: string) => setOpenFilter(prev => prev === key ? null : key), []);
+
+  const handleCurrencyChange = (c: 'USD' | 'MXN') => {
+    setCurrency(c);
+    const newMax = c === 'USD' ? maxUsd : maxMxn;
+    setPriceRange([0, newMax]);
+  };
 
   const filtered = allProperties
     .filter(p => zone === 'Todas las Zonas' || p.zone === zone)
@@ -156,9 +170,24 @@ const Listings = () => {
       return p.type === type.toLowerCase();
     })
     .filter(p => appliedAmenities.length === 0 || appliedAmenities.every(a => p.badges.includes(a)))
-    .filter(p => p.price >= appliedPrice[0] && p.price <= appliedPrice[1]);
+    .filter(p => {
+      const pPrice = appliedCurrency === 'MXN' ? p.price * MXN_RATE : p.price;
+      return pPrice >= appliedPrice[0] && pPrice <= appliedPrice[1];
+    });
 
-  const formatPrice = (n: number) => n >= 1000000 ? `$${(n / 1000000).toFixed(1)}M` : `$${(n / 1000).toFixed(0)}K`;
+  const formatPriceInCurrency = (usdPrice: number, cur: 'USD' | 'MXN') => {
+    const val = cur === 'MXN' ? usdPrice * MXN_RATE : usdPrice;
+    if (val >= 1000000) return `$${(val / 1000000).toFixed(1)}M`;
+    return `$${(val / 1000).toFixed(0)}K`;
+  };
+
+  const formatFilterLabel = () => {
+    const isDefault = appliedPrice[0] === 0 && appliedPrice[1] === (appliedCurrency === 'USD' ? maxUsd : maxMxn);
+    if (isDefault) return appliedCurrency !== 'USD' ? `Precio (${appliedCurrency})` : 'Precio';
+    const lo = appliedPrice[0] >= 1000000 ? `$${(appliedPrice[0] / 1000000).toFixed(1)}M` : `$${(appliedPrice[0] / 1000).toFixed(0)}K`;
+    const hi = appliedPrice[1] >= 1000000 ? `$${(appliedPrice[1] / 1000000).toFixed(1)}M` : `$${(appliedPrice[1] / 1000).toFixed(0)}K`;
+    return `Precio · ${lo}–${hi} ${appliedCurrency}`;
+  };
 
   const clearFilters = () => {
     setZone('Todas las Zonas');
@@ -166,8 +195,10 @@ const Listings = () => {
     setType('Todos los Tipos');
     setSelectedAmenities([]);
     setAppliedAmenities([]);
-    setPriceRange([0, 2000000]);
-    setAppliedPrice([0, 2000000]);
+    setCurrency('USD');
+    setAppliedCurrency('USD');
+    setPriceRange([0, maxUsd]);
+    setAppliedPrice([0, maxUsd]);
   };
 
   return (
@@ -245,54 +276,76 @@ const Listings = () => {
           {/* Precio */}
           <FilterDropdown
             label="Precio"
-            activeLabel={appliedPrice[0] > 0 || appliedPrice[1] < 2000000 ? `$${(appliedPrice[0] / 1000).toFixed(0)}K — $${appliedPrice[1] >= 1000000 ? (appliedPrice[1] / 1000000).toFixed(1) + 'M' : (appliedPrice[1] / 1000).toFixed(0) + 'K'}` : 'Precio'}
+            activeLabel={formatFilterLabel()}
             isOpen={openFilter === 'price'}
-            onToggle={() => { toggle('price'); if (openFilter !== 'price') setPriceRange([...appliedPrice]); }}
+            onToggle={() => { toggle('price'); if (openFilter !== 'price') { setPriceRange([...appliedPrice]); setCurrency(appliedCurrency); } }}
           >
-            <div className="p-4 w-[300px]">
-              <p className="text-[9px] tracking-[3px] uppercase font-body font-[300] mb-3" style={{ color: '#4B4B4B' }}>Rango de Precio (USD)</p>
+            <div className="p-4 w-[320px]">
+              {/* Currency toggle */}
+              <p className="text-[8px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>Moneda</p>
+              <div className="flex mb-4">
+                {(['USD', 'MXN'] as const).map(c => (
+                  <button
+                    key={c}
+                    onClick={() => handleCurrencyChange(c)}
+                    className="flex-1 py-2 text-[10px] font-body transition-colors"
+                    style={{
+                      background: currency === c ? '#CFAE60' : '#F8F6F2',
+                      border: `1px solid ${currency === c ? '#CFAE60' : 'rgba(0,0,0,0.10)'}`,
+                      color: currency === c ? 'white' : '#4B4B4B',
+                      fontWeight: currency === c ? 400 : 300,
+                    }}
+                  >
+                    {c}
+                  </button>
+                ))}
+              </div>
+
+              <p className="text-[8px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>Rango de Precio ({currency})</p>
               <div className="flex items-center gap-2 mb-4">
                 <input
                   type="text"
+                  placeholder={`$ Mínimo ${currency}`}
                   value={`$${priceRange[0].toLocaleString()}`}
                   onChange={e => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([Math.min(v, priceRange[1]), priceRange[1]]);
                   }}
-                  className="flex-1 py-2 px-3 text-[11px] font-body font-[300] rounded-none"
-                  style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.10)' }}
+                  className="flex-1 py-[9px] px-3 text-[11px] font-body font-[300] rounded-none"
+                  style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
                 <span className="text-[11px] font-body" style={{ color: '#4B4B4B' }}>—</span>
                 <input
                   type="text"
+                  placeholder={`$ Máximo ${currency}`}
                   value={`$${priceRange[1].toLocaleString()}`}
                   onChange={e => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([priceRange[0], Math.max(v, priceRange[0])]);
                   }}
-                  className="flex-1 py-2 px-3 text-[11px] font-body font-[300] rounded-none"
-                  style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.10)' }}
+                  className="flex-1 py-[9px] px-3 text-[11px] font-body font-[300] rounded-none"
+                  style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
               </div>
               {/* Dual range slider */}
               <div className="relative h-[20px] mb-4">
-                <div className="absolute top-[9px] left-0 right-0 h-[2px]" style={{ background: 'rgba(207,174,96,0.20)' }} />
+                <div className="absolute top-[9px] left-0 right-0 h-[3px]" style={{ background: 'rgba(207,174,96,0.18)' }} />
                 <div
-                  className="absolute top-[9px] h-[2px]"
-                  style={{ left: `${(priceRange[0] / 2000000) * 100}%`, right: `${100 - (priceRange[1] / 2000000) * 100}%`, background: '#CFAE60' }}
+                  className="absolute top-[9px] h-[3px]"
+                  style={{ left: `${(priceRange[0] / currentMax) * 100}%`, right: `${100 - (priceRange[1] / currentMax) * 100}%`, background: '#CFAE60' }}
                 />
                 <input
-                  type="range" min={0} max={2000000} step={10000} value={priceRange[0]}
-                  onChange={e => setPriceRange([Math.min(+e.target.value, priceRange[1] - 10000), priceRange[1]])}
-                  className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[16px] [&::-webkit-slider-thumb]:h-[16px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:cursor-pointer"
+                  type="range" min={0} max={currentMax} step={step} value={priceRange[0]}
+                  onChange={e => setPriceRange([Math.min(+e.target.value, priceRange[1] - step), priceRange[1]])}
+                  className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-[1.5px] [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:shadow-[0_1px_6px_rgba(0,0,0,0.12)] [&::-webkit-slider-thumb]:cursor-pointer"
                 />
                 <input
-                  type="range" min={0} max={2000000} step={10000} value={priceRange[1]}
-                  onChange={e => setPriceRange([priceRange[0], Math.max(+e.target.value, priceRange[0] + 10000)])}
-                  className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[16px] [&::-webkit-slider-thumb]:h-[16px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:cursor-pointer"
+                  type="range" min={0} max={currentMax} step={step} value={priceRange[1]}
+                  onChange={e => setPriceRange([priceRange[0], Math.max(+e.target.value, priceRange[0] + step)])}
+                  className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-[1.5px] [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:shadow-[0_1px_6px_rgba(0,0,0,0.12)] [&::-webkit-slider-thumb]:cursor-pointer"
                 />
               </div>
-              <button onClick={() => { setAppliedPrice([...priceRange]); setOpenFilter(null); }} className="w-full py-2 text-[9px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
+              <button onClick={() => { setAppliedPrice([...priceRange]); setAppliedCurrency(currency); setOpenFilter(null); }} className="w-full py-2 text-[9px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
                 Aplicar
               </button>
             </div>
@@ -379,7 +432,7 @@ const Listings = () => {
                   <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                     <div>
                       <span className="block text-[8px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>Desde</span>
-                      <span className="font-display text-[20px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price)} USD</span>
+                      <span className="font-display text-[20px]" style={{ color: '#CFAE60' }}>{formatPriceInCurrency(p.price, appliedCurrency)} {appliedCurrency}</span>
                     </div>
                     <span className="text-[10px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                       Ver <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
