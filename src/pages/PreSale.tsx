@@ -427,7 +427,7 @@ const PreSale = () => {
               </div>
 
               {/* Right — Details */}
-              <div className="p-10">
+              <div className="p-5 md:p-10">
                 <h3 className="font-display text-[34px] font-[300] text-[#1C1C1C] mb-1">{u.name}</h3>
                 <p className="font-body text-[9px] tracking-[3px] uppercase text-[#CFAE60] font-[400] mb-6">Residencial {PROJECT.name} · {PROJECT.location}</p>
 
