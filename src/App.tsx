@@ -92,6 +92,9 @@ const AppRoutes = () => (
     {/* P2 */}
     <Route path="/en/mayakoba" element={<DestinationPage destinationKey="mayakoba" />} />
     <Route path="/en/puerto-morelos" element={<DestinationPage destinationKey="puerto-morelos" />} />
+    <Route path="/en/playa-del-carmen" element={<DestinationPage destinationKey="playa-del-carmen" />} />
+    <Route path="/en/playa-del-carmen/condos" element={<DestinationPage destinationKey="playa-del-carmen" subPage="condos" />} />
+    <Route path="/en/playa-del-carmen/preventa" element={<DestinationPage destinationKey="playa-del-carmen" subPage="preventa" />} />
 
     {/* P3 */}
     <Route path="/en/cancun/centro" element={<DestinationPage destinationKey="cancun-centro" />} />
