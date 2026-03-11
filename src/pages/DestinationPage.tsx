@@ -141,7 +141,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   return (
     <div>
       <SEOHead title={seoTitle} description={seoDescription} path={currentPath} schema={schema} />
-      <ContactPopup open={popupOpen} onClose={() => setPopupOpen(false)} />
+      
 
       {/* Breadcrumb */}
       <div className="pt-24 px-6 lg:px-10 max-w-[1400px] mx-auto">
