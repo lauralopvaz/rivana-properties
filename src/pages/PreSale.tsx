@@ -418,7 +418,7 @@ const PreSale = () => {
               </button>
 
               {/* Left — Floor Plan */}
-              <div className="bg-[#F8F6F2] p-8 flex flex-col items-center justify-center min-h-[400px]">
+              <div className="bg-[#F8F6F2] p-6 md:p-8 flex flex-col items-center justify-center min-h-[250px] md:min-h-[400px]">
                 <p className="font-body text-[9px] tracking-[3px] uppercase text-[#CFAE60] font-[400] mb-4">Plano de Planta</p>
                 <div className="w-full aspect-square bg-[#eee8de] border border-[rgba(207,174,96,0.18)] flex items-center justify-center">
                   <span className="font-body text-[11px] text-[#999]">Plano SVG</span>
