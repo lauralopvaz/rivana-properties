@@ -276,54 +276,76 @@ const Listings = () => {
           {/* Precio */}
           <FilterDropdown
             label="Precio"
-            activeLabel={appliedPrice[0] > 0 || appliedPrice[1] < 2000000 ? `$${(appliedPrice[0] / 1000).toFixed(0)}K — $${appliedPrice[1] >= 1000000 ? (appliedPrice[1] / 1000000).toFixed(1) + 'M' : (appliedPrice[1] / 1000).toFixed(0) + 'K'}` : 'Precio'}
+            activeLabel={formatFilterLabel()}
             isOpen={openFilter === 'price'}
-            onToggle={() => { toggle('price'); if (openFilter !== 'price') setPriceRange([...appliedPrice]); }}
+            onToggle={() => { toggle('price'); if (openFilter !== 'price') { setPriceRange([...appliedPrice]); setCurrency(appliedCurrency); } }}
           >
-            <div className="p-4 w-[300px]">
-              <p className="text-[9px] tracking-[3px] uppercase font-body font-[300] mb-3" style={{ color: '#4B4B4B' }}>Rango de Precio (USD)</p>
+            <div className="p-4 w-[320px]">
+              {/* Currency toggle */}
+              <p className="text-[8px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>Moneda</p>
+              <div className="flex mb-4">
+                {(['USD', 'MXN'] as const).map(c => (
+                  <button
+                    key={c}
+                    onClick={() => handleCurrencyChange(c)}
+                    className="flex-1 py-2 text-[10px] font-body transition-colors"
+                    style={{
+                      background: currency === c ? '#CFAE60' : '#F8F6F2',
+                      border: `1px solid ${currency === c ? '#CFAE60' : 'rgba(0,0,0,0.10)'}`,
+                      color: currency === c ? 'white' : '#4B4B4B',
+                      fontWeight: currency === c ? 400 : 300,
+                    }}
+                  >
+                    {c}
+                  </button>
+                ))}
+              </div>
+
+              <p className="text-[8px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>Rango de Precio ({currency})</p>
               <div className="flex items-center gap-2 mb-4">
                 <input
                   type="text"
+                  placeholder={`$ Mínimo ${currency}`}
                   value={`$${priceRange[0].toLocaleString()}`}
                   onChange={e => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([Math.min(v, priceRange[1]), priceRange[1]]);
                   }}
-                  className="flex-1 py-2 px-3 text-[11px] font-body font-[300] rounded-none"
-                  style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.10)' }}
+                  className="flex-1 py-[9px] px-3 text-[11px] font-body font-[300] rounded-none"
+                  style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
                 <span className="text-[11px] font-body" style={{ color: '#4B4B4B' }}>—</span>
                 <input
                   type="text"
+                  placeholder={`$ Máximo ${currency}`}
                   value={`$${priceRange[1].toLocaleString()}`}
                   onChange={e => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([priceRange[0], Math.max(v, priceRange[0])]);
                   }}
-                  className="flex-1 py-2 px-3 text-[11px] font-body font-[300] rounded-none"
-                  style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.10)' }}
+                  className="flex-1 py-[9px] px-3 text-[11px] font-body font-[300] rounded-none"
+                  style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
               </div>
               {/* Dual range slider */}
               <div className="relative h-[20px] mb-4">
-                <div className="absolute top-[9px] left-0 right-0 h-[2px]" style={{ background: 'rgba(207,174,96,0.20)' }} />
+                <div className="absolute top-[9px] left-0 right-0 h-[3px]" style={{ background: 'rgba(207,174,96,0.18)' }} />
                 <div
-                  className="absolute top-[9px] h-[2px]"
-                  style={{ left: `${(priceRange[0] / 2000000) * 100}%`, right: `${100 - (priceRange[1] / 2000000) * 100}%`, background: '#CFAE60' }}
+                  className="absolute top-[9px] h-[3px]"
+                  style={{ left: `${(priceRange[0] / currentMax) * 100}%`, right: `${100 - (priceRange[1] / currentMax) * 100}%`, background: '#CFAE60' }}
                 />
                 <input
-                  type="range" min={0} max={2000000} step={10000} value={priceRange[0]}
-                  onChange={e => setPriceRange([Math.min(+e.target.value, priceRange[1] - 10000), priceRange[1]])}
-                  className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[16px] [&::-webkit-slider-thumb]:h-[16px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:cursor-pointer"
+                  type="range" min={0} max={currentMax} step={step} value={priceRange[0]}
+                  onChange={e => setPriceRange([Math.min(+e.target.value, priceRange[1] - step), priceRange[1]])}
+                  className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-[1.5px] [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:shadow-[0_1px_6px_rgba(0,0,0,0.12)] [&::-webkit-slider-thumb]:cursor-pointer"
                 />
                 <input
-                  type="range" min={0} max={2000000} step={10000} value={priceRange[1]}
-                  onChange={e => setPriceRange([priceRange[0], Math.max(+e.target.value, priceRange[0] + 10000)])}
-                  className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[16px] [&::-webkit-slider-thumb]:h-[16px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:cursor-pointer"
+                  type="range" min={0} max={currentMax} step={step} value={priceRange[1]}
+                  onChange={e => setPriceRange([priceRange[0], Math.max(+e.target.value, priceRange[0] + step)])}
+                  className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-[1.5px] [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:shadow-[0_1px_6px_rgba(0,0,0,0.12)] [&::-webkit-slider-thumb]:cursor-pointer"
                 />
               </div>
-              <button onClick={() => { setAppliedPrice([...priceRange]); setOpenFilter(null); }} className="w-full py-2 text-[9px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
+              <button onClick={() => { setAppliedPrice([...priceRange]); setAppliedCurrency(currency); setOpenFilter(null); }} className="w-full py-2 text-[9px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
                 Aplicar
               </button>
             </div>
