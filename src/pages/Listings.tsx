@@ -47,17 +47,17 @@ const CrownIcon = ({ className = "w-3 h-3" }: { className?: string }) => (
 
 type BadgeKey = 'vista-mar' | 'golf' | 'vista-marina' | 'club-privado' | 'alberca-infinity' | 'beach-club' | 'wellness' | 'pet-friendly' | 'comunidad-cerrada' | 'frente-mar';
 
-const badgeConfig: Record<BadgeKey, { label: string; icon: React.FC<{ className?: string }> }> = {
-  'vista-mar': { label: 'Vista al Mar', icon: WavesIcon },
-  'golf': { label: 'Campo de Golf', icon: GolfIcon },
-  'vista-marina': { label: 'Vista a la Marina', icon: AnchorIcon },
-  'club-privado': { label: 'Club Privado', icon: CrownIcon },
-  'alberca-infinity': { label: 'Alberca Infinity', icon: PoolIcon },
-  'beach-club': { label: 'Beach Club', icon: UmbrellaIcon },
-  'wellness': { label: 'Wellness & Spa', icon: LeafIcon },
-  'pet-friendly': { label: 'Pet Friendly', icon: PawIcon },
-  'comunidad-cerrada': { label: 'Comunidad Cerrada', icon: LockIcon },
-  'frente-mar': { label: 'Frente al Mar', icon: WavesIcon },
+const badgeConfig: Record<BadgeKey, { label: { es: string; en: string }; icon: React.FC<{ className?: string }> }> = {
+  'vista-mar': { label: { es: 'Vista al Mar', en: 'Ocean View' }, icon: WavesIcon },
+  'golf': { label: { es: 'Campo de Golf', en: 'Golf Course' }, icon: GolfIcon },
+  'vista-marina': { label: { es: 'Vista a la Marina', en: 'Marina View' }, icon: AnchorIcon },
+  'club-privado': { label: { es: 'Club Privado', en: 'Private Club' }, icon: CrownIcon },
+  'alberca-infinity': { label: { es: 'Alberca Infinity', en: 'Infinity Pool' }, icon: PoolIcon },
+  'beach-club': { label: { es: 'Beach Club', en: 'Beach Club' }, icon: UmbrellaIcon },
+  'wellness': { label: { es: 'Wellness & Spa', en: 'Wellness & Spa' }, icon: LeafIcon },
+  'pet-friendly': { label: { es: 'Pet Friendly', en: 'Pet Friendly' }, icon: PawIcon },
+  'comunidad-cerrada': { label: { es: 'Comunidad Cerrada', en: 'Gated Community' }, icon: LockIcon },
+  'frente-mar': { label: { es: 'Frente al Mar', en: 'Beachfront' }, icon: WavesIcon },
 };
 
 const amenityOptions: BadgeKey[] = ['vista-mar', 'golf', 'vista-marina', 'club-privado', 'alberca-infinity', 'beach-club', 'wellness', 'pet-friendly', 'comunidad-cerrada', 'frente-mar'];
