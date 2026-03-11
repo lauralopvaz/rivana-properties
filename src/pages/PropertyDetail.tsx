@@ -393,7 +393,7 @@ const PropertyDetail = () => {
           </div>
 
           {/* ── RIGHT COLUMN / SIDEBAR ── */}
-          <div className="pt-14 pl-0 lg:pl-4">
+          <div className="pt-8 lg:pt-14 pl-0 lg:pl-4">
             <aside className="sticky top-6 bg-white border border-[rgba(207,174,96,0.24)] shadow-[0_6px_48px_rgba(0,0,0,0.07)] p-6">
 
               {/* A) PRICE + ROI */}
