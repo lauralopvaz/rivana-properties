@@ -264,50 +264,7 @@ const Home = () => {
       </section>
 
       {/* ── SCHEDULE A VISIT ── */}
-      <section className="py-16 lg:py-20 bg-background relative">
-        {/* Decorative top divider */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 flex items-center gap-4 -translate-y-1/2">
-          <span className="w-16 h-px bg-primary/40" />
-          <span className="w-2 h-2 rounded-full bg-primary/60" />
-          <span className="w-16 h-px bg-primary/40" />
-        </div>
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal>
-              <p className="eyebrow mb-4">{t('section.schedule')}</p>
-              <h2 className="mb-6 text-secondary">{t('section.scheduleTitle')}</h2>
-              <p className="text-muted-foreground mb-6 max-w-md">
-                {t('section.scheduleDesc')}
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <LocationIcon className="w-4 h-4 text-primary" />
-                  <span>Cancún, Q.R., México</span>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={200}>
-              <form className="bg-card border border-border rounded-sm p-8 space-y-5 shadow-sm" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input placeholder={t('form.firstName')} className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                  <input placeholder={t('form.lastName')} className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                </div>
-                <input type="email" placeholder={t('form.email')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <input type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <select className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-muted-foreground focus:outline-none focus:border-primary transition-colors">
-                  <option value="">{t('form.selectDestination')}</option>
-                  {destinations.map((d) => (
-                    <option key={d.key} value={d.key}>{d.name[language]}</option>
-                  ))}
-                </select>
-                <textarea placeholder={t('form.message')} rows={3} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none" />
-                <Button variant="gold" className="w-full" type="submit">{t('form.scheduleVisit')}</Button>
-              </form>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
+      <ContactSection />
 
       {/* ── BLOG PREVIEW ── */}
       <section className="py-16 lg:py-20 bg-background border-t border-border">

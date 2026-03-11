@@ -123,7 +123,7 @@ const App = () => (
         <LanguageProvider>
           <Toaster />
           <Sonner />
-          <CustomCursor />
+          
           <GrainOverlay />
           <Navbar />
           <AppRoutes />
