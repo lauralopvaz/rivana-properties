@@ -188,7 +188,7 @@ const PreSale = () => {
             <p className="font-body text-[13px] font-[300] leading-[1.82] text-[#4B4B4B] mb-8">{PROJECT.description}</p>
 
             {/* 3 stat boxes */}
-            <div className="grid grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-3 gap-2 md:gap-4 mb-8">
               {[
                 { val: String(PROJECT.totalUnits), label: 'Total Unidades' },
                 { val: PROJECT.delivery, label: 'Entrega' },
