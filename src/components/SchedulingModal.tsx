@@ -130,8 +130,7 @@ export const SchedulingModal = () => {
               className="flex items-center justify-center mb-6"
               style={{ width: '60px', height: '60px', borderRadius: '50%', border: '1px solid #CFAE60' }}
             >
-              <CheckIcon className="w-[22px] h-[22px]" style={{ color: '#CFAE60' } as any} />
-              <svg className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="#CFAE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ position: 'absolute' }}>
+              <svg className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="#CFAE60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
