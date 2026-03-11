@@ -61,7 +61,7 @@ export const Navbar = () => {
               <div className="absolute top-full left-0 mt-2 bg-card border border-border rounded-sm shadow-xl min-w-[280px] animate-fade-in z-50">
                 <div className="p-4">
                   <p className="eyebrow text-xs mb-3">{language === 'es' ? 'Cancún' : 'Cancún'}</p>
-                  {p1Destinations.map((d) => (
+                  {cancunDestinations.map((d) => (
                     <Link
                       key={d.key}
                       to={localePath(d.basePath)}
