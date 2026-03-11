@@ -8,7 +8,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { GrainOverlay } from "@/components/GrainOverlay";
-import { CustomCursor } from "@/components/CustomCursor";
+
 import Index from "./pages/Index";
 import DestinationPage from "./pages/DestinationPage";
 import PropertyDetail from "./pages/PropertyDetail";
