@@ -300,7 +300,7 @@ const PropertyDetail = () => {
             )}
 
             {/* 5. TABS */}
-            <div className="flex gap-0 border-b border-[rgba(0,0,0,0.08)] mb-8">
+            <div className="flex gap-0 border-b border-[rgba(0,0,0,0.08)] mb-8 overflow-x-auto">
               {tabs.map((tab) => (
                 <button
                   key={tab.key}
