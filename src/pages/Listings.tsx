@@ -195,8 +195,10 @@ const Listings = () => {
     setType('Todos los Tipos');
     setSelectedAmenities([]);
     setAppliedAmenities([]);
-    setPriceRange([0, 2000000]);
-    setAppliedPrice([0, 2000000]);
+    setCurrency('USD');
+    setAppliedCurrency('USD');
+    setPriceRange([0, maxUsd]);
+    setAppliedPrice([0, maxUsd]);
   };
 
   return (
