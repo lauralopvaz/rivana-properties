@@ -89,7 +89,7 @@ const allProperties: Property[] = [
   { id: 8, name: 'Downtown Cancún Loft', zone: 'Cancún Centro', type: 'departamento', beds: 2, area: 95, price: 180000, priceM2: 1895, status: 'entrega-inmediata', badges: ['alberca-infinity', 'pet-friendly'], image: propSelva, slug: 'downtown-cancun-loft' },
 ];
 
-const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Mayakoba', 'Puerto Morelos', 'Tulum', 'Cancún Centro'];
+const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Tulum', 'Cancún Centro'];
 const statuses = ['Todo el Estatus', 'Preventa', 'Entrega Inmediata'];
 const types = ['Todos los Tipos', 'Departamento', 'Condominio', 'Penthouse', 'Villa'];
 

@@ -47,9 +47,12 @@ const AppRoutes = () => (
     <Route path="/cancun/costa-mujeres/preventa" element={<DestinationPage destinationKey="costa-mujeres" subPage="preventa" />} />
     <Route path="/cancun/costa-mujeres/penthouses" element={<DestinationPage destinationKey="costa-mujeres" subPage="penthouses" />} />
 
-    {/* P2: Mayakoba & Puerto Morelos */}
+    {/* P2: Mayakoba, Puerto Morelos & Playa del Carmen */}
     <Route path="/mayakoba" element={<DestinationPage destinationKey="mayakoba" />} />
     <Route path="/puerto-morelos" element={<DestinationPage destinationKey="puerto-morelos" />} />
+    <Route path="/playa-del-carmen" element={<DestinationPage destinationKey="playa-del-carmen" />} />
+    <Route path="/playa-del-carmen/condos" element={<DestinationPage destinationKey="playa-del-carmen" subPage="condos" />} />
+    <Route path="/playa-del-carmen/preventa" element={<DestinationPage destinationKey="playa-del-carmen" subPage="preventa" />} />
 
     {/* P3: Cancún Centro & Tulum */}
     <Route path="/cancun/centro" element={<DestinationPage destinationKey="cancun-centro" />} />
@@ -89,6 +92,9 @@ const AppRoutes = () => (
     {/* P2 */}
     <Route path="/en/mayakoba" element={<DestinationPage destinationKey="mayakoba" />} />
     <Route path="/en/puerto-morelos" element={<DestinationPage destinationKey="puerto-morelos" />} />
+    <Route path="/en/playa-del-carmen" element={<DestinationPage destinationKey="playa-del-carmen" />} />
+    <Route path="/en/playa-del-carmen/condos" element={<DestinationPage destinationKey="playa-del-carmen" subPage="condos" />} />
+    <Route path="/en/playa-del-carmen/preventa" element={<DestinationPage destinationKey="playa-del-carmen" subPage="preventa" />} />
 
     {/* P3 */}
     <Route path="/en/cancun/centro" element={<DestinationPage destinationKey="cancun-centro" />} />

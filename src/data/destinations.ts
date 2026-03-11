@@ -493,6 +493,76 @@ export const destinations: DestinationConfig[] = [
     formTitle: { es: 'Recibe Precios de Tulum', en: 'Get Tulum Pricing' },
     breadcrumb: { es: ['Rivana', 'Tulum'], en: ['Rivana', 'Tulum'] },
   },
+
+  // ─── PRIORITY 2: PLAYA DEL CARMEN ───
+  {
+    key: 'playa-del-carmen',
+    basePath: '/playa-del-carmen',
+    name: { es: 'Playa del Carmen', en: 'Playa del Carmen' },
+    tagline: { es: 'Cosmopolita y vibrante', en: 'Cosmopolitan and vibrant' },
+    priority: 2,
+    seo: {
+      title: {
+        es: 'Propiedades Playa del Carmen — Inversión Cosmopolita | Rivana',
+        en: 'Playa del Carmen Real Estate — Cosmopolitan Investment | Rivana',
+      },
+      description: {
+        es: 'Propiedades de lujo en Playa del Carmen. Condos, penthouses y departamentos con alto retorno de inversión. Rivana Properties.',
+        en: 'Luxury properties in Playa del Carmen. Condos, penthouses and apartments with high ROI. Rivana Properties.',
+      },
+      h1: {
+        es: 'Propiedades Playa del Carmen — Inversión Cosmopolita',
+        en: 'Playa del Carmen Real Estate — Cosmopolitan Investment',
+      },
+      keywords: {
+        es: ['propiedades Playa del Carmen', 'departamentos en venta Playa del Carmen', 'inversión inmobiliaria Playa del Carmen'],
+        en: ['Playa del Carmen real estate', 'condos for sale Playa del Carmen', 'Playa del Carmen investment property'],
+      },
+    },
+    stats: [
+      { val: '50+', label: { es: 'Propiedades', en: 'Properties' } },
+      { val: '$180K', label: { es: 'Desde', en: 'Starting From' } },
+      { val: '14%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
+      { val: '80+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
+    ],
+    chips: {
+      es: ['Cosmopolita', 'Quinta Avenida', 'Alta Demanda Turística'],
+      en: ['Cosmopolitan', 'Fifth Avenue', 'High Tourist Demand'],
+    },
+    intro: {
+      es: [
+        'Playa del Carmen es el destino más cosmopolita de la Riviera Maya, donde la vibrante Quinta Avenida se combina con playas de arena blanca y una comunidad internacional diversa.',
+        'Su mercado inmobiliario ofrece una de las mejores relaciones precio-rendimiento de la región, con fuerte demanda de alquiler vacacional durante todo el año.',
+        'Para inversionistas que buscan un activo con liquidez y plusvalía constante, Playa del Carmen es una apuesta segura en el Caribe Mexicano.',
+      ],
+      en: [
+        'Playa del Carmen is the most cosmopolitan destination in the Riviera Maya, where the vibrant Fifth Avenue combines with white sand beaches and a diverse international community.',
+        'Its real estate market offers one of the best price-performance ratios in the region, with strong vacation rental demand year-round.',
+        'For investors seeking a liquid asset with consistent appreciation, Playa del Carmen is a safe bet in the Mexican Caribbean.',
+      ],
+    },
+    subPages: [
+      {
+        segment: 'condos',
+        seo: {
+          title: { es: 'Condominios en Venta — Playa del Carmen | Rivana', en: 'Condos for Sale — Playa del Carmen | Rivana' },
+          h1: { es: 'Condominios en Venta — Playa del Carmen', en: 'Condos for Sale — Playa del Carmen' },
+          description: { es: 'Condominios de lujo en venta en Playa del Carmen. Cerca de la Quinta Avenida y la playa.', en: 'Luxury condos for sale in Playa del Carmen. Near Fifth Avenue and the beach.' },
+        },
+      },
+      {
+        segment: 'preventa',
+        seo: {
+          title: { es: 'Preventa de Propiedades — Playa del Carmen | Rivana', en: 'Pre-Sale Properties — Playa del Carmen | Rivana' },
+          h1: { es: 'Preventa de Propiedades — Playa del Carmen', en: 'Pre-Sale Properties — Playa del Carmen' },
+          description: { es: 'Propiedades en preventa en Playa del Carmen con precios de lanzamiento exclusivos.', en: 'Pre-sale properties in Playa del Carmen with exclusive launch prices.' },
+        },
+      },
+    ],
+    relatedDestinations: ['tulum', 'mayakoba', 'puerto-morelos'],
+    formTitle: { es: 'Recibe Precios de Playa del Carmen', en: 'Get Playa del Carmen Pricing' },
+    breadcrumb: { es: ['Rivana', 'Playa del Carmen'], en: ['Rivana', 'Playa del Carmen'] },
+  },
 ];
 
 export const getDestination = (key: string): DestinationConfig | undefined =>
