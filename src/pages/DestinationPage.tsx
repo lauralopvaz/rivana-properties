@@ -2,21 +2,60 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ScrollReveal';
-import { BuyerDots } from '@/components/BuyerDots';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { getDestination, destinations } from '@/data/destinations';
+import { getDestination } from '@/data/destinations';
 import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIcon, CalendarIcon, BriefcaseIcon, ChatIcon } from '@/components/icons';
+
+import advisorPhoto from '@/assets/advisor-jess.jpg';
+import propOceana from '@/assets/prop-oceana.jpg';
+import propMarina from '@/assets/prop-marina.jpg';
+import propJade from '@/assets/prop-jade.jpg';
 
 interface DestinationPageProps {
   destinationKey: string;
   subPage?: string;
 }
 
+/* ── Badge icons (same as Listings) ── */
+const WavesIcon2 = ({ className = "w-3 h-3" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+  </svg>
+);
+const PoolIcon2 = ({ className = "w-3 h-3" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M2 20c2-1 4-1 6 0s4 1 6 0 4-1 6 0" /><path d="M2 16c2-1 4-1 6 0s4 1 6 0 4-1 6 0" />
+    <path d="M8 14V6a2 2 0 114 0" /><path d="M16 6a2 2 0 00-4 0" />
+  </svg>
+);
+const UmbrellaIcon2 = ({ className = "w-3 h-3" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 18a3 3 0 01-6 0" /><path d="M12 2v1" /><path d="M12 3a9 9 0 019 9H3a9 9 0 019-9z" />
+  </svg>
+);
+
+type BadgeKey = 'vista-mar' | 'alberca-infinity' | 'beach-club' | 'pet-friendly' | 'club-privado' | 'wellness' | 'comunidad-cerrada' | 'vista-marina' | 'golf' | 'frente-mar';
+
+const badgeConfig: Record<string, { label: string; icon: React.FC<{ className?: string }> }> = {
+  'vista-mar': { label: 'Vista al Mar', icon: WavesIcon2 },
+  'alberca-infinity': { label: 'Alberca Infinity', icon: PoolIcon2 },
+  'beach-club': { label: 'Beach Club', icon: UmbrellaIcon2 },
+  'pet-friendly': { label: 'Pet Friendly', icon: WavesIcon2 },
+  'club-privado': { label: 'Club Privado', icon: WavesIcon2 },
+  'wellness': { label: 'Wellness & Spa', icon: WavesIcon2 },
+  'comunidad-cerrada': { label: 'Comunidad Cerrada', icon: WavesIcon2 },
+  'vista-marina': { label: 'Vista a la Marina', icon: WavesIcon2 },
+  'golf': { label: 'Campo de Golf', icon: WavesIcon2 },
+  'frente-mar': { label: 'Frente al Mar', icon: WavesIcon2 },
+};
+
 const projects = [
-  { name: 'Oceana Residences', zone: 'Playa Mujeres', badge: { es: 'Pre-Venta', en: 'Pre-Sale' }, units: 120, price: '$195K', beds: '1-3', area: '65-185', profiles: ['maria', 'investor'], featured: true },
-  { name: 'Azure Tower', zone: 'Costa Mujeres Centro', badge: { es: 'Nuevo Lanzamiento', en: 'New Launch' }, units: 80, price: '$245K', beds: '2-4', area: '95-220', profiles: ['pedro', 'investor'] },
-  { name: 'Mar Sereno', zone: 'Punta Sam', badge: { es: 'Pre-Venta', en: 'Pre-Sale' }, units: 45, price: '$320K', beds: '2-3', area: '110-175', profiles: ['carlos', 'maria'] },
+  { name: 'Oceana Residences', zone: 'Playa Mujeres', status: 'preventa' as const, yield: '10%', beds: 2, area: 95, price: 195000, badges: ['vista-mar', 'alberca-infinity', 'beach-club', 'pet-friendly'] as BadgeKey[], image: propOceana, slug: 'oceana-residences' },
+  { name: 'Azure Tower', zone: 'Costa Mujeres Centro', status: 'preventa' as const, yield: '9%', beds: 3, area: 185, price: 245000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'] as BadgeKey[], image: propMarina, slug: 'azure-beachfront' },
+  { name: 'Mar Sereno', zone: 'Punta Sam', status: 'preventa' as const, yield: '12%', beds: 2, area: 110, price: 320000, badges: ['vista-mar', 'wellness', 'comunidad-cerrada'] as BadgeKey[], image: propJade, slug: 'mar-sereno' },
 ];
 
 const faqs: Record<string, { q: string; a: string }[]> = {
@@ -34,24 +73,138 @@ const faqs: Record<string, { q: string; a: string }[]> = {
   ],
 };
 
-const buyerProfiles = {
-  es: [
-    { name: 'María', color: 'border-l-profile-maria', desc: '~45 años, profesional buscando privacidad y retorno. Compradora independiente con gusto refinado.', fit: 'Studios y condos 1BR frente al mar' },
-    { name: 'Pedro & Lucía', color: 'border-l-profile-pedro', desc: '~38-42, familia joven priorizando seguridad, escuelas y construcción de patrimonio.', fit: 'Familiares 3BR con amenidades' },
-    { name: 'Carlos', color: 'border-l-profile-carlos', desc: '~65, ejecutivo retirado buscando estilo de vida, comunidad y elegancia tropical.', fit: 'Penthouses y unidades de marina' },
-    { name: 'Inversionista Extranjero', color: 'border-l-profile-investor', desc: '35-60, pasaporte US/EU/CA. Enfoque puro en ROI, diversificación de portafolio.', fit: 'Pre-venta 1-2BR para renta' },
-  ],
-  en: [
-    { name: 'María', color: 'border-l-profile-maria', desc: '~45, professional seeking privacy and returns. Solo buyer with refined taste.', fit: 'Oceanfront studios & 1BR condos' },
-    { name: 'Pedro & Lucía', color: 'border-l-profile-pedro', desc: '~38-42, young family prioritizing security, schools, and legacy building.', fit: 'Family 3BR with amenities' },
-    { name: 'Carlos', color: 'border-l-profile-carlos', desc: '~65, retired executive seeking lifestyle, community, and tropical elegance.', fit: 'Penthouses & marina units' },
-    { name: 'Foreign Investor', color: 'border-l-profile-investor', desc: '35-60, US/EU/CA passport. Pure ROI focus, portfolio diversification.', fit: 'Pre-sale 1-2BR for rental' },
-  ],
+/* ── Contact Popup ── */
+const CheckIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+);
+
+const CloseIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+  </svg>
+);
+
+const inputStyle: React.CSSProperties = {
+  background: '#F8F6F2',
+  border: '1px solid rgba(0,0,0,0.09)',
+  borderRadius: 0,
+  padding: '14px 16px',
+  fontFamily: "'Jost', sans-serif",
+  fontSize: '12px',
+  fontWeight: 300,
+  color: '#1C1C1C',
+  width: '100%',
+  outline: 'none',
+};
+
+const ContactPopup = ({ open, onClose }: { open: boolean; onClose: () => void }) => {
+  const [submitted, setSubmitted] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    if (!open) { setSubmitted(false); setFadeOut(false); }
+  }, [open]);
+
+  if (!open) return null;
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setFadeOut(true);
+    setTimeout(() => setSubmitted(true), 300);
+  };
+
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    e.currentTarget.style.borderColor = '#CFAE60';
+  };
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    e.currentTarget.style.borderColor = 'rgba(0,0,0,0.09)';
+  };
+
+  return (
+    <div className="fixed inset-0 z-[200] flex items-center justify-center" onClick={onClose}>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[rgba(0,0,0,0.5)]" />
+      {/* Modal */}
+      <div
+        className="relative bg-white w-full max-w-[420px] mx-4 p-8 animate-fade-in"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button onClick={onClose} className="absolute top-4 right-4 text-[#4B4B4B] hover:text-[#1C1C1C] transition-colors">
+          <CloseIcon className="w-5 h-5" />
+        </button>
+
+        {submitted ? (
+          <div className="flex flex-col items-center justify-center text-center py-8 animate-fade-in">
+            <div className="flex items-center justify-center mb-6" style={{ width: '60px', height: '60px', borderRadius: '50%', border: '1px solid #CFAE60' }}>
+              <CheckIcon className="w-[22px] h-[22px] text-[#CFAE60]" />
+            </div>
+            <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', fontWeight: 300, color: '#1C1C1C', marginBottom: '12px' }}>
+              ¡Listo, te contactamos pronto!
+            </h3>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', fontWeight: 300 }}>
+              Un asesor de Rivana se comunicará contigo en menos de 2 horas.
+            </p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="transition-opacity duration-300" style={{ opacity: fadeOut ? 0 : 1 }}>
+            <h3
+              className="mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', fontWeight: 300, color: '#1C1C1C' }}
+            >
+              Agenda tu <em className="not-italic" style={{ color: '#CFAE60', fontStyle: 'italic' }}>Asesoría</em>
+            </h3>
+            <p className="mb-6" style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', fontWeight: 300, lineHeight: 1.85 }}>
+              Déjanos tus datos y nos pondremos en contacto contigo en menos de 2 horas.
+            </p>
+
+            <div className="flex flex-col" style={{ gap: '2px' }}>
+              <input placeholder="Nombre completo" style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
+              <input type="email" placeholder="Correo electrónico" style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
+              <input type="tel" placeholder="Teléfono / WhatsApp" style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full uppercase transition-colors duration-300 mt-[2px]"
+              style={{
+                background: '#CFAE60',
+                color: 'white',
+                padding: '16px',
+                fontFamily: "'Jost', sans-serif",
+                fontSize: '10px',
+                letterSpacing: '3px',
+                fontWeight: 400,
+                border: 'none',
+                cursor: 'pointer',
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = '#b89a4a'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = '#CFAE60'; }}
+            >
+              Enviar
+            </button>
+
+            <p className="text-center" style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', color: 'rgba(75,75,75,0.45)', fontWeight: 300, marginTop: '14px' }}>
+              Tu información es confidencial y nunca será compartida con terceros.
+            </p>
+          </form>
+        )}
+      </div>
+    </div>
+  );
+};
+
+/* ── Format price ── */
+const formatPrice = (usd: number) => {
+  if (usd >= 1000000) return `$${(usd / 1000000).toFixed(1)}M`;
+  return `$${(usd / 1000).toFixed(0)}K`;
 };
 
 const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const [showAdvisor, setShowAdvisor] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [popupOpen, setPopupOpen] = useState(false);
   const { language, localePath, t } = useLanguage();
 
   const config = getDestination(destinationKey);
@@ -62,72 +215,46 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Scroll to top on destination change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [destinationKey, subPage]);
 
   if (!config) return <div className="pt-32 text-center"><h1>Destination not found</h1></div>;
 
-  // Determine SEO based on subPage or main page
   const subPageConfig = subPage ? config.subPages.find((sp) => sp.segment === subPage) : undefined;
   const seoTitle = subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
   const seoDescription = subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
   const h1Text = subPageConfig ? subPageConfig.seo.h1[language] : config.seo.h1[language];
   const currentPath = subPage ? `${config.basePath}/${subPage}` : config.basePath;
 
-  // Schema markup
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'RealEstateListing',
     name: h1Text,
     description: seoDescription,
     url: `https://rivanaproperties.com${currentPath}`,
-    areaServed: {
-      '@type': 'Place',
-      name: config.name[language],
-    },
-    broker: {
-      '@type': 'RealEstateAgent',
-      name: 'Rivana Properties',
-      url: 'https://rivanaproperties.com',
-    },
+    areaServed: { '@type': 'Place', name: config.name[language] },
+    broker: { '@type': 'RealEstateAgent', name: 'Rivana Properties', url: 'https://rivanaproperties.com' },
   };
 
-  const relatedDests = config.relatedDestinations
-    .map((key) => getDestination(key))
-    .filter(Boolean);
-
+  const relatedDests = config.relatedDestinations.map((key) => getDestination(key)).filter(Boolean);
   const currentFaqs = faqs[language] || faqs.es;
-  const currentBuyers = buyerProfiles[language] || buyerProfiles.es;
 
   return (
     <div>
-      <SEOHead
-        title={seoTitle}
-        description={seoDescription}
-        path={currentPath}
-        schema={schema}
-      />
+      <SEOHead title={seoTitle} description={seoDescription} path={currentPath} schema={schema} />
+      <ContactPopup open={popupOpen} onClose={() => setPopupOpen(false)} />
 
       {/* Breadcrumb */}
       <div className="pt-24 px-6 lg:px-10 max-w-[1400px] mx-auto">
         <nav className="text-sm font-body text-muted-foreground flex items-center gap-2">
           <Link to={localePath('/')} className="hover:text-primary transition-colors">Rivana</Link>
           {config.breadcrumb[language].slice(1, -1).map((crumb, i) => (
-            <span key={i} className="flex items-center gap-2">
-              <span>/</span>
-              <span>{crumb}</span>
-            </span>
+            <span key={i} className="flex items-center gap-2"><span>/</span><span>{crumb}</span></span>
           ))}
           <span>/</span>
           <span className="text-foreground">{config.breadcrumb[language][config.breadcrumb[language].length - 1]}</span>
-          {subPageConfig && (
-            <>
-              <span>/</span>
-              <span className="text-foreground capitalize">{subPage}</span>
-            </>
-          )}
+          {subPageConfig && (<><span>/</span><span className="text-foreground capitalize">{subPage}</span></>)}
         </nav>
       </div>
 
@@ -139,8 +266,6 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
               <p className="eyebrow mb-4">{t('dest.destination')}</p>
               <h1 className="mb-4">{h1Text}</h1>
               <p className="font-display text-xl text-muted-foreground italic mb-8">{config.tagline[language]}</p>
-
-              {/* Stats row */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
                 {config.stats.map((s) => (
                   <div key={s.label[language]}>
@@ -149,35 +274,18 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                   </div>
                 ))}
               </div>
-
-              {/* Chips */}
               <div className="flex flex-wrap gap-2">
                 {config.chips[language].map((chip) => (
-                  <span key={chip} className="text-xs font-body tracking-wider bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-sm">
-                    {chip}
-                  </span>
+                  <span key={chip} className="text-xs font-body tracking-wider bg-primary/10 text-primary border border-primary/20 px-3 py-1.5">{chip}</span>
                 ))}
               </div>
-
-              {/* Sub-page links */}
               {config.subPages.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-6">
-                  <Link
-                    to={localePath(config.basePath)}
-                    className={`text-xs font-body tracking-wider uppercase px-4 py-2 rounded-sm border transition-colors ${
-                      !subPage ? 'border-primary bg-primary/10 text-primary' : 'border-border text-muted-foreground hover:border-primary/30'
-                    }`}
-                  >
+                  <Link to={localePath(config.basePath)} className={`text-xs font-body tracking-wider uppercase px-4 py-2 border transition-colors ${!subPage ? 'border-primary bg-primary/10 text-primary' : 'border-border text-muted-foreground hover:border-primary/30'}`}>
                     {language === 'es' ? 'Todo' : 'All'}
                   </Link>
                   {config.subPages.map((sp) => (
-                    <Link
-                      key={sp.segment}
-                      to={localePath(`${config.basePath}/${sp.segment}`)}
-                      className={`text-xs font-body tracking-wider uppercase px-4 py-2 rounded-sm border transition-colors ${
-                        subPage === sp.segment ? 'border-primary bg-primary/10 text-primary' : 'border-border text-muted-foreground hover:border-primary/30'
-                      }`}
-                    >
+                    <Link key={sp.segment} to={localePath(`${config.basePath}/${sp.segment}`)} className={`text-xs font-body tracking-wider uppercase px-4 py-2 border transition-colors ${subPage === sp.segment ? 'border-primary bg-primary/10 text-primary' : 'border-border text-muted-foreground hover:border-primary/30'}`}>
                       {sp.segment === 'preventa' ? (language === 'es' ? 'Preventa' : 'Pre-Sale') : sp.segment.charAt(0).toUpperCase() + sp.segment.slice(1)}
                     </Link>
                   ))}
@@ -187,11 +295,11 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
 
             {/* Contact form */}
             <div className="lg:col-span-2">
-              <form className="bg-card border border-border rounded-sm p-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <form className="bg-card border border-border p-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <h4 className="text-lg mb-2">{config.formTitle[language]}</h4>
-                <input placeholder={t('form.name')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <input type="email" placeholder={t('form.email')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <input type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                <input placeholder={t('form.name')} className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                <input type="email" placeholder={t('form.email')} className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                <input type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
                 <Button variant="gold" className="w-full" type="submit">{t('dest.requestInfo')}</Button>
               </form>
             </div>
@@ -206,9 +314,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <h2>{language === 'es' ? `¿Por qué ${config.name[language]}?` : `Why ${config.name[language]}?`}</h2>
               <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
-                {config.intro[language].map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
+                {config.intro[language].map((p, i) => (<p key={i}>{p}</p>))}
               </div>
             </div>
           </ScrollReveal>
@@ -226,14 +332,12 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {config.subZones.map((zone, i) => (
                 <ScrollReveal key={zone.name} delay={i * 100}>
-                  <div className="bg-muted border border-border rounded-sm p-6">
+                  <div className="bg-muted border border-border p-6">
                     <h3 className="text-xl mb-2">{zone.name}</h3>
                     <p className="text-sm text-primary font-body mb-1">{zone.price}</p>
                     <p className="text-sm text-muted-foreground font-body mb-4">{zone.vibe[language]}</p>
                     <div className="flex flex-wrap gap-2">
-                      {zone.chips.map((c) => (
-                        <span key={c} className="text-xs font-body bg-primary/5 text-muted-foreground px-2 py-1 rounded-sm border border-border">{c}</span>
-                      ))}
+                      {zone.chips.map((c) => (<span key={c} className="text-xs font-body bg-primary/5 text-muted-foreground px-2 py-1 border border-border">{c}</span>))}
                     </div>
                   </div>
                 </ScrollReveal>
@@ -243,38 +347,82 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         </section>
       )}
 
-      {/* Featured Projects */}
+      {/* Featured Projects — Redesigned cards matching Listings */}
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('dest.featuredProjects')}</p>
             <h2 className="mb-12">{t('dest.newDevelopments')}</h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3" style={{ gap: '2px', background: '#F8F6F2' }}>
             {projects.map((p, i) => (
-              <ScrollReveal key={p.name} delay={i * 100} className={p.featured ? 'lg:row-span-2' : ''}>
-                <Link to={localePath('/property/oceana-residences')} className="group block bg-card border border-border rounded-sm overflow-hidden h-full">
-                  <div className={`gradient-placeholder group-hover:scale-105 transition-transform duration-700 ${p.featured ? 'aspect-[4/5]' : 'aspect-[16/10]'}`}>
-                    <div className="p-4">
-                      <span className="text-xs font-body tracking-wider uppercase bg-primary/20 text-primary px-3 py-1 rounded-sm">
-                        {p.badge[language]}
+              <ScrollReveal key={p.name} delay={i * 100}>
+                <Link
+                  to={localePath(`/property/${p.slug}`)}
+                  className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
+                >
+                  {/* Image */}
+                  <div className="relative overflow-hidden" style={{ paddingTop: '75%' }}>
+                    <img src={p.image} alt={p.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
+                    <div className="absolute inset-0 bg-transparent group-hover:bg-[rgba(207,174,96,0.12)] transition-colors duration-300" />
+                    <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+                      <span className="text-[9px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]" style={{ background: '#26547D' }}>
+                        {language === 'es' ? 'Preventa' : 'Pre-Sale'}
                       </span>
+                      {p.yield && (
+                        <span className="text-[9px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
+                          <TrendingUpIcon className="w-3 h-3" /> {p.yield}
+                        </span>
+                      )}
                     </div>
                   </div>
-                  <div className="p-6">
-                    <span className="text-xs text-muted-foreground font-body">{p.zone}</span>
-                    <h3 className="text-lg mt-1 mb-3">{p.name}</h3>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground font-body mb-3">
-                      <span className="flex items-center gap-1"><BedIcon className="w-3.5 h-3.5" /> {p.beds}</span>
-                      <span className="flex items-center gap-1"><RulerIcon className="w-3.5 h-3.5" /> {p.area} m²</span>
+
+                  {/* Content */}
+                  <div className="px-5 pt-5 pb-4">
+                    <p className="text-[9px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
+                    <h3 className="font-display text-[22px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
+
+                    {/* Specs */}
+                    <div className="flex items-center gap-[14px] mb-3">
+                      <span className="flex items-center gap-1 text-[11px] font-body" style={{ color: '#4B4B4B' }}>
+                        <BedIcon className="w-3 h-3" /> {p.beds} Rec.
+                      </span>
+                      <span className="flex items-center gap-1 text-[11px] font-body" style={{ color: '#4B4B4B' }}>
+                        <RulerIcon className="w-3 h-3" /> {p.area} m²
+                      </span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="font-display text-xl text-primary">{language === 'es' ? 'Desde' : 'From'} {p.price}</span>
-                      <BuyerDots profiles={p.profiles} />
+
+                    {/* Badges */}
+                    {p.badges.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mb-3">
+                        {p.badges.slice(0, 3).map(b => {
+                          const cfg = badgeConfig[b];
+                          if (!cfg) return null;
+                          const Icon = cfg.icon;
+                          return (
+                            <span key={b} className="flex items-center gap-1 px-[10px] py-[4px] text-[9px] font-body font-[300]" style={{ background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)', color: '#1C1C1C' }}>
+                              <Icon className="w-[10px] h-[10px]" /> {cfg.label}
+                            </span>
+                          );
+                        })}
+                        {p.badges.length > 3 && (
+                          <span className="px-[10px] py-[4px] text-[9px] font-body font-[300]" style={{ color: '#4B4B4B', background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
+                            +{p.badges.length - 3} más
+                          </span>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Bottom */}
+                    <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+                      <div>
+                        <span className="block text-[8px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>Desde</span>
+                        <span className="font-display text-[20px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price)} USD</span>
+                      </div>
+                      <span className="text-[10px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
+                        Ver <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                      </span>
                     </div>
-                    <span className="inline-flex items-center gap-1 mt-3 text-sm text-primary font-body">
-                      {t('dest.viewProject')} <ArrowRightIcon className="w-3 h-3" />
-                    </span>
                   </div>
                 </Link>
               </ScrollReveal>
@@ -292,37 +440,16 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
           </ScrollReveal>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: config.stats[2]?.val || '18%', label: language === 'es' ? 'Plusvalía Anual' : 'YoY Appreciation' },
-              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '8-12%', label: language === 'es' ? 'Rendimiento Renta' : 'Rental Yield' },
-              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '12M+', label: language === 'es' ? 'Turistas/Año' : 'Tourists/Year' },
-              { icon: <TrendingUpIcon className="w-6 h-6 text-primary" />, val: '2026', label: language === 'es' ? 'Impulso Mundial' : 'World Cup Boost' },
+              { val: config.stats[2]?.val || '18%', label: language === 'es' ? 'Plusvalía Anual' : 'YoY Appreciation' },
+              { val: '8-12%', label: language === 'es' ? 'Rendimiento Renta' : 'Rental Yield' },
+              { val: '12M+', label: language === 'es' ? 'Turistas/Año' : 'Tourists/Year' },
+              { val: '2026', label: language === 'es' ? 'Impulso Mundial' : 'World Cup Boost' },
             ].map((s, i) => (
               <ScrollReveal key={s.label} delay={i * 100}>
-                <div className="bg-muted border border-border rounded-sm p-6 text-center">
-                  <div className="flex justify-center mb-3">{s.icon}</div>
+                <div className="bg-muted border border-border p-6 text-center">
+                  <div className="flex justify-center mb-3"><TrendingUpIcon className="w-6 h-6 text-primary" /></div>
                   <span className="font-display text-3xl text-primary">{s.val}</span>
                   <p className="text-xs text-muted-foreground font-body uppercase tracking-wider mt-2">{s.label}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Buyer Profiles */}
-      <section className="py-20">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">{t('dest.whoBuysHere')}</p>
-            <h2 className="mb-12">{t('dest.buyerProfiles')}</h2>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {currentBuyers.map((b, i) => (
-              <ScrollReveal key={b.name} delay={i * 100}>
-                <div className={`bg-card border border-border ${b.color} border-l-4 rounded-sm p-6`}>
-                  <h4 className="text-lg mb-2">{b.name}</h4>
-                  <p className="text-sm text-muted-foreground font-body mb-4">{b.desc}</p>
-                  <p className="text-xs text-primary font-body uppercase tracking-wider">{language === 'es' ? 'Ideal' : 'Best fit'}: {b.fit}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -340,19 +467,14 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
           <div className="max-w-3xl space-y-3">
             {currentFaqs.map((faq, i) => (
               <ScrollReveal key={i} delay={i * 60}>
-                <div className="border border-border rounded-sm">
-                  <button
-                    className="w-full text-left px-6 py-4 flex items-center justify-between"
-                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  >
+                <div className="border border-border">
+                  <button className="w-full text-left px-6 py-4 flex items-center justify-between" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                     <span className="font-body text-base font-400 pr-4">{faq.q}</span>
                     <span className={`text-primary transition-transform duration-300 ${openFaq === i ? 'rotate-180' : ''}`}>
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
                     </span>
                   </button>
-                  {openFaq === i && (
-                    <div className="px-6 pb-4 text-sm text-muted-foreground font-body animate-fade-in">{faq.a}</div>
-                  )}
+                  {openFaq === i && (<div className="px-6 pb-4 text-sm text-muted-foreground font-body animate-fade-in">{faq.a}</div>)}
                 </div>
               </ScrollReveal>
             ))}
@@ -360,7 +482,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         </div>
       </section>
 
-      {/* Related Destinations — Internal linking (P1 destinations get more links) */}
+      {/* Related Destinations */}
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
@@ -370,7 +492,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {relatedDests.slice(0, 3).map((d, i) => (
               <ScrollReveal key={d!.key} delay={i * 100}>
-                <Link to={localePath(d!.basePath)} className="group block aspect-[16/10] gradient-placeholder-alt rounded-sm relative overflow-hidden">
+                <Link to={localePath(d!.basePath)} className="group block aspect-[16/10] gradient-placeholder-alt relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_0%/0.6)] to-transparent" />
                   <div className="absolute bottom-0 p-6">
                     <h3 className="text-xl mb-1">{d!.name[language]}</h3>
@@ -388,27 +510,33 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         <div className="bg-card border-t border-border shadow-2xl">
           <div className="max-w-[1400px] mx-auto px-6 py-3 flex items-center justify-between gap-4">
             <div className="hidden md:flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-lg">A</div>
+              <img src={advisorPhoto} alt="Celia Candela" className="w-10 h-10 rounded-full object-cover" />
               <div>
-                <p className="text-sm font-body font-400">Alejandra Reyes</p>
-                <p className="text-xs text-muted-foreground font-body">{config.name[language]} Specialist</p>
+                <p className="text-sm font-body font-400">Celia Candela</p>
+                <p className="text-xs text-muted-foreground font-body">{language === 'es' ? 'Especialista en' : 'Specialist —'} {config.name[language]}</p>
               </div>
               <div className="w-px h-8 bg-border mx-2" />
               <div className="flex items-center gap-2">
                 {[
                   { icon: <VideoIcon className="w-4 h-4" />, label: language === 'es' ? 'Videollamada' : 'Virtual Call' },
-                  { icon: <PhoneIcon className="w-4 h-4" />, label: language === 'es' ? 'Agendar' : 'Schedule' },
+                  { icon: <PhoneIcon className="w-4 h-4" />, label: language === 'es' ? 'Agendar llamada' : 'Schedule Call' },
                   { icon: <CalendarIcon className="w-4 h-4" />, label: language === 'es' ? 'Visita' : 'Visit' },
                   { icon: <BriefcaseIcon className="w-4 h-4" />, label: language === 'es' ? 'Asesoría' : 'Advisory' },
                 ].map((a) => (
-                  <button key={a.label} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors px-2 py-1">
+                  <button
+                    key={a.label}
+                    onClick={() => setPopupOpen(true)}
+                    className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors px-2 py-1"
+                  >
                     {a.icon} <span className="hidden lg:inline">{a.label}</span>
                   </button>
                 ))}
               </div>
             </div>
             <div className="flex items-center gap-3 ml-auto">
-              <Button variant="gold" size="sm">{language === 'es' ? 'Recibir Precios' : 'Get Pricing & Floor Plans'}</Button>
+              <Button variant="gold" size="sm" onClick={() => setPopupOpen(true)}>
+                {language === 'es' ? 'Recibir Precios' : 'Get Pricing & Floor Plans'}
+              </Button>
               <Button variant="whatsapp" size="sm" asChild>
                 <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer">
                   <ChatIcon className="w-4 h-4" /> WhatsApp
