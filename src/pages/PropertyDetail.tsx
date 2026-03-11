@@ -11,6 +11,7 @@ import { Grid, ChevronLeft, ChevronRight, Download, Flag, Anchor, Waves, Crown, 
 import heroImg from '@/assets/prop-oceana.jpg';
 import img2 from '@/assets/prop-jade.jpg';
 import img3 from '@/assets/prop-marina.jpg';
+import advisorImg from '@/assets/advisor-jess.jpg';
 
 /* ─────────────── TYPES ─────────────── */
 
@@ -422,9 +423,7 @@ const PropertyDetail = () => {
 
               {/* C) ADVISOR CARD */}
               <div className="bg-[#F8F6F2] p-3 flex items-center gap-3 mb-4">
-                <div className="w-[38px] h-[38px] rounded-full border border-[#CFAE60] flex items-center justify-center font-display text-[#CFAE60] text-lg">
-                  {p.advisorInitial}
-                </div>
+                <img src={advisorImg} alt={p.advisorName} className="w-[38px] h-[38px] rounded-full border border-[#CFAE60] object-cover" />
                 <div>
                   <p className="font-body text-[12px] text-[#1C1C1C] font-[400]">{p.advisorName}</p>
                   <p className="font-body text-[9px] text-[#4B4B4B] font-[300]">{p.advisorRole}</p>
@@ -442,7 +441,7 @@ const PropertyDetail = () => {
               </div>
               <button className={`${goldBtnClass} mb-2.5`}>Solicitar Información</button>
               <a
-                href="https://wa.me/529981234567"
+                href="https://wa.me/5299888457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 bg-[#25d366]/10 border border-[#25d366]/30 text-[#25d366] font-body text-[10px] tracking-[2px] uppercase py-3 rounded-none hover:bg-[#25d366]/20 transition-colors mb-2.5"
@@ -540,7 +539,7 @@ const PropertyDetail = () => {
                   <div className="space-y-2.5">
                     <button onClick={() => setUnitFormOpen(true)} className={goldBtnClass}>Agendar una Cita</button>
                     <a
-                      href="https://wa.me/529981234567"
+                      href="https://wa.me/5299888457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full flex items-center justify-center gap-2 border border-[#25d366]/30 text-[#25d366] font-body text-[10px] tracking-[2px] uppercase py-3 rounded-none hover:bg-[#25d366]/5 transition-colors"
