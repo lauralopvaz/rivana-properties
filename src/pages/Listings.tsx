@@ -287,7 +287,7 @@ const Listings = () => {
 
           {/* Precio */}
           <FilterDropdown
-            label="Precio"
+            label={priceLabel}
             activeLabel={formatFilterLabel()}
             isOpen={openFilter === 'price'}
             onToggle={() => { toggle('price'); if (openFilter !== 'price') { setPriceRange([...appliedPrice]); setCurrency(appliedCurrency); } }}
