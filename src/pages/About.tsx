@@ -9,8 +9,24 @@ import advisorJess from '@/assets/advisor-jess.png';
 import advisorCelia from '@/assets/advisor-celia.png';
 
 const team = [
-  { name: 'Jess Candela', initial: 'J', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', phone: '9988457224', photo: advisorJess, imgPosition: 'object-top', bio: 'Con 8 años en el mercado inmobiliario del Caribe y raíces en la hospitalidad de lujo, Jess domina el arte de identificar el momento exacto para invertir. Ha cerrado más de $40M en preventas, acompañando a sus clientes desde la oportunidad hasta el cierre con estrategia, claridad y resultados concretos.' },
-  { name: 'Celia Candela', initial: 'C', role: 'Especialista en Destino', zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9981118888', photo: advisorCelia, imgPosition: 'object-[center_65%]', bio: 'Celia conoce el Caribe mexicano como pocos. Su dominio del territorio — desde Cancún hasta la Riviera Maya — le permite conectar a cada cliente con el destino que realmente le corresponde, combinando visión de mercado con un conocimiento local que va más allá de los datos.' },
+  {
+    name: 'Jess Candela', initial: 'J',
+    role: { es: 'Especialista en Preventa', en: 'Pre-Sale Specialist' },
+    zone: 'Costa Mujeres', lang: 'EN · ES', phone: '9988457224', photo: advisorJess, imgPosition: 'object-top',
+    bio: {
+      es: 'Con 8 años en el mercado inmobiliario del Caribe y raíces en la hospitalidad de lujo, Jess domina el arte de identificar el momento exacto para invertir. Ha cerrado más de $40M en preventas, acompañando a sus clientes desde la oportunidad hasta el cierre con estrategia, claridad y resultados concretos.',
+      en: 'With 8 years in the Caribbean real estate market and roots in luxury hospitality, Jess masters the art of identifying the perfect moment to invest. She has closed over $40M in pre-sales, guiding her clients from opportunity to closing with strategy, clarity, and concrete results.',
+    },
+  },
+  {
+    name: 'Celia Candela', initial: 'C',
+    role: { es: 'Especialista en Destino', en: 'Destination Specialist' },
+    zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9981118888', photo: advisorCelia, imgPosition: 'object-[center_65%]',
+    bio: {
+      es: 'Celia conoce el Caribe mexicano como pocos. Su dominio del territorio — desde Cancún hasta la Riviera Maya — le permite conectar a cada cliente con el destino que realmente le corresponde, combinando visión de mercado con un conocimiento local que va más allá de los datos.',
+      en: 'Celia knows the Mexican Caribbean like few others. Her command of the territory — from Cancún to the Riviera Maya — allows her to connect each client with the destination that truly fits them, combining market vision with local knowledge that goes beyond the data.',
+    },
+  },
 ];
 
 const About = () => {
