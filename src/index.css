@@ -150,29 +150,6 @@
   }
 }
 
-/* Custom cursor */
-.custom-cursor {
-  width: 10px;
-  height: 10px;
-  background: hsl(var(--gold));
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 99999;
-  transition: transform 0.1s;
-  mix-blend-mode: difference;
-}
-.custom-cursor-ring {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid hsl(var(--gold) / 0.5);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 99998;
-  transition: transform 0.15s ease-out, width 0.2s, height 0.2s;
-  transform: translate(-13px, -13px);
-}
 
 /* WhatsApp pulse */
 @keyframes wa-pulse {
