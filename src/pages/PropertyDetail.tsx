@@ -212,17 +212,16 @@ const PropertyDetail = () => {
       />
 
       {/* ═══ 1. GALLERY HERO ═══ */}
-      <section className="pt-20 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <div className="grid gap-[3px]" style={{ gridTemplateColumns: '2fr 1fr', height: '420px' }}>
+      <section className="pt-20 px-4 md:px-6 lg:px-10 max-w-[1400px] mx-auto">
+        <div className="grid gap-[3px] grid-cols-1 md:grid-cols-[2fr_1fr]" style={{ height: 'auto' }}>
           {/* Main image */}
           <div
-            className="relative overflow-hidden cursor-pointer group"
-            style={{ gridRow: '1/3' }}
+            className="relative overflow-hidden cursor-pointer group aspect-[16/10] md:aspect-auto"
+            style={{ gridRow: window.innerWidth >= 768 ? '1/3' : undefined }}
             onClick={() => openLightbox(0)}
           >
             <img src={p.photos[0]} alt={p.name} className="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.03]" />
             <div className="absolute inset-0 bg-[rgba(207,174,96,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            {/* Ver todas button */}
             <button
               onClick={(e) => { e.stopPropagation(); openLightbox(0); }}
               className="absolute bottom-4 right-4 flex items-center gap-2 bg-[rgba(255,255,255,0.92)] border border-[rgba(207,174,96,0.24)] px-4 py-2.5 font-body text-[9px] tracking-[3px] uppercase text-[#1C1C1C] rounded-none hover:border-[#CFAE60] transition-colors"
@@ -231,9 +230,9 @@ const PropertyDetail = () => {
               Ver todas las fotos
             </button>
           </div>
-          {/* Secondary images */}
+          {/* Secondary images - hidden on mobile */}
           {[1, 2].map((i) => (
-            <div key={i} className="relative overflow-hidden cursor-pointer group" onClick={() => openLightbox(i)}>
+            <div key={i} className="relative overflow-hidden cursor-pointer group hidden md:block h-[210px]" onClick={() => openLightbox(i)}>
               <img src={p.photos[i] || p.photos[0]} alt={`${p.name} ${i + 1}`} className="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.05]" />
               <div className="absolute inset-0 bg-[rgba(207,174,96,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
