@@ -123,14 +123,17 @@ const App = () => (
     <TooltipProvider>
       <BrowserRouter>
         <LanguageProvider>
-          <Toaster />
-          <Sonner />
-          
-          <GrainOverlay />
-          <Navbar />
-          <AppRoutes />
-          <Footer />
-          <WhatsAppButton />
+          <SchedulingModalProvider>
+            <Toaster />
+            <Sonner />
+            
+            <GrainOverlay />
+            <Navbar />
+            <AppRoutes />
+            <Footer />
+            <WhatsAppButton />
+            <SchedulingModal />
+          </SchedulingModalProvider>
         </LanguageProvider>
       </BrowserRouter>
     </TooltipProvider>
