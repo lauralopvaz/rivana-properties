@@ -241,11 +241,11 @@ const PropertyDetail = () => {
       </section>
 
       {/* ═══ MAIN 2-COL LAYOUT ═══ */}
-      <section className="px-6 lg:px-10 max-w-[1400px] mx-auto pb-32">
-        <div className="grid items-start" style={{ gridTemplateColumns: '62% 38%' }}>
+      <section className="px-4 md:px-6 lg:px-10 max-w-[1400px] mx-auto pb-32">
+        <div className="grid items-start grid-cols-1 lg:grid-cols-[62%_38%]">
 
           {/* ── LEFT COLUMN ── */}
-          <div className="py-14 pr-11 pl-2 lg:pr-14">
+          <div className="py-8 px-1 md:py-14 md:pr-11 md:pl-2 lg:pr-14">
 
             {/* 2. TITLE BLOCK */}
             <nav className={`${sectionLabel} flex items-center gap-1.5 mb-3`}>
