@@ -416,15 +416,15 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
               </div>
               <div className="w-px h-8 bg-border mx-2" />
               <div className="flex items-center gap-2">
-                {[
-                  { icon: <VideoIcon className="w-4 h-4" />, label: language === 'es' ? 'Videollamada' : 'Virtual Call' },
-                  { icon: <PhoneIcon className="w-4 h-4" />, label: language === 'es' ? 'Agendar llamada' : 'Schedule Call' },
-                  { icon: <CalendarIcon className="w-4 h-4" />, label: language === 'es' ? 'Visita' : 'Visit' },
-                  { icon: <BriefcaseIcon className="w-4 h-4" />, label: language === 'es' ? 'Asesoría' : 'Advisory' },
-                ].map((a) => (
+                {([
+                  { icon: <VideoIcon className="w-4 h-4" />, label: language === 'es' ? 'Videollamada' : 'Virtual Call', type: 'videollamada' as ContactType },
+                  { icon: <PhoneIcon className="w-4 h-4" />, label: language === 'es' ? 'Agendar llamada' : 'Schedule Call', type: 'llamada' as ContactType },
+                  { icon: <CalendarIcon className="w-4 h-4" />, label: language === 'es' ? 'Visita' : 'Visit', type: 'recorrido' as ContactType },
+                  { icon: <BriefcaseIcon className="w-4 h-4" />, label: language === 'es' ? 'Asesoría' : 'Advisory', type: 'asesoria' as ContactType },
+                ]).map((a) => (
                   <button
                     key={a.label}
-                    onClick={() => setPopupOpen(true)}
+                    onClick={() => openModal(a.type)}
                     className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors px-2 py-1"
                   >
                     {a.icon} <span className="hidden lg:inline">{a.label}</span>
