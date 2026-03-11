@@ -280,7 +280,8 @@ const Listings = () => {
             </div>
             <div className="border-t px-3 py-2" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
               <button onClick={() => { setAppliedAmenities([...selectedAmenities]); setOpenFilter(null); }} className="w-full py-2 text-[9px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
-                Aplicar
+                {L === 'es' ? 'Aplicar' : 'Apply'}
+              </button>
               </button>
             </div>
           </FilterDropdown>
