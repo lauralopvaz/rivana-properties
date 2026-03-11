@@ -72,7 +72,7 @@ export const Navbar = () => {
                   ))}
                   <div className="border-t border-border mt-3 pt-3">
                     <p className="eyebrow text-xs mb-3">{language === 'es' ? 'Riviera Maya' : 'Riviera Maya'}</p>
-                    {otherDestinations.map((d) => (
+                    {rivieraMayaDestinations.map((d) => (
                       <Link
                         key={d.key}
                         to={localePath(d.basePath)}
