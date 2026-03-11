@@ -107,7 +107,7 @@ const About = () => {
           <p className="eyebrow mb-4">{language === 'es' ? 'El Equipo' : 'The Team'}</p>
           <h2 className="mb-12">{language === 'es' ? 'Conoce a Tus Asesores' : 'Meet Your Advisors'}</h2>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
           {team.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 80}>
               <div className="bg-card border border-border rounded-sm overflow-hidden">
@@ -120,11 +120,6 @@ const About = () => {
                   <h3 className="text-xl mb-1">{member.name}</h3>
                   <p className="text-xs text-muted-foreground font-body mb-3">{member.zone}</p>
                   <p className="text-sm text-muted-foreground font-body mb-4 line-clamp-3">{member.bio}</p>
-                  <div className="flex items-center gap-1.5 mb-4">
-                    {member.profiles.map((p) => (
-                      <span key={p} className={`w-2.5 h-2.5 rounded-full ${profileColors[p]}`} title={p} />
-                    ))}
-                  </div>
                   <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="flex-1" onClick={() => openModal('llamada')}><PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}</Button>
                     <Button variant="whatsapp" size="sm" className="flex-1" asChild>
