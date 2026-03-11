@@ -243,14 +243,14 @@ const PreSale = () => {
                   <button
                     key={idx}
                     onClick={() => setUnitModal(idx)}
-                    className="grid gap-2 py-3.5 px-3 border-b border-[rgba(0,0,0,0.06)] text-left transition-all duration-200 hover:bg-[rgba(207,174,96,0.05)] hover:pl-5 cursor-pointer bg-transparent border-l-0 border-r-0 border-t-0 rounded-none"
+                    className="flex flex-col sm:grid gap-1 sm:gap-2 py-3.5 px-3 border-b border-[rgba(0,0,0,0.06)] text-left transition-all duration-200 hover:bg-[rgba(207,174,96,0.05)] hover:pl-5 cursor-pointer bg-transparent border-l-0 border-r-0 border-t-0 rounded-none"
                     style={{ gridTemplateColumns: '1fr 56px 1fr 100px' }}
                   >
-                    <span className="font-display text-[20px] font-[300] text-[#1C1C1C] self-center">{u.name}</span>
+                    <span className="font-display text-[18px] sm:text-[20px] font-[300] text-[#1C1C1C] self-center">{u.name}</span>
                     <span className="font-body text-[10px] text-[#4B4B4B] self-center">{u.m2}</span>
-                    <span className="font-display text-[17px] font-[300] text-[#CFAE60] self-center">{u.price}</span>
+                    <span className="font-display text-[16px] sm:text-[17px] font-[300] text-[#CFAE60] self-center">{u.price}</span>
                     <span
-                      className="font-body text-[9px] font-[400] py-1 px-2 text-center self-center"
+                      className="font-body text-[9px] font-[400] py-1 px-2 text-center self-center w-fit sm:w-auto"
                       style={{ background: badge.bg, color: badge.text }}
                     >{badge.label}</span>
                   </button>
