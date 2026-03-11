@@ -174,10 +174,10 @@ const PreSale = () => {
       </section>
 
       {/* ═══ MAIN 2-COL LAYOUT ═══ */}
-      <section className="grid items-start" style={{ gridTemplateColumns: '62% 38%' }}>
+      <section className="grid items-start grid-cols-1 lg:grid-cols-[62%_38%]">
 
         {/* ── LEFT COLUMN ── */}
-        <div style={{ padding: '56px 44px 80px 60px' }}>
+        <div className="px-5 py-10 md:px-10 md:py-14 lg:pl-[60px] lg:pr-[44px] lg:pt-[56px] lg:pb-[80px]">
 
           {/* MODULE A — Project Description */}
           <div className="mb-10">
