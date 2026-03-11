@@ -13,8 +13,8 @@ export const Navbar = () => {
   const { language, setLanguage, t, localePath, switchLanguageUrl } = useLanguage();
 
   // Priority 1 destinations shown prominently
-  const p1Destinations = destinations.filter((d) => d.priority === 1);
-  const otherDestinations = destinations.filter((d) => d.priority > 1);
+  const cancunDestinations = destinations.filter((d) => ['zona-hotelera', 'puerto-cancun', 'costa-mujeres', 'cancun-centro'].includes(d.key));
+  const rivieraMayaDestinations = destinations.filter((d) => !['zona-hotelera', 'puerto-cancun', 'costa-mujeres', 'cancun-centro'].includes(d.key));
 
   const navLinks = [
     { label: t('nav.listings'), href: '/listings' },
@@ -61,7 +61,7 @@ export const Navbar = () => {
               <div className="absolute top-full left-0 mt-2 bg-card border border-border rounded-sm shadow-xl min-w-[280px] animate-fade-in z-50">
                 <div className="p-4">
                   <p className="eyebrow text-xs mb-3">{language === 'es' ? 'Cancún' : 'Cancún'}</p>
-                  {p1Destinations.map((d) => (
+                  {cancunDestinations.map((d) => (
                     <Link
                       key={d.key}
                       to={localePath(d.basePath)}
@@ -72,7 +72,7 @@ export const Navbar = () => {
                   ))}
                   <div className="border-t border-border mt-3 pt-3">
                     <p className="eyebrow text-xs mb-3">{language === 'es' ? 'Riviera Maya' : 'Riviera Maya'}</p>
-                    {otherDestinations.map((d) => (
+                    {rivieraMayaDestinations.map((d) => (
                       <Link
                         key={d.key}
                         to={localePath(d.basePath)}
