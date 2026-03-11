@@ -459,14 +459,14 @@ const PreSale = () => {
             onClick={() => setUnitModal(null)}
           >
             <div
-              className="bg-white w-full max-w-[900px] mx-4 grid grid-cols-1 md:grid-cols-2 overflow-hidden relative rounded-none"
+              className="bg-white w-full max-w-[900px] mx-4 max-h-[90vh] overflow-y-auto grid grid-cols-1 md:grid-cols-2 relative rounded-none"
               style={{ animation: 'modalIn 0.25s ease forwards' }}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close */}
               <button
                 onClick={() => setUnitModal(null)}
-                className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center border border-[rgba(0,0,0,0.12)] bg-white text-[#1C1C1C] hover:border-[#CFAE60] transition-colors cursor-pointer rounded-none"
+                className="sticky top-2 right-0 z-10 w-9 h-9 flex items-center justify-center border border-[rgba(0,0,0,0.12)] bg-white text-[#1C1C1C] hover:border-[#CFAE60] transition-colors cursor-pointer rounded-none ml-auto mr-2 mt-2 -mb-9 md:-mb-11 shrink-0"
               >
                 <XIcon className="w-4 h-4" />
               </button>
