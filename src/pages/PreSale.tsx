@@ -278,7 +278,7 @@ const PreSale = () => {
         </div>
 
         {/* ── RIGHT COLUMN (SIDEBAR) ── */}
-        <div style={{ padding: '40px 40px 40px 0' }}>
+        <div className="px-5 py-8 md:px-10 lg:pr-10 lg:pl-0 lg:pt-10 lg:pb-10">
           <div
             className="bg-white border border-[rgba(207,174,96,0.22)] p-6"
             style={{ position: 'sticky', top: '24px', boxShadow: '0 6px 48px rgba(0,0,0,0.08)' }}
