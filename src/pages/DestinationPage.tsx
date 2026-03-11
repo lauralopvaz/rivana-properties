@@ -12,6 +12,25 @@ import propOceana from '@/assets/prop-oceana.jpg';
 import propMarina from '@/assets/prop-marina.jpg';
 import propJade from '@/assets/prop-jade.jpg';
 
+import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
+import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
+import destCostaMujeres from '@/assets/dest-costa-mujeres.jpg';
+import destMayakoba from '@/assets/dest-mayakoba.jpg';
+import destPuertoMorelos from '@/assets/dest-puerto-morelos.jpg';
+import destCancunCentro from '@/assets/dest-cancun-centro.jpg';
+import destTulum from '@/assets/dest-tulum.jpg';
+
+const destImages: Record<string, string> = {
+  'zona-hotelera': destZonaHotelera,
+  'puerto-cancun': destPuertoCancun,
+  'costa-mujeres': destCostaMujeres,
+  'mayakoba': destMayakoba,
+  'puerto-morelos': destPuertoMorelos,
+  'cancun-centro': destCancunCentro,
+  'tulum': destTulum,
+  'playa-del-carmen': destMayakoba,
+};
+
 interface DestinationPageProps {
   destinationKey: string;
   subPage?: string;
