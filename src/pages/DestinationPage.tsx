@@ -102,7 +102,7 @@ const formatPrice = (usd: number) => {
 const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const [showAdvisor, setShowAdvisor] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [popupOpen, setPopupOpen] = useState(false);
+  const { openModal } = useSchedulingModal();
   const { language, localePath, t } = useLanguage();
 
   const config = getDestination(destinationKey);
