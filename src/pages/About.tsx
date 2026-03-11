@@ -5,10 +5,12 @@ import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
 import { ShieldIcon, EyeIcon, GlobeIcon, HeartIcon, PhoneIcon, ChatIcon, ArrowRightIcon } from '@/components/icons';
+import advisorJess from '@/assets/advisor-jess.png';
+import advisorCelia from '@/assets/advisor-celia.png';
 
 const team = [
-  { name: 'Alejandra Reyes', initial: 'A', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', bio: 'Former luxury hospitality manager with 8 years in Caribbean real estate. Alejandra specializes in pre-sale investment strategies and has closed over $40M in transactions.' },
-  { name: 'Carlos Mendoza', initial: 'C', role: 'Directora de Inversiones', zone: 'Mayakoba', lang: 'EN · ES', bio: 'CFA charterholder with a background in private equity. Carlos brings institutional-grade analysis to every property recommendation, focusing on long-term value creation.' },
+  { name: 'Jess Candela', initial: 'J', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', phone: '9988457224', photo: advisorJess, bio: 'Con 8 años en el mercado inmobiliario del Caribe y raíces en la hospitalidad de lujo, Jess domina el arte de identificar el momento exacto para invertir. Ha cerrado más de $40M en preventas, acompañando a sus clientes desde la oportunidad hasta el cierre con estrategia, claridad y resultados concretos.' },
+  { name: 'Celia Candela', initial: 'C', role: 'Especialista en Destino', zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9981118888', photo: advisorCelia, bio: 'Celia conoce el Caribe mexicano como pocos. Su dominio del territorio — desde Cancún hasta la Riviera Maya — le permite conectar a cada cliente con el destino que realmente le corresponde, combinando visión de mercado con un conocimiento local que va más allá de los datos.' },
 ];
 
 const About = () => {
