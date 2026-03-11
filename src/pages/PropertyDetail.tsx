@@ -352,7 +352,7 @@ const PropertyDetail = () => {
                       <button
                         key={u.name}
                         onClick={() => openUnitModal(u)}
-                        className="w-full text-left grid items-center gap-3 py-3.5 px-3 border-b border-[rgba(0,0,0,0.06)] hover:bg-[rgba(207,174,96,0.05)] hover:pl-5 transition-all duration-200 rounded-none"
+                        className="w-full text-left flex flex-col sm:grid items-start sm:items-center gap-1 sm:gap-3 py-3.5 px-3 border-b border-[rgba(0,0,0,0.06)] hover:bg-[rgba(207,174,96,0.05)] hover:pl-5 transition-all duration-200 rounded-none"
                         style={{ gridTemplateColumns: '1fr 64px 1fr 108px' }}
                       >
                         <span className="font-display text-[20px] text-[#1C1C1C]">{u.name}</span>
