@@ -299,7 +299,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                           const Icon = cfg.icon;
                           return (
                             <span key={b} className="flex items-center gap-1 px-[10px] py-[4px] text-[9px] font-body font-[300]" style={{ background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)', color: '#1C1C1C' }}>
-                              <Icon className="w-[10px] h-[10px]" /> {cfg.label}
+                              <Icon className="w-[10px] h-[10px]" /> {cfg.label[language]}
                             </span>
                           );
                         })}
