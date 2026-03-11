@@ -459,7 +459,7 @@ const PreSale = () => {
             onClick={() => setUnitModal(null)}
           >
             <div
-              className="bg-white w-full max-w-[900px] mx-4 grid grid-cols-1 md:grid-cols-2 overflow-hidden relative rounded-none"
+              className="bg-white w-full max-w-[900px] mx-4 max-h-[90vh] overflow-y-auto grid grid-cols-1 md:grid-cols-2 relative rounded-none"
               style={{ animation: 'modalIn 0.25s ease forwards' }}
               onClick={(e) => e.stopPropagation()}
             >
