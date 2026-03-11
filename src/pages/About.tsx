@@ -24,7 +24,7 @@ const profileColors: Record<string, string> = {
 
 const About = () => {
   const { language, t, localePath } = useLanguage();
-
+  const { openModal } = useSchedulingModal();
   const seoTitle = language === 'es'
     ? 'Nosotros — Rivana Properties | Asesoría Inmobiliaria Cancún'
     : 'About Us — Rivana Properties | Real Estate Advisory Cancún';
