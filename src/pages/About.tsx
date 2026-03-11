@@ -212,8 +212,8 @@ const About = () => {
               </p>
               <div className="space-y-3">
                 <a href="mailto:rivanapropertiesmx@gmail.com" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><span className="text-primary">✉</span> rivanapropertiesmx@gmail.com</a>
-                <a href="tel:+5299811457224" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><PhoneIcon className="w-4 h-4 text-primary" /> +52 998 114 57224</a>
-                <a href="https://wa.me/5299811457224" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> WhatsApp</a>
+                <a href="tel:+5299888457224" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><PhoneIcon className="w-4 h-4 text-primary" /> +52 998 884 57224</a>
+                <a href="https://wa.me/5299888457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> WhatsApp</a>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
