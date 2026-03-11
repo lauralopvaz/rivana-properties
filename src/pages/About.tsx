@@ -144,7 +144,7 @@ const About = () => {
                   <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="flex-1"><PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}</Button>
                     <Button variant="whatsapp" size="sm" className="flex-1" asChild>
-                      <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> WhatsApp</a>
+                      <a href="https://wa.me/5299888457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> WhatsApp</a>
                     </Button>
                   </div>
                 </div>
