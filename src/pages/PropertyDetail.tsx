@@ -110,11 +110,11 @@ const propertyData: PropertyData = {
     { key: 'eco', label: 'Eco-Certificado', icon: badgeIconMap['eco'] },
   ],
   unitTypes: [
-    { name: 'Estudio', m2: '65 m²', priceFrom: '$195,000', available: 28 },
-    { name: '1 Recámara', m2: '85 m²', priceFrom: '$245,000', available: 18 },
-    { name: '2 Recámaras', m2: '120 m²', priceFrom: '$345,000', available: 8 },
-    { name: '3 Recámaras', m2: '155 m²', priceFrom: '$485,000', available: 4 },
-    { name: 'Penthouse', m2: '185 m²', priceFrom: '$680,000', available: 2 },
+    { name: 'Estudio', m2: '65 m²', priceFrom: '$195,000', available: 28, description: 'Estudio con terraza privada y vista al mar.' },
+    { name: '1 Recámara', m2: '85 m²', priceFrom: '$245,000', available: 18, description: 'Departamento de 1 recámara con acabados de lujo.' },
+    { name: '2 Recámaras', m2: '120 m²', priceFrom: '$345,000', available: 8, description: 'Amplio departamento de 2 recámaras con vista panorámica.' },
+    { name: '3 Recámaras', m2: '155 m²', priceFrom: '$485,000', available: 4, description: 'Residencia de 3 recámaras con terraza amplia.' },
+    { name: 'Penthouse', m2: '185 m²', priceFrom: '$680,000', available: 2, description: 'Penthouse de lujo con rooftop privado y jacuzzi.' },
   ],
   distances: [
     { icon: <Plane className="w-[15px] h-[15px] text-[#1C1C1C]" />, label: 'Aeropuerto 25 min' },
