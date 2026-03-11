@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ScrollReveal } from '@/components/ScrollReveal';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const destinationOptions = [
   'Zona Hotelera, Cancún',
@@ -9,13 +10,6 @@ const destinationOptions = [
   'Puerto Morelos',
   'Tulum',
   'Mérida',
-];
-
-const benefits = [
-  'Asesoría Inmobiliaria personalizada',
-  'Acceso a proyectos exclusivos en preventa',
-  'Acompañamiento legal y financiero',
-  'Equipo bilingüe · ES · EN',
 ];
 
 const inputStyle: React.CSSProperties = {
@@ -52,6 +46,8 @@ const PinIcon = ({ className }: { className?: string }) => (
 );
 
 export const ContactSection = () => {
+  const { language } = useLanguage();
+  const L = language;
   const [submitted, setSubmitted] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -68,6 +64,10 @@ export const ContactSection = () => {
     e.currentTarget.style.borderColor = 'rgba(0,0,0,0.09)';
   };
 
+  const benefits = L === 'es'
+    ? ['Asesoría Inmobiliaria personalizada', 'Acceso a proyectos exclusivos en preventa', 'Acompañamiento legal y financiero', 'Equipo bilingüe · ES · EN']
+    : ['Personalized real estate advisory', 'Access to exclusive pre-sale projects', 'Legal and financial guidance', 'Bilingual team · ES · EN'];
+
   return (
     <section className="relative">
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -75,89 +75,29 @@ export const ContactSection = () => {
         <div className="py-16 lg:py-20 px-6 lg:px-10" style={{ background: '#F8F6F2' }}>
           <div className="max-w-[480px] ml-auto mr-0 lg:mr-16">
             <ScrollReveal>
-              {/* Label */}
-              <span
-                className="uppercase block mb-4"
-                style={{
-                  fontFamily: "'Jost', sans-serif",
-                  fontSize: '9px',
-                  letterSpacing: '5px',
-                  color: '#CFAE60',
-                  fontWeight: 300,
-                }}
-              >
-                Asesoría Personalizada
+              <span className="uppercase block mb-4" style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '5px', color: '#CFAE60', fontWeight: 300 }}>
+                {L === 'es' ? 'Asesoría Personalizada' : 'Personal Advisory'}
               </span>
-
-              {/* Title */}
-              <h2
-                className="mb-6"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontWeight: 300,
-                  fontSize: 'clamp(36px, 4vw, 56px)',
-                  lineHeight: 1.05,
-                }}
-              >
-                <span style={{ color: '#1C1C1C' }}>Agenda una </span>
-                <em className="not-italic" style={{ color: '#CFAE60', fontStyle: 'italic' }}>Asesoría</em>
+              <h2 className="mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontSize: 'clamp(36px, 4vw, 56px)', lineHeight: 1.05 }}>
+                <span style={{ color: '#1C1C1C' }}>{L === 'es' ? 'Agenda una ' : 'Schedule an '}</span>
+                <em className="not-italic" style={{ color: '#CFAE60', fontStyle: 'italic' }}>{L === 'es' ? 'Asesoría' : 'Advisory'}</em>
               </h2>
-
-              {/* Description */}
-              <p
-                className="mb-8"
-                style={{
-                  fontFamily: "'Jost', sans-serif",
-                  fontSize: '13px',
-                  color: '#4B4B4B',
-                  fontWeight: 300,
-                  lineHeight: 1.85,
-                  maxWidth: '360px',
-                }}
-              >
-                Reúnete con uno de nuestros asesores para descubrir las propiedades que mejor se alinean con tus objetivos. Te acompañamos en cada paso, desde la primera visita hasta la firma.
+              <p className="mb-8" style={{ fontFamily: "'Jost', sans-serif", fontSize: '13px', color: '#4B4B4B', fontWeight: 300, lineHeight: 1.85, maxWidth: '360px' }}>
+                {L === 'es'
+                  ? 'Reúnete con uno de nuestros asesores para descubrir las propiedades que mejor se alinean con tus objetivos. Te acompañamos en cada paso, desde la primera visita hasta la firma.'
+                  : 'Meet with one of our advisors to discover the properties that best align with your goals. We accompany you every step, from the first visit to signing.'}
               </p>
-
-              {/* Benefits */}
               <ul className="mb-8 space-y-3">
                 {benefits.map((b) => (
                   <li key={b} className="flex items-center gap-3">
-                    <span
-                      className="shrink-0"
-                      style={{
-                        width: '6px',
-                        height: '6px',
-                        borderRadius: '50%',
-                        background: '#CFAE60',
-                      }}
-                    />
-                    <span
-                      style={{
-                        fontFamily: "'Jost', sans-serif",
-                        fontSize: '12px',
-                        color: '#4B4B4B',
-                        fontWeight: 300,
-                      }}
-                    >
-                      {b}
-                    </span>
+                    <span className="shrink-0" style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#CFAE60' }} />
+                    <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', fontWeight: 300 }}>{b}</span>
                   </li>
                 ))}
               </ul>
-
-              {/* Location */}
               <div className="flex items-center gap-2">
                 <PinIcon className="w-[13px] h-[13px] text-[#1C1C1C]" />
-                <span
-                  style={{
-                    fontFamily: "'Jost', sans-serif",
-                    fontSize: '11px',
-                    color: '#4B4B4B',
-                    fontWeight: 300,
-                  }}
-                >
-                  Cancún, Q.R., México
-                </span>
+                <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '11px', color: '#4B4B4B', fontWeight: 300 }}>Cancún, Q.R., México</span>
               </div>
             </ScrollReveal>
           </div>
@@ -169,191 +109,77 @@ export const ContactSection = () => {
             <ScrollReveal delay={200}>
               {submitted ? (
                 <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center animate-fade-in">
-                  <div
-                    className="flex items-center justify-center mb-6"
-                    style={{
-                      width: '60px',
-                      height: '60px',
-                      borderRadius: '50%',
-                      border: '1px solid #CFAE60',
-                    }}
-                  >
+                  <div className="flex items-center justify-center mb-6" style={{ width: '60px', height: '60px', borderRadius: '50%', border: '1px solid #CFAE60' }}>
                     <CheckIcon className="w-[22px] h-[22px] text-[#CFAE60]" />
                   </div>
-                  <h3
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontSize: '28px',
-                      fontWeight: 300,
-                      color: '#1C1C1C',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    ¡Listo, te contactamos pronto!
+                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', fontWeight: 300, color: '#1C1C1C', marginBottom: '12px' }}>
+                    {L === 'es' ? '¡Listo, te contactamos pronto!' : 'Done, we\'ll contact you soon!'}
                   </h3>
-                  <p
-                    style={{
-                      fontFamily: "'Jost', sans-serif",
-                      fontSize: '12px',
-                      color: '#4B4B4B',
-                      fontWeight: 300,
-                    }}
-                  >
-                    Un asesor de Rivana se comunicará contigo en las próximas 2 horas.
+                  <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', fontWeight: 300 }}>
+                    {L === 'es' ? 'Un asesor de Rivana se comunicará contigo en las próximas 2 horas.' : 'A Rivana advisor will reach out to you within the next 2 hours.'}
                   </p>
                 </div>
               ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="transition-opacity duration-300"
-                  style={{ opacity: fadeOut ? 0 : 1 }}
-                >
+                <form onSubmit={handleSubmit} className="transition-opacity duration-300" style={{ opacity: fadeOut ? 0 : 1 }}>
                   <div className="flex flex-col" style={{ gap: '2px' }}>
-                    {/* Row 1: Name */}
                     <div className="grid grid-cols-2" style={{ gap: '2px' }}>
-                      <input
-                        placeholder="Nombre"
-                        style={inputStyle}
-                        onFocus={handleFocus}
-                        onBlur={handleBlur}
-                      />
-                      <input
-                        placeholder="Apellido"
-                        style={inputStyle}
-                        onFocus={handleFocus}
-                        onBlur={handleBlur}
-                      />
+                      <input placeholder={L === 'es' ? 'Nombre' : 'First Name'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
+                      <input placeholder={L === 'es' ? 'Apellido' : 'Last Name'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
                     </div>
-
-                    {/* Row 2: Email */}
-                    <input
-                      type="email"
-                      placeholder="Correo electrónico"
-                      style={inputStyle}
-                      onFocus={handleFocus}
-                      onBlur={handleBlur}
-                    />
-
-                    {/* Row 3: Phone */}
-                    <input
-                      type="tel"
-                      placeholder="Teléfono / WhatsApp"
-                      style={inputStyle}
-                      onFocus={handleFocus}
-                      onBlur={handleBlur}
-                    />
-
-                    {/* Row 4: Destination dropdown */}
+                    <input type="email" placeholder={L === 'es' ? 'Correo electrónico' : 'Email'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
+                    <input type="tel" placeholder={L === 'es' ? 'Teléfono / WhatsApp' : 'Phone / WhatsApp'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
                     <div className="relative">
                       <select
                         defaultValue=""
-                        style={{
-                          ...inputStyle,
-                          appearance: 'none',
-                          paddingRight: '40px',
-                          color: undefined,
-                        }}
+                        style={{ ...inputStyle, appearance: 'none', paddingRight: '40px' }}
                         className="placeholder-select"
                         onFocus={handleFocus as any}
                         onBlur={handleBlur as any}
-                        onChange={(e) => {
-                          e.currentTarget.style.color = e.currentTarget.value ? '#1C1C1C' : 'rgba(75,75,75,0.42)';
-                        }}
+                        onChange={(e) => { e.currentTarget.style.color = e.currentTarget.value ? '#1C1C1C' : 'rgba(75,75,75,0.42)'; }}
                       >
                         <option value="" disabled style={{ color: 'rgba(75,75,75,0.42)' }}>
-                          Seleccionar Destino de Interés
+                          {L === 'es' ? 'Seleccionar Destino de Interés' : 'Select Destination of Interest'}
                         </option>
                         {destinationOptions.map((d) => (
-                          <option key={d} value={d} style={{ color: '#1C1C1C' }}>
-                            {d}
-                          </option>
+                          <option key={d} value={d} style={{ color: '#1C1C1C' }}>{d}</option>
                         ))}
                       </select>
-                      <svg
-                        className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#1C1C1C"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
+                      <svg className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1C1C1C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="6 9 12 15 18 9" />
                       </svg>
                     </div>
-
-                    {/* Row 5: Message */}
                     <textarea
-                      placeholder="Mensaje (opcional)"
-                      style={{
-                        ...inputStyle,
-                        height: '90px',
-                        resize: 'none',
-                      }}
+                      placeholder={L === 'es' ? 'Mensaje (opcional)' : 'Message (optional)'}
+                      style={{ ...inputStyle, height: '90px', resize: 'none' }}
                       onFocus={handleFocus as any}
                       onBlur={handleBlur as any}
                     />
                   </div>
-
-                  {/* Buttons */}
                   <div className="flex flex-col" style={{ gap: '2px', marginTop: '2px' }}>
                     <button
                       type="submit"
                       className="w-full uppercase transition-colors duration-300"
-                      style={{
-                        background: '#CFAE60',
-                        color: 'white',
-                        padding: '16px',
-                        fontFamily: "'Jost', sans-serif",
-                        fontSize: '10px',
-                        letterSpacing: '3px',
-                        fontWeight: 400,
-                        border: 'none',
-                        cursor: 'pointer',
-                      }}
+                      style={{ background: '#CFAE60', color: 'white', padding: '16px', fontFamily: "'Jost', sans-serif", fontSize: '10px', letterSpacing: '3px', fontWeight: 400, border: 'none', cursor: 'pointer' }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = '#b89a4a'; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = '#CFAE60'; }}
                     >
-                      Agendar Mi Asesoría
+                      {L === 'es' ? 'Agendar Mi Asesoría' : 'Schedule My Advisory'}
                     </button>
-
                     <a
                       href="https://wa.me/529988457224?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20asesor%C3%ADa%20con%20un%20asesor%20de%20Rivana%20Properties."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full transition-colors duration-300"
-                      style={{
-                        gap: '9px',
-                        padding: '14px',
-                        background: 'rgba(37,211,102,0.07)',
-                        border: '1px solid rgba(37,211,102,0.28)',
-                        color: '#1a9e52',
-                        fontFamily: "'Jost', sans-serif",
-                        fontSize: '10px',
-                        fontWeight: 300,
-                      }}
+                      style={{ gap: '9px', padding: '14px', background: 'rgba(37,211,102,0.07)', border: '1px solid rgba(37,211,102,0.28)', color: '#1a9e52', fontFamily: "'Jost', sans-serif", fontSize: '10px', fontWeight: 300 }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.13)'; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.07)'; }}
                     >
                       <WhatsAppIcon className="w-[14px] h-[14px]" />
-                      Contactar por WhatsApp
+                      {L === 'es' ? 'Contactar por WhatsApp' : 'Contact via WhatsApp'}
                     </a>
                   </div>
-
-                  {/* Privacy note */}
-                  <p
-                    className="text-center"
-                    style={{
-                      fontFamily: "'Jost', sans-serif",
-                      fontSize: '9px',
-                      color: 'rgba(75,75,75,0.45)',
-                      fontWeight: 300,
-                      marginTop: '14px',
-                    }}
-                  >
-                    Tu información es confidencial y nunca será compartida con terceros.
+                  <p className="text-center" style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', color: 'rgba(75,75,75,0.45)', fontWeight: 300, marginTop: '14px' }}>
+                    {L === 'es' ? 'Tu información es confidencial y nunca será compartida con terceros.' : 'Your information is confidential and will never be shared with third parties.'}
                   </p>
                 </form>
               )}

@@ -59,17 +59,17 @@ const UmbrellaIcon2 = ({ className = "w-3 h-3" }: { className?: string }) => (
 
 type BadgeKey = 'vista-mar' | 'alberca-infinity' | 'beach-club' | 'pet-friendly' | 'club-privado' | 'wellness' | 'comunidad-cerrada' | 'vista-marina' | 'golf' | 'frente-mar';
 
-const badgeConfig: Record<string, { label: string; icon: React.FC<{ className?: string }> }> = {
-  'vista-mar': { label: 'Vista al Mar', icon: WavesIcon2 },
-  'alberca-infinity': { label: 'Alberca Infinity', icon: PoolIcon2 },
-  'beach-club': { label: 'Beach Club', icon: UmbrellaIcon2 },
-  'pet-friendly': { label: 'Pet Friendly', icon: WavesIcon2 },
-  'club-privado': { label: 'Club Privado', icon: WavesIcon2 },
-  'wellness': { label: 'Wellness & Spa', icon: WavesIcon2 },
-  'comunidad-cerrada': { label: 'Comunidad Cerrada', icon: WavesIcon2 },
-  'vista-marina': { label: 'Vista a la Marina', icon: WavesIcon2 },
-  'golf': { label: 'Campo de Golf', icon: WavesIcon2 },
-  'frente-mar': { label: 'Frente al Mar', icon: WavesIcon2 },
+const badgeConfig: Record<string, { label: { es: string; en: string }; icon: React.FC<{ className?: string }> }> = {
+  'vista-mar': { label: { es: 'Vista al Mar', en: 'Ocean View' }, icon: WavesIcon2 },
+  'alberca-infinity': { label: { es: 'Alberca Infinity', en: 'Infinity Pool' }, icon: PoolIcon2 },
+  'beach-club': { label: { es: 'Beach Club', en: 'Beach Club' }, icon: UmbrellaIcon2 },
+  'pet-friendly': { label: { es: 'Pet Friendly', en: 'Pet Friendly' }, icon: WavesIcon2 },
+  'club-privado': { label: { es: 'Club Privado', en: 'Private Club' }, icon: WavesIcon2 },
+  'wellness': { label: { es: 'Wellness & Spa', en: 'Wellness & Spa' }, icon: WavesIcon2 },
+  'comunidad-cerrada': { label: { es: 'Comunidad Cerrada', en: 'Gated Community' }, icon: WavesIcon2 },
+  'vista-marina': { label: { es: 'Vista a la Marina', en: 'Marina View' }, icon: WavesIcon2 },
+  'golf': { label: { es: 'Campo de Golf', en: 'Golf Course' }, icon: WavesIcon2 },
+  'frente-mar': { label: { es: 'Frente al Mar', en: 'Beachfront' }, icon: WavesIcon2 },
 };
 
 const projects = [
@@ -283,7 +283,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                     {/* Specs */}
                     <div className="flex items-center gap-[14px] mb-3">
                       <span className="flex items-center gap-1 text-[11px] font-body" style={{ color: '#4B4B4B' }}>
-                        <BedIcon className="w-3 h-3" /> {p.beds} Rec.
+                        <BedIcon className="w-3 h-3" /> {p.beds} {language === 'es' ? 'Rec.' : 'Beds'}
                       </span>
                       <span className="flex items-center gap-1 text-[11px] font-body" style={{ color: '#4B4B4B' }}>
                         <RulerIcon className="w-3 h-3" /> {p.area} m²
@@ -299,13 +299,13 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                           const Icon = cfg.icon;
                           return (
                             <span key={b} className="flex items-center gap-1 px-[10px] py-[4px] text-[9px] font-body font-[300]" style={{ background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)', color: '#1C1C1C' }}>
-                              <Icon className="w-[10px] h-[10px]" /> {cfg.label}
+                              <Icon className="w-[10px] h-[10px]" /> {cfg.label[language]}
                             </span>
                           );
                         })}
                         {p.badges.length > 3 && (
                           <span className="px-[10px] py-[4px] text-[9px] font-body font-[300]" style={{ color: '#4B4B4B', background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
-                            +{p.badges.length - 3} más
+                            +{p.badges.length - 3} {language === 'es' ? 'más' : 'more'}
                           </span>
                         )}
                       </div>
@@ -314,11 +314,11 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                     {/* Bottom */}
                     <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                       <div>
-                        <span className="block text-[8px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>Desde</span>
+                        <span className="block text-[8px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{language === 'es' ? 'Desde' : 'From'}</span>
                         <span className="font-display text-[20px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price)} USD</span>
                       </div>
                       <span className="text-[10px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
-                        Ver <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        {language === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                       </span>
                     </div>
                   </div>

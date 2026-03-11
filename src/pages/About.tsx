@@ -9,8 +9,24 @@ import advisorJess from '@/assets/advisor-jess.png';
 import advisorCelia from '@/assets/advisor-celia.png';
 
 const team = [
-  { name: 'Jess Candela', initial: 'J', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', phone: '9988457224', photo: advisorJess, imgPosition: 'object-top', bio: 'Con 8 años en el mercado inmobiliario del Caribe y raíces en la hospitalidad de lujo, Jess domina el arte de identificar el momento exacto para invertir. Ha cerrado más de $40M en preventas, acompañando a sus clientes desde la oportunidad hasta el cierre con estrategia, claridad y resultados concretos.' },
-  { name: 'Celia Candela', initial: 'C', role: 'Especialista en Destino', zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9981118888', photo: advisorCelia, imgPosition: 'object-[center_65%]', bio: 'Celia conoce el Caribe mexicano como pocos. Su dominio del territorio — desde Cancún hasta la Riviera Maya — le permite conectar a cada cliente con el destino que realmente le corresponde, combinando visión de mercado con un conocimiento local que va más allá de los datos.' },
+  {
+    name: 'Jess Candela', initial: 'J',
+    role: { es: 'Especialista en Preventa', en: 'Pre-Sale Specialist' },
+    zone: 'Costa Mujeres', lang: 'EN · ES', phone: '9988457224', photo: advisorJess, imgPosition: 'object-top',
+    bio: {
+      es: 'Con 8 años en el mercado inmobiliario del Caribe y raíces en la hospitalidad de lujo, Jess domina el arte de identificar el momento exacto para invertir. Ha cerrado más de $40M en preventas, acompañando a sus clientes desde la oportunidad hasta el cierre con estrategia, claridad y resultados concretos.',
+      en: 'With 8 years in the Caribbean real estate market and roots in luxury hospitality, Jess masters the art of identifying the perfect moment to invest. She has closed over $40M in pre-sales, guiding her clients from opportunity to closing with strategy, clarity, and concrete results.',
+    },
+  },
+  {
+    name: 'Celia Candela', initial: 'C',
+    role: { es: 'Especialista en Destino', en: 'Destination Specialist' },
+    zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9981118888', photo: advisorCelia, imgPosition: 'object-[center_65%]',
+    bio: {
+      es: 'Celia conoce el Caribe mexicano como pocos. Su dominio del territorio — desde Cancún hasta la Riviera Maya — le permite conectar a cada cliente con el destino que realmente le corresponde, combinando visión de mercado con un conocimiento local que va más allá de los datos.',
+      en: 'Celia knows the Mexican Caribbean like few others. Her command of the territory — from Cancún to the Riviera Maya — allows her to connect each client with the destination that truly fits them, combining market vision with local knowledge that goes beyond the data.',
+    },
+  },
 ];
 
 const About = () => {
@@ -118,10 +134,10 @@ const About = () => {
                   <span className="absolute bottom-3 right-3 text-xs font-body bg-muted/80 backdrop-blur text-foreground px-2 py-1 rounded-sm">{member.lang}</span>
                 </div>
                 <div className="p-6">
-                  <p className="eyebrow text-xs mb-1">{member.role}</p>
+                  <p className="eyebrow text-xs mb-1">{member.role[language]}</p>
                   <h3 className="text-xl mb-1">{member.name}</h3>
                   <p className="text-xs text-muted-foreground font-body mb-3">{member.zone}</p>
-                  <p className="text-sm text-muted-foreground font-body mb-4">{member.bio}</p>
+                  <p className="text-sm text-muted-foreground font-body mb-4">{member.bio[language]}</p>
                   <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="flex-1" onClick={() => openModal('llamada')}><PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}</Button>
                     <Button variant="whatsapp" size="sm" className="flex-1" asChild>
