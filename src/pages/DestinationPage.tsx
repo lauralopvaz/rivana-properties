@@ -433,7 +433,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
               </div>
             </div>
             <div className="flex items-center gap-3 ml-auto">
-              <Button variant="gold" size="sm" onClick={() => setPopupOpen(true)}>
+              <Button variant="gold" size="sm" onClick={() => openModal('videollamada')}>
                 {language === 'es' ? 'Recibir Precios' : 'Get Pricing & Floor Plans'}
               </Button>
               <Button variant="whatsapp" size="sm" asChild>
