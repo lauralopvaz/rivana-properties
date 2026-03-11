@@ -28,7 +28,7 @@ export const Footer = () => {
               <a href="mailto:rivanapropertiesmx@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <MailIcon className="w-5 h-5" />
               </a>
-              <a href="tel:+5299888457224" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+529988457224" className="text-muted-foreground hover:text-primary transition-colors">
                 <PhoneIcon className="w-5 h-5" />
               </a>
               <a href="https://www.facebook.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">

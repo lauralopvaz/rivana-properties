@@ -144,7 +144,7 @@ const About = () => {
                   <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="flex-1"><PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}</Button>
                     <Button variant="whatsapp" size="sm" className="flex-1" asChild>
-                      <a href="https://wa.me/5299888457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> WhatsApp</a>
+                      <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> WhatsApp</a>
                     </Button>
                   </div>
                 </div>
@@ -212,8 +212,8 @@ const About = () => {
               </p>
               <div className="space-y-3">
                 <a href="mailto:rivanapropertiesmx@gmail.com" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><span className="text-primary">✉</span> rivanapropertiesmx@gmail.com</a>
-                <a href="tel:+5299888457224" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><PhoneIcon className="w-4 h-4 text-primary" /> +52 998 884 57224</a>
-                <a href="https://wa.me/5299888457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> WhatsApp</a>
+                <a href="tel:+529988457224" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><PhoneIcon className="w-4 h-4 text-primary" /> +52 998 845 7224</a>
+                <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> WhatsApp</a>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
