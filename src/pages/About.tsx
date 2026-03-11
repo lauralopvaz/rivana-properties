@@ -7,20 +7,9 @@ import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
 import { ShieldIcon, EyeIcon, GlobeIcon, HeartIcon, PhoneIcon, ChatIcon, ArrowRightIcon } from '@/components/icons';
 
 const team = [
-  { name: 'Alejandra Reyes', initial: 'A', role: 'Pre-Sale Specialist', zone: 'Costa Mujeres', lang: 'EN·ES·FR', bio: 'Former luxury hospitality manager with 8 years in Caribbean real estate. Alejandra specializes in pre-sale investment strategies and has closed over $40M in transactions.', profiles: ['maria', 'investor'] },
-  { name: 'Carlos Mendoza', initial: 'C', role: 'Investment Director', zone: 'Mayakoba', lang: 'EN·ES', bio: 'CFA charterholder with a background in private equity. Carlos brings institutional-grade analysis to every property recommendation, focusing on long-term value creation.', profiles: ['investor', 'carlos'] },
-  { name: 'Regina Flores', initial: 'R', role: 'Family Advisor', zone: 'Puerto Cancún', lang: 'EN·ES·PT', bio: 'Specializing in family relocations and legacy properties. Regina helps families find their ideal home with attention to schools, safety, and community.', profiles: ['pedro', 'maria'] },
-  { name: 'Miguel Ángel Torres', initial: 'M', role: 'Retirement Specialist', zone: 'Holbox', lang: 'EN·ES', bio: 'Licensed retirement planning advisor turned real estate consultant. Miguel helps retirees navigate the transition to Caribbean living with comprehensive support.', profiles: ['carlos'] },
-  { name: 'Sofía Laurent', initial: 'S', role: 'International Sales', zone: 'Zona Hotelera', lang: 'EN·ES·FR', bio: 'French-Mexican dual national with deep connections to European and North American buyers. Sofía bridges cultural gaps to ensure smooth cross-border transactions.', profiles: ['investor', 'maria'] },
-  { name: 'David Castillo', initial: 'D', role: 'Emerging Markets', zone: 'Tulum · Mérida', lang: 'EN·ES', bio: 'Early Tulum pioneer who identified the zone before its boom. David now scouts emerging markets across the Yucatán Peninsula for high-growth opportunities.', profiles: ['investor', 'pedro'] },
+  { name: 'Alejandra Reyes', initial: 'A', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', bio: 'Former luxury hospitality manager with 8 years in Caribbean real estate. Alejandra specializes in pre-sale investment strategies and has closed over $40M in transactions.' },
+  { name: 'Carlos Mendoza', initial: 'C', role: 'Directora de Inversiones', zone: 'Mayakoba', lang: 'EN · ES', bio: 'CFA charterholder with a background in private equity. Carlos brings institutional-grade analysis to every property recommendation, focusing on long-term value creation.' },
 ];
-
-const profileColors: Record<string, string> = {
-  maria: 'bg-profile-maria',
-  pedro: 'bg-profile-pedro',
-  carlos: 'bg-profile-carlos',
-  investor: 'bg-profile-investor',
-};
 
 const About = () => {
   const { language, t, localePath } = useLanguage();
