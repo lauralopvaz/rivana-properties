@@ -434,7 +434,7 @@ const Listings = () => {
                       })}
                       {p.badges.length > 3 && (
                         <span className="px-[10px] py-[4px] text-[9px] font-body font-[300]" style={{ color: '#4B4B4B', background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
-                          +{p.badges.length - 3} más
+                          +{p.badges.length - 3} {L === 'es' ? 'más' : 'more'}
                         </span>
                       )}
                     </div>
