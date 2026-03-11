@@ -5,10 +5,12 @@ import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
 import { ShieldIcon, EyeIcon, GlobeIcon, HeartIcon, PhoneIcon, ChatIcon, ArrowRightIcon } from '@/components/icons';
+import advisorJess from '@/assets/advisor-jess.png';
+import advisorCelia from '@/assets/advisor-celia.png';
 
 const team = [
-  { name: 'Alejandra Reyes', initial: 'A', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', bio: 'Former luxury hospitality manager with 8 years in Caribbean real estate. Alejandra specializes in pre-sale investment strategies and has closed over $40M in transactions.' },
-  { name: 'Carlos Mendoza', initial: 'C', role: 'Directora de Inversiones', zone: 'Mayakoba', lang: 'EN · ES', bio: 'CFA charterholder with a background in private equity. Carlos brings institutional-grade analysis to every property recommendation, focusing on long-term value creation.' },
+  { name: 'Jess Candela', initial: 'J', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', phone: '9988457224', photo: advisorJess, bio: 'Con 8 años en el mercado inmobiliario del Caribe y raíces en la hospitalidad de lujo, Jess domina el arte de identificar el momento exacto para invertir. Ha cerrado más de $40M en preventas, acompañando a sus clientes desde la oportunidad hasta el cierre con estrategia, claridad y resultados concretos.' },
+  { name: 'Celia Candela', initial: 'C', role: 'Especialista en Destino', zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9981118888', photo: advisorCelia, bio: 'Celia conoce el Caribe mexicano como pocos. Su dominio del territorio — desde Cancún hasta la Riviera Maya — le permite conectar a cada cliente con el destino que realmente le corresponde, combinando visión de mercado con un conocimiento local que va más allá de los datos.' },
 ];
 
 const About = () => {
@@ -111,19 +113,19 @@ const About = () => {
           {team.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 80}>
               <div className="bg-card border border-border rounded-sm overflow-hidden">
-                <div className="relative h-48 bg-gradient-to-br from-[hsl(30_15%_90%)] to-muted flex items-center justify-center">
-                  <span className="font-display text-7xl text-primary/20">{member.initial}</span>
+                <div className="relative h-56 bg-gradient-to-br from-[hsl(30_15%_90%)] to-muted">
+                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
                   <span className="absolute bottom-3 right-3 text-xs font-body bg-muted/80 backdrop-blur text-foreground px-2 py-1 rounded-sm">{member.lang}</span>
                 </div>
                 <div className="p-6">
                   <p className="eyebrow text-xs mb-1">{member.role}</p>
                   <h3 className="text-xl mb-1">{member.name}</h3>
                   <p className="text-xs text-muted-foreground font-body mb-3">{member.zone}</p>
-                  <p className="text-sm text-muted-foreground font-body mb-4 line-clamp-3">{member.bio}</p>
+                  <p className="text-sm text-muted-foreground font-body mb-4">{member.bio}</p>
                   <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="flex-1" onClick={() => openModal('llamada')}><PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}</Button>
                     <Button variant="whatsapp" size="sm" className="flex-1" asChild>
-                      <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> WhatsApp</a>
+                      <a href={`https://wa.me/52${member.phone}?text=${encodeURIComponent(`Hola, ${member.name}, me gustaría una asesoría inmobiliaria`)}`} target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> WhatsApp</a>
                     </Button>
                   </div>
                 </div>
