@@ -131,18 +131,32 @@ const FilterDropdown = ({ label, activeLabel, isOpen, onToggle, children }: {
   );
 };
 
+const MXN_RATE = 17.5;
+
 const Listings = () => {
   const { localePath } = useLanguage();
   const [zone, setZone] = useState('Todas las Zonas');
   const [status, setStatus] = useState('Todo el Estatus');
   const [type, setType] = useState('Todos los Tipos');
   const [selectedAmenities, setSelectedAmenities] = useState<BadgeKey[]>([]);
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 2000000]);
+  const [currency, setCurrency] = useState<'USD' | 'MXN'>('USD');
+  const maxUsd = 2000000;
+  const maxMxn = 40000000;
+  const currentMax = currency === 'USD' ? maxUsd : maxMxn;
+  const step = currency === 'USD' ? 10000 : 100000;
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, maxUsd]);
   const [appliedAmenities, setAppliedAmenities] = useState<BadgeKey[]>([]);
-  const [appliedPrice, setAppliedPrice] = useState<[number, number]>([0, 2000000]);
+  const [appliedPrice, setAppliedPrice] = useState<[number, number]>([0, maxUsd]);
+  const [appliedCurrency, setAppliedCurrency] = useState<'USD' | 'MXN'>('USD');
   const [openFilter, setOpenFilter] = useState<string | null>(null);
 
   const toggle = useCallback((key: string) => setOpenFilter(prev => prev === key ? null : key), []);
+
+  const handleCurrencyChange = (c: 'USD' | 'MXN') => {
+    setCurrency(c);
+    const newMax = c === 'USD' ? maxUsd : maxMxn;
+    setPriceRange([0, newMax]);
+  };
 
   const filtered = allProperties
     .filter(p => zone === 'Todas las Zonas' || p.zone === zone)
@@ -156,9 +170,24 @@ const Listings = () => {
       return p.type === type.toLowerCase();
     })
     .filter(p => appliedAmenities.length === 0 || appliedAmenities.every(a => p.badges.includes(a)))
-    .filter(p => p.price >= appliedPrice[0] && p.price <= appliedPrice[1]);
+    .filter(p => {
+      const pPrice = appliedCurrency === 'MXN' ? p.price * MXN_RATE : p.price;
+      return pPrice >= appliedPrice[0] && pPrice <= appliedPrice[1];
+    });
 
-  const formatPrice = (n: number) => n >= 1000000 ? `$${(n / 1000000).toFixed(1)}M` : `$${(n / 1000).toFixed(0)}K`;
+  const formatPriceInCurrency = (usdPrice: number, cur: 'USD' | 'MXN') => {
+    const val = cur === 'MXN' ? usdPrice * MXN_RATE : usdPrice;
+    if (val >= 1000000) return `$${(val / 1000000).toFixed(1)}M`;
+    return `$${(val / 1000).toFixed(0)}K`;
+  };
+
+  const formatFilterLabel = () => {
+    const isDefault = appliedPrice[0] === 0 && appliedPrice[1] === (appliedCurrency === 'USD' ? maxUsd : maxMxn);
+    if (isDefault) return appliedCurrency !== 'USD' ? `Precio (${appliedCurrency})` : 'Precio';
+    const lo = appliedPrice[0] >= 1000000 ? `$${(appliedPrice[0] / 1000000).toFixed(1)}M` : `$${(appliedPrice[0] / 1000).toFixed(0)}K`;
+    const hi = appliedPrice[1] >= 1000000 ? `$${(appliedPrice[1] / 1000000).toFixed(1)}M` : `$${(appliedPrice[1] / 1000).toFixed(0)}K`;
+    return `Precio · ${lo}–${hi} ${appliedCurrency}`;
+  };
 
   const clearFilters = () => {
     setZone('Todas las Zonas');
