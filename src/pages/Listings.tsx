@@ -333,7 +333,7 @@ const Listings = () => {
                       {p.status === 'preventa' ? 'Preventa' : 'Entrega Inmediata'}
                     </span>
                     {p.yield && (
-                      <span className="text-[9px] px-[10px] py-[5px] font-body flex items-center gap-1" style={{ background: 'rgba(207,174,96,0.15)', border: '1px solid rgba(207,174,96,0.40)', color: '#CFAE60' }}>
+                      <span className="text-[9px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
                         <TrendingUpIcon className="w-3 h-3" /> {p.yield}
                       </span>
                     )}
