@@ -114,7 +114,7 @@ const About = () => {
             <ScrollReveal key={member.name} delay={i * 80}>
               <div className="bg-card border border-border rounded-sm overflow-hidden">
                 <div className="relative h-56 bg-gradient-to-br from-[hsl(30_15%_90%)] to-muted">
-                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
+                  <img src={member.photo} alt={member.name} className={`w-full h-full object-cover ${member.imgPosition}`} />
                   <span className="absolute bottom-3 right-3 text-xs font-body bg-muted/80 backdrop-blur text-foreground px-2 py-1 rounded-sm">{member.lang}</span>
                 </div>
                 <div className="p-6">
