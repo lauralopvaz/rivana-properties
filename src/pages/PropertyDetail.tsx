@@ -496,7 +496,7 @@ const PropertyDetail = () => {
       {unitModalOpen && selectedUnit && (
         <div className="fixed inset-0 z-50 bg-[rgba(10,14,20,0.82)] flex items-center justify-center" onClick={closeUnitModal}>
           <div
-            className="bg-white max-w-[820px] w-[95vw] grid grid-cols-2 rounded-none animate-fade-in"
+            className="bg-white max-w-[820px] w-[95vw] grid grid-cols-1 md:grid-cols-2 rounded-none animate-fade-in"
             style={{ animation: 'fadeSlideUp .25s ease' }}
             onClick={(e) => e.stopPropagation()}
           >
