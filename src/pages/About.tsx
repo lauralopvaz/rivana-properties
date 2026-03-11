@@ -141,13 +141,12 @@ const About = () => {
       {/* Numbers */}
       <section className="py-20 bg-[hsl(30_15%_93%)] border-y border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
               { val: '$140M+', label: language === 'es' ? 'Ventas Totales' : 'Total Sales' },
               { val: '280+', label: language === 'es' ? 'Clientes' : 'Clients' },
               { val: '18', label: language === 'es' ? 'Países' : 'Countries' },
               { val: '7', label: language === 'es' ? 'Destinos' : 'Destinations' },
-              { val: '96%', label: language === 'es' ? 'Satisfacción' : 'Satisfaction' },
             ].map((s) => (
               <ScrollReveal key={s.label}>
                 <span className="font-display text-4xl text-primary">{s.val}</span>
