@@ -7,20 +7,9 @@ import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
 import { ShieldIcon, EyeIcon, GlobeIcon, HeartIcon, PhoneIcon, ChatIcon, ArrowRightIcon } from '@/components/icons';
 
 const team = [
-  { name: 'Alejandra Reyes', initial: 'A', role: 'Pre-Sale Specialist', zone: 'Costa Mujeres', lang: 'EN·ES·FR', bio: 'Former luxury hospitality manager with 8 years in Caribbean real estate. Alejandra specializes in pre-sale investment strategies and has closed over $40M in transactions.', profiles: ['maria', 'investor'] },
-  { name: 'Carlos Mendoza', initial: 'C', role: 'Investment Director', zone: 'Mayakoba', lang: 'EN·ES', bio: 'CFA charterholder with a background in private equity. Carlos brings institutional-grade analysis to every property recommendation, focusing on long-term value creation.', profiles: ['investor', 'carlos'] },
-  { name: 'Regina Flores', initial: 'R', role: 'Family Advisor', zone: 'Puerto Cancún', lang: 'EN·ES·PT', bio: 'Specializing in family relocations and legacy properties. Regina helps families find their ideal home with attention to schools, safety, and community.', profiles: ['pedro', 'maria'] },
-  { name: 'Miguel Ángel Torres', initial: 'M', role: 'Retirement Specialist', zone: 'Holbox', lang: 'EN·ES', bio: 'Licensed retirement planning advisor turned real estate consultant. Miguel helps retirees navigate the transition to Caribbean living with comprehensive support.', profiles: ['carlos'] },
-  { name: 'Sofía Laurent', initial: 'S', role: 'International Sales', zone: 'Zona Hotelera', lang: 'EN·ES·FR', bio: 'French-Mexican dual national with deep connections to European and North American buyers. Sofía bridges cultural gaps to ensure smooth cross-border transactions.', profiles: ['investor', 'maria'] },
-  { name: 'David Castillo', initial: 'D', role: 'Emerging Markets', zone: 'Tulum · Mérida', lang: 'EN·ES', bio: 'Early Tulum pioneer who identified the zone before its boom. David now scouts emerging markets across the Yucatán Peninsula for high-growth opportunities.', profiles: ['investor', 'pedro'] },
+  { name: 'Alejandra Reyes', initial: 'A', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', bio: 'Former luxury hospitality manager with 8 years in Caribbean real estate. Alejandra specializes in pre-sale investment strategies and has closed over $40M in transactions.' },
+  { name: 'Carlos Mendoza', initial: 'C', role: 'Directora de Inversiones', zone: 'Mayakoba', lang: 'EN · ES', bio: 'CFA charterholder with a background in private equity. Carlos brings institutional-grade analysis to every property recommendation, focusing on long-term value creation.' },
 ];
-
-const profileColors: Record<string, string> = {
-  maria: 'bg-profile-maria',
-  pedro: 'bg-profile-pedro',
-  carlos: 'bg-profile-carlos',
-  investor: 'bg-profile-investor',
-};
 
 const About = () => {
   const { language, t, localePath } = useLanguage();
@@ -62,12 +51,6 @@ const About = () => {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <div className="bg-[hsl(30_15%_93%)] border border-border rounded-sm p-8">
-              <div className="flex items-center gap-3 mb-6">
-                {team.slice(0, 4).map((t) => (
-                  <div key={t.name} className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-sm">{t.initial}</div>
-                ))}
-                <span className="text-sm font-body text-muted-foreground ml-2">+2 more</span>
-              </div>
               <p className="font-display text-xl italic leading-relaxed mb-4">
                 {language === 'es'
                   ? '"Protegemos tu inversión como si fuera nuestra — porque para nosotros, tu confianza es nuestro activo más valioso."'
@@ -124,7 +107,7 @@ const About = () => {
           <p className="eyebrow mb-4">{language === 'es' ? 'El Equipo' : 'The Team'}</p>
           <h2 className="mb-12">{language === 'es' ? 'Conoce a Tus Asesores' : 'Meet Your Advisors'}</h2>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
           {team.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 80}>
               <div className="bg-card border border-border rounded-sm overflow-hidden">
@@ -137,11 +120,6 @@ const About = () => {
                   <h3 className="text-xl mb-1">{member.name}</h3>
                   <p className="text-xs text-muted-foreground font-body mb-3">{member.zone}</p>
                   <p className="text-sm text-muted-foreground font-body mb-4 line-clamp-3">{member.bio}</p>
-                  <div className="flex items-center gap-1.5 mb-4">
-                    {member.profiles.map((p) => (
-                      <span key={p} className={`w-2.5 h-2.5 rounded-full ${profileColors[p]}`} title={p} />
-                    ))}
-                  </div>
                   <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="flex-1" onClick={() => openModal('llamada')}><PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}</Button>
                     <Button variant="whatsapp" size="sm" className="flex-1" asChild>
@@ -158,13 +136,12 @@ const About = () => {
       {/* Numbers */}
       <section className="py-20 bg-[hsl(30_15%_93%)] border-y border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
               { val: '$140M+', label: language === 'es' ? 'Ventas Totales' : 'Total Sales' },
               { val: '280+', label: language === 'es' ? 'Clientes' : 'Clients' },
               { val: '18', label: language === 'es' ? 'Países' : 'Countries' },
               { val: '7', label: language === 'es' ? 'Destinos' : 'Destinations' },
-              { val: '96%', label: language === 'es' ? 'Satisfacción' : 'Satisfaction' },
             ].map((s) => (
               <ScrollReveal key={s.label}>
                 <span className="font-display text-4xl text-primary">{s.val}</span>
