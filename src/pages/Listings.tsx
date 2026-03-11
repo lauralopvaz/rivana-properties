@@ -134,10 +134,14 @@ const FilterDropdown = ({ label, activeLabel, isOpen, onToggle, children }: {
 const MXN_RATE = 17.5;
 
 const Listings = () => {
-  const { localePath } = useLanguage();
-  const [zone, setZone] = useState('Todas las Zonas');
-  const [status, setStatus] = useState('Todo el Estatus');
-  const [type, setType] = useState('Todos los Tipos');
+  const { language, localePath } = useLanguage();
+  const L = language;
+  const allZones = L === 'es' ? 'Todas las Zonas' : 'All Zones';
+  const allStatus = L === 'es' ? 'Todo el Estatus' : 'All Status';
+  const allTypes = L === 'es' ? 'Todos los Tipos' : 'All Types';
+  const [zone, setZone] = useState(allZones);
+  const [status, setStatus] = useState(allStatus);
+  const [type, setType] = useState(allTypes);
   const [selectedAmenities, setSelectedAmenities] = useState<BadgeKey[]>([]);
   const [currency, setCurrency] = useState<'USD' | 'MXN'>('USD');
   const maxUsd = 2000000;
@@ -159,14 +163,14 @@ const Listings = () => {
   };
 
   const filtered = allProperties
-    .filter(p => zone === 'Todas las Zonas' || p.zone === zone)
+    .filter(p => zone === allZones || p.zone === zone)
     .filter(p => {
-      if (status === 'Todo el Estatus') return true;
-      if (status === 'Preventa') return p.status === 'preventa';
+      if (status === allStatus) return true;
+      if (status === (L === 'es' ? 'Preventa' : 'Pre-Sale')) return p.status === 'preventa';
       return p.status === 'entrega-inmediata';
     })
     .filter(p => {
-      if (type === 'Todos los Tipos') return true;
+      if (type === allTypes) return true;
       return p.type === type.toLowerCase();
     })
     .filter(p => appliedAmenities.length === 0 || appliedAmenities.every(a => p.badges.includes(a)))
@@ -181,18 +185,19 @@ const Listings = () => {
     return `$${(val / 1000).toFixed(0)}K`;
   };
 
+  const priceLabel = L === 'es' ? 'Precio' : 'Price';
   const formatFilterLabel = () => {
     const isDefault = appliedPrice[0] === 0 && appliedPrice[1] === (appliedCurrency === 'USD' ? maxUsd : maxMxn);
-    if (isDefault) return appliedCurrency !== 'USD' ? `Precio (${appliedCurrency})` : 'Precio';
+    if (isDefault) return appliedCurrency !== 'USD' ? `${priceLabel} (${appliedCurrency})` : priceLabel;
     const lo = appliedPrice[0] >= 1000000 ? `$${(appliedPrice[0] / 1000000).toFixed(1)}M` : `$${(appliedPrice[0] / 1000).toFixed(0)}K`;
     const hi = appliedPrice[1] >= 1000000 ? `$${(appliedPrice[1] / 1000000).toFixed(1)}M` : `$${(appliedPrice[1] / 1000).toFixed(0)}K`;
-    return `Precio · ${lo}–${hi} ${appliedCurrency}`;
+    return `${priceLabel} · ${lo}–${hi} ${appliedCurrency}`;
   };
 
   const clearFilters = () => {
-    setZone('Todas las Zonas');
-    setStatus('Todo el Estatus');
-    setType('Todos los Tipos');
+    setZone(allZones);
+    setStatus(allStatus);
+    setType(allTypes);
     setSelectedAmenities([]);
     setAppliedAmenities([]);
     setCurrency('USD');
@@ -201,15 +206,22 @@ const Listings = () => {
     setAppliedPrice([0, maxUsd]);
   };
 
+  const zonesL = [allZones, 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Tulum', 'Cancún Centro'];
+  const statusesL = [allStatus, L === 'es' ? 'Preventa' : 'Pre-Sale', L === 'es' ? 'Entrega Inmediata' : 'Ready to Move'];
+  const typesL = [allTypes, L === 'es' ? 'Departamento' : 'Apartment', L === 'es' ? 'Condominio' : 'Condo', 'Penthouse', 'Villa'];
+
+  const seoTitle = L === 'es' ? 'Propiedades en Venta — Cancún y Riviera Maya | Rivana' : 'Properties for Sale — Cancún & Riviera Maya | Rivana';
+  const seoDesc = L === 'es' ? 'Explora propiedades de lujo en venta en Cancún y la Riviera Maya. Condos, penthouses y villas con asesoría personalizada.' : 'Explore luxury properties for sale in Cancún and the Riviera Maya. Condos, penthouses, and villas with personalized advisory.';
+
   return (
     <div style={{ background: '#F8F6F2' }}>
-      <SEOHead title="Propiedades en Venta — Cancún y Riviera Maya | Rivana" description="Explora propiedades de lujo en venta en Cancún y la Riviera Maya. Condos, penthouses y villas con asesoría personalizada." path="/listings" />
+      <SEOHead title={seoTitle} description={seoDesc} path={L === 'en' ? '/en/listings' : '/listings'} />
 
       {/* Header */}
       <section className="pt-28 pb-8 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <p className="text-[9px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>Explorar</p>
-        <h1 className="font-display text-[clamp(32px,5vw,52px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>Propiedades en Venta</h1>
-        <p className="font-body font-[300] text-[13px] max-w-xl" style={{ color: '#4B4B4B' }}>Explora nuestra colección curada de propiedades de lujo en Cancún y la Riviera Maya.</p>
+        <p className="text-[9px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>{L === 'es' ? 'Explorar' : 'Browse'}</p>
+        <h1 className="font-display text-[clamp(32px,5vw,52px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>{L === 'es' ? 'Propiedades en Venta' : 'Properties for Sale'}</h1>
+        <p className="font-body font-[300] text-[13px] max-w-xl" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Explora nuestra colección curada de propiedades de lujo en Cancún y la Riviera Maya.' : 'Explore our curated collection of luxury properties in Cancún and the Riviera Maya.'}</p>
       </section>
 
       {/* Filters */}
