@@ -152,8 +152,8 @@ const PreSale = () => {
 
       {/* ═══ GALLERY STRIP ═══ */}
       <section className="bg-white">
-        <div className="grid grid-cols-5 gap-[3px]" style={{ height: '108px' }}>
-          {PROJECT.gallery.slice(0, 4).map((src, i) => (
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-[3px]" style={{ height: '80px' }}>
+          {PROJECT.gallery.slice(0, window.innerWidth < 768 ? 2 : 4).map((src, i) => (
             <button
               key={i}
               onClick={() => setLightbox(i)}
