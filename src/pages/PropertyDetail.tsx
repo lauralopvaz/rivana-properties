@@ -126,9 +126,9 @@ const propertyData: PropertyData = {
   photos: [heroImg, img2, img3, heroImg, img2, img3],
   yieldEstimate: '8–12% anual',
   appreciation: '15–22% a entrega',
-  advisorName: 'Alejandra Reyes',
-  advisorInitial: 'A',
-  advisorRole: 'Especialista en Preventa · ES · EN · FR',
+  advisorName: 'Jess Candela',
+  advisorInitial: 'J',
+  advisorRole: 'Especialista en Preventas · EN · ES',
   brochureUrl: '/brochure-oceana.pdf',
 };
 
