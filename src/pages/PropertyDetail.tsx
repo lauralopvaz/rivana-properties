@@ -11,7 +11,7 @@ import { Grid, ChevronLeft, ChevronRight, Download, Flag, Anchor, Waves, Crown, 
 import heroImg from '@/assets/prop-oceana.jpg';
 import img2 from '@/assets/prop-jade.jpg';
 import img3 from '@/assets/prop-marina.jpg';
-import advisorImg from '@/assets/advisor-jess.jpg';
+import advisorImg from '@/assets/advisor-jess.png';
 
 /* ─────────────── TYPES ─────────────── */
 
