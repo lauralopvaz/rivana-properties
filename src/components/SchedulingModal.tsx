@@ -205,7 +205,9 @@ export const SchedulingModal = () => {
                       if (!isActive) e.currentTarget.style.borderColor = 'rgba(0,0,0,0.09)';
                     }}
                   >
-                    <Icon className="w-[22px] h-[22px]" style={{ color: isActive ? '#CFAE60' : '#1C1C1C' } as any} />
+                    <span style={{ color: isActive ? '#CFAE60' : '#1C1C1C' }}>
+                      <Icon className="w-[22px] h-[22px]" />
+                    </span>
                     {/* Use inline SVG to ensure color works */}
                     <span
                       style={{
