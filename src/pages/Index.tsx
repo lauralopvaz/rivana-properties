@@ -6,7 +6,9 @@ import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { destinations } from '@/data/destinations';
 import { journalArticles } from '@/data/journal-articles';
-import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, LocationIcon, WavesIcon, GolfIcon, SparklesIcon, AnchorIcon, SunIcon, SwimIcon } from '@/components/icons';
+import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, WavesIcon, GolfIcon, SparklesIcon, AnchorIcon, SunIcon, SwimIcon } from '@/components/icons';
+import { PreSaleSection } from '@/components/home/PreSaleSection';
+import { ContactSection } from '@/components/home/ContactSection';
 import homeHero from '@/assets/home-hero.jpg';
 import presaleHero from '@/assets/presale-hero.jpg';
 
