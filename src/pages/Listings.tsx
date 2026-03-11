@@ -256,8 +256,8 @@ const Listings = () => {
 
           {/* Amenidades */}
           <FilterDropdown
-            label="Amenidades"
-            activeLabel={appliedAmenities.length > 0 ? `Amenidades (${appliedAmenities.length})` : 'Amenidades'}
+            label={L === 'es' ? 'Amenidades' : 'Amenities'}
+            activeLabel={appliedAmenities.length > 0 ? `${L === 'es' ? 'Amenidades' : 'Amenities'} (${appliedAmenities.length})` : (L === 'es' ? 'Amenidades' : 'Amenities')}
             isOpen={openFilter === 'amenities'}
             onToggle={() => { toggle('amenities'); if (openFilter !== 'amenities') setSelectedAmenities([...appliedAmenities]); }}
           >
