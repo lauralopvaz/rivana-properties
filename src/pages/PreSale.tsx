@@ -131,22 +131,22 @@ const PreSale = () => {
     <div className="bg-white">
 
       {/* ═══ HERO ═══ */}
-      <section className="relative" style={{ height: '88vh' }}>
+      <section className="relative h-[60vh] md:h-[88vh]">
         <img src={presaleHero} alt="Oceana Residences" className="absolute inset-0 w-full h-full object-cover" />
         {/* Horizontal overlay */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(10,20,30,0.72) 0%, rgba(10,20,30,0.30) 55%, rgba(10,20,30,0.05) 100%)' }} />
         {/* Vertical overlay */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(10,20,30,0.60) 0%, transparent 48%)' }} />
         {/* Content bottom-left */}
-        <div className="absolute bottom-0 left-0 p-14 z-10">
-          <div className="flex items-center gap-2 mb-5">
+        <div className="absolute bottom-0 left-0 p-6 md:p-14 z-10">
+          <div className="flex items-center gap-2 mb-3 md:mb-5">
             <span className="w-2 h-2 rounded-full bg-[#CFAE60] blink-dot" />
-            <span className="font-body text-[9px] tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Preventa Exclusiva · Ahora Abierta</span>
+            <span className="font-body text-[8px] md:text-[9px] tracking-[3px] md:tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Preventa Exclusiva · Ahora Abierta</span>
           </div>
-          <h1 className="text-white font-display font-[300] leading-[1.05] mb-3" style={{ fontSize: '76px', textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
+          <h1 className="text-white font-display font-[300] leading-[1.05] mb-3 text-[clamp(36px,8vw,76px)]" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
             Residencial <em className="text-[#CFAE60] italic">{PROJECT.name}</em>
           </h1>
-          <p className="font-body text-[12px] text-white/[0.52] tracking-[1px] uppercase" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>{PROJECT.location}</p>
+          <p className="font-body text-[11px] md:text-[12px] text-white/[0.52] tracking-[1px] uppercase" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>{PROJECT.location}</p>
         </div>
       </section>
 
