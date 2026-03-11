@@ -204,30 +204,7 @@ const Home = () => {
       </section>
 
       {/* ── PRESALE BANNER ── */}
-      <section className="relative py-28 lg:py-36 overflow-hidden bg-[hsl(30_15%_93%)] border-y border-border">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 text-center">
-          <ScrollReveal>
-            <div className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center mx-auto mb-6">
-              <span className="w-2.5 h-2.5 rounded-full bg-primary" />
-            </div>
-            <p className="eyebrow mb-4">{language === 'es' ? 'Oportunidad' : 'Opportunity'}</p>
-            <h2 className="text-secondary mb-4">
-              {language === 'es' ? 'Proyectos en ' : 'Pre-Sale '}
-              <em className="text-primary not-italic font-display italic">{language === 'es' ? 'Pre-Venta' : 'Projects'}</em>
-            </h2>
-            <p className="font-body text-muted-foreground max-w-xl mx-auto mb-8">
-              {language === 'es'
-                ? 'Accede a los mejores precios y condiciones de pago antes de que las propiedades salgan al mercado.'
-                : 'Access the best prices and payment plans before properties hit the market.'}
-            </p>
-            <Button variant="gold" size="lg" asChild>
-              <Link to={localePath('/presale')} className="uppercase tracking-widest text-sm">
-                {language === 'es' ? 'Descubrir Proyectos' : 'Discover Projects'}
-              </Link>
-            </Button>
-          </ScrollReveal>
-        </div>
-      </section>
+      <PreSaleSection />
 
       {/* ── FEATURED PROPERTIES ── */}
       <section className="py-16 lg:py-20 bg-background">
