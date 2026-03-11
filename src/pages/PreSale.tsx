@@ -1,5 +1,6 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChatIcon, XIcon } from '@/components/icons';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import presaleHero from '@/assets/presale-hero.jpg';
 
 /* ─── Project Data (would come from CMS) ─── */
