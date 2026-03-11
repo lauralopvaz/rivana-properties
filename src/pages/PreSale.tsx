@@ -334,7 +334,7 @@ const PreSale = () => {
               <input type="tel" placeholder="Teléfono" className={inputClass} />
               <button type="submit" className={goldBtn}>Solicitar Precios y Planos</button>
               <a
-                href="https://wa.me/5299888457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
+                href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-[#e8f5e9] border border-[#66bb6a] py-2.5 font-body text-[10px] tracking-[2px] uppercase text-[#2e7d32] font-[400] hover:bg-[#c8e6c9] transition-colors cursor-pointer rounded-none no-underline"
