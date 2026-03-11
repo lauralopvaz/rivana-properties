@@ -7,7 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { getDestination } from '@/data/destinations';
 import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIcon, CalendarIcon, BriefcaseIcon, ChatIcon } from '@/components/icons';
 
-import advisorPhoto from '@/assets/advisor-jess.jpg';
+import advisorPhoto from '@/assets/advisor-celia.png';
 import propOceana from '@/assets/prop-oceana.jpg';
 import propMarina from '@/assets/prop-marina.jpg';
 import propJade from '@/assets/prop-jade.jpg';
