@@ -262,7 +262,7 @@ const PropertyDetail = () => {
             </div>
 
             {/* 3. SPECS ROW */}
-            <div className="flex flex-wrap items-center gap-0 border-t border-b border-[rgba(0,0,0,0.08)] py-4 mb-8">
+            <div className="flex flex-wrap items-center gap-0 border-t border-b border-[rgba(0,0,0,0.08)] py-4 mb-8 overflow-x-auto">
               {[
                 { icon: <Bed className="w-[14px] h-[14px] text-[#CFAE60]" />, val: p.bedrooms, label: 'Recámaras' },
                 { icon: <Bath className="w-[14px] h-[14px] text-[#CFAE60]" />, val: p.bathrooms, label: 'Baños' },
