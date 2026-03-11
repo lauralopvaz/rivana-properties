@@ -152,12 +152,12 @@ const PreSale = () => {
 
       {/* ═══ GALLERY STRIP ═══ */}
       <section className="bg-white">
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-[3px]" style={{ height: '80px' }}>
-          {PROJECT.gallery.slice(0, window.innerWidth < 768 ? 2 : 4).map((src, i) => (
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-[3px] h-[70px] md:h-[108px]">
+          {PROJECT.gallery.slice(0, 4).map((src, i) => (
             <button
               key={i}
               onClick={() => setLightbox(i)}
-              className="relative overflow-hidden group cursor-pointer border-none bg-transparent p-0"
+              className={`relative overflow-hidden group cursor-pointer border-none bg-transparent p-0 ${i >= 2 ? 'hidden md:block' : ''}`}
             >
               <img src={src} alt={`Gallery ${i + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 bg-[#CFAE60]/0 group-hover:bg-[#CFAE60]/20 transition-colors duration-300" />
