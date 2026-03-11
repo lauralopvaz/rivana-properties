@@ -447,7 +447,7 @@ const Listings = () => {
                       <span className="font-display text-[20px]" style={{ color: '#CFAE60' }}>{formatPriceInCurrency(p.price, appliedCurrency)} {appliedCurrency}</span>
                     </div>
                     <span className="text-[10px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
-                      Ver <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                      {L === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                     </span>
                   </div>
                 </div>
