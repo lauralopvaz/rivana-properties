@@ -59,17 +59,17 @@ const UmbrellaIcon2 = ({ className = "w-3 h-3" }: { className?: string }) => (
 
 type BadgeKey = 'vista-mar' | 'alberca-infinity' | 'beach-club' | 'pet-friendly' | 'club-privado' | 'wellness' | 'comunidad-cerrada' | 'vista-marina' | 'golf' | 'frente-mar';
 
-const badgeConfig: Record<string, { label: string; icon: React.FC<{ className?: string }> }> = {
-  'vista-mar': { label: 'Vista al Mar', icon: WavesIcon2 },
-  'alberca-infinity': { label: 'Alberca Infinity', icon: PoolIcon2 },
-  'beach-club': { label: 'Beach Club', icon: UmbrellaIcon2 },
-  'pet-friendly': { label: 'Pet Friendly', icon: WavesIcon2 },
-  'club-privado': { label: 'Club Privado', icon: WavesIcon2 },
-  'wellness': { label: 'Wellness & Spa', icon: WavesIcon2 },
-  'comunidad-cerrada': { label: 'Comunidad Cerrada', icon: WavesIcon2 },
-  'vista-marina': { label: 'Vista a la Marina', icon: WavesIcon2 },
-  'golf': { label: 'Campo de Golf', icon: WavesIcon2 },
-  'frente-mar': { label: 'Frente al Mar', icon: WavesIcon2 },
+const badgeConfig: Record<string, { label: { es: string; en: string }; icon: React.FC<{ className?: string }> }> = {
+  'vista-mar': { label: { es: 'Vista al Mar', en: 'Ocean View' }, icon: WavesIcon2 },
+  'alberca-infinity': { label: { es: 'Alberca Infinity', en: 'Infinity Pool' }, icon: PoolIcon2 },
+  'beach-club': { label: { es: 'Beach Club', en: 'Beach Club' }, icon: UmbrellaIcon2 },
+  'pet-friendly': { label: { es: 'Pet Friendly', en: 'Pet Friendly' }, icon: WavesIcon2 },
+  'club-privado': { label: { es: 'Club Privado', en: 'Private Club' }, icon: WavesIcon2 },
+  'wellness': { label: { es: 'Wellness & Spa', en: 'Wellness & Spa' }, icon: WavesIcon2 },
+  'comunidad-cerrada': { label: { es: 'Comunidad Cerrada', en: 'Gated Community' }, icon: WavesIcon2 },
+  'vista-marina': { label: { es: 'Vista a la Marina', en: 'Marina View' }, icon: WavesIcon2 },
+  'golf': { label: { es: 'Campo de Golf', en: 'Golf Course' }, icon: WavesIcon2 },
+  'frente-mar': { label: { es: 'Frente al Mar', en: 'Beachfront' }, icon: WavesIcon2 },
 };
 
 const projects = [
