@@ -314,7 +314,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                     {/* Bottom */}
                     <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                       <div>
-                        <span className="block text-[8px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>Desde</span>
+                        <span className="block text-[8px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{language === 'es' ? 'Desde' : 'From'}</span>
                         <span className="font-display text-[20px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price)} USD</span>
                       </div>
                       <span className="text-[10px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
