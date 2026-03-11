@@ -9,8 +9,8 @@ import advisorJess from '@/assets/advisor-jess.png';
 import advisorCelia from '@/assets/advisor-celia.png';
 
 const team = [
-  { name: 'Jess Candela', initial: 'J', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', phone: '9988457224', photo: advisorJess, bio: 'Con 8 años en el mercado inmobiliario del Caribe y raíces en la hospitalidad de lujo, Jess domina el arte de identificar el momento exacto para invertir. Ha cerrado más de $40M en preventas, acompañando a sus clientes desde la oportunidad hasta el cierre con estrategia, claridad y resultados concretos.' },
-  { name: 'Celia Candela', initial: 'C', role: 'Especialista en Destino', zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9981118888', photo: advisorCelia, bio: 'Celia conoce el Caribe mexicano como pocos. Su dominio del territorio — desde Cancún hasta la Riviera Maya — le permite conectar a cada cliente con el destino que realmente le corresponde, combinando visión de mercado con un conocimiento local que va más allá de los datos.' },
+  { name: 'Jess Candela', initial: 'J', role: 'Especialista en Preventa', zone: 'Costa Mujeres', lang: 'EN · ES', phone: '9988457224', photo: advisorJess, imgPosition: 'object-top', bio: 'Con 8 años en el mercado inmobiliario del Caribe y raíces en la hospitalidad de lujo, Jess domina el arte de identificar el momento exacto para invertir. Ha cerrado más de $40M en preventas, acompañando a sus clientes desde la oportunidad hasta el cierre con estrategia, claridad y resultados concretos.' },
+  { name: 'Celia Candela', initial: 'C', role: 'Especialista en Destino', zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9981118888', photo: advisorCelia, imgPosition: 'object-[center_25%]', bio: 'Celia conoce el Caribe mexicano como pocos. Su dominio del territorio — desde Cancún hasta la Riviera Maya — le permite conectar a cada cliente con el destino que realmente le corresponde, combinando visión de mercado con un conocimiento local que va más allá de los datos.' },
 ];
 
 const About = () => {
