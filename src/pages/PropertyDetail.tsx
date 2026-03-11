@@ -422,9 +422,7 @@ const PropertyDetail = () => {
 
               {/* C) ADVISOR CARD */}
               <div className="bg-[#F8F6F2] p-3 flex items-center gap-3 mb-4">
-                <div className="w-[38px] h-[38px] rounded-full border border-[#CFAE60] flex items-center justify-center font-display text-[#CFAE60] text-lg">
-                  {p.advisorInitial}
-                </div>
+                <img src={advisorImg} alt={p.advisorName} className="w-[38px] h-[38px] rounded-full border border-[#CFAE60] object-cover" />
                 <div>
                   <p className="font-body text-[12px] text-[#1C1C1C] font-[400]">{p.advisorName}</p>
                   <p className="font-body text-[9px] text-[#4B4B4B] font-[300]">{p.advisorRole}</p>
