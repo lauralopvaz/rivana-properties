@@ -51,12 +51,6 @@ const About = () => {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <div className="bg-[hsl(30_15%_93%)] border border-border rounded-sm p-8">
-              <div className="flex items-center gap-3 mb-6">
-                {team.slice(0, 4).map((t) => (
-                  <div key={t.name} className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display text-primary text-sm">{t.initial}</div>
-                ))}
-                <span className="text-sm font-body text-muted-foreground ml-2">+2 more</span>
-              </div>
               <p className="font-display text-xl italic leading-relaxed mb-4">
                 {language === 'es'
                   ? '"Protegemos tu inversión como si fuera nuestra — porque para nosotros, tu confianza es nuestro activo más valioso."'
