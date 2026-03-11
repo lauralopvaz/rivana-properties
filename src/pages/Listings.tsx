@@ -294,7 +294,7 @@ const Listings = () => {
           >
             <div className="p-4 w-[320px]">
               {/* Currency toggle */}
-              <p className="text-[8px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>Moneda</p>
+              <p className="text-[8px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Moneda' : 'Currency'}</p>
               <div className="flex mb-4">
                 {(['USD', 'MXN'] as const).map(c => (
                   <button
