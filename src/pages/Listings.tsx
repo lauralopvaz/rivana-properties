@@ -228,8 +228,8 @@ const Listings = () => {
       <section className="sticky top-20 z-50 py-4 px-6 lg:px-10 border-b" style={{ background: '#F8F6F2', borderColor: 'rgba(0,0,0,0.06)' }}>
         <div className="max-w-[1400px] mx-auto flex flex-wrap items-start gap-2">
           {/* Zone */}
-          <FilterDropdown label="Todas las Zonas" activeLabel={zone} isOpen={openFilter === 'zone'} onToggle={() => toggle('zone')}>
-            {zones.map(z => (
+          <FilterDropdown label={allZones} activeLabel={zone} isOpen={openFilter === 'zone'} onToggle={() => toggle('zone')}>
+            {zonesL.map(z => (
               <button key={z} onClick={() => { setZone(z); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[11px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: z === zone ? '#CFAE60' : '#1C1C1C' }}>
                 {z}
               </button>
@@ -237,8 +237,8 @@ const Listings = () => {
           </FilterDropdown>
 
           {/* Status */}
-          <FilterDropdown label="Todo el Estatus" activeLabel={status} isOpen={openFilter === 'status'} onToggle={() => toggle('status')}>
-            {statuses.map(s => (
+          <FilterDropdown label={allStatus} activeLabel={status} isOpen={openFilter === 'status'} onToggle={() => toggle('status')}>
+            {statusesL.map(s => (
               <button key={s} onClick={() => { setStatus(s); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[11px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: s === status ? '#CFAE60' : '#1C1C1C' }}>
                 {s}
               </button>
@@ -246,8 +246,8 @@ const Listings = () => {
           </FilterDropdown>
 
           {/* Type */}
-          <FilterDropdown label="Todos los Tipos" activeLabel={type} isOpen={openFilter === 'type'} onToggle={() => toggle('type')}>
-            {types.map(t => (
+          <FilterDropdown label={allTypes} activeLabel={type} isOpen={openFilter === 'type'} onToggle={() => toggle('type')}>
+            {typesL.map(t => (
               <button key={t} onClick={() => { setType(t); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[11px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: t === type ? '#CFAE60' : '#1C1C1C' }}>
                 {t}
               </button>
