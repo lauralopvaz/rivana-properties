@@ -511,11 +511,12 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {relatedDests.slice(0, 3).map((d, i) => (
               <ScrollReveal key={d!.key} delay={i * 100}>
-                <Link to={localePath(d!.basePath)} className="group block aspect-[16/10] gradient-placeholder-alt relative overflow-hidden">
+                <Link to={localePath(d!.basePath)} className="group block aspect-[16/10] relative overflow-hidden">
+                  <img src={destImages[d!.key] || destZonaHotelera} alt={d!.name[language]} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_0%/0.6)] to-transparent" />
                   <div className="absolute bottom-0 p-6">
-                    <h3 className="text-xl mb-1">{d!.name[language]}</h3>
-                    <span className="text-sm text-muted-foreground font-body">{language === 'es' ? 'Desde' : 'From'} {d!.stats[1]?.val}</span>
+                    <h3 className="text-xl mb-1 text-white">{d!.name[language]}</h3>
+                    <span className="text-sm text-white/70 font-body">{language === 'es' ? 'Desde' : 'From'} {d!.stats[1]?.val}</span>
                   </div>
                 </Link>
               </ScrollReveal>
