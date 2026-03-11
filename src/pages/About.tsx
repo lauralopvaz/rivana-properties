@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
 import { ShieldIcon, EyeIcon, GlobeIcon, HeartIcon, PhoneIcon, ChatIcon, ArrowRightIcon } from '@/components/icons';
 
 const team = [
@@ -23,7 +24,7 @@ const profileColors: Record<string, string> = {
 
 const About = () => {
   const { language, t, localePath } = useLanguage();
-
+  const { openModal } = useSchedulingModal();
   const seoTitle = language === 'es'
     ? 'Nosotros — Rivana Properties | Asesoría Inmobiliaria Cancún'
     : 'About Us — Rivana Properties | Real Estate Advisory Cancún';
@@ -142,7 +143,7 @@ const About = () => {
                     ))}
                   </div>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1"><PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}</Button>
+                    <Button variant="outline" size="sm" className="flex-1" onClick={() => openModal('llamada')}><PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}</Button>
                     <Button variant="whatsapp" size="sm" className="flex-1" asChild>
                       <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> WhatsApp</a>
                     </Button>
