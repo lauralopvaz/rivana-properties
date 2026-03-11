@@ -131,33 +131,33 @@ const PreSale = () => {
     <div className="bg-white">
 
       {/* ═══ HERO ═══ */}
-      <section className="relative" style={{ height: '88vh' }}>
+      <section className="relative h-[60vh] md:h-[88vh]">
         <img src={presaleHero} alt="Oceana Residences" className="absolute inset-0 w-full h-full object-cover" />
         {/* Horizontal overlay */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(10,20,30,0.72) 0%, rgba(10,20,30,0.30) 55%, rgba(10,20,30,0.05) 100%)' }} />
         {/* Vertical overlay */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(10,20,30,0.60) 0%, transparent 48%)' }} />
         {/* Content bottom-left */}
-        <div className="absolute bottom-0 left-0 p-14 z-10">
-          <div className="flex items-center gap-2 mb-5">
+        <div className="absolute bottom-0 left-0 p-6 md:p-14 z-10">
+          <div className="flex items-center gap-2 mb-3 md:mb-5">
             <span className="w-2 h-2 rounded-full bg-[#CFAE60] blink-dot" />
-            <span className="font-body text-[9px] tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Preventa Exclusiva · Ahora Abierta</span>
+            <span className="font-body text-[8px] md:text-[9px] tracking-[3px] md:tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Preventa Exclusiva · Ahora Abierta</span>
           </div>
-          <h1 className="text-white font-display font-[300] leading-[1.05] mb-3" style={{ fontSize: '76px', textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
+          <h1 className="text-white font-display font-[300] leading-[1.05] mb-3 text-[clamp(36px,8vw,76px)]" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
             Residencial <em className="text-[#CFAE60] italic">{PROJECT.name}</em>
           </h1>
-          <p className="font-body text-[12px] text-white/[0.52] tracking-[1px] uppercase" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>{PROJECT.location}</p>
+          <p className="font-body text-[11px] md:text-[12px] text-white/[0.52] tracking-[1px] uppercase" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>{PROJECT.location}</p>
         </div>
       </section>
 
       {/* ═══ GALLERY STRIP ═══ */}
       <section className="bg-white">
-        <div className="grid grid-cols-5 gap-[3px]" style={{ height: '108px' }}>
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-[3px] h-[70px] md:h-[108px]">
           {PROJECT.gallery.slice(0, 4).map((src, i) => (
             <button
               key={i}
               onClick={() => setLightbox(i)}
-              className="relative overflow-hidden group cursor-pointer border-none bg-transparent p-0"
+              className={`relative overflow-hidden group cursor-pointer border-none bg-transparent p-0 ${i >= 2 ? 'hidden md:block' : ''}`}
             >
               <img src={src} alt={`Gallery ${i + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 bg-[#CFAE60]/0 group-hover:bg-[#CFAE60]/20 transition-colors duration-300" />
@@ -174,10 +174,10 @@ const PreSale = () => {
       </section>
 
       {/* ═══ MAIN 2-COL LAYOUT ═══ */}
-      <section className="grid items-start" style={{ gridTemplateColumns: '62% 38%' }}>
+      <section className="grid items-start grid-cols-1 lg:grid-cols-[62%_38%]">
 
         {/* ── LEFT COLUMN ── */}
-        <div style={{ padding: '56px 44px 80px 60px' }}>
+        <div className="px-5 py-10 md:px-10 md:py-14 lg:pl-[60px] lg:pr-[44px] lg:pt-[56px] lg:pb-[80px]">
 
           {/* MODULE A — Project Description */}
           <div className="mb-10">
@@ -188,7 +188,7 @@ const PreSale = () => {
             <p className="font-body text-[13px] font-[300] leading-[1.82] text-[#4B4B4B] mb-8">{PROJECT.description}</p>
 
             {/* 3 stat boxes */}
-            <div className="grid grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-3 gap-2 md:gap-4 mb-8">
               {[
                 { val: String(PROJECT.totalUnits), label: 'Total Unidades' },
                 { val: PROJECT.delivery, label: 'Entrega' },
@@ -243,14 +243,14 @@ const PreSale = () => {
                   <button
                     key={idx}
                     onClick={() => setUnitModal(idx)}
-                    className="grid gap-2 py-3.5 px-3 border-b border-[rgba(0,0,0,0.06)] text-left transition-all duration-200 hover:bg-[rgba(207,174,96,0.05)] hover:pl-5 cursor-pointer bg-transparent border-l-0 border-r-0 border-t-0 rounded-none"
+                    className="flex flex-col sm:grid gap-1 sm:gap-2 py-3.5 px-3 border-b border-[rgba(0,0,0,0.06)] text-left transition-all duration-200 hover:bg-[rgba(207,174,96,0.05)] hover:pl-5 cursor-pointer bg-transparent border-l-0 border-r-0 border-t-0 rounded-none"
                     style={{ gridTemplateColumns: '1fr 56px 1fr 100px' }}
                   >
-                    <span className="font-display text-[20px] font-[300] text-[#1C1C1C] self-center">{u.name}</span>
+                    <span className="font-display text-[18px] sm:text-[20px] font-[300] text-[#1C1C1C] self-center">{u.name}</span>
                     <span className="font-body text-[10px] text-[#4B4B4B] self-center">{u.m2}</span>
-                    <span className="font-display text-[17px] font-[300] text-[#CFAE60] self-center">{u.price}</span>
+                    <span className="font-display text-[16px] sm:text-[17px] font-[300] text-[#CFAE60] self-center">{u.price}</span>
                     <span
-                      className="font-body text-[9px] font-[400] py-1 px-2 text-center self-center"
+                      className="font-body text-[9px] font-[400] py-1 px-2 text-center self-center w-fit sm:w-auto"
                       style={{ background: badge.bg, color: badge.text }}
                     >{badge.label}</span>
                   </button>
@@ -278,7 +278,7 @@ const PreSale = () => {
         </div>
 
         {/* ── RIGHT COLUMN (SIDEBAR) ── */}
-        <div style={{ padding: '40px 40px 40px 0' }}>
+        <div className="px-5 py-8 md:px-10 lg:pr-10 lg:pl-0 lg:pt-10 lg:pb-10">
           <div
             className="bg-white border border-[rgba(207,174,96,0.22)] p-6"
             style={{ position: 'sticky', top: '24px', boxShadow: '0 6px 48px rgba(0,0,0,0.08)' }}
@@ -418,7 +418,7 @@ const PreSale = () => {
               </button>
 
               {/* Left — Floor Plan */}
-              <div className="bg-[#F8F6F2] p-8 flex flex-col items-center justify-center min-h-[400px]">
+              <div className="bg-[#F8F6F2] p-6 md:p-8 flex flex-col items-center justify-center min-h-[250px] md:min-h-[400px]">
                 <p className="font-body text-[9px] tracking-[3px] uppercase text-[#CFAE60] font-[400] mb-4">Plano de Planta</p>
                 <div className="w-full aspect-square bg-[#eee8de] border border-[rgba(207,174,96,0.18)] flex items-center justify-center">
                   <span className="font-body text-[11px] text-[#999]">Plano SVG</span>
@@ -427,7 +427,7 @@ const PreSale = () => {
               </div>
 
               {/* Right — Details */}
-              <div className="p-10">
+              <div className="p-5 md:p-10">
                 <h3 className="font-display text-[34px] font-[300] text-[#1C1C1C] mb-1">{u.name}</h3>
                 <p className="font-body text-[9px] tracking-[3px] uppercase text-[#CFAE60] font-[400] mb-6">Residencial {PROJECT.name} · {PROJECT.location}</p>
 

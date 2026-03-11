@@ -212,17 +212,15 @@ const PropertyDetail = () => {
       />
 
       {/* ═══ 1. GALLERY HERO ═══ */}
-      <section className="pt-20 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <div className="grid gap-[3px]" style={{ gridTemplateColumns: '2fr 1fr', height: '420px' }}>
+      <section className="pt-20 px-4 md:px-6 lg:px-10 max-w-[1400px] mx-auto">
+        <div className="grid gap-[3px] grid-cols-1 md:grid-cols-[2fr_1fr]">
           {/* Main image */}
           <div
-            className="relative overflow-hidden cursor-pointer group"
-            style={{ gridRow: '1/3' }}
+            className="relative overflow-hidden cursor-pointer group aspect-[16/10] md:row-span-2"
             onClick={() => openLightbox(0)}
           >
             <img src={p.photos[0]} alt={p.name} className="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.03]" />
             <div className="absolute inset-0 bg-[rgba(207,174,96,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            {/* Ver todas button */}
             <button
               onClick={(e) => { e.stopPropagation(); openLightbox(0); }}
               className="absolute bottom-4 right-4 flex items-center gap-2 bg-[rgba(255,255,255,0.92)] border border-[rgba(207,174,96,0.24)] px-4 py-2.5 font-body text-[9px] tracking-[3px] uppercase text-[#1C1C1C] rounded-none hover:border-[#CFAE60] transition-colors"
@@ -231,9 +229,9 @@ const PropertyDetail = () => {
               Ver todas las fotos
             </button>
           </div>
-          {/* Secondary images */}
+          {/* Secondary images - hidden on mobile */}
           {[1, 2].map((i) => (
-            <div key={i} className="relative overflow-hidden cursor-pointer group" onClick={() => openLightbox(i)}>
+            <div key={i} className="relative overflow-hidden cursor-pointer group hidden md:block h-[210px]" onClick={() => openLightbox(i)}>
               <img src={p.photos[i] || p.photos[0]} alt={`${p.name} ${i + 1}`} className="w-full h-full object-cover transition-transform duration-[400ms] group-hover:scale-[1.05]" />
               <div className="absolute inset-0 bg-[rgba(207,174,96,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
@@ -242,11 +240,11 @@ const PropertyDetail = () => {
       </section>
 
       {/* ═══ MAIN 2-COL LAYOUT ═══ */}
-      <section className="px-6 lg:px-10 max-w-[1400px] mx-auto pb-32">
-        <div className="grid items-start" style={{ gridTemplateColumns: '62% 38%' }}>
+      <section className="px-4 md:px-6 lg:px-10 max-w-[1400px] mx-auto pb-32">
+        <div className="grid items-start grid-cols-1 lg:grid-cols-[62%_38%]">
 
           {/* ── LEFT COLUMN ── */}
-          <div className="py-14 pr-11 pl-2 lg:pr-14">
+          <div className="py-8 px-1 md:py-14 md:pr-11 md:pl-2 lg:pr-14">
 
             {/* 2. TITLE BLOCK */}
             <nav className={`${sectionLabel} flex items-center gap-1.5 mb-3`}>
@@ -263,7 +261,7 @@ const PropertyDetail = () => {
             </div>
 
             {/* 3. SPECS ROW */}
-            <div className="flex flex-wrap items-center gap-0 border-t border-b border-[rgba(0,0,0,0.08)] py-4 mb-8">
+            <div className="flex flex-wrap items-center gap-0 border-t border-b border-[rgba(0,0,0,0.08)] py-4 mb-8 overflow-x-auto">
               {[
                 { icon: <Bed className="w-[14px] h-[14px] text-[#CFAE60]" />, val: p.bedrooms, label: 'Recámaras' },
                 { icon: <Bath className="w-[14px] h-[14px] text-[#CFAE60]" />, val: p.bathrooms, label: 'Baños' },
@@ -301,7 +299,7 @@ const PropertyDetail = () => {
             )}
 
             {/* 5. TABS */}
-            <div className="flex gap-0 border-b border-[rgba(0,0,0,0.08)] mb-8">
+            <div className="flex gap-0 border-b border-[rgba(0,0,0,0.08)] mb-8 overflow-x-auto">
               {tabs.map((tab) => (
                 <button
                   key={tab.key}
@@ -329,7 +327,7 @@ const PropertyDetail = () => {
             {/* TAB: FEATURES */}
             {activeTab === 'features' && (
               <div className="animate-fade-in">
-                <div className="grid grid-cols-3 gap-x-6 gap-y-3">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-3">
                   {p.amenities.map((a) => (
                     <div key={a} className="flex items-center gap-2 py-1.5 border-b border-[rgba(0,0,0,0.04)]">
                       <span className="w-[5px] h-[5px] rounded-full bg-[#CFAE60] flex-shrink-0" />
@@ -353,7 +351,7 @@ const PropertyDetail = () => {
                       <button
                         key={u.name}
                         onClick={() => openUnitModal(u)}
-                        className="w-full text-left grid items-center gap-3 py-3.5 px-3 border-b border-[rgba(0,0,0,0.06)] hover:bg-[rgba(207,174,96,0.05)] hover:pl-5 transition-all duration-200 rounded-none"
+                        className="w-full text-left flex flex-col sm:grid items-start sm:items-center gap-1 sm:gap-3 py-3.5 px-3 border-b border-[rgba(0,0,0,0.06)] hover:bg-[rgba(207,174,96,0.05)] hover:pl-5 transition-all duration-200 rounded-none"
                         style={{ gridTemplateColumns: '1fr 64px 1fr 108px' }}
                       >
                         <span className="font-display text-[20px] text-[#1C1C1C]">{u.name}</span>
@@ -394,7 +392,7 @@ const PropertyDetail = () => {
           </div>
 
           {/* ── RIGHT COLUMN / SIDEBAR ── */}
-          <div className="pt-14 pl-0 lg:pl-4">
+          <div className="pt-8 lg:pt-14 pl-0 lg:pl-4">
             <aside className="sticky top-6 bg-white border border-[rgba(207,174,96,0.24)] shadow-[0_6px_48px_rgba(0,0,0,0.07)] p-6">
 
               {/* A) PRICE + ROI */}
@@ -497,7 +495,7 @@ const PropertyDetail = () => {
       {unitModalOpen && selectedUnit && (
         <div className="fixed inset-0 z-50 bg-[rgba(10,14,20,0.82)] flex items-center justify-center" onClick={closeUnitModal}>
           <div
-            className="bg-white max-w-[820px] w-[95vw] grid grid-cols-2 rounded-none animate-fade-in"
+            className="bg-white max-w-[820px] w-[95vw] grid grid-cols-1 md:grid-cols-2 rounded-none animate-fade-in"
             style={{ animation: 'fadeSlideUp .25s ease' }}
             onClick={(e) => e.stopPropagation()}
           >

@@ -33,10 +33,10 @@ export const PreSaleSection = () => {
               : 'Access the best prices before the project hits the market. In pre-sale, your capital works from day one and appreciation starts building before delivery.'}
           </p>
 
-          <div className="inline-flex mx-auto mb-10" style={{ border: '1px solid rgba(207,174,96,0.24)', background: 'white' }}>
+          <div className="inline-flex flex-col sm:flex-row mx-auto mb-10" style={{ border: '1px solid rgba(207,174,96,0.24)', background: 'white' }}>
             {stats.map((s, i) => (
-              <div key={s.label} style={{ padding: '22px 40px', borderRight: i < stats.length - 1 ? '1px solid rgba(207,174,96,0.24)' : 'none' }}>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '32px', color: '#CFAE60', fontWeight: 300, lineHeight: 1.2 }}>{s.value}</div>
+              <div key={s.label} className="sm:border-r last:border-r-0 border-b sm:border-b-0 last:border-b-0" style={{ padding: '18px 24px', borderColor: 'rgba(207,174,96,0.24)' }}>
+                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#CFAE60', fontWeight: 300, lineHeight: 1.2 }}>{s.value}</div>
                 <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', color: '#4B4B4B', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 300, marginTop: '6px' }}>{s.label}</div>
               </div>
             ))}
