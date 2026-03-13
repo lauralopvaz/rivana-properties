@@ -291,6 +291,50 @@
   }
 }
 
+/* Presale header labels */
+.prop-presale-label { font-size: 13px; line-height: 1.2; }
+.prop-presale-sublabel { font-size: 15px; line-height: 1.4; }
+@media (max-width: 767px) {
+  .prop-presale-label { font-size: 15px; }
+  .prop-presale-sublabel { font-size: 16px; }
+}
+
+/* Fix 6 — Minimum font sizes for readability */
+/* Desktop & Tablet (≥768px) */
+.prop-text-sm   { font-size: 15px !important; line-height: 1.8 !important; }
+.prop-text-base { font-size: 16px !important; line-height: 1.9 !important; }
+.prop-unit-name { font-size: 18px !important; }
+.prop-label     { font-size: 12px !important; }
+.prop-unit-price { font-size: 22px !important; }
+
+@media (max-width: 767px) {
+  .prop-text-sm   { font-size: 15px !important; line-height: 1.8 !important; }
+  .prop-text-xs   { font-size: 15px !important; line-height: 1.8 !important; }
+  .prop-text-base { font-size: 16px !important; line-height: 1.9 !important; }
+  .prop-unit-name { font-size: 18px !important; font-weight: 400 !important; }
+  .prop-label     { font-size: 13px !important; }
+  .prop-unit-price { font-size: 22px !important; }
+}
+
+/* Fix 7 — Sticky bar desktop/tablet sizing */
+@media (min-width: 768px) {
+  .prop-sticky-bar {
+    padding: 12px 24px !important;
+    gap: 8px !important;
+  }
+  .prop-sticky-bar .prop-sticky-main {
+    font-size: 12px !important;
+    padding: 14px 24px !important;
+  }
+  .prop-sticky-bar .prop-sticky-wa {
+    width: 52px !important;
+  }
+  .prop-sticky-bar .prop-sticky-brochure {
+    font-size: 12px !important;
+    padding: 14px 20px !important;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

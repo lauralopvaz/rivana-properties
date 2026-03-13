@@ -13,7 +13,7 @@ interface PropertyStickyBarProps {
 export function PropertyStickyBar({ onReserve, onWhatsApp, onBrochure, locale, visible = true }: PropertyStickyBarProps) {
   return (
     <div
-      className="sticky bottom-0 z-50 flex gap-[2px]"
+      className="sticky bottom-0 z-50 flex gap-[2px] prop-sticky-bar"
       style={{
         backgroundColor: "#FFFFFF",
         borderTop: "1px solid rgba(0,0,0,0.07)",
