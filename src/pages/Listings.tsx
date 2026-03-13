@@ -373,7 +373,7 @@ const Listings = () => {
         {filtered.length === 0 ? (
           <div className="text-center py-20">
             <p className="font-display text-[24px] font-[300] mb-4" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'No encontramos propiedades con esos filtros.' : 'No properties found with those filters.'}</p>
-            <button onClick={clearFilters} className="px-6 py-3 text-[9px] tracking-[3px] uppercase font-body" style={{ border: '1px solid #CFAE60', color: '#CFAE60', background: 'transparent' }}>
+            <button onClick={clearFilters} className="px-6 py-3 text-[12px] tracking-[3px] uppercase font-body" style={{ border: '1px solid #CFAE60', color: '#CFAE60', background: 'transparent' }}>
               {L === 'es' ? 'Limpiar filtros' : 'Clear filters'}
             </button>
           </div>
