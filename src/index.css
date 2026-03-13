@@ -192,8 +192,8 @@
   width: 100%;
   overflow: visible !important;
   height: auto !important;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+  background: red !important;
+  min-height: 200px !important;
 }
 
 /* ── Hero ── */
