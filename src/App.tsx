@@ -20,6 +20,7 @@ import Journal from "./pages/Journal";
 import JournalPost from "./pages/JournalPost";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import PropertyDetailNew from "./pages/PropertyDetailNew";
 
 const queryClient = new QueryClient();
 
@@ -70,6 +71,7 @@ const AppRoutes = () => (
     <Route path="/listings" element={<Listings />} />
     <Route path="/presale" element={<PreSale />} />
     <Route path="/property/:slug" element={<PropertyDetail />} />
+    <Route path="/properties/:slug" element={<PropertyDetailNew />} />
 
     {/* ── ENGLISH (/en prefix) ── */}
     <Route path="/en" element={<Index />} />
@@ -112,6 +114,7 @@ const AppRoutes = () => (
     <Route path="/en/listings" element={<Listings />} />
     <Route path="/en/presale" element={<PreSale />} />
     <Route path="/en/property/:slug" element={<PropertyDetail />} />
+    <Route path="/en/properties/:slug" element={<PropertyDetailNew />} />
 
     {/* 404 */}
     <Route path="*" element={<NotFound />} />
