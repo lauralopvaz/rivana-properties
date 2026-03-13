@@ -112,8 +112,13 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
 
       {/* Badges — OUTSIDE overflow:hidden container */}
       <div
-        className="prop-hero-badges absolute flex gap-2 flex-nowrap"
-        style={{ zIndex: 20 }}
+        className="prop-hero-badges flex gap-2 flex-nowrap"
+        style={{
+          position: 'absolute',
+          top: '20px',
+          left: '20px',
+          zIndex: 30,
+        }}
       >
         {property.status === "preventa" && (
           <span className="prop-hero-badge prop-hero-badge--presale font-body uppercase inline-flex items-center whitespace-nowrap">

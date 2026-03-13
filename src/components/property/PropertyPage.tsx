@@ -67,7 +67,13 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
       <PropertyGalleryStrip images={property.images} locale={locale} />
 
       {/* Constrained content */}
-      <div className="prop-page-content">
+      <div
+        className="prop-page-content"
+        style={{
+          overflow: 'visible',
+          height: 'auto',
+        }}
+      >
         <PropertyTabs
           property={property}
           locale={locale}

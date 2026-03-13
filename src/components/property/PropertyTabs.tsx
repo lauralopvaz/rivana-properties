@@ -119,7 +119,16 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
       </div>
 
       {/* Tab content — static, auto height, visible overflow */}
-      <div className="prop-tab-content" style={{ position: "static", height: "auto", overflow: "visible" }}>
+        <div
+          className="prop-tab-content"
+          style={{
+            position: 'static',
+            height: 'auto',
+            overflow: 'visible',
+            paddingTop: '24px',
+            paddingBottom: '32px',
+          }}
+        >
         {active === "general" && (
           <div className="prop-tab-text-wrap">
             <p className="font-body font-light prop-text-base" style={{ color: "#4B4B4B" }}>
