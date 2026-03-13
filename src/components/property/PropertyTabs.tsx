@@ -113,35 +113,60 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
         {active === "units" && (
           <div className="flex flex-col">
             {property.units.map((unit, idx) => (
-              <button
-                key={idx}
-                onClick={() => onUnitClick(unit)}
-                className="flex items-center justify-between py-4 text-left cursor-pointer"
-                style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}
-              >
-                <div>
-                  <span className="font-display prop-unit-name block" style={{ color: "#1C1C1C" }}>
-                    {locale === 'en' && unit.nameEn ? unit.nameEn : unit.name}
-                  </span>
-                  <span className="font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
-                    {unit.sqm} m²
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="text-right">
-                    <span className="font-body font-light prop-text-xs block" style={{ color: "#4B4B4B" }}>
-                      {tr(locale, 'from')}
+              <div key={idx}>
+                <button
+                  onClick={() => toggleUnit(idx, unit)}
+                  className="flex items-center justify-between py-4 text-left cursor-pointer w-full"
+                  style={{ borderBottom: expandedUnit === idx ? "none" : "1px solid rgba(0,0,0,0.07)" }}
+                >
+                  <div>
+                    <span className="font-display prop-unit-name block" style={{ color: "#1C1C1C" }}>
+                      {locale === 'en' && unit.nameEn ? unit.nameEn : unit.name}
                     </span>
-                    <span className="font-display prop-unit-price block" style={{ color: "#CFAE60" }}>
-                      {formatMXN(unit.priceMXN)}
+                    <span className="font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
+                      {unit.sqm} m²
                     </span>
-                    <div className="mt-1">
-                      <AvailabilityBadge count={unit.available} locale={locale} />
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="text-right">
+                      <span className="font-body font-light prop-text-xs block" style={{ color: "#4B4B4B" }}>
+                        {tr(locale, 'from')}
+                      </span>
+                      <span className="font-display prop-unit-price block" style={{ color: "#CFAE60" }}>
+                        {formatMXN(unit.priceMXN)}
+                      </span>
+                      <div className="mt-1">
+                        <AvailabilityBadge count={unit.available} locale={locale} />
+                      </div>
+                    </div>
+                    <ChevronRight
+                      size={16}
+                      style={{
+                        color: "rgba(0,0,0,0.25)",
+                        transform: expandedUnit === idx ? "rotate(90deg)" : "rotate(0deg)",
+                        transition: "transform 0.2s",
+                      }}
+                    />
+                  </div>
+                </button>
+                {expandedUnit === idx && unit.floorPlanUrl && (
+                  <div
+                    className="pb-4 mb-1"
+                    style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}
+                  >
+                    <div
+                      className="p-3 flex items-center justify-center"
+                      style={{ backgroundColor: "#F8F6F2" }}
+                    >
+                      <img
+                        src={unit.floorPlanUrl}
+                        alt={`${locale === 'en' && unit.nameEn ? unit.nameEn : unit.name} — Floor plan`}
+                        className="max-h-[320px] w-auto object-contain"
+                      />
                     </div>
                   </div>
-                  <ChevronRight size={16} style={{ color: "rgba(0,0,0,0.25)" }} />
-                </div>
-              </button>
+                )}
+              </div>
             ))}
             {priceNote && (
               <p className="font-body font-light italic prop-text-xs mt-4" style={{ color: "#4B4B4B" }}>
