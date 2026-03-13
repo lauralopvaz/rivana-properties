@@ -114,6 +114,7 @@ const AppRoutes = () => (
     <Route path="/en/listings" element={<Listings />} />
     <Route path="/en/presale" element={<PreSale />} />
     <Route path="/en/property/:slug" element={<PropertyDetail />} />
+    <Route path="/en/properties/:slug" element={<PropertyDetailNew />} />
 
     {/* 404 */}
     <Route path="*" element={<NotFound />} />
