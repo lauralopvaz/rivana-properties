@@ -497,7 +497,7 @@
 @media (min-width: 1024px) {
   .prop-page-content {
     width: 100%;
-    padding: 0 40px;
+    padding: 0;
   }
   .prop-hero-img-wrap {
     height: 560px;
