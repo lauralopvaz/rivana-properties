@@ -114,6 +114,8 @@ export const t = {
     countdownHrs: 'HRS',
     countdownMin: 'MIN',
     countdownSec: 'SEC',
+    exactLocation: 'Exact location',
+    roiDisclaimer: 'Returns are estimated based on current vacation rental market conditions in the area. They do not constitute a guarantee of return. Results may vary depending on occupancy, management, and market conditions.',
   }
 } as const;
 
