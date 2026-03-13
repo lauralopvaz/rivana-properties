@@ -1,18 +1,19 @@
 export type Locale = 'en' | 'es'
 export type PropertyStatus = 'preventa' | 'entrega-inmediata'
-export type DifferentiatorType = 'roi' | 'vista' | 'amenidad' | 'precio' | 'entrega' | 'exclusivo'
 export type DifferentiatorLayout = 'featured' | 'grid' | 'wide'
 
 export interface UnitType {
   name: string
   sqm: number
   priceMXN: number
+  priceUSD?: number
   available: number
   floorPlanUrl?: string
 }
 
 export interface Distance {
   label: string
+  labelEn?: string
   icon: string
 }
 
@@ -24,13 +25,16 @@ export interface PresalePrice {
 }
 
 export interface Differentiator {
-  type: DifferentiatorType
+  type: 'roi' | 'vista' | 'amenidad' | 'precio' | 'entrega' | 'exclusivo'
+  layout: DifferentiatorLayout
   title: string
+  titleEn?: string
   description: string
+  descriptionEn?: string
   stat?: string
   statLabel?: string
   pills?: string[]
-  layout: DifferentiatorLayout
+  pillsEn?: string[]
 }
 
 export interface PropertyDetail {
@@ -48,7 +52,9 @@ export interface PropertyDetail {
   plusvaliaEstimate: number
   images: string[]
   description: string
+  descriptionEn?: string
   features: string[]
+  featuresEn?: string[]
   units: UnitType[]
   distances: Distance[]
   presalePrice?: PresalePrice

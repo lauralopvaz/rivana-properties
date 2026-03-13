@@ -1,6 +1,6 @@
 import { Bed, Maximize, CalendarClock } from "lucide-react";
 import { formatUSD } from "@/lib/formatPrice";
-import { t } from "@/lib/propertyI18n";
+import { tr } from "@/lib/propertyI18n";
 import type { PropertyDetail, Locale } from "@/types/property";
 
 interface PropertyHeroProps {
@@ -10,7 +10,6 @@ interface PropertyHeroProps {
 }
 
 export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroProps) {
-  const i = t(locale);
   const heroImage = property.images[0] || "/placeholder.svg";
 
   return (
@@ -20,7 +19,10 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         alt={property.name}
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.95)]" />
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(to bottom, transparent 30%, rgba(28,28,28,0.92) 100%)" }}
+      />
 
       {/* Badges */}
       <div className="absolute top-4 left-4 flex gap-2 z-10">
@@ -29,7 +31,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
             className="px-3 py-1 prop-label font-body font-light uppercase"
             style={{ letterSpacing: "3px", backgroundColor: "#26547D", color: "#FFFFFF" }}
           >
-            {i.badgePreventa}
+            {tr(locale, 'presale')}
           </span>
         )}
         <span
@@ -63,7 +65,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         {/* Specs */}
         <div className="flex items-center gap-4 mb-4">
           {[
-            { icon: Bed, text: `${property.bedrooms} ${i.rec}` },
+            { icon: Bed, text: `${property.bedrooms} ${tr(locale, 'beds')}` },
             { icon: Maximize, text: property.sqmRange },
             { icon: CalendarClock, text: property.delivery },
           ].map((spec, idx) => (
@@ -80,7 +82,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         <div className="flex items-center gap-3">
           <div className="flex-1">
             <span className="font-body font-light prop-text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
-              {i.priceFrom}{" "}
+              {tr(locale, 'from')}{" "}
             </span>
             <span className="font-display prop-num-price" style={{ color: "#CFAE60" }}>
               {formatUSD(property.priceFromUSD)}
@@ -95,7 +97,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
               color: "#FFFFFF",
             }}
           >
-            {i.viewPrices}
+            {tr(locale, 'viewPrices')}
           </button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Flame, MessageCircle } from "lucide-react";
+import { Tag, MessageCircle } from "lucide-react";
 import { formatNumber } from "@/lib/formatPrice";
-import { t } from "@/lib/propertyI18n";
+import { tr } from "@/lib/propertyI18n";
 import type { PresalePrice, Locale } from "@/types/property";
 
 interface PropertyPresalePriceProps {
@@ -34,7 +34,6 @@ function useCountdown(deadline: string) {
 }
 
 export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsApp }: PropertyPresalePriceProps) {
-  const i = t(locale);
   const countdown = useCountdown(presalePrice.deadlineDate);
   const savings = presalePrice.originalMXN - presalePrice.discountMXN;
 
@@ -44,46 +43,69 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
   );
 
   const countdownBoxes = [
-    { value: countdown.days, label: i.countdownDays },
-    { value: countdown.hours, label: i.countdownHrs },
-    { value: countdown.minutes, label: i.countdownMin },
-    { value: countdown.seconds, label: i.countdownSec },
+    { value: countdown.days, label: tr(locale, 'countdownDays') },
+    { value: countdown.hours, label: tr(locale, 'countdownHrs') },
+    { value: countdown.minutes, label: tr(locale, 'countdownMin') },
+    { value: countdown.seconds, label: tr(locale, 'countdownSec') },
   ];
 
   return (
-    <section className="p-5" style={{ backgroundColor: "#1C1C1C" }}>
+    <section
+      className="p-5"
+      style={{
+        backgroundColor: "#FFFFFF",
+        borderTop: "3px solid #CFAE60",
+        borderBottom: "1px solid rgba(207,174,96,0.22)",
+      }}
+    >
       {/* Header */}
-      <div className="flex items-center gap-2 mb-1">
-        <Flame size={14} style={{ color: "#b03a2e" }} />
-        <span className="font-body font-light uppercase prop-label" style={{ letterSpacing: "3px", color: "rgba(176,58,46,0.7)" }}>
-          {i.presaleLabel}
-        </span>
+      <div className="flex items-center gap-3 mb-1">
+        <div
+          className="w-[34px] h-[34px] flex items-center justify-center flex-shrink-0"
+          style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}
+        >
+          <Tag size={16} style={{ color: "#CFAE60" }} />
+        </div>
+        <div>
+          <span className="font-body font-light uppercase prop-label block" style={{ letterSpacing: "3px", color: "#CFAE60" }}>
+            {tr(locale, 'presaleSpecialPrice')}
+          </span>
+          <span className="font-body font-light prop-text-xs block" style={{ color: "#4B4B4B" }}>
+            {tr(locale, 'exclusiveForEarlyBuyers')}
+          </span>
+        </div>
       </div>
-      <p className="font-body font-light prop-text-xs mb-5" style={{ color: "rgba(255,255,255,0.35)" }}>
-        {i.presaleSub}
-      </p>
 
       {/* Prices */}
-      <div className="flex items-center gap-3 mb-4">
-        <span className="font-display prop-title-sm line-through" style={{ color: "rgba(255,255,255,0.22)" }}>
+      <div
+        className="flex items-center gap-3 py-4 my-4"
+        style={{ borderTop: "1px solid rgba(0,0,0,0.07)", borderBottom: "1px solid rgba(0,0,0,0.07)" }}
+      >
+        <span className="font-display prop-title-sm line-through" style={{ color: "rgba(75,75,75,0.35)" }}>
           ${formatNumber(presalePrice.originalMXN)}
         </span>
-        <span style={{ color: "rgba(255,255,255,0.3)" }}>→</span>
-        <span className="font-display prop-title-lg" style={{ color: "#FFFFFF" }}>
+        <span style={{ color: "rgba(176,58,46,0.6)" }}>→</span>
+        <span className="font-display prop-title-lg" style={{ color: "#1C1C1C" }}>
           ${formatNumber(presalePrice.discountMXN)}
         </span>
-        <span className="font-body font-light self-end mb-1 prop-text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>
+        <span className="font-body font-light self-end mb-1 prop-text-xs" style={{ color: "#4B4B4B" }}>
           MXN
         </span>
       </div>
 
       {/* Savings */}
-      <div className="p-3 mb-5" style={{ backgroundColor: "rgba(176,58,46,0.10)", border: "1px solid rgba(176,58,46,0.2)" }}>
-        <span className="font-display prop-title-sm" style={{ color: "#b03a2e" }}>
+      <div
+        className="p-3 mb-4"
+        style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}
+      >
+        <span className="font-display prop-title-sm" style={{ color: "#CFAE60" }}>
           −${formatNumber(savings)}
         </span>
-        <span className="block font-body font-light mt-1 prop-text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>
-          {i.presaleSavingsLabel}
+        <span className="block font-body font-light mt-1 prop-text-xs" style={{ color: "#4B4B4B" }}>
+          {tr(locale, 'savingsVsListPrice')}
+        </span>
+        <span className="block font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
+          {tr(locale, 'validDuringPresale')}
         </span>
       </div>
 
@@ -94,22 +116,22 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
             <div
               key={idx}
               className="flex flex-col items-center px-2 py-2"
-              style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.18)" }}
+              style={{ backgroundColor: "#F8F6F2", border: "1px solid rgba(207,174,96,0.22)" }}
             >
               <span className="font-display prop-num-countdown" style={{ color: "#CFAE60" }}>
                 {String(box.value).padStart(2, "0")}
               </span>
               <span
-                className="font-body font-light uppercase"
-                style={{ fontSize: "6px", letterSpacing: "1px", color: "rgba(207,174,96,0.45)" }}
+                className="font-body font-light uppercase prop-badge"
+                style={{ letterSpacing: "1px", color: "rgba(207,174,96,0.55)" }}
               >
                 {box.label}
               </span>
             </div>
           ))}
         </div>
-        <p className="font-body font-light flex-1 italic prop-text-xs" style={{ color: "rgba(255,255,255,0.4)", lineHeight: 1.5 }}>
-          {i.presaleIncreaseNote} {presalePrice.priceIncreasePercent}% {i.presaleOn} {deadlineFormatted}
+        <p className="font-body font-light flex-1 italic prop-text-xs" style={{ color: "#4B4B4B", lineHeight: 1.5 }}>
+          {tr(locale, 'priceIncreasesOn')} {presalePrice.priceIncreasePercent}% {tr(locale, 'on')} {deadlineFormatted}
         </p>
       </div>
 
@@ -120,12 +142,12 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
           className="flex-1 py-3.5 font-body font-light uppercase prop-text-xs"
           style={{ letterSpacing: "3px", backgroundColor: "#CFAE60", color: "#FFFFFF" }}
         >
-          {i.reservePrice}
+          {tr(locale, 'reserveThisPrice')}
         </button>
         <button
           onClick={onWhatsApp}
-          className="w-[46px] flex items-center justify-center flex-shrink-0"
-          style={{ border: "1px solid rgba(37,211,102,0.3)" }}
+          className="w-[48px] flex items-center justify-center flex-shrink-0"
+          style={{ border: "1px solid rgba(37,211,102,0.28)" }}
         >
           <MessageCircle size={18} style={{ color: "#25d366" }} />
         </button>
