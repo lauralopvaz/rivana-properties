@@ -218,7 +218,7 @@ export const SchedulingModal = () => {
               </a>
             </div>
 
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', color: '#4B4B4B', fontWeight: 300, fontStyle: 'italic', textAlign: 'center', marginTop: '12px' }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', fontWeight: 300, fontStyle: 'italic', textAlign: 'center', marginTop: '12px', lineHeight: 1.7 }}>
               {L === 'es' ? 'Un asesor te contactará para confirmar en menos de 2 horas.' : 'An advisor will contact you to confirm within 2 hours.'}
             </p>
           </form>
