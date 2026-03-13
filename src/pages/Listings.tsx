@@ -116,7 +116,7 @@ const FilterDropdown = ({ label, activeLabel, isOpen, onToggle, children }: {
     <div ref={ref} className="relative">
       <button
         onClick={onToggle}
-        className="flex items-center gap-2 bg-white px-4 py-[11px] text-[11px] font-body font-[300] rounded-none transition-colors"
+        className="flex items-center gap-2 bg-white px-4 py-[11px] text-[14px] font-body font-[300] rounded-none transition-colors"
         style={{ border: `1px solid ${isOpen || hasActive ? '#CFAE60' : 'rgba(0,0,0,0.10)'}`, color: hasActive ? '#CFAE60' : '#1C1C1C' }}
       >
         <span>{activeLabel || label}</span>
@@ -219,9 +219,9 @@ const Listings = () => {
 
       {/* Header */}
       <section className="pt-28 pb-8 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <p className="text-[9px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>{L === 'es' ? 'Explorar' : 'Browse'}</p>
+        <p className="text-[12px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>{L === 'es' ? 'Explorar' : 'Browse'}</p>
         <h1 className="font-display text-[clamp(32px,5vw,52px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>{L === 'es' ? 'Propiedades en Venta' : 'Properties for Sale'}</h1>
-        <p className="font-body font-[300] text-[13px] max-w-xl" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Explora nuestra colección curada de propiedades de lujo en Cancún y la Riviera Maya.' : 'Explore our curated collection of luxury properties in Cancún and the Riviera Maya.'}</p>
+        <p className="font-body font-[300] text-[16px] max-w-xl" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>{L === 'es' ? 'Explora nuestra colección curada de propiedades de lujo en Cancún y la Riviera Maya.' : 'Explore our curated collection of luxury properties in Cancún and the Riviera Maya.'}</p>
       </section>
 
       {/* Filters */}
@@ -230,7 +230,7 @@ const Listings = () => {
           {/* Zone */}
           <FilterDropdown label={allZones} activeLabel={zone} isOpen={openFilter === 'zone'} onToggle={() => toggle('zone')}>
             {zonesL.map(z => (
-              <button key={z} onClick={() => { setZone(z); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[11px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: z === zone ? '#CFAE60' : '#1C1C1C' }}>
+              <button key={z} onClick={() => { setZone(z); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: z === zone ? '#CFAE60' : '#1C1C1C' }}>
                 {z}
               </button>
             ))}
@@ -239,7 +239,7 @@ const Listings = () => {
           {/* Status */}
           <FilterDropdown label={allStatus} activeLabel={status} isOpen={openFilter === 'status'} onToggle={() => toggle('status')}>
             {statusesL.map(s => (
-              <button key={s} onClick={() => { setStatus(s); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[11px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: s === status ? '#CFAE60' : '#1C1C1C' }}>
+              <button key={s} onClick={() => { setStatus(s); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: s === status ? '#CFAE60' : '#1C1C1C' }}>
                 {s}
               </button>
             ))}
@@ -248,7 +248,7 @@ const Listings = () => {
           {/* Type */}
           <FilterDropdown label={allTypes} activeLabel={type} isOpen={openFilter === 'type'} onToggle={() => toggle('type')}>
             {typesL.map(t => (
-              <button key={t} onClick={() => { setType(t); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[11px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: t === type ? '#CFAE60' : '#1C1C1C' }}>
+              <button key={t} onClick={() => { setType(t); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: t === type ? '#CFAE60' : '#1C1C1C' }}>
                 {t}
               </button>
             ))}
@@ -273,13 +273,13 @@ const Listings = () => {
                     >
                       {checked && <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>}
                     </span>
-                    <span className="text-[11px] font-body font-[300]" style={{ color: '#1C1C1C' }}>{badgeConfig[key].label[L]}</span>
+                    <span className="text-[14px] font-body font-[300]" style={{ color: '#1C1C1C' }}>{badgeConfig[key].label[L]}</span>
                   </label>
                 );
               })}
             </div>
             <div className="border-t px-3 py-2" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
-              <button onClick={() => { setAppliedAmenities([...selectedAmenities]); setOpenFilter(null); }} className="w-full py-2 text-[9px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
+              <button onClick={() => { setAppliedAmenities([...selectedAmenities]); setOpenFilter(null); }} className="w-full py-2 text-[12px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
                 {L === 'es' ? 'Aplicar' : 'Apply'}
               </button>
             </div>
@@ -294,13 +294,13 @@ const Listings = () => {
           >
             <div className="p-4 w-[280px] sm:w-[320px]">
               {/* Currency toggle */}
-              <p className="text-[8px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Moneda' : 'Currency'}</p>
+              <p className="text-[11px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Moneda' : 'Currency'}</p>
               <div className="flex mb-4">
                 {(['USD', 'MXN'] as const).map(c => (
                   <button
                     key={c}
                     onClick={() => handleCurrencyChange(c)}
-                    className="flex-1 py-2 text-[10px] font-body transition-colors"
+                    className="flex-1 py-2 text-[13px] font-body transition-colors"
                     style={{
                       background: currency === c ? '#CFAE60' : '#F8F6F2',
                       border: `1px solid ${currency === c ? '#CFAE60' : 'rgba(0,0,0,0.10)'}`,
@@ -313,7 +313,7 @@ const Listings = () => {
                 ))}
               </div>
 
-              <p className="text-[8px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Rango de Precio' : 'Price Range'} ({currency})</p>
+              <p className="text-[11px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Rango de Precio' : 'Price Range'} ({currency})</p>
               <div className="flex items-center gap-2 mb-4">
                 <input
                   type="text"
@@ -323,10 +323,10 @@ const Listings = () => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([Math.min(v, priceRange[1]), priceRange[1]]);
                   }}
-                  className="flex-1 py-[9px] px-3 text-[11px] font-body font-[300] rounded-none"
+                   className="flex-1 py-[9px] px-3 text-[14px] font-body font-[300] rounded-none"
                   style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
-                <span className="text-[11px] font-body" style={{ color: '#4B4B4B' }}>—</span>
+                <span className="text-[14px] font-body" style={{ color: '#4B4B4B' }}>—</span>
                 <input
                   type="text"
                   placeholder={`$ Máximo ${currency}`}
@@ -335,7 +335,7 @@ const Listings = () => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([priceRange[0], Math.max(v, priceRange[0])]);
                   }}
-                  className="flex-1 py-[9px] px-3 text-[11px] font-body font-[300] rounded-none"
+                  className="flex-1 py-[9px] px-3 text-[14px] font-body font-[300] rounded-none"
                   style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
               </div>
@@ -357,13 +357,13 @@ const Listings = () => {
                   className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-[1.5px] [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:shadow-[0_1px_6px_rgba(0,0,0,0.12)] [&::-webkit-slider-thumb]:cursor-pointer"
                 />
               </div>
-              <button onClick={() => { setAppliedPrice([...priceRange]); setAppliedCurrency(currency); setOpenFilter(null); }} className="w-full py-2 text-[9px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
+              <button onClick={() => { setAppliedPrice([...priceRange]); setAppliedCurrency(currency); setOpenFilter(null); }} className="w-full py-2 text-[12px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
                 {L === 'es' ? 'Aplicar' : 'Apply'}
               </button>
             </div>
           </FilterDropdown>
         </div>
-        <p className="max-w-[1400px] mx-auto mt-3 text-[12px] font-body font-[300]" style={{ color: '#4B4B4B' }}>
+        <p className="max-w-[1400px] mx-auto mt-3 text-[14px] font-body font-[300]" style={{ color: '#4B4B4B' }}>
           {filtered.length} {L === 'es' ? 'propiedades encontradas' : 'properties found'}
         </p>
       </section>
@@ -373,7 +373,7 @@ const Listings = () => {
         {filtered.length === 0 ? (
           <div className="text-center py-20">
             <p className="font-display text-[24px] font-[300] mb-4" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'No encontramos propiedades con esos filtros.' : 'No properties found with those filters.'}</p>
-            <button onClick={clearFilters} className="px-6 py-3 text-[9px] tracking-[3px] uppercase font-body" style={{ border: '1px solid #CFAE60', color: '#CFAE60', background: 'transparent' }}>
+            <button onClick={clearFilters} className="px-6 py-3 text-[12px] tracking-[3px] uppercase font-body" style={{ border: '1px solid #CFAE60', color: '#CFAE60', background: 'transparent' }}>
               {L === 'es' ? 'Limpiar filtros' : 'Clear filters'}
             </button>
           </div>
@@ -392,13 +392,13 @@ const Listings = () => {
                   {/* Badges on image */}
                   <div className="absolute top-3 left-3 flex flex-col gap-1.5">
                     <span
-                      className="text-[9px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]"
+                      className="text-[12px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]"
                       style={{ background: p.status === 'preventa' ? '#26547D' : '#1C1C1C' }}
                     >
                       {p.status === 'preventa' ? (L === 'es' ? 'Preventa' : 'Pre-Sale') : (L === 'es' ? 'Entrega Inmediata' : 'Ready to Move')}
                     </span>
                     {p.yield && (
-                      <span className="text-[9px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
+                      <span className="text-[12px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
                         <TrendingUpIcon className="w-3 h-3" /> {p.yield}
                       </span>
                     )}
@@ -407,16 +407,16 @@ const Listings = () => {
 
                 {/* Content */}
                 <div className="px-5 pt-5 pb-4">
-                  <p className="text-[9px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
-                  <h3 className="font-display text-[22px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
+                     <p className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
+                     <h3 className="font-display text-[24px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
 
                   {/* Specs row */}
                   <div className="flex items-center gap-[14px] mb-3">
-                    <span className="flex items-center gap-1 text-[11px] font-body" style={{ color: '#4B4B4B' }}>
-                      <BedIcon className="w-3 h-3" /> {p.beds} {L === 'es' ? 'Rec.' : 'Beds'}
-                    </span>
-                    <span className="flex items-center gap-1 text-[11px] font-body" style={{ color: '#4B4B4B' }}>
-                      <RulerIcon className="w-3 h-3" /> {p.area} m²
+                     <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
+                       <BedIcon className="w-3 h-3" /> {p.beds} {L === 'es' ? 'Rec.' : 'Beds'}
+                     </span>
+                     <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
+                       <RulerIcon className="w-3 h-3" /> {p.area} m²
                     </span>
                   </div>
 
@@ -427,13 +427,13 @@ const Listings = () => {
                         const cfg = badgeConfig[b];
                         const Icon = cfg.icon;
                         return (
-                          <span key={b} className="flex items-center gap-1 px-[10px] py-[4px] text-[9px] font-body font-[300]" style={{ background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)', color: '#1C1C1C' }}>
+                          <span key={b} className="flex items-center gap-1 px-[10px] py-[4px] text-[12px] font-body font-[300]" style={{ background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)', color: '#1C1C1C' }}>
                             <Icon className="w-[10px] h-[10px]" /> {cfg.label[L]}
                           </span>
                         );
                       })}
                       {p.badges.length > 3 && (
-                        <span className="px-[10px] py-[4px] text-[9px] font-body font-[300]" style={{ color: '#4B4B4B', background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
+                        <span className="px-[10px] py-[4px] text-[12px] font-body font-[300]" style={{ color: '#4B4B4B', background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
                           +{p.badges.length - 3} {L === 'es' ? 'más' : 'more'}
                         </span>
                       )}
@@ -443,10 +443,10 @@ const Listings = () => {
                   {/* Bottom row */}
                   <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                     <div>
-                      <span className="block text-[8px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Desde' : 'From'}</span>
-                      <span className="font-display text-[20px]" style={{ color: '#CFAE60' }}>{formatPriceInCurrency(p.price, appliedCurrency)} {appliedCurrency}</span>
-                    </div>
-                    <span className="text-[10px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
+                       <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Desde' : 'From'}</span>
+                       <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPriceInCurrency(p.price, appliedCurrency)} {appliedCurrency}</span>
+                     </div>
+                     <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                       {L === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                     </span>
                   </div>
