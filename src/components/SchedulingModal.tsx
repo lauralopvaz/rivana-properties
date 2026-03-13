@@ -128,7 +128,7 @@ export const SchedulingModal = () => {
             <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '30px', fontWeight: 300, color: '#1C1C1C', marginBottom: '12px' }}>
               {L === 'es' ? '¡Tu solicitud fue recibida!' : 'Your request has been received!'}
             </h3>
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', fontWeight: 300, textAlign: 'center' }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', color: '#4B4B4B', fontWeight: 300, textAlign: 'center' }}>
               {L === 'es'
                 ? `Nos comunicamos contigo a la brevedad para confirmar tu ${typeLabels[selectedType].es}.`
                 : `We'll contact you shortly to confirm your ${typeLabels[selectedType].en}.`}
