@@ -326,7 +326,7 @@ const Listings = () => {
                    className="flex-1 py-[9px] px-3 text-[14px] font-body font-[300] rounded-none"
                   style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
-                <span className="text-[11px] font-body" style={{ color: '#4B4B4B' }}>—</span>
+                <span className="text-[14px] font-body" style={{ color: '#4B4B4B' }}>—</span>
                 <input
                   type="text"
                   placeholder={`$ Máximo ${currency}`}
