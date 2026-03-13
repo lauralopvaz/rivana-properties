@@ -24,7 +24,7 @@ import destTulum from '@/assets/dest-tulum.jpg';
 // Property images
 import propOceana from '@/assets/prop-oceana.jpg';
 import propMarina from '@/assets/prop-marina.jpg';
-import propJade from '@/assets/prop-jade.jpg';
+import propMondrian from '@/assets/mondrian-hero.png';
 import propSelva from '@/assets/prop-selva.jpg';
 
 // Journal images
@@ -51,7 +51,7 @@ const journalImages: Record<string, string> = {
 const featuredProperties = [
   { name: 'Oceana Residences', zone: 'Costa Mujeres', beds: 3, area: 185, price: '$425K', amenities: ['ocean', 'pool', 'spa'], destKey: 'costa-mujeres', image: propOceana, slug: 'oceana-residences' },
   { name: 'Marina Towers', zone: 'Puerto Cancún', beds: 2, area: 140, price: '$510K', amenities: ['marina', 'pool', 'golf'], destKey: 'puerto-cancun', image: propMarina, slug: 'marina-towers' },
-  { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera', en: 'Hotel Zone' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], destKey: 'zona-hotelera', image: propJade, slug: 'mondrian-residences-grand-island-cancun' },
+  { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera', en: 'Hotel Zone' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], destKey: 'zona-hotelera', image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
   { name: 'Selva Lofts', zone: 'Tulum', beds: 1, area: 78, price: '$195K', amenities: ['jungle', 'pool', 'spa'], destKey: 'tulum', image: propSelva, slug: 'selva-lofts' },
 ];
 

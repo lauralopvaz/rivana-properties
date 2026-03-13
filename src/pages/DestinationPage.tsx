@@ -11,7 +11,7 @@ import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIco
 import advisorPhoto from '@/assets/advisor-celia.png';
 import propOceana from '@/assets/prop-oceana.jpg';
 import propMarina from '@/assets/prop-marina.jpg';
-import propJade from '@/assets/prop-jade.jpg';
+import propMondrian from '@/assets/mondrian-hero.png';
 
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
 import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
@@ -75,7 +75,7 @@ const badgeConfig: Record<string, { label: { es: string; en: string }; icon: Rea
 const projects = [
   { name: 'Oceana Residences', zone: 'Playa Mujeres', status: 'preventa' as const, yield: '10%', beds: 2, area: 95, price: 195000, badges: ['vista-mar', 'alberca-infinity', 'beach-club', 'pet-friendly'] as BadgeKey[], image: propOceana, slug: 'oceana-residences' },
   { name: 'Azure Tower', zone: 'Costa Mujeres Centro', status: 'preventa' as const, yield: '9%', beds: 3, area: 185, price: 245000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'] as BadgeKey[], image: propMarina, slug: 'azure-beachfront' },
-  { name: 'Mar Sereno', zone: 'Punta Sam', status: 'preventa' as const, yield: '12%', beds: 2, area: 110, price: 320000, badges: ['vista-mar', 'wellness', 'comunidad-cerrada'] as BadgeKey[], image: propJade, slug: 'mar-sereno' },
+  { name: 'Mar Sereno', zone: 'Punta Sam', status: 'preventa' as const, yield: '12%', beds: 2, area: 110, price: 320000, badges: ['vista-mar', 'wellness', 'comunidad-cerrada'] as BadgeKey[], image: propMondrian, slug: 'mar-sereno' },
 ];
 
 const faqs: Record<string, { q: string; a: string }[]> = {

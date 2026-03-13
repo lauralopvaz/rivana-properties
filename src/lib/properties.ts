@@ -1,4 +1,12 @@
 import type { PropertyDetail } from '@/types/property';
+import mondrianHero from '@/assets/mondrian-hero.png';
+import mondrianFrontDesk from '@/assets/mondrian-front-desk.png';
+import mondrianCoffeeBar from '@/assets/mondrian-coffee-bar.jpg';
+import mondrianRestaurant from '@/assets/mondrian-restaurant.png';
+import mondrianRooftop from '@/assets/mondrian-rooftop.png';
+import mondrianBeachClub from '@/assets/mondrian-beach-club.png';
+import mondrianGym from '@/assets/mondrian-gym.png';
+import mondrianPool from '@/assets/mondrian-pool.png';
 
 export const properties: PropertyDetail[] = [
   {
@@ -75,11 +83,14 @@ export const properties: PropertyDetail[] = [
     roiEstimate: 33,
     plusvaliaEstimate: 33,
     images: [
-      '/storage/mondrian/restaurant-roof-hero.jpg',
-      '/storage/mondrian/terraza-pool.jpg',
-      '/storage/mondrian/lobby.jpg',
-      '/storage/mondrian/spa-front-desk.jpg',
-      '/storage/mondrian/gimnasio.jpg',
+      mondrianHero,
+      mondrianFrontDesk,
+      mondrianCoffeeBar,
+      mondrianRestaurant,
+      mondrianRooftop,
+      mondrianBeachClub,
+      mondrianGym,
+      mondrianPool,
     ],
     description: 'Mondrian Residences at Grand Island es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. Invertir aquí es adquirir un activo que trabaja por ti, respaldado por una de las marcas hoteleras más reconocidas del mundo. Tu legado frente al Caribe.',
     descriptionEn: 'Mondrian Residences at Grand Island is a branded residence within the most exclusive master development in Cancún\'s Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Investing here means acquiring an asset that works for you — backed by one of the most recognized hotel brands in the world. Your legacy on the Caribbean.',
