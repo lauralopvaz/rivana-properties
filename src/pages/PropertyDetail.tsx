@@ -208,7 +208,7 @@ const PropertyDetail = () => {
       <SEOHead
         title={`${p.name} Residences — ${p.destination} | Rivana Properties`}
         description={`${p.name} Residences: desarrollo de lujo frente al mar en ${p.destination}. Preventa desde ${p.priceFrom}.`}
-        path={`/property/oceana-residences`}
+        path={`/propiedad/oceana-residences`}
       />
 
       {/* ═══ 1. GALLERY HERO ═══ */}
