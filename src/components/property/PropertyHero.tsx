@@ -22,7 +22,9 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
       />
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(to bottom, transparent 30%, rgba(28,28,28,0.92) 100%)" }}
+        style={{
+          background: "linear-gradient(to top, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.65) 35%, rgba(10,10,10,0.15) 65%, transparent 100%)",
+        }}
       />
 
       {/* Breadcrumb back link */}
@@ -38,9 +40,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
       {/* Badges — mobile-enhanced */}
       <div className="absolute top-12 left-4 flex gap-2 z-10 prop-hero-badges">
         {property.status === "preventa" && (
-          <span
-            className="font-body font-light uppercase prop-hero-badge prop-hero-badge--presale"
-          >
+          <span className="font-body font-light uppercase prop-hero-badge prop-hero-badge--presale">
             {tr(locale, 'presale')}
           </span>
         )}
@@ -52,8 +52,8 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
       {/* Content */}
       <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
         <p
-          className="font-body font-light uppercase mb-1 prop-label"
-          style={{ letterSpacing: "3px", color: "#CFAE60" }}
+          className="font-body uppercase mb-1 prop-label"
+          style={{ letterSpacing: "3px", color: "#CFAE60", textShadow: "0 1px 8px rgba(0,0,0,0.6)", fontWeight: 400 }}
         >
           {locale === 'en' && property.zoneEn ? property.zoneEn : property.zone}
         </p>
@@ -73,7 +73,10 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
           ].map((spec, idx) => (
             <div key={idx} className="flex items-center gap-1.5">
               <spec.icon size={12} style={{ color: "#CFAE60" }} />
-              <span className="font-body font-light prop-text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
+              <span
+                className="font-body font-light prop-text-sm"
+                style={{ color: "rgba(255,255,255,0.90)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
+              >
                 {spec.text}
               </span>
             </div>
@@ -83,10 +86,16 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         {/* Price bar */}
         <div className="flex items-center gap-3">
           <div className="flex-1">
-            <span className="font-body font-light prop-badge uppercase block" style={{ letterSpacing: "1px", color: "rgba(255,255,255,0.5)" }}>
+            <span
+              className="font-body font-light uppercase block prop-hero-desde"
+              style={{ letterSpacing: "3px", color: "rgba(255,255,255,0.70)" }}
+            >
               {tr(locale, 'from')}
             </span>
-            <span className="font-display prop-num-price" style={{ color: "#CFAE60" }}>
+            <span
+              className="font-display prop-num-price"
+              style={{ color: "#CFAE60", textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}
+            >
               {formatUSD(property.priceFromUSD)}
             </span>
           </div>

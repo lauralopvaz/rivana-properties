@@ -50,6 +50,8 @@ export const t = {
     sendingLabel: 'Enviando...',
     requestInfoShort: 'Quiero Saber Más',
     brochure: 'Brochure',
+    downloadBrochure: 'Descargar Brochure',
+    brochureUnavailable: 'Brochure disponible con tu asesor. Escríbenos por WhatsApp.',
     viewAll: 'Ver todas',
     verifiedByRivana: 'verificados por Rivana',
     countdownDays: 'DÍAS',

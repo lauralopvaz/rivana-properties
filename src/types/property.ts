@@ -68,4 +68,5 @@ export interface PropertyDetail {
   address?: string
   addressNote?: string
   addressNoteEn?: string
+  brochureUrl?: string
 }

@@ -1,17 +1,35 @@
+import { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { Check, MessageCircle, Loader2 } from "lucide-react";
+import { Check, MessageCircle, Loader2, FileDown } from "lucide-react";
 import { tr } from "@/lib/propertyI18n";
 import type { Locale } from "@/types/property";
 
 interface PropertyContactFormProps {
   propertyName: string;
   locale: Locale;
+  brochureUrl?: string;
 }
 
 const FORM_ID = "xpwdzjyo";
 
-export function PropertyContactForm({ propertyName, locale }: PropertyContactFormProps) {
+export function PropertyContactForm({ propertyName, locale, brochureUrl }: PropertyContactFormProps) {
   const [state, handleSubmit] = useForm(FORM_ID);
+  const [brochureMsg, setBrochureMsg] = useState(false);
+
+  useEffect(() => {
+    if (brochureMsg) {
+      const timer = setTimeout(() => setBrochureMsg(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [brochureMsg]);
+
+  const handleBrochureClick = () => {
+    if (brochureUrl) {
+      window.open(brochureUrl, "_blank");
+    } else {
+      setBrochureMsg(true);
+    }
+  };
 
   if (state.succeeded) {
     return (
@@ -127,6 +145,26 @@ export function PropertyContactForm({ propertyName, locale }: PropertyContactFor
         <MessageCircle size={14} />
         {locale === 'es' ? 'Escribir por WhatsApp' : 'Write on WhatsApp'}
       </button>
+
+      {/* Brochure CTA */}
+      <button
+        onClick={handleBrochureClick}
+        className="w-full mt-[2px] py-[14px] font-body font-light uppercase prop-btn flex items-center justify-center gap-2"
+        style={{
+          letterSpacing: "3px",
+          border: "1px solid rgba(0,0,0,0.07)",
+          color: "#CFAE60",
+          backgroundColor: "transparent",
+        }}
+      >
+        <FileDown size={14} style={{ color: "#CFAE60" }} />
+        {tr(locale, 'downloadBrochure')}
+      </button>
+      {brochureMsg && (
+        <p className="font-body font-light italic text-center mt-2 prop-text-xs" style={{ color: "#4B4B4B" }}>
+          {tr(locale, 'brochureUnavailable')}
+        </p>
+      )}
     </section>
   );
 }

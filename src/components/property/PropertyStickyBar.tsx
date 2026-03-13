@@ -7,9 +7,10 @@ interface PropertyStickyBarProps {
   onWhatsApp: () => void;
   onBrochure: () => void;
   locale: Locale;
+  visible?: boolean;
 }
 
-export function PropertyStickyBar({ onReserve, onWhatsApp, onBrochure, locale }: PropertyStickyBarProps) {
+export function PropertyStickyBar({ onReserve, onWhatsApp, onBrochure, locale, visible = true }: PropertyStickyBarProps) {
   return (
     <div
       className="sticky bottom-0 z-50 flex gap-[2px]"
@@ -18,6 +19,8 @@ export function PropertyStickyBar({ onReserve, onWhatsApp, onBrochure, locale }:
         borderTop: "1px solid rgba(0,0,0,0.07)",
         boxShadow: "0 -4px 20px rgba(0,0,0,0.08)",
         padding: "10px 18px",
+        transform: visible ? "translateY(0)" : "translateY(100%)",
+        transition: "transform 0.3s ease",
       }}
     >
       <button
