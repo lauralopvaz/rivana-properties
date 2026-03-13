@@ -412,11 +412,11 @@ const Listings = () => {
 
                   {/* Specs row */}
                   <div className="flex items-center gap-[14px] mb-3">
-                    <span className="flex items-center gap-1 text-[11px] font-body" style={{ color: '#4B4B4B' }}>
-                      <BedIcon className="w-3 h-3" /> {p.beds} {L === 'es' ? 'Rec.' : 'Beds'}
-                    </span>
-                    <span className="flex items-center gap-1 text-[11px] font-body" style={{ color: '#4B4B4B' }}>
-                      <RulerIcon className="w-3 h-3" /> {p.area} m²
+                     <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
+                       <BedIcon className="w-3 h-3" /> {p.beds} {L === 'es' ? 'Rec.' : 'Beds'}
+                     </span>
+                     <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
+                       <RulerIcon className="w-3 h-3" /> {p.area} m²
                     </span>
                   </div>
 
