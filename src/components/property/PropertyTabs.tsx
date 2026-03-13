@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { ChevronRight, MapPin } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 import { formatMXN } from "@/lib/formatPrice";
@@ -53,14 +53,7 @@ function DynamicIcon({ name, size = 16, className }: { name: string; size?: numb
 
 export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProps) {
   const [active, setActive] = useState<TabKey>("general");
-  const [expandedUnit, setExpandedUnit] = useState<number | null>(null);
 
-  const toggleUnit = useCallback((idx: number, unit: UnitType) => {
-    if (unit.floorPlanUrl) {
-      setExpandedUnit(prev => prev === idx ? null : idx);
-    }
-    onUnitClick(unit);
-  }, [onUnitClick]);
   const tabs: { key: TabKey; label: string }[] = [
     { key: "general", label: tr(locale, 'tabGeneral') },
     { key: "units", label: tr(locale, 'tabUnits') },
@@ -115,9 +108,9 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
             {property.units.map((unit, idx) => (
               <div key={idx}>
                 <button
-                  onClick={() => toggleUnit(idx, unit)}
+                  onClick={() => onUnitClick(unit)}
                   className="flex items-center justify-between py-4 text-left cursor-pointer w-full"
-                  style={{ borderBottom: expandedUnit === idx ? "none" : "1px solid rgba(0,0,0,0.07)" }}
+                  style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}
                 >
                   <div>
                     <span className="font-display prop-unit-name block" style={{ color: "#1C1C1C" }}>
@@ -129,7 +122,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="text-right">
-                      <span className="font-body font-light prop-text-xs block" style={{ color: "#4B4B4B" }}>
+                      <span className="font-body font-light prop-badge uppercase block" style={{ letterSpacing: "1px", color: "#4B4B4B" }}>
                         {tr(locale, 'from')}
                       </span>
                       <span className="font-display prop-unit-price block" style={{ color: "#CFAE60" }}>
@@ -141,31 +134,10 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
                     </div>
                     <ChevronRight
                       size={16}
-                      style={{
-                        color: "rgba(0,0,0,0.25)",
-                        transform: expandedUnit === idx ? "rotate(90deg)" : "rotate(0deg)",
-                        transition: "transform 0.2s",
-                      }}
+                      style={{ color: "rgba(0,0,0,0.25)" }}
                     />
                   </div>
                 </button>
-                {expandedUnit === idx && unit.floorPlanUrl && (
-                  <div
-                    className="pb-4 mb-1"
-                    style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}
-                  >
-                    <div
-                      className="p-3 flex items-center justify-center"
-                      style={{ backgroundColor: "#F8F6F2" }}
-                    >
-                      <img
-                        src={unit.floorPlanUrl}
-                        alt={`${locale === 'en' && unit.nameEn ? unit.nameEn : unit.name} — Floor plan`}
-                        className="max-h-[320px] w-auto object-contain"
-                      />
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
             {priceNote && (

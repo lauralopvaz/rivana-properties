@@ -178,39 +178,41 @@
   transition: transform 0.1s linear;
 }
 
-/* ── Property detail mobile typography (+4px) ── */
-.prop-label     { font-size: 8px; }
+/* ── Property detail mobile typography ── */
+.prop-label     { font-size: 10px; }
 .prop-text-xs   { font-size: 9px; }
 .prop-text-sm   { font-size: 11px; }
 .prop-text-base { font-size: 13px; }
-.prop-title-sm  { font-size: 18px; }
+.prop-title-sm  { font-size: 22px; }
 .prop-title-md  { font-size: 26px; }
-.prop-title-lg  { font-size: 34px; }
+.prop-title-lg  { font-size: 30px; }
 .prop-title-xl  { font-size: 32px; }
 .prop-num-feat  { font-size: 48px; }
-.prop-num-price { font-size: 26px; }
-.prop-num-countdown { font-size: 18px; }
+.prop-num-price { font-size: 24px; }
+.prop-num-countdown { font-size: 20px; }
 .prop-tab-label { font-size: 9px; }
 .prop-unit-name { font-size: 18px; }
 .prop-unit-price { font-size: 16px; }
-.prop-badge     { font-size: 7px; }
+.prop-badge     { font-size: 8px; }
+.prop-btn       { font-size: 9px; }
 
 @media (max-width: 768px) {
-  .prop-label     { font-size: 12px; }
-  .prop-text-xs   { font-size: 13px; }
-  .prop-text-sm   { font-size: 15px; }
-  .prop-text-base { font-size: 17px; }
-  .prop-title-sm  { font-size: 22px; }
+  .prop-label     { font-size: 13px; }
+  .prop-text-xs   { font-size: 12px; }
+  .prop-text-sm   { font-size: 16px; }
+  .prop-text-base { font-size: 16px; }
+  .prop-title-sm  { font-size: 28px; }
   .prop-title-md  { font-size: 30px; }
-  .prop-title-lg  { font-size: 38px; }
+  .prop-title-lg  { font-size: 36px; }
   .prop-title-xl  { font-size: 36px; }
   .prop-num-feat  { font-size: 52px; }
   .prop-num-price { font-size: 30px; }
-  .prop-num-countdown { font-size: 22px; }
+  .prop-num-countdown { font-size: 26px; }
   .prop-tab-label { font-size: 13px; }
   .prop-unit-name { font-size: 22px; }
   .prop-unit-price { font-size: 20px; }
-  .prop-badge     { font-size: 11px; }
+  .prop-badge     { font-size: 12px; }
+  .prop-btn       { font-size: 13px; }
 }
 
 /* Scrollbar */

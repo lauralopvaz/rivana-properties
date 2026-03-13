@@ -84,7 +84,7 @@ export function PropertyContactForm({ propertyName, locale }: PropertyContactFor
         <button
           type="submit"
           disabled={state.submitting}
-          className="w-full py-3.5 font-body font-light uppercase prop-text-xs flex items-center justify-center gap-2"
+          className="w-full py-3.5 font-body font-light uppercase prop-btn flex items-center justify-center gap-2"
           style={{
             letterSpacing: "3px",
             backgroundColor: "#CFAE60",
@@ -112,11 +112,11 @@ export function PropertyContactForm({ propertyName, locale }: PropertyContactFor
       <button
         onClick={() =>
           window.open(
-            `https://wa.me/529981234567?text=${encodeURIComponent(`Hola, me interesa ${propertyName}`)}`,
+            `https://wa.me/529988457224?text=${encodeURIComponent(`Hola, me interesa ${propertyName}`)}`,
             "_blank"
           )
         }
-        className="w-full mt-3 py-3 font-body font-light uppercase prop-text-xs flex items-center justify-center gap-2"
+        className="w-full mt-3 py-3 font-body font-light uppercase prop-btn flex items-center justify-center gap-2"
         style={{
           letterSpacing: "2px",
           border: "1px solid rgba(37,211,102,0.28)",

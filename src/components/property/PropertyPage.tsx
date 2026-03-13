@@ -8,6 +8,7 @@ import { PropertyDifferentiators } from "./PropertyDifferentiators";
 import { PropertyContactForm } from "./PropertyContactForm";
 import { PropertyStickyBar } from "./PropertyStickyBar";
 import { ReservePriceModal } from "./ReservePriceModal";
+import { UnitDetailModal } from "./UnitDetailModal";
 
 interface PropertyPageProps {
   property: PropertyDetail;
@@ -16,6 +17,7 @@ interface PropertyPageProps {
 
 export function PropertyPage({ property, locale }: PropertyPageProps) {
   const [reserveModalOpen, setReserveModalOpen] = useState(false);
+  const [selectedUnit, setSelectedUnit] = useState<UnitType | null>(null);
 
   const scrollToContact = () => {
     document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
@@ -23,13 +25,21 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
 
   const openWhatsApp = () => {
     window.open(
-      `https://wa.me/529981234567?text=${encodeURIComponent(`Hola, me interesa ${property.name}`)}`,
+      `https://wa.me/529988457224?text=${encodeURIComponent(`Hola, me interesa ${property.name}`)}`,
       "_blank"
     );
   };
 
-  const handleUnitClick = (_unit: UnitType) => {
-    scrollToContact();
+  const handleUnitClick = (unit: UnitType) => {
+    setSelectedUnit(unit);
+  };
+
+  const handleStickyMainClick = () => {
+    if (property.presalePrice) {
+      setReserveModalOpen(true);
+    } else {
+      scrollToContact();
+    }
   };
 
   return (
@@ -69,7 +79,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
       </div>
 
       <PropertyStickyBar
-        onReserve={() => setReserveModalOpen(true)}
+        onReserve={handleStickyMainClick}
         onWhatsApp={openWhatsApp}
         onBrochure={() => scrollToContact()}
         locale={locale}
@@ -84,6 +94,18 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
           locale={locale}
         />
       )}
+
+      <UnitDetailModal
+        unit={selectedUnit}
+        locale={locale}
+        onClose={() => setSelectedUnit(null)}
+        onRequestInfo={() => {
+          setSelectedUnit(null);
+          setTimeout(() => {
+            document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }}
+      />
     </>
   );
 }
