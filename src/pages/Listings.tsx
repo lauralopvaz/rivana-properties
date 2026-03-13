@@ -6,7 +6,7 @@ import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIco
 
 import propOceana from '@/assets/prop-oceana.jpg';
 import propMarina from '@/assets/prop-marina.jpg';
-import propJade from '@/assets/prop-jade.jpg';
+import propMondrian from '@/assets/mondrian-hero.png';
 import propSelva from '@/assets/prop-selva.jpg';
 
 /* ── Badge icon components ── */
