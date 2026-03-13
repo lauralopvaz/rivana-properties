@@ -17,6 +17,8 @@ import fpCurvaA2 from '@/assets/mondrian/fp-curva-a2.png';
 import fpDepB from '@/assets/mondrian/fp-dep-b.png';
 import fpDepBPrime from '@/assets/mondrian/fp-dep-b-prime.png';
 import fpCurvaB from '@/assets/mondrian/fp-curva-b.png';
+import fpDepBEsquina from '@/assets/mondrian/fp-dep-b-esquina.png';
+import fpDepCEsquina from '@/assets/mondrian/fp-dep-c-esquina.png';
 
 export const properties: PropertyDetail[] = [
   {
@@ -125,13 +127,16 @@ export const properties: PropertyDetail[] = [
       { name: 'Depto Curva A — 1 Hab / 1.5 Baños', nameEn: 'Curve Unit A — 1BR/1.5BA', sqm: 106.25, priceMXN: 10750625, priceUSD: 611000, available: 10, floorPlanUrl: fpCurvaA },
       { name: 'Depto Curva A — 1 Hab / 2 Baños', nameEn: 'Curve Unit A — 1BR/2BA', sqm: 112.31, priceMXN: 11294550, priceUSD: 642000, available: 10, floorPlanUrl: fpCurvaA2 },
       { name: 'Departamento B — 2 Hab / 2.5 Baños', nameEn: 'Unit B — 2BR/2.5BA', sqm: 135.44, priceMXN: 12040772, priceUSD: 684000, available: 5, floorPlanUrl: fpDepB },
-      { name: 'Departamento B Esquina — 2 Hab / 2.5 Baños', nameEn: 'Unit B Corner — 2BR/2.5BA', sqm: 164.75, priceMXN: 20462981, priceUSD: 1163000, available: 5 },
+      { name: 'Departamento B Esquina — 2 Hab / 2.5 Baños', nameEn: 'Unit B Corner — 2BR/2.5BA', sqm: 164.75, priceMXN: 20462981, priceUSD: 1163000, available: 5, floorPlanUrl: fpDepBEsquina },
       { name: "Departamento B' — 2 Hab / 2.5 Baños", nameEn: "Unit B' — 2BR/2.5BA", sqm: 145.74, priceMXN: 12040772, priceUSD: 684000, available: 5, floorPlanUrl: fpDepBPrime },
       { name: 'Depto Curva B — 2 Hab / 2.5 Baños', nameEn: 'Curve Unit B — 2BR/2.5BA', sqm: 152.29, priceMXN: 15820111, priceUSD: 899000, available: 5, floorPlanUrl: fpCurvaB },
-      { name: 'Departamento C Esquina — 3 Hab / 3.5 Baños', nameEn: 'Corner Unit C — 3BR/3.5BA', sqm: 158.93, priceMXN: 21942074, priceUSD: 1247000, available: 5 },
+      { name: 'Departamento C Esquina — 3 Hab / 3.5 Baños', nameEn: 'Corner Unit C — 3BR/3.5BA', sqm: 158.93, priceMXN: 21942074, priceUSD: 1247000, available: 5, floorPlanUrl: fpDepCEsquina },
     ],
     priceNote: 'Precio varía según nivel, vista y orientación. Consulta disponibilidad con tu asesor Rivana.',
     priceNoteEn: 'Price varies by floor, view, and orientation. Contact your Rivana advisor for current availability.',
+    address: 'Blvd. Kukulcán km 16.5, Zona Hotelera, 77500 Cancún, Q.R., México',
+    addressNote: 'Dentro del desarrollo maestro Grand Island Cancún. Acceso controlado 24/7.',
+    addressNoteEn: 'Inside the Grand Island Cancún master development. 24/7 controlled access.',
     distances: [
       { label: 'Aeropuerto Internacional 15 min', labelEn: 'International Airport 15 min', icon: 'Plane' },
       { label: 'Plaza La Isla 5 min', labelEn: 'Plaza La Isla 5 min', icon: 'ShoppingBag' },

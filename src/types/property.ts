@@ -65,4 +65,7 @@ export interface PropertyDetail {
   differentiators?: Differentiator[]
   priceNote?: string
   priceNoteEn?: string
+  address?: string
+  addressNote?: string
+  addressNoteEn?: string
 }
