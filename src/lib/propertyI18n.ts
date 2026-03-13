@@ -59,7 +59,7 @@ export const t = {
     countdownMin: 'MIN',
     countdownSec: 'SEG',
     exactLocation: 'Ubicación exacta',
-    roiDisclaimer: 'Los rendimientos son estimados con base en el mercado actual de renta vacacional en la zona. No constituyen una garantía de retorno. Los resultados pueden variar según ocupación, administración y condiciones del mercado.',
+    
     paymentPlanLabel: 'Plan de pago flexible',
     paymentPlanRow1: '30% de enganche',
     paymentPlanRow2: '20% diferido en 12 meses',
