@@ -56,7 +56,8 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   };
 
   return (
-    <>
+    <div className="prop-page-wrapper">
+      {/* Full-width sections */}
       <PropertyHero
         property={property}
         locale={locale}
@@ -65,36 +66,40 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
 
       <PropertyGalleryStrip images={property.images} locale={locale} />
 
-      <PropertyTabs
-        property={property}
-        locale={locale}
-        onUnitClick={handleUnitClick}
-      />
-
-      {property.presalePrice && (
-        <PropertyPresalePrice
-          presalePrice={property.presalePrice}
+      {/* Constrained content */}
+      <div className="prop-page-content">
+        <PropertyTabs
+          property={property}
           locale={locale}
-          onReserve={() => setReserveModalOpen(true)}
-          onWhatsApp={openWhatsApp}
+          onUnitClick={handleUnitClick}
         />
-      )}
 
-      {(property.differentiators?.length ?? 0) > 0 && (
-        <PropertyDifferentiators
-          differentiators={property.differentiators!}
-          locale={locale}
-        />
-      )}
+        {property.presalePrice && (
+          <PropertyPresalePrice
+            presalePrice={property.presalePrice}
+            locale={locale}
+            onReserve={() => setReserveModalOpen(true)}
+            onWhatsApp={openWhatsApp}
+          />
+        )}
 
-      <div id="contact-form" ref={formRef}>
-        <PropertyContactForm
-          propertyName={property.name}
-          locale={locale}
-          brochureUrl={property.brochureUrl}
-        />
+        {(property.differentiators?.length ?? 0) > 0 && (
+          <PropertyDifferentiators
+            differentiators={property.differentiators!}
+            locale={locale}
+          />
+        )}
+
+        <div id="contact-form" ref={formRef}>
+          <PropertyContactForm
+            propertyName={property.name}
+            locale={locale}
+            brochureUrl={property.brochureUrl}
+          />
+        </div>
       </div>
 
+      {/* Sticky bar — full width background, centered content */}
       <PropertyStickyBar
         onReserve={handleStickyMainClick}
         onWhatsApp={openWhatsApp}
@@ -124,6 +129,6 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
           }, 100);
         }}
       />
-    </>
+    </div>
   );
 }

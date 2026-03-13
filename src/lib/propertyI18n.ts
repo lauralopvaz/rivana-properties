@@ -128,7 +128,7 @@ export const t = {
     countdownMin: 'MIN',
     countdownSec: 'SEC',
     exactLocation: 'Exact location',
-    roiDisclaimer: 'Returns are estimated based on current vacation rental market conditions in the area. They do not constitute a guarantee of return. Results may vary depending on occupancy, management, and market conditions.',
+    
     paymentPlanLabel: 'Flexible payment plan',
     paymentPlanRow1: '30% Down payment',
     paymentPlanRow2: '20% Deferred over 12 months',

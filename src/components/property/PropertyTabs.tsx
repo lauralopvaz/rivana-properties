@@ -82,7 +82,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
   const priceNote = locale === 'en' && property.priceNoteEn ? property.priceNoteEn : property.priceNote;
 
   return (
-    <div style={{ backgroundColor: "#FFFFFF" }}>
+    <div className="prop-tabs-wrapper" style={{ backgroundColor: "#FFFFFF" }}>
       {/* Tab bar — sticky with scroll fade */}
       <div
         className={`tabs-wrap sticky top-[44px] z-40${scrolledEnd ? ' scrolled-end' : ''}`}
@@ -115,12 +115,14 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
         </div>
       </div>
 
-      {/* Content */}
-      <div className="p-5">
+      {/* Content — no height constraints */}
+      <div className="prop-tab-content">
         {active === "general" && (
-          <p className="font-body font-light prop-text-base pb-6" style={{ color: "#4B4B4B", lineHeight: 1.8 }}>
-            {description}
-          </p>
+          <div className="prop-tab-text-wrap">
+            <p className="font-body font-light prop-text-base" style={{ color: "#4B4B4B" }}>
+              {description}
+            </p>
+          </div>
         )}
 
         {active === "units" && (

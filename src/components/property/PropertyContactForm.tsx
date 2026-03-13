@@ -33,7 +33,7 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
 
   if (state.succeeded) {
     return (
-      <section id="contact-form" className="p-5" style={{ backgroundColor: "#FFFFFF" }}>
+      <section className="prop-section-contact" style={{ backgroundColor: "#FFFFFF" }}>
         <div className="flex flex-col items-center py-10 gap-3">
           <div
             className="w-12 h-12 flex items-center justify-center"
@@ -56,8 +56,8 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
   };
 
   return (
-    <section id="contact-form" className="p-5" style={{ backgroundColor: "#FFFFFF" }}>
-      <p className="font-body font-light uppercase prop-label mb-1" style={{ letterSpacing: "3px", color: "#CFAE60" }}>
+    <section className="prop-section-contact" style={{ backgroundColor: "#FFFFFF", borderTop: "1px solid hsl(30 15% 88%)" }}>
+      <p className="font-body font-light uppercase prop-label mb-1" style={{ letterSpacing: "4px", color: "#CFAE60" }}>
         {tr(locale, 'requestInfo')}
       </p>
       <h2 className="font-display prop-title-md mb-1" style={{ color: "#1C1C1C" }}>
