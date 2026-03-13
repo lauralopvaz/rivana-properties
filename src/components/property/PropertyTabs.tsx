@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, MapPin } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 import { formatMXN } from "@/lib/formatPrice";
 import { tr } from "@/lib/propertyI18n";
