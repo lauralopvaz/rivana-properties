@@ -177,6 +177,13 @@ export const properties: PropertyDetail[] = [
         descriptionEn: 'Accor is one of the largest hotel groups in the world. The Mondrian brand attracts high-net-worth travelers — which translates directly into premium occupancy and higher nightly rates.',
       },
       {
+        type: 'vista', layout: 'grid',
+        title: 'Vista única: Mar Caribe y Laguna Nichupté',
+        titleEn: 'Unique view: Caribbean Sea & Nichupté Lagoon',
+        description: 'El único desarrollo en la Zona Hotelera con vistas simultáneas al Mar Caribe y a la Laguna Nichupté. Una perspectiva que no se repite en ningún otro proyecto.',
+        descriptionEn: 'The only development in the Hotel Zone with simultaneous views of the Caribbean Sea and Nichupté Lagoon. A perspective found nowhere else.',
+      },
+      {
         type: 'precio', layout: 'grid',
         title: 'Preventa desde $9,050,000 MXN',
         titleEn: 'Pre-sale from MXN 9,050,000',
