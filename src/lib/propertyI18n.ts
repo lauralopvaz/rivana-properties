@@ -78,6 +78,8 @@ export const t = {
     tabGeneral: 'Overview',
     tabUnits: 'Floor Plans',
     tabFeatures: 'Amenities',
+    downloadBrochure: 'Download Brochure',
+    brochureUnavailable: 'Brochure available with your advisor. Contact us via WhatsApp.',
     tabLocation: 'Location',
     available: 'avail.',
     last: 'Last',
