@@ -7,6 +7,16 @@ import mondrianRooftop from '@/assets/mondrian-rooftop.png';
 import mondrianBeachClub from '@/assets/mondrian-beach-club.png';
 import mondrianGym from '@/assets/mondrian-gym.png';
 import mondrianPool from '@/assets/mondrian-pool.png';
+import fpEstudioCurva from '@/assets/mondrian/fp-estudio-curva.png';
+import fpDepA from '@/assets/mondrian/fp-dep-a.png';
+import fpDepAPrime from '@/assets/mondrian/fp-dep-a-prime.png';
+import fpDepA1 from '@/assets/mondrian/fp-dep-a1.png';
+import fpLoftA from '@/assets/mondrian/fp-loft-a.png';
+import fpCurvaA from '@/assets/mondrian/fp-curva-a.png';
+import fpCurvaA2 from '@/assets/mondrian/fp-curva-a2.png';
+import fpDepB from '@/assets/mondrian/fp-dep-b.png';
+import fpDepBPrime from '@/assets/mondrian/fp-dep-b-prime.png';
+import fpCurvaB from '@/assets/mondrian/fp-curva-b.png';
 
 export const properties: PropertyDetail[] = [
   {
