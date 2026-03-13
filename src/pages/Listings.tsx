@@ -300,7 +300,7 @@ const Listings = () => {
                   <button
                     key={c}
                     onClick={() => handleCurrencyChange(c)}
-                    className="flex-1 py-2 text-[10px] font-body transition-colors"
+                    className="flex-1 py-2 text-[13px] font-body transition-colors"
                     style={{
                       background: currency === c ? '#CFAE60' : '#F8F6F2',
                       border: `1px solid ${currency === c ? '#CFAE60' : 'rgba(0,0,0,0.10)'}`,
