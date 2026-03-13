@@ -192,22 +192,103 @@
   width: 100%;
 }
 
-/* Section padding — mobile default */
+/* ── Hero ── */
+.prop-hero-wrapper {
+  position: relative;
+  overflow: visible;
+}
+.prop-hero-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 420px;
+}
+.prop-hero-badges {
+  top: 20px;
+  left: 20px;
+  gap: 8px;
+}
+.prop-hero-content {
+  padding: 24px 20px 20px;
+}
+.prop-hero-zone {
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+.prop-hero-title {
+  font-size: 32px;
+  line-height: 1.05;
+}
+.prop-hero-specs {
+  gap: 16px;
+}
+.prop-hero-spec-text {
+  font-size: 13px;
+}
+.prop-hero-desde {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+.prop-hero-price {
+  font-size: 28px;
+  line-height: 1.05;
+}
+.prop-hero-btn {
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 12px 20px;
+}
+
+/* Hero badges style */
+.prop-hero-badge {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+.prop-hero-badge--presale {
+  background-color: hsl(var(--sapphire));
+  color: #FFFFFF;
+}
+.prop-hero-badge--roi {
+  background-color: rgba(207,174,96,0.18);
+  border: 1.5px solid rgba(207,174,96,0.55);
+  color: hsl(var(--gold));
+}
+
+/* ── Gallery strip ── */
+.prop-gallery-strip {
+  height: 72px;
+}
+.prop-gallery-label {
+  font-size: 11px;
+}
+
+/* ── Section padding — mobile default ── */
 .prop-section-presale {
-  padding: 24px 20px;
+  padding: 32px 18px;
+  height: auto;
+  overflow: visible;
 }
 .prop-section-diff {
-  padding: 24px 20px;
-  border-top: 1px solid hsl(30 15% 88%);
+  padding: 32px 18px;
+  border-top: 1px solid hsl(var(--border));
+  height: auto;
+  overflow: visible;
 }
 .prop-section-contact {
-  padding: 24px 20px;
+  padding: 32px 18px;
+  height: auto;
+  overflow: visible;
 }
+
+/* ── Tab content ── */
 .prop-tab-content {
-  padding: 20px 20px 24px;
+  padding: 24px 18px 32px;
   height: auto;
   min-height: 120px;
   overflow: visible;
+  position: static;
 }
 .prop-tab-text-wrap {
   line-height: 1.9;
@@ -219,12 +300,60 @@
   overflow: visible;
 }
 
+/* Tabs bar */
+.prop-tabs-bar {
+  position: sticky;
+  top: 56px;
+  z-index: 40;
+}
+.prop-tab-btn {
+  font-size: 12px;
+  padding: 16px 14px;
+}
+
 /* Sticky bar layout */
 .prop-sticky-outer {
   padding: 10px 18px;
 }
 .prop-sticky-inner {
   width: 100%;
+}
+.prop-sticky-main {
+  padding: 14px 20px;
+}
+.prop-sticky-wa {
+  width: 46px;
+}
+.prop-sticky-brochure {
+  padding: 14px 16px;
+}
+
+/* ── Presale price ── */
+.prop-presale-price {
+  font-size: 42px;
+  line-height: 1.05;
+}
+
+/* ── Contact form inner ── */
+.prop-contact-inner {
+  width: 100%;
+}
+
+/* ── Differentiator cards — mobile defaults ── */
+.prop-diff-featured {
+  padding: 20px 18px;
+}
+.prop-diff-stat {
+  min-width: 80px;
+}
+.prop-diff-grid-card {
+  padding: 18px 16px;
+  height: auto;
+  overflow: visible;
+}
+.prop-diff-wide {
+  padding: 16px 18px;
+  gap: 14px;
 }
 
 /* ── Tablet (768px–1023px) ── */
@@ -234,53 +363,124 @@
     margin: 0 auto;
     padding: 0 32px;
   }
-  .prop-section-presale {
-    padding: 40px 0;
+  .prop-hero-img-wrap {
+    height: 480px;
   }
-  .prop-section-diff {
-    padding: 40px 0;
+  .prop-hero-content {
+    padding: 40px 48px;
   }
-  .prop-section-contact {
-    padding: 40px 0;
+  .prop-hero-zone {
+    font-size: 13px;
+  }
+  .prop-hero-title {
+    font-size: 52px;
+  }
+  .prop-hero-specs {
+    gap: 24px;
+  }
+  .prop-hero-spec-text {
+    font-size: 15px;
+  }
+  .prop-hero-desde {
+    font-size: 12px;
+  }
+  .prop-hero-price {
+    font-size: 36px;
+  }
+  .prop-hero-btn {
+    font-size: 12px;
+    padding: 14px 28px;
+  }
+  .prop-hero-badge {
+    font-size: 13px;
+  }
+
+  .prop-gallery-strip {
+    height: 96px;
+  }
+  .prop-gallery-label {
+    font-size: 12px;
+  }
+
+  .prop-tabs-bar {
+    top: 72px;
+    padding: 0 48px;
+  }
+  .prop-tab-btn {
+    font-size: 13px;
+    padding: 18px 20px;
   }
   .prop-tab-content {
-    padding: 32px 0 32px;
+    padding: 40px 48px 48px;
   }
   .prop-tab-text-wrap {
-    max-width: 800px;
+    max-width: 860px;
+    line-height: 1.9;
   }
-  .prop-sticky-outer {
-    padding: 12px 0;
+  .prop-text-base {
+    font-size: 17px !important;
   }
-  .prop-sticky-inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 32px;
+
+  .prop-section-presale {
+    padding: 48px 48px;
+  }
+  .prop-section-diff {
+    padding: 48px 48px;
+  }
+  .prop-section-contact {
+    padding: 48px 48px;
+  }
+  .prop-contact-inner {
+    max-width: 640px;
+  }
+  .prop-presale-price {
+    font-size: 52px;
   }
 
   /* Differentiators desktop layout */
   .prop-diff-featured {
-    padding: 28px 32px;
+    padding: 36px 40px;
     flex-direction: row;
     align-items: flex-start;
   }
   .prop-diff-stat {
-    min-width: 100px;
+    min-width: 120px;
   }
   .prop-diff-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
+    gap: 3px;
   }
   .prop-diff-grid-card {
-    padding: 24px 20px;
+    padding: 32px 28px;
     height: auto;
     overflow: visible;
   }
   .prop-diff-wide {
     width: 100%;
     flex-direction: row;
-    padding: 20px 24px;
-    gap: 16px;
+    padding: 28px 32px;
+    gap: 20px;
+  }
+
+  /* Sticky bar */
+  .prop-sticky-outer {
+    padding: 16px 48px;
+  }
+  .prop-sticky-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    gap: 8px;
+  }
+  .prop-sticky-main {
+    max-width: 400px;
+    font-size: 13px;
+    padding: 16px 32px;
+  }
+  .prop-sticky-wa {
+    width: 56px;
+  }
+  .prop-sticky-brochure {
+    font-size: 12px;
+    padding: 16px 24px;
   }
 }
 
@@ -291,49 +491,23 @@
     margin: 0 auto;
     padding: 0 40px;
   }
-  .prop-section-presale {
-    padding: 40px 0;
+  .prop-hero-img-wrap {
+    height: 560px;
   }
   .prop-section-diff {
-    padding: 48px 0;
+    padding: 48px 40px;
+  }
+  .prop-section-presale {
+    padding: 48px 40px;
   }
   .prop-section-contact {
-    padding: 48px 0;
+    padding: 48px 40px;
   }
   .prop-tab-content {
-    padding: 32px 0 32px;
-  }
-  .prop-sticky-outer {
-    padding: 14px 0;
+    padding: 40px 48px 48px;
   }
   .prop-sticky-inner {
-    max-width: 1080px;
-    margin: 0 auto;
     padding: 0 40px;
-  }
-  .prop-sticky-main {
-    max-width: 320px;
-  }
-
-  /* Differentiators desktop layout */
-  .prop-diff-featured {
-    padding: 32px 36px;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .prop-diff-stat {
-    min-width: 120px;
-  }
-  .prop-diff-grid-card {
-    padding: 28px 24px;
-    height: auto;
-    overflow: visible;
-  }
-  .prop-diff-wide {
-    width: 100%;
-    flex-direction: row;
-    padding: 24px 28px;
-    gap: 20px;
   }
 }
 
@@ -342,7 +516,7 @@
    ══════════════════════════════════════════════════ */
 
 /* Desktop & Tablet (≥768px) — base values */
-.prop-label     { font-size: 12px; line-height: 1.2; }
+.prop-label     { font-size: 12px; line-height: 1.2; letter-spacing: 4px; }
 .prop-text-xs   { font-size: 14px; line-height: 1.7; }
 .prop-text-sm   { font-size: 15px; line-height: 1.8; }
 .prop-text-base { font-size: 16px; line-height: 1.9; }
@@ -393,54 +567,9 @@
   .prop-presale-sublabel { font-size: 16px; }
 }
 
-/* Hero badges */
-.prop-hero-badge {
-  padding: 7px 14px;
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 300;
-  min-width: 90px;
-  text-align: center;
-}
-.prop-hero-badge--presale {
-  background-color: #26547D;
-  color: #FFFFFF;
-}
-.prop-hero-badge--roi {
-  background-color: rgba(207,174,96,0.12);
-  border: 1px solid rgba(207,174,96,0.24);
-  color: #CFAE60;
-}
-
-@media (max-width: 767px) {
-  .prop-hero-badge {
-    padding: 6px 12px;
-    font-size: 13px;
-    letter-spacing: 2px;
-    font-weight: 400;
-    min-width: 80px;
-    text-align: center;
-  }
-  .prop-hero-badge--presale {
-    background-color: #26547D;
-    color: #FFFFFF;
-  }
-  .prop-hero-badge--roi {
-    background-color: rgba(207,174,96,0.16);
-    border: 1px solid rgba(207,174,96,0.45);
-    color: #CFAE60;
-  }
-  .prop-hero-badges {
-    top: 16px !important;
-    left: 16px !important;
-    gap: 8px !important;
-  }
-}
-
 /* Tabs scroll fade */
 .tabs-wrap {
   position: relative;
-  overflow: hidden;
 }
 .tabs-wrap::after {
   content: '';
@@ -456,42 +585,6 @@
 }
 .tabs-wrap.scrolled-end::after {
   opacity: 0;
-}
-
-/* Hero "Desde" label */
-.prop-hero-desde {
-  font-size: 11px;
-}
-@media (max-width: 767px) {
-  .prop-hero-desde {
-    font-size: 13px;
-  }
-}
-
-/* Sticky bar desktop/tablet sizing */
-@media (min-width: 768px) {
-  .prop-sticky-outer {
-    padding: 12px 0;
-  }
-  .prop-sticky-inner {
-    gap: 8px;
-  }
-  .prop-sticky-main {
-    font-size: 12px;
-    padding: 14px 24px;
-  }
-  .prop-sticky-wa {
-    width: 52px;
-  }
-  .prop-sticky-brochure {
-    font-size: 12px;
-    padding: 14px 20px;
-  }
-}
-@media (min-width: 1024px) {
-  .prop-sticky-outer {
-    padding: 14px 0;
-  }
 }
 
 /* Scrollbar */

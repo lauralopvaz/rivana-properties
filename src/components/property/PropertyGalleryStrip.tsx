@@ -19,11 +19,11 @@ export function PropertyGalleryStrip({ images, locale }: PropertyGalleryStripPro
 
   return (
     <>
-      <div className="grid grid-cols-4 gap-[2px] h-16" style={{ backgroundColor: "#F2EFE9" }}>
+      <div className="prop-gallery-strip grid grid-cols-4 gap-[3px]" style={{ backgroundColor: "hsl(var(--paper))" }}>
         {thumbs.map((img, idx) => (
           <button
             key={idx}
-            className="overflow-hidden"
+            className="overflow-hidden h-full"
             onClick={() => { setActiveIndex(idx); setLightboxOpen(true); }}
           >
             <img src={img} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover" />
@@ -34,8 +34,8 @@ export function PropertyGalleryStrip({ images, locale }: PropertyGalleryStripPro
           style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}
           onClick={() => { setActiveIndex(0); setLightboxOpen(true); }}
         >
-          <Grid2x2 size={14} style={{ color: "#CFAE60" }} />
-          <span className="font-body font-light uppercase prop-badge" style={{ letterSpacing: "2px", color: "#CFAE60" }}>
+          <Grid2x2 size={14} style={{ color: "hsl(var(--gold))" }} />
+          <span className="font-body font-light uppercase prop-gallery-label" style={{ letterSpacing: "2px", color: "hsl(var(--gold))" }}>
             {tr(locale, 'viewAll')}
           </span>
         </button>
@@ -68,7 +68,7 @@ export function PropertyGalleryStrip({ images, locale }: PropertyGalleryStripPro
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
                 className="w-14 h-10 flex-shrink-0 overflow-hidden"
-                style={{ border: idx === activeIndex ? "2px solid #CFAE60" : "2px solid transparent" }}
+                style={{ border: idx === activeIndex ? "2px solid hsl(var(--gold))" : "2px solid transparent" }}
               >
                 <img src={img} alt={`Thumb ${idx + 1}`} className="w-full h-full object-cover" />
               </button>

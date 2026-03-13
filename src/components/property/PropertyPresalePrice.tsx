@@ -68,8 +68,9 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
       className="prop-section-presale"
       style={{
         backgroundColor: "#FFFFFF",
-        borderTop: "3px solid #CFAE60",
-        borderBottom: "1px solid rgba(207,174,96,0.22)",
+        borderTop: "3px solid hsl(var(--gold))",
+        height: "auto",
+        overflow: "visible",
       }}
     >
       {/* Header */}
@@ -78,10 +79,10 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
           className="w-[42px] h-[42px] flex items-center justify-center flex-shrink-0"
           style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}
         >
-          <Tag size={18} style={{ color: "#CFAE60" }} />
+          <Tag size={18} style={{ color: "hsl(var(--gold))" }} />
         </div>
         <div>
-          <span className="font-body uppercase block prop-presale-label" style={{ letterSpacing: "3px", color: "#CFAE60", fontWeight: 400 }}>
+          <span className="font-body uppercase block prop-presale-label" style={{ letterSpacing: "3px", color: "hsl(var(--gold))", fontWeight: 400 }}>
             {tr(locale, 'presaleSpecialPrice')}
           </span>
           <span className="font-body block prop-presale-sublabel" style={{ color: "#4B4B4B", fontWeight: 300 }}>
@@ -103,7 +104,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
           <span className="font-body font-light uppercase prop-badge" style={{ letterSpacing: "1px", color: "#4B4B4B" }}>
             {tr(locale, 'from')}
           </span>
-          <span className="font-display prop-title-lg" style={{ color: "#1C1C1C" }}>
+          <span className="font-display prop-presale-price" style={{ color: "#1C1C1C" }}>
             ${formatNumber(presalePrice.discountMXN)}
           </span>
         </div>
@@ -117,7 +118,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
         className="p-3 mb-3"
         style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}
       >
-        <span className="font-display prop-title-sm" style={{ color: "#CFAE60" }}>
+        <span className="font-display prop-title-sm" style={{ color: "hsl(var(--gold))" }}>
           −${formatNumber(savings)}
         </span>
         <span className="block font-body font-light mt-1 prop-text-xs" style={{ color: "#4B4B4B" }}>
@@ -134,8 +135,8 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
         style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(0,0,0,0.07)" }}
       >
         <div className="flex items-center gap-2 mb-2">
-          <CreditCard size={13} style={{ color: "#CFAE60" }} />
-          <span className="font-body font-light uppercase prop-badge" style={{ letterSpacing: "2px", color: "#CFAE60" }}>
+          <CreditCard size={13} style={{ color: "hsl(var(--gold))" }} />
+          <span className="font-body font-light uppercase prop-badge" style={{ letterSpacing: "2px", color: "hsl(var(--gold))" }}>
             {tr(locale, 'paymentPlanLabel')}
           </span>
         </div>
@@ -145,7 +146,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
             className="flex items-center justify-between py-[7px]"
             style={{ borderBottom: idx < plan.length - 1 ? "1px solid rgba(0,0,0,0.05)" : "none" }}
           >
-            <span className="font-display prop-unit-price" style={{ color: "#CFAE60", fontWeight: 300 }}>
+            <span className="font-display prop-unit-price" style={{ color: "hsl(var(--gold))", fontWeight: 300 }}>
               {row.percent}
             </span>
             <span className="font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
@@ -162,9 +163,9 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
             <div
               key={idx}
               className="flex flex-col items-center px-2 py-2"
-              style={{ backgroundColor: "#F8F6F2", border: "1px solid rgba(207,174,96,0.22)" }}
+              style={{ backgroundColor: "hsl(var(--paper))", border: "1px solid rgba(207,174,96,0.22)" }}
             >
-              <span className="font-display prop-num-countdown" style={{ color: "#CFAE60" }}>
+              <span className="font-display prop-num-countdown" style={{ color: "hsl(var(--gold))" }}>
                 {String(box.value).padStart(2, "0")}
               </span>
               <span
@@ -186,7 +187,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
         <button
           onClick={onReserve}
           className="flex-1 py-3.5 font-body font-light uppercase prop-btn"
-          style={{ letterSpacing: "3px", backgroundColor: "#CFAE60", color: "#FFFFFF" }}
+          style={{ letterSpacing: "3px", backgroundColor: "hsl(var(--gold))", color: "#FFFFFF" }}
         >
           {tr(locale, 'reserveThisPrice')}
         </button>
