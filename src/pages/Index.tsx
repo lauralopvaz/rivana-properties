@@ -49,10 +49,10 @@ const journalImages: Record<string, string> = {
 };
 
 const featuredProperties = [
-  { name: 'Oceana Residences', zone: 'Costa Mujeres', beds: 3, area: 185, price: '$425K', amenities: ['ocean', 'pool', 'spa'], destKey: 'costa-mujeres', image: propOceana },
-  { name: 'Marina Towers', zone: 'Puerto Cancún', beds: 2, area: 140, price: '$510K', amenities: ['marina', 'pool', 'golf'], destKey: 'puerto-cancun', image: propMarina },
-  { name: 'Jade Penthouse', zone: { es: 'Zona Hotelera', en: 'Hotel Zone' }, beds: 4, area: 320, price: '$1.2M', amenities: ['ocean', 'pool', 'sunset'], destKey: 'zona-hotelera', image: propJade },
-  { name: 'Selva Lofts', zone: 'Tulum', beds: 1, area: 78, price: '$195K', amenities: ['jungle', 'pool', 'spa'], destKey: 'tulum', image: propSelva },
+  { name: 'Oceana Residences', zone: 'Costa Mujeres', beds: 3, area: 185, price: '$425K', amenities: ['ocean', 'pool', 'spa'], destKey: 'costa-mujeres', image: propOceana, slug: 'oceana-residences' },
+  { name: 'Marina Towers', zone: 'Puerto Cancún', beds: 2, area: 140, price: '$510K', amenities: ['marina', 'pool', 'golf'], destKey: 'puerto-cancun', image: propMarina, slug: 'marina-towers' },
+  { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera', en: 'Hotel Zone' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], destKey: 'zona-hotelera', image: propJade, slug: 'mondrian-residences-grand-island-cancun' },
+  { name: 'Selva Lofts', zone: 'Tulum', beds: 1, area: 78, price: '$195K', amenities: ['jungle', 'pool', 'spa'], destKey: 'tulum', image: propSelva, slug: 'selva-lofts' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
@@ -219,7 +219,7 @@ const Home = () => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
                 <ScrollReveal key={p.name} delay={i * 100}>
-                  <Link to={localePath('/propiedad/oceana-residences')} className="group block bg-card rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.06)] border border-border">
+                  <Link to={localePath(`/propiedad/${p.slug}`)} className="group block bg-card rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.06)] border border-border">
                     <div className="aspect-[16/10] overflow-hidden">
                       <img
                         src={p.image}
