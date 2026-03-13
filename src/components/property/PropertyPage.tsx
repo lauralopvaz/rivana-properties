@@ -32,43 +32,41 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   };
 
   return (
-    <div className="flex flex-col min-h-screen" style={{ backgroundColor: "#F8F6F2" }}>
-      <div className="flex-1">
-        <PropertyHero
-          property={property}
+    <>
+      <PropertyHero
+        property={property}
+        locale={locale}
+        onViewPrices={scrollToContact}
+      />
+
+      <PropertyGalleryStrip images={property.images} locale={locale} />
+
+      <PropertyTabs
+        property={property}
+        locale={locale}
+        onUnitClick={handleUnitClick}
+      />
+
+      {property.presalePrice && (
+        <PropertyPresalePrice
+          presalePrice={property.presalePrice}
           locale={locale}
-          onViewPrices={scrollToContact}
+          onReserve={scrollToContact}
+          onWhatsApp={openWhatsApp}
         />
+      )}
 
-        <PropertyGalleryStrip images={property.images} locale={locale} />
-
-        <PropertyTabs
-          property={property}
+      {property.differentiators && property.differentiators.length > 0 && (
+        <PropertyDifferentiators
+          differentiators={property.differentiators}
+          roiEstimate={property.roiEstimate}
+          plusvaliaEstimate={property.plusvaliaEstimate}
           locale={locale}
-          onUnitClick={handleUnitClick}
         />
+      )}
 
-        {property.presalePrice && (
-          <PropertyPresalePrice
-            presalePrice={property.presalePrice}
-            locale={locale}
-            onReserve={scrollToContact}
-            onWhatsApp={openWhatsApp}
-          />
-        )}
-
-        {property.differentiators && property.differentiators.length > 0 && (
-          <PropertyDifferentiators
-            differentiators={property.differentiators}
-            roiEstimate={property.roiEstimate}
-            plusvaliaEstimate={property.plusvaliaEstimate}
-            locale={locale}
-          />
-        )}
-
-        <div ref={contactRef}>
-          <PropertyContactForm propertyName={property.name} locale={locale} />
-        </div>
+      <div ref={contactRef} id="contact-form">
+        <PropertyContactForm propertyName={property.name} locale={locale} />
       </div>
 
       <PropertyStickyBar
@@ -77,6 +75,6 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         onBrochure={() => scrollToContact()}
         locale={locale}
       />
-    </div>
+    </>
   );
 }
