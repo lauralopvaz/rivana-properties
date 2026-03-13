@@ -71,6 +71,7 @@ const AppRoutes = () => (
     <Route path="/listings" element={<Listings />} />
     <Route path="/presale" element={<PreSale />} />
     <Route path="/property/:slug" element={<PropertyDetail />} />
+    <Route path="/properties/:slug" element={<PropertyDetailNew />} />
 
     {/* ── ENGLISH (/en prefix) ── */}
     <Route path="/en" element={<Index />} />
