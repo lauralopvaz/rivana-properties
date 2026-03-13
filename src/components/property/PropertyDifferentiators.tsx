@@ -9,7 +9,8 @@ interface PropertyDifferentiatorsProps {
   locale: Locale;
 }
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; style?: React.CSSProperties }>> = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const iconMap: Record<string, any> = {
   roi: TrendingUp,
   vista: Eye,
   amenidad: Gift,

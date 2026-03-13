@@ -46,7 +46,8 @@ function AvailabilityBadge({ count, locale }: { count: number; locale: Locale })
 }
 
 function DynamicIcon({ name, size = 16, className }: { name: string; size?: number; className?: string }) {
-  const Icon = (LucideIcons as Record<string, React.ComponentType<{ size?: number; className?: string }>>)[name];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const Icon = (LucideIcons as any)[name];
   if (!Icon) return null;
   return <Icon size={size} className={className} />;
 }
