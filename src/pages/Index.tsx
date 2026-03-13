@@ -219,7 +219,7 @@ const Home = () => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
                 <ScrollReveal key={p.name} delay={i * 100}>
-                  <Link to={localePath('/propiedad/oceana-residences')} className="group block bg-card rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.06)] border border-border">
+                  <Link to={localePath(`/propiedad/${p.slug}`)} className="group block bg-card rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.06)] border border-border">
                     <div className="aspect-[16/10] overflow-hidden">
                       <img
                         src={p.image}
