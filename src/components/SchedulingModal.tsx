@@ -158,8 +158,8 @@ export const SchedulingModal = () => {
                     onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.borderColor = 'rgba(0,0,0,0.09)'; }}
                   >
                     <span style={{ color: isActive ? '#CFAE60' : '#1C1C1C' }}><Icon className="w-[22px] h-[22px]" /></span>
-                    <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '11px', fontWeight: 400, color: '#1C1C1C' }}>{title[L]}</span>
-                    <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', fontWeight: 300, color: '#4B4B4B', textAlign: 'center' }}>{desc[L]}</span>
+                    <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 400, color: '#1C1C1C' }}>{title[L]}</span>
+                    <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 300, color: '#4B4B4B', textAlign: 'center' }}>{desc[L]}</span>
                   </button>
                 );
               })}
