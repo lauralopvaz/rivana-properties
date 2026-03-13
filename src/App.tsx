@@ -20,6 +20,7 @@ import Journal from "./pages/Journal";
 import JournalPost from "./pages/JournalPost";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import PropertyDetailNew from "./pages/PropertyDetailNew";
 
 const queryClient = new QueryClient();
 
