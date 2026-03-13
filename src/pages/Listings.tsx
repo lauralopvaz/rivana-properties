@@ -248,7 +248,7 @@ const Listings = () => {
           {/* Type */}
           <FilterDropdown label={allTypes} activeLabel={type} isOpen={openFilter === 'type'} onToggle={() => toggle('type')}>
             {typesL.map(t => (
-              <button key={t} onClick={() => { setType(t); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[11px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: t === type ? '#CFAE60' : '#1C1C1C' }}>
+              <button key={t} onClick={() => { setType(t); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: t === type ? '#CFAE60' : '#1C1C1C' }}>
                 {t}
               </button>
             ))}
