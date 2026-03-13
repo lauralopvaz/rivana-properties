@@ -49,10 +49,10 @@ const journalImages: Record<string, string> = {
 };
 
 const featuredProperties = [
-  { name: 'Oceana Residences', zone: 'Costa Mujeres', beds: 3, area: 185, price: '$425K', amenities: ['ocean', 'pool', 'spa'], destKey: 'costa-mujeres', image: propOceana },
-  { name: 'Marina Towers', zone: 'Puerto Cancún', beds: 2, area: 140, price: '$510K', amenities: ['marina', 'pool', 'golf'], destKey: 'puerto-cancun', image: propMarina },
-  { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera', en: 'Hotel Zone' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], destKey: 'zona-hotelera', image: propJade },
-  { name: 'Selva Lofts', zone: 'Tulum', beds: 1, area: 78, price: '$195K', amenities: ['jungle', 'pool', 'spa'], destKey: 'tulum', image: propSelva },
+  { name: 'Oceana Residences', zone: 'Costa Mujeres', beds: 3, area: 185, price: '$425K', amenities: ['ocean', 'pool', 'spa'], destKey: 'costa-mujeres', image: propOceana, slug: 'oceana-residences' },
+  { name: 'Marina Towers', zone: 'Puerto Cancún', beds: 2, area: 140, price: '$510K', amenities: ['marina', 'pool', 'golf'], destKey: 'puerto-cancun', image: propMarina, slug: 'marina-towers' },
+  { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera', en: 'Hotel Zone' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], destKey: 'zona-hotelera', image: propJade, slug: 'mondrian-residences-grand-island-cancun' },
+  { name: 'Selva Lofts', zone: 'Tulum', beds: 1, area: 78, price: '$195K', amenities: ['jungle', 'pool', 'spa'], destKey: 'tulum', image: propSelva, slug: 'selva-lofts' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
