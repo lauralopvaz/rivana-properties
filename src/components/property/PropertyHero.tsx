@@ -63,8 +63,9 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         <p
           className="font-body font-light uppercase mb-1 prop-label"
           style={{ letterSpacing: "3px", color: "#CFAE60" }}
+
         >
-          {property.zone}
+          {locale === 'en' && property.zoneEn ? property.zoneEn : property.zone}
         </p>
         <h1
           className="font-display prop-title-lg leading-tight mb-3"
@@ -76,7 +77,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         {/* Specs */}
         <div className="flex items-center gap-4 mb-4">
           {[
-            { icon: Bed, text: `${property.bedrooms} ${tr(locale, 'beds')}` },
+            { icon: Bed, text: `${locale === 'en' && property.bedroomsEn ? property.bedroomsEn : property.bedrooms} ${tr(locale, 'beds')}` },
             { icon: Maximize, text: property.sqmRange },
             { icon: CalendarClock, text: property.delivery },
           ].map((spec, idx) => (

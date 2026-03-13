@@ -63,6 +63,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
 
   const description = locale === 'en' && property.descriptionEn ? property.descriptionEn : property.description;
   const features = locale === 'en' && property.featuresEn ? property.featuresEn : property.features;
+  const priceNote = locale === 'en' && property.priceNoteEn ? property.priceNoteEn : property.priceNote;
 
   return (
     <div style={{ backgroundColor: "#FFFFFF" }}>
@@ -113,7 +114,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
               >
                 <div>
                   <span className="font-display prop-unit-name block" style={{ color: "#1C1C1C" }}>
-                    {unit.name}
+                    {locale === 'en' && unit.nameEn ? unit.nameEn : unit.name}
                   </span>
                   <span className="font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
                     {unit.sqm} m²
@@ -135,6 +136,11 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
                 </div>
               </button>
             ))}
+            {priceNote && (
+              <p className="font-body font-light italic prop-text-xs mt-4" style={{ color: "#4B4B4B" }}>
+                {priceNote}
+              </p>
+            )}
           </div>
         )}
 
