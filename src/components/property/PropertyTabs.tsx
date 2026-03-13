@@ -114,7 +114,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
               >
                 <div>
                   <span className="font-display prop-unit-name block" style={{ color: "#1C1C1C" }}>
-                    {unit.name}
+                    {locale === 'en' && unit.nameEn ? unit.nameEn : unit.name}
                   </span>
                   <span className="font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
                     {unit.sqm} m²
