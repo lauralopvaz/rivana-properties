@@ -1,4 +1,4 @@
-import { Info, TrendingUp, Globe, Star, Tag, Package, Shield } from "lucide-react";
+import { Info, TrendingUp, Globe, Star, Tag, Package, Shield, AlertCircle } from "lucide-react";
 import { tr } from "@/lib/propertyI18n";
 import type { Differentiator, Locale } from "@/types/property";
 
