@@ -1,4 +1,5 @@
-import { Bed, Maximize, CalendarClock } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowLeft, Bed, Maximize, CalendarClock } from "lucide-react";
 import { formatUSD } from "@/lib/formatPrice";
 import { tr } from "@/lib/propertyI18n";
 import type { PropertyDetail, Locale } from "@/types/property";
