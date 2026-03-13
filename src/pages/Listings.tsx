@@ -407,8 +407,8 @@ const Listings = () => {
 
                 {/* Content */}
                 <div className="px-5 pt-5 pb-4">
-                  <p className="text-[9px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
-                  <h3 className="font-display text-[22px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
+                     <p className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
+                     <h3 className="font-display text-[24px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
 
                   {/* Specs row */}
                   <div className="flex items-center gap-[14px] mb-3">
