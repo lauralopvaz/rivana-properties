@@ -239,7 +239,7 @@ const Listings = () => {
           {/* Status */}
           <FilterDropdown label={allStatus} activeLabel={status} isOpen={openFilter === 'status'} onToggle={() => toggle('status')}>
             {statusesL.map(s => (
-              <button key={s} onClick={() => { setStatus(s); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[11px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: s === status ? '#CFAE60' : '#1C1C1C' }}>
+              <button key={s} onClick={() => { setStatus(s); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: s === status ? '#CFAE60' : '#1C1C1C' }}>
                 {s}
               </button>
             ))}
