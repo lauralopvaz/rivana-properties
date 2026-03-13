@@ -14,7 +14,10 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
   const heroImage = property.images[0] || "/placeholder.svg";
 
   return (
-    <section className="prop-hero-wrapper relative w-full">
+    <section
+      className="prop-hero-wrapper w-full"
+      style={{ position: 'relative', display: 'block' }}
+    >
       {/* Image container — overflow:hidden only here */}
       <div className="prop-hero-img-wrap relative overflow-hidden">
         <img
