@@ -382,7 +382,7 @@ const Listings = () => {
             {filtered.map(p => (
               <Link
                 key={p.id}
-                to={localePath(`/property/${p.slug}`)}
+                to={localePath(`/propiedad/${p.slug}`)}
                 className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
               >
                 {/* Image */}
