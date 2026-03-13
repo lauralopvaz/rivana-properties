@@ -178,47 +178,48 @@
   transition: transform 0.1s linear;
 }
 
-/* ── Property detail mobile typography ── */
-.prop-label     { font-size: 10px; }
-.prop-text-xs   { font-size: 9px; }
-.prop-text-sm   { font-size: 11px; }
-.prop-text-base { font-size: 13px; }
-.prop-title-sm  { font-size: 22px; }
-.prop-title-md  { font-size: 26px; }
-.prop-title-lg  { font-size: 30px; }
-.prop-title-xl  { font-size: 32px; }
-.prop-num-feat  { font-size: 48px; }
-.prop-num-price { font-size: 24px; }
-.prop-num-countdown { font-size: 20px; }
-.prop-tab-label { font-size: 9px; }
-.prop-unit-name { font-size: 18px; }
-.prop-unit-price { font-size: 16px; }
-.prop-badge     { font-size: 8px; }
-.prop-btn       { font-size: 9px; }
+/* ── Typography scale — Desktop & Tablet (≥768px) ── */
+.prop-label     { font-size: 11px; line-height: 1.2; }
+.prop-text-xs   { font-size: 12px; line-height: 1.7; }
+.prop-text-sm   { font-size: 14px; line-height: 1.8; }
+.prop-text-base { font-size: 16px; line-height: 1.8; }
+.prop-title-sm  { font-size: 22px; line-height: 1.05; }
+.prop-title-md  { font-size: 27px; line-height: 1.05; }
+.prop-title-lg  { font-size: 42px; line-height: 1.05; }
+.prop-title-xl  { font-size: 40px; line-height: 1.05; }
+.prop-num-feat  { font-size: 56px; line-height: 1.05; }
+.prop-num-price { font-size: 30px; line-height: 1.05; }
+.prop-num-countdown { font-size: 24px; line-height: 1.05; }
+.prop-tab-label { font-size: 12px; line-height: 1.2; }
+.prop-unit-name { font-size: 22px; line-height: 1.05; }
+.prop-unit-price { font-size: 20px; line-height: 1.05; }
+.prop-badge     { font-size: 11px; line-height: 1.0; }
+.prop-btn       { font-size: 12px; line-height: 1.2; }
 
-@media (max-width: 768px) {
+/* ── Typography scale — Mobile (<768px) ── */
+@media (max-width: 767px) {
   .prop-label     { font-size: 13px; }
-  .prop-text-xs   { font-size: 12px; }
-  .prop-text-sm   { font-size: 16px; }
-  .prop-text-base { font-size: 16px; }
-  .prop-title-sm  { font-size: 28px; }
+  .prop-text-xs   { font-size: 13px; }
+  .prop-text-sm   { font-size: 17px; }
+  .prop-text-base { font-size: 17px; }
+  .prop-title-sm  { font-size: 27px; }
   .prop-title-md  { font-size: 30px; }
-  .prop-title-lg  { font-size: 36px; }
+  .prop-title-lg  { font-size: 38px; }
   .prop-title-xl  { font-size: 36px; }
-  .prop-num-feat  { font-size: 52px; }
+  .prop-num-feat  { font-size: 54px; }
   .prop-num-price { font-size: 30px; }
   .prop-num-countdown { font-size: 26px; }
   .prop-tab-label { font-size: 13px; }
-  .prop-unit-name { font-size: 22px; }
-  .prop-unit-price { font-size: 20px; }
-  .prop-badge     { font-size: 12px; }
+  .prop-unit-name { font-size: 23px; }
+  .prop-unit-price { font-size: 21px; }
+  .prop-badge     { font-size: 13px; }
   .prop-btn       { font-size: 13px; }
 }
 
 /* Hero badges */
 .prop-hero-badge {
   padding: 5px 9px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 3px;
   font-weight: 300;
 }
@@ -232,10 +233,10 @@
   color: #CFAE60;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .prop-hero-badge {
     padding: 6px 12px;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 2px;
     font-weight: 400;
     min-width: 80px;
