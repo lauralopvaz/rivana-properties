@@ -178,8 +178,55 @@
   transition: transform 0.1s linear;
 }
 
+/* ── Property detail mobile typography (+4px) ── */
+.prop-label     { font-size: 8px; }
+.prop-text-xs   { font-size: 9px; }
+.prop-text-sm   { font-size: 11px; }
+.prop-text-base { font-size: 13px; }
+.prop-title-sm  { font-size: 18px; }
+.prop-title-md  { font-size: 26px; }
+.prop-title-lg  { font-size: 34px; }
+.prop-title-xl  { font-size: 32px; }
+.prop-num-feat  { font-size: 48px; }
+.prop-num-price { font-size: 26px; }
+.prop-num-countdown { font-size: 18px; }
+.prop-tab-label { font-size: 9px; }
+.prop-unit-name { font-size: 18px; }
+.prop-unit-price { font-size: 16px; }
+.prop-badge     { font-size: 7px; }
+
+@media (max-width: 768px) {
+  .prop-label     { font-size: 12px; }
+  .prop-text-xs   { font-size: 13px; }
+  .prop-text-sm   { font-size: 15px; }
+  .prop-text-base { font-size: 17px; }
+  .prop-title-sm  { font-size: 22px; }
+  .prop-title-md  { font-size: 30px; }
+  .prop-title-lg  { font-size: 38px; }
+  .prop-title-xl  { font-size: 36px; }
+  .prop-num-feat  { font-size: 52px; }
+  .prop-num-price { font-size: 30px; }
+  .prop-num-countdown { font-size: 22px; }
+  .prop-tab-label { font-size: 13px; }
+  .prop-unit-name { font-size: 22px; }
+  .prop-unit-price { font-size: 20px; }
+  .prop-badge     { font-size: 11px; }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(30 15% 93%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--gold) / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--gold) / 0.5);
+}
   width: 6px;
 }
 ::-webkit-scrollbar-track {

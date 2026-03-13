@@ -1,170 +1,143 @@
-import { useState, useRef } from "react";
-import { icons } from "lucide-react";
-import type { UnitType, Distance } from "@/types/property";
+import { useState } from "react";
+import { ChevronRight } from "lucide-react";
+import * as LucideIcons from "lucide-react";
 import { formatMXN } from "@/lib/formatPrice";
+import { t } from "@/lib/propertyI18n";
+import type { PropertyDetail, UnitType, Locale } from "@/types/property";
 
 interface PropertyTabsProps {
-  description: string;
-  units: UnitType[];
-  features: string[];
-  distances: Distance[];
+  property: PropertyDetail;
+  locale: Locale;
   onUnitClick: (unit: UnitType) => void;
 }
 
-const TABS = ["General", "Unidades", "Características", "Ubicación"] as const;
+type TabKey = "general" | "units" | "features" | "location";
 
-function UnitAvailabilityBadge({ available }: { available: number }) {
-  if (available < 5) {
+function AvailabilityBadge({ count, locale }: { count: number; locale: Locale }) {
+  const i = t(locale);
+  if (count < 5) {
     return (
       <span
-        className="px-2 py-0.5 text-[8px] font-body font-light uppercase tracking-[1px]"
-        style={{
-          color: "#b03a2e",
-          border: "1px solid rgba(176,58,46,0.3)",
-          backgroundColor: "rgba(176,58,46,0.06)",
-        }}
+        className="px-2 py-0.5 font-body font-light prop-badge uppercase"
+        style={{ letterSpacing: "1px", color: "#b03a2e", border: "1px solid rgba(176,58,46,0.3)" }}
       >
-        Últ. {available}
+        ⚠ {i.badgeLastUnits} {count}
       </span>
     );
   }
-  if (available <= 20) {
+  if (count <= 20) {
     return (
       <span
-        className="px-2 py-0.5 text-[8px] font-body font-light uppercase tracking-[1px]"
-        style={{
-          color: "#CFAE60",
-          border: "1px solid rgba(207,174,96,0.4)",
-          backgroundColor: "rgba(207,174,96,0.08)",
-        }}
+        className="px-2 py-0.5 font-body font-light prop-badge uppercase"
+        style={{ letterSpacing: "1px", color: "#CFAE60", border: "1px solid rgba(207,174,96,0.4)" }}
       >
-        {available} disp.
+        {count} {i.available}
       </span>
     );
   }
   return (
     <span
-      className="px-2 py-0.5 text-[8px] font-body font-light uppercase tracking-[1px]"
-      style={{
-        color: "rgba(207,174,96,0.6)",
-        border: "1px solid rgba(207,174,96,0.18)",
-      }}
+      className="px-2 py-0.5 font-body font-light prop-badge uppercase"
+      style={{ letterSpacing: "1px", color: "rgba(207,174,96,0.6)", border: "1px solid rgba(207,174,96,0.18)" }}
     >
-      {available} disp.
+      {count} {i.available}
     </span>
   );
 }
 
-export function PropertyTabs({
-  description,
-  units,
-  features,
-  distances,
-  onUnitClick,
-}: PropertyTabsProps) {
-  const [active, setActive] = useState(0);
-  const tabsRef = useRef<HTMLDivElement>(null);
+function DynamicIcon({ name, size = 16, className }: { name: string; size?: number; className?: string }) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const Icon = (LucideIcons as any)[name];
+  if (!Icon) return null;
+  return <Icon size={size} className={className} />;
+}
+
+export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProps) {
+  const i = t(locale);
+  const [active, setActive] = useState<TabKey>("general");
+
+  const tabs: { key: TabKey; label: string }[] = [
+    { key: "general", label: i.tabGeneral },
+    { key: "units", label: i.tabUnits },
+    { key: "features", label: i.tabFeatures },
+    { key: "location", label: i.tabLocation },
+  ];
 
   return (
     <div style={{ backgroundColor: "#FFFFFF" }}>
-      {/* Tab bar */}
+      {/* Tab bar — sticky */}
       <div
-        ref={tabsRef}
-        className="flex overflow-x-auto scrollbar-hide"
-        style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}
+        className="sticky top-[44px] z-40 flex overflow-x-auto"
+        style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid rgba(0,0,0,0.08)" }}
       >
-        {TABS.map((tab, i) => (
+        {tabs.map((tab) => (
           <button
-            key={tab}
-            onClick={() => setActive(i)}
-            className="flex-shrink-0 px-4 py-3 font-body font-light uppercase tracking-[2px] transition-colors relative"
+            key={tab.key}
+            onClick={() => setActive(tab.key)}
+            className="px-4 py-3 font-body font-light uppercase whitespace-nowrap prop-tab-label"
             style={{
-              fontSize: "9px",
-              color: active === i ? "#CFAE60" : "#4B4B4B",
+              letterSpacing: "2px",
+              color: active === tab.key ? "#CFAE60" : "#4B4B4B",
+              borderBottom: active === tab.key ? "2px solid #CFAE60" : "2px solid transparent",
+              transition: "color 0.2s, border-color 0.2s",
             }}
           >
-            {tab}
-            {active === i && (
-              <span
-                className="absolute bottom-0 left-0 right-0 h-[2px]"
-                style={{ backgroundColor: "#CFAE60" }}
-              />
-            )}
+            {tab.label}
           </button>
         ))}
       </div>
 
       {/* Content */}
       <div className="p-5">
-        {/* General */}
-        {active === 0 && (
-          <p
-            className="font-body font-light leading-[1.8]"
-            style={{ fontSize: "13px", color: "#4B4B4B" }}
-          >
-            {description}
+        {active === "general" && (
+          <p className="font-body font-light prop-text-base" style={{ color: "#4B4B4B", lineHeight: 1.8 }}>
+            {property.description}
           </p>
         )}
 
-        {/* Unidades */}
-        {active === 1 && (
+        {active === "units" && (
           <div className="flex flex-col">
-            {units.map((unit, i) => (
+            {property.units.map((unit, idx) => (
               <button
-                key={i}
+                key={idx}
                 onClick={() => onUnitClick(unit)}
-                className="flex items-center justify-between py-4 text-left transition-colors hover:bg-[rgba(207,174,96,0.04)]"
-                style={{
-                  borderBottom:
-                    i < units.length - 1 ? "1px solid rgba(0,0,0,0.06)" : "none",
-                }}
+                className="flex items-center justify-between py-4 text-left"
+                style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}
               >
                 <div>
-                  <span className="font-display text-[18px]" style={{ color: "#1C1C1C" }}>
+                  <span className="font-display prop-unit-name block" style={{ color: "#1C1C1C" }}>
                     {unit.name}
                   </span>
-                  <span
-                    className="block font-body font-light mt-0.5"
-                    style={{ fontSize: "9px", color: "#4B4B4B" }}
-                  >
-                    {unit.sqm} m²
+                  <span className="font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
+                    {unit.sqm} {i.sqmLabel}
                   </span>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
                   <div className="text-right">
-                    <span className="font-display text-[16px]" style={{ color: "#CFAE60" }}>
-                      Desde {formatMXN(unit.priceMXN)}
+                    <span className="font-display prop-unit-price block" style={{ color: "#CFAE60" }}>
+                      {i.priceFrom} {formatMXN(unit.priceMXN)}
                     </span>
-                    <span className="block mt-1">
-                      <UnitAvailabilityBadge available={unit.available} />
-                    </span>
+                    <div className="mt-1">
+                      <AvailabilityBadge count={unit.available} locale={locale} />
+                    </div>
                   </div>
-                  <span style={{ color: "#CFAE60", fontSize: "18px" }}>›</span>
+                  <ChevronRight size={16} style={{ color: "rgba(0,0,0,0.25)" }} />
                 </div>
               </button>
             ))}
           </div>
         )}
 
-        {/* Características */}
-        {active === 2 && (
+        {active === "features" && (
           <div className="grid grid-cols-2 gap-x-4">
-            {features.map((feat, i) => (
+            {property.features.map((feat, idx) => (
               <div
-                key={i}
+                key={idx}
                 className="flex items-center gap-2 py-3"
-                style={{
-                  borderBottom: "1px solid rgba(0,0,0,0.06)",
-                }}
+                style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}
               >
-                <span
-                  className="w-1 h-1 flex-shrink-0"
-                  style={{ backgroundColor: "#CFAE60" }}
-                />
-                <span
-                  className="font-body font-light"
-                  style={{ fontSize: "11px", color: "#1C1C1C" }}
-                >
+                <span className="w-1 h-1 flex-shrink-0" style={{ backgroundColor: "#CFAE60" }} />
+                <span className="font-body font-light prop-text-sm" style={{ color: "#1C1C1C" }}>
                   {feat}
                 </span>
               </div>
@@ -172,38 +145,20 @@ export function PropertyTabs({
           </div>
         )}
 
-        {/* Ubicación */}
-        {active === 3 && (
-          <div>
-            <div
-              className="w-full h-[180px] mb-4 flex items-center justify-center"
-              style={{ backgroundColor: "#ddd8d2" }}
-            >
-              <span
-                className="font-body font-light uppercase tracking-[2px]"
-                style={{ fontSize: "9px", color: "#4B4B4B" }}
-              >
-                Mapa próximamente
-              </span>
-            </div>
+        {active === "location" && (
+          <>
+            <div className="mb-4 h-[180px]" style={{ backgroundColor: "#ddd8d2" }} />
             <div className="grid grid-cols-2 gap-3">
-              {distances.map((d, i) => {
-                const IconComponent =
-                  icons[d.icon as keyof typeof icons] || icons["MapPin"];
-                return (
-                  <div key={i} className="flex items-center gap-2">
-                    <IconComponent size={14} style={{ color: "#1C1C1C" }} />
-                    <span
-                      className="font-body font-light"
-                      style={{ fontSize: "11px", color: "#1C1C1C" }}
-                    >
-                      {d.label}
-                    </span>
-                  </div>
-                );
-              })}
+              {property.distances.map((d, idx) => (
+                <div key={idx} className="flex items-center gap-2">
+                  <DynamicIcon name={d.icon} size={16} className="text-[#1C1C1C]" />
+                  <span className="font-body font-light prop-text-sm" style={{ color: "#4B4B4B" }}>
+                    {d.label}
+                  </span>
+                </div>
+              ))}
             </div>
-          </div>
+          </>
         )}
       </div>
     </div>

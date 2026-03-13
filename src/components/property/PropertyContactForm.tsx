@@ -1,19 +1,22 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { Check, MessageCircle, Loader2 } from "lucide-react";
+import { t } from "@/lib/propertyI18n";
+import type { Locale } from "@/types/property";
 
 interface PropertyContactFormProps {
   propertyName: string;
-  onSubmit?: (data: Record<string, string>) => void;
+  locale: Locale;
 }
 
-const FORM_ID = "xpwdzjyo"; // Replace with actual Formspree ID
+const FORM_ID = "xpwdzjyo";
 
-export function PropertyContactForm({ propertyName }: PropertyContactFormProps) {
+export function PropertyContactForm({ propertyName, locale }: PropertyContactFormProps) {
+  const i = t(locale);
   const [state, handleSubmit] = useForm(FORM_ID);
 
   if (state.succeeded) {
     return (
-      <section className="p-[22px]" style={{ backgroundColor: "#FFFFFF" }}>
+      <section id="contact-form" className="p-[22px]" style={{ backgroundColor: "#FFFFFF" }}>
         <div className="flex flex-col items-center py-10 gap-3">
           <div
             className="w-12 h-12 flex items-center justify-center"
@@ -21,11 +24,11 @@ export function PropertyContactForm({ propertyName }: PropertyContactFormProps) 
           >
             <Check size={20} style={{ color: "#CFAE60" }} />
           </div>
-          <p className="font-display text-[20px] italic text-center" style={{ color: "#CFAE60" }}>
-            Mensaje enviado
+          <p className="font-display prop-title-sm italic text-center" style={{ color: "#CFAE60" }}>
+            {i.formSuccess}
           </p>
-          <p className="font-body font-light text-center" style={{ fontSize: "11px", color: "#4B4B4B" }}>
-            Te contactamos en menos de 2 horas.
+          <p className="font-body font-light text-center prop-text-sm" style={{ color: "#4B4B4B" }}>
+            {i.formSuccessDesc}
           </p>
         </div>
       </section>
@@ -35,23 +38,19 @@ export function PropertyContactForm({ propertyName }: PropertyContactFormProps) 
   const inputStyle: React.CSSProperties = {
     backgroundColor: "#F8F6F2",
     border: "1px solid rgba(0,0,0,0.08)",
-    fontSize: "12px",
     color: "#1C1C1C",
   };
 
   return (
-    <section className="p-[22px]" style={{ backgroundColor: "#FFFFFF" }}>
-      <p
-        className="font-body font-light uppercase tracking-[3px] mb-1"
-        style={{ fontSize: "8px", color: "#CFAE60" }}
-      >
-        Solicitar Información
+    <section id="contact-form" className="p-[22px]" style={{ backgroundColor: "#FFFFFF" }}>
+      <p className="font-body font-light uppercase prop-label mb-1" style={{ letterSpacing: "3px", color: "#CFAE60" }}>
+        {i.formLabel}
       </p>
-      <h2 className="font-display text-[24px] italic mb-1" style={{ color: "#CFAE60" }}>
-        Habla con un Asesor
+      <h2 className="font-display prop-title-md italic mb-1" style={{ color: "#CFAE60" }}>
+        {i.formTitle}
       </h2>
-      <p className="font-body font-light mb-5" style={{ fontSize: "11px", color: "#4B4B4B" }}>
-        Recibe precios actualizados, planos y disponibilidad directamente.
+      <p className="font-body font-light prop-text-sm mb-5" style={{ color: "#4B4B4B" }}>
+        {i.formDesc}
       </p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
@@ -60,9 +59,9 @@ export function PropertyContactForm({ propertyName }: PropertyContactFormProps) 
 
         <input
           name="nombre"
-          placeholder="Nombre completo"
+          placeholder={i.formName}
           required
-          className="w-full px-3 py-3 font-body font-light focus:outline-none"
+          className="w-full px-3 py-3 font-body font-light prop-text-sm focus:outline-none"
           style={{ ...inputStyle }}
         />
         <ValidationError prefix="Nombre" field="nombre" errors={state.errors} />
@@ -70,9 +69,9 @@ export function PropertyContactForm({ propertyName }: PropertyContactFormProps) 
         <input
           name="email"
           type="email"
-          placeholder="Correo electrónico"
+          placeholder={i.formEmail}
           required
-          className="w-full px-3 py-3 font-body font-light focus:outline-none"
+          className="w-full px-3 py-3 font-body font-light prop-text-sm focus:outline-none"
           style={{ ...inputStyle }}
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
@@ -80,34 +79,29 @@ export function PropertyContactForm({ propertyName }: PropertyContactFormProps) 
         <input
           name="telefono"
           type="tel"
-          placeholder="Teléfono / WhatsApp"
-          className="w-full px-3 py-3 font-body font-light focus:outline-none"
+          placeholder={i.formPhone}
+          className="w-full px-3 py-3 font-body font-light prop-text-sm focus:outline-none"
           style={{ ...inputStyle }}
         />
 
         <select
           name="destino"
-          className="w-full px-3 py-3 font-body font-light focus:outline-none appearance-none"
+          className="w-full px-3 py-3 font-body font-light prop-text-sm focus:outline-none appearance-none"
           style={{ ...inputStyle, color: "#4B4B4B" }}
           defaultValue=""
         >
-          <option value="" disabled>
-            Destino de interés
-          </option>
-          <option value="costa-mujeres">Costa Mujeres</option>
-          <option value="zona-hotelera">Zona Hotelera</option>
-          <option value="puerto-cancun">Puerto Cancún</option>
-          <option value="tulum">Tulum</option>
-          <option value="playa-del-carmen">Playa del Carmen</option>
-          <option value="mayakoba">Mayakoba</option>
+          <option value="" disabled>{i.formDestination}</option>
+          {i.destOptions.map((opt) => (
+            <option key={opt.value} value={opt.value}>{opt.label}</option>
+          ))}
         </select>
 
         <button
           type="submit"
           disabled={state.submitting}
-          className="w-full py-3.5 font-body font-light uppercase tracking-[3px] flex items-center justify-center gap-2"
+          className="w-full py-3.5 font-body font-light uppercase prop-text-xs flex items-center justify-center gap-2"
           style={{
-            fontSize: "9px",
+            letterSpacing: "3px",
             backgroundColor: "#CFAE60",
             color: "#FFFFFF",
             opacity: state.submitting ? 0.7 : 1,
@@ -116,21 +110,20 @@ export function PropertyContactForm({ propertyName }: PropertyContactFormProps) 
           {state.submitting ? (
             <>
               <Loader2 size={14} className="animate-spin" />
-              Enviando...
+              {i.formSending}
             </>
           ) : (
-            "Solicitar Información"
+            i.formSubmit
           )}
         </button>
 
         {state.errors && (
-          <p className="font-body font-light text-center" style={{ fontSize: "10px", color: "#b03a2e" }}>
-            Hubo un error. Escríbenos por WhatsApp.
+          <p className="font-body font-light text-center prop-text-xs" style={{ color: "#b03a2e" }}>
+            {i.formError}
           </p>
         )}
       </form>
 
-      {/* WhatsApp secondary */}
       <button
         onClick={() =>
           window.open(
@@ -138,16 +131,16 @@ export function PropertyContactForm({ propertyName }: PropertyContactFormProps) 
             "_blank"
           )
         }
-        className="w-full mt-3 py-3 font-body font-light uppercase tracking-[2px] flex items-center justify-center gap-2"
+        className="w-full mt-3 py-3 font-body font-light uppercase prop-text-xs flex items-center justify-center gap-2"
         style={{
-          fontSize: "9px",
+          letterSpacing: "2px",
           border: "1px solid rgba(37,211,102,0.3)",
           color: "#25d366",
           backgroundColor: "transparent",
         }}
       >
         <MessageCircle size={14} />
-        Escribir por WhatsApp
+        {i.formWhatsApp}
       </button>
     </section>
   );

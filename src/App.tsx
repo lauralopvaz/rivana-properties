@@ -71,7 +71,8 @@ const AppRoutes = () => (
     <Route path="/listings" element={<Listings />} />
     <Route path="/presale" element={<PreSale />} />
     <Route path="/property/:slug" element={<PropertyDetail />} />
-    <Route path="/properties/:slug" element={<PropertyDetailNew />} />
+    <Route path="/propiedades/:slug" element={<PropertyDetailNew locale="es" />} />
+    <Route path="/properties/:slug" element={<PropertyDetailNew locale="en" />} />
 
     {/* ── ENGLISH (/en prefix) ── */}
     <Route path="/en" element={<Index />} />
@@ -113,8 +114,8 @@ const AppRoutes = () => (
     <Route path="/en/about" element={<About />} />
     <Route path="/en/listings" element={<Listings />} />
     <Route path="/en/presale" element={<PreSale />} />
-    <Route path="/en/property/:slug" element={<PropertyDetail />} />
-    <Route path="/en/properties/:slug" element={<PropertyDetailNew />} />
+    <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
+    <Route path="/en/properties/:slug" element={<PropertyDetailNew locale="en" />} />
 
     {/* 404 */}
     <Route path="*" element={<NotFound />} />

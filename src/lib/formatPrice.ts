@@ -1,26 +1,22 @@
 export function formatMXN(n: number): string {
   if (n >= 1_000_000) {
-    const val = n / 1_000_000;
-    const formatted = val % 1 === 0 ? val.toFixed(0) : val.toFixed(1);
-    return `$${formatted}M MXN`;
+    const val = (n / 1_000_000).toFixed(1).replace(/\.0$/, "");
+    return `$${val}M MXN`;
   }
   if (n >= 1_000) {
-    const val = n / 1_000;
-    const formatted = val % 1 === 0 ? val.toFixed(0) : val.toFixed(0);
-    return `$${formatted}K MXN`;
+    return `$${Math.round(n / 1_000)}K MXN`;
   }
-  return `$${n.toLocaleString()} MXN`;
+  return `$${n.toLocaleString("es-MX")} MXN`;
 }
 
 export function formatUSD(n: number): string {
   if (n >= 1_000_000) {
-    const val = n / 1_000_000;
-    const formatted = val % 1 === 0 ? val.toFixed(0) : val.toFixed(1);
-    return `$${formatted}M USD`;
+    const val = (n / 1_000_000).toFixed(1).replace(/\.0$/, "");
+    return `$${val}M USD`;
   }
-  return `$${n.toLocaleString('en-US')} USD`;
+  return `$${n.toLocaleString("en-US")} USD`;
 }
 
 export function formatNumber(n: number): string {
-  return n.toLocaleString('es-MX');
+  return n.toLocaleString("es-MX");
 }
