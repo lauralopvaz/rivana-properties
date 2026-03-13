@@ -230,7 +230,7 @@ const Listings = () => {
           {/* Zone */}
           <FilterDropdown label={allZones} activeLabel={zone} isOpen={openFilter === 'zone'} onToggle={() => toggle('zone')}>
             {zonesL.map(z => (
-              <button key={z} onClick={() => { setZone(z); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[11px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: z === zone ? '#CFAE60' : '#1C1C1C' }}>
+              <button key={z} onClick={() => { setZone(z); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: z === zone ? '#CFAE60' : '#1C1C1C' }}>
                 {z}
               </button>
             ))}
