@@ -86,7 +86,13 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
       {/* Tab bar — sticky */}
       <div
         className={`tabs-wrap prop-tabs-bar${scrolledEnd ? ' scrolled-end' : ''}`}
-        style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid rgba(0,0,0,0.08)" }}
+        style={{
+          backgroundColor: "#FFFFFF",
+          borderBottom: "1px solid rgba(0,0,0,0.08)",
+          position: 'sticky',
+          top: '60px',
+          zIndex: 40,
+        }}
       >
         <div
           ref={tabsScrollRef}
@@ -113,7 +119,16 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
       </div>
 
       {/* Tab content — static, auto height, visible overflow */}
-      <div className="prop-tab-content" style={{ position: "static", height: "auto", overflow: "visible" }}>
+        <div
+          className="prop-tab-content"
+          style={{
+            position: 'static',
+            height: 'auto',
+            overflow: 'visible',
+            paddingTop: '24px',
+            paddingBottom: '32px',
+          }}
+        >
         {active === "general" && (
           <div className="prop-tab-text-wrap">
             <p className="font-body font-light prop-text-base" style={{ color: "#4B4B4B" }}>

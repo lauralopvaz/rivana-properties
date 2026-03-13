@@ -14,9 +14,15 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
   const heroImage = property.images[0] || "/placeholder.svg";
 
   return (
-    <section className="prop-hero-wrapper relative w-full">
+    <section
+      className="prop-hero-wrapper w-full"
+      style={{ position: 'relative', display: 'block' }}
+    >
       {/* Image container — overflow:hidden only here */}
-      <div className="prop-hero-img-wrap relative overflow-hidden">
+      <div
+        className="prop-hero-img-wrap relative overflow-hidden"
+        style={{ height: 'clamp(380px, 52vw, 580px)' }}
+      >
         <img
           src={heroImage}
           alt={property.name}
@@ -106,8 +112,13 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
 
       {/* Badges — OUTSIDE overflow:hidden container */}
       <div
-        className="prop-hero-badges absolute flex gap-2 flex-nowrap"
-        style={{ zIndex: 20 }}
+        className="prop-hero-badges flex gap-2 flex-nowrap"
+        style={{
+          position: 'absolute',
+          top: '20px',
+          left: '20px',
+          zIndex: 30,
+        }}
       >
         {property.status === "preventa" && (
           <span className="prop-hero-badge prop-hero-badge--presale font-body uppercase inline-flex items-center whitespace-nowrap">

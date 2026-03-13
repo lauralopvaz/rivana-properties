@@ -190,21 +190,26 @@
 /* Content wrapper — constrained on desktop */
 .prop-page-content {
   width: 100%;
+  overflow: visible !important;
+  height: auto !important;
 }
 
 /* ── Hero ── */
 .prop-hero-wrapper {
-  position: relative;
+  position: relative !important;
+  display: block !important;
   overflow: visible;
 }
 .prop-hero-img-wrap {
   position: relative;
   overflow: hidden;
-  height: 420px;
+  height: clamp(380px, 52vw, 580px) !important;
 }
 .prop-hero-badges {
-  top: 20px;
-  left: 20px;
+  position: absolute !important;
+  top: 20px !important;
+  left: 20px !important;
+  z-index: 30 !important;
   gap: 8px;
 }
 .prop-hero-content {
@@ -285,10 +290,10 @@
 /* ── Tab content ── */
 .prop-tab-content {
   padding: 24px 18px 32px;
-  height: auto;
+  height: auto !important;
   min-height: 120px;
-  overflow: visible;
-  position: static;
+  overflow: visible !important;
+  position: static !important;
 }
 .prop-tab-text-wrap {
   line-height: 1.9;
@@ -296,8 +301,8 @@
 
 /* Tabs wrapper — no height constraints */
 .prop-tabs-wrapper {
-  height: auto;
-  overflow: visible;
+  height: auto !important;
+  overflow: visible !important;
 }
 
 /* Tabs bar */
