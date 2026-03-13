@@ -66,6 +66,11 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
 
       <PropertyGalleryStrip images={property.images} locale={locale} />
 
+      {/* DEBUG */}
+      <div style={{ background: 'red', padding: '40px', fontSize: '32px', color: 'white' }}>
+        DEBUG: Content starts here
+      </div>
+
       {/* Constrained content */}
       <div
         className="prop-page-content"
