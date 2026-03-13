@@ -398,7 +398,7 @@ const Listings = () => {
                       {p.status === 'preventa' ? (L === 'es' ? 'Preventa' : 'Pre-Sale') : (L === 'es' ? 'Entrega Inmediata' : 'Ready to Move')}
                     </span>
                     {p.yield && (
-                      <span className="text-[9px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
+                      <span className="text-[12px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
                         <TrendingUpIcon className="w-3 h-3" /> {p.yield}
                       </span>
                     )}
