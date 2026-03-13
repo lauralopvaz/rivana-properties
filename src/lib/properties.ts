@@ -1,4 +1,12 @@
 import type { PropertyDetail } from '@/types/property';
+import mondrianHero from '@/assets/mondrian-hero.png';
+import mondrianFrontDesk from '@/assets/mondrian-front-desk.png';
+import mondrianCoffeeBar from '@/assets/mondrian-coffee-bar.jpg';
+import mondrianRestaurant from '@/assets/mondrian-restaurant.png';
+import mondrianRooftop from '@/assets/mondrian-rooftop.png';
+import mondrianBeachClub from '@/assets/mondrian-beach-club.png';
+import mondrianGym from '@/assets/mondrian-gym.png';
+import mondrianPool from '@/assets/mondrian-pool.png';
 
 export const properties: PropertyDetail[] = [
   {
