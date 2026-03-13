@@ -48,6 +48,11 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
           onUnitClick={handleUnitClick}
         />
 
+        {/* DEBUG: this red block should appear after tabs */}
+        <div style={{ height: 200, backgroundColor: "red", color: "white", padding: 20, fontSize: 24 }}>
+          DEBUG: Presale exists: {String(!!property.presalePrice)} | Differentiators: {property.differentiators?.length ?? 0}
+        </div>
+
         {property.presalePrice && (
           <PropertyPresalePrice
             presalePrice={property.presalePrice}
