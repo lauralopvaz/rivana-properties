@@ -53,7 +53,14 @@ function DynamicIcon({ name, size = 16, className }: { name: string; size?: numb
 
 export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProps) {
   const [active, setActive] = useState<TabKey>("general");
+  const [expandedUnit, setExpandedUnit] = useState<number | null>(null);
 
+  const toggleUnit = useCallback((idx: number, unit: UnitType) => {
+    if (unit.floorPlanUrl) {
+      setExpandedUnit(prev => prev === idx ? null : idx);
+    }
+    onUnitClick(unit);
+  }, [onUnitClick]);
   const tabs: { key: TabKey; label: string }[] = [
     { key: "general", label: tr(locale, 'tabGeneral') },
     { key: "units", label: tr(locale, 'tabUnits') },
