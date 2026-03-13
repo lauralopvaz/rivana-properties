@@ -35,25 +35,16 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         {tr(locale, 'backToProperties')}
       </Link>
 
-      {/* Badges */}
-      <div className="absolute top-12 left-4 flex gap-2 z-10">
+      {/* Badges — mobile-enhanced */}
+      <div className="absolute top-12 left-4 flex gap-2 z-10 prop-hero-badges">
         {property.status === "preventa" && (
           <span
-            className="px-3 py-1 prop-label font-body font-light uppercase"
-            style={{ letterSpacing: "3px", backgroundColor: "#26547D", color: "#FFFFFF" }}
+            className="font-body font-light uppercase prop-hero-badge prop-hero-badge--presale"
           >
             {tr(locale, 'presale')}
           </span>
         )}
-        <span
-          className="px-3 py-1 prop-label font-body font-light uppercase"
-          style={{
-            letterSpacing: "3px",
-            backgroundColor: "rgba(207,174,96,0.12)",
-            border: "1px solid rgba(207,174,96,0.24)",
-            color: "#CFAE60",
-          }}
-        >
+        <span className="font-body font-light uppercase prop-hero-badge prop-hero-badge--roi">
           ROI {property.roiEstimate}%
         </span>
       </div>
@@ -63,7 +54,6 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         <p
           className="font-body font-light uppercase mb-1 prop-label"
           style={{ letterSpacing: "3px", color: "#CFAE60" }}
-
         >
           {locale === 'en' && property.zoneEn ? property.zoneEn : property.zone}
         </p>
@@ -93,8 +83,8 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         {/* Price bar */}
         <div className="flex items-center gap-3">
           <div className="flex-1">
-            <span className="font-body font-light prop-text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
-              {tr(locale, 'from')}{" "}
+            <span className="font-body font-light prop-badge uppercase block" style={{ letterSpacing: "1px", color: "rgba(255,255,255,0.5)" }}>
+              {tr(locale, 'from')}
             </span>
             <span className="font-display prop-num-price" style={{ color: "#CFAE60" }}>
               {formatUSD(property.priceFromUSD)}
@@ -102,7 +92,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
           </div>
           <button
             onClick={onViewPrices}
-            className="px-5 py-3 font-body font-light uppercase prop-text-xs"
+            className="px-5 py-3 font-body font-light uppercase prop-btn"
             style={{
               letterSpacing: "2px",
               backgroundColor: "#CFAE60",

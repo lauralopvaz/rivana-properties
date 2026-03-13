@@ -1,15 +1,28 @@
 import { useState, useEffect } from "react";
-import { Tag, MessageCircle } from "lucide-react";
+import { Tag, MessageCircle, CreditCard } from "lucide-react";
 import { formatNumber } from "@/lib/formatPrice";
 import { tr } from "@/lib/propertyI18n";
 import type { PresalePrice, Locale } from "@/types/property";
+
+export interface PaymentPlanRow {
+  percent: string;
+  label: string;
+  labelEn?: string;
+}
 
 interface PropertyPresalePriceProps {
   presalePrice: PresalePrice;
   locale: Locale;
   onReserve?: () => void;
   onWhatsApp?: () => void;
+  paymentPlan?: PaymentPlanRow[];
 }
+
+const defaultPaymentPlan: PaymentPlanRow[] = [
+  { percent: '30%', label: '30% de enganche', labelEn: '30% Down payment' },
+  { percent: '20%', label: '20% diferido en 12 meses', labelEn: '20% Deferred over 12 months' },
+  { percent: '50%', label: '50% a la entrega', labelEn: '50% At delivery' },
+];
 
 function useCountdown(deadline: string) {
   const [remaining, setRemaining] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -33,9 +46,10 @@ function useCountdown(deadline: string) {
   return remaining;
 }
 
-export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsApp }: PropertyPresalePriceProps) {
+export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsApp, paymentPlan }: PropertyPresalePriceProps) {
   const countdown = useCountdown(presalePrice.deadlineDate);
   const savings = presalePrice.originalMXN - presalePrice.discountMXN;
+  const plan = paymentPlan || defaultPaymentPlan;
 
   const deadlineFormatted = new Date(presalePrice.deadlineDate).toLocaleDateString(
     locale === "es" ? "es-MX" : "en-US",
@@ -100,7 +114,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
 
       {/* Savings */}
       <div
-        className="p-3 mb-4"
+        className="p-3 mb-3"
         style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}
       >
         <span className="font-display prop-title-sm" style={{ color: "#CFAE60" }}>
@@ -112,6 +126,33 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
         <span className="block font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
           {tr(locale, 'validDuringPresale')}
         </span>
+      </div>
+
+      {/* Payment plan */}
+      <div
+        className="p-[12px_14px] mb-3"
+        style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(0,0,0,0.07)" }}
+      >
+        <div className="flex items-center gap-2 mb-2">
+          <CreditCard size={13} style={{ color: "#CFAE60" }} />
+          <span className="font-body font-light uppercase prop-badge" style={{ letterSpacing: "2px", color: "#CFAE60" }}>
+            {tr(locale, 'paymentPlanLabel')}
+          </span>
+        </div>
+        {plan.map((row, idx) => (
+          <div
+            key={idx}
+            className="flex items-center justify-between py-[7px]"
+            style={{ borderBottom: idx < plan.length - 1 ? "1px solid rgba(0,0,0,0.05)" : "none" }}
+          >
+            <span className="font-display prop-unit-price" style={{ color: "#CFAE60", fontWeight: 300 }}>
+              {row.percent}
+            </span>
+            <span className="font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
+              {locale === 'en' && row.labelEn ? row.labelEn : row.label}
+            </span>
+          </div>
+        ))}
       </div>
 
       {/* Countdown */}
@@ -144,7 +185,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
       <div className="flex gap-[2px]">
         <button
           onClick={onReserve}
-          className="flex-1 py-3.5 font-body font-light uppercase prop-text-xs"
+          className="flex-1 py-3.5 font-body font-light uppercase prop-btn"
           style={{ letterSpacing: "3px", backgroundColor: "#CFAE60", color: "#FFFFFF" }}
         >
           {tr(locale, 'reserveThisPrice')}
