@@ -313,7 +313,7 @@ const Listings = () => {
                 ))}
               </div>
 
-              <p className="text-[8px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Rango de Precio' : 'Price Range'} ({currency})</p>
+              <p className="text-[11px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Rango de Precio' : 'Price Range'} ({currency})</p>
               <div className="flex items-center gap-2 mb-4">
                 <input
                   type="text"
