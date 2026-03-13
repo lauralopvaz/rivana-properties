@@ -136,6 +136,11 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
                 </div>
               </button>
             ))}
+            {priceNote && (
+              <p className="font-body font-light italic prop-text-xs mt-4" style={{ color: "#4B4B4B" }}>
+                {priceNote}
+              </p>
+            )}
           </div>
         )}
 

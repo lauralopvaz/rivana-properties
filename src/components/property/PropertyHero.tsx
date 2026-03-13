@@ -63,6 +63,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         <p
           className="font-body font-light uppercase mb-1 prop-label"
           style={{ letterSpacing: "3px", color: "#CFAE60" }}
+
         >
           {property.zone}
         </p>

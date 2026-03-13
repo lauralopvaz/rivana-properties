@@ -43,10 +43,12 @@ export interface PropertyDetail {
   slug: string
   name: string
   zone: string
+  zoneEn?: string
   status: PropertyStatus
   priceFromUSD: number
   priceFromMXN: number
   bedrooms: string
+  bedroomsEn?: string
   sqmRange: string
   delivery: string
   roiEstimate: number
@@ -60,4 +62,6 @@ export interface PropertyDetail {
   distances: Distance[]
   presalePrice?: PresalePrice
   differentiators?: Differentiator[]
+  priceNote?: string
+  priceNoteEn?: string
 }
