@@ -56,7 +56,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   };
 
   return (
-    <div className="prop-page-wrapper">
+    <div className="prop-page-wrapper pt-20">
       {/* Full-width sections */}
       <PropertyHero
         property={property}
