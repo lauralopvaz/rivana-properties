@@ -26,21 +26,21 @@ export function PropertyStickyBar({ onReserve, onWhatsApp, onBrochure, locale, v
     >
       <button
         onClick={onReserve}
-        className="flex-[2] py-3 font-body font-light uppercase prop-btn flex items-center justify-center"
+        className="flex-[2] py-3 font-body font-light uppercase prop-btn prop-sticky-main flex items-center justify-center"
         style={{ letterSpacing: "2px", backgroundColor: "#CFAE60", color: "#FFFFFF" }}
       >
         {tr(locale, 'requestInfoShort')}
       </button>
       <button
         onClick={onWhatsApp}
-        className="w-[46px] flex items-center justify-center flex-shrink-0"
+        className="w-[46px] flex items-center justify-center flex-shrink-0 prop-sticky-wa"
         style={{ border: "1px solid rgba(37,211,102,0.28)" }}
       >
         <MessageCircle size={18} style={{ color: "#25d366" }} />
       </button>
       <button
         onClick={onBrochure}
-        className="flex-1 py-3 font-body font-light uppercase prop-btn flex items-center justify-center gap-1"
+        className="flex-1 py-3 font-body font-light uppercase prop-btn prop-sticky-brochure flex items-center justify-center gap-1"
         style={{ letterSpacing: "2px", border: "1px solid rgba(207,174,96,0.22)", color: "#CFAE60" }}
       >
         <FileText size={12} style={{ color: "#CFAE60" }} />
