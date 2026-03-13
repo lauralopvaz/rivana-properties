@@ -78,4 +78,5 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         locale={locale}
       />
     </div>
+  );
 }
