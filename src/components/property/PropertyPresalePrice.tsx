@@ -65,7 +65,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
 
   return (
     <section
-      className="p-5"
+      className="prop-section-presale"
       style={{
         backgroundColor: "#FFFFFF",
         borderTop: "3px solid #CFAE60",
