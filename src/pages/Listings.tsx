@@ -335,7 +335,7 @@ const Listings = () => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([priceRange[0], Math.max(v, priceRange[0])]);
                   }}
-                  className="flex-1 py-[9px] px-3 text-[11px] font-body font-[300] rounded-none"
+                  className="flex-1 py-[9px] px-3 text-[14px] font-body font-[300] rounded-none"
                   style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
               </div>
