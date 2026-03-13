@@ -290,10 +290,10 @@
 /* ── Tab content ── */
 .prop-tab-content {
   padding: 24px 18px 32px;
-  height: auto;
+  height: auto !important;
   min-height: 120px;
-  overflow: visible;
-  position: static;
+  overflow: visible !important;
+  position: static !important;
 }
 .prop-tab-text-wrap {
   line-height: 1.9;
@@ -301,8 +301,8 @@
 
 /* Tabs wrapper — no height constraints */
 .prop-tabs-wrapper {
-  height: auto;
-  overflow: visible;
+  height: auto !important;
+  overflow: visible !important;
 }
 
 /* Tabs bar */
