@@ -199,7 +199,7 @@ export const SchedulingModal = () => {
               <button
                 type="submit"
                 className="w-full uppercase transition-colors duration-300"
-                style={{ background: '#CFAE60', color: 'white', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '10px', letterSpacing: '3px', fontWeight: 400, border: 'none', borderRadius: 0, cursor: 'pointer' }}
+                style={{ background: '#CFAE60', color: 'white', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, border: 'none', borderRadius: 0, cursor: 'pointer' }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = '#b89a4a'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = '#CFAE60'; }}
               >
