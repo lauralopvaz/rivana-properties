@@ -215,6 +215,48 @@
   .prop-btn       { font-size: 13px; }
 }
 
+/* Hero badges */
+.prop-hero-badge {
+  padding: 5px 9px;
+  font-size: 8px;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+.prop-hero-badge--presale {
+  background-color: #26547D;
+  color: #FFFFFF;
+}
+.prop-hero-badge--roi {
+  background-color: rgba(207,174,96,0.12);
+  border: 1px solid rgba(207,174,96,0.24);
+  color: #CFAE60;
+}
+
+@media (max-width: 768px) {
+  .prop-hero-badge {
+    padding: 6px 12px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    min-width: 80px;
+    text-align: center;
+  }
+  .prop-hero-badge--presale {
+    background-color: #26547D;
+    color: #FFFFFF;
+  }
+  .prop-hero-badge--roi {
+    background-color: rgba(207,174,96,0.16);
+    border: 1px solid rgba(207,174,96,0.45);
+    color: #CFAE60;
+  }
+  .prop-hero-badges {
+    top: 16px !important;
+    left: 16px !important;
+    gap: 8px !important;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
