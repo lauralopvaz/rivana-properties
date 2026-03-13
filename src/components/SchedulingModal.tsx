@@ -125,7 +125,7 @@ export const SchedulingModal = () => {
                 <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
-            <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '26px', fontWeight: 300, color: '#1C1C1C', marginBottom: '12px' }}>
+            <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '30px', fontWeight: 300, color: '#1C1C1C', marginBottom: '12px' }}>
               {L === 'es' ? '¡Tu solicitud fue recibida!' : 'Your request has been received!'}
             </h3>
             <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', fontWeight: 300, textAlign: 'center' }}>
