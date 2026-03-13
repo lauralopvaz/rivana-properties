@@ -227,8 +227,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--gold) / 0.5);
 }
-  width: 6px;
-}
 ::-webkit-scrollbar-track {
   background: hsl(30 15% 93%);
 }
