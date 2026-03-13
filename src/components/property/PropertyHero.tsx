@@ -25,8 +25,18 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         style={{ background: "linear-gradient(to bottom, transparent 30%, rgba(28,28,28,0.92) 100%)" }}
       />
 
+      {/* Breadcrumb back link */}
+      <Link
+        to={locale === "en" ? "/en/properties" : "/propiedades"}
+        className="absolute top-4 left-4 z-20 flex items-center gap-1.5 font-body font-light prop-text-sm"
+        style={{ color: "rgba(255,255,255,0.7)" }}
+      >
+        <ArrowLeft size={14} />
+        {tr(locale, 'backToProperties')}
+      </Link>
+
       {/* Badges */}
-      <div className="absolute top-4 left-4 flex gap-2 z-10">
+      <div className="absolute top-12 left-4 flex gap-2 z-10">
         {property.status === "preventa" && (
           <span
             className="px-3 py-1 prop-label font-body font-light uppercase"
