@@ -363,7 +363,7 @@ const Listings = () => {
             </div>
           </FilterDropdown>
         </div>
-        <p className="max-w-[1400px] mx-auto mt-3 text-[12px] font-body font-[300]" style={{ color: '#4B4B4B' }}>
+        <p className="max-w-[1400px] mx-auto mt-3 text-[14px] font-body font-[300]" style={{ color: '#4B4B4B' }}>
           {filtered.length} {L === 'es' ? 'propiedades encontradas' : 'properties found'}
         </p>
       </section>
