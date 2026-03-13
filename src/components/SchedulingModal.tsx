@@ -210,7 +210,7 @@ export const SchedulingModal = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 uppercase transition-colors duration-300"
-                style={{ background: 'rgba(37,211,102,0.10)', border: '1px solid rgba(37,211,102,0.30)', color: '#25d366', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '10px', letterSpacing: '3px', fontWeight: 400, borderRadius: 0, textDecoration: 'none', cursor: 'pointer' }}
+                style={{ background: 'rgba(37,211,102,0.10)', border: '1px solid rgba(37,211,102,0.30)', color: '#25d366', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, borderRadius: 0, textDecoration: 'none', cursor: 'pointer' }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.20)'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.10)'; }}
               >
