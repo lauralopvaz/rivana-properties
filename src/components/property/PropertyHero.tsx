@@ -65,7 +65,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
           style={{ letterSpacing: "3px", color: "#CFAE60" }}
 
         >
-          {property.zone}
+          {locale === 'en' && property.zoneEn ? property.zoneEn : property.zone}
         </p>
         <h1
           className="font-display prop-title-lg leading-tight mb-3"
