@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import type { PropertyDetail, UnitType } from "@/types/property";
+import type { PropertyDetail, UnitType, Locale } from "@/types/property";
 import { PropertyHero } from "./PropertyHero";
 import { PropertyGalleryStrip } from "./PropertyGalleryStrip";
 import { PropertyTabs } from "./PropertyTabs";
@@ -10,13 +10,14 @@ import { PropertyStickyBar } from "./PropertyStickyBar";
 
 interface PropertyPageProps {
   property: PropertyDetail;
+  locale: Locale;
 }
 
-export function PropertyPage({ property }: PropertyPageProps) {
+export function PropertyPage({ property, locale }: PropertyPageProps) {
   const contactRef = useRef<HTMLDivElement>(null);
 
   const scrollToContact = () => {
-    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const openWhatsApp = () => {
@@ -26,39 +27,31 @@ export function PropertyPage({ property }: PropertyPageProps) {
     );
   };
 
-  const handleUnitClick = (unit: UnitType) => {
+  const handleUnitClick = (_unit: UnitType) => {
     scrollToContact();
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen" style={{ backgroundColor: "#F8F6F2" }}>
       <div className="flex-1">
         <PropertyHero
-          name={property.name}
-          zone={property.zone}
-          status={property.status}
-          priceFromUSD={property.priceFromUSD}
-          bedrooms={property.bedrooms}
-          sqmRange={property.sqmRange}
-          delivery={property.delivery}
-          roiEstimate={property.roiEstimate}
-          images={property.images}
+          property={property}
+          locale={locale}
           onViewPrices={scrollToContact}
         />
 
-        <PropertyGalleryStrip images={property.images} />
+        <PropertyGalleryStrip images={property.images} locale={locale} />
 
         <PropertyTabs
-          description={property.description}
-          units={property.units}
-          features={property.features}
-          distances={property.distances}
+          property={property}
+          locale={locale}
           onUnitClick={handleUnitClick}
         />
 
         {property.presalePrice && (
           <PropertyPresalePrice
             presalePrice={property.presalePrice}
+            locale={locale}
             onReserve={scrollToContact}
             onWhatsApp={openWhatsApp}
           />
@@ -69,21 +62,20 @@ export function PropertyPage({ property }: PropertyPageProps) {
             differentiators={property.differentiators}
             roiEstimate={property.roiEstimate}
             plusvaliaEstimate={property.plusvaliaEstimate}
+            locale={locale}
           />
         )}
 
         <div ref={contactRef}>
-          <PropertyContactForm propertyName={property.name} />
+          <PropertyContactForm propertyName={property.name} locale={locale} />
         </div>
       </div>
 
       <PropertyStickyBar
         onReserve={scrollToContact}
         onWhatsApp={openWhatsApp}
-        onBrochure={() => {
-          // TODO: implement brochure download
-          scrollToContact();
-        }}
+        onBrochure={() => scrollToContact()}
+        locale={locale}
       />
     </div>
   );
