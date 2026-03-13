@@ -60,7 +60,7 @@
     @apply bg-background text-foreground;
     font-family: 'Jost', sans-serif;
     font-weight: 300;
-    font-size: 19.2px;
+    font-size: 16px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
