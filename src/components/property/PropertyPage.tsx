@@ -32,8 +32,8 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   };
 
   return (
-    <div className="flex flex-col min-h-screen" style={{ backgroundColor: "#F8F6F2" }}>
-      <div className="flex-1">
+    <div style={{ backgroundColor: "#F8F6F2" }}>
+      <div>
         <PropertyHero
           property={property}
           locale={locale}
