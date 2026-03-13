@@ -373,8 +373,7 @@
 /* ── Tablet (768px–1023px) ── */
 @media (min-width: 768px) {
   .prop-page-content {
-    max-width: 1080px;
-    margin: 0 auto;
+    width: 100%;
     padding: 0 32px;
   }
   .prop-hero-img-wrap {
@@ -501,8 +500,7 @@
 /* ── Desktop (≥1024px) ── */
 @media (min-width: 1024px) {
   .prop-page-content {
-    max-width: 1080px;
-    margin: 0 auto;
+    width: 100%;
     padding: 0 40px;
   }
   .prop-hero-img-wrap {
