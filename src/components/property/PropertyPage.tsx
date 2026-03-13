@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { PropertyDetail, UnitType, Locale } from "@/types/property";
 import { PropertyHero } from "./PropertyHero";
 import { PropertyGalleryStrip } from "./PropertyGalleryStrip";
@@ -18,6 +18,18 @@ interface PropertyPageProps {
 export function PropertyPage({ property, locale }: PropertyPageProps) {
   const [reserveModalOpen, setReserveModalOpen] = useState(false);
   const [selectedUnit, setSelectedUnit] = useState<UnitType | null>(null);
+  const [stickyVisible, setStickyVisible] = useState(true);
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!formRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setStickyVisible(!entry.isIntersecting),
+      { threshold: 0.15 }
+    );
+    observer.observe(formRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   const scrollToContact = () => {
     document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
@@ -74,8 +86,12 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         />
       )}
 
-      <div id="contact-form">
-        <PropertyContactForm propertyName={property.name} locale={locale} />
+      <div id="contact-form" ref={formRef}>
+        <PropertyContactForm
+          propertyName={property.name}
+          locale={locale}
+          brochureUrl={property.brochureUrl}
+        />
       </div>
 
       <PropertyStickyBar
@@ -83,6 +99,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         onWhatsApp={openWhatsApp}
         onBrochure={() => scrollToContact()}
         locale={locale}
+        visible={stickyVisible}
       />
 
       {property.presalePrice && (

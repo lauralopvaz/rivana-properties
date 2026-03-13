@@ -258,6 +258,37 @@
   }
 }
 
+/* Tabs scroll fade */
+.tabs-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.tabs-wrap::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background: linear-gradient(to left, white 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+}
+.tabs-wrap.scrolled-end::after {
+  opacity: 0;
+}
+
+/* Hero "Desde" label */
+.prop-hero-desde {
+  font-size: 11px;
+}
+@media (max-width: 767px) {
+  .prop-hero-desde {
+    font-size: 13px;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

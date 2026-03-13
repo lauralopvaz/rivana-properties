@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { ChevronRight, MapPin } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 import { formatMXN } from "@/lib/formatPrice";
@@ -53,6 +53,22 @@ function DynamicIcon({ name, size = 16, className }: { name: string; size?: numb
 
 export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProps) {
   const [active, setActive] = useState<TabKey>("general");
+  const tabsScrollRef = useRef<HTMLDivElement>(null);
+  const [scrolledEnd, setScrolledEnd] = useState(false);
+
+  const checkScroll = useCallback(() => {
+    const el = tabsScrollRef.current;
+    if (!el) return;
+    setScrolledEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 4);
+  }, []);
+
+  useEffect(() => {
+    const el = tabsScrollRef.current;
+    if (!el) return;
+    checkScroll();
+    el.addEventListener("scroll", checkScroll, { passive: true });
+    return () => el.removeEventListener("scroll", checkScroll);
+  }, [checkScroll]);
 
   const tabs: { key: TabKey; label: string }[] = [
     { key: "general", label: tr(locale, 'tabGeneral') },
@@ -67,32 +83,36 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
 
   return (
     <div style={{ backgroundColor: "#FFFFFF" }}>
-      {/* Tab bar — sticky */}
+      {/* Tab bar — sticky with scroll fade */}
       <div
-        className="sticky top-[44px] z-40 flex overflow-x-auto"
-        style={{
-          backgroundColor: "#FFFFFF",
-          borderBottom: "1px solid rgba(0,0,0,0.07)",
-          scrollbarWidth: "none",
-          WebkitOverflowScrolling: "touch",
-        }}
+        className={`tabs-wrap sticky top-[44px] z-40${scrolledEnd ? ' scrolled-end' : ''}`}
+        style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid rgba(0,0,0,0.07)" }}
       >
-        <style>{`.prop-tab-scroll::-webkit-scrollbar { display: none; }`}</style>
-        {tabs.map((tab) => (
-          <button
-            key={tab.key}
-            onClick={() => setActive(tab.key)}
-            className="px-4 py-3 font-body font-light uppercase whitespace-nowrap flex-shrink-0 prop-tab-label"
-            style={{
-              letterSpacing: "2px",
-              color: active === tab.key ? "#CFAE60" : "#4B4B4B",
-              borderBottom: active === tab.key ? "2px solid #CFAE60" : "2px solid transparent",
-              transition: "color 0.2s, border-color 0.2s",
-            }}
-          >
-            {tab.label}
-          </button>
-        ))}
+        <div
+          ref={tabsScrollRef}
+          className="flex overflow-x-auto"
+          style={{
+            scrollbarWidth: "none",
+            WebkitOverflowScrolling: "touch",
+          }}
+        >
+          <style>{`.tabs-wrap > div::-webkit-scrollbar { display: none; }`}</style>
+          {tabs.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActive(tab.key)}
+              className="px-4 py-3 font-body font-light uppercase whitespace-nowrap flex-shrink-0 prop-tab-label"
+              style={{
+                letterSpacing: "2px",
+                color: active === tab.key ? "#CFAE60" : "#4B4B4B",
+                borderBottom: active === tab.key ? "2px solid #CFAE60" : "2px solid transparent",
+                transition: "color 0.2s, border-color 0.2s",
+              }}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Content */}
