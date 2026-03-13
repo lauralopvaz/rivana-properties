@@ -357,7 +357,7 @@ const Listings = () => {
                   className="absolute top-0 left-0 w-full h-[20px] appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-[1.5px] [&::-webkit-slider-thumb]:border-[#CFAE60] [&::-webkit-slider-thumb]:shadow-[0_1px_6px_rgba(0,0,0,0.12)] [&::-webkit-slider-thumb]:cursor-pointer"
                 />
               </div>
-              <button onClick={() => { setAppliedPrice([...priceRange]); setAppliedCurrency(currency); setOpenFilter(null); }} className="w-full py-2 text-[9px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
+              <button onClick={() => { setAppliedPrice([...priceRange]); setAppliedCurrency(currency); setOpenFilter(null); }} className="w-full py-2 text-[12px] tracking-[3px] uppercase font-body text-white" style={{ background: '#CFAE60' }}>
                 {L === 'es' ? 'Aplicar' : 'Apply'}
               </button>
             </div>
