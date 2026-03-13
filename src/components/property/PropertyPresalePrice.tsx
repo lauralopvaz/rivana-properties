@@ -85,9 +85,14 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
           ${formatNumber(presalePrice.originalMXN)}
         </span>
         <span style={{ color: "rgba(176,58,46,0.6)" }}>→</span>
-        <span className="font-display prop-title-lg" style={{ color: "#1C1C1C" }}>
-          ${formatNumber(presalePrice.discountMXN)}
-        </span>
+        <div className="flex flex-col">
+          <span className="font-body font-light uppercase prop-badge" style={{ letterSpacing: "1px", color: "#4B4B4B" }}>
+            {tr(locale, 'from')}
+          </span>
+          <span className="font-display prop-title-lg" style={{ color: "#1C1C1C" }}>
+            ${formatNumber(presalePrice.discountMXN)}
+          </span>
+        </div>
         <span className="font-body font-light self-end mb-1 prop-text-xs" style={{ color: "#4B4B4B" }}>
           MXN
         </span>
