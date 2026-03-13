@@ -264,7 +264,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                     <img src={p.image} alt={p.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
                     <div className="absolute inset-0 bg-transparent group-hover:bg-[rgba(207,174,96,0.12)] transition-colors duration-300" />
                     <div className="absolute top-3 left-3 flex flex-col gap-1.5">
-                      <span className="text-[9px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]" style={{ background: '#26547D' }}>
+                      <span className="text-[12px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]" style={{ background: '#26547D' }}>
                         {language === 'es' ? 'Preventa' : 'Pre-Sale'}
                       </span>
                       {p.yield && (
