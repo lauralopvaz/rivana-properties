@@ -63,6 +63,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
 
   const description = locale === 'en' && property.descriptionEn ? property.descriptionEn : property.description;
   const features = locale === 'en' && property.featuresEn ? property.featuresEn : property.features;
+  const priceNote = locale === 'en' && property.priceNoteEn ? property.priceNoteEn : property.priceNote;
 
   return (
     <div style={{ backgroundColor: "#FFFFFF" }}>
