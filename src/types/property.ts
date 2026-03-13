@@ -34,6 +34,7 @@ export interface Differentiator {
   descriptionEn?: string
   stat?: string
   statLabel?: string
+  statLabelEn?: string
   pills?: string[]
   pillsEn?: string[]
 }
