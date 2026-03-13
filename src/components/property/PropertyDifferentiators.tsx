@@ -29,13 +29,13 @@ export function PropertyDifferentiators({ differentiators, locale }: PropertyDif
   const wide = differentiators.filter((d) => d.layout === "wide");
 
   return (
-    <section className="prop-section-diff" style={{ backgroundColor: "#F8F6F2" }}>
-      <p className="font-body font-light uppercase prop-label mb-1" style={{ letterSpacing: "4px", color: "#CFAE60" }}>
+    <section className="prop-section-diff" style={{ backgroundColor: "hsl(var(--paper))", height: "auto", overflow: "visible" }}>
+      <p className="font-body font-light uppercase prop-label mb-1" style={{ letterSpacing: "4px", color: "hsl(var(--gold))" }}>
         {tr(locale, 'whyInvestHere')}
       </p>
       <h2 className="font-display prop-title-md mb-1" style={{ color: "#1C1C1C" }}>
         {tr(locale, 'whatMakesItUnique')}{' '}
-        <em style={{ color: "#CFAE60" }}>{tr(locale, 'uniqueWord')}</em>
+        <em style={{ color: "hsl(var(--gold))" }}>{tr(locale, 'uniqueWord')}</em>
         {tr(locale, 'uniqueSubtitle') ? ` ${tr(locale, 'uniqueSubtitle')}` : ''}
       </h2>
       <p className="font-body font-light prop-text-sm mb-6" style={{ color: "#4B4B4B" }}>
@@ -58,24 +58,24 @@ export function PropertyDifferentiators({ differentiators, locale }: PropertyDif
             <div className="flex-shrink-0 prop-diff-stat">
               {d.stat ? (
                 <>
-                  <span className="font-display prop-num-feat block" style={{ color: "#CFAE60" }}>{d.stat}</span>
+                  <span className="font-display prop-num-feat block" style={{ color: "hsl(var(--gold))" }}>{d.stat}</span>
                   {d.statLabel && (
                     <span className="font-body font-light prop-label block uppercase" style={{ color: "rgba(207,174,96,0.6)" }}>{d.statLabel}</span>
                   )}
                 </>
               ) : (
-                <Icon size={32} style={{ color: "#CFAE60" }} />
+                <Icon size={32} style={{ color: "hsl(var(--gold))" }} />
               )}
             </div>
             <div className="flex-1">
-              <span className="font-body font-light uppercase prop-label block mb-1" style={{ letterSpacing: "2px", color: "#CFAE60" }}>{d.type}</span>
-              <span className="font-display prop-unit-name block mb-1" style={{ color: "#1C1C1C" }}>{title}</span>
-              <p className="font-body font-light prop-text-sm mb-2" style={{ color: "#4B4B4B" }}>{desc}</p>
+              <span className="font-body font-light uppercase prop-label block mb-1" style={{ letterSpacing: "2px", color: "hsl(var(--gold))" }}>{d.type}</span>
+              <span className="font-display prop-diff-card-title block mb-1" style={{ color: "#1C1C1C" }}>{title}</span>
+              <p className="font-body font-light prop-diff-card-desc mb-2" style={{ color: "#4B4B4B" }}>{desc}</p>
               {pills && pills.length > 0 && (
                 <div className="flex flex-wrap gap-2 mb-2">
                   {pills.map((pill, pi) => (
-                    <span key={pi} className="flex items-center gap-1 px-2 py-1 font-body font-light prop-badge" style={{ border: "1px solid rgba(207,174,96,0.22)", backgroundColor: "#F8F6F2" }}>
-                      <span className="w-[3px] h-[3px]" style={{ backgroundColor: "#CFAE60" }} />
+                    <span key={pi} className="flex items-center gap-1 px-2 py-1 font-body font-light prop-badge" style={{ border: "1px solid rgba(207,174,96,0.22)", backgroundColor: "hsl(var(--paper))" }}>
+                      <span className="w-[3px] h-[3px]" style={{ backgroundColor: "hsl(var(--gold))" }} />
                       {pill}
                     </span>
                   ))}
@@ -87,19 +87,19 @@ export function PropertyDifferentiators({ differentiators, locale }: PropertyDif
       })}
 
       {grid.length > 0 && (
-        <div className="prop-diff-grid grid grid-cols-2 gap-[2px] mb-4">
+        <div className="prop-diff-grid grid grid-cols-2 gap-[3px] mb-4">
           {grid.map((d, idx) => {
             const Icon = iconMap[d.type] || Star;
             const title = getLocalized(d.title, d.titleEn, locale);
             const desc = getLocalized(d.description, d.descriptionEn, locale);
             return (
-              <div key={`g-${idx}`} className="prop-diff-grid-card p-4 group relative" style={{ backgroundColor: "#FFFFFF" }}>
+              <div key={`g-${idx}`} className="prop-diff-grid-card group relative" style={{ backgroundColor: "#FFFFFF", height: "auto", overflow: "visible" }}>
                 <div className="w-7 h-7 flex items-center justify-center mb-3" style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}>
-                  <Icon size={14} style={{ color: "#CFAE60" }} />
+                  <Icon size={14} style={{ color: "hsl(var(--gold))" }} />
                 </div>
                 <p className="font-body font-normal prop-diff-card-title mb-1" style={{ color: "#1C1C1C" }}>{title}</p>
                 <p className="font-body font-light prop-diff-card-desc" style={{ color: "#4B4B4B" }}>{desc}</p>
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] transition-transform duration-300 origin-left scale-x-0 group-hover:scale-x-100" style={{ backgroundColor: "#CFAE60" }} />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] transition-transform duration-300 origin-left scale-x-0 group-hover:scale-x-100" style={{ backgroundColor: "hsl(var(--gold))" }} />
               </div>
             );
           })}
@@ -107,15 +107,15 @@ export function PropertyDifferentiators({ differentiators, locale }: PropertyDif
       )}
 
       {wide.length > 0 && (
-        <div className="flex flex-col gap-[2px] mb-4">
+        <div className="flex flex-col gap-[3px] mb-4">
           {wide.map((d, idx) => {
             const Icon = iconMap[d.type] || Star;
             const title = getLocalized(d.title, d.titleEn, locale);
             const desc = getLocalized(d.description, d.descriptionEn, locale);
             return (
-              <div key={`w-${idx}`} className="prop-diff-wide flex p-4" style={{ backgroundColor: "#FFFFFF", borderLeft: "3px solid #CFAE60" }}>
+              <div key={`w-${idx}`} className="prop-diff-wide flex" style={{ backgroundColor: "#FFFFFF", borderLeft: "3px solid hsl(var(--gold))" }}>
                 <div className="w-7 h-7 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}>
-                  <Icon size={14} style={{ color: "#CFAE60" }} />
+                  <Icon size={14} style={{ color: "hsl(var(--gold))" }} />
                 </div>
                 <div>
                   <p className="font-body font-normal prop-diff-card-title mb-1" style={{ color: "#1C1C1C" }}>{title}</p>
@@ -128,7 +128,7 @@ export function PropertyDifferentiators({ differentiators, locale }: PropertyDif
       )}
 
       <div className="flex items-start gap-2 mt-4">
-        <Info size={14} style={{ color: "#CFAE60", flexShrink: 0, marginTop: 2 }} />
+        <Info size={14} style={{ color: "hsl(var(--gold))", flexShrink: 0, marginTop: 2 }} />
         <p className="font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>
           {tr(locale, 'verifiedNote')}
         </p>

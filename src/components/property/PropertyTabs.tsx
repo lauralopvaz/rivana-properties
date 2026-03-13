@@ -28,7 +28,7 @@ function AvailabilityBadge({ count, locale }: { count: number; locale: Locale })
     return (
       <span
         className="px-2 py-0.5 font-body font-light prop-badge uppercase"
-        style={{ letterSpacing: "1px", color: "#CFAE60", border: "1px solid rgba(207,174,96,0.4)" }}
+        style={{ letterSpacing: "1px", color: "hsl(var(--gold))", border: "1px solid rgba(207,174,96,0.4)" }}
       >
         {count} {tr(locale, 'available')}
       </span>
@@ -82,30 +82,27 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
   const priceNote = locale === 'en' && property.priceNoteEn ? property.priceNoteEn : property.priceNote;
 
   return (
-    <div className="prop-tabs-wrapper" style={{ backgroundColor: "#FFFFFF" }}>
-      {/* Tab bar — sticky with scroll fade */}
+    <div className="prop-tabs-wrapper" style={{ backgroundColor: "#FFFFFF", height: "auto", overflow: "visible" }}>
+      {/* Tab bar — sticky */}
       <div
-        className={`tabs-wrap sticky top-[44px] z-40${scrolledEnd ? ' scrolled-end' : ''}`}
-        style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid rgba(0,0,0,0.07)" }}
+        className={`tabs-wrap prop-tabs-bar${scrolledEnd ? ' scrolled-end' : ''}`}
+        style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid rgba(0,0,0,0.08)" }}
       >
         <div
           ref={tabsScrollRef}
           className="flex overflow-x-auto"
-          style={{
-            scrollbarWidth: "none",
-            WebkitOverflowScrolling: "touch",
-          }}
+          style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
         >
           <style>{`.tabs-wrap > div::-webkit-scrollbar { display: none; }`}</style>
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActive(tab.key)}
-              className="px-4 py-3 font-body font-light uppercase whitespace-nowrap flex-shrink-0 prop-tab-label"
+              className="font-body font-light uppercase whitespace-nowrap flex-shrink-0 prop-tab-btn"
               style={{
-                letterSpacing: "2px",
-                color: active === tab.key ? "#CFAE60" : "#4B4B4B",
-                borderBottom: active === tab.key ? "2px solid #CFAE60" : "2px solid transparent",
+                letterSpacing: "2.5px",
+                color: active === tab.key ? "hsl(var(--gold))" : "#4B4B4B",
+                borderBottom: active === tab.key ? "2px solid hsl(var(--gold))" : "2px solid transparent",
                 transition: "color 0.2s, border-color 0.2s",
               }}
             >
@@ -115,8 +112,8 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
         </div>
       </div>
 
-      {/* Content — no height constraints */}
-      <div className="prop-tab-content">
+      {/* Tab content — static, auto height, visible overflow */}
+      <div className="prop-tab-content" style={{ position: "static", height: "auto", overflow: "visible" }}>
         {active === "general" && (
           <div className="prop-tab-text-wrap">
             <p className="font-body font-light prop-text-base" style={{ color: "#4B4B4B" }}>
@@ -147,17 +144,14 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
                       <span className="font-body font-light prop-badge uppercase block" style={{ letterSpacing: "1px", color: "#4B4B4B" }}>
                         {tr(locale, 'from')}
                       </span>
-                      <span className="font-display prop-unit-price block" style={{ color: "#CFAE60" }}>
+                      <span className="font-display prop-unit-price block" style={{ color: "hsl(var(--gold))" }}>
                         {formatMXN(unit.priceMXN)}
                       </span>
                       <div className="mt-1">
                         <AvailabilityBadge count={unit.available} locale={locale} />
                       </div>
                     </div>
-                    <ChevronRight
-                      size={16}
-                      style={{ color: "rgba(0,0,0,0.25)" }}
-                    />
+                    <ChevronRight size={16} style={{ color: "rgba(0,0,0,0.25)" }} />
                   </div>
                 </button>
               </div>
@@ -178,7 +172,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
                 className="flex items-center gap-2 py-3"
                 style={{ borderBottom: "1px solid rgba(0,0,0,0.05)" }}
               >
-                <span className="w-1 h-1 flex-shrink-0" style={{ backgroundColor: "#CFAE60" }} />
+                <span className="w-1 h-1 flex-shrink-0" style={{ backgroundColor: "hsl(var(--gold))" }} />
                 <span className="font-body font-light prop-text-sm" style={{ color: "#1C1C1C" }}>
                   {feat}
                 </span>
@@ -192,13 +186,13 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
             {property.address && (
               <div
                 className="flex items-start gap-[10px] mb-3 p-[14px_16px]"
-                style={{ backgroundColor: "#F8F6F2", border: "1px solid rgba(0,0,0,0.07)" }}
+                style={{ backgroundColor: "hsl(var(--paper))", border: "1px solid rgba(0,0,0,0.07)" }}
               >
-                <MapPin size={16} style={{ color: "#CFAE60", flexShrink: 0, marginTop: 2 }} />
+                <MapPin size={16} style={{ color: "hsl(var(--gold))", flexShrink: 0, marginTop: 2 }} />
                 <div>
                   <span
                     className="font-body font-light uppercase block prop-badge"
-                    style={{ letterSpacing: "3px", color: "#CFAE60" }}
+                    style={{ letterSpacing: "3px", color: "hsl(var(--gold))" }}
                   >
                     {tr(locale, 'exactLocation')}
                   </span>
