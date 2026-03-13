@@ -56,6 +56,8 @@ export const t = {
     countdownHrs: 'HRS',
     countdownMin: 'MIN',
     countdownSec: 'SEG',
+    exactLocation: 'Ubicación exacta',
+    roiDisclaimer: 'Los rendimientos son estimados con base en el mercado actual de renta vacacional en la zona. No constituyen una garantía de retorno. Los resultados pueden variar según ocupación, administración y condiciones del mercado.',
   },
   en: {
     backToProperties: 'Properties',
