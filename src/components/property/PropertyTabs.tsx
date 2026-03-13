@@ -118,7 +118,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
       {/* Content */}
       <div className="p-5">
         {active === "general" && (
-          <p className="font-body font-light prop-text-base" style={{ color: "#4B4B4B", lineHeight: 1.8 }}>
+          <p className="font-body font-light prop-text-base pb-6" style={{ color: "#4B4B4B", lineHeight: 1.8 }}>
             {description}
           </p>
         )}

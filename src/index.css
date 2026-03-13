@@ -218,10 +218,12 @@
 
 /* Hero badges */
 .prop-hero-badge {
-  padding: 5px 9px;
-  font-size: 12px;
-  letter-spacing: 3px;
+  padding: 7px 14px;
+  font-size: 13px;
+  letter-spacing: 2px;
   font-weight: 300;
+  min-width: 90px;
+  text-align: center;
 }
 .prop-hero-badge--presale {
   background-color: #26547D;

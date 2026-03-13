@@ -86,7 +86,7 @@ export const t = {
     available: 'avail.',
     last: 'Last',
     presaleSpecialPrice: 'Pre-sale special price',
-    exclusiveForEarlyBuyers: 'Exclusive for early buyers',
+    exclusiveForEarlyBuyers: 'Exclusive for early investors',
     savingsVsListPrice: 'savings vs. list price',
     validDuringPresale: 'Valid during pre-sale only',
     priceIncreasesOn: 'Price increases',

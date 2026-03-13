@@ -20,7 +20,8 @@ export function PropertyStickyBar({ onReserve, onWhatsApp, onBrochure, locale, v
         boxShadow: "0 -4px 20px rgba(0,0,0,0.08)",
         padding: "10px 18px",
         transform: visible ? "translateY(0)" : "translateY(100%)",
-        transition: "transform 0.3s ease",
+        opacity: visible ? 1 : 0,
+        transition: "transform 0.3s ease, opacity 0.3s ease",
       }}
     >
       <button

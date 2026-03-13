@@ -22,13 +22,14 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   const formRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!formRef.current) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setStickyVisible(!entry.isIntersecting),
-      { threshold: 0.15 }
-    );
-    observer.observe(formRef.current);
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      if (!formRef.current) return;
+      const rect = formRef.current.getBoundingClientRect();
+      setStickyVisible(rect.top > window.innerHeight || rect.bottom < 0);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToContact = () => {
