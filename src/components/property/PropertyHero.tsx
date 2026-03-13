@@ -14,18 +14,20 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
   const heroImage = property.images[0] || "/placeholder.svg";
 
   return (
-    <section className="relative w-full h-[420px] overflow-hidden">
-      <img
-        src={heroImage}
-        alt={property.name}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background: "linear-gradient(to top, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.65) 35%, rgba(10,10,10,0.15) 65%, transparent 100%)",
-        }}
-      />
+    <section className="relative w-full h-[420px]">
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={heroImage}
+          alt={property.name}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to top, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.65) 35%, rgba(10,10,10,0.15) 65%, transparent 100%)",
+          }}
+        />
+      </div>
 
       {/* Breadcrumb back link */}
       <Link

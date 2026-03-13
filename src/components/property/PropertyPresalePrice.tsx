@@ -75,16 +75,16 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
       {/* Header */}
       <div className="flex items-center gap-3 mb-1">
         <div
-          className="w-[34px] h-[34px] flex items-center justify-center flex-shrink-0"
+          className="w-[42px] h-[42px] flex items-center justify-center flex-shrink-0"
           style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}
         >
-          <Tag size={16} style={{ color: "#CFAE60" }} />
+          <Tag size={18} style={{ color: "#CFAE60" }} />
         </div>
         <div>
-          <span className="font-body font-light uppercase prop-label block" style={{ letterSpacing: "3px", color: "#CFAE60" }}>
+          <span className="font-body uppercase block prop-presale-label" style={{ letterSpacing: "3px", color: "#CFAE60", fontWeight: 400 }}>
             {tr(locale, 'presaleSpecialPrice')}
           </span>
-          <span className="font-body font-light prop-text-xs block" style={{ color: "#4B4B4B" }}>
+          <span className="font-body block prop-presale-sublabel" style={{ color: "#4B4B4B", fontWeight: 300 }}>
             {tr(locale, 'exclusiveForEarlyBuyers')}
           </span>
         </div>
