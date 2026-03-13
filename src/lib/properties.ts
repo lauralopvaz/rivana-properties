@@ -133,7 +133,7 @@ export const properties: PropertyDetail[] = [
     presalePrice: {
       originalMXN: 12000000,
       discountMXN: 9050000,
-      deadlineDate: '2026-12-31',
+      deadlineDate: '2026-06-01',
       priceIncreasePercent: 33,
     },
     differentiators: [
