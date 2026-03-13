@@ -77,7 +77,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         {/* Specs */}
         <div className="flex items-center gap-4 mb-4">
           {[
-            { icon: Bed, text: `${property.bedrooms} ${tr(locale, 'beds')}` },
+            { icon: Bed, text: `${locale === 'en' && property.bedroomsEn ? property.bedroomsEn : property.bedrooms} ${tr(locale, 'beds')}` },
             { icon: Maximize, text: property.sqmRange },
             { icon: CalendarClock, text: property.delivery },
           ].map((spec, idx) => (
