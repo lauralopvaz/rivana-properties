@@ -116,7 +116,7 @@ const FilterDropdown = ({ label, activeLabel, isOpen, onToggle, children }: {
     <div ref={ref} className="relative">
       <button
         onClick={onToggle}
-        className="flex items-center gap-2 bg-white px-4 py-[11px] text-[11px] font-body font-[300] rounded-none transition-colors"
+        className="flex items-center gap-2 bg-white px-4 py-[11px] text-[14px] font-body font-[300] rounded-none transition-colors"
         style={{ border: `1px solid ${isOpen || hasActive ? '#CFAE60' : 'rgba(0,0,0,0.10)'}`, color: hasActive ? '#CFAE60' : '#1C1C1C' }}
       >
         <span>{activeLabel || label}</span>
