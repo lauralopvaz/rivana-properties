@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState } from "react";
 import type { PropertyDetail, UnitType, Locale } from "@/types/property";
 import { PropertyHero } from "./PropertyHero";
 import { PropertyGalleryStrip } from "./PropertyGalleryStrip";
@@ -7,6 +7,7 @@ import { PropertyPresalePrice } from "./PropertyPresalePrice";
 import { PropertyDifferentiators } from "./PropertyDifferentiators";
 import { PropertyContactForm } from "./PropertyContactForm";
 import { PropertyStickyBar } from "./PropertyStickyBar";
+import { ReservePriceModal } from "./ReservePriceModal";
 
 interface PropertyPageProps {
   property: PropertyDetail;
@@ -14,7 +15,7 @@ interface PropertyPageProps {
 }
 
 export function PropertyPage({ property, locale }: PropertyPageProps) {
-  const contactRef = useRef<HTMLDivElement>(null);
+  const [reserveModalOpen, setReserveModalOpen] = useState(false);
 
   const scrollToContact = () => {
     document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
@@ -51,30 +52,38 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         <PropertyPresalePrice
           presalePrice={property.presalePrice}
           locale={locale}
-          onReserve={scrollToContact}
+          onReserve={() => setReserveModalOpen(true)}
           onWhatsApp={openWhatsApp}
         />
       )}
 
-      {property.differentiators && property.differentiators.length > 0 && (
+      {(property.differentiators?.length ?? 0) > 0 && (
         <PropertyDifferentiators
-          differentiators={property.differentiators}
-          roiEstimate={property.roiEstimate}
-          plusvaliaEstimate={property.plusvaliaEstimate}
+          differentiators={property.differentiators!}
           locale={locale}
         />
       )}
 
-      <div ref={contactRef} id="contact-form">
+      <div id="contact-form">
         <PropertyContactForm propertyName={property.name} locale={locale} />
       </div>
 
       <PropertyStickyBar
-        onReserve={scrollToContact}
+        onReserve={() => setReserveModalOpen(true)}
         onWhatsApp={openWhatsApp}
         onBrochure={() => scrollToContact()}
         locale={locale}
       />
+
+      {property.presalePrice && (
+        <ReservePriceModal
+          isOpen={reserveModalOpen}
+          onClose={() => setReserveModalOpen(false)}
+          presalePrice={property.presalePrice}
+          propertyName={property.name}
+          locale={locale}
+        />
+      )}
     </>
   );
 }

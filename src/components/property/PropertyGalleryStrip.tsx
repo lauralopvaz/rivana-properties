@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, Grid2x2 } from "lucide-react";
-import { t } from "@/lib/propertyI18n";
+import { tr } from "@/lib/propertyI18n";
 import type { Locale } from "@/types/property";
 
 interface PropertyGalleryStripProps {
@@ -9,7 +9,6 @@ interface PropertyGalleryStripProps {
 }
 
 export function PropertyGalleryStrip({ images, locale }: PropertyGalleryStripProps) {
-  const i = t(locale);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -20,7 +19,7 @@ export function PropertyGalleryStrip({ images, locale }: PropertyGalleryStripPro
 
   return (
     <>
-      <div className="grid grid-cols-4 gap-[2px] h-16" style={{ backgroundColor: "#1C1C1C" }}>
+      <div className="grid grid-cols-4 gap-[2px] h-16" style={{ backgroundColor: "#F2EFE9" }}>
         {thumbs.map((img, idx) => (
           <button
             key={idx}
@@ -32,12 +31,12 @@ export function PropertyGalleryStrip({ images, locale }: PropertyGalleryStripPro
         ))}
         <button
           className="flex flex-col items-center justify-center gap-1"
-          style={{ backgroundColor: "rgba(207,174,96,0.10)" }}
+          style={{ backgroundColor: "rgba(207,174,96,0.08)", border: "1px solid rgba(207,174,96,0.22)" }}
           onClick={() => { setActiveIndex(0); setLightboxOpen(true); }}
         >
           <Grid2x2 size={14} style={{ color: "#CFAE60" }} />
           <span className="font-body font-light uppercase prop-badge" style={{ letterSpacing: "2px", color: "#CFAE60" }}>
-            {i.viewAll}
+            {tr(locale, 'viewAll')}
           </span>
         </button>
       </div>
@@ -45,7 +44,7 @@ export function PropertyGalleryStrip({ images, locale }: PropertyGalleryStripPro
       {lightboxOpen && (
         <div
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center"
-          style={{ backgroundColor: "rgba(5,8,12,0.95)" }}
+          style={{ backgroundColor: "rgba(5,8,12,0.92)" }}
         >
           <button onClick={() => setLightboxOpen(false)} className="absolute top-4 right-4 z-10 p-2">
             <X size={20} style={{ color: "#FFFFFF" }} />
