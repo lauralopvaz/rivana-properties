@@ -15,7 +15,7 @@ export const t = {
     available: 'disp.',
     last: 'Últ.',
     presaleSpecialPrice: 'Precio especial de preventa',
-    exclusiveForEarlyBuyers: 'Exclusivo para los primeros compradores',
+    exclusiveForEarlyBuyers: 'Exclusivo para primeros inversionistas',
     savingsVsListPrice: 'de ahorro frente al precio de lista',
     validDuringPresale: 'Válido solo durante preventa',
     priceIncreasesOn: 'Precio aumenta',
