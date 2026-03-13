@@ -219,9 +219,9 @@ const Listings = () => {
 
       {/* Header */}
       <section className="pt-28 pb-8 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <p className="text-[9px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>{L === 'es' ? 'Explorar' : 'Browse'}</p>
+        <p className="text-[12px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>{L === 'es' ? 'Explorar' : 'Browse'}</p>
         <h1 className="font-display text-[clamp(32px,5vw,52px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>{L === 'es' ? 'Propiedades en Venta' : 'Properties for Sale'}</h1>
-        <p className="font-body font-[300] text-[13px] max-w-xl" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Explora nuestra colección curada de propiedades de lujo en Cancún y la Riviera Maya.' : 'Explore our curated collection of luxury properties in Cancún and the Riviera Maya.'}</p>
+        <p className="font-body font-[300] text-[16px] max-w-xl" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>{L === 'es' ? 'Explora nuestra colección curada de propiedades de lujo en Cancún y la Riviera Maya.' : 'Explore our curated collection of luxury properties in Cancún and the Riviera Maya.'}</p>
       </section>
 
       {/* Filters */}
