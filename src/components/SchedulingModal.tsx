@@ -136,7 +136,7 @@ export const SchedulingModal = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="transition-opacity duration-300" style={{ opacity: fadeOut ? 0 : 1 }}>
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#CFAE60', fontWeight: 400, marginBottom: '16px' }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', letterSpacing: '3px', textTransform: 'uppercase', color: '#CFAE60', fontWeight: 400, marginBottom: '16px' }}>
               {L === 'es' ? '¿Cómo prefieres conectar?' : 'How would you like to connect?'}
             </p>
 
