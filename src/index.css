@@ -185,8 +185,6 @@
 /* Page wrapper — single column, no sidebar */
 .prop-page-wrapper {
   width: 100%;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
 }
 
 /* Content wrapper — constrained on desktop */
@@ -194,8 +192,6 @@
   width: 100%;
   overflow: visible !important;
   height: auto !important;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
 }
 
 /* ── Hero ── */

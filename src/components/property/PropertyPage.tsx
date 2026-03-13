@@ -72,8 +72,6 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         style={{
           overflow: 'visible',
           height: 'auto',
-          marginTop: 0,
-          paddingTop: 0,
         }}
       >
         <PropertyTabs
