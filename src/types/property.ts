@@ -4,6 +4,7 @@ export type DifferentiatorLayout = 'featured' | 'grid' | 'wide'
 
 export interface UnitType {
   name: string
+  nameEn?: string
   sqm: number
   priceMXN: number
   priceUSD?: number
