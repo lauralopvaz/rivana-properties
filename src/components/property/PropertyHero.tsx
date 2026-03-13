@@ -19,7 +19,10 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
       style={{ position: 'relative', display: 'block' }}
     >
       {/* Image container — overflow:hidden only here */}
-      <div className="prop-hero-img-wrap relative overflow-hidden">
+      <div
+        className="prop-hero-img-wrap relative overflow-hidden"
+        style={{ height: 'clamp(380px, 52vw, 580px)' }}
+      >
         <img
           src={heroImage}
           alt={property.name}
