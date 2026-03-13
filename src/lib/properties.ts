@@ -134,6 +134,9 @@ export const properties: PropertyDetail[] = [
     ],
     priceNote: 'Precio varía según nivel, vista y orientación. Consulta disponibilidad con tu asesor Rivana.',
     priceNoteEn: 'Price varies by floor, view, and orientation. Contact your Rivana advisor for current availability.',
+    address: 'Blvd. Kukulcán km 16.5, Zona Hotelera, 77500 Cancún, Q.R., México',
+    addressNote: 'Dentro del desarrollo maestro Grand Island Cancún. Acceso controlado 24/7.',
+    addressNoteEn: 'Inside the Grand Island Cancún master development. 24/7 controlled access.',
     distances: [
       { label: 'Aeropuerto Internacional 15 min', labelEn: 'International Airport 15 min', icon: 'Plane' },
       { label: 'Plaza La Isla 5 min', labelEn: 'Plaza La Isla 5 min', icon: 'ShoppingBag' },

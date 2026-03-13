@@ -140,6 +140,21 @@ export function PropertyDifferentiators({ differentiators, locale }: PropertyDif
           {tr(locale, 'verifiedNote')}
         </p>
       </div>
+
+      {/* ROI disclaimer footer block */}
+      <div
+        className="flex items-start gap-2 mt-1 p-[10px_14px]"
+        style={{
+          backgroundColor: "#F8F6F2",
+          border: "1px solid rgba(0,0,0,0.07)",
+          borderLeft: "2px solid rgba(207,174,96,0.22)",
+        }}
+      >
+        <AlertCircle size={11} style={{ color: "#4B4B4B", flexShrink: 0, marginTop: 2 }} />
+        <p className="font-body font-light italic prop-text-xs" style={{ color: "#4B4B4B", lineHeight: 1.6 }}>
+          {tr(locale, 'roiDisclaimer')}
+        </p>
+      </div>
     </section>
   );
 }

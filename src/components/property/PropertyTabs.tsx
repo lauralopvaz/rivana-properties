@@ -195,7 +195,30 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
 
         {active === "location" && (
           <>
-            <div className="mb-4 h-[180px]" style={{ backgroundColor: "#e4dfd8" }} />
+            {property.address && (
+              <div
+                className="flex items-start gap-[10px] mb-3 p-[14px_16px]"
+                style={{ backgroundColor: "#F8F6F2", border: "1px solid rgba(0,0,0,0.07)" }}
+              >
+                <MapPin size={16} style={{ color: "#CFAE60", flexShrink: 0, marginTop: 2 }} />
+                <div>
+                  <span
+                    className="font-body font-light uppercase block prop-badge"
+                    style={{ letterSpacing: "3px", color: "#CFAE60" }}
+                  >
+                    {tr(locale, 'exactLocation')}
+                  </span>
+                  <span className="font-display block mt-1 prop-unit-name" style={{ color: "#1C1C1C", fontWeight: 300 }}>
+                    {property.address}
+                  </span>
+                  {(property.addressNote || property.addressNoteEn) && (
+                    <span className="font-body font-light block mt-1 prop-text-xs" style={{ color: "#4B4B4B" }}>
+                      {locale === 'en' && property.addressNoteEn ? property.addressNoteEn : property.addressNote}
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
             <div className="grid grid-cols-2 gap-3">
               {property.distances.map((d, idx) => (
                 <div key={idx} className="flex items-center gap-2">
