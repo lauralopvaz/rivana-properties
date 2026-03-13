@@ -143,7 +143,7 @@ export const properties: PropertyDetail[] = [
         titleEn: 'Turnkey — generating returns from day one',
         description: 'Cada unidad se entrega totalmente amueblada, equipada y lista para operar bajo la gestión de Accor y la marca Mondrian. Sin curva de aprendizaje. Sin gestión directa. Solo rendimientos.',
         descriptionEn: 'Every unit is delivered fully furnished, equipped, and ready to operate under Accor\'s management and the Mondrian brand. No learning curve. No hands-on management. Just returns.',
-        stat: '33%', statLabel: 'plusvalía',
+        stat: '33%', statLabel: 'plusvalía', statLabelEn: 'appreciation',
         pills: ['Listo para operar', 'Gestión Accor'],
         pillsEn: ['Ready to operate', 'Accor Management'],
       },
