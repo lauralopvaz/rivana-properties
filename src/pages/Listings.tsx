@@ -323,7 +323,7 @@ const Listings = () => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([Math.min(v, priceRange[1]), priceRange[1]]);
                   }}
-                  className="flex-1 py-[9px] px-3 text-[11px] font-body font-[300] rounded-none"
+                   className="flex-1 py-[9px] px-3 text-[14px] font-body font-[300] rounded-none"
                   style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
                 <span className="text-[11px] font-body" style={{ color: '#4B4B4B' }}>—</span>
