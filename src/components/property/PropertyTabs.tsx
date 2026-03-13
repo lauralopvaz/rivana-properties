@@ -86,7 +86,13 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
       {/* Tab bar — sticky */}
       <div
         className={`tabs-wrap prop-tabs-bar${scrolledEnd ? ' scrolled-end' : ''}`}
-        style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid rgba(0,0,0,0.08)" }}
+        style={{
+          backgroundColor: "#FFFFFF",
+          borderBottom: "1px solid rgba(0,0,0,0.08)",
+          position: 'sticky',
+          top: '60px',
+          zIndex: 40,
+        }}
       >
         <div
           ref={tabsScrollRef}
