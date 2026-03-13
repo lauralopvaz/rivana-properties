@@ -392,7 +392,7 @@ const Listings = () => {
                   {/* Badges on image */}
                   <div className="absolute top-3 left-3 flex flex-col gap-1.5">
                     <span
-                      className="text-[9px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]"
+                      className="text-[12px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]"
                       style={{ background: p.status === 'preventa' ? '#26547D' : '#1C1C1C' }}
                     >
                       {p.status === 'preventa' ? (L === 'es' ? 'Preventa' : 'Pre-Sale') : (L === 'es' ? 'Entrega Inmediata' : 'Ready to Move')}
