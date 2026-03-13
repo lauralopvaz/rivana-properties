@@ -10,7 +10,7 @@ export const t = {
     beds: 'Rec.',
     tabGeneral: 'General',
     tabUnits: 'Unidades',
-    tabFeatures: 'Características',
+    tabFeatures: 'Amenidades',
     tabLocation: 'Ubicación',
     available: 'disp.',
     last: 'Últ.',
