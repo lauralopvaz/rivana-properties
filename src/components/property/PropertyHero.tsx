@@ -125,7 +125,11 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
             {tr(locale, 'presale')}
           </span>
         )}
-        <span className="prop-hero-badge prop-hero-badge--roi font-body uppercase inline-flex items-center whitespace-nowrap">
+        <span className="prop-hero-badge font-body uppercase inline-flex items-center whitespace-nowrap"
+          style={{
+            background: '#CFAE60',
+            color: '#1C1C1C',
+          }}>
           ROI {property.roiEstimate}%
         </span>
       </div>

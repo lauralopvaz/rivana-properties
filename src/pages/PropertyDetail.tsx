@@ -212,7 +212,52 @@ const PropertyDetail = () => {
       />
 
       {/* ═══ 1. GALLERY HERO ═══ */}
-      <section className="pt-20 px-4 md:px-6 lg:px-10 max-w-[1400px] mx-auto">
+      <section
+        className="px-4 md:px-6 lg:px-10 max-w-[1400px] mx-auto"
+        style={{ position: 'relative', paddingTop: '20px' }}
+      >
+        {/* Badges */}
+        <div style={{
+          position: 'absolute',
+          top: '20px',
+          left: 'clamp(16px, 2.5vw, 40px)',
+          zIndex: 30,
+          display: 'flex',
+          gap: '8px',
+          flexWrap: 'nowrap' as const,
+        }}>
+          <span style={{
+            background: '#26547D',
+            color: 'white',
+            fontFamily: 'Jost, sans-serif',
+            fontWeight: 400,
+            fontSize: '12px',
+            letterSpacing: '2.5px',
+            textTransform: 'uppercase' as const,
+            padding: '8px 16px',
+            whiteSpace: 'nowrap' as const,
+            display: 'inline-flex',
+            alignItems: 'center',
+          }}>
+            Preventa
+          </span>
+          <span style={{
+            background: '#CFAE60',
+            color: '#1C1C1C',
+            fontFamily: 'Jost, sans-serif',
+            fontWeight: 400,
+            fontSize: '12px',
+            letterSpacing: '2.5px',
+            textTransform: 'uppercase' as const,
+            padding: '8px 16px',
+            whiteSpace: 'nowrap' as const,
+            display: 'inline-flex',
+            alignItems: 'center',
+          }}>
+            ROI {p.yieldEstimate}
+          </span>
+        </div>
+
         <div className="grid gap-[3px] grid-cols-1 md:grid-cols-[2fr_1fr]">
           {/* Main image */}
           <div
