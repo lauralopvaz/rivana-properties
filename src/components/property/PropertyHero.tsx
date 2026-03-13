@@ -115,7 +115,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
         className="prop-hero-badges flex gap-2 flex-nowrap"
         style={{
           position: 'absolute',
-          top: '92px',
+          top: '20px',
           left: '20px',
           zIndex: 30,
         }}
