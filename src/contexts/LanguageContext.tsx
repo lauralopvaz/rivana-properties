@@ -131,7 +131,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   const localePath = (path: string) => {
     if (isEnglish) {
-      return path === '/' ? '/en' : `/en${path}`;
+      if (path === '/') return '/en';
+      // Translate ES route segments to EN equivalents
+      const translated = path.replace(/^\/propiedad\//, '/property/');
+      return `/en${translated}`;
     }
     return path;
   };
