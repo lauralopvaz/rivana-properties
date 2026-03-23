@@ -94,7 +94,7 @@ const Home = () => {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+52-998-123-4567',
+      telephone: '+52-998-845-7224',
       contactType: 'sales',
       availableLanguage: ['Spanish', 'English'],
     },
