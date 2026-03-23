@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIcon, AnchorIcon, StarIcon } from '@/components/icons';
 
 import propMondrian from '@/assets/mondrian-hero.png';
+import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 
 /* ── Badge icon components ── */
 const LockIcon = ({ className = "w-3 h-3" }: { className?: string }) => (
@@ -78,7 +79,7 @@ interface Property {
 const allProperties: Property[] = [
   { id: 3, name: 'Mondrian Residences', zone: 'Zona Hotelera', type: 'condominio', beds: 3, area: 165, price: 514000, priceM2: 3115, status: 'preventa', yield: '33%', badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
   { id: 9, name: 'Dhamar', zone: 'Costa Mujeres', type: 'condominio', beds: 3, area: 178, price: 248000, priceM2: 1396, status: 'preventa', badges: ['vista-mar', 'beach-club', 'alberca-infinity', 'wellness'], image: '/placeholder.svg', slug: 'dhamar-costa-mujeres' },
-  { id: 10, name: 'SLS Ocean Beach', zone: 'Puerto Cancún', type: 'condominio', beds: 3, area: 356, price: 1600000, priceM2: 4494, status: 'preventa', badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: '/placeholder.svg', slug: 'sls-ocean-beach-puerto-cancun' },
+  { id: 10, name: 'SLS Ocean Beach', zone: 'Puerto Cancún', type: 'condominio', beds: 3, area: 356, price: 1600000, priceM2: 4494, status: 'preventa', badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
 ];
 
 const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Tulum', 'Cancún Centro'];

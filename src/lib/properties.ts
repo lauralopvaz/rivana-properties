@@ -13,6 +13,16 @@ import fpDepAPrime from '@/assets/mondrian/fp-dep-a-prime.png';
 import fpDepA1 from '@/assets/mondrian/fp-dep-a1.png';
 import fpLoftA from '@/assets/mondrian/fp-loft-a.png';
 import fpCurvaA from '@/assets/mondrian/fp-curva-a.png';
+import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
+import slsVistaPanoramica from '@/assets/sls-vista-panoramica.jpg';
+import slsMarina from '@/assets/sls-marina.jpg';
+import slsVistaAlberca from '@/assets/sls-vista-alberca.jpg';
+import slsRecepcion from '@/assets/sls-recepcion.jpg';
+import slsGimnasio from '@/assets/sls-gimnasio.jpg';
+import slsYoga from '@/assets/sls-yoga.jpg';
+import slsKidsClub from '@/assets/sls-kids-club.jpg';
+import slsPlayroom from '@/assets/sls-playroom.jpg';
+import slsSalaJuegos from '@/assets/sls-sala-juegos.jpg';
 import fpCurvaA2 from '@/assets/mondrian/fp-curva-a2.png';
 import fpDepB from '@/assets/mondrian/fp-dep-b.png';
 import fpDepBPrime from '@/assets/mondrian/fp-dep-b-prime.png';
@@ -278,7 +288,7 @@ export const properties: PropertyDetail[] = [
     delivery: 'Verano 2028',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+    images: [slsVistaPrincipal, slsVistaPanoramica, slsMarina, slsVistaAlberca, slsRecepcion, slsGimnasio, slsYoga, slsKidsClub, slsPlayroom, slsSalaJuegos],
     description: 'Oasis frente al mar en la inmaculada costa de Puerto Cancún. Residencias de lujo en el exclusivo remanso privado de Novo Cancún. SLS es sede de experiencias excepcionales inmersas en un ambiente lúdico: maestría culinaria, interiores impactantes, caprichosos detalles visuales e indulgencia sin límite. Desarrollado por Inmobilia, Ucalli y Related. Arquitectura por Arquitectonica. Interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Accor).',
     descriptionEn: 'A beachfront oasis on Puerto Cancún\'s pristine coast. Luxury residences in Novo Cancún\'s exclusive private enclave. SLS is home to exceptional experiences immersed in a playful atmosphere: culinary mastery, striking interiors, whimsical visual details, and limitless indulgence. Developed by Inmobilia, Ucalli and Related. Architecture by Arquitectonica. Interior design by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Accor).',
     features: [
