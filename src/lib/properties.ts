@@ -294,7 +294,7 @@ export const properties: PropertyDetail[] = [
     delivery: 'Verano 2028',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: [slsVistaPrincipal, slsVistaPanoramica, slsMarina, slsVistaAlberca, slsRecepcion, slsGimnasio, slsYoga, slsKidsClub, slsPlayroom, slsSalaJuegos],
+    images: [slsVistaPrincipal, slsVistaPanoramica, slsEdificio, slsMarina, slsEntrada, slsVistaAlberca, slsAlbercaDia, slsAlberca, slsBar, slsBeachclub, slsRecepcion, slsGimnasio, slsYoga, slsKidsClub, slsPlayroom, slsSalaJuegos],
     description: 'Oasis frente al mar en la inmaculada costa de Puerto Cancún. Residencias de lujo en el exclusivo remanso privado de Novo Cancún. SLS es sede de experiencias excepcionales inmersas en un ambiente lúdico: maestría culinaria, interiores impactantes, caprichosos detalles visuales e indulgencia sin límite. Desarrollado por Inmobilia, Ucalli y Related. Arquitectura por Arquitectonica. Interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Accor).',
     descriptionEn: 'A beachfront oasis on Puerto Cancún\'s pristine coast. Luxury residences in Novo Cancún\'s exclusive private enclave. SLS is home to exceptional experiences immersed in a playful atmosphere: culinary mastery, striking interiors, whimsical visual details, and limitless indulgence. Developed by Inmobilia, Ucalli and Related. Architecture by Arquitectonica. Interior design by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Accor).',
     features: [
