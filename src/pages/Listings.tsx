@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIcon, AnchorIcon, StarIcon } from '@/components/icons';
 
 import propMondrian from '@/assets/mondrian-hero.png';
+import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 
 /* ── Badge icon components ── */
 const LockIcon = ({ className = "w-3 h-3" }: { className?: string }) => (
