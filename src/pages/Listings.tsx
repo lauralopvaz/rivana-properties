@@ -4,10 +4,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIcon, AnchorIcon, StarIcon } from '@/components/icons';
 
-import propOceana from '@/assets/prop-oceana.jpg';
-import propMarina from '@/assets/prop-marina.jpg';
 import propMondrian from '@/assets/mondrian-hero.png';
-import propSelva from '@/assets/prop-selva.jpg';
 
 /* ── Badge icon components ── */
 const LockIcon = ({ className = "w-3 h-3" }: { className?: string }) => (
@@ -79,14 +76,7 @@ interface Property {
 }
 
 const allProperties: Property[] = [
-  { id: 1, name: 'Oceana Residences', zone: 'Costa Mujeres', type: 'condominio', beds: 2, area: 95, price: 195000, priceM2: 2053, status: 'preventa', yield: '10%', badges: ['vista-mar', 'alberca-infinity', 'beach-club', 'pet-friendly'], image: propOceana, slug: 'oceana-residences' },
-  { id: 2, name: 'Marina Towers', zone: 'Puerto Cancún', type: 'condominio', beds: 3, area: 140, price: 510000, priceM2: 3643, status: 'entrega-inmediata', badges: ['vista-marina', 'club-privado', 'alberca-infinity'], image: propMarina, slug: 'marina-towers' },
   { id: 3, name: 'Mondrian Residences', zone: 'Zona Hotelera', type: 'condominio', beds: 3, area: 165, price: 514000, priceM2: 3115, status: 'preventa', yield: '33%', badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
-  { id: 4, name: 'Selva Lofts', zone: 'Tulum', type: 'condominio', beds: 1, area: 78, price: 195000, priceM2: 2500, status: 'preventa', yield: '12%', badges: ['wellness', 'comunidad-cerrada', 'pet-friendly'], image: propSelva, slug: 'selva-lofts' },
-  { id: 5, name: 'Azure Beachfront', zone: 'Costa Mujeres', type: 'condominio', beds: 3, area: 185, price: 425000, priceM2: 2297, status: 'preventa', yield: '9%', badges: ['frente-mar', 'alberca-infinity', 'beach-club', 'comunidad-cerrada'], image: propOceana, slug: 'azure-beachfront' },
-  { id: 6, name: 'Mayakoba Villa', zone: 'Mayakoba', type: 'villa', beds: 5, area: 450, price: 2800000, priceM2: 6222, status: 'entrega-inmediata', badges: ['golf', 'club-privado', 'wellness', 'comunidad-cerrada', 'alberca-infinity'], image: propMarina, slug: 'mayakoba-villa' },
-  { id: 7, name: 'Puerto Morelos Reef', zone: 'Puerto Morelos', type: 'condominio', beds: 2, area: 110, price: 340000, priceM2: 3091, status: 'preventa', yield: '8%', badges: ['vista-mar', 'beach-club'], image: propMarina, slug: 'puerto-morelos-reef' },
-  { id: 8, name: 'Downtown Cancún Loft', zone: 'Cancún Centro', type: 'departamento', beds: 2, area: 95, price: 180000, priceM2: 1895, status: 'entrega-inmediata', badges: ['alberca-infinity', 'pet-friendly'], image: propSelva, slug: 'downtown-cancun-loft' },
   { id: 9, name: 'Dhamar', zone: 'Costa Mujeres', type: 'condominio', beds: 3, area: 178, price: 248000, priceM2: 1396, status: 'preventa', badges: ['vista-mar', 'beach-club', 'alberca-infinity', 'wellness'], image: '/placeholder.svg', slug: 'dhamar-costa-mujeres' },
   { id: 10, name: 'SLS Ocean Beach', zone: 'Puerto Cancún', type: 'condominio', beds: 3, area: 356, price: 1600000, priceM2: 4494, status: 'preventa', badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: '/placeholder.svg', slug: 'sls-ocean-beach-puerto-cancun' },
 ];
