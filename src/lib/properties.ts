@@ -30,6 +30,12 @@ import slsBeachclub from '@/assets/sls-beachclub.jpg';
 import slsEdificio from '@/assets/sls-edificio.jpg';
 import slsEntrada from '@/assets/sls-entrada.jpg';
 import fpCurvaA2 from '@/assets/mondrian/fp-curva-a2.png';
+import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
+import dhamarAlberca from '@/assets/dhamar-alberca.jpg';
+import dhamarRooftop from '@/assets/dhamar-rooftop.jpg';
+import dhamarYogaPilates from '@/assets/dhamar-yoga-pilates.jpg';
+import dhamarBeachclub1 from '@/assets/dhamar-beachclub1.jpg';
+import dhamarBeachclub2 from '@/assets/dhamar-beachclub2.jpg';
 import fpDepB from '@/assets/mondrian/fp-dep-b.png';
 import fpDepBPrime from '@/assets/mondrian/fp-dep-b-prime.png';
 import fpCurvaB from '@/assets/mondrian/fp-curva-b.png';
@@ -249,7 +255,7 @@ export const properties: PropertyDetail[] = [
     delivery: '2027',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhamarBeachclub1, dhamarBeachclub2],
     description: 'Vivir con calma, sin renunciar a nada. Despertar con vistas abiertas, aire limpio y un entorno natural donde el mar, el manglar y la luz natural forman parte de la rutina. Un lugar pensado para disfrutarse hoy y crecer en valor mañana. Bienestar que se siente. Valor que perdura.',
     descriptionEn: 'Living calmly, without giving anything up. Waking up to open views, clean air, and a natural environment where the sea, mangroves, and natural light become part of the routine. A place designed to be enjoyed today and grow in value tomorrow. Wellness you can feel. Value that endures.',
     features: ['Gym', 'Kids Club', 'Alberca', 'Coworking', 'Beach Club', 'Acceso exclusivo a la playa'],
