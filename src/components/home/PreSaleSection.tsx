@@ -7,8 +7,8 @@ export const PreSaleSection = () => {
   const L = language;
 
   const stats = L === 'es'
-    ? [{ value: '8–12%', label: 'Rendimiento anual' }, { value: '15–22%', label: 'Plusvalía a entrega' }, { value: '12+', label: 'Proyectos activos' }]
-    : [{ value: '8–12%', label: 'Annual yield' }, { value: '15–22%', label: 'Appreciation at delivery' }, { value: '12+', label: 'Active projects' }];
+    ? [{ value: '8–12%', label: 'Rendimiento anual' }, { value: '15–33%', label: 'Plusvalía a entrega' }, { value: '3', label: 'Proyectos activos' }]
+    : [{ value: '8–12%', label: 'Annual yield' }, { value: '15–33%', label: 'Appreciation at delivery' }, { value: '3', label: 'Active projects' }];
 
   return (
     <section className="py-28 lg:py-36 overflow-hidden border-y border-border" style={{ background: '#F8F6F2' }}>
