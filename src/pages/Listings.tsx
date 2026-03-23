@@ -87,6 +87,8 @@ const allProperties: Property[] = [
   { id: 6, name: 'Mayakoba Villa', zone: 'Mayakoba', type: 'villa', beds: 5, area: 450, price: 2800000, priceM2: 6222, status: 'entrega-inmediata', badges: ['golf', 'club-privado', 'wellness', 'comunidad-cerrada', 'alberca-infinity'], image: propMarina, slug: 'mayakoba-villa' },
   { id: 7, name: 'Puerto Morelos Reef', zone: 'Puerto Morelos', type: 'condominio', beds: 2, area: 110, price: 340000, priceM2: 3091, status: 'preventa', yield: '8%', badges: ['vista-mar', 'beach-club'], image: propMarina, slug: 'puerto-morelos-reef' },
   { id: 8, name: 'Downtown Cancún Loft', zone: 'Cancún Centro', type: 'departamento', beds: 2, area: 95, price: 180000, priceM2: 1895, status: 'entrega-inmediata', badges: ['alberca-infinity', 'pet-friendly'], image: propSelva, slug: 'downtown-cancun-loft' },
+  { id: 9, name: 'Dhamar', zone: 'Costa Mujeres', type: 'condominio', beds: 3, area: 178, price: 248000, priceM2: 1396, status: 'preventa', badges: ['vista-mar', 'beach-club', 'alberca-infinity', 'wellness'], image: '/placeholder.svg', slug: 'dhamar-costa-mujeres' },
+  { id: 10, name: 'SLS Ocean Beach', zone: 'Puerto Cancún', type: 'condominio', beds: 3, area: 356, price: 1600000, priceM2: 4494, status: 'preventa', badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: '/placeholder.svg', slug: 'sls-ocean-beach-puerto-cancun' },
 ];
 
 const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Tulum', 'Cancún Centro'];
