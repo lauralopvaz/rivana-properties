@@ -1,48 +1,55 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChatIcon, XIcon } from '@/components/icons';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import presaleHero from '@/assets/presale-hero.jpg';
+import mondrianHero from '@/assets/mondrian-hero.png';
+import mondrianFrontDesk from '@/assets/mondrian-front-desk.png';
+import mondrianCoffeeBar from '@/assets/mondrian-coffee-bar.jpg';
+import mondrianRestaurant from '@/assets/mondrian-restaurant.png';
+import mondrianRooftop from '@/assets/mondrian-rooftop.png';
+import mondrianBeachClub from '@/assets/mondrian-beach-club.png';
+import mondrianGym from '@/assets/mondrian-gym.png';
+import mondrianPool from '@/assets/mondrian-pool.png';
 
 /* ─── Project Data (would come from CMS) ─── */
 const PROJECT = {
-  name: 'Oceana',
-  fullName: 'Residencial Oceana',
-  location: 'Costa Mujeres, Quintana Roo',
-  totalUnits: 120,
-  delivery: 'Q4 2027',
-  priceFrom: '$195,000 USD',
-  yieldPct: '8–12%',
+  name: 'Mondrian',
+  fullName: 'Mondrian Residences at Grand Island Cancún',
+  location: 'Zona Hotelera, Cancún, Q.R.',
+  totalUnits: 100,
+  delivery: 'Q2 2027',
+  priceFrom: '$514,000 USD',
+  yieldPct: '33%',
   description:
-    'Un desarrollo residencial frente al mar en Playa Mujeres que redefine el lujo caribeño contemporáneo. Cada residencia ha sido diseñada con líneas limpias, materiales nobles y terrazas generosas que enmarcan el horizonte turquesa del Caribe mexicano.',
-  brochureUrl: '/brochures/oceana-brochure.pdf',
-  presaleDeadline: new Date('2026-06-30T23:59:59'),
-  priceIncreaseAfter: 12,
+    'Mondrian Residences at Grand Island es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día.',
+  brochureUrl: '/brochures/mondrian-residences.pdf',
+  presaleDeadline: new Date('2026-06-01T23:59:59'),
+  priceIncreaseAfter: 33,
   phases: [
-    { name: 'Fase 1 — Coral', pct: 100, status: 'Agotado' },
-    { name: 'Fase 2 — Aqua', pct: 85, status: '85% Vendido' },
-    { name: 'Fase 3 — Brisa', pct: 30, status: 'Disponible' },
+    { name: 'Fase 1 — Lanzamiento', pct: 60, status: '60% Vendido' },
+    { name: 'Fase 2 — Preventa', pct: 15, status: 'Disponible' },
   ],
   units: [
-    { name: 'Estudio Coral', m2: '58 m²', price: '$195,000 USD', avail: 2, desc: 'Estudio con vista parcial al mar, terraza de 12m² y acabados premium. Ideal como inversión con alto rendimiento en renta vacacional.' },
-    { name: 'Suite Mar 1BR', m2: '78 m²', price: '$265,000 USD', avail: 14, desc: 'Una recámara con sala-comedor abierta, cocina integral y terraza con vista al Caribe. Incluye un cajón de estacionamiento.' },
-    { name: 'Residencia Aqua 2BR', m2: '112 m²', price: '$385,000 USD', avail: 22, desc: 'Dos recámaras con baños completos, área de lavado y terraza extendida. Vista panorámica al mar y a la alberca infinity.' },
-    { name: 'Garden Suite 2BR', m2: '135 m²', price: '$420,000 USD', avail: 8, desc: 'Planta baja con jardín privado de 40m², dos recámaras, acceso directo a la alberca y beach club.' },
-    { name: 'Penthouse Brisa 3BR', m2: '220 m²', price: '$780,000 USD', avail: 4, desc: 'Tres recámaras, rooftop privado con jacuzzi, doble altura en sala y vistas 270° al mar Caribe.' },
-    { name: 'Grand Penthouse', m2: '320 m²', price: '$1,200,000 USD', avail: 1, desc: 'La residencia insignia: terraza de 90m², pool privado, acabados de autor y servicio de concierge dedicado.' },
+    { name: 'Estudio Curva — 1 Hab', m2: '76.96 m²', price: '$514,000 USD', avail: 10, desc: 'Estudio con curva panorámica, 1 habitación, 1 baño. Entrega llave en mano con gestión Accor.' },
+    { name: 'Departamento A — 1 Hab', m2: '81.46 m²', price: '$514,000 USD', avail: 10, desc: 'Una habitación, 2 baños. Diseño de Filipao Nunes con acabados premium y vista al Caribe.' },
+    { name: "Departamento A' — 1 Hab", m2: '115.84 m²', price: '$642,000 USD', avail: 10, desc: 'Versión ampliada del Depto A con terraza extendida y vista dual mar-laguna.' },
+    { name: 'Loft A — 1 Hab (dúplex)', m2: '91.20 m²', price: '$758,000 USD', avail: 10, desc: 'Dúplex con doble altura, 1 habitación, 2 baños. Diseño escultórico único en el edificio.' },
+    { name: 'Departamento B — 2 Hab', m2: '135.44 m²', price: '$684,000 USD', avail: 5, desc: 'Dos habitaciones, 2.5 baños. Espacios amplios con vista frontal al Mar Caribe.' },
+    { name: 'Depto B Esquina — 2 Hab', m2: '164.75 m²', price: '$1,163,000 USD', avail: 5, desc: 'Esquina con vista panorámica 180°. Dos habitaciones, 2.5 baños. La unidad más exclusiva de 2 recámaras.' },
+    { name: 'Depto C Esquina — 3 Hab', m2: '158.93 m²', price: '$1,247,000 USD', avail: 5, desc: 'Tres habitaciones, 3.5 baños. Esquina con vista triple: mar, laguna y campo de golf.' },
   ],
   amenities: [
-    'Infinity Pool', 'Beach Club', 'Gimnasio', 'Spa & Wellness', 'Co-Working',
-    'Kids Club', 'Rooftop Bar', 'Concierge 24/7', 'Estacionamiento Subterráneo',
-    'Carga EV', 'Smart Home', 'Pet Friendly', 'Paneles Solares', 'Seguridad 24/7',
-    'Jardines Zen', 'Palapa BBQ',
+    'Infinity Pool', 'Beach Club', 'Concierge 24/7', 'Spa & Wellness',
+    'Gimnasio', 'Campo de Golf', 'Marina Privada', 'Vista al Mar',
+    'Club Privado', 'Restaurante Rooftop', 'Coffee Shop', 'Bar',
+    'Sauna', 'Tinas de Hidromasaje', 'Gradas Lounge Exterior', 'Entrega Llave en Mano',
   ],
   availability: [
-    { type: 'Estudios', qty: 2 },
-    { type: '1 Recámara', qty: 14 },
-    { type: '2 Recámaras', qty: 30 },
-    { type: 'Penthouses', qty: 5 },
+    { type: 'Estudios / 1 Hab', qty: 60 },
+    { type: '2 Recámaras', qty: 20 },
+    { type: '3 Recámaras', qty: 5 },
+    { type: 'Lofts (dúplex)', qty: 10 },
   ],
-  gallery: [presaleHero, presaleHero, presaleHero, presaleHero, presaleHero],
+  gallery: [mondrianHero, mondrianFrontDesk, mondrianCoffeeBar, mondrianRestaurant, mondrianRooftop, mondrianBeachClub, mondrianGym, mondrianPool],
 };
 
 /* ─── Countdown Hook ─── */
@@ -133,7 +140,7 @@ const PreSale = () => {
 
       {/* ═══ HERO ═══ */}
       <section className="relative h-[60vh] md:h-[88vh]">
-        <img src={presaleHero} alt="Oceana Residences" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={mondrianHero} alt="Mondrian Residences at Grand Island Cancún" className="absolute inset-0 w-full h-full object-cover" />
         {/* Horizontal overlay */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(10,20,30,0.72) 0%, rgba(10,20,30,0.30) 55%, rgba(10,20,30,0.05) 100%)' }} />
         {/* Vertical overlay */}
