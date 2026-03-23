@@ -22,37 +22,19 @@ import destCancunCentro from '@/assets/dest-cancun-centro.jpg';
 import destTulum from '@/assets/dest-tulum.jpg';
 
 // Property images
-import propOceana from '@/assets/prop-oceana.jpg';
-import propMarina from '@/assets/prop-marina.jpg';
 import propMondrian from '@/assets/mondrian-hero.png';
-import propSelva from '@/assets/prop-selva.jpg';
+import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
+import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 
 // Journal images
 import journalRoi from '@/assets/journal-roi.jpg';
 import journalBuyer from '@/assets/journal-buyer.jpg';
 import journalWorldcup from '@/assets/journal-worldcup.jpg';
 
-const destinationImages: Record<string, string> = {
-  'zona-hotelera': destZonaHotelera,
-  'puerto-cancun': destPuertoCancun,
-  'costa-mujeres': destCostaMujeres,
-  'mayakoba': destMayakoba,
-  'puerto-morelos': destPuertoMorelos,
-  'cancun-centro': destCancunCentro,
-  'tulum': destTulum,
-};
-
-const journalImages: Record<string, string> = {
-  'cancun-roi-rental-yield': journalRoi,
-  'foreign-buyer-guide-mexico': journalBuyer,
-  'world-cup-2026-cancun-real-estate': journalWorldcup,
-};
-
 const featuredProperties = [
-  { name: 'Oceana Residences', zone: 'Costa Mujeres', beds: 3, area: 185, price: '$425K', amenities: ['ocean', 'pool', 'spa'], destKey: 'costa-mujeres', image: propOceana, slug: 'oceana-residences' },
-  { name: 'Marina Towers', zone: 'Puerto Cancún', beds: 2, area: 140, price: '$510K', amenities: ['marina', 'pool', 'golf'], destKey: 'puerto-cancun', image: propMarina, slug: 'marina-towers' },
-  { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera', en: 'Hotel Zone' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], destKey: 'zona-hotelera', image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
-  { name: 'Selva Lofts', zone: 'Tulum', beds: 1, area: 78, price: '$195K', amenities: ['jungle', 'pool', 'spa'], destKey: 'tulum', image: propSelva, slug: 'selva-lofts' },
+  { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
+  { name: 'Dhamar', zone: { es: 'Costa Mujeres, Cancún', en: 'Costa Mujeres, Cancún' }, beds: 3, area: 178, price: '$248K', amenities: ['ocean', 'pool', 'spa'], image: dhamarPrincipal, slug: 'dhamar-costa-mujeres' },
+  { name: 'SLS Ocean Beach', zone: { es: 'Puerto Cancún', en: 'Puerto Cancún' }, beds: 3, area: 356, price: '$1.6M', amenities: ['ocean', 'marina', 'golf'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
