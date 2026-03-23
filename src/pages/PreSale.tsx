@@ -140,7 +140,7 @@ const PreSale = () => {
 
       {/* ═══ HERO ═══ */}
       <section className="relative h-[60vh] md:h-[88vh]">
-        <img src={presaleHero} alt="Oceana Residences" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={mondrianHero} alt="Mondrian Residences at Grand Island Cancún" className="absolute inset-0 w-full h-full object-cover" />
         {/* Horizontal overlay */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(10,20,30,0.72) 0%, rgba(10,20,30,0.30) 55%, rgba(10,20,30,0.05) 100%)' }} />
         {/* Vertical overlay */}
