@@ -255,7 +255,7 @@ export const properties: PropertyDetail[] = [
     delivery: '2027',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhamarBeachclub1, dhamarBeachclub2],
     description: 'Vivir con calma, sin renunciar a nada. Despertar con vistas abiertas, aire limpio y un entorno natural donde el mar, el manglar y la luz natural forman parte de la rutina. Un lugar pensado para disfrutarse hoy y crecer en valor mañana. Bienestar que se siente. Valor que perdura.',
     descriptionEn: 'Living calmly, without giving anything up. Waking up to open views, clean air, and a natural environment where the sea, mangroves, and natural light become part of the routine. A place designed to be enjoyed today and grow in value tomorrow. Wellness you can feel. Value that endures.',
     features: ['Gym', 'Kids Club', 'Alberca', 'Coworking', 'Beach Club', 'Acceso exclusivo a la playa'],
