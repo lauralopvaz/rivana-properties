@@ -42,6 +42,7 @@ import fpDepBPrime from '@/assets/mondrian/fp-dep-b-prime.png';
 import fpCurvaB from '@/assets/mondrian/fp-curva-b.png';
 import fpDepBEsquina from '@/assets/mondrian/fp-dep-b-esquina.png';
 import fpDepCEsquina from '@/assets/mondrian/fp-dep-c-esquina.png';
+import vellmariHero from '@/assets/vellmari-hero.jpg';
 
 export const properties: PropertyDetail[] = [
   {
