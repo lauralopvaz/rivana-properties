@@ -97,8 +97,6 @@ const PreSale = () => {
   const [brForm, setBrForm] = useState({ name: '', phone: '', email: '' });
   const [brErrors, setBrErrors] = useState<Record<string, string>>({});
 
-  /* Unit modal form */
-  const [unitForm, setUnitForm] = useState({ name: '', phone: '', email: '', date: '' });
 
   const handleBrochureSubmit = () => {
     const errs: Record<string, string> = {};
