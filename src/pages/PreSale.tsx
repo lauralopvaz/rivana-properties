@@ -200,7 +200,7 @@ const PreSale = () => {
               {[
                 { val: '1–3 Rec & PH', label: 'Recámaras' },
                 { val: PROJECT.delivery, label: 'Entrega' },
-                { val: '$195K', label: 'Precio Desde' },
+                { val: '$514K USD', label: 'Precio Desde' },
               ].map((s) => (
                 <div key={s.label} className="bg-[#F8F6F2] border border-[rgba(207,174,96,0.22)] p-4 text-center">
                   <span className="font-display text-[24px] md:text-[28px] font-[300] text-[#CFAE60] block">{s.val}</span>
