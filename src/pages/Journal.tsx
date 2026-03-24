@@ -65,7 +65,9 @@ const Journal = () => {
       {featured && (
         <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
           <Link to={localePath(`/journal/${featured.slug}`)} className="group grid grid-cols-1 lg:grid-cols-2 gap-8 bg-card border border-border rounded-sm overflow-hidden">
-            <div className="aspect-[16/10] gradient-placeholder group-hover:scale-105 transition-transform duration-700" />
+            <div className="aspect-[16/10] overflow-hidden">
+              <img src={featured.image} alt={featured.title[language]} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="eager" width={1280} height={800} />
+            </div>
             <div className="p-8 flex flex-col justify-center">
               <span className="eyebrow text-xs mb-3">{featured.category[language]}</span>
               <h2 className="mb-4 group-hover:text-primary transition-colors">{featured.title[language]}</h2>
@@ -106,7 +108,9 @@ const Journal = () => {
             {filtered.map((article, i) => (
               <ScrollReveal key={article.slug} delay={i * 80}>
                 <Link to={localePath(`/journal/${article.slug}`)} className="group block">
-                  <div className="aspect-[16/10] gradient-placeholder-alt rounded-sm mb-4 group-hover:scale-[1.02] transition-transform duration-500" />
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm mb-4">
+                    <img src={article.image} alt={article.title[language]} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={1280} height={800} />
+                  </div>
                   <span className="eyebrow text-xs">{article.category[language]}</span>
                   <h4 className="mt-2 mb-2 group-hover:text-primary transition-colors">{article.title[language]}</h4>
                   <p className="text-sm text-muted-foreground font-body line-clamp-2 mb-3">{article.excerpt[language]}</p>
