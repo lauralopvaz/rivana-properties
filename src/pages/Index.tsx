@@ -221,9 +221,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── PRESALE BANNER ── */}
-      <PreSaleSection />
-
       {/* ── FEATURED PROPERTIES ── */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -280,6 +277,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* ── PRESALE BANNER ── */}
+      <PreSaleSection />
 
 
 
