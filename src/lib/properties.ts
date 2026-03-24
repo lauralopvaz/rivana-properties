@@ -43,6 +43,7 @@ import fpCurvaB from '@/assets/mondrian/fp-curva-b.png';
 import fpDepBEsquina from '@/assets/mondrian/fp-dep-b-esquina.png';
 import fpDepCEsquina from '@/assets/mondrian/fp-dep-c-esquina.png';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
+import villageBluHero from '@/assets/village-blu-hero.jpg';
 
 export const properties: PropertyDetail[] = [
   {
@@ -489,6 +490,72 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
         titleEn: 'In the heart of Puerto Cancún — golf, marina & beach club',
         description: 'Acceso al campo de golf de 18 hoyos, marina privada, club de playa y Plaza Puerto Cancún con tiendas de lujo, restaurantes, entretenimiento y cine IMAX.',
         descriptionEn: 'Access to the 18-hole golf course, private marina, beach club, and Plaza Puerto Cancún with luxury shops, restaurants, entertainment, and IMAX cinema.',
+      },
+    ],
+  },
+  {
+    id: 'village-blu-beach-apartments',
+    slug: 'village-blu-beach-apartments',
+    name: 'Village Blu Beach Apartments',
+    zone: 'Puerto Morelos',
+    zoneEn: 'Puerto Morelos',
+    status: 'preventa',
+    priceFromUSD: 273000,
+    priceFromMXN: 4777500,
+    bedrooms: '1 Recámara',
+    bedroomsEn: '1 Bedroom',
+    sqmRange: '72 – 73 m²',
+    delivery: 'Invierno 2026',
+    roiEstimate: 8.8,
+    plusvaliaEstimate: 20,
+    images: [villageBluHero],
+    description: 'Departamentos frente al mar en Puerto Morelos. Vida moderna junto al Caribe en un pueblo costero que combina tranquilidad, belleza natural y conexión. Diseñados para vivir, disfrutar o rentar con alto potencial vacacional. Parte de la Blu Residences Collection.',
+    descriptionEn: 'Beachfront apartments in Puerto Morelos. Modern Caribbean living in a coastal town that combines tranquility, natural beauty, and connection. Designed to live, enjoy, or rent with high vacation potential. Part of the Blu Residences Collection.',
+    features: [
+      'Alberca panorámica', 'Rooftop Bar', 'Rooftop Pool', 'Rooftop Terrace',
+      'Elevadores', 'Estacionamiento', 'Seguridad 24/7',
+      'Gestión de rentas OPENKEY incluida',
+    ],
+    featuresEn: [
+      'Panoramic Pool', 'Rooftop Bar', 'Rooftop Pool', 'Rooftop Terrace',
+      'Elevators', 'Parking', '24/7 Security',
+      'OPENKEY rental management included',
+    ],
+    units: [
+      { name: 'Tipo A1 — 1 Rec', nameEn: 'Type A1 — 1 Bed', sqm: 72.71, priceMXN: 4777500, priceUSD: 273000, available: 10 },
+      { name: 'Tipo A — 1 Rec', nameEn: 'Type A — 1 Bed', sqm: 73, priceMXN: 4777500, priceUSD: 273000, available: 10 },
+      { name: 'Tipo B1 — 1 Rec', nameEn: 'Type B1 — 1 Bed', sqm: 73, priceMXN: 5320000, priceUSD: 304000, available: 10 },
+      { name: 'Tipo B — 1 Rec', nameEn: 'Type B — 1 Bed', sqm: 73, priceMXN: 5320000, priceUSD: 304000, available: 10 },
+    ],
+    distances: [
+      { label: 'Playa — 5 min', labelEn: 'Beach — 5 min', icon: '🏖️' },
+      { label: 'Aeropuerto de Cancún — 25 min', labelEn: 'Cancún Airport — 25 min', icon: '✈️' },
+      { label: 'Playa del Carmen — 30 min', labelEn: 'Playa del Carmen — 30 min', icon: '🚗' },
+      { label: 'Ruta de los Cenotes — 20 min', labelEn: 'Cenotes Route — 20 min', icon: '💧' },
+    ],
+    address: 'Puerto Morelos, Quintana Roo',
+    differentiators: [
+      {
+        type: 'roi', layout: 'featured',
+        title: 'Endless ROI — Hasta 8.8% anual',
+        titleEn: 'Endless ROI — Up to 8.8% annually',
+        description: 'Puerto Morelos tiene ocupación hotelera ~75% anual. Retorno constante + plusvalía estimada del 20% anual.',
+        descriptionEn: 'Puerto Morelos has ~75% annual hotel occupancy. Constant returns + estimated 20% annual appreciation.',
+        stat: '8.8%', statLabel: 'ROI estimado', statLabelEn: 'Estimated ROI',
+      },
+      {
+        type: 'exclusivo', layout: 'grid',
+        title: 'Effortless Ownership — OPENKEY',
+        titleEn: 'Effortless Ownership — OPENKEY',
+        description: 'OPENKEY se encarga de gestión de reservas, mantenimiento y optimización de precios. Cero complicaciones para el propietario.',
+        descriptionEn: 'OPENKEY handles booking management, maintenance, and price optimization. Zero hassle for the owner.',
+      },
+      {
+        type: 'amenidad', layout: 'wide',
+        title: 'Blu Residences Collection — Puerto Morelos',
+        titleEn: 'Blu Residences Collection — Puerto Morelos',
+        description: 'Parte de la colección junto a Porto Blu y Sole Blu. Un pueblo costero auténtico a minutos de Cancún y Playa del Carmen, con acceso a la Ruta de los Cenotes.',
+        descriptionEn: 'Part of the collection alongside Porto Blu and Sole Blu. An authentic coastal town minutes from Cancún and Playa del Carmen, with access to the Cenotes Route.',
       },
     ],
   },

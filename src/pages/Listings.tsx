@@ -9,6 +9,7 @@ import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
+import villageBluHero from '@/assets/village-blu-hero.jpg';
 
 /* ── Badge icon components ── */
 const LockIcon = ({ className = "w-3 h-3" }: { className?: string }) => (
@@ -85,6 +86,7 @@ const allProperties: Property[] = [
   { id: 10, name: 'SLS Ocean Beach', zone: 'Puerto Cancún', type: 'condominio', beds: 3, area: 356, price: 1600000, priceM2: 4494, status: 'preventa', badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
   { id: 11, name: 'The Reserve at Mayakoba', zone: 'Mayakoba', type: 'condominio', beds: 4, area: 660, price: 1141000, priceM2: 1729, status: 'preventa', badges: ['golf', 'wellness', 'comunidad-cerrada'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
   { id: 12, name: 'Vellmari Grand Living', zone: 'Puerto Cancún', type: 'condominio', beds: 5, area: 714, price: 845714, priceM2: 1184, status: 'preventa', badges: ['vista-marina', 'golf', 'wellness', 'pet-friendly'], image: vellmariHero, slug: 'vellmari-grand-living' },
+  { id: 13, name: 'Village Blu Beach Apartments', zone: 'Puerto Morelos', type: 'condominio', beds: 1, area: 73, price: 273000, priceM2: 3740, status: 'preventa', yield: '8.8%', badges: ['frente-mar', 'alberca-infinity', 'beach-club'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
 ]; // properties
 
 const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Tulum', 'Cancún Centro'];
