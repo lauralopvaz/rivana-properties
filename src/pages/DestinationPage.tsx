@@ -77,11 +77,44 @@ const badgeConfig: Record<string, { label: { es: string; en: string }; icon: Rea
   'frente-mar': { label: { es: 'Frente al Mar', en: 'Beachfront' }, icon: WavesIcon2 },
 };
 
-const projects = [
-  { name: 'Oceana Residences', zone: 'Playa Mujeres', status: 'preventa' as const, yield: '10%', beds: 2, area: 95, price: 195000, badges: ['vista-mar', 'alberca-infinity', 'beach-club', 'pet-friendly'] as BadgeKey[], image: propOceana, slug: 'oceana-residences' },
-  { name: 'Azure Tower', zone: 'Costa Mujeres Centro', status: 'preventa' as const, yield: '9%', beds: 3, area: 185, price: 245000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'] as BadgeKey[], image: propMarina, slug: 'azure-beachfront' },
-  { name: 'Mar Sereno', zone: 'Punta Sam', status: 'preventa' as const, yield: '12%', beds: 2, area: 110, price: 320000, badges: ['vista-mar', 'wellness', 'comunidad-cerrada'] as BadgeKey[], image: propMondrian, slug: 'mar-sereno' },
-];
+type BadgeKey = 'vista-mar' | 'alberca-infinity' | 'beach-club' | 'pet-friendly' | 'club-privado' | 'wellness' | 'comunidad-cerrada' | 'vista-marina' | 'golf' | 'frente-mar';
+
+interface DestProject {
+  name: string;
+  zone: string;
+  status: 'preventa' | 'entrega-inmediata';
+  yield?: string;
+  beds: number;
+  area: number;
+  price: number;
+  badges: BadgeKey[];
+  image: string;
+  slug: string;
+}
+
+const projectsByDestination: Record<string, DestProject[]> = {
+  'zona-hotelera': [
+    { name: 'Mondrian Residences', zone: 'Zona Hotelera', status: 'preventa', yield: '33%', beds: 3, area: 165, price: 514000, badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
+  ],
+  'puerto-cancun': [
+    { name: 'SLS Ocean Beach', zone: 'Puerto Cancún', status: 'preventa', beds: 3, area: 356, price: 1600000, badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
+    { name: 'Vellmari Grand Living', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 714, price: 845714, badges: ['vista-marina', 'golf', 'wellness', 'pet-friendly'], image: vellmariHero, slug: 'vellmari-grand-living' },
+  ],
+  'costa-mujeres': [
+    { name: 'Dhamar', zone: 'Costa Mujeres', status: 'preventa', beds: 3, area: 178, price: 248000, badges: ['vista-mar', 'beach-club', 'alberca-infinity', 'wellness'], image: dhamarPrincipal, slug: 'dhamar-costa-mujeres' },
+  ],
+  'mayakoba': [
+    { name: 'The Reserve at Mayakoba', zone: 'Mayakoba', status: 'preventa', beds: 4, area: 660, price: 1141000, badges: ['golf', 'wellness', 'comunidad-cerrada'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
+  ],
+  'playa-del-carmen': [
+    { name: 'The Reserve at Mayakoba', zone: 'Mayakoba', status: 'preventa', beds: 4, area: 660, price: 1141000, badges: ['golf', 'wellness', 'comunidad-cerrada'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
+  ],
+  'puerto-morelos': [
+    { name: 'Village Blu Beach Apartments', zone: 'Puerto Morelos', status: 'preventa', yield: '8.8%', beds: 1, area: 73, price: 273000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
+  ],
+  'cancun-centro': [],
+  'tulum': [],
+};
 
 const faqs: Record<string, { q: string; a: string }[]> = {
   es: [
