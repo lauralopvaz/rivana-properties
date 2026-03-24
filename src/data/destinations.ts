@@ -66,10 +66,10 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '42', label: { es: 'Propiedades', en: 'Properties' } },
-      { val: '$320K', label: { es: 'Desde', en: 'Starting From' } },
-      { val: '18%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
-      { val: '85+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
+      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '$514K', label: { es: 'Desde USD', en: 'From USD' } },
+      { val: '33%', label: { es: 'Plusvalía Preventa', en: 'Pre-Sale Appreciation' } },
+      { val: 'Mondrian', label: { es: 'Desarrollo Destacado', en: 'Featured Development' } },
     ],
     chips: {
       es: ['Ubicación Prime', 'Frente al Mar', '⚽ Mundial 2026'],
@@ -147,10 +147,10 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '28', label: { es: 'Propiedades', en: 'Properties' } },
-      { val: '$450K', label: { es: 'Desde', en: 'Starting From' } },
+      { val: '2', label: { es: 'Proyectos', en: 'Projects' } },
+      { val: '$14.8M MXN', label: { es: 'Desde MXN', en: 'From MXN' } },
       { val: '15%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
-      { val: '60+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
+      { val: '120+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
     ],
     chips: {
       es: ['Marina', 'Golf', 'Seguridad 24/7'],
@@ -228,10 +228,10 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '64', label: { es: 'Propiedades', en: 'Properties' } },
-      { val: '$195K', label: { es: 'Desde', en: 'Starting From' } },
+      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '$248K', label: { es: 'Desde USD', en: 'From USD' } },
       { val: '22%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
-      { val: '120+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
+      { val: 'Dhamar', label: { es: 'Desarrollo Destacado', en: 'Featured Development' } },
     ],
     chips: {
       es: ['Preventa Abierta', '8-12% Rendimiento', '⚽ Mundial 2026'],
@@ -303,10 +303,10 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '18', label: { es: 'Propiedades', en: 'Properties' } },
-      { val: '$680K', label: { es: 'Desde', en: 'Starting From' } },
+      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '$1.1M', label: { es: 'Desde USD', en: 'From USD' } },
       { val: '16%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
-      { val: '25+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
+      { val: '144', label: { es: 'Unidades Totales', en: 'Total Units' } },
     ],
     chips: {
       es: ['⚽ Mundial 2026', 'Golf PGA', 'Ultra-Lujo'],
@@ -354,10 +354,10 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '20', label: { es: 'Propiedades', en: 'Properties' } },
-      { val: '$280K', label: { es: 'Desde', en: 'Starting From' } },
-      { val: '14%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
-      { val: '35+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
+      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '$273K', label: { es: 'Desde USD', en: 'From USD' } },
+      { val: '20%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
+      { val: '40', label: { es: 'Unidades Totales', en: 'Total Units' } },
     ],
     chips: {
       es: ['Arrecife Natural', 'Pueblo con Encanto', 'Cerca del Aeropuerto'],
