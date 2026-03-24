@@ -90,15 +90,13 @@ function sideAvailColor(qty: number) {
 const PreSale = () => {
   const countdown = useCountdown(PROJECT.presaleDeadline);
   const [lightbox, setLightbox] = useState<number | null>(null);
-  const [unitModal, setUnitModal] = useState<number | null>(null);
+  
   const [brochureModal, setBrochureModal] = useState(false);
 
   /* Brochure form */
   const [brForm, setBrForm] = useState({ name: '', phone: '', email: '' });
   const [brErrors, setBrErrors] = useState<Record<string, string>>({});
 
-  /* Unit modal form */
-  const [unitForm, setUnitForm] = useState({ name: '', phone: '', email: '', date: '' });
 
   const handleBrochureSubmit = () => {
     const errs: Record<string, string> = {};
@@ -123,7 +121,7 @@ const PreSale = () => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setLightbox(null);
-        setUnitModal(null);
+        
         setBrochureModal(false);
       }
     };
@@ -200,7 +198,7 @@ const PreSale = () => {
               {[
                 { val: '1–3 Rec & PH', label: 'Recámaras' },
                 { val: PROJECT.delivery, label: 'Entrega' },
-                { val: '$195K', label: 'Precio Desde' },
+                { val: '$514K USD', label: 'Precio Desde' },
               ].map((s) => (
                 <div key={s.label} className="bg-[#F8F6F2] border border-[rgba(207,174,96,0.22)] p-4 text-center">
                   <span className="font-display text-[24px] md:text-[28px] font-[300] text-[#CFAE60] block">{s.val}</span>
@@ -216,87 +214,6 @@ const PreSale = () => {
           </div>
 
 
-          {/* MODULE C — Unit Types */}
-          <div className="mb-10">
-            <div className="flex items-end justify-between">
-              <div>
-                <p className={sectionLabel} style={{ color: '#CFAE60' }}>Tipos de Unidad</p>
-                <p className="font-body text-[10px] text-[#4B4B4B] mt-2 mb-0 hidden sm:block">Haz clic en cualquier unidad para ver el plano y agendar una cita.</p>
-              </div>
-              {/* Mobile scroll arrows */}
-              <div className="flex items-center gap-2 sm:hidden mb-1">
-                <button
-                  onClick={() => {
-                    const el = document.getElementById('unit-scroll');
-                    if (el) el.scrollBy({ left: -200, behavior: 'smooth' });
-                  }}
-                  className="w-7 h-7 flex items-center justify-center border border-[rgba(207,174,96,0.4)] bg-transparent text-[#CFAE60] hover:bg-[rgba(207,174,96,0.1)] transition-colors cursor-pointer rounded-none"
-                >
-                  <ArrowLeft className="w-3.5 h-3.5" />
-                </button>
-                <button
-                  onClick={() => {
-                    const el = document.getElementById('unit-scroll');
-                    if (el) el.scrollBy({ left: 200, behavior: 'smooth' });
-                  }}
-                  className="w-7 h-7 flex items-center justify-center border border-[rgba(207,174,96,0.4)] bg-transparent text-[#CFAE60] hover:bg-[rgba(207,174,96,0.1)] transition-colors cursor-pointer rounded-none"
-                >
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </div>
-            <p className="font-body text-[10px] text-[#4B4B4B] mt-2 mb-3 sm:hidden">Desliza para ver más unidades →</p>
-
-            {/* Mobile: horizontal scroll cards */}
-            <div
-              id="unit-scroll"
-              className="flex sm:hidden gap-3 overflow-x-auto pb-3 snap-x snap-mandatory scrollbar-hide"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
-            >
-              {PROJECT.units.map((u, idx) => {
-                const badge = availBadge(u.avail);
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => setUnitModal(idx)}
-                    className="flex-shrink-0 w-[220px] snap-start bg-[#F8F6F2] border border-[rgba(207,174,96,0.18)] p-4 text-left cursor-pointer transition-all duration-200 hover:border-[#CFAE60] rounded-none"
-                  >
-                    <span className="font-display text-[18px] font-[300] text-[#1C1C1C] block mb-1">{u.name}</span>
-                    <span className="font-body text-[10px] text-[#4B4B4B] block mb-2">{u.m2}</span>
-                    <span className="font-display text-[20px] font-[300] text-[#CFAE60] block mb-3">{u.price}</span>
-                    <span
-                      className="font-body text-[9px] font-[400] py-1 px-2 inline-block"
-                      style={{ background: badge.bg, color: badge.text }}
-                    >{badge.label}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Desktop: vertical list */}
-            <div className="hidden sm:flex flex-col mt-4">
-              {PROJECT.units.map((u, idx) => {
-                const badge = availBadge(u.avail);
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => setUnitModal(idx)}
-                    className="grid gap-2 py-3.5 px-3 border-b border-[rgba(0,0,0,0.06)] text-left transition-all duration-200 hover:bg-[rgba(207,174,96,0.05)] hover:pl-5 cursor-pointer bg-transparent border-l-0 border-r-0 border-t-0 rounded-none"
-                    style={{ gridTemplateColumns: '1fr 56px 1fr 100px' }}
-                  >
-                    <span className="font-display text-[20px] font-[300] text-[#1C1C1C] self-center">{u.name}</span>
-                    <span className="font-body text-[10px] text-[#4B4B4B] self-center">{u.m2}</span>
-                    <span className="font-display text-[17px] font-[300] text-[#CFAE60] self-center">{u.price}</span>
-                    <span
-                      className="font-body text-[9px] font-[400] py-1 px-2 text-center self-center"
-                      style={{ background: badge.bg, color: badge.text }}
-                    >{badge.label}</span>
-                  </button>
-                );
-              })}
-            </div>
-            <div className="mt-10 border-t border-[rgba(207,174,96,0.18)]" />
-          </div>
 
           {/* MODULE D — Amenities */}
           <div>
@@ -418,77 +335,6 @@ const PreSale = () => {
         </div>
       )}
 
-      {/* ═══ UNIT MODAL ═══ */}
-      {unitModal !== null && (() => {
-        const u = PROJECT.units[unitModal];
-        const badge = availBadge(u.avail);
-        return (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center"
-            style={{ background: 'rgba(10,14,20,0.82)' }}
-            onClick={() => setUnitModal(null)}
-          >
-            <div
-              className="bg-white w-full max-w-[900px] mx-4 max-h-[90vh] overflow-y-auto grid grid-cols-1 md:grid-cols-2 relative rounded-none"
-              style={{ animation: 'modalIn 0.25s ease forwards' }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Close */}
-              <button
-                onClick={() => setUnitModal(null)}
-                className="sticky top-2 right-0 z-10 w-9 h-9 flex items-center justify-center border border-[rgba(0,0,0,0.12)] bg-white text-[#1C1C1C] hover:border-[#CFAE60] transition-colors cursor-pointer rounded-none ml-auto mr-2 mt-2 -mb-9 md:-mb-11 shrink-0"
-              >
-                <XIcon className="w-4 h-4" />
-              </button>
-
-              {/* Left — Floor Plan */}
-              <div className="bg-[#F8F6F2] p-6 md:p-8 flex flex-col items-center justify-center min-h-[250px] md:min-h-[400px]">
-                <p className="font-body text-[9px] tracking-[3px] uppercase text-[#CFAE60] font-[400] mb-4">Plano de Planta</p>
-                <div className="w-full aspect-square bg-[#eee8de] border border-[rgba(207,174,96,0.18)] flex items-center justify-center">
-                  <span className="font-body text-[11px] text-[#999]">Plano SVG</span>
-                </div>
-                <p className="font-body text-[9px] text-[#999] italic mt-3">Plano referencial · Sujeto a cambios</p>
-              </div>
-
-              {/* Right — Details */}
-              <div className="p-5 md:p-10">
-                <h3 className="font-display text-[34px] font-[300] text-[#1C1C1C] mb-1">{u.name}</h3>
-                <p className="font-body text-[9px] tracking-[3px] uppercase text-[#CFAE60] font-[400] mb-6">Residencial {PROJECT.name} · {PROJECT.location}</p>
-
-                <div className="grid grid-cols-2 gap-2 mb-5">
-                  {[
-                    { label: 'Superficie', val: u.m2 },
-                    { label: 'Precio Desde', val: u.price },
-                    { label: 'Disponibilidad', val: badge.label, color: badge.text },
-                    { label: 'Entrega', val: PROJECT.delivery },
-                  ].map((s) => (
-                    <div key={s.label} className="bg-[#F8F6F2] p-3">
-                      <p className="font-body text-[8px] tracking-[2px] uppercase text-[#4B4B4B] font-[400] mb-0.5">{s.label}</p>
-                      <span className="font-body text-[13px] font-[300]" style={{ color: (s as any).color || '#1C1C1C' }}>{s.val}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="font-body text-[12px] font-[300] leading-[1.7] text-[#4B4B4B] mb-5">{u.desc}</p>
-
-                <div className="border-t border-[rgba(207,174,96,0.18)] pt-5">
-                  <p className={sectionLabel} style={{ color: '#CFAE60', marginBottom: '10px' }}>Agendar una Cita</p>
-                  <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
-                    <div className="grid grid-cols-2 gap-2">
-                      <input placeholder="Nombre" value={unitForm.name} onChange={(e) => setUnitForm({ ...unitForm, name: e.target.value })} className={inputClass} />
-                      <input type="tel" placeholder="Teléfono" value={unitForm.phone} onChange={(e) => setUnitForm({ ...unitForm, phone: e.target.value })} className={inputClass} />
-                    </div>
-                    <input type="email" placeholder="Correo electrónico" value={unitForm.email} onChange={(e) => setUnitForm({ ...unitForm, email: e.target.value })} className={inputClass} />
-                    <input type="date" value={unitForm.date} onChange={(e) => setUnitForm({ ...unitForm, date: e.target.value })} className={inputClass} />
-                    <button type="submit" className={goldBtn}>Confirmar Cita con un Asesor</button>
-                  </form>
-                  <p className="font-body text-[9px] italic text-[#4B4B4B] text-center mt-3">Un asesor te contactará en menos de 2 horas</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-      })()}
 
       {/* ═══ BROCHURE MODAL ═══ */}
       {brochureModal && (
