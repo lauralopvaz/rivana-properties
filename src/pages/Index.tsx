@@ -213,7 +213,7 @@ const Home = () => {
             <h2 className="mb-16 text-secondary">{t('section.featuredTitle')}</h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {featuredProperties.map((p, i) => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
