@@ -121,7 +121,7 @@ const PreSale = () => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setLightbox(null);
-        setUnitModal(null);
+        
         setBrochureModal(false);
       }
     };
