@@ -11,7 +11,7 @@ import { PreSaleSection } from '@/components/home/PreSaleSection';
 import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
 import { ProcessTimeline } from '@/components/home/ProcessTimeline';
-import { InvestmentForm } from '@/components/home/InvestmentForm';
+
 import homeHero from '@/assets/home-hero.jpg';
 import presaleHero from '@/assets/presale-hero.jpg';
 
@@ -164,6 +164,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* ── WHY RIVANA — ALLY ── */}
+      <AllySection />
 
       {/* ── COLLECTIONS GRID ── */}
       <section className="py-24 lg:py-32 bg-background">
@@ -270,16 +272,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── WHY RIVANA — ALLY ── */}
-      <AllySection />
+
+
 
       {/* ── OUR PROCESS ── */}
       <ProcessTimeline />
 
-      {/* ── INVESTMENT FORM ── */}
-      <InvestmentForm />
-
-      {/* ── SCHEDULE A VISIT ── */}
+      {/* ── CONTACT & INVESTMENT FORM ── */}
       <ContactSection />
 
       {/* ── BLOG PREVIEW ── */}
