@@ -11,7 +11,7 @@ import { PreSaleSection } from '@/components/home/PreSaleSection';
 import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
 import { ProcessTimeline } from '@/components/home/ProcessTimeline';
-import { InvestmentForm } from '@/components/home/InvestmentForm';
+
 import homeHero from '@/assets/home-hero.jpg';
 import presaleHero from '@/assets/presale-hero.jpg';
 
