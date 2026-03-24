@@ -215,29 +215,6 @@ const PreSale = () => {
             <div className="mt-10 border-t border-[rgba(207,174,96,0.18)]" />
           </div>
 
-          {/* MODULE B — Sales Phases */}
-          {PROJECT.phases && PROJECT.phases.length > 0 && (
-            <div className="mb-10">
-              <p className={sectionLabel} style={{ color: '#CFAE60' }}>Fases de Venta</p>
-              <div className="mt-4 space-y-5">
-                {PROJECT.phases.map((ph) => {
-                  const isSold = ph.pct === 100;
-                  return (
-                    <div key={ph.name}>
-                      <div className="flex items-center justify-between mb-1.5">
-                        <span className={`font-body text-[13px] font-[300] ${isSold ? 'line-through text-[#999]' : 'text-[#1C1C1C]'}`}>{ph.name}</span>
-                        <span className={`font-body text-[11px] font-[400] ${isSold ? 'text-[#999]' : ph.pct >= 80 ? 'text-[#CFAE60]' : 'text-[#1C1C1C]'}`}>{ph.status}</span>
-                      </div>
-                      <div className="w-full h-[3px] bg-[#F0ECE4]">
-                        <div className="h-full bg-[#CFAE60] transition-all duration-700" style={{ width: `${ph.pct}%` }} />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="mt-10 border-t border-[rgba(207,174,96,0.18)]" />
-            </div>
-          )}
 
           {/* MODULE C — Unit Types */}
           <div className="mb-10">
