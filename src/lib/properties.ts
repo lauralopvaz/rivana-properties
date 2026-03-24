@@ -1,4 +1,5 @@
 import type { PropertyDetail } from '@/types/property';
+import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
 import mondrianHero from '@/assets/mondrian-hero.png';
 import mondrianFrontDesk from '@/assets/mondrian-front-desk.png';
 import mondrianCoffeeBar from '@/assets/mondrian-coffee-bar.jpg';
