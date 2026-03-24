@@ -331,20 +331,6 @@ const PreSale = () => {
 
             <div className="my-5 border-t border-[rgba(207,174,96,0.18)]" />
 
-            {/* Availability */}
-            <p className={sectionLabel} style={{ color: '#CFAE60', marginBottom: '10px' }}>Disponibilidad Actual</p>
-            <div className="space-y-2">
-              {PROJECT.availability.map((a) => (
-                <div key={a.type} className="flex items-center justify-between font-body text-[12px] font-[300]">
-                  <span className="text-[#4B4B4B]">{a.type}</span>
-                  <span style={{ color: sideAvailColor(a.qty) }}>
-                    {a.qty <= 5 && '⚠ '}{a.qty} disponible{a.qty > 1 ? 's' : ''}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="my-5 border-t border-[rgba(207,174,96,0.18)]" />
 
             {/* Countdown */}
             <p className="font-body text-[8px] tracking-[3px] uppercase text-[#4B4B4B] font-[400] mb-3">Precio de Preventa Hasta</p>
