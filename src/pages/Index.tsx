@@ -196,11 +196,18 @@ const Home = () => {
                       </span>
                     )}
                     <h3 className="text-2xl mb-2 text-[hsl(var(--pearl))] drop-shadow-[0_1px_3px_hsl(0_0%_0%/0.5)]">{d.name[language]}</h3>
-                    <div className="flex items-center gap-4 text-sm text-[hsl(var(--pearl))]/80 font-body font-light">
-                      <span>{language === 'es' ? 'Desde' : 'From'} {d.stats[1]?.val}</span>
-                      <span>·</span>
-                      <span>{d.stats[0]?.val} {d.stats[0]?.label[language]}</span>
-                    </div>
+                    {d.key !== 'cancun-centro' && d.key !== 'tulum' && (
+                      <div className="flex items-center gap-4 text-sm text-[hsl(var(--pearl))]/80 font-body font-light">
+                        <span>{language === 'es' ? 'Desde' : 'From'} {d.stats[1]?.val}</span>
+                        <span>·</span>
+                        <span>{d.stats[0]?.val} {d.stats[0]?.label[language]}</span>
+                      </div>
+                    )}
+                    {(d.key === 'cancun-centro' || d.key === 'tulum') && (
+                      <p className="text-sm text-[hsl(var(--pearl))]/60 font-body font-light italic">
+                        {language === 'es' ? 'Próximamente' : 'Coming Soon'}
+                      </p>
+                    )}
                     <span className="inline-flex items-center gap-1 mt-3 text-sm text-primary font-body font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {t('card.explore')} <ArrowRightIcon className="w-4 h-4" />
                     </span>
