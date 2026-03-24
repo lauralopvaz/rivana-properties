@@ -23,6 +23,7 @@ import destMayakoba from '@/assets/dest-mayakoba.jpg';
 import destPuertoMorelos from '@/assets/dest-puerto-morelos.jpg';
 import destCancunCentro from '@/assets/dest-cancun-centro.jpg';
 import destTulum from '@/assets/dest-tulum.jpg';
+import destPlayaDelCarmen from '@/assets/dest-playa-del-carmen.jpg';
 
 // Property images
 import propMondrian from '@/assets/mondrian-hero.png';
@@ -45,6 +46,7 @@ const destinationImages: Record<string, string> = {
   'puerto-morelos': destPuertoMorelos,
   'cancun-centro': destCancunCentro,
   'tulum': destTulum,
+  'playa-del-carmen': destPlayaDelCarmen,
 };
 
 const journalImages: Record<string, string> = {
