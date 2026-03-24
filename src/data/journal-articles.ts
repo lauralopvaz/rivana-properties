@@ -1,3 +1,12 @@
+import imgCancunRoi from '@/assets/journal/cancun-roi.jpg';
+import imgForeignBuyer from '@/assets/journal/foreign-buyer-guide.jpg';
+import imgWorldCup from '@/assets/journal/world-cup-2026.jpg';
+import imgLuxuryCondos from '@/assets/journal/luxury-condos-zona-hotelera.jpg';
+import imgCostaMujeres from '@/assets/journal/costa-mujeres-luxury.jpg';
+import imgMayakoba from '@/assets/journal/mayakoba-vs-puerto-cancun.jpg';
+import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
+import imgCostaMundial from '@/assets/journal/costa-mujeres-mundial.jpg';
+
 export interface JournalArticle {
   slug: string;
   title: { es: string; en: string };
@@ -7,6 +16,7 @@ export interface JournalArticle {
   readTime: string;
   author: string;
   featured?: boolean;
+  image: string;
   /** Related destination keys for internal linking */
   relatedDestinations: string[];
 }
@@ -26,6 +36,7 @@ export const journalArticles: JournalArticle[] = [
     date: 'Mar 8, 2026',
     readTime: '10 min',
     author: 'Carlos Mendoza',
+    image: imgCancunRoi,
     relatedDestinations: ['zona-hotelera', 'costa-mujeres', 'puerto-cancun'],
   },
   {
@@ -42,6 +53,7 @@ export const journalArticles: JournalArticle[] = [
     date: 'Feb 28, 2026',
     readTime: '12 min',
     author: 'Sofía Laurent',
+    image: imgForeignBuyer,
     relatedDestinations: ['zona-hotelera', 'puerto-cancun'],
   },
   {
@@ -59,6 +71,7 @@ export const journalArticles: JournalArticle[] = [
     readTime: '6 min',
     author: 'Alejandra Reyes',
     featured: true,
+    image: imgWorldCup,
     relatedDestinations: ['mayakoba', 'zona-hotelera', 'costa-mujeres'],
   },
   {
@@ -75,6 +88,7 @@ export const journalArticles: JournalArticle[] = [
     date: 'Feb 5, 2026',
     readTime: '8 min',
     author: 'Sofía Laurent',
+    image: imgLuxuryCondos,
     relatedDestinations: ['zona-hotelera'],
   },
   {
@@ -92,6 +106,7 @@ export const journalArticles: JournalArticle[] = [
     readTime: '8 min',
     author: 'Alejandra Reyes',
     featured: true,
+    image: imgCostaMujeres,
     relatedDestinations: ['costa-mujeres'],
   },
   {
@@ -108,6 +123,7 @@ export const journalArticles: JournalArticle[] = [
     date: 'Jan 10, 2026',
     readTime: '7 min',
     author: 'Carlos Mendoza',
+    image: imgMayakoba,
     relatedDestinations: ['mayakoba', 'puerto-cancun'],
   },
 ];
@@ -125,6 +141,7 @@ export const journalArticlesEs: JournalArticle[] = [
     date: 'Mar 1, 2026',
     readTime: '10 min',
     author: 'Alejandra Reyes',
+    image: imgGuiaPreventa,
     relatedDestinations: ['zona-hotelera', 'costa-mujeres', 'puerto-cancun'],
   },
   {
@@ -138,6 +155,7 @@ export const journalArticlesEs: JournalArticle[] = [
     date: 'Feb 15, 2026',
     readTime: '6 min',
     author: 'Carlos Mendoza',
+    image: imgCostaMundial,
     relatedDestinations: ['costa-mujeres'],
   },
 ];
