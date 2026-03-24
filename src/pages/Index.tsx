@@ -25,6 +25,7 @@ import destTulum from '@/assets/dest-tulum.jpg';
 import propMondrian from '@/assets/mondrian-hero.png';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
+import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
 
 // Journal images
 import journalRoi from '@/assets/journal-roi.jpg';
@@ -51,7 +52,7 @@ const featuredProperties = [
   { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
   { name: 'Dhamar', zone: { es: 'Costa Mujeres, Cancún', en: 'Costa Mujeres, Cancún' }, beds: 3, area: 178, price: '$248K', amenities: ['ocean', 'pool', 'spa'], image: dhamarPrincipal, slug: 'dhamar-costa-mujeres' },
   { name: 'SLS Ocean Beach', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 3, area: 356, price: '$1.6M', amenities: ['ocean', 'marina', 'golf'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
-  { name: 'The Reserve at Mayakoba', zone: { es: 'Mayakoba, Riviera Maya', en: 'Mayakoba, Riviera Maya' }, beds: 4, area: 660, price: '$1.1M', amenities: ['golf', 'spa', 'jungle'], image: '/placeholder.svg', slug: 'the-reserve-at-mayakoba' },
+  { name: 'The Reserve at Mayakoba', zone: { es: 'Mayakoba, Riviera Maya', en: 'Mayakoba, Riviera Maya' }, beds: 4, area: 660, price: '$1.1M', amenities: ['golf', 'spa', 'jungle'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
