@@ -7,6 +7,7 @@ import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIco
 import propMondrian from '@/assets/mondrian-hero.png';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
+import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
 
 /* ── Badge icon components ── */
 const LockIcon = ({ className = "w-3 h-3" }: { className?: string }) => (
