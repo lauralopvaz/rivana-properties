@@ -77,12 +77,6 @@ const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string
 const Home = () => {
   const { language, t, localePath } = useLanguage();
 
-  const services = [
-    { num: '01', text: t('services.01') },
-    { num: '02', text: t('services.02') },
-    { num: '03', text: t('services.03') },
-    { num: '04', text: t('services.04') },
-  ];
 
   const sortedDestinations = [...destinations].sort((a, b) => a.priority - b.priority);
 
@@ -151,21 +145,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
-      <section className="py-16 border-y border-border bg-background">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((s, i) => (
-              <ScrollReveal key={s.num} delay={i * 100}>
-                <div className="text-center lg:text-left">
-                  <span className="font-display text-3xl lg:text-4xl text-primary">{s.num}</span>
-                  <p className="text-sm text-foreground mt-3 font-body uppercase tracking-widest leading-relaxed">{s.text}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* ── WHY RIVANA — ALLY ── */}
       <AllySection />
 
