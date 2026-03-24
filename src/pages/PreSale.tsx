@@ -90,7 +90,7 @@ function sideAvailColor(qty: number) {
 const PreSale = () => {
   const countdown = useCountdown(PROJECT.presaleDeadline);
   const [lightbox, setLightbox] = useState<number | null>(null);
-  const [unitModal, setUnitModal] = useState<number | null>(null);
+  
   const [brochureModal, setBrochureModal] = useState(false);
 
   /* Brochure form */
