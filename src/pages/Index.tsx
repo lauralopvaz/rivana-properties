@@ -77,12 +77,6 @@ const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string
 const Home = () => {
   const { language, t, localePath } = useLanguage();
 
-  const services = [
-    { num: '01', text: t('services.01') },
-    { num: '02', text: t('services.02') },
-    { num: '03', text: t('services.03') },
-    { num: '04', text: t('services.04') },
-  ];
 
   const sortedDestinations = [...destinations].sort((a, b) => a.priority - b.priority);
 
