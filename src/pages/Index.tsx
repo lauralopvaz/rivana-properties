@@ -27,6 +27,7 @@ import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
+import villageBluHero from '@/assets/village-blu-hero.jpg';
 
 // Journal images
 import journalRoi from '@/assets/journal-roi.jpg';
@@ -55,6 +56,7 @@ const featuredProperties = [
   { name: 'SLS Ocean Beach', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 3, area: 356, price: '$1.6M', amenities: ['ocean', 'marina', 'golf'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
   { name: 'The Reserve at Mayakoba', zone: { es: 'Mayakoba, Riviera Maya', en: 'Mayakoba, Riviera Maya' }, beds: 4, area: 660, price: '$1.1M', amenities: ['golf', 'spa', 'jungle'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
   { name: 'Vellmari Grand Living', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 714, price: '$14.8M MXN', amenities: ['marina', 'pool', 'spa'], image: vellmariHero, slug: 'vellmari-grand-living' },
+  { name: 'Village Blu Beach Apartments', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 1, area: 73, price: '$273K', amenities: ['ocean', 'pool', 'sunset'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
