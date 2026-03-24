@@ -149,7 +149,7 @@ const PreSale = () => {
         <div className="absolute bottom-0 left-0 p-6 md:p-14 z-10">
           <div className="flex items-center gap-2 mb-3 md:mb-5">
             <span className="w-2 h-2 rounded-full bg-[#CFAE60] blink-dot" />
-            <span className="font-body text-[8px] md:text-[9px] tracking-[3px] md:tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Preventa Exclusiva · Ahora Abierta</span>
+            <span className="font-body text-[8px] md:text-[9px] tracking-[3px] md:tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Preventa Exclusiva · Precios hasta el 25 de abril</span>
           </div>
           <h1 className="text-white font-display font-[300] leading-[1.05] mb-3 text-[clamp(36px,8vw,76px)]" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
             Residencial <em className="text-[#CFAE60] italic">{PROJECT.name}</em>
@@ -198,12 +198,12 @@ const PreSale = () => {
             {/* 3 stat boxes */}
             <div className="grid grid-cols-3 gap-2 md:gap-4 mb-8">
               {[
-                { val: String(PROJECT.totalUnits), label: 'Total Unidades' },
+                { val: '1–3 Rec & PH', label: 'Recámaras' },
                 { val: PROJECT.delivery, label: 'Entrega' },
                 { val: '$195K', label: 'Precio Desde' },
               ].map((s) => (
                 <div key={s.label} className="bg-[#F8F6F2] border border-[rgba(207,174,96,0.22)] p-4 text-center">
-                  <span className="font-display text-[28px] font-[300] text-[#CFAE60] block">{s.val}</span>
+                  <span className="font-display text-[24px] md:text-[28px] font-[300] text-[#CFAE60] block">{s.val}</span>
                   <span className="font-body text-[8px] tracking-[3px] uppercase text-[#4B4B4B] font-[400]">{s.label}</span>
                 </div>
               ))}
@@ -215,29 +215,6 @@ const PreSale = () => {
             <div className="mt-10 border-t border-[rgba(207,174,96,0.18)]" />
           </div>
 
-          {/* MODULE B — Sales Phases */}
-          {PROJECT.phases && PROJECT.phases.length > 0 && (
-            <div className="mb-10">
-              <p className={sectionLabel} style={{ color: '#CFAE60' }}>Fases de Venta</p>
-              <div className="mt-4 space-y-5">
-                {PROJECT.phases.map((ph) => {
-                  const isSold = ph.pct === 100;
-                  return (
-                    <div key={ph.name}>
-                      <div className="flex items-center justify-between mb-1.5">
-                        <span className={`font-body text-[13px] font-[300] ${isSold ? 'line-through text-[#999]' : 'text-[#1C1C1C]'}`}>{ph.name}</span>
-                        <span className={`font-body text-[11px] font-[400] ${isSold ? 'text-[#999]' : ph.pct >= 80 ? 'text-[#CFAE60]' : 'text-[#1C1C1C]'}`}>{ph.status}</span>
-                      </div>
-                      <div className="w-full h-[3px] bg-[#F0ECE4]">
-                        <div className="h-full bg-[#CFAE60] transition-all duration-700" style={{ width: `${ph.pct}%` }} />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="mt-10 border-t border-[rgba(207,174,96,0.18)]" />
-            </div>
-          )}
 
           {/* MODULE C — Unit Types */}
           <div className="mb-10">
@@ -354,20 +331,6 @@ const PreSale = () => {
 
             <div className="my-5 border-t border-[rgba(207,174,96,0.18)]" />
 
-            {/* Availability */}
-            <p className={sectionLabel} style={{ color: '#CFAE60', marginBottom: '10px' }}>Disponibilidad Actual</p>
-            <div className="space-y-2">
-              {PROJECT.availability.map((a) => (
-                <div key={a.type} className="flex items-center justify-between font-body text-[12px] font-[300]">
-                  <span className="text-[#4B4B4B]">{a.type}</span>
-                  <span style={{ color: sideAvailColor(a.qty) }}>
-                    {a.qty <= 5 && '⚠ '}{a.qty} disponible{a.qty > 1 ? 's' : ''}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="my-5 border-t border-[rgba(207,174,96,0.18)]" />
 
             {/* Countdown */}
             <p className="font-body text-[8px] tracking-[3px] uppercase text-[#4B4B4B] font-[400] mb-3">Precio de Preventa Hasta</p>
