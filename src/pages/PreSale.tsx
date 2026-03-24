@@ -149,7 +149,7 @@ const PreSale = () => {
         <div className="absolute bottom-0 left-0 p-6 md:p-14 z-10">
           <div className="flex items-center gap-2 mb-3 md:mb-5">
             <span className="w-2 h-2 rounded-full bg-[#CFAE60] blink-dot" />
-            <span className="font-body text-[8px] md:text-[9px] tracking-[3px] md:tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Preventa Exclusiva · Ahora Abierta</span>
+            <span className="font-body text-[8px] md:text-[9px] tracking-[3px] md:tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Preventa Exclusiva · Precios hasta el 25 de abril</span>
           </div>
           <h1 className="text-white font-display font-[300] leading-[1.05] mb-3 text-[clamp(36px,8vw,76px)]" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
             Residencial <em className="text-[#CFAE60] italic">{PROJECT.name}</em>
