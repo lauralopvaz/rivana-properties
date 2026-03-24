@@ -77,8 +77,6 @@ const badgeConfig: Record<string, { label: { es: string; en: string }; icon: Rea
   'frente-mar': { label: { es: 'Frente al Mar', en: 'Beachfront' }, icon: WavesIcon2 },
 };
 
-type BadgeKey = 'vista-mar' | 'alberca-infinity' | 'beach-club' | 'pet-friendly' | 'club-privado' | 'wellness' | 'comunidad-cerrada' | 'vista-marina' | 'golf' | 'frente-mar';
-
 interface DestProject {
   name: string;
   zone: string;
