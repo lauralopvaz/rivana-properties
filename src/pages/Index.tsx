@@ -199,7 +199,7 @@ const Home = () => {
                     <div className="flex items-center gap-4 text-sm text-[hsl(var(--pearl))]/80 font-body font-light">
                       <span>{language === 'es' ? 'Desde' : 'From'} {d.stats[1]?.val}</span>
                       <span>·</span>
-                      <span>{d.stats[0]?.val} {language === 'es' ? 'propiedades' : 'properties'}</span>
+                      <span>{d.stats[0]?.val} {d.stats[0]?.label[language]}</span>
                     </div>
                     <span className="inline-flex items-center gap-1 mt-3 text-sm text-primary font-body font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {t('card.explore')} <ArrowRightIcon className="w-4 h-4" />
