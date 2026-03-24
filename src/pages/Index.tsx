@@ -26,6 +26,7 @@ import propMondrian from '@/assets/mondrian-hero.png';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
+import vellmariHero from '@/assets/vellmari-hero.jpg';
 
 // Journal images
 import journalRoi from '@/assets/journal-roi.jpg';
