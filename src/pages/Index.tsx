@@ -164,6 +164,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* ── WHY RIVANA — ALLY ── */}
+      <AllySection />
 
       {/* ── COLLECTIONS GRID ── */}
       <section className="py-24 lg:py-32 bg-background">
@@ -270,8 +272,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── WHY RIVANA — ALLY ── */}
-      <AllySection />
+
+
 
       {/* ── OUR PROCESS ── */}
       <ProcessTimeline />
