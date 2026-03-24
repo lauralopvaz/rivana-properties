@@ -276,10 +276,7 @@ const Home = () => {
       {/* ── OUR PROCESS ── */}
       <ProcessTimeline />
 
-      {/* ── INVESTMENT FORM ── */}
-      <InvestmentForm />
-
-      {/* ── SCHEDULE A VISIT ── */}
+      {/* ── CONTACT & INVESTMENT FORM ── */}
       <ContactSection />
 
       {/* ── BLOG PREVIEW ── */}
