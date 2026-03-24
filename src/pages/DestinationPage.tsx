@@ -9,9 +9,14 @@ import { getDestination } from '@/data/destinations';
 import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIcon, CalendarIcon, BriefcaseIcon, ChatIcon } from '@/components/icons';
 
 import advisorPhoto from '@/assets/advisor-celia.png';
-import propOceana from '@/assets/prop-oceana.jpg';
-import propMarina from '@/assets/prop-marina.jpg';
+
+// Real property images
 import propMondrian from '@/assets/mondrian-hero.png';
+import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
+import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
+import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
+import vellmariHero from '@/assets/vellmari-hero.jpg';
+import villageBluHero from '@/assets/village-blu-hero.jpg';
 
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
 import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
@@ -72,11 +77,42 @@ const badgeConfig: Record<string, { label: { es: string; en: string }; icon: Rea
   'frente-mar': { label: { es: 'Frente al Mar', en: 'Beachfront' }, icon: WavesIcon2 },
 };
 
-const projects = [
-  { name: 'Oceana Residences', zone: 'Playa Mujeres', status: 'preventa' as const, yield: '10%', beds: 2, area: 95, price: 195000, badges: ['vista-mar', 'alberca-infinity', 'beach-club', 'pet-friendly'] as BadgeKey[], image: propOceana, slug: 'oceana-residences' },
-  { name: 'Azure Tower', zone: 'Costa Mujeres Centro', status: 'preventa' as const, yield: '9%', beds: 3, area: 185, price: 245000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'] as BadgeKey[], image: propMarina, slug: 'azure-beachfront' },
-  { name: 'Mar Sereno', zone: 'Punta Sam', status: 'preventa' as const, yield: '12%', beds: 2, area: 110, price: 320000, badges: ['vista-mar', 'wellness', 'comunidad-cerrada'] as BadgeKey[], image: propMondrian, slug: 'mar-sereno' },
-];
+interface DestProject {
+  name: string;
+  zone: string;
+  status: 'preventa' | 'entrega-inmediata';
+  yield?: string;
+  beds: number;
+  area: number;
+  price: number;
+  badges: BadgeKey[];
+  image: string;
+  slug: string;
+}
+
+const projectsByDestination: Record<string, DestProject[]> = {
+  'zona-hotelera': [
+    { name: 'Mondrian Residences', zone: 'Zona Hotelera', status: 'preventa', yield: '33%', beds: 3, area: 165, price: 514000, badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
+  ],
+  'puerto-cancun': [
+    { name: 'SLS Ocean Beach', zone: 'Puerto Cancún', status: 'preventa', beds: 3, area: 356, price: 1600000, badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
+    { name: 'Vellmari Grand Living', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 714, price: 845714, badges: ['vista-marina', 'golf', 'wellness', 'pet-friendly'], image: vellmariHero, slug: 'vellmari-grand-living' },
+  ],
+  'costa-mujeres': [
+    { name: 'Dhamar', zone: 'Costa Mujeres', status: 'preventa', beds: 3, area: 178, price: 248000, badges: ['vista-mar', 'beach-club', 'alberca-infinity', 'wellness'], image: dhamarPrincipal, slug: 'dhamar-costa-mujeres' },
+  ],
+  'mayakoba': [
+    { name: 'The Reserve at Mayakoba', zone: 'Mayakoba', status: 'preventa', beds: 4, area: 660, price: 1141000, badges: ['golf', 'wellness', 'comunidad-cerrada'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
+  ],
+  'playa-del-carmen': [
+    { name: 'The Reserve at Mayakoba', zone: 'Mayakoba', status: 'preventa', beds: 4, area: 660, price: 1141000, badges: ['golf', 'wellness', 'comunidad-cerrada'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
+  ],
+  'puerto-morelos': [
+    { name: 'Village Blu Beach Apartments', zone: 'Puerto Morelos', status: 'preventa', yield: '8.8%', beds: 1, area: 73, price: 273000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
+  ],
+  'cancun-centro': [],
+  'tulum': [],
+};
 
 const faqs: Record<string, { q: string; a: string }[]> = {
   es: [
@@ -246,88 +282,90 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
       )}
 
       {/* Featured Projects — Redesigned cards matching Listings */}
-      <section className="py-20">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">{t('dest.featuredProjects')}</p>
-            <h2 className="mb-12">{t('dest.newDevelopments')}</h2>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3" style={{ gap: '2px', background: '#F8F6F2' }}>
-            {projects.map((p, i) => (
-              <ScrollReveal key={p.name} delay={i * 100}>
-                <Link
-                  to={localePath(`/propiedad/${p.slug}`)}
-                  className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
-                >
-                  {/* Image */}
-                  <div className="relative overflow-hidden" style={{ paddingTop: '75%' }}>
-                    <img src={p.image} alt={p.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
-                    <div className="absolute inset-0 bg-transparent group-hover:bg-[rgba(207,174,96,0.12)] transition-colors duration-300" />
-                    <div className="absolute top-3 left-3 flex flex-col gap-1.5">
-                      <span className="text-[12px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]" style={{ background: '#26547D' }}>
-                        {language === 'es' ? 'Preventa' : 'Pre-Sale'}
-                      </span>
-                      {p.yield && (
-                        <span className="text-[12px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
-                          <TrendingUpIcon className="w-3 h-3" /> {p.yield}
+      {(projectsByDestination[destinationKey]?.length ?? 0) > 0 && (
+        <section className="py-20">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+            <ScrollReveal>
+              <p className="eyebrow mb-4">{t('dest.featuredProjects')}</p>
+              <h2 className="mb-12">{t('dest.newDevelopments')}</h2>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3" style={{ gap: '2px', background: '#F8F6F2' }}>
+              {(projectsByDestination[destinationKey] || []).map((p, i) => (
+                <ScrollReveal key={p.name} delay={i * 100}>
+                  <Link
+                    to={localePath(`/propiedad/${p.slug}`)}
+                    className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
+                  >
+                    {/* Image */}
+                    <div className="relative overflow-hidden" style={{ paddingTop: '75%' }}>
+                      <img src={p.image} alt={p.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
+                      <div className="absolute inset-0 bg-transparent group-hover:bg-[rgba(207,174,96,0.12)] transition-colors duration-300" />
+                      <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+                        <span className="text-[12px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]" style={{ background: '#26547D' }}>
+                          {language === 'es' ? 'Preventa' : 'Pre-Sale'}
                         </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="px-5 pt-5 pb-4">
-                     <p className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
-                     <h3 className="font-display text-[24px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
-
-                    {/* Specs */}
-                    <div className="flex items-center gap-[14px] mb-3">
-                       <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
-                         <BedIcon className="w-3 h-3" /> {p.beds} {language === 'es' ? 'Rec.' : 'Beds'}
-                       </span>
-                       <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
-                         <RulerIcon className="w-3 h-3" /> {p.area} m²
-                      </span>
-                    </div>
-
-                    {/* Badges */}
-                    {p.badges.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mb-3">
-                        {p.badges.slice(0, 3).map(b => {
-                          const cfg = badgeConfig[b];
-                          if (!cfg) return null;
-                          const Icon = cfg.icon;
-                          return (
-                            <span key={b} className="flex items-center gap-1 px-[10px] py-[4px] text-[12px] font-body font-[300]" style={{ background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)', color: '#1C1C1C' }}>
-                              <Icon className="w-[10px] h-[10px]" /> {cfg.label[language]}
-                            </span>
-                          );
-                        })}
-                        {p.badges.length > 3 && (
-                          <span className="px-[10px] py-[4px] text-[12px] font-body font-[300]" style={{ color: '#4B4B4B', background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
-                            +{p.badges.length - 3} {language === 'es' ? 'más' : 'more'}
+                        {p.yield && (
+                          <span className="text-[12px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
+                            <TrendingUpIcon className="w-3 h-3" /> {p.yield}
                           </span>
                         )}
                       </div>
-                    )}
-
-                    {/* Bottom */}
-                    <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
-                      <div>
-                         <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{language === 'es' ? 'Desde' : 'From'}</span>
-                         <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price)} USD</span>
-                       </div>
-                       <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
-                         {language === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-                      </span>
                     </div>
-                  </div>
-                </Link>
-              </ScrollReveal>
-            ))}
+
+                    {/* Content */}
+                    <div className="px-5 pt-5 pb-4">
+                       <p className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
+                       <h3 className="font-display text-[24px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
+
+                      {/* Specs */}
+                      <div className="flex items-center gap-[14px] mb-3">
+                         <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
+                           <BedIcon className="w-3 h-3" /> {p.beds} {language === 'es' ? 'Rec.' : 'Beds'}
+                         </span>
+                         <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
+                           <RulerIcon className="w-3 h-3" /> {p.area} m²
+                        </span>
+                      </div>
+
+                      {/* Badges */}
+                      {p.badges.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mb-3">
+                          {p.badges.slice(0, 3).map(b => {
+                            const cfg = badgeConfig[b];
+                            if (!cfg) return null;
+                            const Icon = cfg.icon;
+                            return (
+                              <span key={b} className="flex items-center gap-1 px-[10px] py-[4px] text-[12px] font-body font-[300]" style={{ background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)', color: '#1C1C1C' }}>
+                                <Icon className="w-[10px] h-[10px]" /> {cfg.label[language]}
+                              </span>
+                            );
+                          })}
+                          {p.badges.length > 3 && (
+                            <span className="px-[10px] py-[4px] text-[12px] font-body font-[300]" style={{ color: '#4B4B4B', background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
+                              +{p.badges.length - 3} {language === 'es' ? 'más' : 'more'}
+                            </span>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Bottom */}
+                      <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+                        <div>
+                           <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{language === 'es' ? 'Desde' : 'From'}</span>
+                           <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price)} USD</span>
+                         </div>
+                         <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
+                           {language === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Market Data */}
       <section className="py-20 bg-card border-y border-border">
