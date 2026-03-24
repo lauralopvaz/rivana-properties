@@ -9,9 +9,14 @@ import { getDestination } from '@/data/destinations';
 import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIcon, CalendarIcon, BriefcaseIcon, ChatIcon } from '@/components/icons';
 
 import advisorPhoto from '@/assets/advisor-celia.png';
-import propOceana from '@/assets/prop-oceana.jpg';
-import propMarina from '@/assets/prop-marina.jpg';
+
+// Real property images
 import propMondrian from '@/assets/mondrian-hero.png';
+import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
+import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
+import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
+import vellmariHero from '@/assets/vellmari-hero.jpg';
+import villageBluHero from '@/assets/village-blu-hero.jpg';
 
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
 import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
