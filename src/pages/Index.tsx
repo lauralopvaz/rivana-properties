@@ -270,6 +270,15 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── WHY RIVANA — ALLY ── */}
+      <AllySection />
+
+      {/* ── OUR PROCESS ── */}
+      <ProcessTimeline />
+
+      {/* ── INVESTMENT FORM ── */}
+      <InvestmentForm />
+
       {/* ── SCHEDULE A VISIT ── */}
       <ContactSection />
 
