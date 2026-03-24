@@ -75,7 +75,7 @@ export const ContactSection = () => {
     : ['Personalized real estate advisory', 'Access to exclusive pre-sale projects', 'Legal and financial guidance', 'Bilingual team · ES · EN'];
 
   return (
-    <section className="relative">
+    <section id="contact-form" className="relative">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Left column — Copy */}
         <div className="py-16 lg:py-20 px-6 lg:px-10 bg-[hsl(var(--paper))]">

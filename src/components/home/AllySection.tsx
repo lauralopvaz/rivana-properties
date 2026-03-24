@@ -53,6 +53,14 @@ export const AllySection = () => {
                 ? 'Rivana Properties es una firma boutique de asesoría inmobiliaria que combina profundo conocimiento local con estándares globales de inversión. Cada recomendación que hacemos está respaldada por análisis de mercado, proyecciones de plusvalía y un compromiso real con tus objetivos.'
                 : 'Rivana Properties is a boutique real estate advisory firm that combines deep local expertise with global investment standards. Every recommendation we make is backed by market analysis, capital gains projections and a real commitment to your goals.'}
             </p>
+            <button
+              onClick={() => {
+                document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="mt-8 uppercase transition-colors duration-300 px-8 py-4 font-body text-[13px] tracking-[3px] font-normal bg-primary text-white hover:bg-[#b89a4a] border-none cursor-pointer"
+            >
+              {L === 'es' ? 'Agendar Asesoría' : 'Schedule Advisory'}
+            </button>
           </ScrollReveal>
 
           {/* Right — 3 Pillars */}
