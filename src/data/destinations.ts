@@ -520,10 +520,10 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '50+', label: { es: 'Propiedades', en: 'Properties' } },
-      { val: '$180K', label: { es: 'Desde', en: 'Starting From' } },
-      { val: '14%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
-      { val: '80+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
+      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '$1.1M', label: { es: 'Desde USD', en: 'From USD' } },
+      { val: '16%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
+      { val: 'The Reserve', label: { es: 'Desarrollo Destacado', en: 'Featured Development' } },
     ],
     chips: {
       es: ['Cosmopolita', 'Quinta Avenida', 'Alta Demanda Turística'],
