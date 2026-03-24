@@ -81,7 +81,9 @@ const JournalPost = () => {
 
       {/* Hero */}
       <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-28">
-        <div className="absolute inset-0 gradient-placeholder opacity-20" />
+        <div className="absolute inset-0">
+          <img src={article.image} alt={article.title[language]} className="w-full h-full object-cover opacity-25" loading="eager" width={1280} height={800} />
+        </div>
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <span className="eyebrow mb-4 inline-block">{article.category[language]}</span>
           <h1 className="mb-6">{article.title[language]}</h1>
@@ -217,7 +219,9 @@ const JournalPost = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {related.map((a) => (
                     <Link key={a.slug} to={localePath(`/journal/${a.slug}`)} className="group">
-                      <div className="aspect-[16/10] gradient-placeholder-alt rounded-sm mb-3 group-hover:scale-[1.02] transition-transform duration-500" />
+                      <div className="aspect-[16/10] overflow-hidden rounded-sm mb-3">
+                        <img src={a.image} alt={a.title[language]} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={1280} height={800} />
+                      </div>
                       <span className="eyebrow text-xs">{a.category[language]}</span>
                       <p className="text-sm font-body mt-1 group-hover:text-primary transition-colors line-clamp-2">{a.title[language]}</p>
                     </Link>
