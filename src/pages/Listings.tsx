@@ -91,6 +91,8 @@ const allProperties: Property[] = [
   { id: 15, name: 'Bay View Grand', zone: 'Zona Hotelera', type: 'condominio', beds: 3, area: 451, price: 586146, priceM2: 1298, status: 'preventa', badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
   { id: 16, name: 'Arbolada Towers', zone: 'Residencial Cancún', type: 'condominio', beds: 2, area: 94, price: 263000, priceM2: 2805, status: 'entrega-inmediata', badges: ['alberca-infinity', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'arbolada-towers' },
   { id: 17, name: 'Thompson Residences', zone: 'Puerto Cancún', type: 'condominio', beds: 5, area: 803, price: 730000, priceM2: 909, status: 'preventa', badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'thompson-residences-puerto-cancun' },
+  { id: 18, name: 'Sole Blu Ocean Living', zone: 'Puerto Morelos', type: 'condominio', beds: 2, area: 136, price: 392000, priceM2: 2882, status: 'preventa', yield: '~10%', badges: ['frente-mar', 'beach-club', 'alberca-infinity', 'pet-friendly'], image: '/placeholder.svg', slug: 'sole-blu-ocean-living' },
+  { id: 19, name: 'Cuore Cumbres', zone: 'Cancún Centro', type: 'condominio', beds: 3, area: 346, price: 0, priceM2: 0, status: 'preventa', badges: ['alberca-infinity', 'pet-friendly', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'cuore-cumbres-cancun' },
 ]; // properties
 
 const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Residencial Cancún', 'Tulum', 'Cancún Centro'];

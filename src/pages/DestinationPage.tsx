@@ -114,9 +114,11 @@ const projectsByDestination: Record<string, DestProject[]> = {
   ],
   'puerto-morelos': [
     { name: 'Village Blu Beach Apartments', zone: 'Puerto Morelos', status: 'preventa', yield: '8.8%', beds: 1, area: 73, price: 273000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
+    { name: 'Sole Blu Ocean Living', zone: 'Puerto Morelos', status: 'preventa', yield: '~10%', beds: 2, area: 136, price: 392000, badges: ['frente-mar', 'beach-club', 'alberca-infinity', 'pet-friendly'], image: '/placeholder.svg', slug: 'sole-blu-ocean-living' },
   ],
   'cancun-centro': [
     { name: 'Arbolada Towers', zone: 'Residencial Cancún', status: 'entrega-inmediata', beds: 2, area: 94, price: 263000, badges: ['alberca-infinity', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'arbolada-towers' },
+    { name: 'Cuore Cumbres', zone: 'Cancún Centro', status: 'preventa', beds: 3, area: 346, price: 0, badges: ['alberca-infinity', 'pet-friendly', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'cuore-cumbres-cancun' },
   ],
   'tulum': [],
 };

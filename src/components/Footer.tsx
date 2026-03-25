@@ -117,6 +117,8 @@ export const Footer = () => {
               <li><Link to={localePath('/propiedad/bay-view-grand-grand-island')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">Bay View Grand</Link></li>
               <li><Link to={localePath('/propiedad/kabeek-marina-condos')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">Kabeek Marina</Link></li>
               <li><Link to={localePath('/propiedad/arbolada-towers')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">Arbolada Towers</Link></li>
+              <li><Link to={localePath('/propiedad/sole-blu-ocean-living')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">Sole Blu Ocean Living</Link></li>
+              <li><Link to={localePath('/propiedad/cuore-cumbres-cancun')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">Cuore Cumbres</Link></li>
               <li><Link to={localePath('/propiedad/dhamar-costa-mujeres')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">Dhamar</Link></li>
             </ul>
           </div>
