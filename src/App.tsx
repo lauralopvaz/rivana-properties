@@ -23,6 +23,7 @@ import JournalPost from "./pages/JournalPost";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import PropertyDetailNew from "./pages/PropertyDetailNew";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +74,7 @@ const AppRoutes = () => (
     <Route path="/listings" element={<Listings />} />
     <Route path="/presale" element={<PreSale />} />
     <Route path="/propiedad/:slug" element={<PropertyDetailNew locale="es" />} />
+    <Route path="/aviso-de-privacidad" element={<PrivacyPolicy />} />
 
     {/* ── ENGLISH (/en prefix) ── */}
     <Route path="/en" element={<Index />} />
@@ -115,6 +117,7 @@ const AppRoutes = () => (
     <Route path="/en/listings" element={<Listings />} />
     <Route path="/en/presale" element={<PreSale />} />
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
+    <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
 
     {/* 404 */}
     <Route path="*" element={<NotFound />} />

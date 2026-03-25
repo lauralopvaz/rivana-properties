@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { PhoneIcon, MailIcon, InstagramIcon, PinterestIcon, FacebookIcon } from '@/components/icons';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { destinations } from '@/data/destinations';
-import { Button } from '@/components/ui/button';
 import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
 
 export const Footer = () => {
@@ -46,13 +45,41 @@ export const Footer = () => {
 
             {/* Newsletter */}
             <div className="mt-8">
-              <h4 className="eyebrow mb-3">Newsletter</h4>
               {nl.success ? (
                 <p className="text-primary font-body text-sm">{language === 'es' ? '¡Suscrito! 🎉' : 'Subscribed! 🎉'}</p>
               ) : (
-                <form className="space-y-2" onSubmit={nl.handleSubmit}>
-                  <input type="email" required value={nl.email} onChange={(e) => nl.setEmail(e.target.value)} placeholder={language === 'es' ? 'Tu correo' : 'Your email'} className="w-full bg-muted border border-border rounded-sm px-3 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                  <Button variant="gold" size="sm" className="w-full" type="submit" disabled={nl.loading}>{nl.loading ? '...' : language === 'es' ? 'Suscribirse' : 'Subscribe'}</Button>
+                <form className="flex" onSubmit={nl.handleSubmit}>
+                  <input
+                    type="email"
+                    required
+                    value={nl.email}
+                    onChange={(e) => nl.setEmail(e.target.value)}
+                    placeholder={language === 'es' ? 'Tu correo electrónico' : 'Your email'}
+                    style={{
+                      background: '#F8F6F2',
+                      border: '1px solid rgba(0,0,0,0.09)',
+                      borderRadius: 0,
+                    }}
+                    className="flex-1 min-w-0 px-3 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                  />
+                  <button
+                    type="submit"
+                    disabled={nl.loading}
+                    style={{
+                      background: '#CFAE60',
+                      color: '#fff',
+                      textTransform: 'uppercase',
+                      letterSpacing: '2px',
+                      fontSize: '12px',
+                      borderRadius: 0,
+                      border: 'none',
+                      padding: '0 16px',
+                      whiteSpace: 'nowrap',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {nl.loading ? '...' : language === 'es' ? 'Suscribirse' : 'Subscribe'}
+                  </button>
                 </form>
               )}
             </div>
@@ -85,7 +112,6 @@ export const Footer = () => {
               <li><Link to={localePath('/listings')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.allListings')}</Link></li>
               <li><Link to={localePath('/presale')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.presale')}</Link></li>
               <li><Link to={localePath('/cancun/zona-hotelera/penthouses')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.penthouses')}</Link></li>
-              {/* Extra internal links to P1 destinations */}
               <li><Link to={localePath('/cancun/zona-hotelera/condos')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Condos Zona Hotelera' : 'Hotel Zone Condos'}</Link></li>
               <li><Link to={localePath('/cancun/costa-mujeres/preventa')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Preventa Costa Mujeres' : 'Costa Mujeres Pre-Sale'}</Link></li>
             </ul>
@@ -98,6 +124,14 @@ export const Footer = () => {
               <li><Link to={localePath('/about')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.aboutUs')}</Link></li>
               <li><Link to={localePath('/journal')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.journal')}</Link></li>
               <li><a href="mailto:rivanapropertiesmx@gmail.com" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.contact')}</a></li>
+              <li>
+                <Link
+                  to={localePath(language === 'es' ? '/aviso-de-privacidad' : '/privacy-policy')}
+                  className="text-[15px] text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {language === 'es' ? 'Aviso de Privacidad' : 'Privacy Policy'}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
