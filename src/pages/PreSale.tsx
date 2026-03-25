@@ -162,8 +162,8 @@ const PreSale = () => {
   return (
     <div className="bg-white">
       <SEOHead
-        title="Mondrian Residences — Preventa Exclusiva Zona Hotelera | Rivana Properties"
-        description="Preventa exclusiva de Mondrian Residences at Grand Island Cancún. Condos de lujo desde $514K USD en la Zona Hotelera. Entrega Q2 2027. Plusvalía estimada del 33%. Asesoría personalizada."
+        title="Mondrian Residences — Preventa | Rivana Properties"
+        description="Preventa de Mondrian Residences en Grand Island Cancún. Condos de lujo desde $514K USD en Zona Hotelera. Entrega Q2 2027. Plusvalía 33%."
         ogImage="/images/mondrian/mondrian-hero.jpg"
         path="/presale"
         schema={{
@@ -209,7 +209,7 @@ const PreSale = () => {
               onClick={() => setLightbox(i)}
               className={`relative overflow-hidden group cursor-pointer border-none bg-transparent p-0 ${i >= 2 ? 'hidden md:block' : ''}`}
             >
-              <img src={src} alt={`Gallery ${i + 1}`} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={src} alt={`Mondrian Residences — ${['Front Desk', 'Coffee Bar', 'Restaurant', 'Rooftop'][i] || `Vista ${i + 1}`}`} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 bg-[#CFAE60]/0 group-hover:bg-[#CFAE60]/20 transition-colors duration-300" />
             </button>
           ))}
@@ -361,7 +361,7 @@ const PreSale = () => {
             >←</button>
             <img
               src={PROJECT.gallery[lightbox]}
-              alt=""
+              alt={`Mondrian Residences, Zona Hotelera Cancún — imagen ${lightbox + 1}`}
               className="object-contain"
               style={{ maxWidth: '85vw', maxHeight: '72vh' }}
             />
@@ -379,7 +379,7 @@ const PreSale = () => {
                 onClick={() => setLightbox(i)}
                 className={`w-16 h-12 overflow-hidden cursor-pointer rounded-none p-0 bg-transparent border-2 transition-colors ${i === lightbox ? 'border-[#CFAE60]' : 'border-transparent opacity-50 hover:opacity-100'}`}
               >
-                <img src={src} alt="" className="w-full h-full object-cover" />
+                <img src={src} alt={`Mondrian Residences — miniatura ${i + 1}`} className="w-full h-full object-cover" />
               </button>
             ))}
           </div>

@@ -370,6 +370,7 @@ const Listings = () => {
 
       {/* Grid */}
       <section className="px-6 lg:px-10 py-8 max-w-[1400px] mx-auto">
+        <h2 className="sr-only">{L === 'es' ? 'Resultados de propiedades' : 'Property Results'}</h2>
         {filtered.length === 0 ? (
           <div className="text-center py-20">
             <p className="font-display text-[24px] font-[300] mb-4" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'No encontramos propiedades con esos filtros.' : 'No properties found with those filters.'}</p>
@@ -387,7 +388,7 @@ const Listings = () => {
               >
                 {/* Image */}
                 <div className="relative overflow-hidden" style={{ paddingTop: '75%' }}>
-                  <img src={p.image} alt={p.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
+                  <img src={p.image} alt={`${p.name} — ${p.zone}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
                   <div className="absolute inset-0 bg-transparent group-hover:bg-[rgba(207,174,96,0.12)] transition-colors duration-300" />
                   {/* Badges on image */}
                   <div className="absolute top-3 left-3 flex flex-col gap-1.5">

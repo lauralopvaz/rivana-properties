@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { SchedulingModalProvider } from "@/contexts/SchedulingModalContext";
@@ -24,6 +24,19 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import PropertyDetailNew from "./pages/PropertyDetailNew";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { useParams } from "react-router-dom";
+
+/** Redirect /property/:slug → /en/property/:slug */
+const RedirectPropertyEN = () => {
+  const { slug } = useParams();
+  return <Navigate to={`/en/property/${slug}`} replace />;
+};
+
+/** Redirect /en/propiedad/:slug → /propiedad/:slug */
+const RedirectPropertyES = () => {
+  const { slug } = useParams();
+  return <Navigate to={`/propiedad/${slug}`} replace />;
+};
 
 const queryClient = new QueryClient();
 
@@ -118,6 +131,11 @@ const AppRoutes = () => (
     <Route path="/en/presale" element={<PreSale />} />
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
+
+    {/* Redirects: /property/:slug → /en/property/:slug */}
+    <Route path="/property/:slug" element={<RedirectPropertyEN />} />
+    {/* Redirects: /en/propiedad/:slug → /propiedad/:slug */}
+    <Route path="/en/propiedad/:slug" element={<RedirectPropertyES />} />
 
     {/* 404 */}
     <Route path="*" element={<NotFound />} />

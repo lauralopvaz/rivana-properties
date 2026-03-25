@@ -56,18 +56,25 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
     }
   };
 
+  // Locale-aware SEO
+  const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
+  const desc = locale === 'en' && property.descriptionEn ? property.descriptionEn : property.description;
+  const seoTitle = `${property.name} — ${zone} | Rivana`;
+  const seoDesc = desc ? desc.slice(0, 155) : `${property.name} en ${zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`;
+  const seoPath = locale === 'en' ? `/en/property/${property.slug}` : `/propiedad/${property.slug}`;
+
   return (
     <div className="prop-page-wrapper pt-20">
       <SEOHead
-        title={`${property.name} — ${property.zone} | Rivana Properties`}
-        description={property.description?.slice(0, 160) || `${property.name} en ${property.zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`}
-        path={`/propiedad/${property.slug}`}
+        title={seoTitle}
+        description={seoDesc}
+        path={seoPath}
         ogImage={property.images?.[0]}
         schema={{
           "@context": "https://schema.org",
           "@type": "RealEstateListing",
           name: property.name,
-          description: property.description?.slice(0, 160),
+          description: seoDesc,
           url: `https://rivanaproperties.com/propiedad/${property.slug}`,
           offers: {
             "@type": "Offer",
@@ -83,7 +90,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         onViewPrices={scrollToContact}
       />
 
-      <PropertyGalleryStrip images={property.images} locale={locale} />
+      <PropertyGalleryStrip images={property.images} propertyName={property.name} zone={zone} locale={locale} />
 
       {/* Constrained content */}
       <div
