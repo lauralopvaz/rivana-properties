@@ -8,6 +8,7 @@ import { journalArticles, journalArticlesEs } from '@/data/journal-articles';
 import { getDestination } from '@/data/destinations';
 import { ClockIcon, ArrowRightIcon, MailIcon } from '@/components/icons';
 import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
+import { ForeignBuyerGuideBodyEN, ForeignBuyerGuideBodyES } from '@/components/journal/ForeignBuyerGuideBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -56,14 +57,18 @@ const JournalPost = () => {
     url: `https://rivanaproperties.com/journal/${slug}`,
   };
 
-  const toc = [
-    language === 'es' ? 'Introducción' : 'Introduction',
-    language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
-    language === 'es' ? 'Factores Clave' : 'Key Investment Drivers',
-    language === 'es' ? 'Análisis de Rendimiento' : 'Rental Yield Analysis',
-    language === 'es' ? 'Efecto Mundial' : 'World Cup Effect',
-    language === 'es' ? 'Conclusión' : 'Conclusion',
-  ];
+  const toc = slug === 'foreign-buyer-guide-mexico'
+    ? (language === 'es'
+      ? ['¿Pueden comprar extranjeros?', 'El Fideicomiso', 'Guía Paso a Paso', '¿Por qué 2026?', 'Por qué Rivana', 'Propiedades Destacadas', 'Preguntas Frecuentes']
+      : ['Can Foreigners Buy?', 'The Fideicomiso', 'Step-by-Step Guide', 'Why 2026?', 'Why Rivana', 'Featured Properties', 'FAQ'])
+    : [
+      language === 'es' ? 'Introducción' : 'Introduction',
+      language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
+      language === 'es' ? 'Factores Clave' : 'Key Investment Drivers',
+      language === 'es' ? 'Análisis de Rendimiento' : 'Rental Yield Analysis',
+      language === 'es' ? 'Efecto Mundial' : 'World Cup Effect',
+      language === 'es' ? 'Conclusión' : 'Conclusion',
+    ];
 
   // Related articles based on shared destinations
   const related = journalArticles
@@ -139,6 +144,9 @@ const JournalPost = () => {
 
           {/* Article */}
           <article className="lg:col-span-3 space-y-8">
+            {slug === 'foreign-buyer-guide-mexico' ? (
+              language === 'en' ? <ForeignBuyerGuideBodyEN /> : <ForeignBuyerGuideBodyES />
+            ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
 
@@ -203,6 +211,7 @@ const JournalPost = () => {
                 : 'For investors seeking a combination of lifestyle value and financial returns, this zone represents a rare opportunity. The window for pre-sale pricing is narrowing as the zone matures, making 2026 a pivotal year.'
               }</p>
             </div>
+            )}
 
             {/* Newsletter CTA */}
             <div className="bg-card border border-border rounded-sm p-8 text-center my-12">
