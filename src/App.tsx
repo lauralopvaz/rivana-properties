@@ -24,6 +24,19 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import PropertyDetailNew from "./pages/PropertyDetailNew";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { useParams } from "react-router-dom";
+
+/** Redirect /property/:slug → /en/property/:slug */
+const RedirectPropertyEN = () => {
+  const { slug } = useParams();
+  return <Navigate to={`/en/property/${slug}`} replace />;
+};
+
+/** Redirect /en/propiedad/:slug → /propiedad/:slug */
+const RedirectPropertyES = () => {
+  const { slug } = useParams();
+  return <Navigate to={`/propiedad/${slug}`} replace />;
+};
 
 const queryClient = new QueryClient();
 
