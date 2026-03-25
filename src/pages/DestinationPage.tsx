@@ -96,7 +96,7 @@ const projectsByDestination: Record<string, DestProject[]> = {
   'zona-hotelera': [
     { name: 'Mondrian Residences', zone: 'Zona Hotelera', status: 'preventa', yield: '33%', beds: 3, area: 165, price: 514000, badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
     { name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', status: 'preventa', beds: 4, area: 670, price: 0, badges: ['vista-mar', 'vista-marina', 'wellness', 'club-privado'], image: '/placeholder.svg', slug: 'kabeek-marina-condos' },
-    { name: 'Bay View Grand', zone: 'Zona Hotelera', status: 'preventa', beds: 3, area: 451, price: 586146, badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
+    { name: 'Bay View Grand at Grand Island', zone: 'Zona Hotelera', status: 'preventa', beds: 3, area: 451, price: 586146, badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
   ],
   'puerto-cancun': [
     { name: 'Thompson Residences', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 803, price: 730000, badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'thompson-residences-puerto-cancun' },
