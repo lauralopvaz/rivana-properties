@@ -93,6 +93,29 @@ function sideAvailColor(qty: number) {
 const PreSale = () => {
   const countdown = useCountdown(PROJECT.presaleDeadline);
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const [presaleFormLoading, setPresaleFormLoading] = useState(false);
+  const [presaleFormSuccess, setPresaleFormSuccess] = useState(false);
+
+  const handlePresaleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    setPresaleFormLoading(true);
+    const { error } = await supabase.from('leads').insert({
+      first_name: fd.get('name') as string,
+      email: fd.get('email') as string,
+      phone: (fd.get('phone') as string) || null,
+      property_name: 'Mondrian Residences',
+      interest: 'presale',
+      source_page: window.location.pathname,
+    });
+    setPresaleFormLoading(false);
+    if (error) {
+      console.error('PreSale form error:', error);
+      toast({ title: 'Error', description: error.message, variant: 'destructive' });
+    } else {
+      setPresaleFormSuccess(true);
+    }
+  };
   
   const [brochureModal, setBrochureModal] = useState(false);
 

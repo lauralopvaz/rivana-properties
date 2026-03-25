@@ -34,6 +34,30 @@ const team = [
 
 const About = () => {
   const { language, t, localePath } = useLanguage();
+  const [aboutFormLoading, setAboutFormLoading] = useState(false);
+  const [aboutFormSuccess, setAboutFormSuccess] = useState(false);
+
+  const handleAboutFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    setAboutFormLoading(true);
+    const { error } = await supabase.from('leads').insert({
+      first_name: fd.get('first_name') as string,
+      last_name: fd.get('last_name') as string,
+      email: fd.get('email') as string,
+      phone: (fd.get('phone') as string) || null,
+      interest: (fd.get('interest') as string) || null,
+      message: (fd.get('message') as string) || null,
+      source_page: window.location.pathname,
+    });
+    setAboutFormLoading(false);
+    if (error) {
+      console.error('About form error:', error);
+      toast({ title: 'Error', description: error.message, variant: 'destructive' });
+    } else {
+      setAboutFormSuccess(true);
+    }
+  };
   const { openModal } = useSchedulingModal();
   const seoTitle = language === 'es'
     ? 'Nosotros — Rivana Properties | Asesoría Inmobiliaria Cancún'
