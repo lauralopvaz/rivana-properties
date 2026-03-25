@@ -16,6 +16,7 @@ const categories = {
 const Journal = () => {
   const { language, t, localePath } = useLanguage();
   const [activeCat, setActiveCat] = useState(language === 'es' ? 'Todos' : 'All');
+  const nl = useNewsletterSubscribe();
 
   // Combine articles based on language
   const allArticles = language === 'es'
@@ -131,15 +132,21 @@ const Journal = () => {
             <div className="bg-card border border-border rounded-sm p-6">
               <MailIcon className="w-6 h-6 text-primary mb-3" />
               <h4 className="text-lg mb-2">Newsletter</h4>
-              <p className="text-sm text-muted-foreground font-body mb-4">
-                {language === 'es'
-                  ? 'Recibe insights de mercado y listados exclusivos semanalmente.'
-                  : 'Get market insights and exclusive listings delivered weekly.'}
-              </p>
-              <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-                <input type="email" placeholder={language === 'es' ? 'Tu correo' : 'Your email'} className="w-full bg-muted border border-border rounded-sm px-3 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <Button variant="gold" className="w-full" type="submit">{language === 'es' ? 'Suscribirse' : 'Subscribe'}</Button>
-              </form>
+              {nl.success ? (
+                <p className="text-primary font-body text-sm">{language === 'es' ? '¡Suscrito! 🎉' : 'Subscribed! 🎉'}</p>
+              ) : (
+                <>
+                  <p className="text-sm text-muted-foreground font-body mb-4">
+                    {language === 'es'
+                      ? 'Recibe insights de mercado y listados exclusivos semanalmente.'
+                      : 'Get market insights and exclusive listings delivered weekly.'}
+                  </p>
+                  <form className="space-y-3" onSubmit={nl.handleSubmit}>
+                    <input type="email" required value={nl.email} onChange={(e) => nl.setEmail(e.target.value)} placeholder={language === 'es' ? 'Tu correo' : 'Your email'} className="w-full bg-muted border border-border rounded-sm px-3 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                    <Button variant="gold" className="w-full" type="submit" disabled={nl.loading}>{nl.loading ? '...' : language === 'es' ? 'Suscribirse' : 'Subscribe'}</Button>
+                  </form>
+                </>
+              )}
             </div>
 
             {/* Most Read */}

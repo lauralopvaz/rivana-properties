@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom';
 import { PhoneIcon, MailIcon, InstagramIcon, PinterestIcon, FacebookIcon } from '@/components/icons';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { destinations } from '@/data/destinations';
+import { Button } from '@/components/ui/button';
+import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
 
 export const Footer = () => {
   const { language, t, localePath } = useLanguage();
+  const nl = useNewsletterSubscribe();
 
-  // P1 destinations get most internal links
   const p1 = destinations.filter((d) => d.priority === 1);
   const others = destinations.filter((d) => d.priority > 1);
 
@@ -43,7 +45,24 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Destinations — P1 get most links */}
+          {/* Newsletter */}
+          <div>
+            <h4 className="eyebrow mb-6">Newsletter</h4>
+            {nl.success ? (
+              <p className="text-primary font-body text-sm">{language === 'es' ? '¡Suscrito! 🎉' : 'Subscribed! 🎉'}</p>
+            ) : (
+              <>
+                <p className="text-sm text-muted-foreground font-body mb-4">
+                  {language === 'es' ? 'Insights y listados exclusivos.' : 'Insights & exclusive listings.'}
+                </p>
+                <form className="space-y-3" onSubmit={nl.handleSubmit}>
+                  <input type="email" required value={nl.email} onChange={(e) => nl.setEmail(e.target.value)} placeholder={language === 'es' ? 'Tu correo' : 'Your email'} className="w-full bg-muted border border-border rounded-sm px-3 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                  <Button variant="gold" className="w-full" type="submit" disabled={nl.loading}>{nl.loading ? '...' : language === 'es' ? 'Suscribirse' : 'Subscribe'}</Button>
+                </form>
+              </>
+            )}
+          </div>
+
           <div>
             <h4 className="eyebrow mb-6">{t('footer.destinations')}</h4>
             <ul className="space-y-3">
