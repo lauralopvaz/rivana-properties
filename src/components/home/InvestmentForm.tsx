@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 const budgetOptions = [
   { value: '200-500', label: '$200K — $500K USD' },
@@ -32,11 +34,35 @@ const CheckIcon = ({ className }: { className?: string }) => (
 export const InvestmentForm = () => {
   const { language } = useLanguage();
   const L = language;
+  const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [budget, setBudget] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    const { error } = await supabase.from('leads' as any).insert({
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      phone,
+      budget,
+      message,
+      source_page: window.location.pathname,
+    } as any);
+    setLoading(false);
+    if (error) {
+      toast({ title: 'Error', description: error.message, variant: 'destructive' });
+      return;
+    }
     setFadeOut(true);
     setTimeout(() => setSubmitted(true), 300);
   };
@@ -119,18 +145,18 @@ export const InvestmentForm = () => {
                   </h3>
                   <div className="flex flex-col" style={{ gap: '2px' }}>
                     <div className="grid grid-cols-2" style={{ gap: '2px' }}>
-                      <input placeholder={L === 'es' ? 'Nombre' : 'First Name'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
-                      <input placeholder={L === 'es' ? 'Apellido' : 'Last Name'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
+                      <input placeholder={L === 'es' ? 'Nombre' : 'First Name'} value={firstName} onChange={e => setFirstName(e.target.value)} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
+                      <input placeholder={L === 'es' ? 'Apellido' : 'Last Name'} value={lastName} onChange={e => setLastName(e.target.value)} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
                     </div>
-                    <input type="email" placeholder={L === 'es' ? 'Correo electrónico' : 'Email'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
-                    <input type="tel" placeholder={L === 'es' ? 'Teléfono / WhatsApp' : 'Phone / WhatsApp'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
+                    <input type="email" placeholder={L === 'es' ? 'Correo electrónico' : 'Email'} value={email} onChange={e => setEmail(e.target.value)} required style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
+                    <input type="tel" placeholder={L === 'es' ? 'Teléfono / WhatsApp' : 'Phone / WhatsApp'} value={phone} onChange={e => setPhone(e.target.value)} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
                     <div className="relative">
                       <select
-                        defaultValue=""
-                        style={{ ...inputStyle, appearance: 'none', paddingRight: '40px' }}
+                        value={budget}
+                        onChange={(e) => { setBudget(e.target.value); e.currentTarget.style.color = e.currentTarget.value ? '#1C1C1C' : 'rgba(75,75,75,0.42)'; }}
+                        style={{ ...inputStyle, appearance: 'none', paddingRight: '40px', color: budget ? '#1C1C1C' : 'rgba(75,75,75,0.42)' }}
                         onFocus={handleFocus as any}
                         onBlur={handleBlur as any}
-                        onChange={(e) => { e.currentTarget.style.color = e.currentTarget.value ? '#1C1C1C' : 'rgba(75,75,75,0.42)'; }}
                       >
                         <option value="" disabled style={{ color: 'rgba(75,75,75,0.42)' }}>
                           {L === 'es' ? 'Presupuesto estimado' : 'Estimated budget'}
@@ -145,6 +171,8 @@ export const InvestmentForm = () => {
                     </div>
                     <textarea
                       placeholder={L === 'es' ? '¿Qué buscas en tu inversión? (opcional)' : 'What are you looking for in your investment? (optional)'}
+                      value={message}
+                      onChange={e => setMessage(e.target.value)}
                       style={{ ...inputStyle, height: '80px', resize: 'none' }}
                       onFocus={handleFocus as any}
                       onBlur={handleBlur as any}
@@ -152,12 +180,13 @@ export const InvestmentForm = () => {
                   </div>
                   <button
                     type="submit"
+                    disabled={loading}
                     className="w-full uppercase transition-colors duration-300 mt-[2px]"
-                    style={{ background: 'hsl(var(--primary))', color: 'white', padding: '16px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, border: 'none', cursor: 'pointer' }}
+                    style={{ background: 'hsl(var(--primary))', color: 'white', padding: '16px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, border: 'none', cursor: 'pointer', opacity: loading ? 0.6 : 1 }}
                     onMouseEnter={(e) => { e.currentTarget.style.background = '#b89a4a'; }}
                     onMouseLeave={(e) => { e.currentTarget.style.background = 'hsl(var(--primary))'; }}
                   >
-                    {L === 'es' ? 'Solicitar Asesoría de Inversión' : 'Request Investment Advisory'}
+                    {loading ? (L === 'es' ? 'Enviando...' : 'Sending...') : (L === 'es' ? 'Solicitar Asesoría de Inversión' : 'Request Investment Advisory')}
                   </button>
                   <p className="text-center font-body text-xs text-muted-foreground/45 mt-4 leading-[1.7]">
                     {L === 'es' ? 'Tu información es confidencial y nunca será compartida con terceros.' : 'Your information is confidential and will never be shared with third parties.'}
