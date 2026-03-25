@@ -140,8 +140,31 @@ const formatPrice = (usd: number) => {
 const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const [showAdvisor, setShowAdvisor] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [destFormLoading, setDestFormLoading] = useState(false);
+  const [destFormSuccess, setDestFormSuccess] = useState(false);
   const { openModal } = useSchedulingModal();
   const { language, localePath, t } = useLanguage();
+
+  const handleDestFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    setDestFormLoading(true);
+    const { error } = await supabase.from('leads').insert({
+      first_name: fd.get('name') as string,
+      email: fd.get('email') as string,
+      phone: (fd.get('phone') as string) || null,
+      destination: getDestination(destinationKey)?.name?.es || destinationKey,
+      interest: 'destination_inquiry',
+      source_page: window.location.pathname,
+    });
+    setDestFormLoading(false);
+    if (error) {
+      console.error('Destination form error:', error);
+      toast({ title: 'Error', description: error.message, variant: 'destructive' });
+    } else {
+      setDestFormSuccess(true);
+    }
+  };
 
   const config = getDestination(destinationKey);
 

@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { SEOHead } from '@/components/SEOHead';
 import { ChatIcon, XIcon } from '@/components/icons';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 const mondrianHero = '/images/mondrian/mondrian-hero.png';
 const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.png';
