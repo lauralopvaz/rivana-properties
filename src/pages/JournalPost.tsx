@@ -7,11 +7,13 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { journalArticles, journalArticlesEs } from '@/data/journal-articles';
 import { getDestination } from '@/data/destinations';
 import { ClockIcon, ArrowRightIcon, MailIcon } from '@/components/icons';
+import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { language, localePath } = useLanguage();
   const [progress, setProgress] = useState(0);
+  const nl = useNewsletterSubscribe();
 
   const allArticles = [...journalArticles, ...journalArticlesEs];
   const article = allArticles.find((a) => a.slug === slug);
@@ -203,13 +205,19 @@ const JournalPost = () => {
             <div className="bg-card border border-border rounded-sm p-8 text-center my-12">
               <MailIcon className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="text-xl mb-2">{language === 'es' ? 'Mantente Informado' : 'Stay Informed'}</h3>
-              <p className="text-sm text-muted-foreground font-body mb-4">
-                {language === 'es' ? 'Recibe insights exclusivos del mercado en tu correo.' : 'Get exclusive market insights delivered to your inbox.'}
-              </p>
-              <form className="flex gap-2 max-w-sm mx-auto" onSubmit={(e) => e.preventDefault()}>
-                <input type="email" placeholder={language === 'es' ? 'Tu correo' : 'Your email'} className="flex-1 bg-muted border border-border rounded-sm px-3 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <Button variant="gold" type="submit">{language === 'es' ? 'Suscribirse' : 'Subscribe'}</Button>
-              </form>
+              {nl.success ? (
+                <p className="text-primary font-body">{language === 'es' ? '¡Suscrito! 🎉' : 'Subscribed! 🎉'}</p>
+              ) : (
+                <>
+                  <p className="text-sm text-muted-foreground font-body mb-4">
+                    {language === 'es' ? 'Recibe insights exclusivos del mercado en tu correo.' : 'Get exclusive market insights delivered to your inbox.'}
+                  </p>
+                  <form className="flex gap-2 max-w-sm mx-auto" onSubmit={nl.handleSubmit}>
+                    <input type="email" required value={nl.email} onChange={(e) => nl.setEmail(e.target.value)} placeholder={language === 'es' ? 'Tu correo' : 'Your email'} className="flex-1 bg-muted border border-border rounded-sm px-3 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                    <Button variant="gold" type="submit" disabled={nl.loading}>{nl.loading ? '...' : language === 'es' ? 'Suscribirse' : 'Subscribe'}</Button>
+                  </form>
+                </>
+              )}
             </div>
 
             {/* Related Articles */}
