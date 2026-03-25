@@ -15,9 +15,9 @@ export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
-          {/* Brand */}
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {/* Brand + Newsletter */}
+          <div>
             <Link to={localePath('/')} className="font-display text-3xl tracking-[4px] text-primary">
               RIVANA
             </Link>
@@ -43,24 +43,19 @@ export const Footer = () => {
                 <PinterestIcon className="w-5 h-5" />
               </a>
             </div>
-          </div>
 
-          {/* Newsletter */}
-          <div>
-            <h4 className="eyebrow mb-6">Newsletter</h4>
-            {nl.success ? (
-              <p className="text-primary font-body text-sm">{language === 'es' ? '¡Suscrito! 🎉' : 'Subscribed! 🎉'}</p>
-            ) : (
-              <>
-                <p className="text-sm text-muted-foreground font-body mb-4">
-                  {language === 'es' ? 'Insights y listados exclusivos.' : 'Insights & exclusive listings.'}
-                </p>
-                <form className="space-y-3" onSubmit={nl.handleSubmit}>
-                  <input type="email" required value={nl.email} onChange={(e) => nl.setEmail(e.target.value)} placeholder={language === 'es' ? 'Tu correo' : 'Your email'} className="w-full bg-muted border border-border rounded-sm px-3 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                  <Button variant="gold" className="w-full" type="submit" disabled={nl.loading}>{nl.loading ? '...' : language === 'es' ? 'Suscribirse' : 'Subscribe'}</Button>
+            {/* Newsletter */}
+            <div className="mt-8">
+              <h4 className="eyebrow mb-3">Newsletter</h4>
+              {nl.success ? (
+                <p className="text-primary font-body text-sm">{language === 'es' ? '¡Suscrito! 🎉' : 'Subscribed! 🎉'}</p>
+              ) : (
+                <form className="flex gap-2" onSubmit={nl.handleSubmit}>
+                  <input type="email" required value={nl.email} onChange={(e) => nl.setEmail(e.target.value)} placeholder={language === 'es' ? 'Tu correo' : 'Your email'} className="flex-1 min-w-0 bg-muted border border-border rounded-sm px-3 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                  <Button variant="gold" size="sm" className="shrink-0" type="submit" disabled={nl.loading}>{nl.loading ? '...' : language === 'es' ? 'Suscribirse' : 'Subscribe'}</Button>
                 </form>
-              </>
-            )}
+              )}
+            </div>
           </div>
 
           <div>
