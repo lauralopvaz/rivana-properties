@@ -58,6 +58,23 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
 
   return (
     <div className="prop-page-wrapper pt-20">
+      <SEOHead
+        title={`${property.name} — ${property.location} | Rivana Properties`}
+        description={property.description?.slice(0, 160) || `${property.name} en ${property.location}. Asesoría inmobiliaria de lujo con Rivana Properties.`}
+        path={`/propiedad/${property.slug}`}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "RealEstateListing",
+          name: property.name,
+          description: property.description?.slice(0, 160),
+          url: `https://rivanaproperties.com/propiedad/${property.slug}`,
+          offers: {
+            "@type": "Offer",
+            price: property.presalePrice || property.priceFrom || undefined,
+            priceCurrency: "USD",
+          },
+        }}
+      />
       {/* Full-width sections */}
       <PropertyHero
         property={property}
