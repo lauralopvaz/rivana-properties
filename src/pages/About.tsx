@@ -60,8 +60,8 @@ const About = () => {
   };
   const { openModal } = useSchedulingModal();
   const seoTitle = language === 'es'
-    ? 'Nosotros — Rivana Properties | Asesoría Inmobiliaria Cancún'
-    : 'About Us — Rivana Properties | Real Estate Advisory Cancún';
+    ? 'Nosotros — Rivana Properties | Cancún'
+    : 'About Us — Rivana Properties | Cancún';
   const seoDesc = language === 'es'
     ? 'Conoce al equipo de Rivana Properties. Asesoría inmobiliaria boutique en Cancún y la Riviera Maya con más de $140M en ventas.'
     : 'Meet the Rivana Properties team. Boutique real estate advisory in Cancún and the Riviera Maya with over $140M in sales.';

@@ -162,8 +162,8 @@ const PreSale = () => {
   return (
     <div className="bg-white">
       <SEOHead
-        title="Mondrian Residences — Preventa | Rivana Properties"
-        description="Preventa de Mondrian Residences en Grand Island Cancún. Condos de lujo desde $514K USD en Zona Hotelera. Entrega Q2 2027. Plusvalía 33%."
+        title="Mondrian Residences — Preventa | Rivana"
+        description="Preventa Mondrian Residences en Grand Island Cancún. Condos de lujo desde $514K USD. Entrega Q2 2027."
         ogImage="/images/mondrian/mondrian-hero.jpg"
         path="/presale"
         schema={{

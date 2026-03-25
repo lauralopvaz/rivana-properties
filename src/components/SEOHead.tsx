@@ -64,6 +64,9 @@ export const SEOHead = ({
     { lang: 'x-default', href: `${BASE_URL}${esPath}` },
   ];
 
+  // Determine og:locale based on path
+  const ogLocale = path?.startsWith('/en') ? 'en_US' : 'es_MX';
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -74,7 +77,7 @@ export const SEOHead = ({
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={resolvedOgImage} />
-      <meta property="og:locale" content="es_MX" />
+      <meta property="og:locale" content={ogLocale} />
       <meta property="og:site_name" content="Rivana Properties" />
       <meta property="og:url" content={canonicalUrl} />
 
