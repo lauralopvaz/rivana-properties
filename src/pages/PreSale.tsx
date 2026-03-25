@@ -183,7 +183,7 @@ const PreSale = () => {
               onClick={() => setLightbox(i)}
               className={`relative overflow-hidden group cursor-pointer border-none bg-transparent p-0 ${i >= 2 ? 'hidden md:block' : ''}`}
             >
-              <img src={src} alt={`Gallery ${i + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={src} alt={`Gallery ${i + 1}`} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 bg-[#CFAE60]/0 group-hover:bg-[#CFAE60]/20 transition-colors duration-300" />
             </button>
           ))}
