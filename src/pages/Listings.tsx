@@ -222,8 +222,8 @@ const Listings = () => {
   const statusesL = [allStatus, L === 'es' ? 'Preventa' : 'Pre-Sale', L === 'es' ? 'Entrega Inmediata' : 'Ready to Move'];
   const typesL = [allTypes, L === 'es' ? 'Departamento' : 'Apartment', L === 'es' ? 'Condominio' : 'Condo', 'Penthouse', 'Villa'];
 
-  const seoTitle = L === 'es' ? 'Propiedades en Venta — Cancún y Riviera Maya | Rivana' : 'Properties for Sale — Cancún & Riviera Maya | Rivana';
-  const seoDesc = L === 'es' ? 'Explora propiedades de lujo en venta en Cancún y la Riviera Maya. Condos, penthouses y villas con asesoría personalizada.' : 'Explore luxury properties for sale in Cancún and the Riviera Maya. Condos, penthouses, and villas with personalized advisory.';
+  const seoTitle = L === 'es' ? 'Propiedades en Venta — Cancún | Rivana' : 'Properties for Sale — Cancún | Rivana';
+  const seoDesc = L === 'es' ? 'Propiedades de lujo en venta en Cancún y la Riviera Maya. Condos, penthouses y villas con asesoría personalizada.' : 'Luxury properties for sale in Cancún and the Riviera Maya. Condos, penthouses and villas with advisory.';
 
   return (
     <div style={{ background: '#F8F6F2' }}>

@@ -406,9 +406,9 @@ const PreSale = () => {
               <XIcon className="w-4 h-4" />
             </button>
             <p className={sectionLabel} style={{ color: '#CFAE60' }}>Material Exclusivo</p>
-            <h3 className="font-display text-[28px] font-[300] text-[#1C1C1C] mt-2 mb-2">
+            <h2 className="font-display text-[28px] font-[300] text-[#1C1C1C] mt-2 mb-2">
               Descarga el <em className="italic text-[#CFAE60]">Brochure</em>
-            </h3>
+            </h2>
             <p className="font-body text-[12px] font-[300] text-[#4B4B4B] mb-6 leading-[1.7]">
               Accede a precios detallados, planos de planta, acabados y condiciones de preventa.
             </p>
