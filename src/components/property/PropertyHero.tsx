@@ -93,7 +93,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
                 className="font-display prop-hero-price"
                 style={{ color: "hsl(var(--gold))", textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}
               >
-                {formatUSD(property.priceFromUSD)}
+                {property.priceFromUSD === 0 ? (locale === 'en' ? 'Contact Us' : 'Consultar') : formatUSD(property.priceFromUSD)}
               </span>
             </div>
             <button
