@@ -581,7 +581,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Consultar',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: ['/placeholder.svg'],
+    images: [kabeekHero],
     description: 'Kabeek Marina & Condos se ubica en la zona más tranquila de la Zona Hotelera de Cancún, sobre la Avenida Kukulkán, con muelle privado a la Laguna Nichupté y vistas al mar Caribe y a la laguna. Solo 30 residencias con diseño del reconocido arquitecto Humberto Artigas (Artigas Arquitectos). Un activo escaso en zona consolidada con demanda turística y residencial permanente.',
     descriptionEn: 'Kabeek Marina & Condos sits on the calmest stretch of Cancún\'s Hotel Zone, directly on Blvd. Kukulkán, with a private dock on Laguna Nichupté and unobstructed views of both the Caribbean Sea and the lagoon. Only 30 residences designed by renowned architect Humberto Artigas (Artigas Arquitectos). A rare hard asset in a consolidated zone with permanent tourist and residential demand.',
     features: [
@@ -659,7 +659,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Consultar',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: ['/placeholder.svg'],
+    images: [bayViewGrandHero],
     description: 'Un desarrollo exclusivo en la Zona Hotelera de Cancún que redefine el lujo. Condominios con terraza, brisa del mar y amenidades de resort completo. Interiores curados por Filipão Nunes, arquitecto portugués de reconocida presencia internacional cuyo diseño convierte a BVG en un santuario para experiencias sensoriales. 5 tipologías para diferentes perfiles: desde inversionista hasta usuario final de alto patrimonio.',
     descriptionEn: 'An exclusive development in Cancún\'s Hotel Zone that redefines luxury. Condominiums with terraces, sea breeze, and full resort amenities. Interiors curated by Filipão Nunes, a renowned Portuguese architect whose design transforms BVG into a sanctuary for sensory experiences. Five unit types for every buyer profile: from first-time luxury investor to ultra-high-net-worth end user.',
     features: [
@@ -744,7 +744,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Entrega inmediata',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: ['/placeholder.svg'],
+    images: [arboladaHero],
     description: 'Situado dentro de Arbolada Residencial, Arbolada Towers ofrece ser parte de una comunidad integral donde las familias se desarrollan con la más alta calidad de vida. Solo 66 departamentos con más del 80% ya vendido. Últimas unidades Tipo C disponibles. Desarrollado por ELEVA Capital Group, misma desarrolladora de Cumbres Towers, Cumbres Suites, Porto Blu y Sole Blu. Entrega inmediata — ideal para comenzar a generar renta desde ya.',
     descriptionEn: 'Located inside Residencial Arbolada, Arbolada Towers offers the chance to be part of a comprehensive community built for the highest quality of life. Only 66 apartments with over 80% already sold. Last Type C units available. Developed by ELEVA Capital Group, also behind Cumbres Towers, Cumbres Suites, Porto Blu, and Sole Blu. Immediate delivery — ideal to start generating rental income from day one.',
     features: [
@@ -823,7 +823,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Agosto 2028',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: ['/placeholder.svg'],
+    images: [thompsonHero],
     description: 'Thompson Private Residences Puerto Cancún redefine el lujo contemporáneo en el Caribe Mexicano: un desarrollo concebido para una comunidad selecta que combina diseño arquitectónico vanguardista, amenidades de clase mundial y un enfoque absoluto en privacidad. Solo 83 residencias exclusivas con un promedio de 273 m² cada una. Acceso limitado por invitación. Proyecto 100% residencial — sin rentas vacacionales, sin uso temporal. Operado por Thompson Hotels™ (Hyatt™). Desarrollado por Azul Hospitality & Real Estate Group, nombrado "Desarrollador del Año 2023" por Hyatt.',
     descriptionEn: 'Thompson Private Residences Puerto Cancún redefines contemporary luxury in the Mexican Caribbean: a development conceived for a select community combining avant-garde architectural design, world-class amenities, and an absolute focus on privacy. Only 83 exclusive residences averaging 273 sqm each. Access limited by invitation only. A 100% residential project — no vacation rentals, no temporary use. Operated by Thompson Hotels™ (Hyatt™). Developed by Azul Hospitality & Real Estate Group, named "Developer of the Year 2023" by Hyatt.',
     features: [
@@ -924,7 +924,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Verano 2026',
     roiEstimate: 10,
     plusvaliaEstimate: 25,
-    images: ['/placeholder.svg'],
+    images: [soleBluHero],
     description: 'Sole BLU integra cada elemento para ofrecer un estilo de vida excepcional, amenidades tipo resort y una ubicación privilegiada frente al mar en Riviera Cancún. Toda la operación, renta y mantenimiento están cubiertos a través de la alianza con OPENKEY Destination Properties — tu única tarea es disfrutar.',
     descriptionEn: 'Sole BLU integrates every element to deliver an exceptional lifestyle, resort-grade amenities, and a privileged oceanfront location in Riviera Cancún — with all operations, rentals, and maintenance fully managed through a strategic alliance with OPENKEY Destination Properties. You own it. Someone else runs it.',
     features: [
@@ -1017,7 +1017,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: '2026',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: ['/placeholder.svg'],
+    images: [cuoreCumbresHero],
     description: 'Cuore Cumbres se ubica en el corazón residencial de Cancún, rodeado de escuelas, restaurantes, cine, supermercados, bancos, cafeterías, gimnasios y múltiples servicios esenciales. Un desarrollo de uso mixto que integra residencias, oficinas boutique y locales comerciales en un solo concepto: Live · Work · Enjoy.',
     descriptionEn: 'Cuore Cumbres is located at the heart of Cancún\'s residential hub, surrounded by schools, restaurants, cinemas, supermarkets, banks, cafés, gyms, and essential services. A mixed-use development integrating residences, boutique offices, and commercial spaces in one concept: Live · Work · Enjoy.',
     priceNote: 'Preventa 2026 — consultar con asesor Rivana para lista actualizada y disponibilidad.',
