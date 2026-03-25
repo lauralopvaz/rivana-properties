@@ -7,6 +7,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useSchedulingModal, ContactType } from '@/contexts/SchedulingModalContext';
 import { getDestination } from '@/data/destinations';
 import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIcon, CalendarIcon, BriefcaseIcon, ChatIcon } from '@/components/icons';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
 
 const advisorPhoto = '/images/team/advisor-celia.png';
 
@@ -138,8 +140,31 @@ const formatPrice = (usd: number) => {
 const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const [showAdvisor, setShowAdvisor] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [destFormLoading, setDestFormLoading] = useState(false);
+  const [destFormSuccess, setDestFormSuccess] = useState(false);
   const { openModal } = useSchedulingModal();
   const { language, localePath, t } = useLanguage();
+
+  const handleDestFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    setDestFormLoading(true);
+    const { error } = await supabase.from('leads').insert({
+      first_name: fd.get('name') as string,
+      email: fd.get('email') as string,
+      phone: (fd.get('phone') as string) || null,
+      destination: getDestination(destinationKey)?.name?.es || destinationKey,
+      interest: 'destination_inquiry',
+      source_page: window.location.pathname,
+    });
+    setDestFormLoading(false);
+    if (error) {
+      console.error('Destination form error:', error);
+      toast({ title: 'Error', description: error.message, variant: 'destructive' });
+    } else {
+      setDestFormSuccess(true);
+    }
+  };
 
   const config = getDestination(destinationKey);
 
@@ -229,13 +254,20 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
 
             {/* Contact form */}
             <div className="lg:col-span-2">
-              <form className="bg-card border border-border p-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <h4 className="text-lg mb-2">{config.formTitle[language]}</h4>
-                <input placeholder={t('form.name')} className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <input type="email" placeholder={t('form.email')} className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <input type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <Button variant="gold" className="w-full" type="submit">{t('dest.requestInfo')}</Button>
-              </form>
+              {destFormSuccess ? (
+                <div className="bg-card border border-border p-6 text-center">
+                  <p className="text-primary font-body text-lg">✓ {language === 'es' ? '¡Mensaje enviado!' : 'Message sent!'}</p>
+                  <p className="text-sm text-muted-foreground font-body mt-2">{language === 'es' ? 'Te contactaremos pronto.' : 'We\'ll contact you soon.'}</p>
+                </div>
+              ) : (
+                <form className="bg-card border border-border p-6 space-y-4" onSubmit={handleDestFormSubmit}>
+                  <h4 className="text-lg mb-2">{config.formTitle[language]}</h4>
+                  <input name="name" placeholder={t('form.name')} required className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                  <input name="email" type="email" placeholder={t('form.email')} required className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                  <input name="phone" type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                  <Button variant="gold" className="w-full" type="submit" disabled={destFormLoading}>{destFormLoading ? '...' : t('dest.requestInfo')}</Button>
+                </form>
+              )}
             </div>
           </div>
         </div>
