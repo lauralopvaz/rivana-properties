@@ -209,7 +209,7 @@ const Listings = () => {
     setAppliedPrice([0, maxUsd]);
   };
 
-  const zonesL = [allZones, 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Tulum', 'Cancún Centro'];
+  const zonesL = [allZones, 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Residencial Cancún', 'Tulum', 'Cancún Centro'];
   const statusesL = [allStatus, L === 'es' ? 'Preventa' : 'Pre-Sale', L === 'es' ? 'Entrega Inmediata' : 'Ready to Move'];
   const typesL = [allTypes, L === 'es' ? 'Departamento' : 'Apartment', L === 'es' ? 'Condominio' : 'Condo', 'Penthouse', 'Villa'];
 
