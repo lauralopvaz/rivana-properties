@@ -74,10 +74,12 @@ function useCountdown(target: Date) {
 }
 
 /* ─── Availability badge color ─── */
-function availBadge(n: number) {
-  if (n > 20) return { bg: 'rgba(207,174,96,0.12)', text: '#CFAE60', label: `${n} disponibles` };
-  if (n >= 5) return { bg: 'rgba(207,174,96,0.22)', text: '#b8952e', label: `${n} disponibles` };
-  return { bg: 'rgba(176,58,46,0.12)', text: '#b03a2e', label: `⚠ ${n} disponible${n > 1 ? 's' : ''}` };
+function availBadge(n: number, lang: 'es' | 'en' = 'es') {
+  const avail = lang === 'es' ? 'disponibles' : 'available';
+  const availS = lang === 'es' ? `disponible${n > 1 ? 's' : ''}` : 'available';
+  if (n > 20) return { bg: 'rgba(207,174,96,0.12)', text: '#CFAE60', label: `${n} ${avail}` };
+  if (n >= 5) return { bg: 'rgba(207,174,96,0.22)', text: '#b8952e', label: `${n} ${avail}` };
+  return { bg: 'rgba(176,58,46,0.12)', text: '#b03a2e', label: `⚠ ${n} ${availS}` };
 }
 
 /* ─── Sidebar availability color ─── */
@@ -218,7 +220,7 @@ const PreSale = () => {
             className="bg-[#1C1C1C] flex flex-col items-center justify-center gap-1 cursor-pointer border-none"
           >
             <svg className="w-4 h-4 text-[#CFAE60]" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="4" height="4" /><rect x="6" y="0" width="4" height="4" /><rect x="12" y="0" width="4" height="4" /><rect x="0" y="6" width="4" height="4" /><rect x="6" y="6" width="4" height="4" /><rect x="12" y="6" width="4" height="4" /><rect x="0" y="12" width="4" height="4" /><rect x="6" y="12" width="4" height="4" /><rect x="12" y="12" width="4" height="4" /></svg>
-            <span className="font-body text-[9px] tracking-[2px] uppercase text-[#CFAE60]">Ver todas</span>
+            <span className="font-body text-[9px] tracking-[2px] uppercase text-[#CFAE60]">{L === 'es' ? 'Ver todas' : 'View all'}</span>
           </button>
         </div>
       </section>
@@ -361,7 +363,7 @@ const PreSale = () => {
             >←</button>
             <img
               src={PROJECT.gallery[lightbox]}
-              alt={`Mondrian Residences, Zona Hotelera Cancún — imagen ${lightbox + 1}`}
+              alt={`Mondrian Residences, Zona Hotelera Cancún — ${L === 'es' ? 'imagen' : 'image'} ${lightbox + 1}`}
               className="object-contain"
               style={{ maxWidth: '85vw', maxHeight: '72vh' }}
             />
@@ -379,7 +381,7 @@ const PreSale = () => {
                 onClick={() => setLightbox(i)}
                 className={`w-16 h-12 overflow-hidden cursor-pointer rounded-none p-0 bg-transparent border-2 transition-colors ${i === lightbox ? 'border-[#CFAE60]' : 'border-transparent opacity-50 hover:opacity-100'}`}
               >
-                <img src={src} alt={`Mondrian Residences — miniatura ${i + 1}`} className="w-full h-full object-cover" />
+                <img src={src} alt={`Mondrian Residences — ${L === 'es' ? 'miniatura' : 'thumbnail'} ${i + 1}`} className="w-full h-full object-cover" />
               </button>
             ))}
           </div>
