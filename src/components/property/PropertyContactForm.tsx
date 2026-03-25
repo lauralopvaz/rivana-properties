@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { useForm, ValidationError } from "@formspree/react";
 import { Check, MessageCircle, Loader2, FileDown } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 import { tr } from "@/lib/propertyI18n";
 import type { Locale } from "@/types/property";
 
@@ -10,10 +11,12 @@ interface PropertyContactFormProps {
   brochureUrl?: string;
 }
 
-const FORM_ID = "xpwdzjyo";
-
 export function PropertyContactForm({ propertyName, locale, brochureUrl }: PropertyContactFormProps) {
-  const [state, handleSubmit] = useForm(FORM_ID);
+  const [nombre, setNombre] = useState('');
+  const [email, setEmail] = useState('');
+  const [telefono, setTelefono] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [brochureMsg, setBrochureMsg] = useState(false);
 
   useEffect(() => {
@@ -31,7 +34,26 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
     }
   };
 
-  if (state.succeeded) {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    const { error } = await supabase.from('leads').insert({
+      first_name: nombre,
+      email,
+      phone: telefono,
+      property_name: propertyName,
+      interest: 'property_inquiry',
+      source_page: window.location.pathname,
+    });
+    setLoading(false);
+    if (error) {
+      toast({ title: 'Error', description: error.message, variant: 'destructive' });
+    } else {
+      setSuccess(true);
+    }
+  };
+
+  if (success) {
     return (
       <section className="prop-section-contact" style={{ backgroundColor: "#FFFFFF", height: "auto", overflow: "visible" }}>
         <div className="flex flex-col items-center py-10 gap-3">
@@ -70,31 +92,29 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-          <input type="hidden" name="_subject" value={`Nueva solicitud — ${propertyName}`} />
-          <input type="hidden" name="origen" value={typeof window !== "undefined" ? window.location.href : ""} />
-
           <input
-            name="nombre"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
             placeholder={tr(locale, 'name')}
             required
             className="w-full px-3 py-3 font-body font-light prop-text-sm focus:outline-none"
             style={{ ...inputStyle }}
           />
-          <ValidationError prefix="Nombre" field="nombre" errors={state.errors} />
 
           <input
-            name="email"
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             required
             className="w-full px-3 py-3 font-body font-light prop-text-sm focus:outline-none"
             style={{ ...inputStyle }}
           />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
 
           <input
-            name="telefono"
             type="tel"
+            value={telefono}
+            onChange={(e) => setTelefono(e.target.value)}
             placeholder={tr(locale, 'phone')}
             className="w-full px-3 py-3 font-body font-light prop-text-sm focus:outline-none"
             style={{ ...inputStyle }}
@@ -102,16 +122,16 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
 
           <button
             type="submit"
-            disabled={state.submitting}
+            disabled={loading}
             className="w-full py-3.5 font-body font-light uppercase prop-btn flex items-center justify-center gap-2"
             style={{
               letterSpacing: "3px",
               backgroundColor: "hsl(var(--gold))",
               color: "#FFFFFF",
-              opacity: state.submitting ? 0.7 : 1,
+              opacity: loading ? 0.7 : 1,
             }}
           >
-            {state.submitting ? (
+            {loading ? (
               <>
                 <Loader2 size={14} className="animate-spin" />
                 {tr(locale, 'sendingLabel')}
@@ -120,12 +140,6 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
               tr(locale, 'requestInfo')
             )}
           </button>
-
-          {state.errors && (
-            <p className="font-body font-light text-center prop-text-xs" style={{ color: "#b03a2e" }}>
-              {tr(locale, 'formError')}
-            </p>
-          )}
         </form>
 
         <button
