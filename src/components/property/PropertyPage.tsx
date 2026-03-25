@@ -59,8 +59,8 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   return (
     <div className="prop-page-wrapper pt-20">
       <SEOHead
-        title={`${property.name} — ${property.location} | Rivana Properties`}
-        description={property.description?.slice(0, 160) || `${property.name} en ${property.location}. Asesoría inmobiliaria de lujo con Rivana Properties.`}
+        title={`${property.name} — ${property.zone} | Rivana Properties`}
+        description={property.description?.slice(0, 160) || `${property.name} en ${property.zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`}
         path={`/propiedad/${property.slug}`}
         schema={{
           "@context": "https://schema.org",
@@ -70,7 +70,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
           url: `https://rivanaproperties.com/propiedad/${property.slug}`,
           offers: {
             "@type": "Offer",
-            price: property.presalePrice || property.priceFrom || undefined,
+            price: property.presalePrice?.discountMXN || property.priceFromUSD || undefined,
             priceCurrency: "USD",
           },
         }}
