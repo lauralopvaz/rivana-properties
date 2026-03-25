@@ -90,6 +90,7 @@ function sideAvailColor(qty: number) {
 /* ═══════════════════════════════════════════ */
 
 const PreSale = () => {
+  const { language: L } = useLanguage();
   const countdown = useCountdown(PROJECT.presaleDeadline);
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [presaleFormLoading, setPresaleFormLoading] = useState(false);
