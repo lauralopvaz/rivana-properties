@@ -92,7 +92,7 @@ export const SchedulingModal = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const { error } = await supabase.from('leads' as any).insert({
+    const { error } = await supabase.from('leads').insert({
       first_name: firstName,
       last_name: lastName,
       email,
@@ -102,7 +102,7 @@ export const SchedulingModal = () => {
       preferred_date: preferredDate || null,
       preferred_time: preferredTime || null,
       source_page: window.location.pathname,
-    } as any);
+    });
     setLoading(false);
     if (error) {
       toast({ title: 'Error', description: error.message, variant: 'destructive' });
