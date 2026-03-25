@@ -26,19 +26,19 @@ export const Footer = () => {
                 : 'Your investment, your legacy. Luxury real estate advisory in Cancún and the Riviera Maya.'}
             </p>
             <div className="flex items-center gap-3 mt-6">
-              <a href="mailto:rivanapropertiesmx@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:rivanapropertiesmx@gmail.com" aria-label="Email" className="text-muted-foreground hover:text-primary transition-colors">
                 <MailIcon className="w-5 h-5" />
               </a>
-              <a href="tel:+529988457224" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+529988457224" aria-label="Phone" className="text-muted-foreground hover:text-primary transition-colors">
                 <PhoneIcon className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/rivanaproperties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/rivanaproperties" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
                 <FacebookIcon className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/rivana.properties" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/rivana.properties" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
                 <InstagramIcon className="w-5 h-5" />
               </a>
-              <a href="https://mx.pinterest.com/rivanapropertiesmx/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://mx.pinterest.com/rivanapropertiesmx/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-muted-foreground hover:text-primary transition-colors">
                 <PinterestIcon className="w-5 h-5" />
               </a>
             </div>
