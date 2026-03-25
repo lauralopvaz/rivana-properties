@@ -1,6 +1,6 @@
 import type { PropertyDetail } from '@/types/property';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
-const mondrianHero = '/images/mondrian/mondrian-hero.png';
+const mondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.jpg';
 const mondrianCoffeeBar = '/images/mondrian/mondrian-coffee-bar.jpg';
 const mondrianRestaurant = '/images/mondrian/mondrian-restaurant.jpg';

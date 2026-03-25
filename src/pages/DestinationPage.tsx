@@ -10,10 +10,10 @@ import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIco
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 
-const advisorPhoto = '/images/team/advisor-celia.png';
+const advisorPhoto = '/images/team/advisor-celia.jpg';
 
 // Real property images
-const propMondrian = '/images/mondrian/mondrian-hero.png';
+const propMondrian = '/images/mondrian/mondrian-hero.jpg';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';

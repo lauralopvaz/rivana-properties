@@ -9,7 +9,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { ShieldIcon, EyeIcon, GlobeIcon, HeartIcon, PhoneIcon, ChatIcon, ArrowRightIcon } from '@/components/icons';
 import advisorJess from '@/assets/advisor-jess.png';
-const advisorCelia = '/images/team/advisor-celia.png';
+const advisorCelia = '/images/team/advisor-celia.jpg';
 
 const team = [
   {
@@ -68,7 +68,7 @@ const About = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en/about' : '/about'} ogImage="/images/team/advisor-celia.png" />
+      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en/about' : '/about'} ogImage="/images/team/advisor-celia.jpg" />
 
       {/* Hero */}
       <section className="pt-28 pb-20 lg:pt-36 lg:pb-28 px-6 lg:px-10 max-w-[1400px] mx-auto">

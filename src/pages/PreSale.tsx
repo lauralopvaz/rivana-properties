@@ -4,7 +4,7 @@ import { ChatIcon, XIcon } from '@/components/icons';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-const mondrianHero = '/images/mondrian/mondrian-hero.png';
+const mondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.jpg';
 const mondrianCoffeeBar = '/images/mondrian/mondrian-coffee-bar.jpg';
 const mondrianRestaurant = '/images/mondrian/mondrian-restaurant.jpg';
@@ -164,7 +164,7 @@ const PreSale = () => {
       <SEOHead
         title="Mondrian Residences — Preventa Exclusiva Zona Hotelera | Rivana Properties"
         description="Preventa exclusiva de Mondrian Residences at Grand Island Cancún. Condos de lujo desde $514K USD en la Zona Hotelera. Entrega Q2 2027. Plusvalía estimada del 33%. Asesoría personalizada."
-        ogImage="/images/mondrian/mondrian-hero.png"
+        ogImage="/images/mondrian/mondrian-hero.jpg"
         path="/presale"
         schema={{
           "@context": "https://schema.org",

@@ -50,7 +50,7 @@ const Journal = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en/journal' : '/journal'} schema={schema} ogImage="/images/mondrian/mondrian-hero.png" />
+      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en/journal' : '/journal'} schema={schema} ogImage="/images/mondrian/mondrian-hero.jpg" />
 
       {/* Masthead */}
       <section className="pt-28 pb-16 px-6 lg:px-10 max-w-[1400px] mx-auto text-center">
