@@ -9,7 +9,7 @@ import {
 import { Grid, ChevronLeft, ChevronRight, Download, Flag, Anchor, Waves, Crown, Umbrella, Lock, Ship, Star, Leaf, PawPrint, Recycle, Bed, Bath, Ruler, Layers, Calendar, TrendingUp, Plane, ShoppingBag, MapPin } from 'lucide-react';
 
 import heroImg from '@/assets/prop-oceana.jpg';
-const img2 = '/images/mondrian/mondrian-hero.png';
+const img2 = '/images/mondrian/mondrian-hero.jpg';
 import img3 from '@/assets/prop-marina.jpg';
 import advisorImg from '@/assets/advisor-jess.png';
 

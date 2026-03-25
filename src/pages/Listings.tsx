@@ -4,7 +4,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIcon, AnchorIcon, StarIcon } from '@/components/icons';
 
-const propMondrian = '/images/mondrian/mondrian-hero.png';
+const propMondrian = '/images/mondrian/mondrian-hero.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
@@ -215,7 +215,7 @@ const Listings = () => {
 
   return (
     <div style={{ background: '#F8F6F2' }}>
-      <SEOHead title={seoTitle} description={seoDesc} path={L === 'en' ? '/en/listings' : '/listings'} ogImage="/images/mondrian/mondrian-hero.png" />
+      <SEOHead title={seoTitle} description={seoDesc} path={L === 'en' ? '/en/listings' : '/listings'} ogImage="/images/mondrian/mondrian-hero.jpg" />
 
       {/* Header */}
       <section className="pt-28 pb-8 px-6 lg:px-10 max-w-[1400px] mx-auto">

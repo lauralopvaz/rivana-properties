@@ -26,7 +26,7 @@ import destTulum from '@/assets/dest-tulum.jpg';
 import destPlayaDelCarmen from '@/assets/dest-playa-del-carmen.jpg';
 
 // Property images
-const propMondrian = '/images/mondrian/mondrian-hero.png';
+const propMondrian = '/images/mondrian/mondrian-hero.jpg';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
@@ -113,7 +113,7 @@ const Home = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en' : '/'} schema={schema} ogImage="/images/mondrian/mondrian-hero.png" />
+      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en' : '/'} schema={schema} ogImage="/images/mondrian/mondrian-hero.jpg" />
 
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
