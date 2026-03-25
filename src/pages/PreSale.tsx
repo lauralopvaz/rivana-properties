@@ -312,20 +312,27 @@ const PreSale = () => {
             <div className="my-5 border-t border-[rgba(207,174,96,0.18)]" />
 
             {/* Contact Form */}
-            <form className="space-y-2.5" onSubmit={(e) => e.preventDefault()}>
-              <input placeholder="Nombre" className={inputClass} />
-              <input type="email" placeholder="Correo electrónico" className={inputClass} />
-              <input type="tel" placeholder="Teléfono" className={inputClass} />
-              <button type="submit" className={goldBtn}>Solicitar Precios y Planos</button>
-              <a
-                href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-[#e8f5e9] border border-[#66bb6a] py-2.5 font-body text-[10px] tracking-[2px] uppercase text-[#2e7d32] font-[400] hover:bg-[#c8e6c9] transition-colors cursor-pointer rounded-none no-underline"
-              >
-                <ChatIcon className="w-3.5 h-3.5" /> Escribir por WhatsApp
-              </a>
-            </form>
+            {presaleFormSuccess ? (
+              <div className="text-center py-4">
+                <p className="font-display text-[18px] text-[#CFAE60]">✓ ¡Solicitud enviada!</p>
+                <p className="font-body text-[10px] text-[#4B4B4B] mt-1">Te contactaremos pronto.</p>
+              </div>
+            ) : (
+              <form className="space-y-2.5" onSubmit={handlePresaleFormSubmit}>
+                <input name="name" placeholder="Nombre" required className={inputClass} />
+                <input name="email" type="email" placeholder="Correo electrónico" required className={inputClass} />
+                <input name="phone" type="tel" placeholder="Teléfono" className={inputClass} />
+                <button type="submit" disabled={presaleFormLoading} className={goldBtn}>{presaleFormLoading ? '...' : 'Solicitar Precios y Planos'}</button>
+                <a
+                  href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-[#e8f5e9] border border-[#66bb6a] py-2.5 font-body text-[10px] tracking-[2px] uppercase text-[#2e7d32] font-[400] hover:bg-[#c8e6c9] transition-colors cursor-pointer rounded-none no-underline"
+                >
+                  <ChatIcon className="w-3.5 h-3.5" /> Escribir por WhatsApp
+                </a>
+              </form>
+            )}
           </div>
         </div>
       </section>

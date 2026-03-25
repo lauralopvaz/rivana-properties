@@ -240,23 +240,30 @@ const About = () => {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-2 gap-3">
-                  <input placeholder={t('form.firstName')} className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                  <input placeholder={t('form.lastName')} className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+              {aboutFormSuccess ? (
+                <div className="bg-card border border-border rounded-sm p-8 text-center">
+                  <p className="text-primary font-display text-xl">✓ {language === 'es' ? '¡Mensaje enviado!' : 'Message sent!'}</p>
+                  <p className="text-sm text-muted-foreground font-body mt-2">{language === 'es' ? 'Te contactaremos pronto.' : 'We\'ll contact you soon.'}</p>
                 </div>
-                <input type="email" placeholder={t('form.email')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <input type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                <select className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-muted-foreground focus:outline-none focus:border-primary transition-colors">
-                  <option value="">{language === 'es' ? '¿Qué te interesa?' : 'What are you interested in?'}</option>
-                  <option>{language === 'es' ? 'Asesoría de Inversión' : 'Investment Advisory'}</option>
-                  <option>{language === 'es' ? 'Propiedad Familiar' : 'Family Property'}</option>
-                  <option>{language === 'es' ? 'Retiro' : 'Retirement Home'}</option>
-                  <option>{language === 'es' ? 'Oportunidad en Preventa' : 'Pre-Sale Opportunity'}</option>
-                </select>
-                <textarea placeholder={language === 'es' ? 'Cuéntanos sobre tus metas' : 'Tell us about your goals'} rows={4} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none" />
-                <Button variant="gold" className="w-full" type="submit">{language === 'es' ? 'Enviar Mensaje' : 'Send Message'}</Button>
-              </form>
+              ) : (
+                <form className="space-y-4" onSubmit={handleAboutFormSubmit}>
+                  <div className="grid grid-cols-2 gap-3">
+                    <input name="first_name" placeholder={t('form.firstName')} required className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                    <input name="last_name" placeholder={t('form.lastName')} className="bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                  </div>
+                  <input name="email" type="email" placeholder={t('form.email')} required className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                  <input name="phone" type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
+                  <select name="interest" className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-muted-foreground focus:outline-none focus:border-primary transition-colors">
+                    <option value="">{language === 'es' ? '¿Qué te interesa?' : 'What are you interested in?'}</option>
+                    <option value="investment_advisory">{language === 'es' ? 'Asesoría de Inversión' : 'Investment Advisory'}</option>
+                    <option value="family_property">{language === 'es' ? 'Propiedad Familiar' : 'Family Property'}</option>
+                    <option value="retirement">{language === 'es' ? 'Retiro' : 'Retirement Home'}</option>
+                    <option value="presale">{language === 'es' ? 'Oportunidad en Preventa' : 'Pre-Sale Opportunity'}</option>
+                  </select>
+                  <textarea name="message" placeholder={language === 'es' ? 'Cuéntanos sobre tus metas' : 'Tell us about your goals'} rows={4} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none" />
+                  <Button variant="gold" className="w-full" type="submit" disabled={aboutFormLoading}>{aboutFormLoading ? '...' : language === 'es' ? 'Enviar Mensaje' : 'Send Message'}</Button>
+                </form>
+              )}
             </ScrollReveal>
           </div>
         </div>
