@@ -95,6 +95,8 @@ interface DestProject {
 const projectsByDestination: Record<string, DestProject[]> = {
   'zona-hotelera': [
     { name: 'Mondrian Residences', zone: 'Zona Hotelera', status: 'preventa', yield: '33%', beds: 3, area: 165, price: 514000, badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
+    { name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', status: 'preventa', beds: 4, area: 670, price: 0, badges: ['vista-mar', 'vista-marina', 'wellness', 'club-privado'], image: '/placeholder.svg', slug: 'kabeek-marina-condos' },
+    { name: 'Bay View Grand', zone: 'Zona Hotelera', status: 'preventa', beds: 3, area: 451, price: 586146, badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
   ],
   'puerto-cancun': [
     { name: 'SLS Ocean Beach', zone: 'Puerto Cancún', status: 'preventa', beds: 3, area: 356, price: 1600000, badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
@@ -112,7 +114,9 @@ const projectsByDestination: Record<string, DestProject[]> = {
   'puerto-morelos': [
     { name: 'Village Blu Beach Apartments', zone: 'Puerto Morelos', status: 'preventa', yield: '8.8%', beds: 1, area: 73, price: 273000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
   ],
-  'cancun-centro': [],
+  'cancun-centro': [
+    { name: 'Arbolada Towers', zone: 'Residencial Cancún', status: 'entrega-inmediata', beds: 2, area: 94, price: 263000, badges: ['alberca-infinity', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'arbolada-towers' },
+  ],
   'tulum': [],
 };
 
@@ -384,7 +388,9 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                       <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                         <div>
                            <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{language === 'es' ? 'Desde' : 'From'}</span>
-                           <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price)} USD</span>
+                           <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>
+                             {p.price === 0 ? (language === 'es' ? 'Consultar' : 'Contact Us') : `${formatPrice(p.price)} USD`}
+                           </span>
                          </div>
                          <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                            {language === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>

@@ -60,8 +60,11 @@ const featuredProperties = [
   { name: 'Dhamar', zone: { es: 'Costa Mujeres, Cancún', en: 'Costa Mujeres, Cancún' }, beds: 3, area: 178, price: '$248K', amenities: ['ocean', 'pool', 'spa'], image: dhamarPrincipal, slug: 'dhamar-costa-mujeres' },
   { name: 'SLS Ocean Beach', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 3, area: 356, price: '$1.6M', amenities: ['ocean', 'marina', 'golf'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
   { name: 'The Reserve at Mayakoba', zone: { es: 'Mayakoba, Riviera Maya', en: 'Mayakoba, Riviera Maya' }, beds: 4, area: 660, price: '$1.1M', amenities: ['golf', 'spa', 'jungle'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
+  { name: 'Bay View Grand', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 451, price: '$586K', amenities: ['ocean', 'marina', 'golf'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
+  { name: 'Kabeek Marina & Condos', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 4, area: 670, price: 'Consultar', amenities: ['ocean', 'marina', 'spa'], image: '/placeholder.svg', slug: 'kabeek-marina-condos' },
   { name: 'Vellmari Grand Living', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 714, price: '$14.8M MXN', amenities: ['marina', 'pool', 'spa'], image: vellmariHero, slug: 'vellmari-grand-living' },
   { name: 'Village Blu Beach Apartments', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 1, area: 73, price: '$273K', amenities: ['ocean', 'pool', 'sunset'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
+  { name: 'Arbolada Towers', zone: { es: 'Residencial Cancún', en: 'Cancún Residential' }, beds: 2, area: 94, price: '$5.2M MXN', amenities: ['pool', 'spa'], image: '/placeholder.svg', slug: 'arbolada-towers' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
