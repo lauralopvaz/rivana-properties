@@ -66,7 +66,7 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '3', label: { es: 'Proyectos', en: 'Projects' } },
       { val: '$514K', label: { es: 'Desde USD', en: 'From USD' } },
       { val: '33%', label: { es: 'Plusvalía Preventa', en: 'Pre-Sale Appreciation' } },
       { val: 'Mondrian', label: { es: 'Desarrollo Destacado', en: 'Featured Development' } },
@@ -147,10 +147,10 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '2', label: { es: 'Proyectos', en: 'Projects' } },
-      { val: '$14.8M MXN', label: { es: 'Desde MXN', en: 'From MXN' } },
+      { val: '3', label: { es: 'Proyectos', en: 'Projects' } },
+      { val: '$730K', label: { es: 'Desde USD', en: 'From USD' } },
       { val: '15%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
-      { val: '120+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
+      { val: '150+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
     ],
     chips: {
       es: ['Marina', 'Golf', 'Seguridad 24/7'],
@@ -407,10 +407,10 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '30', label: { es: 'Propiedades', en: 'Properties' } },
-      { val: '$150K', label: { es: 'Desde', en: 'Starting From' } },
+      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '$5.2M MXN', label: { es: 'Desde MXN', en: 'From MXN' } },
       { val: '12%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
-      { val: '50+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
+      { val: 'Arbolada', label: { es: 'Desarrollo Destacado', en: 'Featured Development' } },
     ],
     chips: {
       es: ['Urbano', 'Accesible', 'Alta Demanda'],
