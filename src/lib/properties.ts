@@ -44,6 +44,12 @@ import fpDepBEsquina from '@/assets/mondrian/fp-dep-b-esquina.png';
 import fpDepCEsquina from '@/assets/mondrian/fp-dep-c-esquina.png';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
 import villageBluHero from '@/assets/village-blu-hero.jpg';
+import kabeekHero from '@/assets/kabeek-hero.jpg';
+import bayViewGrandHero from '@/assets/bay-view-grand-hero.jpg';
+import arboladaHero from '@/assets/arbolada-hero.jpg';
+import thompsonHero from '@/assets/thompson-hero.jpg';
+import soleBluHero from '@/assets/sole-blu-hero.jpg';
+import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 export const properties: PropertyDetail[] = [
   {
