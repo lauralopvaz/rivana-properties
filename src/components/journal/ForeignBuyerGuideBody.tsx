@@ -182,7 +182,7 @@ export const ForeignBuyerGuideBodyEN = () => {
       {/* CTA */}
       <div className="bg-card border border-[hsl(var(--gold)_/_0.3)] rounded-sm p-8 text-center my-12">
         <p className="font-display text-xl text-foreground mb-4">
-          Ready to explore your options? Speak directly with a Rivana advisor — bilingual, no-pressure, and 100% specialized in the Mexican Caribbean.
+          Ready to explore your options? Speak directly with a Rivana advisor — bilingual and 100% specialized in the Mexican Caribbean.
         </p>
         <a
           href={WHATSAPP_LINK}
@@ -190,7 +190,7 @@ export const ForeignBuyerGuideBodyEN = () => {
           rel="noopener noreferrer"
           className="inline-block bg-[hsl(var(--gold))] text-background font-display text-sm tracking-wider uppercase px-8 py-3 rounded-sm hover:opacity-90 transition-opacity"
         >
-          WhatsApp +52 998 845 7224
+          Foreign Buyer Advisory
         </a>
       </div>
     </div>
