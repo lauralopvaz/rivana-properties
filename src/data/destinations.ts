@@ -354,10 +354,10 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '2', label: { es: 'Proyectos', en: 'Projects' } },
       { val: '$273K', label: { es: 'Desde USD', en: 'From USD' } },
       { val: '20%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
-      { val: '40', label: { es: 'Unidades Totales', en: 'Total Units' } },
+      { val: '40+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
     ],
     chips: {
       es: ['Arrecife Natural', 'Pueblo con Encanto', 'Cerca del Aeropuerto'],
@@ -407,7 +407,7 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '2', label: { es: 'Proyectos', en: 'Projects' } },
       { val: '$5.2M MXN', label: { es: 'Desde MXN', en: 'From MXN' } },
       { val: '12%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
       { val: 'Arbolada', label: { es: 'Desarrollo Destacado', en: 'Featured Development' } },
