@@ -4,6 +4,7 @@ import { ChatIcon, XIcon } from '@/components/icons';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 const mondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.jpg';
 const mondrianCoffeeBar = '/images/mondrian/mondrian-coffee-bar.jpg';
@@ -22,36 +23,34 @@ const PROJECT = {
   delivery: 'Q2 2027',
   priceFrom: '$514,000 USD',
   yieldPct: '33%',
-  description:
-    'Mondrian Residences at Grand Island es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día.',
+  description: {
+    es: 'Mondrian Residences at Grand Island es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día.',
+    en: 'Mondrian Residences at Grand Island is a branded residence within the most exclusive master development in Cancún\'s Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one.',
+  },
   brochureUrl: '/brochures/mondrian-residences.pdf',
   presaleDeadline: new Date('2026-06-01T23:59:59'),
   priceIncreaseAfter: 33,
   phases: [
-    { name: 'Fase 1 — Lanzamiento', pct: 60, status: '60% Vendido' },
-    { name: 'Fase 2 — Preventa', pct: 15, status: 'Disponible' },
+    { name: { es: 'Fase 1 — Lanzamiento', en: 'Phase 1 — Launch' }, pct: 60, status: { es: '60% Vendido', en: '60% Sold' } },
+    { name: { es: 'Fase 2 — Preventa', en: 'Phase 2 — Pre-Sale' }, pct: 15, status: { es: 'Disponible', en: 'Available' } },
   ],
   units: [
-    { name: 'Estudio Curva — 1 Hab', m2: '76.96 m²', price: '$514,000 USD', avail: 10, desc: 'Estudio con curva panorámica, 1 habitación, 1 baño. Entrega llave en mano con gestión Accor.' },
-    { name: 'Departamento A — 1 Hab', m2: '81.46 m²', price: '$514,000 USD', avail: 10, desc: 'Una habitación, 2 baños. Diseño de Filipao Nunes con acabados premium y vista al Caribe.' },
-    { name: "Departamento A' — 1 Hab", m2: '115.84 m²', price: '$642,000 USD', avail: 10, desc: 'Versión ampliada del Depto A con terraza extendida y vista dual mar-laguna.' },
-    { name: 'Loft A — 1 Hab (dúplex)', m2: '91.20 m²', price: '$758,000 USD', avail: 10, desc: 'Dúplex con doble altura, 1 habitación, 2 baños. Diseño escultórico único en el edificio.' },
-    { name: 'Departamento B — 2 Hab', m2: '135.44 m²', price: '$684,000 USD', avail: 5, desc: 'Dos habitaciones, 2.5 baños. Espacios amplios con vista frontal al Mar Caribe.' },
-    { name: 'Depto B Esquina — 2 Hab', m2: '164.75 m²', price: '$1,163,000 USD', avail: 5, desc: 'Esquina con vista panorámica 180°. Dos habitaciones, 2.5 baños. La unidad más exclusiva de 2 recámaras.' },
-    { name: 'Depto C Esquina — 3 Hab', m2: '158.93 m²', price: '$1,247,000 USD', avail: 5, desc: 'Tres habitaciones, 3.5 baños. Esquina con vista triple: mar, laguna y campo de golf.' },
+    { name: { es: 'Estudio Curva — 1 Hab', en: 'Studio Curve — 1BR' }, m2: '76.96 m²', price: '$514,000 USD', avail: 10, desc: { es: 'Estudio con curva panorámica, 1 habitación, 1 baño. Entrega llave en mano con gestión Accor.', en: 'Panoramic curve studio, 1 bedroom, 1 bath. Turnkey delivery with Accor management.' } },
+    { name: { es: 'Departamento A — 1 Hab', en: 'Unit A — 1BR' }, m2: '81.46 m²', price: '$514,000 USD', avail: 10, desc: { es: 'Una habitación, 2 baños. Diseño de Filipao Nunes con acabados premium y vista al Caribe.', en: '1 bedroom, 2 baths. Filipao Nunes design with premium finishes and Caribbean views.' } },
+    { name: { es: "Departamento A' — 1 Hab", en: "Unit A' — 1BR" }, m2: '115.84 m²', price: '$642,000 USD', avail: 10, desc: { es: 'Versión ampliada del Depto A con terraza extendida y vista dual mar-laguna.', en: 'Expanded Unit A with extended terrace and dual sea-lagoon views.' } },
+    { name: { es: 'Loft A — 1 Hab (dúplex)', en: 'Loft A — 1BR (duplex)' }, m2: '91.20 m²', price: '$758,000 USD', avail: 10, desc: { es: 'Dúplex con doble altura, 1 habitación, 2 baños. Diseño escultórico único en el edificio.', en: 'Double-height duplex, 1 bedroom, 2 baths. Sculptural design unique to the building.' } },
+    { name: { es: 'Departamento B — 2 Hab', en: 'Unit B — 2BR' }, m2: '135.44 m²', price: '$684,000 USD', avail: 5, desc: { es: 'Dos habitaciones, 2.5 baños. Espacios amplios con vista frontal al Mar Caribe.', en: '2 bedrooms, 2.5 baths. Spacious with frontal Caribbean Sea views.' } },
+    { name: { es: 'Depto B Esquina — 2 Hab', en: 'Corner Unit B — 2BR' }, m2: '164.75 m²', price: '$1,163,000 USD', avail: 5, desc: { es: 'Esquina con vista panorámica 180°. Dos habitaciones, 2.5 baños. La unidad más exclusiva de 2 recámaras.', en: '180° panoramic corner view. 2 bedrooms, 2.5 baths. The most exclusive 2-bedroom unit.' } },
+    { name: { es: 'Depto C Esquina — 3 Hab', en: 'Corner Unit C — 3BR' }, m2: '158.93 m²', price: '$1,247,000 USD', avail: 5, desc: { es: 'Tres habitaciones, 3.5 baños. Esquina con vista triple: mar, laguna y campo de golf.', en: '3 bedrooms, 3.5 baths. Corner with triple view: sea, lagoon, and golf course.' } },
   ],
-  amenities: [
-    'Infinity Pool', 'Beach Club', 'Concierge 24/7', 'Spa & Wellness',
-    'Gimnasio', 'Campo de Golf', 'Marina Privada', 'Vista al Mar',
-    'Club Privado', 'Restaurante Rooftop', 'Coffee Shop', 'Bar',
-    'Sauna', 'Tinas de Hidromasaje', 'Gradas Lounge Exterior', 'Entrega Llave en Mano',
-  ],
-  availability: [
-    { type: 'Estudios / 1 Hab', qty: 60 },
-    { type: '2 Recámaras', qty: 20 },
-    { type: '3 Recámaras', qty: 5 },
-    { type: 'Lofts (dúplex)', qty: 10 },
-  ],
+  amenities: {
+    es: ['Infinity Pool', 'Beach Club', 'Concierge 24/7', 'Spa & Wellness', 'Gimnasio', 'Campo de Golf', 'Marina Privada', 'Vista al Mar', 'Club Privado', 'Restaurante Rooftop', 'Coffee Shop', 'Bar', 'Sauna', 'Tinas de Hidromasaje', 'Gradas Lounge Exterior', 'Entrega Llave en Mano'],
+    en: ['Infinity Pool', 'Beach Club', 'Concierge 24/7', 'Spa & Wellness', 'Gym', 'Golf Course', 'Private Marina', 'Ocean View', 'Private Club', 'Rooftop Restaurant', 'Coffee Shop', 'Bar', 'Sauna', 'Hot Tubs', 'Outdoor Lounge Terrace', 'Turnkey Delivery'],
+  },
+  availability: {
+    es: [{ type: 'Estudios / 1 Hab', qty: 60 }, { type: '2 Recámaras', qty: 20 }, { type: '3 Recámaras', qty: 5 }, { type: 'Lofts (dúplex)', qty: 10 }],
+    en: [{ type: 'Studios / 1BR', qty: 60 }, { type: '2 Bedrooms', qty: 20 }, { type: '3 Bedrooms', qty: 5 }, { type: 'Lofts (duplex)', qty: 10 }],
+  },
   gallery: [mondrianHero, mondrianFrontDesk, mondrianCoffeeBar, mondrianRestaurant, mondrianRooftop, mondrianBeachClub, mondrianGym, mondrianPool],
 };
 
