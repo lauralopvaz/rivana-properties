@@ -68,7 +68,7 @@ const About = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en/about' : '/about'} />
+      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en/about' : '/about'} ogImage="/images/team/advisor-celia.png" />
 
       {/* Hero */}
       <section className="pt-28 pb-20 lg:pt-36 lg:pb-28 px-6 lg:px-10 max-w-[1400px] mx-auto">

@@ -209,6 +209,7 @@ const PropertyDetail = () => {
         title={`${p.name} Residences — ${p.destination} | Rivana Properties`}
         description={`${p.name} Residences: desarrollo de lujo frente al mar en ${p.destination}. Preventa desde ${p.priceFrom}.`}
         path={`/propiedad/oceana-residences`}
+        ogImage={p.images?.[0]}
       />
 
       {/* ═══ 1. GALLERY HERO ═══ */}

@@ -62,6 +62,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         title={`${property.name} — ${property.zone} | Rivana Properties`}
         description={property.description?.slice(0, 160) || `${property.name} en ${property.zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`}
         path={`/propiedad/${property.slug}`}
+        ogImage={property.images?.[0]}
         schema={{
           "@context": "https://schema.org",
           "@type": "RealEstateListing",

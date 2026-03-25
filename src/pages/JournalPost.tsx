@@ -74,7 +74,7 @@ const JournalPost = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={schema} />
+      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={schema} ogImage={article.image} />
 
       {/* Reading Progress */}
       <div className="fixed top-0 left-0 right-0 z-[200]">
