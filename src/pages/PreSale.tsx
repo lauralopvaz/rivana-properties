@@ -5,13 +5,13 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 const mondrianHero = '/images/mondrian/mondrian-hero.png';
-const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.png';
+const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.jpg';
 const mondrianCoffeeBar = '/images/mondrian/mondrian-coffee-bar.jpg';
-const mondrianRestaurant = '/images/mondrian/mondrian-restaurant.png';
-const mondrianRooftop = '/images/mondrian/mondrian-rooftop.png';
-const mondrianBeachClub = '/images/mondrian/mondrian-beach-club.png';
-const mondrianGym = '/images/mondrian/mondrian-gym.png';
-const mondrianPool = '/images/mondrian/mondrian-pool.png';
+const mondrianRestaurant = '/images/mondrian/mondrian-restaurant.jpg';
+const mondrianRooftop = '/images/mondrian/mondrian-rooftop.jpg';
+const mondrianBeachClub = '/images/mondrian/mondrian-beach-club.jpg';
+const mondrianGym = '/images/mondrian/mondrian-gym.jpg';
+const mondrianPool = '/images/mondrian/mondrian-pool.jpg';
 
 /* ─── Project Data (would come from CMS) ─── */
 const PROJECT = {
