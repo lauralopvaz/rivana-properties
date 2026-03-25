@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { useForm, ValidationError } from "@formspree/react";
 import { X, Check, MessageCircle, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 import { formatNumber } from "@/lib/formatPrice";
 import { tr } from "@/lib/propertyI18n";
 import type { PresalePrice, Locale } from "@/types/property";
@@ -13,21 +14,13 @@ interface ReservePriceModalProps {
   locale: Locale;
 }
 
-const FORM_ID = "xpwdzjyo";
-
 export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName, locale }: ReservePriceModalProps) {
-  const [state, handleSubmit] = useForm(FORM_ID);
   const [modalState, setModalState] = useState<'form' | 'success'>('form');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, boolean>>({});
-
-  useEffect(() => {
-    if (state.succeeded && modalState === 'form') {
-      setModalState('success');
-    }
-  }, [state.succeeded, modalState]);
 
   useEffect(() => {
     if (!isOpen) {
@@ -41,7 +34,7 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
     }
   }, [isOpen]);
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors: Record<string, boolean> = {};
     if (!name.trim()) newErrors.name = true;
@@ -54,7 +47,22 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
       return;
     }
 
-    handleSubmit(e);
+    setLoading(true);
+    const { error } = await supabase.from('leads').insert({
+      first_name: name,
+      email,
+      phone,
+      property_name: propertyName,
+      interest: 'reserve_price',
+      source_page: window.location.pathname,
+    });
+    setLoading(false);
+
+    if (error) {
+      toast({ title: 'Error', description: error.message, variant: 'destructive' });
+    } else {
+      setModalState('success');
+    }
   };
 
   if (!isOpen) return null;
@@ -100,18 +108,15 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
         <div className="p-5">
           {modalState === 'form' && (
             <>
-              {/* Badge */}
               <span className="font-body font-light uppercase prop-label block mb-1" style={{ letterSpacing: "3px", color: "#CFAE60" }}>
                 {tr(locale, 'presaleSpecialPrice')}
               </span>
 
-              {/* Title */}
               <h3 className="font-display prop-title-md mb-3" style={{ color: "#1C1C1C" }}>
                 {tr(locale, 'reserveYourPrice')}{' '}
                 <em style={{ color: "#CFAE60" }}>{tr(locale, 'priceWord')}</em>
               </h3>
 
-              {/* Price bar */}
               <div
                 className="flex items-center justify-between p-3 mb-4"
                 style={{ backgroundColor: "#F8F6F2", border: "1px solid rgba(207,174,96,0.22)" }}
@@ -135,19 +140,12 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
                 </div>
               </div>
 
-              {/* Description */}
               <p className="font-body font-light prop-text-sm mb-4" style={{ color: "#4B4B4B" }}>
                 {tr(locale, 'modalDesc')}
               </p>
 
-              {/* Form */}
               <form onSubmit={handleFormSubmit} className="flex flex-col gap-3">
-                <input type="hidden" name="_subject" value={`Reserva de precio — ${propertyName}`} />
-                <input type="hidden" name="origen" value={typeof window !== "undefined" ? window.location.href : ""} />
-                <input type="hidden" name="tipo" value="reserva-precio" />
-
                 <input
-                  name="nombre"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder={tr(locale, 'fullName')}
@@ -156,7 +154,6 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
                 />
 
                 <input
-                  name="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -166,7 +163,6 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
                 />
 
                 <input
-                  name="telefono"
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
@@ -181,16 +177,16 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
 
                 <button
                   type="submit"
-                  disabled={state.submitting}
+                  disabled={loading}
                   className="w-full py-3.5 font-body font-light uppercase prop-btn flex items-center justify-center gap-2"
                   style={{
                     letterSpacing: "3px",
                     backgroundColor: "#CFAE60",
                     color: "#FFFFFF",
-                    opacity: state.submitting ? 0.7 : 1,
+                    opacity: loading ? 0.7 : 1,
                   }}
                 >
-                  {state.submitting ? (
+                  {loading ? (
                     <>
                       <Loader2 size={14} className="animate-spin" />
                       {tr(locale, 'sendingLabel')}
@@ -199,8 +195,6 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
                     tr(locale, 'confirmReservation')
                   )}
                 </button>
-
-                <ValidationError errors={state.errors} />
               </form>
 
               <button
