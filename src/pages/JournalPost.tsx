@@ -140,6 +140,9 @@ const JournalPost = () => {
 
           {/* Article */}
           <article className="lg:col-span-3 space-y-8">
+            {slug === 'foreign-buyer-guide-mexico' ? (
+              language === 'en' ? <ForeignBuyerGuideBodyEN /> : <ForeignBuyerGuideBodyES />
+            ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
 
@@ -204,6 +207,7 @@ const JournalPost = () => {
                 : 'For investors seeking a combination of lifestyle value and financial returns, this zone represents a rare opportunity. The window for pre-sale pricing is narrowing as the zone matures, making 2026 a pivotal year.'
               }</p>
             </div>
+            )}
 
             {/* Newsletter CTA */}
             <div className="bg-card border border-border rounded-sm p-8 text-center my-12">
