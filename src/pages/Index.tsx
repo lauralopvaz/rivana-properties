@@ -26,7 +26,7 @@ import destTulum from '@/assets/dest-tulum.jpg';
 import destPlayaDelCarmen from '@/assets/dest-playa-del-carmen.jpg';
 
 // Property images
-import propMondrian from '@/assets/mondrian-hero.png';
+const propMondrian = '/images/mondrian/mondrian-hero.png';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';

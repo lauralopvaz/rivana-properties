@@ -8,10 +8,10 @@ import { useSchedulingModal, ContactType } from '@/contexts/SchedulingModalConte
 import { getDestination } from '@/data/destinations';
 import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIcon, CalendarIcon, BriefcaseIcon, ChatIcon } from '@/components/icons';
 
-import advisorPhoto from '@/assets/advisor-celia.png';
+const advisorPhoto = '/images/team/advisor-celia.png';
 
 // Real property images
-import propMondrian from '@/assets/mondrian-hero.png';
+const propMondrian = '/images/mondrian/mondrian-hero.png';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';

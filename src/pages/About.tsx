@@ -6,7 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
 import { ShieldIcon, EyeIcon, GlobeIcon, HeartIcon, PhoneIcon, ChatIcon, ArrowRightIcon } from '@/components/icons';
 import advisorJess from '@/assets/advisor-jess.png';
-import advisorCelia from '@/assets/advisor-celia.png';
+const advisorCelia = '/images/team/advisor-celia.png';
 
 const team = [
   {

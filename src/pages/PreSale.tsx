@@ -2,14 +2,14 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { SEOHead } from '@/components/SEOHead';
 import { ChatIcon, XIcon } from '@/components/icons';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import mondrianHero from '@/assets/mondrian-hero.png';
-import mondrianFrontDesk from '@/assets/mondrian-front-desk.png';
-import mondrianCoffeeBar from '@/assets/mondrian-coffee-bar.jpg';
-import mondrianRestaurant from '@/assets/mondrian-restaurant.png';
-import mondrianRooftop from '@/assets/mondrian-rooftop.png';
-import mondrianBeachClub from '@/assets/mondrian-beach-club.png';
-import mondrianGym from '@/assets/mondrian-gym.png';
-import mondrianPool from '@/assets/mondrian-pool.png';
+const mondrianHero = '/images/mondrian/mondrian-hero.png';
+const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.png';
+const mondrianCoffeeBar = '/images/mondrian/mondrian-coffee-bar.jpg';
+const mondrianRestaurant = '/images/mondrian/mondrian-restaurant.png';
+const mondrianRooftop = '/images/mondrian/mondrian-rooftop.png';
+const mondrianBeachClub = '/images/mondrian/mondrian-beach-club.png';
+const mondrianGym = '/images/mondrian/mondrian-gym.png';
+const mondrianPool = '/images/mondrian/mondrian-pool.png';
 
 /* ─── Project Data (would come from CMS) ─── */
 const PROJECT = {
