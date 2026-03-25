@@ -42,13 +42,13 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'foreign-buyer-guide-mexico',
     title: {
-      es: 'Guía para Compradores Extranjeros',
-      en: 'Foreign Investor Guide — México',
+      es: 'Guía Completa para Compradores Extranjeros en México: Paso a Paso 2026',
+      en: 'How to Buy Property in Mexico as a Foreigner: Complete 2026 Guide',
     },
     category: { es: 'Guías', en: 'Guides' },
     excerpt: {
-      es: 'Todo lo que necesitas saber sobre comprar propiedad en México como inversionista extranjero.',
-      en: 'Everything you need to know about buying property in México as a foreign investor.',
+      es: 'Cómo comprar propiedad en México siendo extranjero: fideicomiso, costos de cierre, preventas y opciones de inversión en Cancún y la Riviera Maya. Guía actualizada 2026 para inversionistas de EE.UU., Canadá y Europa.',
+      en: 'Step-by-step guide for Americans and Canadians buying property in Cancún and the Riviera Maya. Learn how the fideicomiso works, what closing costs to expect, and which pre-sale properties offer the best returns in 2026.',
     },
     date: 'Feb 28, 2026',
     readTime: '12 min',

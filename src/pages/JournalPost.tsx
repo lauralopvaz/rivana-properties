@@ -8,6 +8,7 @@ import { journalArticles, journalArticlesEs } from '@/data/journal-articles';
 import { getDestination } from '@/data/destinations';
 import { ClockIcon, ArrowRightIcon, MailIcon } from '@/components/icons';
 import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
+import { ForeignBuyerGuideBodyEN, ForeignBuyerGuideBodyES } from '@/components/journal/ForeignBuyerGuideBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
