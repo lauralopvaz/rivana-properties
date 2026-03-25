@@ -32,6 +32,12 @@ import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
 import villageBluHero from '@/assets/village-blu-hero.jpg';
+import kabeekHero from '@/assets/kabeek-hero.jpg';
+import bayViewGrandHero from '@/assets/bay-view-grand-hero.jpg';
+import arboladaHero from '@/assets/arbolada-hero.jpg';
+import thompsonHero from '@/assets/thompson-hero.jpg';
+import soleBluHero from '@/assets/sole-blu-hero.jpg';
+import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 // Journal images
 import journalRoi from '@/assets/journal-roi.jpg';
@@ -60,14 +66,14 @@ const featuredProperties = [
   { name: 'Dhamar', zone: { es: 'Costa Mujeres, Cancún', en: 'Costa Mujeres, Cancún' }, beds: 3, area: 178, price: '$248K', amenities: ['ocean', 'pool', 'spa'], image: dhamarPrincipal, slug: 'dhamar-costa-mujeres' },
   { name: 'SLS Ocean Beach', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 3, area: 356, price: '$1.6M', amenities: ['ocean', 'marina', 'golf'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
   { name: 'The Reserve at Mayakoba', zone: { es: 'Mayakoba, Riviera Maya', en: 'Mayakoba, Riviera Maya' }, beds: 4, area: 660, price: '$1.1M', amenities: ['golf', 'spa', 'jungle'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
-  { name: 'Bay View Grand at Grand Island', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 451, price: '$586K', amenities: ['ocean', 'marina', 'golf'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
-  { name: 'Kabeek Marina & Condos', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 4, area: 670, price: 'Consultar', amenities: ['ocean', 'marina', 'spa'], image: '/placeholder.svg', slug: 'kabeek-marina-condos' },
+  { name: 'Bay View Grand at Grand Island', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 451, price: '$586K', amenities: ['ocean', 'marina', 'golf'], image: bayViewGrandHero, slug: 'bay-view-grand-grand-island' },
+  { name: 'Kabeek Marina & Condos', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 4, area: 670, price: 'Consultar', amenities: ['ocean', 'marina', 'spa'], image: kabeekHero, slug: 'kabeek-marina-condos' },
   { name: 'Vellmari Grand Living', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 714, price: '$14.8M MXN', amenities: ['marina', 'pool', 'spa'], image: vellmariHero, slug: 'vellmari-grand-living' },
   { name: 'Village Blu Beach Apartments', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 1, area: 73, price: '$273K', amenities: ['ocean', 'pool', 'sunset'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
-  { name: 'Arbolada Towers', zone: { es: 'Residencial Cancún', en: 'Cancún Residential' }, beds: 2, area: 94, price: '$5.2M MXN', amenities: ['pool', 'spa'], image: '/placeholder.svg', slug: 'arbolada-towers' },
-  { name: 'Thompson Residences', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 803, price: '$730K', amenities: ['ocean', 'marina', 'golf'], image: '/placeholder.svg', slug: 'thompson-residences-puerto-cancun' },
-  { name: 'Sole Blu Ocean Living', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 2, area: 136, price: '$392K', amenities: ['ocean', 'pool', 'sunset'], image: '/placeholder.svg', slug: 'sole-blu-ocean-living' },
-  { name: 'Cuore Cumbres', zone: { es: 'Cancún Centro', en: 'Downtown Cancún' }, beds: 3, area: 346, price: 'Consultar', amenities: ['pool', 'spa'], image: '/placeholder.svg', slug: 'cuore-cumbres-cancun' },
+  { name: 'Arbolada Towers', zone: { es: 'Residencial Cancún', en: 'Cancún Residential' }, beds: 2, area: 94, price: '$5.2M MXN', amenities: ['pool', 'spa'], image: arboladaHero, slug: 'arbolada-towers' },
+  { name: 'Thompson Residences', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 803, price: '$730K', amenities: ['ocean', 'marina', 'golf'], image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
+  { name: 'Sole Blu Ocean Living', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 2, area: 136, price: '$392K', amenities: ['ocean', 'pool', 'sunset'], image: soleBluHero, slug: 'sole-blu-ocean-living' },
+  { name: 'Cuore Cumbres', zone: { es: 'Cancún Centro', en: 'Downtown Cancún' }, beds: 3, area: 346, price: 'Consultar', amenities: ['pool', 'spa'], image: cuoreCumbresHero, slug: 'cuore-cumbres-cancun' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
