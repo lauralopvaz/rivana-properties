@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { SchedulingModalProvider } from "@/contexts/SchedulingModalContext";
@@ -118,6 +118,11 @@ const AppRoutes = () => (
     <Route path="/en/presale" element={<PreSale />} />
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
+
+    {/* Redirects: /property/:slug → /en/property/:slug */}
+    <Route path="/property/:slug" element={<RedirectPropertyEN />} />
+    {/* Redirects: /en/propiedad/:slug → /propiedad/:slug */}
+    <Route path="/en/propiedad/:slug" element={<RedirectPropertyES />} />
 
     {/* 404 */}
     <Route path="*" element={<NotFound />} />

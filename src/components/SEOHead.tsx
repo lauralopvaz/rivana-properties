@@ -17,6 +17,8 @@ interface SEOHeadProps {
  * Manages document <head> tags for SEO via react-helmet-async.
  * Automatically adds hreflang tags for ES/EN based on path.
  * ES is default (no prefix), EN is under /en/.
+ * Canonical always points to the ES (default) version.
+ * Handles /en/property/ ↔ /propiedad/ route mapping for hreflang.
  */
 export const SEOHead = ({
   title,
@@ -27,22 +29,40 @@ export const SEOHead = ({
   schema,
   ogImage,
 }: SEOHeadProps) => {
-  const canonicalUrl = canonical || (path ? `${BASE_URL}${path}` : undefined);
   const resolvedOgImage = ogImage
     ? (ogImage.startsWith('http') ? ogImage : `${BASE_URL}${ogImage}`)
     : DEFAULT_OG_IMAGE;
 
-  // hreflang computation
-  let hreflangLinks: { lang: string; href: string }[] = [];
+  // Compute the ES (default) base path from the current path
+  let esPath = path || '/';
+  let enPath = '/en';
+
   if (path) {
-    const basePath = path.startsWith('/en') ? path.replace(/^\/en/, '') || '/' : path;
-    const enPath = basePath === '/' ? '/en' : `/en${basePath}`;
-    hreflangLinks = [
-      { lang: 'es', href: `${BASE_URL}${basePath}` },
-      { lang: 'en', href: `${BASE_URL}${enPath}` },
-      { lang: 'x-default', href: `${BASE_URL}${basePath}` },
-    ];
+    // Strip /en prefix to get base path
+    const stripped = path.startsWith('/en') ? path.replace(/^\/en/, '') || '/' : path;
+
+    // Handle /en/property/[slug] → /propiedad/[slug] mapping
+    if (path.startsWith('/en/property/')) {
+      const slug = path.replace('/en/property/', '');
+      esPath = `/propiedad/${slug}`;
+      enPath = `/en/property/${slug}`;
+    } else if (path.startsWith('/propiedad/')) {
+      esPath = path;
+      enPath = `/en/property/${path.replace('/propiedad/', '')}`;
+    } else {
+      esPath = stripped;
+      enPath = esPath === '/' ? '/en' : `/en${esPath}`;
+    }
   }
+
+  // Canonical ALWAYS points to ES (default) version
+  const canonicalUrl = canonical || `${BASE_URL}${esPath}`;
+
+  const hreflangLinks = [
+    { lang: 'es', href: `${BASE_URL}${esPath}` },
+    { lang: 'en', href: `${BASE_URL}${enPath}` },
+    { lang: 'x-default', href: `${BASE_URL}${esPath}` },
+  ];
 
   return (
     <Helmet>
@@ -56,7 +76,7 @@ export const SEOHead = ({
       <meta property="og:image" content={resolvedOgImage} />
       <meta property="og:locale" content="es_MX" />
       <meta property="og:site_name" content="Rivana Properties" />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+      <meta property="og:url" content={canonicalUrl} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -65,7 +85,7 @@ export const SEOHead = ({
       <meta name="twitter:image" content={resolvedOgImage} />
 
       {/* Canonical */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Hreflang */}
       {hreflangLinks.map((h) => (
