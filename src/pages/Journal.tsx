@@ -114,7 +114,7 @@ const Journal = () => {
                     <img src={article.image} alt={article.title[language]} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={1280} height={800} />
                   </div>
                   <span className="eyebrow text-xs">{article.category[language]}</span>
-                  <h4 className="mt-2 mb-2 group-hover:text-primary transition-colors">{article.title[language]}</h4>
+                  <h3 className="mt-2 mb-2 group-hover:text-primary transition-colors">{article.title[language]}</h3>
                   <p className="text-sm text-muted-foreground font-body line-clamp-2 mb-3">{article.excerpt[language]}</p>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground font-body">
                     <span>{article.date}</span>
@@ -131,7 +131,7 @@ const Journal = () => {
             {/* Newsletter */}
             <div className="bg-card border border-border rounded-sm p-6">
               <MailIcon className="w-6 h-6 text-primary mb-3" />
-              <h4 className="text-lg mb-2">Newsletter</h4>
+              <h3 className="text-lg mb-2">Newsletter</h3>
               {nl.success ? (
                 <p className="text-primary font-body text-sm">{language === 'es' ? '¡Suscrito! 🎉' : 'Subscribed! 🎉'}</p>
               ) : (
@@ -151,7 +151,7 @@ const Journal = () => {
 
             {/* Most Read */}
             <div className="bg-card border border-border rounded-sm p-6">
-              <h4 className="text-lg mb-4">{language === 'es' ? 'Más Leídos' : 'Most Read'}</h4>
+              <h3 className="text-lg mb-4">{language === 'es' ? 'Más Leídos' : 'Most Read'}</h3>
               <div className="space-y-4">
                 {journalArticles.slice(0, 4).map((a, i) => (
                   <Link key={a.slug} to={localePath(`/journal/${a.slug}`)} className="flex items-start gap-3 group">

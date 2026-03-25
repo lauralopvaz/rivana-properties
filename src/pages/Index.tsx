@@ -297,7 +297,7 @@ const Home = () => {
                     />
                   </div>
                   <span className="eyebrow text-xs">{post.category[language]}</span>
-                  <h4 className="mt-2 mb-3 text-secondary group-hover:text-primary transition-colors">{post.title[language]}</h4>
+                  <h3 className="mt-2 mb-3 text-secondary group-hover:text-primary transition-colors">{post.title[language]}</h3>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground font-body">
                     <span>{post.date}</span>
                     <span>·</span>

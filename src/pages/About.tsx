@@ -138,7 +138,7 @@ const About = () => {
             <ScrollReveal key={v.title} delay={i * 100}>
               <div className="bg-card border border-border rounded-sm p-6">
                 <span className="text-primary mb-4 block">{v.icon}</span>
-                <h4 className="text-lg mb-2">{v.title}</h4>
+                <h3 className="text-lg mb-2">{v.title}</h3>
                 <p className="text-sm text-muted-foreground font-body">{v.desc}</p>
               </div>
             </ScrollReveal>
@@ -213,7 +213,7 @@ const About = () => {
             <ScrollReveal key={s.step} delay={i * 100}>
               <div className="relative">
                 <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-display text-xl text-primary mb-4">{s.step}</div>
-                <h4 className="text-lg mb-2">{s.title}</h4>
+                <h3 className="text-lg mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground font-body">{s.desc}</p>
               </div>
             </ScrollReveal>
@@ -253,7 +253,7 @@ const About = () => {
                   </div>
                   <input name="email" type="email" placeholder={t('form.email')} required className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
                   <input name="phone" type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                  <select name="interest" className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-muted-foreground focus:outline-none focus:border-primary transition-colors">
+                  <select name="interest" aria-label={language === 'es' ? 'Interés' : 'Interest'} className="w-full bg-muted border border-border rounded-sm px-4 py-3 text-sm font-body text-muted-foreground focus:outline-none focus:border-primary transition-colors">
                     <option value="">{language === 'es' ? '¿Qué te interesa?' : 'What are you interested in?'}</option>
                     <option value="investment_advisory">{language === 'es' ? 'Asesoría de Inversión' : 'Investment Advisory'}</option>
                     <option value="family_property">{language === 'es' ? 'Propiedad Familiar' : 'Family Property'}</option>
