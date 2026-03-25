@@ -132,10 +132,10 @@ const AppRoutes = () => (
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
 
-    {/* Redirects: /property/:slug → /en/property/:slug */}
+    {/* Redirects */}
     <Route path="/property/:slug" element={<RedirectPropertyEN />} />
-    {/* Redirects: /en/propiedad/:slug → /propiedad/:slug */}
     <Route path="/en/propiedad/:slug" element={<RedirectPropertyES />} />
+    <Route path="/propiedades" element={<Navigate to="/listings" replace />} />
 
     {/* 404 */}
     <Route path="*" element={<NotFound />} />

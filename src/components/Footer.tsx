@@ -111,8 +111,10 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li><Link to={localePath('/listings')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.allListings')}</Link></li>
               <li><Link to={localePath('/presale')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.presale')}</Link></li>
+              <li><Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">Mondrian Residences</Link></li>
+              <li><Link to={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">SLS Ocean Beach</Link></li>
+              <li><Link to={localePath('/propiedad/dhamar-costa-mujeres')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">Dhamar</Link></li>
               <li><Link to={localePath('/cancun/zona-hotelera/penthouses')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.penthouses')}</Link></li>
-              <li><Link to={localePath('/cancun/zona-hotelera/condos')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Condos Zona Hotelera' : 'Hotel Zone Condos'}</Link></li>
               <li><Link to={localePath('/cancun/costa-mujeres/preventa')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'es' ? 'Preventa Costa Mujeres' : 'Costa Mujeres Pre-Sale'}</Link></li>
             </ul>
           </div>
