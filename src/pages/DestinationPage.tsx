@@ -99,6 +99,7 @@ const projectsByDestination: Record<string, DestProject[]> = {
     { name: 'Bay View Grand', zone: 'Zona Hotelera', status: 'preventa', beds: 3, area: 451, price: 586146, badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
   ],
   'puerto-cancun': [
+    { name: 'Thompson Residences', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 803, price: 730000, badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'thompson-residences-puerto-cancun' },
     { name: 'SLS Ocean Beach', zone: 'Puerto Cancún', status: 'preventa', beds: 3, area: 356, price: 1600000, badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
     { name: 'Vellmari Grand Living', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 714, price: 845714, badges: ['vista-marina', 'golf', 'wellness', 'pet-friendly'], image: vellmariHero, slug: 'vellmari-grand-living' },
   ],

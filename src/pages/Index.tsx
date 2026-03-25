@@ -65,6 +65,7 @@ const featuredProperties = [
   { name: 'Vellmari Grand Living', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 714, price: '$14.8M MXN', amenities: ['marina', 'pool', 'spa'], image: vellmariHero, slug: 'vellmari-grand-living' },
   { name: 'Village Blu Beach Apartments', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 1, area: 73, price: '$273K', amenities: ['ocean', 'pool', 'sunset'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
   { name: 'Arbolada Towers', zone: { es: 'Residencial Cancún', en: 'Cancún Residential' }, beds: 2, area: 94, price: '$5.2M MXN', amenities: ['pool', 'spa'], image: '/placeholder.svg', slug: 'arbolada-towers' },
+  { name: 'Thompson Residences', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 803, price: '$730K', amenities: ['ocean', 'marina', 'golf'], image: '/placeholder.svg', slug: 'thompson-residences-puerto-cancun' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
