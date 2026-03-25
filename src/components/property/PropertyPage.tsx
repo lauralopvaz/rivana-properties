@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { SEOHead } from "@/components/SEOHead";
 import type { PropertyDetail, UnitType, Locale } from "@/types/property";
 import { PropertyHero } from "./PropertyHero";
 import { PropertyGalleryStrip } from "./PropertyGalleryStrip";

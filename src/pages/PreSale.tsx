@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { SEOHead } from '@/components/SEOHead';
 import { ChatIcon, XIcon } from '@/components/icons';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import mondrianHero from '@/assets/mondrian-hero.png';
