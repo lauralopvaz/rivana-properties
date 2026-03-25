@@ -231,18 +231,18 @@ const PreSale = () => {
 
           {/* MODULE A — Project Description */}
           <div className="mb-10">
-            <p className={sectionLabel} style={{ color: '#CFAE60' }}>El Proyecto</p>
+            <p className={sectionLabel} style={{ color: '#CFAE60' }}>{L === 'es' ? 'El Proyecto' : 'The Project'}</p>
             <h2 className="font-display font-[300] mt-3 mb-5 text-[#1C1C1C]">
-              Diseñado para <em className="italic text-[#CFAE60]">trascender</em>
+              {L === 'es' ? 'Diseñado para' : 'Designed to'} <em className="italic text-[#CFAE60]">{L === 'es' ? 'trascender' : 'transcend'}</em>
             </h2>
-            <p className="font-body text-[13px] font-[300] leading-[1.82] text-[#4B4B4B] mb-8">{PROJECT.description}</p>
+            <p className="font-body text-[13px] font-[300] leading-[1.82] text-[#4B4B4B] mb-8">{PROJECT.description[L]}</p>
 
             {/* 3 stat boxes */}
             <div className="grid grid-cols-3 gap-2 md:gap-4 mb-8">
               {[
-                { val: '1–3 Rec & PH', label: 'Recámaras' },
-                { val: PROJECT.delivery, label: 'Entrega' },
-                { val: '$514K USD', label: 'Precio Desde' },
+                { val: L === 'es' ? '1–3 Rec & PH' : '1–3 BR & PH', label: L === 'es' ? 'Recámaras' : 'Bedrooms' },
+                { val: PROJECT.delivery, label: L === 'es' ? 'Entrega' : 'Delivery' },
+                { val: '$514K USD', label: L === 'es' ? 'Precio Desde' : 'Price From' },
               ].map((s) => (
                 <div key={s.label} className="bg-[#F8F6F2] border border-[rgba(207,174,96,0.22)] p-4 text-center">
                   <span className="font-display text-[24px] md:text-[28px] font-[300] text-[#CFAE60] block">{s.val}</span>
@@ -251,7 +251,7 @@ const PreSale = () => {
               ))}
             </div>
 
-            <button onClick={() => setBrochureModal(true)} className={goldBtn}>Solicitar Brochure</button>
+            <button onClick={() => setBrochureModal(true)} className={goldBtn}>{L === 'es' ? 'Solicitar Brochure' : 'Request Brochure'}</button>
 
             {/* Divider */}
             <div className="mt-10 border-t border-[rgba(207,174,96,0.18)]" />
@@ -261,9 +261,9 @@ const PreSale = () => {
 
           {/* MODULE D — Amenities */}
           <div>
-            <p className={sectionLabel} style={{ color: '#CFAE60' }}>Amenidades</p>
+            <p className={sectionLabel} style={{ color: '#CFAE60' }}>{L === 'es' ? 'Amenidades' : 'Amenities'}</p>
             <div className="mt-4 flex flex-wrap gap-[6px]">
-              {PROJECT.amenities.map((a) => (
+              {PROJECT.amenities[L].map((a) => (
                 <span
                   key={a}
                   className="inline-flex items-center gap-2 bg-[#F8F6F2] border border-[rgba(0,0,0,0.07)] py-2 px-3.5 font-body text-[10px] font-[300] text-[#1C1C1C] transition-colors hover:border-[#CFAE60] hover:bg-white cursor-default"
