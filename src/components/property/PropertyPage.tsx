@@ -59,7 +59,9 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   // Locale-aware SEO
   const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
   const desc = locale === 'en' && property.descriptionEn ? property.descriptionEn : property.description;
-  const seoTitle = `${property.name} — ${zone} | Rivana Properties`;
+  // Short zone for title (take first part before comma)
+  const shortZone = zone.split(',')[0].trim();
+  const seoTitle = `${property.name} — ${shortZone} | Rivana`;
   const seoDesc = desc ? desc.slice(0, 155) : (locale === 'en'
     ? `${property.name} in ${zone}. Luxury real estate advisory with Rivana Properties.`
     : `${property.name} en ${zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`);
