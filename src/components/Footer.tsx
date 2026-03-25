@@ -15,7 +15,7 @@ export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to={localePath('/')} className="font-display text-3xl tracking-[4px] text-primary">
