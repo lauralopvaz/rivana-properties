@@ -4,7 +4,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIcon, AnchorIcon, StarIcon } from '@/components/icons';
 
-import propMondrian from '@/assets/mondrian-hero.png';
+const propMondrian = '/images/mondrian/mondrian-hero.png';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
