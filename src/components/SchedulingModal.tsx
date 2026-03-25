@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useSchedulingModal, ContactType } from '@/contexts/SchedulingModalContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { VideoIcon, PhoneIcon, HouseIcon, BriefcaseIcon, CheckIcon, XIcon, ChatIcon } from '@/components/icons';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 const contactOptions: { key: ContactType; title: { es: string; en: string }; desc: { es: string; en: string }; Icon: React.FC<{ className?: string }> }[] = [
   { key: 'videollamada', title: { es: 'Videollamada', en: 'Video Call' }, desc: { es: 'Conecta cara a cara desde cualquier lugar', en: 'Connect face to face from anywhere' }, Icon: VideoIcon },
@@ -53,13 +55,26 @@ const selectStyle: React.CSSProperties = {
 export const SchedulingModal = () => {
   const { isOpen, selectedType, closeModal, setSelectedType } = useSchedulingModal();
   const { language } = useLanguage();
+  const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [destination, setDestination] = useState('');
+  const [preferredDate, setPreferredDate] = useState('');
+  const [preferredTime, setPreferredTime] = useState('');
 
   useEffect(() => {
     if (!isOpen) {
       setSubmitted(false);
       setFadeOut(false);
+      setFirstName(''); setLastName(''); setEmail(''); setPhone('');
+      setDestination(''); setPreferredDate(''); setPreferredTime('');
+      setLoading(false);
     }
   }, [isOpen]);
 
@@ -74,8 +89,25 @@ export const SchedulingModal = () => {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    const { error } = await supabase.from('leads' as any).insert({
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      phone,
+      destination,
+      contact_type: selectedType,
+      preferred_date: preferredDate || null,
+      preferred_time: preferredTime || null,
+      source_page: window.location.pathname,
+    } as any);
+    setLoading(false);
+    if (error) {
+      toast({ title: 'Error', description: error.message, variant: 'destructive' });
+      return;
+    }
     setFadeOut(true);
     setTimeout(() => setSubmitted(true), 300);
   };
@@ -169,12 +201,12 @@ export const SchedulingModal = () => {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px' }}>
-                <input placeholder={L === 'es' ? 'Nombre' : 'First Name'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
-                <input placeholder={L === 'es' ? 'Apellido' : 'Last Name'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
+                <input placeholder={L === 'es' ? 'Nombre' : 'First Name'} value={firstName} onChange={e => setFirstName(e.target.value)} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
+                <input placeholder={L === 'es' ? 'Apellido' : 'Last Name'} value={lastName} onChange={e => setLastName(e.target.value)} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
               </div>
-              <input type="email" placeholder={L === 'es' ? 'Correo electrónico' : 'Email'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
-              <input type="tel" placeholder={L === 'es' ? 'Teléfono / WhatsApp' : 'Phone / WhatsApp'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
-              <select style={selectStyle} onFocus={handleFocus as any} onBlur={handleBlur as any} required>
+              <input type="email" placeholder={L === 'es' ? 'Correo electrónico' : 'Email'} value={email} onChange={e => setEmail(e.target.value)} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
+              <input type="tel" placeholder={L === 'es' ? 'Teléfono / WhatsApp' : 'Phone / WhatsApp'} value={phone} onChange={e => setPhone(e.target.value)} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
+              <select value={destination} onChange={e => setDestination(e.target.value)} style={selectStyle} onFocus={handleFocus as any} onBlur={handleBlur as any} required>
                 <option value="">{L === 'es' ? 'Destino de interés' : 'Destination of interest'}</option>
                 {destinations.map((d) => (
                   <option key={d} value={d}>{d}</option>
@@ -184,8 +216,8 @@ export const SchedulingModal = () => {
 
               {showDateTime && (
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px' }}>
-                  <input type="date" placeholder={L === 'es' ? 'Fecha preferida' : 'Preferred date'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
-                  <select style={selectStyle} onFocus={handleFocus as any} onBlur={handleBlur as any}>
+                  <input type="date" value={preferredDate} onChange={e => setPreferredDate(e.target.value)} placeholder={L === 'es' ? 'Fecha preferida' : 'Preferred date'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
+                  <select value={preferredTime} onChange={e => setPreferredTime(e.target.value)} style={selectStyle} onFocus={handleFocus as any} onBlur={handleBlur as any}>
                     <option value="">{L === 'es' ? 'Hora preferida' : 'Preferred time'}</option>
                     {timeSlots.map((t) => (
                       <option key={t} value={t}>{t}</option>
@@ -198,12 +230,13 @@ export const SchedulingModal = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '2px' }}>
               <button
                 type="submit"
+                disabled={loading}
                 className="w-full uppercase transition-colors duration-300"
-                style={{ background: '#CFAE60', color: 'white', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, border: 'none', borderRadius: 0, cursor: 'pointer' }}
+                style={{ background: '#CFAE60', color: 'white', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, border: 'none', borderRadius: 0, cursor: 'pointer', opacity: loading ? 0.6 : 1 }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = '#b89a4a'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = '#CFAE60'; }}
               >
-                {L === 'es' ? 'Confirmar Solicitud' : 'Confirm Request'}
+                {loading ? (L === 'es' ? 'Enviando...' : 'Sending...') : (L === 'es' ? 'Confirmar Solicitud' : 'Confirm Request')}
               </button>
               <a
                 href="https://wa.me/529988457224?text=Quiero%20agendar%20una%20cita"
