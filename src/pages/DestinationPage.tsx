@@ -19,6 +19,12 @@ import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
 import villageBluHero from '@/assets/village-blu-hero.jpg';
+import kabeekHero from '@/assets/kabeek-hero.jpg';
+import bayViewGrandHero from '@/assets/bay-view-grand-hero.jpg';
+import arboladaHero from '@/assets/arbolada-hero.jpg';
+import thompsonHero from '@/assets/thompson-hero.jpg';
+import soleBluHero from '@/assets/sole-blu-hero.jpg';
+import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
 import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
