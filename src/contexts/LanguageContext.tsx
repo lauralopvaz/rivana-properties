@@ -141,12 +141,15 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   const switchLanguageUrl = () => {
     if (isEnglish) {
-      // Remove /en prefix
+      // Remove /en prefix and translate EN routes to ES equivalents
       const esPath = location.pathname.replace(/^\/en/, '') || '/';
-      return esPath;
+      // /property/slug → /propiedad/slug
+      return esPath.replace(/^\/property\//, '/propiedad/');
     }
-    // Add /en prefix
-    return location.pathname === '/' ? '/en' : `/en${location.pathname}`;
+    // Add /en prefix and translate ES routes to EN equivalents
+    const basePath = location.pathname === '/' ? '/en' : `/en${location.pathname}`;
+    // /propiedad/slug → /en/property/slug
+    return basePath.replace(/\/en\/propiedad\//, '/en/property/');
   };
 
   const setLanguage = (lang: Language) => {
