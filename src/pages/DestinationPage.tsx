@@ -19,6 +19,12 @@ import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
 import villageBluHero from '@/assets/village-blu-hero.jpg';
+import kabeekHero from '@/assets/kabeek-hero.jpg';
+import bayViewGrandHero from '@/assets/bay-view-grand-hero.jpg';
+import arboladaHero from '@/assets/arbolada-hero.jpg';
+import thompsonHero from '@/assets/thompson-hero.jpg';
+import soleBluHero from '@/assets/sole-blu-hero.jpg';
+import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
 import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
@@ -95,11 +101,11 @@ interface DestProject {
 const projectsByDestination: Record<string, DestProject[]> = {
   'zona-hotelera': [
     { name: 'Mondrian Residences', zone: 'Zona Hotelera', status: 'preventa', yield: '33%', beds: 3, area: 165, price: 514000, badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
-    { name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', status: 'preventa', beds: 4, area: 670, price: 0, badges: ['vista-mar', 'vista-marina', 'wellness', 'club-privado'], image: '/placeholder.svg', slug: 'kabeek-marina-condos' },
-    { name: 'Bay View Grand', zone: 'Zona Hotelera', status: 'preventa', beds: 3, area: 451, price: 586146, badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
+    { name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', status: 'preventa', beds: 4, area: 670, price: 0, badges: ['vista-mar', 'vista-marina', 'wellness', 'club-privado'], image: kabeekHero, slug: 'kabeek-marina-condos' },
+    { name: 'Bay View Grand at Grand Island', zone: 'Zona Hotelera', status: 'preventa', beds: 3, area: 451, price: 586146, badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: bayViewGrandHero, slug: 'bay-view-grand-grand-island' },
   ],
   'puerto-cancun': [
-    { name: 'Thompson Residences', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 803, price: 730000, badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'thompson-residences-puerto-cancun' },
+    { name: 'Thompson Residences', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 803, price: 730000, badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
     { name: 'SLS Ocean Beach', zone: 'Puerto Cancún', status: 'preventa', beds: 3, area: 356, price: 1600000, badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
     { name: 'Vellmari Grand Living', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 714, price: 845714, badges: ['vista-marina', 'golf', 'wellness', 'pet-friendly'], image: vellmariHero, slug: 'vellmari-grand-living' },
   ],
@@ -114,11 +120,11 @@ const projectsByDestination: Record<string, DestProject[]> = {
   ],
   'puerto-morelos': [
     { name: 'Village Blu Beach Apartments', zone: 'Puerto Morelos', status: 'preventa', yield: '8.8%', beds: 1, area: 73, price: 273000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
-    { name: 'Sole Blu Ocean Living', zone: 'Puerto Morelos', status: 'preventa', yield: '~10%', beds: 2, area: 136, price: 392000, badges: ['frente-mar', 'beach-club', 'alberca-infinity', 'pet-friendly'], image: '/placeholder.svg', slug: 'sole-blu-ocean-living' },
+    { name: 'Sole Blu Ocean Living', zone: 'Puerto Morelos', status: 'preventa', yield: '~10%', beds: 2, area: 136, price: 392000, badges: ['frente-mar', 'beach-club', 'alberca-infinity', 'pet-friendly'], image: soleBluHero, slug: 'sole-blu-ocean-living' },
   ],
   'cancun-centro': [
-    { name: 'Arbolada Towers', zone: 'Residencial Cancún', status: 'entrega-inmediata', beds: 2, area: 94, price: 263000, badges: ['alberca-infinity', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'arbolada-towers' },
-    { name: 'Cuore Cumbres', zone: 'Cancún Centro', status: 'preventa', beds: 3, area: 346, price: 0, badges: ['alberca-infinity', 'pet-friendly', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'cuore-cumbres-cancun' },
+    { name: 'Arbolada Towers', zone: 'Residencial Cancún', status: 'entrega-inmediata', beds: 2, area: 94, price: 263000, badges: ['alberca-infinity', 'comunidad-cerrada'], image: arboladaHero, slug: 'arbolada-towers' },
+    { name: 'Cuore Cumbres', zone: 'Cancún Centro', status: 'preventa', beds: 3, area: 346, price: 0, badges: ['alberca-infinity', 'pet-friendly', 'comunidad-cerrada'], image: cuoreCumbresHero, slug: 'cuore-cumbres-cancun' },
   ],
   'tulum': [],
 };
