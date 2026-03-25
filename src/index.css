@@ -15,7 +15,7 @@
     --secondary: 207 52% 32%;
     --secondary-foreground: 0 0% 100%;
     --muted: 30 15% 93%;
-    --muted-foreground: 0 0% 33%;
+    --muted-foreground: 0 0% 35%;
     --accent: 30 30% 77%;
     --accent-foreground: 0 0% 11%;
     --destructive: 0 84% 60%;
@@ -27,6 +27,7 @@
 
     /* Rivana custom tokens */
     --gold: 40 52% 60%;
+    --gold-text: 40 60% 45%;
     --deep-black: 0 0% 11%;
     --pearl: 0 0% 96%;
     --sapphire: 207 52% 32%;
@@ -82,7 +83,7 @@
     font-size: 13px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: hsl(var(--gold));
+    color: hsl(var(--gold-text));
     font-weight: 400;
   }
 
