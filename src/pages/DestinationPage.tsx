@@ -261,7 +261,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                 </div>
               ) : (
                 <form className="bg-card border border-border p-6 space-y-4" onSubmit={handleDestFormSubmit}>
-                  <h4 className="text-lg mb-2">{config.formTitle[language]}</h4>
+                  <h2 className="text-lg mb-2">{config.formTitle[language]}</h2>
                   <input name="name" placeholder={t('form.name')} required className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
                   <input name="email" type="email" placeholder={t('form.email')} required className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
                   <input name="phone" type="tel" placeholder={t('form.phone')} className="w-full bg-muted border border-border px-4 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />

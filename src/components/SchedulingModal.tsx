@@ -206,7 +206,7 @@ export const SchedulingModal = () => {
               </div>
               <input type="email" placeholder={L === 'es' ? 'Correo electrónico' : 'Email'} value={email} onChange={e => setEmail(e.target.value)} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
               <input type="tel" placeholder={L === 'es' ? 'Teléfono / WhatsApp' : 'Phone / WhatsApp'} value={phone} onChange={e => setPhone(e.target.value)} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} required />
-              <select value={destination} onChange={e => setDestination(e.target.value)} style={selectStyle} onFocus={handleFocus as any} onBlur={handleBlur as any} required>
+              <select value={destination} onChange={e => setDestination(e.target.value)} style={selectStyle} onFocus={handleFocus as any} onBlur={handleBlur as any} required aria-label={L === 'es' ? 'Destino de interés' : 'Destination of interest'}>
                 <option value="">{L === 'es' ? 'Destino de interés' : 'Destination of interest'}</option>
                 {destinations.map((d) => (
                   <option key={d} value={d}>{d}</option>
@@ -217,7 +217,7 @@ export const SchedulingModal = () => {
               {showDateTime && (
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px' }}>
                   <input type="date" value={preferredDate} onChange={e => setPreferredDate(e.target.value)} placeholder={L === 'es' ? 'Fecha preferida' : 'Preferred date'} style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
-                  <select value={preferredTime} onChange={e => setPreferredTime(e.target.value)} style={selectStyle} onFocus={handleFocus as any} onBlur={handleBlur as any}>
+                  <select value={preferredTime} onChange={e => setPreferredTime(e.target.value)} style={selectStyle} onFocus={handleFocus as any} onBlur={handleBlur as any} aria-label={L === 'es' ? 'Hora preferida' : 'Preferred time'}>
                     <option value="">{L === 'es' ? 'Hora preferida' : 'Preferred time'}</option>
                     {timeSlots.map((t) => (
                       <option key={t} value={t}>{t}</option>

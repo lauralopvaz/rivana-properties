@@ -86,7 +86,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="eyebrow mb-6">{t('footer.destinations')}</h4>
+            <h3 className="eyebrow mb-6">{t('footer.destinations')}</h3>
             <ul className="space-y-3">
               {p1.map((d) => (
                 <li key={d.key}>
@@ -107,7 +107,7 @@ export const Footer = () => {
 
           {/* Properties */}
           <div>
-            <h4 className="eyebrow mb-6">{t('footer.properties')}</h4>
+            <h3 className="eyebrow mb-6">{t('footer.properties')}</h3>
             <ul className="space-y-3">
               <li><Link to={localePath('/listings')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.allListings')}</Link></li>
               <li><Link to={localePath('/presale')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.presale')}</Link></li>
@@ -119,7 +119,7 @@ export const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="eyebrow mb-6">{t('footer.company')}</h4>
+            <h3 className="eyebrow mb-6">{t('footer.company')}</h3>
             <ul className="space-y-3">
               <li><Link to={localePath('/about')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.aboutUs')}</Link></li>
               <li><Link to={localePath('/journal')} className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{t('footer.journal')}</Link></li>
