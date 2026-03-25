@@ -95,6 +95,8 @@ interface DestProject {
 const projectsByDestination: Record<string, DestProject[]> = {
   'zona-hotelera': [
     { name: 'Mondrian Residences', zone: 'Zona Hotelera', status: 'preventa', yield: '33%', beds: 3, area: 165, price: 514000, badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
+    { name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', status: 'preventa', beds: 4, area: 670, price: 0, badges: ['vista-mar', 'vista-marina', 'wellness', 'club-privado'], image: '/placeholder.svg', slug: 'kabeek-marina-condos' },
+    { name: 'Bay View Grand', zone: 'Zona Hotelera', status: 'preventa', beds: 3, area: 451, price: 586146, badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
   ],
   'puerto-cancun': [
     { name: 'SLS Ocean Beach', zone: 'Puerto Cancún', status: 'preventa', beds: 3, area: 356, price: 1600000, badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
@@ -112,7 +114,9 @@ const projectsByDestination: Record<string, DestProject[]> = {
   'puerto-morelos': [
     { name: 'Village Blu Beach Apartments', zone: 'Puerto Morelos', status: 'preventa', yield: '8.8%', beds: 1, area: 73, price: 273000, badges: ['frente-mar', 'alberca-infinity', 'beach-club'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
   ],
-  'cancun-centro': [],
+  'cancun-centro': [
+    { name: 'Arbolada Towers', zone: 'Residencial Cancún', status: 'entrega-inmediata', beds: 2, area: 94, price: 263000, badges: ['alberca-infinity', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'arbolada-towers' },
+  ],
   'tulum': [],
 };
 

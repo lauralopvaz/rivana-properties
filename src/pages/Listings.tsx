@@ -87,9 +87,12 @@ const allProperties: Property[] = [
   { id: 11, name: 'The Reserve at Mayakoba', zone: 'Mayakoba', type: 'condominio', beds: 4, area: 660, price: 1141000, priceM2: 1729, status: 'preventa', badges: ['golf', 'wellness', 'comunidad-cerrada'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
   { id: 12, name: 'Vellmari Grand Living', zone: 'Puerto Cancún', type: 'condominio', beds: 5, area: 714, price: 845714, priceM2: 1184, status: 'preventa', badges: ['vista-marina', 'golf', 'wellness', 'pet-friendly'], image: vellmariHero, slug: 'vellmari-grand-living' },
   { id: 13, name: 'Village Blu Beach Apartments', zone: 'Puerto Morelos', type: 'condominio', beds: 1, area: 73, price: 273000, priceM2: 3740, status: 'preventa', yield: '8.8%', badges: ['frente-mar', 'alberca-infinity', 'beach-club'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
+  { id: 14, name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', type: 'condominio', beds: 4, area: 670, price: 0, priceM2: 0, status: 'preventa', badges: ['vista-mar', 'vista-marina', 'wellness', 'club-privado'], image: '/placeholder.svg', slug: 'kabeek-marina-condos' },
+  { id: 15, name: 'Bay View Grand', zone: 'Zona Hotelera', type: 'condominio', beds: 3, area: 451, price: 586146, priceM2: 1298, status: 'preventa', badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: '/placeholder.svg', slug: 'bay-view-grand-grand-island' },
+  { id: 16, name: 'Arbolada Towers', zone: 'Residencial Cancún', type: 'condominio', beds: 2, area: 94, price: 263000, priceM2: 2805, status: 'entrega-inmediata', badges: ['alberca-infinity', 'comunidad-cerrada'], image: '/placeholder.svg', slug: 'arbolada-towers' },
 ]; // properties
 
-const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Tulum', 'Cancún Centro'];
+const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Residencial Cancún', 'Tulum', 'Cancún Centro'];
 const statuses = ['Todo el Estatus', 'Preventa', 'Entrega Inmediata'];
 const types = ['Todos los Tipos', 'Departamento', 'Condominio', 'Penthouse', 'Villa'];
 
