@@ -6,6 +6,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { journalArticles, journalArticlesEs } from '@/data/journal-articles';
 import { ArrowRightIcon, ClockIcon, MailIcon } from '@/components/icons';
+import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
 
 const categories = {
   es: ['Todos', 'Inversión', 'Mercado', 'Guías', 'Destinos', 'Lifestyle', 'Legal'],
