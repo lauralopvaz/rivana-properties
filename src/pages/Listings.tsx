@@ -388,7 +388,7 @@ const Listings = () => {
               >
                 {/* Image */}
                 <div className="relative overflow-hidden" style={{ paddingTop: '75%' }}>
-                  <img src={p.image} alt={p.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
+                  <img src={p.image} alt={`${p.name} — ${p.zone}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
                   <div className="absolute inset-0 bg-transparent group-hover:bg-[rgba(207,174,96,0.12)] transition-colors duration-300" />
                   {/* Badges on image */}
                   <div className="absolute top-3 left-3 flex flex-col gap-1.5">
