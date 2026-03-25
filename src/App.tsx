@@ -23,6 +23,7 @@ import JournalPost from "./pages/JournalPost";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import PropertyDetailNew from "./pages/PropertyDetailNew";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
