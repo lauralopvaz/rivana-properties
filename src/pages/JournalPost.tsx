@@ -57,14 +57,18 @@ const JournalPost = () => {
     url: `https://rivanaproperties.com/journal/${slug}`,
   };
 
-  const toc = [
-    language === 'es' ? 'Introducción' : 'Introduction',
-    language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
-    language === 'es' ? 'Factores Clave' : 'Key Investment Drivers',
-    language === 'es' ? 'Análisis de Rendimiento' : 'Rental Yield Analysis',
-    language === 'es' ? 'Efecto Mundial' : 'World Cup Effect',
-    language === 'es' ? 'Conclusión' : 'Conclusion',
-  ];
+  const toc = slug === 'foreign-buyer-guide-mexico'
+    ? (language === 'es'
+      ? ['¿Pueden comprar extranjeros?', 'El Fideicomiso', 'Guía Paso a Paso', '¿Por qué 2026?', 'Por qué Rivana', 'Propiedades Destacadas', 'Preguntas Frecuentes']
+      : ['Can Foreigners Buy?', 'The Fideicomiso', 'Step-by-Step Guide', 'Why 2026?', 'Why Rivana', 'Featured Properties', 'FAQ'])
+    : [
+      language === 'es' ? 'Introducción' : 'Introduction',
+      language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
+      language === 'es' ? 'Factores Clave' : 'Key Investment Drivers',
+      language === 'es' ? 'Análisis de Rendimiento' : 'Rental Yield Analysis',
+      language === 'es' ? 'Efecto Mundial' : 'World Cup Effect',
+      language === 'es' ? 'Conclusión' : 'Conclusion',
+    ];
 
   // Related articles based on shared destinations
   const related = journalArticles
