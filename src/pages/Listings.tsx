@@ -448,7 +448,9 @@ const Listings = () => {
                   <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                     <div>
                        <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Desde' : 'From'}</span>
-                       <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPriceInCurrency(p.price, appliedCurrency)} {appliedCurrency}</span>
+                       <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>
+                         {p.price === 0 ? (L === 'es' ? 'Consultar' : 'Contact Us') : `${formatPriceInCurrency(p.price, appliedCurrency)} ${appliedCurrency}`}
+                       </span>
                      </div>
                      <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                       {L === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
