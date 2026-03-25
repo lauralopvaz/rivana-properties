@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 const BASE_URL = 'https://rivanaproperties.com';
+const DEFAULT_OG_IMAGE = `${BASE_URL}/images/mondrian/mondrian-hero.png`;
 
 interface SEOHeadProps {
   title: string;
@@ -27,6 +28,9 @@ export const SEOHead = ({
   ogImage,
 }: SEOHeadProps) => {
   const canonicalUrl = canonical || (path ? `${BASE_URL}${path}` : undefined);
+  const resolvedOgImage = ogImage
+    ? (ogImage.startsWith('http') ? ogImage : `${BASE_URL}${ogImage}`)
+    : DEFAULT_OG_IMAGE;
 
   // hreflang computation
   let hreflangLinks: { lang: string; href: string }[] = [];
@@ -49,12 +53,16 @@ export const SEOHead = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      {ogImage && <meta property="og:image" content={ogImage} />}
+      <meta property="og:image" content={resolvedOgImage} />
+      <meta property="og:locale" content="es_MX" />
+      <meta property="og:site_name" content="Rivana Properties" />
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={resolvedOgImage} />
 
       {/* Canonical */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}

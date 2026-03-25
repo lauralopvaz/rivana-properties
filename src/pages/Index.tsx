@@ -113,7 +113,7 @@ const Home = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en' : '/'} schema={schema} />
+      <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en' : '/'} schema={schema} ogImage="/images/mondrian/mondrian-hero.png" />
 
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

@@ -215,7 +215,7 @@ const Listings = () => {
 
   return (
     <div style={{ background: '#F8F6F2' }}>
-      <SEOHead title={seoTitle} description={seoDesc} path={L === 'en' ? '/en/listings' : '/listings'} />
+      <SEOHead title={seoTitle} description={seoDesc} path={L === 'en' ? '/en/listings' : '/listings'} ogImage="/images/mondrian/mondrian-hero.png" />
 
       {/* Header */}
       <section className="pt-28 pb-8 px-6 lg:px-10 max-w-[1400px] mx-auto">
