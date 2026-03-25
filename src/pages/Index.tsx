@@ -217,7 +217,7 @@ const Home = () => {
                     <div className="aspect-[16/10] overflow-hidden">
                       <img
                         src={p.image}
-                        alt={p.name}
+                        alt={`${p.name} — ${zoneName}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         loading="lazy"
                       />

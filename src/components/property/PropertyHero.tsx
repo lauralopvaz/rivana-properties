@@ -25,7 +25,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
       >
         <img
           src={heroImage}
-          alt={property.name}
+          alt={`${property.name} — ${locale === 'en' && property.zoneEn ? property.zoneEn : property.zone}`}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: "center 30%" }}
         />
