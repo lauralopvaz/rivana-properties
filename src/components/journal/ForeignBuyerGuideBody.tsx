@@ -343,7 +343,7 @@ export const ForeignBuyerGuideBodyES = () => {
       {/* CTA */}
       <div className="bg-card border border-[hsl(var(--gold)_/_0.3)] rounded-sm p-8 text-center my-12">
         <p className="font-display text-xl text-foreground mb-4">
-          ¿Listo para explorar tus opciones? Habla directamente con un asesor Rivana — bilingue, sin presion y 100% especializado en el Caribe Mexicano.
+          ¿Listo para explorar tus opciones? Habla directamente con un asesor Rivana — bilingue y 100% especializado en el Caribe Mexicano.
         </p>
         <a
           href={WHATSAPP_LINK}
@@ -351,7 +351,7 @@ export const ForeignBuyerGuideBodyES = () => {
           rel="noopener noreferrer"
           className="inline-block bg-[hsl(var(--gold))] text-background font-display text-sm tracking-wider uppercase px-8 py-3 rounded-sm hover:opacity-90 transition-opacity"
         >
-          WhatsApp +52 998 845 7224
+          Asesoria para extranjeros
         </a>
       </div>
     </div>
