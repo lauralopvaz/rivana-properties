@@ -74,6 +74,7 @@ const AppRoutes = () => (
     <Route path="/listings" element={<Listings />} />
     <Route path="/presale" element={<PreSale />} />
     <Route path="/propiedad/:slug" element={<PropertyDetailNew locale="es" />} />
+    <Route path="/aviso-de-privacidad" element={<PrivacyPolicy />} />
 
     {/* ── ENGLISH (/en prefix) ── */}
     <Route path="/en" element={<Index />} />
