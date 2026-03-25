@@ -40,7 +40,10 @@ const JournalPost = () => {
   }
 
   const currentPath = language === 'en' ? `/en/journal/${slug}` : `/journal/${slug}`;
-  const seoTitle = `${article.title[language]} | Rivana Journal`;
+  const articleTitle = article.title[language];
+  const seoTitle = articleTitle.length > 45
+    ? `${articleTitle.slice(0, 45)}… | Rivana`
+    : `${articleTitle} | Rivana Journal`;
 
   const schema = {
     '@context': 'https://schema.org',

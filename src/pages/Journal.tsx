@@ -30,8 +30,8 @@ const Journal = () => {
   });
 
   const seoTitle = language === 'es'
-    ? 'The Rivana Journal — Insights Inmobiliarios Cancún | Rivana'
-    : 'The Rivana Journal — Real Estate Insights Cancún | Rivana';
+    ? 'Rivana Journal — Insights Inmobiliarios | Rivana'
+    : 'Rivana Journal — Real Estate Insights | Rivana';
   const seoDesc = language === 'es'
     ? 'Artículos sobre inversión inmobiliaria en Cancún y la Riviera Maya. Guías, análisis de mercado y tendencias.'
     : 'Articles about real estate investment in Cancún and the Riviera Maya. Guides, market analysis, and trends.';

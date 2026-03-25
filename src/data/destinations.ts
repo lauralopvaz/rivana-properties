@@ -286,8 +286,8 @@ export const destinations: DestinationConfig[] = [
     priority: 2,
     seo: {
       title: {
-        es: 'Residencias Mayakoba en Venta — The Reserve | Rivana',
-        en: 'Mayakoba Residences for Sale — The Reserve at Mayakoba | Rivana',
+        es: 'Mayakoba — The Reserve en Venta | Rivana',
+        en: 'Mayakoba — The Reserve for Sale | Rivana',
       },
       description: {
         es: 'Residencias y villas de lujo en Mayakoba. The Reserve, campo de golf, inversión mundialista 2026. Rivana Properties.',
@@ -390,8 +390,8 @@ export const destinations: DestinationConfig[] = [
     priority: 3,
     seo: {
       title: {
-        es: 'Propiedades Cancún Centro — Vida Urbana de Lujo | Rivana',
-        en: 'Cancun Downtown Real Estate — Urban Luxury Living | Rivana',
+        es: 'Cancún Centro — Vida Urbana | Rivana',
+        en: 'Downtown Cancún — Urban Living | Rivana',
       },
       description: {
         es: 'Departamentos y propiedades urbanas en Cancún Centro. Vida de ciudad con acceso a playas. Rivana Properties.',

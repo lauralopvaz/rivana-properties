@@ -4,6 +4,7 @@ import { ChatIcon, XIcon } from '@/components/icons';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 const mondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.jpg';
 const mondrianCoffeeBar = '/images/mondrian/mondrian-coffee-bar.jpg';
@@ -22,36 +23,34 @@ const PROJECT = {
   delivery: 'Q2 2027',
   priceFrom: '$514,000 USD',
   yieldPct: '33%',
-  description:
-    'Mondrian Residences at Grand Island es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día.',
+  description: {
+    es: 'Mondrian Residences at Grand Island es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día.',
+    en: 'Mondrian Residences at Grand Island is a branded residence within the most exclusive master development in Cancún\'s Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one.',
+  },
   brochureUrl: '/brochures/mondrian-residences.pdf',
   presaleDeadline: new Date('2026-06-01T23:59:59'),
   priceIncreaseAfter: 33,
   phases: [
-    { name: 'Fase 1 — Lanzamiento', pct: 60, status: '60% Vendido' },
-    { name: 'Fase 2 — Preventa', pct: 15, status: 'Disponible' },
+    { name: { es: 'Fase 1 — Lanzamiento', en: 'Phase 1 — Launch' }, pct: 60, status: { es: '60% Vendido', en: '60% Sold' } },
+    { name: { es: 'Fase 2 — Preventa', en: 'Phase 2 — Pre-Sale' }, pct: 15, status: { es: 'Disponible', en: 'Available' } },
   ],
   units: [
-    { name: 'Estudio Curva — 1 Hab', m2: '76.96 m²', price: '$514,000 USD', avail: 10, desc: 'Estudio con curva panorámica, 1 habitación, 1 baño. Entrega llave en mano con gestión Accor.' },
-    { name: 'Departamento A — 1 Hab', m2: '81.46 m²', price: '$514,000 USD', avail: 10, desc: 'Una habitación, 2 baños. Diseño de Filipao Nunes con acabados premium y vista al Caribe.' },
-    { name: "Departamento A' — 1 Hab", m2: '115.84 m²', price: '$642,000 USD', avail: 10, desc: 'Versión ampliada del Depto A con terraza extendida y vista dual mar-laguna.' },
-    { name: 'Loft A — 1 Hab (dúplex)', m2: '91.20 m²', price: '$758,000 USD', avail: 10, desc: 'Dúplex con doble altura, 1 habitación, 2 baños. Diseño escultórico único en el edificio.' },
-    { name: 'Departamento B — 2 Hab', m2: '135.44 m²', price: '$684,000 USD', avail: 5, desc: 'Dos habitaciones, 2.5 baños. Espacios amplios con vista frontal al Mar Caribe.' },
-    { name: 'Depto B Esquina — 2 Hab', m2: '164.75 m²', price: '$1,163,000 USD', avail: 5, desc: 'Esquina con vista panorámica 180°. Dos habitaciones, 2.5 baños. La unidad más exclusiva de 2 recámaras.' },
-    { name: 'Depto C Esquina — 3 Hab', m2: '158.93 m²', price: '$1,247,000 USD', avail: 5, desc: 'Tres habitaciones, 3.5 baños. Esquina con vista triple: mar, laguna y campo de golf.' },
+    { name: { es: 'Estudio Curva — 1 Hab', en: 'Studio Curve — 1BR' }, m2: '76.96 m²', price: '$514,000 USD', avail: 10, desc: { es: 'Estudio con curva panorámica, 1 habitación, 1 baño. Entrega llave en mano con gestión Accor.', en: 'Panoramic curve studio, 1 bedroom, 1 bath. Turnkey delivery with Accor management.' } },
+    { name: { es: 'Departamento A — 1 Hab', en: 'Unit A — 1BR' }, m2: '81.46 m²', price: '$514,000 USD', avail: 10, desc: { es: 'Una habitación, 2 baños. Diseño de Filipao Nunes con acabados premium y vista al Caribe.', en: '1 bedroom, 2 baths. Filipao Nunes design with premium finishes and Caribbean views.' } },
+    { name: { es: "Departamento A' — 1 Hab", en: "Unit A' — 1BR" }, m2: '115.84 m²', price: '$642,000 USD', avail: 10, desc: { es: 'Versión ampliada del Depto A con terraza extendida y vista dual mar-laguna.', en: 'Expanded Unit A with extended terrace and dual sea-lagoon views.' } },
+    { name: { es: 'Loft A — 1 Hab (dúplex)', en: 'Loft A — 1BR (duplex)' }, m2: '91.20 m²', price: '$758,000 USD', avail: 10, desc: { es: 'Dúplex con doble altura, 1 habitación, 2 baños. Diseño escultórico único en el edificio.', en: 'Double-height duplex, 1 bedroom, 2 baths. Sculptural design unique to the building.' } },
+    { name: { es: 'Departamento B — 2 Hab', en: 'Unit B — 2BR' }, m2: '135.44 m²', price: '$684,000 USD', avail: 5, desc: { es: 'Dos habitaciones, 2.5 baños. Espacios amplios con vista frontal al Mar Caribe.', en: '2 bedrooms, 2.5 baths. Spacious with frontal Caribbean Sea views.' } },
+    { name: { es: 'Depto B Esquina — 2 Hab', en: 'Corner Unit B — 2BR' }, m2: '164.75 m²', price: '$1,163,000 USD', avail: 5, desc: { es: 'Esquina con vista panorámica 180°. Dos habitaciones, 2.5 baños. La unidad más exclusiva de 2 recámaras.', en: '180° panoramic corner view. 2 bedrooms, 2.5 baths. The most exclusive 2-bedroom unit.' } },
+    { name: { es: 'Depto C Esquina — 3 Hab', en: 'Corner Unit C — 3BR' }, m2: '158.93 m²', price: '$1,247,000 USD', avail: 5, desc: { es: 'Tres habitaciones, 3.5 baños. Esquina con vista triple: mar, laguna y campo de golf.', en: '3 bedrooms, 3.5 baths. Corner with triple view: sea, lagoon, and golf course.' } },
   ],
-  amenities: [
-    'Infinity Pool', 'Beach Club', 'Concierge 24/7', 'Spa & Wellness',
-    'Gimnasio', 'Campo de Golf', 'Marina Privada', 'Vista al Mar',
-    'Club Privado', 'Restaurante Rooftop', 'Coffee Shop', 'Bar',
-    'Sauna', 'Tinas de Hidromasaje', 'Gradas Lounge Exterior', 'Entrega Llave en Mano',
-  ],
-  availability: [
-    { type: 'Estudios / 1 Hab', qty: 60 },
-    { type: '2 Recámaras', qty: 20 },
-    { type: '3 Recámaras', qty: 5 },
-    { type: 'Lofts (dúplex)', qty: 10 },
-  ],
+  amenities: {
+    es: ['Infinity Pool', 'Beach Club', 'Concierge 24/7', 'Spa & Wellness', 'Gimnasio', 'Campo de Golf', 'Marina Privada', 'Vista al Mar', 'Club Privado', 'Restaurante Rooftop', 'Coffee Shop', 'Bar', 'Sauna', 'Tinas de Hidromasaje', 'Gradas Lounge Exterior', 'Entrega Llave en Mano'],
+    en: ['Infinity Pool', 'Beach Club', 'Concierge 24/7', 'Spa & Wellness', 'Gym', 'Golf Course', 'Private Marina', 'Ocean View', 'Private Club', 'Rooftop Restaurant', 'Coffee Shop', 'Bar', 'Sauna', 'Hot Tubs', 'Outdoor Lounge Terrace', 'Turnkey Delivery'],
+  },
+  availability: {
+    es: [{ type: 'Estudios / 1 Hab', qty: 60 }, { type: '2 Recámaras', qty: 20 }, { type: '3 Recámaras', qty: 5 }, { type: 'Lofts (dúplex)', qty: 10 }],
+    en: [{ type: 'Studios / 1BR', qty: 60 }, { type: '2 Bedrooms', qty: 20 }, { type: '3 Bedrooms', qty: 5 }, { type: 'Lofts (duplex)', qty: 10 }],
+  },
   gallery: [mondrianHero, mondrianFrontDesk, mondrianCoffeeBar, mondrianRestaurant, mondrianRooftop, mondrianBeachClub, mondrianGym, mondrianPool],
 };
 
@@ -91,6 +90,7 @@ function sideAvailColor(qty: number) {
 /* ═══════════════════════════════════════════ */
 
 const PreSale = () => {
+  const { language: L } = useLanguage();
   const countdown = useCountdown(PROJECT.presaleDeadline);
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [presaleFormLoading, setPresaleFormLoading] = useState(false);
@@ -126,9 +126,9 @@ const PreSale = () => {
 
   const handleBrochureSubmit = () => {
     const errs: Record<string, string> = {};
-    if (!brForm.name.trim()) errs.name = 'Campo requerido';
-    if (!brForm.phone.trim()) errs.phone = 'Campo requerido';
-    if (!brForm.email.trim()) errs.email = 'Campo requerido';
+    if (!brForm.name.trim()) errs.name = L === 'es' ? 'Campo requerido' : 'Required';
+    if (!brForm.phone.trim()) errs.phone = L === 'es' ? 'Campo requerido' : 'Required';
+    if (!brForm.email.trim()) errs.email = L === 'es' ? 'Campo requerido' : 'Required';
     setBrErrors(errs);
     if (Object.keys(errs).length === 0) {
       setBrochureModal(false);
@@ -162,10 +162,10 @@ const PreSale = () => {
   return (
     <div className="bg-white">
       <SEOHead
-        title="Mondrian Residences — Preventa | Rivana Properties"
-        description="Preventa de Mondrian Residences en Grand Island Cancún. Condos de lujo desde $514K USD en Zona Hotelera. Entrega Q2 2027. Plusvalía 33%."
+        title={L === 'es' ? 'Mondrian Residences — Preventa | Rivana' : 'Mondrian Residences — Pre-Sale | Rivana'}
+        description={L === 'es' ? 'Preventa Mondrian Residences en Grand Island Cancún. Condos de lujo desde $514K USD. Entrega Q2 2027.' : 'Pre-sale Mondrian Residences at Grand Island Cancún. Luxury condos from $514K USD. Delivery Q2 2027.'}
         ogImage="/images/mondrian/mondrian-hero.jpg"
-        path="/presale"
+        path={L === 'en' ? '/en/presale' : '/presale'}
         schema={{
           "@context": "https://schema.org",
           "@type": "Product",
@@ -191,10 +191,10 @@ const PreSale = () => {
         <div className="absolute bottom-0 left-0 p-6 md:p-14 z-10">
           <div className="flex items-center gap-2 mb-3 md:mb-5">
             <span className="w-2 h-2 rounded-full bg-[#CFAE60] blink-dot" />
-            <span className="font-body text-[8px] md:text-[9px] tracking-[3px] md:tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>Preventa Exclusiva · Precios hasta el 25 de abril</span>
+            <span className="font-body text-[8px] md:text-[9px] tracking-[3px] md:tracking-[5px] uppercase font-[400] text-[#CFAE60]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>{L === 'es' ? 'Preventa Exclusiva · Precios hasta el 25 de abril' : 'Exclusive Pre-Sale · Pricing until April 25'}</span>
           </div>
           <h1 className="text-white font-display font-[300] leading-[1.05] mb-3 text-[clamp(36px,8vw,76px)]" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
-            Residencial <em className="text-[#CFAE60] italic">{PROJECT.name}</em>
+            {L === 'es' ? 'Residencial' : 'Residences'} <em className="text-[#CFAE60] italic">{PROJECT.name}</em>
           </h1>
           <p className="font-body text-[11px] md:text-[12px] text-white/[0.52] tracking-[1px] uppercase" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>{PROJECT.location}</p>
         </div>
@@ -231,18 +231,18 @@ const PreSale = () => {
 
           {/* MODULE A — Project Description */}
           <div className="mb-10">
-            <p className={sectionLabel} style={{ color: '#CFAE60' }}>El Proyecto</p>
+            <p className={sectionLabel} style={{ color: '#CFAE60' }}>{L === 'es' ? 'El Proyecto' : 'The Project'}</p>
             <h2 className="font-display font-[300] mt-3 mb-5 text-[#1C1C1C]">
-              Diseñado para <em className="italic text-[#CFAE60]">trascender</em>
+              {L === 'es' ? 'Diseñado para' : 'Designed to'} <em className="italic text-[#CFAE60]">{L === 'es' ? 'trascender' : 'transcend'}</em>
             </h2>
-            <p className="font-body text-[13px] font-[300] leading-[1.82] text-[#4B4B4B] mb-8">{PROJECT.description}</p>
+            <p className="font-body text-[13px] font-[300] leading-[1.82] text-[#4B4B4B] mb-8">{PROJECT.description[L]}</p>
 
             {/* 3 stat boxes */}
             <div className="grid grid-cols-3 gap-2 md:gap-4 mb-8">
               {[
-                { val: '1–3 Rec & PH', label: 'Recámaras' },
-                { val: PROJECT.delivery, label: 'Entrega' },
-                { val: '$514K USD', label: 'Precio Desde' },
+                { val: L === 'es' ? '1–3 Rec & PH' : '1–3 BR & PH', label: L === 'es' ? 'Recámaras' : 'Bedrooms' },
+                { val: PROJECT.delivery, label: L === 'es' ? 'Entrega' : 'Delivery' },
+                { val: '$514K USD', label: L === 'es' ? 'Precio Desde' : 'Price From' },
               ].map((s) => (
                 <div key={s.label} className="bg-[#F8F6F2] border border-[rgba(207,174,96,0.22)] p-4 text-center">
                   <span className="font-display text-[24px] md:text-[28px] font-[300] text-[#CFAE60] block">{s.val}</span>
@@ -251,7 +251,7 @@ const PreSale = () => {
               ))}
             </div>
 
-            <button onClick={() => setBrochureModal(true)} className={goldBtn}>Solicitar Brochure</button>
+            <button onClick={() => setBrochureModal(true)} className={goldBtn}>{L === 'es' ? 'Solicitar Brochure' : 'Request Brochure'}</button>
 
             {/* Divider */}
             <div className="mt-10 border-t border-[rgba(207,174,96,0.18)]" />
@@ -261,9 +261,9 @@ const PreSale = () => {
 
           {/* MODULE D — Amenities */}
           <div>
-            <p className={sectionLabel} style={{ color: '#CFAE60' }}>Amenidades</p>
+            <p className={sectionLabel} style={{ color: '#CFAE60' }}>{L === 'es' ? 'Amenidades' : 'Amenities'}</p>
             <div className="mt-4 flex flex-wrap gap-[6px]">
-              {PROJECT.amenities.map((a) => (
+              {PROJECT.amenities[L].map((a) => (
                 <span
                   key={a}
                   className="inline-flex items-center gap-2 bg-[#F8F6F2] border border-[rgba(0,0,0,0.07)] py-2 px-3.5 font-body text-[10px] font-[300] text-[#1C1C1C] transition-colors hover:border-[#CFAE60] hover:bg-white cursor-default"
@@ -283,24 +283,24 @@ const PreSale = () => {
             style={{ position: 'sticky', top: '24px', boxShadow: '0 6px 48px rgba(0,0,0,0.08)' }}
           >
             {/* Price */}
-            <p className="font-body text-[8px] tracking-[3px] uppercase text-[#4B4B4B] font-[400] mb-1">Desde</p>
+            <p className="font-body text-[8px] tracking-[3px] uppercase text-[#4B4B4B] font-[400] mb-1">{L === 'es' ? 'Desde' : 'From'}</p>
             <span className="font-display text-[36px] font-[300] text-[#CFAE60] block">{PROJECT.priceFrom}</span>
             <div className="flex items-center gap-1.5 mt-1">
               <span className="text-[#2d7a4a] text-[12px]">↗</span>
-              <span className="font-body text-[12px] font-[300] text-[#2d7a4a]">{PROJECT.yieldPct} rendimiento estimado</span>
+              <span className="font-body text-[12px] font-[300] text-[#2d7a4a]">{PROJECT.yieldPct} {L === 'es' ? 'rendimiento estimado' : 'estimated return'}</span>
             </div>
 
             <div className="my-5 border-t border-[rgba(207,174,96,0.18)]" />
 
 
             {/* Countdown */}
-            <p className="font-body text-[8px] tracking-[3px] uppercase text-[#4B4B4B] font-[400] mb-3">Precio de Preventa Hasta</p>
+            <p className="font-body text-[8px] tracking-[3px] uppercase text-[#4B4B4B] font-[400] mb-3">{L === 'es' ? 'Precio de Preventa Hasta' : 'Pre-Sale Price Until'}</p>
             <div className="grid grid-cols-4 gap-2 mb-2">
               {[
-                { val: countdown.days, label: 'Días' },
+                { val: countdown.days, label: L === 'es' ? 'Días' : 'Days' },
                 { val: countdown.hours, label: 'Hrs' },
                 { val: countdown.minutes, label: 'Min' },
-                { val: countdown.seconds, label: 'Seg' },
+                { val: countdown.seconds, label: L === 'es' ? 'Seg' : 'Sec' },
               ].map((t) => (
                 <div key={t.label} className="bg-[#1C1C1C] py-2.5 flex flex-col items-center">
                   <span className="font-display text-[24px] font-[300] text-[#CFAE60]">{String(t.val).padStart(2, '0')}</span>
@@ -308,29 +308,29 @@ const PreSale = () => {
                 </div>
               ))}
             </div>
-            <p className="font-body text-[9px] italic text-[#4B4B4B] text-center mb-0">Después de esta fecha el precio aumenta {PROJECT.priceIncreaseAfter}%</p>
+            <p className="font-body text-[9px] italic text-[#4B4B4B] text-center mb-0">{L === 'es' ? `Después de esta fecha el precio aumenta ${PROJECT.priceIncreaseAfter}%` : `After this date, prices increase by ${PROJECT.priceIncreaseAfter}%`}</p>
 
             <div className="my-5 border-t border-[rgba(207,174,96,0.18)]" />
 
             {/* Contact Form */}
             {presaleFormSuccess ? (
               <div className="text-center py-4">
-                <p className="font-display text-[18px] text-[#CFAE60]">✓ ¡Solicitud enviada!</p>
-                <p className="font-body text-[10px] text-[#4B4B4B] mt-1">Te contactaremos pronto.</p>
+                <p className="font-display text-[18px] text-[#CFAE60]">✓ {L === 'es' ? '¡Solicitud enviada!' : 'Request sent!'}</p>
+                <p className="font-body text-[10px] text-[#4B4B4B] mt-1">{L === 'es' ? 'Te contactaremos pronto.' : 'We\'ll contact you soon.'}</p>
               </div>
             ) : (
               <form className="space-y-2.5" onSubmit={handlePresaleFormSubmit}>
-                <input name="name" placeholder="Nombre" required className={inputClass} />
-                <input name="email" type="email" placeholder="Correo electrónico" required className={inputClass} />
-                <input name="phone" type="tel" placeholder="Teléfono" className={inputClass} />
-                <button type="submit" disabled={presaleFormLoading} className={goldBtn}>{presaleFormLoading ? '...' : 'Solicitar Precios y Planos'}</button>
+                <input name="name" placeholder={L === 'es' ? 'Nombre' : 'Name'} required className={inputClass} />
+                <input name="email" type="email" placeholder={L === 'es' ? 'Correo electrónico' : 'Email'} required className={inputClass} />
+                <input name="phone" type="tel" placeholder={L === 'es' ? 'Teléfono' : 'Phone'} className={inputClass} />
+                <button type="submit" disabled={presaleFormLoading} className={goldBtn}>{presaleFormLoading ? '...' : (L === 'es' ? 'Solicitar Precios y Planos' : 'Request Pricing & Plans')}</button>
                 <a
                   href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-[#e8f5e9] border border-[#66bb6a] py-2.5 font-body text-[10px] tracking-[2px] uppercase text-[#2e7d32] font-[400] hover:bg-[#c8e6c9] transition-colors cursor-pointer rounded-none no-underline"
                 >
-                  <ChatIcon className="w-3.5 h-3.5" /> Escribir por WhatsApp
+                  <ChatIcon className="w-3.5 h-3.5" /> {L === 'es' ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
                 </a>
               </form>
             )}
@@ -405,17 +405,17 @@ const PreSale = () => {
             >
               <XIcon className="w-4 h-4" />
             </button>
-            <p className={sectionLabel} style={{ color: '#CFAE60' }}>Material Exclusivo</p>
-            <h3 className="font-display text-[28px] font-[300] text-[#1C1C1C] mt-2 mb-2">
-              Descarga el <em className="italic text-[#CFAE60]">Brochure</em>
-            </h3>
+            <p className={sectionLabel} style={{ color: '#CFAE60' }}>{L === 'es' ? 'Material Exclusivo' : 'Exclusive Material'}</p>
+            <h2 className="font-display text-[28px] font-[300] text-[#1C1C1C] mt-2 mb-2">
+              {L === 'es' ? 'Descarga el' : 'Download the'} <em className="italic text-[#CFAE60]">Brochure</em>
+            </h2>
             <p className="font-body text-[12px] font-[300] text-[#4B4B4B] mb-6 leading-[1.7]">
-              Accede a precios detallados, planos de planta, acabados y condiciones de preventa.
+              {L === 'es' ? 'Accede a precios detallados, planos de planta, acabados y condiciones de preventa.' : 'Access detailed pricing, floor plans, finishes, and pre-sale conditions.'}
             </p>
             <div className="space-y-2.5">
               <div>
                 <input
-                  placeholder="Nombre completo"
+                  placeholder={L === 'es' ? 'Nombre completo' : 'Full name'}
                   value={brForm.name}
                   onChange={(e) => { setBrForm({ ...brForm, name: e.target.value }); setBrErrors({ ...brErrors, name: '' }); }}
                   className={inputClass}
@@ -425,7 +425,7 @@ const PreSale = () => {
               <div>
                 <input
                   type="tel"
-                  placeholder="Teléfono"
+                  placeholder={L === 'es' ? 'Teléfono' : 'Phone'}
                   value={brForm.phone}
                   onChange={(e) => { setBrForm({ ...brForm, phone: e.target.value }); setBrErrors({ ...brErrors, phone: '' }); }}
                   className={inputClass}
@@ -435,14 +435,14 @@ const PreSale = () => {
               <div>
                 <input
                   type="email"
-                  placeholder="Correo electrónico"
+                  placeholder={L === 'es' ? 'Correo electrónico' : 'Email'}
                   value={brForm.email}
                   onChange={(e) => { setBrForm({ ...brForm, email: e.target.value }); setBrErrors({ ...brErrors, email: '' }); }}
                   className={inputClass}
                 />
                 {brErrors.email && <p className="font-body text-[10px] text-[#b03a2e] mt-0.5">{brErrors.email}</p>}
               </div>
-              <button onClick={handleBrochureSubmit} className={goldBtn}>Descargar Brochure</button>
+              <button onClick={handleBrochureSubmit} className={goldBtn}>{L === 'es' ? 'Descargar Brochure' : 'Download Brochure'}</button>
             </div>
           </div>
         </div>

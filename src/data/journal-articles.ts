@@ -25,8 +25,8 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'cancun-roi-rental-yield',
     title: {
-      es: 'Rendimiento de Inversión y Renta en Cancún 2026',
-      en: 'Cancun ROI & Rental Yield Guide 2026',
+      es: 'ROI y Rendimiento en Cancún 2026',
+      en: 'Cancun ROI & Rental Yield 2026',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
@@ -42,8 +42,8 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'foreign-buyer-guide-mexico',
     title: {
-      es: 'Guía Completa para Compradores Extranjeros en México',
-      en: 'How to Buy as a Foreign Investor in Mexico',
+      es: 'Guía para Compradores Extranjeros',
+      en: 'Foreign Investor Guide — México',
     },
     category: { es: 'Guías', en: 'Guides' },
     excerpt: {
@@ -59,8 +59,8 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'world-cup-2026-cancun-real-estate',
     title: {
-      es: 'Mundial 2026: Impacto en el Mercado Inmobiliario de Cancún',
-      en: 'World Cup 2026: Impact on Cancun Real Estate',
+      es: 'Mundial 2026: Impacto Inmobiliario Cancún',
+      en: 'World Cup 2026: Cancun Real Estate Impact',
     },
     category: { es: 'Mercado', en: 'Market' },
     excerpt: {
@@ -77,8 +77,8 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'luxury-condos-zona-hotelera-cancun-2026-guide',
     title: {
-      es: 'Condos de Lujo en Zona Hotelera — Guía 2026',
-      en: 'Luxury Condos in Cancun Hotel Zone — 2026 Guide',
+      es: 'Condos de Lujo Zona Hotelera 2026',
+      en: 'Luxury Condos Cancun Hotel Zone 2026',
     },
     category: { es: 'Destinos', en: 'Destinations' },
     excerpt: {
@@ -94,8 +94,8 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'costa-mujeres-ultra-luxury-destination',
     title: {
-      es: '¿Por Qué Costa Mujeres es el Nuevo Epicentro de Inversión?',
-      en: 'Costa Mujeres: The Ultra-Luxury Destination of 2026',
+      es: 'Costa Mujeres: Epicentro de Inversión',
+      en: 'Costa Mujeres: Ultra-Luxury 2026',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
@@ -112,8 +112,8 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'mayakoba-vs-puerto-cancun',
     title: {
-      es: 'Mayakoba vs Puerto Cancún: Comparativa de Lujo',
-      en: 'Mayakoba vs Puerto Cancun: A Luxury Comparison',
+      es: 'Mayakoba vs Puerto Cancún: Lujo',
+      en: 'Mayakoba vs Puerto Cancun: Luxury',
     },
     category: { es: 'Destinos', en: 'Destinations' },
     excerpt: {
@@ -146,7 +146,7 @@ export const journalArticlesEs: JournalArticle[] = [
   },
   {
     slug: 'conviene-comprar-costa-mujeres-antes-mundial',
-    title: { es: '¿Conviene Comprar en Costa Mujeres Antes del Mundial?', en: 'Should You Buy in Costa Mujeres Before the World Cup?' },
+    title: { es: '¿Comprar en Costa Mujeres Antes del Mundial?', en: 'Buy in Costa Mujeres Before World Cup?' },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
       es: 'Análisis de por qué comprar antes del Mundial 2026 en Costa Mujeres puede maximizar tu retorno.',
