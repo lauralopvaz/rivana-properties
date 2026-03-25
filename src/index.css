@@ -83,7 +83,7 @@
     font-size: 13px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: hsl(var(--gold));
+    color: hsl(var(--gold-text));
     font-weight: 400;
   }
 
