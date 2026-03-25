@@ -66,7 +66,7 @@ export const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const { error } = await supabase.from('leads' as any).insert({
+    const { error } = await supabase.from('leads').insert({
       first_name: firstName,
       last_name: lastName,
       email,
@@ -75,7 +75,7 @@ export const ContactSection = () => {
       budget,
       message,
       source_page: window.location.pathname,
-    } as any);
+    });
     setLoading(false);
     if (error) {
       toast({ title: 'Error', description: error.message, variant: 'destructive' });
