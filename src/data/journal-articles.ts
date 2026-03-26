@@ -11,6 +11,8 @@ import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
 
 export interface JournalArticle {
   slug: string;
+  /** Optional different slug for English route */
+  slugEn?: string;
   title: { es: string; en: string };
   category: { es: string; en: string };
   excerpt: { es: string; en: string };
