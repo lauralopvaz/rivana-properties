@@ -17,7 +17,7 @@ interface SEOHeadProps {
  * Manages document <head> tags for SEO via react-helmet-async.
  * Automatically adds hreflang tags for ES/EN based on path.
  * ES is default (no prefix), EN is under /en/.
- * Canonical always points to the ES (default) version.
+ * Each language version is canonical of itself.
  * Handles /en/property/ ↔ /propiedad/ route mapping for hreflang.
  */
 export const SEOHead = ({
@@ -55,8 +55,9 @@ export const SEOHead = ({
     }
   }
 
-  // Canonical ALWAYS points to ES (default) version
-  const canonicalUrl = canonical || `${BASE_URL}${esPath}`;
+  // Canonical points to SELF (each language version is canonical of itself)
+  const selfPath = path || '/';
+  const canonicalUrl = canonical || `${BASE_URL}${selfPath}`;
 
   const hreflangLinks = [
     { lang: 'es', href: `${BASE_URL}${esPath}` },
