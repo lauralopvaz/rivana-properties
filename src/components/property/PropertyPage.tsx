@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 import type { PropertyDetail, UnitType, Locale } from "@/types/property";
 import { PropertyHero } from "./PropertyHero";
