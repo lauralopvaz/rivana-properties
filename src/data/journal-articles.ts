@@ -8,6 +8,7 @@ import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
 
 import imgUruguayMayakoba from '@/assets/reserve-mayakoba-hero.jpg';
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
+import imgMondrianHero from '@/assets/mondrian-hero.jpg';
 
 export interface JournalArticle {
   slug: string;

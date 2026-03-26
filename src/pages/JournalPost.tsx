@@ -16,6 +16,7 @@ import { CancunROIBodyES, CancunROIBodyEN } from '@/components/journal/CancunROI
 import { PreSaleGuideBodyES, PreSaleGuideBodyEN } from '@/components/journal/PreSaleGuideBody';
 import { MayakobaVsPuertoBodyES, MayakobaVsPuertoBodyEN } from '@/components/journal/MayakobaVsPuertoBody';
 import { WorldCupBodyES, WorldCupBodyEN } from '@/components/journal/WorldCupBody';
+import { MondrianPresaleBodyES, MondrianPresaleBodyEN } from '@/components/journal/MondrianPresaleBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
