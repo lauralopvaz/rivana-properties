@@ -51,8 +51,7 @@ const JournalPost = () => {
   const enSlug = article.slugEn || article.slug;
   const currentPath = language === 'en' ? `/en/journal/${enSlug}` : `/journal/${articleSlug}`;
   const articleTitle = article.title[language];
-  // Use seoTitle override if available, otherwise auto-truncate
-  const seoTitle = (article as any).seoTitle?.[language]
+  const seoTitle = article.seoTitle?.[language]
     || (articleTitle.length > 45 ? `${articleTitle.slice(0, 45)}… | Rivana` : `${articleTitle} | Rivana Journal`);
 
   const schema = {
