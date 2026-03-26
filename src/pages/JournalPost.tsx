@@ -13,6 +13,7 @@ import { UruguayMayakobaBodyES, UruguayMayakobaBodyEN } from '@/components/journ
 import { LuxuryCondosZHBodyES, LuxuryCondosZHBodyEN } from '@/components/journal/LuxuryCondosZHBody';
 import { CostaMujeresBodyES, CostaMujeresBodyEN } from '@/components/journal/CostaMujeresBody';
 import { CancunROIBodyES, CancunROIBodyEN } from '@/components/journal/CancunROIBody';
+import { PreSaleGuideBodyES, PreSaleGuideBodyEN } from '@/components/journal/PreSaleGuideBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -21,7 +22,7 @@ const JournalPost = () => {
   const nl = useNewsletterSubscribe();
 
   const allArticles = [...journalArticles, ...journalArticlesEs];
-  const article = allArticles.find((a) => a.slug === slug);
+  const article = allArticles.find((a) => a.slug === slug || a.slugEn === slug);
 
   useEffect(() => {
     const onScroll = () => {
