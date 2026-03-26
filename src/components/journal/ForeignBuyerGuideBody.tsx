@@ -144,13 +144,20 @@ export const ForeignBuyerGuideBodyEN = () => {
       {/* Section 6 — Featured Properties */}
       <h2 className="text-foreground border-b border-[hsl(var(--gold)_/_0.4)] pb-2">Featured Properties for Foreign Buyers</h2>
       <p>
-        <strong className="text-foreground">The Reserve at Mayakoba</strong> — Playa del Carmen's most exclusive gated community. Golf, beach club, and direct access to the Fairmont, Rosewood, and Banyan Tree resorts. Ideal for lifestyle value and long-term capital appreciation. <a href="https://thereserveatmayakoba.com" target="_blank" rel="noopener noreferrer" className="text-[hsl(var(--gold))] hover:underline">thereserveatmayakoba.com</a>
+        <strong className="text-foreground">The Reserve at Mayakoba</strong> — Playa del Carmen's most exclusive gated community. Golf, beach club, and direct access to the Fairmont, Rosewood, and Banyan Tree resorts. Ideal for lifestyle value and long-term capital appreciation.{' '}
+        <Link to={localePath('/propiedad/the-reserve-at-mayakoba')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
       </p>
       <p>
-        <strong className="text-foreground">Mondrian Residences at Grand Island Cancun</strong> — Branded luxury residences in the Hotel Zone with hotel-managed rental program. Strong STR yields and brand-backed exit liquidity. Pre-sale pricing available.
+        <strong className="text-foreground">Mondrian Residences at Grand Island Cancún</strong> — Branded luxury residences in the Hotel Zone with hotel-managed rental program. Strong STR yields and brand-backed exit liquidity. Pre-sale pricing available.{' '}
+        <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
       </p>
       <p>
-        <strong className="text-foreground">Edificio Salvia — Hotel Zone</strong> — One of the few Cancun buildings with an active Short-Term Rental permit. Purpose-built for investors. Strong occupancy projections for the 2026 World Cup season.
+        <strong className="text-foreground">SLS Ocean Beach — Puerto Cancún</strong> — Developed by Inmobilia, Ucalli and Related. SLS Hotels brand (Ennismore + Accor). The most sophisticated branded luxury play in the northern corridor.{' '}
+        <Link to={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
+      </p>
+      <p>
+        <strong className="text-foreground">Dhamar — Costa Mujeres</strong> — The most accessible entry point to Cancún's fastest-growing corridor. 1–3 bedrooms from $248K USD. 22% annual appreciation zone.{' '}
+        <Link to={localePath('/propiedad/dhamar-costa-mujeres')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
       </p>
       <p>
         <Link to={localePath('/listings')} className="text-[hsl(var(--gold))] hover:underline font-display">
@@ -305,13 +312,20 @@ export const ForeignBuyerGuideBodyES = () => {
       {/* Section 6 — Featured Properties */}
       <h2 className="text-foreground border-b border-[hsl(var(--gold)_/_0.4)] pb-2">Propiedades Destacadas para Compradores Extranjeros</h2>
       <p>
-        <strong className="text-foreground">The Reserve at Mayakoba</strong> — La comunidad cerrada mas exclusiva de Playa del Carmen. Golf, club de playa y acceso directo a los resorts Fairmont, Rosewood y Banyan Tree. Ideal para valor de estilo de vida y plusvalia a largo plazo. <a href="https://thereserveatmayakoba.com" target="_blank" rel="noopener noreferrer" className="text-[hsl(var(--gold))] hover:underline">thereserveatmayakoba.com</a>
+        <strong className="text-foreground">The Reserve at Mayakoba</strong> — La comunidad cerrada más exclusiva de Playa del Carmen. Golf, club de playa y acceso directo a Fairmont, Rosewood y Banyan Tree.{' '}
+        <Link to={localePath('/propiedad/the-reserve-at-mayakoba')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>
-        <strong className="text-foreground">Mondrian Residences en Grand Island Cancun</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por el hotel. Fuertes rendimientos STR y liquidez de salida respaldada por la marca. Precios de preventa disponibles.
+        <strong className="text-foreground">Mondrian Residences en Grand Island Cancún</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por Accor. Precios de preventa disponibles.{' '}
+        <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>
-        <strong className="text-foreground">Edificio Salvia — Zona Hotelera</strong> — Uno de los pocos edificios en Cancun con permiso activo de Renta a Corto Plazo. Disenado para inversionistas. Fuertes proyecciones de ocupacion para la temporada del Mundial 2026.
+        <strong className="text-foreground">SLS Ocean Beach — Puerto Cancún</strong> — Desarrollado por Inmobilia, Ucalli y Related. Marca SLS Hotels (Ennismore + Accor). La inversión branded más sofisticada del corredor norte.{' '}
+        <Link to={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
+      </p>
+      <p>
+        <strong className="text-foreground">Dhamar — Costa Mujeres</strong> — El punto de entrada más accesible al corredor de mayor crecimiento de Cancún. 1–3 recámaras desde $248K USD. Plusvalía anual del 22%.{' '}
+        <Link to={localePath('/propiedad/dhamar-costa-mujeres')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>
         <Link to={localePath('/listings')} className="text-[hsl(var(--gold))] hover:underline font-display">
