@@ -212,6 +212,16 @@ export const destinations: DestinationConfig[] = [
           h1: { es: 'Propiedades Frente a la Marina — Puerto Cancún', en: 'Marina Front Properties — Puerto Cancun' },
           description: { es: 'Departamentos y residencias frente a la marina de Puerto Cancún. Lujo náutico con alta plusvalía.', en: 'Condos and residences on Puerto Cancun marina. Nautical luxury with high appreciation.' },
         },
+        intro: {
+          es: [
+            'Las propiedades frente a la marina de Puerto Cancún ofrecen un estilo de vida náutico exclusivo. Con acceso directo a muelles privados, vistas a yates y la cercanía al mar abierto, estas residencias combinan lujo marítimo con inversión inteligente.',
+            'Los desarrollos como SLS Ocean Beach y Vellmari Grand Living están posicionados directamente sobre la marina, con amenidades de clase mundial y un entorno de seguridad las 24 horas.',
+          ],
+          en: [
+            'Marina-front properties in Puerto Cancún offer an exclusive nautical lifestyle. With direct access to private docks, yacht views, and proximity to open waters, these residences combine maritime luxury with smart investment.',
+            'Developments like SLS Ocean Beach and Vellmari Grand Living are positioned directly on the marina, with world-class amenities and 24-hour security.',
+          ],
+        },
       },
       {
         segment: 'preventa',
@@ -220,6 +230,16 @@ export const destinations: DestinationConfig[] = [
           h1: { es: 'Preventa de Propiedades — Puerto Cancún', en: 'Pre-Sale Properties — Puerto Cancun' },
           description: { es: 'Preventa de departamentos en Puerto Cancún. Acceso exclusivo a precios de preventa con Rivana Properties.', en: 'Pre-sale condos in Puerto Cancun. Exclusive pre-sale pricing with Rivana Properties.' },
         },
+        intro: {
+          es: [
+            'La preventa en Puerto Cancún permite acceder a los desarrollos más exclusivos de la marina a precios por debajo del valor de entrega. Con esquemas de pago diferidos y plusvalía proyectada del 15-20%, la preventa es la vía más rentable de invertir en esta comunidad cerrada.',
+            'Thompson Residences, SLS Ocean Beach y Vellmari Grand Living ofrecen unidades en preventa con condiciones preferenciales para compradores tempranos.',
+          ],
+          en: [
+            'Pre-sale in Puerto Cancún grants access to the marina\'s most exclusive developments at prices below delivery value. With deferred payment plans and projected appreciation of 15-20%, pre-sale is the most profitable way to invest in this gated community.',
+            'Thompson Residences, SLS Ocean Beach, and Vellmari Grand Living offer pre-sale units with preferential conditions for early buyers.',
+          ],
+        },
       },
       {
         segment: 'condos',
@@ -227,6 +247,16 @@ export const destinations: DestinationConfig[] = [
           title: { es: 'Condominios — Puerto Cancún | Rivana', en: 'Condos — Puerto Cancun | Rivana' },
           h1: { es: 'Condominios en Venta — Puerto Cancún', en: 'Condos for Sale — Puerto Cancun' },
           description: { es: 'Condominios de lujo en Puerto Cancún. Marina, seguridad y estilo de vida exclusivo.', en: 'Luxury condos in Puerto Cancun. Marina, security and exclusive lifestyle.' },
+        },
+        intro: {
+          es: [
+            'Los condominios en Puerto Cancún combinan vida de marina con la seguridad de una comunidad cerrada. Con acceso a campo de golf, centros comerciales de lujo y escuelas internacionales, estos condos son ideales para familias e inversionistas que buscan calidad de vida y retorno.',
+            'Los precios por metro cuadrado en Puerto Cancún han crecido un 15% anual sostenido, posicionándolo como uno de los mercados más resilientes de México.',
+          ],
+          en: [
+            'Condos in Puerto Cancún combine marina living with the security of a gated community. With access to a golf course, luxury shopping centers, and international schools, these condos are ideal for families and investors seeking quality of life and returns.',
+            'Price per square meter in Puerto Cancún has grown a sustained 15% annually, positioning it as one of Mexico\'s most resilient markets.',
+          ],
         },
       },
     ],
