@@ -5,6 +5,7 @@ export interface DestinationSubPage {
     h1: { es: string; en: string };
     description: { es: string; en: string };
   };
+  intro?: { es: string[]; en: string[] };
 }
 
 export interface DestinationConfig {
@@ -96,17 +97,37 @@ export const destinations: DestinationConfig[] = [
       {
         segment: 'condos',
         seo: {
-          title: { es: 'Condominios en Venta — Zona Hotelera Cancún | Rivana', en: 'Condos for Sale — Cancun Hotel Zone | Rivana' },
-          h1: { es: 'Condominios en Venta — Zona Hotelera Cancún', en: 'Condos for Sale — Cancun Hotel Zone' },
-          description: { es: 'Condominios de lujo en venta en la Zona Hotelera de Cancún. Frente al mar con rendimientos probados.', en: 'Luxury condos for sale in Cancun Hotel Zone. Beachfront with proven rental yields.' },
+          title: { es: 'Condos Zona Hotelera Cancún en Venta | Rivana', en: 'Condos Cancun Hotel Zone for Sale | Rivana' },
+          h1: { es: 'Condos en Venta — Zona Hotelera Cancún', en: 'Condos for Sale — Cancun Hotel Zone' },
+          description: { es: 'Condos de lujo en venta en la Zona Hotelera de Cancún. Frente al mar, preventa y entrega inmediata con rendimientos probados.', en: 'Luxury condos for sale in Cancun Hotel Zone. Beachfront, pre-sale and ready-to-move with proven rental yields.' },
+        },
+        intro: {
+          es: [
+            'Los condos en la Zona Hotelera de Cancún representan la inversión inmobiliaria más sólida del Caribe Mexicano. Ubicados a lo largo de 23 kilómetros de playa, estos condominios ofrecen vista al mar, acceso a beach clubs y rendimientos de renta del 8-12% anual.',
+            'Desde estudios de una recámara ideales para Airbnb hasta unidades de tres recámaras para familias, la Zona Hotelera tiene condos para todo perfil de inversión. Los desarrollos como Mondrian Residences y Bay View Grand elevan el estándar con amenidades de marca internacional.',
+          ],
+          en: [
+            'Condos in Cancun\'s Hotel Zone represent the strongest real estate investment in the Mexican Caribbean. Located along 23 kilometers of beachfront, these condominiums offer ocean views, beach club access, and rental yields of 8-12% annually.',
+            'From one-bedroom studios ideal for Airbnb to three-bedroom family units, the Hotel Zone has condos for every investment profile. Developments like Mondrian Residences and Bay View Grand raise the bar with internationally branded amenities.',
+          ],
         },
       },
       {
         segment: 'penthouses',
         seo: {
-          title: { es: 'Penthouses en Venta — Zona Hotelera Cancún | Rivana', en: 'Penthouses for Sale — Cancun Hotel Zone | Rivana' },
+          title: { es: 'Penthouses Zona Hotelera Cancún | Rivana', en: 'Penthouses Cancun Hotel Zone | Rivana' },
           h1: { es: 'Penthouses en Venta — Zona Hotelera Cancún', en: 'Penthouses for Sale — Cancun Hotel Zone' },
-          description: { es: 'Penthouses frente al mar en la Zona Hotelera de Cancún. Lujo, vistas panorámicas y alta plusvalía.', en: 'Beachfront penthouses in Cancun Hotel Zone. Luxury, panoramic views and high appreciation.' },
+          description: { es: 'Penthouses de lujo frente al mar en la Zona Hotelera de Cancún. Vistas panorámicas, acabados premium y alta plusvalía.', en: 'Luxury beachfront penthouses in Cancun Hotel Zone. Panoramic views, premium finishes and high appreciation.' },
+        },
+        intro: {
+          es: [
+            'Los penthouses en la Zona Hotelera de Cancún son las propiedades más codiciadas del corredor turístico. Con terrazas privadas, vistas panorámicas al Caribe y acabados de diseñador, representan el pináculo del lujo residencial en Cancún.',
+            'Estos penthouses frente al mar ofrecen superficies desde 165 m² hasta más de 450 m², con amenidades exclusivas como rooftop pools, concierge privado y acceso directo a la playa. La plusvalía histórica supera el 15% anual.',
+          ],
+          en: [
+            'Penthouses in Cancun\'s Hotel Zone are the most coveted properties along the tourist corridor. With private terraces, panoramic Caribbean views, and designer finishes, they represent the pinnacle of residential luxury in Cancún.',
+            'These beachfront penthouses range from 165 m² to over 450 m², with exclusive amenities including rooftop pools, private concierge, and direct beach access. Historical appreciation exceeds 15% annually.',
+          ],
         },
       },
       {
@@ -114,7 +135,17 @@ export const destinations: DestinationConfig[] = [
         seo: {
           title: { es: 'Preventa Departamentos — Zona Hotelera Cancún | Rivana', en: 'Pre-Sale Condos — Cancun Hotel Zone | Rivana' },
           h1: { es: 'Preventa de Departamentos — Zona Hotelera Cancún', en: 'Pre-Sale Condos — Cancun Hotel Zone' },
-          description: { es: 'Preventa de departamentos en la Zona Hotelera de Cancún. Precios exclusivos y condiciones preferentes.', en: 'Pre-sale condos in Cancun Hotel Zone. Exclusive pricing and preferred conditions.' },
+          description: { es: 'Preventa de departamentos en la Zona Hotelera de Cancún. Precios exclusivos, planes de pago flexibles y plusvalía garantizada.', en: 'Pre-sale condos in Cancun Hotel Zone. Exclusive pricing, flexible payment plans and guaranteed appreciation.' },
+        },
+        intro: {
+          es: [
+            'La preventa en la Zona Hotelera de Cancún ofrece la oportunidad de adquirir propiedades frente al mar a precios significativamente menores al valor de entrega. Los desarrollos en preventa como Mondrian Residences proyectan una plusvalía del 33% entre la compra y la entrega.',
+            'Los esquemas de pago en preventa permiten diferir hasta el 70% del valor hasta la entrega, con enganches desde el 10%. Es la forma más inteligente de invertir en el corredor turístico más importante de México.',
+          ],
+          en: [
+            'Pre-sale in Cancun\'s Hotel Zone offers the opportunity to acquire beachfront properties at prices significantly below delivery value. Pre-sale developments like Mondrian Residences project 33% appreciation between purchase and delivery.',
+            'Pre-sale payment plans allow deferring up to 70% of the value until delivery, with down payments from 10%. It\'s the smartest way to invest in Mexico\'s most important tourist corridor.',
+          ],
         },
       },
     ],
@@ -181,6 +212,16 @@ export const destinations: DestinationConfig[] = [
           h1: { es: 'Propiedades Frente a la Marina — Puerto Cancún', en: 'Marina Front Properties — Puerto Cancun' },
           description: { es: 'Departamentos y residencias frente a la marina de Puerto Cancún. Lujo náutico con alta plusvalía.', en: 'Condos and residences on Puerto Cancun marina. Nautical luxury with high appreciation.' },
         },
+        intro: {
+          es: [
+            'Las propiedades frente a la marina de Puerto Cancún ofrecen un estilo de vida náutico exclusivo. Con acceso directo a muelles privados, vistas a yates y la cercanía al mar abierto, estas residencias combinan lujo marítimo con inversión inteligente.',
+            'Los desarrollos como SLS Ocean Beach y Vellmari Grand Living están posicionados directamente sobre la marina, con amenidades de clase mundial y un entorno de seguridad las 24 horas.',
+          ],
+          en: [
+            'Marina-front properties in Puerto Cancún offer an exclusive nautical lifestyle. With direct access to private docks, yacht views, and proximity to open waters, these residences combine maritime luxury with smart investment.',
+            'Developments like SLS Ocean Beach and Vellmari Grand Living are positioned directly on the marina, with world-class amenities and 24-hour security.',
+          ],
+        },
       },
       {
         segment: 'preventa',
@@ -189,6 +230,16 @@ export const destinations: DestinationConfig[] = [
           h1: { es: 'Preventa de Propiedades — Puerto Cancún', en: 'Pre-Sale Properties — Puerto Cancun' },
           description: { es: 'Preventa de departamentos en Puerto Cancún. Acceso exclusivo a precios de preventa con Rivana Properties.', en: 'Pre-sale condos in Puerto Cancun. Exclusive pre-sale pricing with Rivana Properties.' },
         },
+        intro: {
+          es: [
+            'La preventa en Puerto Cancún permite acceder a los desarrollos más exclusivos de la marina a precios por debajo del valor de entrega. Con esquemas de pago diferidos y plusvalía proyectada del 15-20%, la preventa es la vía más rentable de invertir en esta comunidad cerrada.',
+            'Thompson Residences, SLS Ocean Beach y Vellmari Grand Living ofrecen unidades en preventa con condiciones preferenciales para compradores tempranos.',
+          ],
+          en: [
+            'Pre-sale in Puerto Cancún grants access to the marina\'s most exclusive developments at prices below delivery value. With deferred payment plans and projected appreciation of 15-20%, pre-sale is the most profitable way to invest in this gated community.',
+            'Thompson Residences, SLS Ocean Beach, and Vellmari Grand Living offer pre-sale units with preferential conditions for early buyers.',
+          ],
+        },
       },
       {
         segment: 'condos',
@@ -196,6 +247,16 @@ export const destinations: DestinationConfig[] = [
           title: { es: 'Condominios — Puerto Cancún | Rivana', en: 'Condos — Puerto Cancun | Rivana' },
           h1: { es: 'Condominios en Venta — Puerto Cancún', en: 'Condos for Sale — Puerto Cancun' },
           description: { es: 'Condominios de lujo en Puerto Cancún. Marina, seguridad y estilo de vida exclusivo.', en: 'Luxury condos in Puerto Cancun. Marina, security and exclusive lifestyle.' },
+        },
+        intro: {
+          es: [
+            'Los condominios en Puerto Cancún combinan vida de marina con la seguridad de una comunidad cerrada. Con acceso a campo de golf, centros comerciales de lujo y escuelas internacionales, estos condos son ideales para familias e inversionistas que buscan calidad de vida y retorno.',
+            'Los precios por metro cuadrado en Puerto Cancún han crecido un 15% anual sostenido, posicionándolo como uno de los mercados más resilientes de México.',
+          ],
+          en: [
+            'Condos in Puerto Cancún combine marina living with the security of a gated community. With access to a golf course, luxury shopping centers, and international schools, these condos are ideal for families and investors seeking quality of life and returns.',
+            'Price per square meter in Puerto Cancún has grown a sustained 15% annually, positioning it as one of Mexico\'s most resilient markets.',
+          ],
         },
       },
     ],
@@ -262,6 +323,16 @@ export const destinations: DestinationConfig[] = [
           h1: { es: 'Preventa de Propiedades — Costa Mujeres', en: 'Pre-Sale Properties — Costa Mujeres' },
           description: { es: 'Preventa de departamentos en Costa Mujeres. Los mejores precios y condiciones exclusivas.', en: 'Pre-sale condos in Costa Mujeres. Best pricing and exclusive conditions.' },
         },
+        intro: {
+          es: [
+            'La preventa en Costa Mujeres es la puerta de entrada a la zona de mayor plusvalía del corredor norte de Cancún. Los precios de preconstrucción en Costa Mujeres están entre un 20-30% por debajo del valor proyectado de entrega, con esquemas de pago flexibles.',
+            'Dhamar es el desarrollo destacado en preventa, ofreciendo condominios frente al mar con amenidades de primer nivel y rendimientos de renta proyectados del 8-12% anual.',
+          ],
+          en: [
+            'Pre-sale in Costa Mujeres is the gateway to the highest-appreciation zone in Cancún\'s northern corridor. Pre-construction prices in Costa Mujeres are 20-30% below projected delivery value, with flexible payment plans.',
+            'Dhamar is the featured pre-sale development, offering beachfront condos with top-tier amenities and projected rental yields of 8-12% annually.',
+          ],
+        },
       },
       {
         segment: 'penthouses',
@@ -269,6 +340,16 @@ export const destinations: DestinationConfig[] = [
           title: { es: 'Penthouses Costa Mujeres — Inversión Cancún | Rivana', en: 'Penthouses Costa Mujeres — Cancun Investment | Rivana' },
           h1: { es: 'Penthouses en Venta — Costa Mujeres', en: 'Penthouses for Sale — Costa Mujeres' },
           description: { es: 'Penthouses de lujo en Costa Mujeres. Vista al mar, alta plusvalía y rendimientos excepcionales.', en: 'Luxury penthouses in Costa Mujeres. Ocean views, high appreciation and exceptional yields.' },
+        },
+        intro: {
+          es: [
+            'Los penthouses en Costa Mujeres ofrecen las vistas más amplias y los espacios más generosos del corredor norte de Cancún. Con terrazas panorámicas, acceso privado al rooftop y acabados de diseñador, son la opción premium para inversionistas que buscan exclusividad.',
+            'A diferencia de la Zona Hotelera, los penthouses en Costa Mujeres se adquieren a precios de preventa con una plusvalía proyectada superior al 22% anual, convirtiéndolos en una inversión excepcional.',
+          ],
+          en: [
+            'Penthouses in Costa Mujeres offer the widest views and most generous spaces in Cancún\'s northern corridor. With panoramic terraces, private rooftop access, and designer finishes, they are the premium choice for investors seeking exclusivity.',
+            'Unlike the Hotel Zone, penthouses in Costa Mujeres can be acquired at pre-sale prices with projected appreciation exceeding 22% annually, making them an exceptional investment.',
+          ],
         },
       },
     ],
@@ -432,9 +513,19 @@ export const destinations: DestinationConfig[] = [
       {
         segment: 'condos',
         seo: {
-          title: { es: 'Condominios en Venta — Cancún Centro | Rivana', en: 'Condos for Sale — Downtown Cancun | Rivana' },
-          h1: { es: 'Condominios en Venta — Cancún Centro', en: 'Condos for Sale — Downtown Cancun' },
-          description: { es: 'Condominios urbanos en venta en Cancún Centro. Precios accesibles con alta rentabilidad.', en: 'Urban condos for sale in downtown Cancun. Accessible prices with high rentability.' },
+          title: { es: 'Condos Cancún Centro en Venta | Rivana', en: 'Condos Downtown Cancun for Sale | Rivana' },
+          h1: { es: 'Condos en Venta — Cancún Centro', en: 'Condos for Sale — Downtown Cancun' },
+          description: { es: 'Condos urbanos en venta en Cancún Centro. Precios accesibles, alta demanda de renta y plusvalía constante.', en: 'Urban condos for sale in downtown Cancun. Accessible prices, high rental demand and steady appreciation.' },
+        },
+        intro: {
+          es: [
+            'Los condos en Cancún Centro representan la opción de inversión más accesible del municipio, con precios desde $5.2M MXN y una demanda de alquiler constante impulsada por profesionales y familias locales.',
+            'Desarrollos como Arbolada Towers y Cuore Cumbres ofrecen amenidades modernas en comunidades cerradas, con conectividad directa a la Zona Hotelera y el aeropuerto internacional.',
+          ],
+          en: [
+            'Condos in downtown Cancún represent the most accessible investment option in the municipality, with prices starting at $5.2M MXN and constant rental demand driven by local professionals and families.',
+            'Developments like Arbolada Towers and Cuore Cumbres offer modern amenities in gated communities, with direct connectivity to the Hotel Zone and international airport.',
+          ],
         },
       },
     ],

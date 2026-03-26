@@ -105,6 +105,7 @@ const Journal = () => {
 
       {/* Articles Grid */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto pb-20">
+        <h2 className="sr-only">{language === 'es' ? 'Artículos recientes' : 'Recent Articles'}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
             {filtered.map((article, i) => (

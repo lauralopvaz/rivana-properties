@@ -291,9 +291,12 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <h2>{language === 'es' ? `¿Por qué ${config.name[language]}?` : `Why ${config.name[language]}?`}</h2>
+              <h2>{subPageConfig
+                ? (language === 'es' ? `${subPageConfig.seo.h1.es}` : `${subPageConfig.seo.h1.en}`)
+                : (language === 'es' ? `¿Por qué ${config.name[language]}?` : `Why ${config.name[language]}?`)
+              }</h2>
               <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
-                {config.intro[language].map((p, i) => (<p key={i}>{p}</p>))}
+                {(subPageConfig?.intro?.[language] || config.intro[language]).map((p, i) => (<p key={i}>{p}</p>))}
               </div>
             </div>
           </ScrollReveal>
