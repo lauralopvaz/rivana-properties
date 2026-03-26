@@ -14,6 +14,7 @@ import { LuxuryCondosZHBodyES, LuxuryCondosZHBodyEN } from '@/components/journal
 import { CostaMujeresBodyES, CostaMujeresBodyEN } from '@/components/journal/CostaMujeresBody';
 import { CancunROIBodyES, CancunROIBodyEN } from '@/components/journal/CancunROIBody';
 import { PreSaleGuideBodyES, PreSaleGuideBodyEN } from '@/components/journal/PreSaleGuideBody';
+import { MayakobaVsPuertoBodyES, MayakobaVsPuertoBodyEN } from '@/components/journal/MayakobaVsPuertoBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -84,6 +85,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['Contexto macro', 'Zona Hotelera', 'Puerto Cancún', 'Cancún Centro', 'Comparativa por zona', 'Factor STR', 'Efecto Mundial', 'Preguntas frecuentes']
       : ['Macro context', 'Hotel Zone', 'Puerto Cancún', 'Downtown Cancún', 'Zone comparison', 'STR factor', 'World Cup effect', 'FAQ'])
+    : slug === 'mayakoba-vs-puerto-cancun'
+    ? (language === 'es'
+      ? ['Mayakoba', 'Puerto Cancún', 'Comparativa directa', 'Perfil de comprador', 'Factor Mundial', 'Rivana en ambas zonas', 'Preguntas frecuentes']
+      : ['Mayakoba', 'Puerto Cancún', 'Direct comparison', 'Buyer profile', 'World Cup factor', 'Rivana across both', 'FAQ'])
     : (articleSlug === 'invertir-en-preventa-cancun-riviera-maya-2026' || slug === 'why-invest-presale-cancun-riviera-maya-2026')
     ? (language === 'es'
       ? ['¿Qué es la preventa?', 'Por qué el Caribe', 'Fases de preventa', 'Propiedades Rivana', 'Qué verificar', 'Riesgos', 'Ventana 2026', 'Preventa vs Reventa', 'FAQ']
@@ -191,6 +196,8 @@ const JournalPost = () => {
               language === 'en' ? <CancunROIBodyEN /> : <CancunROIBodyES />
             ) : (articleSlug === 'invertir-en-preventa-cancun-riviera-maya-2026' || slug === 'why-invest-presale-cancun-riviera-maya-2026') ? (
               language === 'en' ? <PreSaleGuideBodyEN /> : <PreSaleGuideBodyES />
+            ) : slug === 'mayakoba-vs-puerto-cancun' ? (
+              language === 'en' ? <MayakobaVsPuertoBodyEN /> : <MayakobaVsPuertoBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
