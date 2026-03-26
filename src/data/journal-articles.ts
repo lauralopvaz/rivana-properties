@@ -185,6 +185,7 @@ export const journalArticlesEs: JournalArticle[] = [
     author: 'Alejandra Reyes',
     image: imgGuiaPreventa,
     relatedDestinations: ['zona-hotelera', 'costa-mujeres', 'puerto-cancun'],
+  },
 ];
 
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
