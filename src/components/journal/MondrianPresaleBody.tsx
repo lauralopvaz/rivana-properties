@@ -103,7 +103,7 @@ export const MondrianPresaleBodyES = () => {
             <tr>
               <td className="p-3">3 recámaras + Loft</td>
               <td className="p-3">hasta 164.75 m²</td>
-              <td className="p-3">hasta ~$514K USD</td>
+              <td className="p-3">desde ~$514K USD</td>
             </tr>
           </tbody>
         </table>
