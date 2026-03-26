@@ -283,7 +283,7 @@ const JournalPost = () => {
                 <h3 className="mb-6">{language === 'es' ? 'Artículos Relacionados' : 'Related Articles'}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {related.map((a) => (
-                    <Link key={a.slug} to={localePath(`/journal/${a.slug}`)} className="group">
+                    <Link key={a.slug} to={localePath(`/journal/${getArticleSlug(a, language)}`)} className="group">
                       <div className="aspect-[16/10] overflow-hidden rounded-sm mb-3">
                         <img src={a.image} alt={a.title[language]} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={1280} height={800} />
                       </div>
