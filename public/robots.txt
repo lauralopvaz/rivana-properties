@@ -12,5 +12,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /en/propiedad/
+Disallow: /property/
+Disallow: /propiedades
 
 Sitemap: https://rivanaproperties.com/sitemap.xml
