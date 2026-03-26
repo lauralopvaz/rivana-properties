@@ -11,6 +11,7 @@ import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
 import { ForeignBuyerGuideBodyEN, ForeignBuyerGuideBodyES } from '@/components/journal/ForeignBuyerGuideBody';
 import { UruguayMayakobaBodyES, UruguayMayakobaBodyEN } from '@/components/journal/UruguayMayakobaBody';
 import { LuxuryCondosZHBodyES, LuxuryCondosZHBodyEN } from '@/components/journal/LuxuryCondosZHBody';
+import { CostaMujeresBodyES, CostaMujeresBodyEN } from '@/components/journal/CostaMujeresBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
