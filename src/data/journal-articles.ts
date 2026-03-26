@@ -134,16 +134,16 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'mayakoba-vs-puerto-cancun',
     title: {
-      es: 'Mayakoba vs Puerto Cancún: Lujo',
-      en: 'Mayakoba vs Puerto Cancun: Luxury',
+      es: 'Mayakoba vs Puerto Cancún: Comparativa Definitiva para el Inversionista de Lujo 2026',
+      en: 'Mayakoba vs Puerto Cancún: The Definitive Luxury Investment Comparison for 2026',
     },
     category: { es: 'Destinos', en: 'Destinations' },
     excerpt: {
-      es: 'Dos de las direcciones más exclusivas de México comparadas en métricas de inversión y estilo de vida.',
-      en: 'Two of México\'s most exclusive addresses compared across investment metrics and lifestyle.',
+      es: 'Comparativa definitiva entre Mayakoba y Puerto Cancún para inversionistas de lujo en 2026. Precios por m², plusvalía, rendimiento de renta y perfil de comprador.',
+      en: 'The definitive comparison between Mayakoba and Puerto Cancún for luxury investors in 2026. Price per m², appreciation, rental yield and buyer profile.',
     },
-    date: 'Jan 10, 2026',
-    readTime: '7 min',
+    date: 'Mar 25, 2026',
+    readTime: '13 min',
     author: 'Carlos Mendoza',
     image: imgMayakoba,
     relatedDestinations: ['mayakoba', 'puerto-cancun'],
