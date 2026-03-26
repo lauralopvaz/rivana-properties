@@ -44,16 +44,16 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'cancun-roi-rental-yield',
     title: {
-      es: 'ROI y Rendimiento en Cancún 2026',
-      en: 'Cancun ROI & Rental Yield 2026',
+      es: 'Rendimiento de Inversión y Renta en Cancún 2026: Análisis por Zona',
+      en: 'Cancún Investment Returns & Rental Yield 2026: A Zone-by-Zone Analysis',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
-      es: 'Análisis completo de rendimientos de alquiler y plusvalía en las principales zonas de Cancún para inversionistas.',
-      en: 'Complete analysis of rental yields and appreciation across Cancún\'s top zones for investors.',
+      es: 'Análisis completo de plusvalía, rendimientos de renta y ROI inmobiliario en Zona Hotelera, Puerto Cancún y Cancún Centro para 2026.',
+      en: 'Complete analysis of appreciation, rental yields and real estate ROI across Cancún\'s Hotel Zone, Puerto Cancún and Downtown Cancún for 2026.',
     },
-    date: 'Mar 8, 2026',
-    readTime: '10 min',
+    date: 'Mar 25, 2026',
+    readTime: '12 min',
     author: 'Carlos Mendoza',
     image: imgCancunRoi,
     relatedDestinations: ['zona-hotelera', 'costa-mujeres', 'puerto-cancun'],
