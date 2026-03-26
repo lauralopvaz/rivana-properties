@@ -5,7 +5,7 @@ import imgLuxuryCondos from '@/assets/journal/luxury-condos-zona-hotelera.jpg';
 import imgCostaMujeres from '@/assets/journal/costa-mujeres-luxury.jpg';
 import imgMayakoba from '@/assets/journal/mayakoba-vs-puerto-cancun.jpg';
 import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
-import imgCostaMundial from '@/assets/journal/costa-mujeres-mundial.jpg';
+
 import imgUruguayMayakoba from '@/assets/reserve-mayakoba-hero.jpg';
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
 
@@ -185,20 +185,6 @@ export const journalArticlesEs: JournalArticle[] = [
     author: 'Alejandra Reyes',
     image: imgGuiaPreventa,
     relatedDestinations: ['zona-hotelera', 'costa-mujeres', 'puerto-cancun'],
-  },
-  {
-    slug: 'conviene-comprar-costa-mujeres-antes-mundial',
-    title: { es: '¿Comprar en Costa Mujeres Antes del Mundial?', en: 'Buy in Costa Mujeres Before World Cup?' },
-    category: { es: 'Inversión', en: 'Investment' },
-    excerpt: {
-      es: 'Análisis de por qué comprar antes del Mundial 2026 en Costa Mujeres puede maximizar tu retorno.',
-      en: 'Analysis of why buying before the 2026 World Cup in Costa Mujeres could maximize your return.',
-    },
-    date: 'Feb 15, 2026',
-    readTime: '6 min',
-    author: 'Carlos Mendoza',
-    image: imgCostaMundial,
-    relatedDestinations: ['costa-mujeres'],
   },
 ];
 
