@@ -264,6 +264,7 @@ const PreSale = () => {
           {/* MODULE D — Amenities */}
           <div>
             <p className={sectionLabel} style={{ color: '#CFAE60' }}>{L === 'es' ? 'Amenidades' : 'Amenities'}</p>
+            <h2 className="sr-only">{L === 'es' ? 'Amenidades del proyecto' : 'Project Amenities'}</h2>
             <div className="mt-4 flex flex-wrap gap-[6px]">
               {PROJECT.amenities[L].map((a) => (
                 <span
