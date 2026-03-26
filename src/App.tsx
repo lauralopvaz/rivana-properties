@@ -132,9 +132,9 @@ const AppRoutes = () => (
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
 
-    {/* Redirects */}
+    {/* Redirects — consolidate all property routes to canonical paths */}
     <Route path="/property/:slug" element={<RedirectPropertyEN />} />
-    <Route path="/en/propiedad/:slug" element={<RedirectPropertyES />} />
+    <Route path="/en/propiedad/:slug" element={<RedirectToENProperty />} />
     <Route path="/propiedades" element={<Navigate to="/listings" replace />} />
 
     {/* 404 */}
