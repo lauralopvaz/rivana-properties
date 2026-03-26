@@ -164,7 +164,7 @@ const PreSale = () => {
   return (
     <div className="bg-white">
       <SEOHead
-        title={L === 'es' ? 'Mondrian Residences — Preventa | Rivana' : 'Mondrian Residences — Pre-Sale | Rivana'}
+        title={L === 'es' ? 'Preventas en el Caribe Mexicano | Rivana' : 'Presales in the Mexican Caribbean | Rivana'}
         description={L === 'es' ? 'Preventa Mondrian Residences en Grand Island Cancún. Condos de lujo desde $514K USD. Entrega Q2 2027.' : 'Pre-sale Mondrian Residences at Grand Island Cancún. Luxury condos from $514K USD. Delivery Q2 2027.'}
         ogImage="/images/mondrian/mondrian-hero.jpg"
         path={L === 'en' ? '/en/presale' : '/presale'}
