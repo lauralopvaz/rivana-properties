@@ -32,10 +32,10 @@ const RedirectPropertyEN = () => {
   return <Navigate to={`/en/property/${slug}`} replace />;
 };
 
-/** Redirect /en/propiedad/:slug → /propiedad/:slug */
-const RedirectPropertyES = () => {
+/** Redirect /en/propiedad/:slug → /en/property/:slug */
+const RedirectToENProperty = () => {
   const { slug } = useParams();
-  return <Navigate to={`/propiedad/${slug}`} replace />;
+  return <Navigate to={`/en/property/${slug}`} replace />;
 };
 
 const queryClient = new QueryClient();
@@ -132,9 +132,9 @@ const AppRoutes = () => (
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
 
-    {/* Redirects */}
+    {/* Redirects — consolidate all property routes to canonical paths */}
     <Route path="/property/:slug" element={<RedirectPropertyEN />} />
-    <Route path="/en/propiedad/:slug" element={<RedirectPropertyES />} />
+    <Route path="/en/propiedad/:slug" element={<RedirectToENProperty />} />
     <Route path="/propiedades" element={<Navigate to="/listings" replace />} />
 
     {/* 404 */}
