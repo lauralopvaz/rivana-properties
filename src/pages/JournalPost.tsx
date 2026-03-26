@@ -62,6 +62,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['¿Pueden comprar extranjeros?', 'El Fideicomiso', 'Guía Paso a Paso', '¿Por qué 2026?', 'Por qué Rivana', 'Propiedades Destacadas', 'Preguntas Frecuentes']
       : ['Can Foreigners Buy?', 'The Fideicomiso', 'Step-by-Step Guide', 'Why 2026?', 'Why Rivana', 'Featured Properties', 'FAQ'])
+    : slug === 'uruguay-mayakoba-mundial-2026'
+    ? (language === 'es'
+      ? ['La Celeste en tu vecindario', 'Por qué Mayakoba', 'The Reserve at Mayakoba', 'Tu inversión y el Mundial', 'Vivir con la élite', 'Preguntas frecuentes']
+      : ['La Celeste in your neighborhood', 'Why Mayakoba', 'The Reserve at Mayakoba', 'World Cup & your investment', 'Living with the elite', 'Group H', 'FAQ'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -147,6 +151,8 @@ const JournalPost = () => {
           <article className="lg:col-span-3 space-y-8">
             {slug === 'foreign-buyer-guide-mexico' ? (
               language === 'en' ? <ForeignBuyerGuideBodyEN /> : <ForeignBuyerGuideBodyES />
+            ) : slug === 'uruguay-mayakoba-mundial-2026' ? (
+              language === 'en' ? <UruguayMayakobaBodyEN /> : <UruguayMayakobaBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
