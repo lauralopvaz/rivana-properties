@@ -146,6 +146,7 @@ const AppRoutes = () => (
 const RouteTracker = () => {
   const location = useLocation();
   useEffect(() => {
+    window.scrollTo(0, 0);
     const w = window as Window & { gtag?: (...args: unknown[]) => void };
     if (typeof w.gtag === "function") {
       w.gtag("config", "G-GF2HEGMYK1", { page_path: location.pathname + location.search });
