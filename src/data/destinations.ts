@@ -323,6 +323,16 @@ export const destinations: DestinationConfig[] = [
           h1: { es: 'Preventa de Propiedades — Costa Mujeres', en: 'Pre-Sale Properties — Costa Mujeres' },
           description: { es: 'Preventa de departamentos en Costa Mujeres. Los mejores precios y condiciones exclusivas.', en: 'Pre-sale condos in Costa Mujeres. Best pricing and exclusive conditions.' },
         },
+        intro: {
+          es: [
+            'La preventa en Costa Mujeres es la puerta de entrada a la zona de mayor plusvalía del corredor norte de Cancún. Los precios de preconstrucción en Costa Mujeres están entre un 20-30% por debajo del valor proyectado de entrega, con esquemas de pago flexibles.',
+            'Dhamar es el desarrollo destacado en preventa, ofreciendo condominios frente al mar con amenidades de primer nivel y rendimientos de renta proyectados del 8-12% anual.',
+          ],
+          en: [
+            'Pre-sale in Costa Mujeres is the gateway to the highest-appreciation zone in Cancún\'s northern corridor. Pre-construction prices in Costa Mujeres are 20-30% below projected delivery value, with flexible payment plans.',
+            'Dhamar is the featured pre-sale development, offering beachfront condos with top-tier amenities and projected rental yields of 8-12% annually.',
+          ],
+        },
       },
       {
         segment: 'penthouses',
@@ -330,6 +340,16 @@ export const destinations: DestinationConfig[] = [
           title: { es: 'Penthouses Costa Mujeres — Inversión Cancún | Rivana', en: 'Penthouses Costa Mujeres — Cancun Investment | Rivana' },
           h1: { es: 'Penthouses en Venta — Costa Mujeres', en: 'Penthouses for Sale — Costa Mujeres' },
           description: { es: 'Penthouses de lujo en Costa Mujeres. Vista al mar, alta plusvalía y rendimientos excepcionales.', en: 'Luxury penthouses in Costa Mujeres. Ocean views, high appreciation and exceptional yields.' },
+        },
+        intro: {
+          es: [
+            'Los penthouses en Costa Mujeres ofrecen las vistas más amplias y los espacios más generosos del corredor norte de Cancún. Con terrazas panorámicas, acceso privado al rooftop y acabados de diseñador, son la opción premium para inversionistas que buscan exclusividad.',
+            'A diferencia de la Zona Hotelera, los penthouses en Costa Mujeres se adquieren a precios de preventa con una plusvalía proyectada superior al 22% anual, convirtiéndolos en una inversión excepcional.',
+          ],
+          en: [
+            'Penthouses in Costa Mujeres offer the widest views and most generous spaces in Cancún\'s northern corridor. With panoramic terraces, private rooftop access, and designer finishes, they are the premium choice for investors seeking exclusivity.',
+            'Unlike the Hotel Zone, penthouses in Costa Mujeres can be acquired at pre-sale prices with projected appreciation exceeding 22% annually, making them an exceptional investment.',
+          ],
         },
       },
     ],
