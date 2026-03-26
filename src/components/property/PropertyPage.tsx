@@ -81,11 +81,20 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
           "@type": "RealEstateListing",
           name: property.name,
           description: seoDesc,
-          url: `https://rivanaproperties.com/propiedad/${property.slug}`,
+          url: `https://rivanaproperties.com${seoPath}`,
+          image: property.images?.[0] ? (property.images[0].startsWith('http') ? property.images[0] : `https://rivanaproperties.com${property.images[0]}`) : undefined,
+          datePosted: "2025-01-01",
           offers: {
             "@type": "Offer",
-            price: property.presalePrice?.discountMXN || property.priceFromUSD || undefined,
+            price: String(Math.round(Number(property.priceFromUSD))),
             priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+          },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: zone.split(',')[0].trim(),
+            addressRegion: "Quintana Roo",
+            addressCountry: "MX",
           },
         }}
       />
