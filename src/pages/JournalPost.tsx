@@ -141,6 +141,14 @@ const JournalPost = () => {
                         → {d!.name[language]}
                       </Link>
                     ))}
+                    {slug === 'uruguay-mayakoba-mundial-2026' && (
+                      <Link
+                        to={localePath('/propiedad/the-reserve-at-mayakoba')}
+                        className="block text-sm font-body text-primary hover:text-primary/80 transition-colors"
+                      >
+                        → The Reserve at Mayakoba
+                      </Link>
+                    )}
                   </div>
                 </div>
               )}
