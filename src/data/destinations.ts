@@ -97,17 +97,37 @@ export const destinations: DestinationConfig[] = [
       {
         segment: 'condos',
         seo: {
-          title: { es: 'Condominios en Venta — Zona Hotelera Cancún | Rivana', en: 'Condos for Sale — Cancun Hotel Zone | Rivana' },
-          h1: { es: 'Condominios en Venta — Zona Hotelera Cancún', en: 'Condos for Sale — Cancun Hotel Zone' },
-          description: { es: 'Condominios de lujo en venta en la Zona Hotelera de Cancún. Frente al mar con rendimientos probados.', en: 'Luxury condos for sale in Cancun Hotel Zone. Beachfront with proven rental yields.' },
+          title: { es: 'Condos Zona Hotelera Cancún en Venta | Rivana', en: 'Condos Cancun Hotel Zone for Sale | Rivana' },
+          h1: { es: 'Condos en Venta — Zona Hotelera Cancún', en: 'Condos for Sale — Cancun Hotel Zone' },
+          description: { es: 'Condos de lujo en venta en la Zona Hotelera de Cancún. Frente al mar, preventa y entrega inmediata con rendimientos probados.', en: 'Luxury condos for sale in Cancun Hotel Zone. Beachfront, pre-sale and ready-to-move with proven rental yields.' },
+        },
+        intro: {
+          es: [
+            'Los condos en la Zona Hotelera de Cancún representan la inversión inmobiliaria más sólida del Caribe Mexicano. Ubicados a lo largo de 23 kilómetros de playa, estos condominios ofrecen vista al mar, acceso a beach clubs y rendimientos de renta del 8-12% anual.',
+            'Desde estudios de una recámara ideales para Airbnb hasta unidades de tres recámaras para familias, la Zona Hotelera tiene condos para todo perfil de inversión. Los desarrollos como Mondrian Residences y Bay View Grand elevan el estándar con amenidades de marca internacional.',
+          ],
+          en: [
+            'Condos in Cancun\'s Hotel Zone represent the strongest real estate investment in the Mexican Caribbean. Located along 23 kilometers of beachfront, these condominiums offer ocean views, beach club access, and rental yields of 8-12% annually.',
+            'From one-bedroom studios ideal for Airbnb to three-bedroom family units, the Hotel Zone has condos for every investment profile. Developments like Mondrian Residences and Bay View Grand raise the bar with internationally branded amenities.',
+          ],
         },
       },
       {
         segment: 'penthouses',
         seo: {
-          title: { es: 'Penthouses en Venta — Zona Hotelera Cancún | Rivana', en: 'Penthouses for Sale — Cancun Hotel Zone | Rivana' },
+          title: { es: 'Penthouses Zona Hotelera Cancún | Rivana', en: 'Penthouses Cancun Hotel Zone | Rivana' },
           h1: { es: 'Penthouses en Venta — Zona Hotelera Cancún', en: 'Penthouses for Sale — Cancun Hotel Zone' },
-          description: { es: 'Penthouses frente al mar en la Zona Hotelera de Cancún. Lujo, vistas panorámicas y alta plusvalía.', en: 'Beachfront penthouses in Cancun Hotel Zone. Luxury, panoramic views and high appreciation.' },
+          description: { es: 'Penthouses de lujo frente al mar en la Zona Hotelera de Cancún. Vistas panorámicas, acabados premium y alta plusvalía.', en: 'Luxury beachfront penthouses in Cancun Hotel Zone. Panoramic views, premium finishes and high appreciation.' },
+        },
+        intro: {
+          es: [
+            'Los penthouses en la Zona Hotelera de Cancún son las propiedades más codiciadas del corredor turístico. Con terrazas privadas, vistas panorámicas al Caribe y acabados de diseñador, representan el pináculo del lujo residencial en Cancún.',
+            'Estos penthouses frente al mar ofrecen superficies desde 165 m² hasta más de 450 m², con amenidades exclusivas como rooftop pools, concierge privado y acceso directo a la playa. La plusvalía histórica supera el 15% anual.',
+          ],
+          en: [
+            'Penthouses in Cancun\'s Hotel Zone are the most coveted properties along the tourist corridor. With private terraces, panoramic Caribbean views, and designer finishes, they represent the pinnacle of residential luxury in Cancún.',
+            'These beachfront penthouses range from 165 m² to over 450 m², with exclusive amenities including rooftop pools, private concierge, and direct beach access. Historical appreciation exceeds 15% annually.',
+          ],
         },
       },
       {
@@ -115,7 +135,17 @@ export const destinations: DestinationConfig[] = [
         seo: {
           title: { es: 'Preventa Departamentos — Zona Hotelera Cancún | Rivana', en: 'Pre-Sale Condos — Cancun Hotel Zone | Rivana' },
           h1: { es: 'Preventa de Departamentos — Zona Hotelera Cancún', en: 'Pre-Sale Condos — Cancun Hotel Zone' },
-          description: { es: 'Preventa de departamentos en la Zona Hotelera de Cancún. Precios exclusivos y condiciones preferentes.', en: 'Pre-sale condos in Cancun Hotel Zone. Exclusive pricing and preferred conditions.' },
+          description: { es: 'Preventa de departamentos en la Zona Hotelera de Cancún. Precios exclusivos, planes de pago flexibles y plusvalía garantizada.', en: 'Pre-sale condos in Cancun Hotel Zone. Exclusive pricing, flexible payment plans and guaranteed appreciation.' },
+        },
+        intro: {
+          es: [
+            'La preventa en la Zona Hotelera de Cancún ofrece la oportunidad de adquirir propiedades frente al mar a precios significativamente menores al valor de entrega. Los desarrollos en preventa como Mondrian Residences proyectan una plusvalía del 33% entre la compra y la entrega.',
+            'Los esquemas de pago en preventa permiten diferir hasta el 70% del valor hasta la entrega, con enganches desde el 10%. Es la forma más inteligente de invertir en el corredor turístico más importante de México.',
+          ],
+          en: [
+            'Pre-sale in Cancun\'s Hotel Zone offers the opportunity to acquire beachfront properties at prices significantly below delivery value. Pre-sale developments like Mondrian Residences project 33% appreciation between purchase and delivery.',
+            'Pre-sale payment plans allow deferring up to 70% of the value until delivery, with down payments from 10%. It\'s the smartest way to invest in Mexico\'s most important tourist corridor.',
+          ],
         },
       },
     ],
