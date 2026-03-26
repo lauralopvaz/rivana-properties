@@ -128,6 +128,28 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
           />
         )}
 
+        {/* Journal link for Mondrian */}
+        {property.slug === 'mondrian-residences-grand-island-cancun' && (
+          <section className="my-12 bg-card border border-border rounded-sm p-6">
+            <h3 className="text-lg text-foreground mb-2">
+              {locale === 'en' ? 'Full investment analysis' : 'Análisis completo de inversión'}
+            </h3>
+            <p className="text-sm text-muted-foreground font-body mb-4">
+              {locale === 'en'
+                ? 'Read our detailed guide on the rebranding, market context, and presale numbers.'
+                : 'Lee nuestra guía detallada sobre el relanzamiento, el contexto de mercado y los números de la preventa.'}
+            </p>
+            <Link
+              to={locale === 'en' ? '/en/journal/mondrian-residences-grand-island-cancun-presale' : '/journal/mondrian-residences-grand-island-cancun-preventa'}
+              className="text-primary hover:text-primary/80 font-body text-sm transition-colors"
+            >
+              {locale === 'en'
+                ? 'Mondrian Residences: Complete 2026 Presale Guide →'
+                : 'Mondrian Residences: Guía Completa de Preventa 2026 →'}
+            </Link>
+          </section>
+        )}
+
         <div id="contact-form" ref={formRef}>
           <PropertyContactForm
             propertyName={property.name}
