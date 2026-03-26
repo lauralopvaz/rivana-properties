@@ -81,20 +81,20 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'world-cup-2026-cancun-real-estate',
     title: {
-      es: 'Mundial 2026: Impacto Inmobiliario Cancún',
-      en: 'World Cup 2026: Cancun Real Estate Impact',
+      es: 'Cancún y el Mercado Inmobiliario en 2026: Todo lo que un Inversionista Necesita Saber',
+      en: 'Cancún Real Estate in 2026: Everything an Investor Needs to Know',
     },
     category: { es: 'Mercado', en: 'Market' },
     excerpt: {
-      es: 'Cómo el Mundial FIFA está generando una demanda sin precedentes en Cancún y la Riviera Maya.',
-      en: 'How the FIFA World Cup is driving unprecedented demand in Cancún and the Riviera Maya.',
+      es: 'Análisis completo del mercado inmobiliario de Cancún en 2026: plusvalía por zona, datos AMPI, impacto del Mundial FIFA, rendimientos reales y las mejores propiedades del portafolio Rivana.',
+      en: 'Everything an investor needs to know about Cancún\'s real estate market in 2026. AMPI data, zone-by-zone appreciation, World Cup impact, true rental yields and the best Rivana properties.',
     },
-    date: 'Feb 18, 2026',
-    readTime: '6 min',
+    date: 'Mar 25, 2026',
+    readTime: '14 min',
     author: 'Alejandra Reyes',
     featured: true,
     image: imgWorldCup,
-    relatedDestinations: ['mayakoba', 'zona-hotelera', 'costa-mujeres'],
+    relatedDestinations: ['mayakoba', 'zona-hotelera', 'costa-mujeres', 'puerto-cancun'],
   },
   {
     slug: 'luxury-condos-zona-hotelera-cancun-2026-guide',
