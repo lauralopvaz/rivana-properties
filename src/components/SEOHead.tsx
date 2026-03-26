@@ -55,8 +55,9 @@ export const SEOHead = ({
     }
   }
 
-  // Canonical ALWAYS points to ES (default) version
-  const canonicalUrl = canonical || `${BASE_URL}${esPath}`;
+  // Canonical points to SELF (each language version is canonical of itself)
+  const selfPath = path || '/';
+  const canonicalUrl = canonical || `${BASE_URL}${selfPath}`;
 
   const hreflangLinks = [
     { lang: 'es', href: `${BASE_URL}${esPath}` },
