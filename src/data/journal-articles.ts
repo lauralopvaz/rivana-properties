@@ -96,19 +96,19 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'luxury-condos-zona-hotelera-cancun-2026-guide',
     title: {
-      es: 'Condos de Lujo Zona Hotelera 2026',
-      en: 'Luxury Condos Cancun Hotel Zone 2026',
+      es: 'Condominios de Lujo en la Zona Hotelera de Cancún: Guía Definitiva 2026',
+      en: 'Luxury Condos in Cancún\'s Hotel Zone: The Definitive 2026 Guide',
     },
     category: { es: 'Destinos', en: 'Destinations' },
     excerpt: {
-      es: 'Guía definitiva para invertir en condominios de lujo en la Zona Hotelera de Cancún.',
-      en: 'The definitive guide to investing in luxury condos in Cancun\'s Hotel Zone.',
+      es: 'Guía completa para comprar condominios de lujo en la Zona Hotelera de Cancún en 2026. Precios por zona, comparativa de desarrollos y propiedades del portafolio Rivana.',
+      en: 'Complete guide to buying luxury condominiums in Cancún\'s Hotel Zone in 2026. Zone-by-zone pricing, development comparison and the best Rivana properties.',
     },
-    date: 'Feb 5, 2026',
-    readTime: '8 min',
+    date: 'Mar 25, 2026',
+    readTime: '12 min',
     author: 'Sofía Laurent',
     image: imgLuxuryCondos,
-    relatedDestinations: ['zona-hotelera'],
+    relatedDestinations: ['zona-hotelera', 'puerto-cancun'],
   },
   {
     slug: 'costa-mujeres-ultra-luxury-destination',
