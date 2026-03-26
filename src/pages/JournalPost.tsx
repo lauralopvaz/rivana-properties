@@ -45,7 +45,9 @@ const JournalPost = () => {
     );
   }
 
-  const currentPath = language === 'en' ? `/en/journal/${slug}` : `/journal/${slug}`;
+  const articleSlug = article.slug;
+  const enSlug = article.slugEn || article.slug;
+  const currentPath = language === 'en' ? `/en/journal/${enSlug}` : `/journal/${articleSlug}`;
   const articleTitle = article.title[language];
   const seoTitle = articleTitle.length > 45
     ? `${articleTitle.slice(0, 45)}… | Rivana`
@@ -82,6 +84,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['Contexto macro', 'Zona Hotelera', 'Puerto Cancún', 'Cancún Centro', 'Comparativa por zona', 'Factor STR', 'Efecto Mundial', 'Preguntas frecuentes']
       : ['Macro context', 'Hotel Zone', 'Puerto Cancún', 'Downtown Cancún', 'Zone comparison', 'STR factor', 'World Cup effect', 'FAQ'])
+    : (articleSlug === 'invertir-en-preventa-cancun-riviera-maya-2026' || slug === 'why-invest-presale-cancun-riviera-maya-2026')
+    ? (language === 'es'
+      ? ['¿Qué es la preventa?', 'Por qué el Caribe', 'Fases de preventa', 'Propiedades Rivana', 'Qué verificar', 'Riesgos', 'Ventana 2026', 'Preventa vs Reventa', 'FAQ']
+      : ['What is pre-sale?', 'Why the Caribbean', 'Pre-sale phases', 'Rivana properties', 'What to verify', 'Risks', '2026 window', 'Pre-sale vs Resale', 'FAQ'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -183,6 +189,8 @@ const JournalPost = () => {
               language === 'en' ? <CostaMujeresBodyEN /> : <CostaMujeresBodyES />
             ) : slug === 'cancun-roi-rental-yield' ? (
               language === 'en' ? <CancunROIBodyEN /> : <CancunROIBodyES />
+            ) : (articleSlug === 'invertir-en-preventa-cancun-riviera-maya-2026' || slug === 'why-invest-presale-cancun-riviera-maya-2026') ? (
+              language === 'en' ? <PreSaleGuideBodyEN /> : <PreSaleGuideBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
