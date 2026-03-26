@@ -15,6 +15,7 @@ import { CostaMujeresBodyES, CostaMujeresBodyEN } from '@/components/journal/Cos
 import { CancunROIBodyES, CancunROIBodyEN } from '@/components/journal/CancunROIBody';
 import { PreSaleGuideBodyES, PreSaleGuideBodyEN } from '@/components/journal/PreSaleGuideBody';
 import { MayakobaVsPuertoBodyES, MayakobaVsPuertoBodyEN } from '@/components/journal/MayakobaVsPuertoBody';
+import { WorldCupBodyES, WorldCupBodyEN } from '@/components/journal/WorldCupBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -93,13 +94,14 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['¿Qué es la preventa?', 'Por qué el Caribe', 'Fases de preventa', 'Propiedades Rivana', 'Qué verificar', 'Riesgos', 'Ventana 2026', 'Preventa vs Reventa', 'FAQ']
       : ['What is pre-sale?', 'Why the Caribbean', 'Pre-sale phases', 'Rivana properties', 'What to verify', 'Risks', '2026 window', 'Pre-sale vs Resale', 'FAQ'])
+    : slug === 'world-cup-2026-cancun-real-estate'
+    ? (language === 'es'
+      ? ['Inversión estructural', 'Números 2026', 'Impacto Mundial', 'Zona a zona', 'Renta vs Plusvalía', 'Qué verificar', 'Preguntas frecuentes']
+      : ['Structural case', '2026 data', 'World Cup impact', 'Zone by zone', 'Rental vs appreciation', 'What to verify', 'FAQ'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
       language === 'es' ? 'Factores Clave' : 'Key Investment Drivers',
-      language === 'es' ? 'Análisis de Rendimiento' : 'Rental Yield Analysis',
-      language === 'es' ? 'Efecto Mundial' : 'World Cup Effect',
-      language === 'es' ? 'Conclusión' : 'Conclusion',
     ];
 
   // Related articles based on shared destinations
