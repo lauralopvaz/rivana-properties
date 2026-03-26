@@ -113,16 +113,16 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'costa-mujeres-ultra-luxury-destination',
     title: {
-      es: 'Costa Mujeres: Epicentro de Inversión',
-      en: 'Costa Mujeres: Ultra-Luxury 2026',
+      es: 'Costa Mujeres: El Nuevo Epicentro de Inversión en el Caribe Mexicano',
+      en: 'Costa Mujeres: The New Investment Epicenter of the Mexican Caribbean',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
-      es: 'Un análisis profundo de la zona de mayor crecimiento en el Caribe Mexicano.',
-      en: 'An in-depth look at the fastest-growing zone in the Mexican Caribbean.',
+      es: 'Por qué Costa Mujeres es la zona de mayor plusvalía en el corredor norte de Cancún en 2026. Análisis de precios, rendimientos, sub-zonas y propiedades Rivana.',
+      en: 'Why Costa Mujeres is the highest-appreciation zone in Cancún\'s northern corridor in 2026. Price analysis, yields, sub-zones and Rivana portfolio properties.',
     },
-    date: 'Jan 22, 2026',
-    readTime: '8 min',
+    date: 'Mar 25, 2026',
+    readTime: '10 min',
     author: 'Alejandra Reyes',
     featured: true,
     image: imgCostaMujeres,
