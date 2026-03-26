@@ -10,6 +10,7 @@ import { ClockIcon, ArrowRightIcon, MailIcon } from '@/components/icons';
 import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
 import { ForeignBuyerGuideBodyEN, ForeignBuyerGuideBodyES } from '@/components/journal/ForeignBuyerGuideBody';
 import { UruguayMayakobaBodyES, UruguayMayakobaBodyEN } from '@/components/journal/UruguayMayakobaBody';
+import { LuxuryCondosZHBodyES, LuxuryCondosZHBodyEN } from '@/components/journal/LuxuryCondosZHBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -66,6 +67,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['La Celeste en tu vecindario', 'Por qué Mayakoba', 'The Reserve at Mayakoba', 'Tu inversión y el Mundial', 'Vivir con la élite', 'Preguntas frecuentes']
       : ['La Celeste in your neighborhood', 'Why Mayakoba', 'The Reserve at Mayakoba', 'World Cup & your investment', 'Living with the elite', 'Group H', 'FAQ'])
+    : slug === 'luxury-condos-zona-hotelera-cancun-2026-guide'
+    ? (language === 'es'
+      ? ['Zona Hotelera para inversión', 'Precios por zona', 'Permiso STR', 'Propiedades por perfil', 'Cómo elegir', 'Lista de verificación']
+      : ['Hotel Zone for investment', 'Prices by zone', 'STR permit', 'Portfolio by profile', 'How to choose', 'Pre-sale checklist'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -161,6 +166,8 @@ const JournalPost = () => {
               language === 'en' ? <ForeignBuyerGuideBodyEN /> : <ForeignBuyerGuideBodyES />
             ) : slug === 'uruguay-mayakoba-mundial-2026' ? (
               language === 'en' ? <UruguayMayakobaBodyEN /> : <UruguayMayakobaBodyES />
+            ) : slug === 'luxury-condos-zona-hotelera-cancun-2026-guide' ? (
+              language === 'en' ? <LuxuryCondosZHBodyEN /> : <LuxuryCondosZHBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
