@@ -530,7 +530,7 @@ const PropertyDetail = () => {
           <div className="flex gap-2 mt-4" onClick={(e) => e.stopPropagation()}>
             {p.photos.map((ph, i) => (
               <button key={i} onClick={() => setLightboxIdx(i)} className={`w-[60px] h-[42px] overflow-hidden border-2 transition-all ${i === lightboxIdx ? 'border-[#CFAE60] opacity-100' : 'border-transparent opacity-45 hover:opacity-70'}`}>
-                <img src={ph} alt="" className="w-full h-full object-cover" />
+                <img src={ph} alt={`${p.name} — miniatura ${i + 1}`} className="w-full h-full object-cover" />
               </button>
             ))}
           </div>
