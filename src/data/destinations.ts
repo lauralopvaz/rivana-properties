@@ -211,8 +211,8 @@ export const destinations: DestinationConfig[] = [
     priority: 1,
     seo: {
       title: {
-        es: 'Costa Mujeres — Propiedades de Lujo | Rivana',
-        en: 'Costa Mujeres — Luxury Real Estate | Rivana',
+        es: 'Propiedades en Costa Mujeres, Cancún | Rivana',
+        en: 'Costa Mujeres Properties, Cancun | Rivana',
       },
       description: {
         es: 'Propiedades de lujo en Costa Mujeres, Cancún Norte. Preventa con alto potencial de retorno. Penthouses e inversión. Rivana Properties.',
@@ -287,7 +287,7 @@ export const destinations: DestinationConfig[] = [
     seo: {
       title: {
         es: 'Mayakoba — The Reserve en Venta | Rivana',
-        en: 'Mayakoba — The Reserve for Sale | Rivana',
+        en: 'Mayakoba Luxury Properties | Rivana Properties',
       },
       description: {
         es: 'Residencias y villas de lujo en Mayakoba. The Reserve, campo de golf, inversión mundialista 2026. Rivana Properties.',
@@ -337,8 +337,8 @@ export const destinations: DestinationConfig[] = [
     priority: 2,
     seo: {
       title: {
-        es: 'Puerto Morelos — Bienes Raíces | Rivana',
-        en: 'Puerto Morelos — Real Estate | Rivana',
+        es: 'Propiedades en Puerto Morelos | Rivana Properties',
+        en: 'Puerto Morelos Properties | Rivana Properties',
       },
       description: {
         es: 'Propiedades y condominios en Puerto Morelos frente al arrecife. Casas de playa y lujo costero con Rivana Properties.',
@@ -503,8 +503,8 @@ export const destinations: DestinationConfig[] = [
     priority: 2,
     seo: {
       title: {
-        es: 'Playa del Carmen — Lujo Riviera Maya | Rivana',
-        en: 'Playa del Carmen — Luxury Riviera Maya | Rivana',
+        es: 'Propiedades en Playa del Carmen | Rivana',
+        en: 'Playa del Carmen Properties | Rivana',
       },
       description: {
         es: 'Propiedades de lujo en Playa del Carmen. Condos, penthouses y departamentos con alto retorno de inversión. Rivana Properties.',

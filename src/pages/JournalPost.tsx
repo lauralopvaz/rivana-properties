@@ -51,9 +51,8 @@ const JournalPost = () => {
   const enSlug = article.slugEn || article.slug;
   const currentPath = language === 'en' ? `/en/journal/${enSlug}` : `/journal/${articleSlug}`;
   const articleTitle = article.title[language];
-  const seoTitle = articleTitle.length > 45
-    ? `${articleTitle.slice(0, 45)}… | Rivana`
-    : `${articleTitle} | Rivana Journal`;
+  const seoTitle = article.seoTitle?.[language]
+    || (articleTitle.length > 45 ? `${articleTitle.slice(0, 45)}… | Rivana` : `${articleTitle} | Rivana Journal`);
 
   const schema = {
     '@context': 'https://schema.org',

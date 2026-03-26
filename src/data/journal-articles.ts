@@ -14,6 +14,8 @@ export interface JournalArticle {
   /** Optional different slug for English route */
   slugEn?: string;
   title: { es: string; en: string };
+  /** Optional SEO title override (max 60 chars) */
+  seoTitle?: { es: string; en: string };
   category: { es: string; en: string };
   excerpt: { es: string; en: string };
   date: string;
@@ -50,6 +52,10 @@ export const journalArticles: JournalArticle[] = [
       es: 'Rendimiento de Inversión y Renta en Cancún 2026: Análisis por Zona',
       en: 'Cancún Investment Returns & Rental Yield 2026: A Zone-by-Zone Analysis',
     },
+    seoTitle: {
+      es: 'ROI y Rendimiento de Renta en Cancún 2026 | Rivana',
+      en: 'Cancún ROI & Rental Yield 2026 | Rivana',
+    },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
       es: 'Análisis completo de plusvalía, rendimientos de renta y ROI inmobiliario en Zona Hotelera, Puerto Cancún y Cancún Centro para 2026.',
@@ -67,6 +73,10 @@ export const journalArticles: JournalArticle[] = [
       es: 'Guía Completa para Compradores Extranjeros en México: Paso a Paso 2026',
       en: 'How to Buy Property in Mexico as a Foreigner: Complete 2026 Guide',
     },
+    seoTitle: {
+      es: 'Guía para Extranjeros: Comprar en México | Rivana',
+      en: 'Foreign Buyer Guide: Buy in Mexico | Rivana',
+    },
     category: { es: 'Guías', en: 'Guides' },
     excerpt: {
       es: 'Cómo comprar propiedad en México siendo extranjero: fideicomiso, costos de cierre, preventas y opciones de inversión en Cancún y la Riviera Maya. Guía actualizada 2026 para inversionistas de EE.UU., Canadá y Europa.',
@@ -83,6 +93,10 @@ export const journalArticles: JournalArticle[] = [
     title: {
       es: 'Cancún y el Mercado Inmobiliario en 2026: Todo lo que un Inversionista Necesita Saber',
       en: 'Cancún Real Estate in 2026: Everything an Investor Needs to Know',
+    },
+    seoTitle: {
+      es: 'Copa del Mundo 2026 y el Mercado Inmobiliario en Cancún',
+      en: 'Cancún Real Estate Market 2026: Investor Guide',
     },
     category: { es: 'Mercado', en: 'Market' },
     excerpt: {
@@ -119,6 +133,10 @@ export const journalArticles: JournalArticle[] = [
       es: 'Costa Mujeres: El Nuevo Epicentro de Inversión en el Caribe Mexicano',
       en: 'Costa Mujeres: The New Investment Epicenter of the Mexican Caribbean',
     },
+    seoTitle: {
+      es: 'Costa Mujeres: Destino Ultra Lujo | Rivana Properties',
+      en: 'Costa Mujeres: Ultra Luxury Destination | Rivana',
+    },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
       es: 'Por qué Costa Mujeres es la zona de mayor plusvalía en el corredor norte de Cancún en 2026. Análisis de precios, rendimientos, sub-zonas y propiedades Rivana.',
@@ -136,6 +154,10 @@ export const journalArticles: JournalArticle[] = [
     title: {
       es: 'Mayakoba vs Puerto Cancún: Comparativa Definitiva para el Inversionista de Lujo 2026',
       en: 'Mayakoba vs Puerto Cancún: The Definitive Luxury Investment Comparison for 2026',
+    },
+    seoTitle: {
+      es: 'Mayakoba vs Puerto Cancún: ¿Cuál elegir? | Rivana',
+      en: 'Mayakoba vs Puerto Cancún: Which to Choose? | Rivana',
     },
     category: { es: 'Destinos', en: 'Destinations' },
     excerpt: {
