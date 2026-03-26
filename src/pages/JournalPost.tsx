@@ -72,6 +72,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['Zona Hotelera para inversión', 'Precios por zona', 'Permiso STR', 'Propiedades por perfil', 'Cómo elegir', 'Lista de verificación']
       : ['Hotel Zone for investment', 'Prices by zone', 'STR permit', 'Portfolio by profile', 'How to choose', 'Pre-sale checklist'])
+    : slug === 'costa-mujeres-ultra-luxury-destination'
+    ? (language === 'es'
+      ? ['¿Qué es Costa Mujeres?', 'Precios por sub-zona', 'Los números', 'Por qué en 2026', 'Dhamar', 'Verificación Rivana', 'Perfil del comprador']
+      : ['What is Costa Mujeres?', 'Prices by sub-zone', 'The numbers', 'Why in 2026', 'Dhamar', 'Rivana verification', 'Buyer profile'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -169,6 +173,8 @@ const JournalPost = () => {
               language === 'en' ? <UruguayMayakobaBodyEN /> : <UruguayMayakobaBodyES />
             ) : slug === 'luxury-condos-zona-hotelera-cancun-2026-guide' ? (
               language === 'en' ? <LuxuryCondosZHBodyEN /> : <LuxuryCondosZHBodyES />
+            ) : slug === 'costa-mujeres-ultra-luxury-destination' ? (
+              language === 'en' ? <CostaMujeresBodyEN /> : <CostaMujeresBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
