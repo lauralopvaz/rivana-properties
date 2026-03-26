@@ -158,6 +158,7 @@ export const properties: PropertyDetail[] = [
     id: 'mondrian-residences-grand-island-cancun',
     slug: 'mondrian-residences-grand-island-cancun',
     name: 'Mondrian Residences at Grand Island Cancún',
+    seoTitleEn: 'Mondrian Residences Grand Island Cancún | Rivana',
     zone: 'Cancún Zona Hotelera',
     zoneEn: 'Cancún Hotel Zone',
     status: 'preventa',
