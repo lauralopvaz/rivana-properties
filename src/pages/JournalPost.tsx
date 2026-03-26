@@ -9,6 +9,7 @@ import { getDestination } from '@/data/destinations';
 import { ClockIcon, ArrowRightIcon, MailIcon } from '@/components/icons';
 import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
 import { ForeignBuyerGuideBodyEN, ForeignBuyerGuideBodyES } from '@/components/journal/ForeignBuyerGuideBody';
+import { UruguayMayakobaBodyES, UruguayMayakobaBodyEN } from '@/components/journal/UruguayMayakobaBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
