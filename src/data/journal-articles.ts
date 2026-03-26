@@ -7,9 +7,12 @@ import imgMayakoba from '@/assets/journal/mayakoba-vs-puerto-cancun.jpg';
 import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
 import imgCostaMundial from '@/assets/journal/costa-mujeres-mundial.jpg';
 import imgUruguayMayakoba from '@/assets/reserve-mayakoba-hero.jpg';
+import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
 
 export interface JournalArticle {
   slug: string;
+  /** Optional different slug for English route */
+  slugEn?: string;
   title: { es: string; en: string };
   category: { es: string; en: string };
   excerpt: { es: string; en: string };
@@ -145,6 +148,26 @@ export const journalArticles: JournalArticle[] = [
     image: imgMayakoba,
     relatedDestinations: ['mayakoba', 'puerto-cancun'],
   },
+  {
+    slug: 'invertir-en-preventa-cancun-riviera-maya-2026',
+    title: {
+      es: 'Por Qué Invertir en Preventa en Cancún y la Riviera Maya es la Mejor Decisión de 2026',
+      en: 'Why Investing in Pre-Sale Property in Cancún and the Riviera Maya Is the Best Decision of 2026',
+    },
+    category: { es: 'Guías', en: 'Guides' },
+    excerpt: {
+      es: 'Por qué comprar una propiedad en preventa en Cancún o la Riviera Maya es la mejor decisión de inversión en 2026. Plusvalía, esquemas de pago, riesgos y las mejores propiedades del portafolio Rivana.',
+      en: 'Why buying pre-sale property in Cancún or the Riviera Maya is the smartest real estate investment in 2026. Appreciation, payment plans, risks and the best pre-sale properties from Rivana\'s verified portfolio.',
+    },
+    date: 'Mar 25, 2026',
+    readTime: '14 min',
+    author: 'Alejandra Reyes',
+    featured: true,
+    image: imgPreSaleGuide,
+    relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres', 'mayakoba'],
+    /** EN uses a different slug */
+    slugEn: 'why-invest-presale-cancun-riviera-maya-2026',
+  },
 ];
 
 // Spanish-only journal articles
@@ -180,3 +203,7 @@ export const journalArticlesEs: JournalArticle[] = [
 ];
 
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
+
+/** Get the correct slug for an article based on language */
+export const getArticleSlug = (article: JournalArticle, language: 'es' | 'en') =>
+  language === 'en' && article.slugEn ? article.slugEn : article.slug;

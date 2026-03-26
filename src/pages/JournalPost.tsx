@@ -4,7 +4,7 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 import { Button } from '@/components/ui/button';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { journalArticles, journalArticlesEs } from '@/data/journal-articles';
+import { journalArticles, journalArticlesEs, getArticleSlug } from '@/data/journal-articles';
 import { getDestination } from '@/data/destinations';
 import { ClockIcon, ArrowRightIcon, MailIcon } from '@/components/icons';
 import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
@@ -13,6 +13,7 @@ import { UruguayMayakobaBodyES, UruguayMayakobaBodyEN } from '@/components/journ
 import { LuxuryCondosZHBodyES, LuxuryCondosZHBodyEN } from '@/components/journal/LuxuryCondosZHBody';
 import { CostaMujeresBodyES, CostaMujeresBodyEN } from '@/components/journal/CostaMujeresBody';
 import { CancunROIBodyES, CancunROIBodyEN } from '@/components/journal/CancunROIBody';
+import { PreSaleGuideBodyES, PreSaleGuideBodyEN } from '@/components/journal/PreSaleGuideBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -21,7 +22,7 @@ const JournalPost = () => {
   const nl = useNewsletterSubscribe();
 
   const allArticles = [...journalArticles, ...journalArticlesEs];
-  const article = allArticles.find((a) => a.slug === slug);
+  const article = allArticles.find((a) => a.slug === slug || a.slugEn === slug);
 
   useEffect(() => {
     const onScroll = () => {
@@ -44,7 +45,9 @@ const JournalPost = () => {
     );
   }
 
-  const currentPath = language === 'en' ? `/en/journal/${slug}` : `/journal/${slug}`;
+  const articleSlug = article.slug;
+  const enSlug = article.slugEn || article.slug;
+  const currentPath = language === 'en' ? `/en/journal/${enSlug}` : `/journal/${articleSlug}`;
   const articleTitle = article.title[language];
   const seoTitle = articleTitle.length > 45
     ? `${articleTitle.slice(0, 45)}… | Rivana`
@@ -81,6 +84,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['Contexto macro', 'Zona Hotelera', 'Puerto Cancún', 'Cancún Centro', 'Comparativa por zona', 'Factor STR', 'Efecto Mundial', 'Preguntas frecuentes']
       : ['Macro context', 'Hotel Zone', 'Puerto Cancún', 'Downtown Cancún', 'Zone comparison', 'STR factor', 'World Cup effect', 'FAQ'])
+    : (articleSlug === 'invertir-en-preventa-cancun-riviera-maya-2026' || slug === 'why-invest-presale-cancun-riviera-maya-2026')
+    ? (language === 'es'
+      ? ['¿Qué es la preventa?', 'Por qué el Caribe', 'Fases de preventa', 'Propiedades Rivana', 'Qué verificar', 'Riesgos', 'Ventana 2026', 'Preventa vs Reventa', 'FAQ']
+      : ['What is pre-sale?', 'Why the Caribbean', 'Pre-sale phases', 'Rivana properties', 'What to verify', 'Risks', '2026 window', 'Pre-sale vs Resale', 'FAQ'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -182,6 +189,8 @@ const JournalPost = () => {
               language === 'en' ? <CostaMujeresBodyEN /> : <CostaMujeresBodyES />
             ) : slug === 'cancun-roi-rental-yield' ? (
               language === 'en' ? <CancunROIBodyEN /> : <CancunROIBodyES />
+            ) : (articleSlug === 'invertir-en-preventa-cancun-riviera-maya-2026' || slug === 'why-invest-presale-cancun-riviera-maya-2026') ? (
+              language === 'en' ? <PreSaleGuideBodyEN /> : <PreSaleGuideBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
@@ -274,7 +283,7 @@ const JournalPost = () => {
                 <h3 className="mb-6">{language === 'es' ? 'Artículos Relacionados' : 'Related Articles'}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {related.map((a) => (
-                    <Link key={a.slug} to={localePath(`/journal/${a.slug}`)} className="group">
+                    <Link key={a.slug} to={localePath(`/journal/${getArticleSlug(a, language)}`)} className="group">
                       <div className="aspect-[16/10] overflow-hidden rounded-sm mb-3">
                         <img src={a.image} alt={a.title[language]} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={1280} height={800} />
                       </div>

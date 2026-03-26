@@ -4,7 +4,7 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 import { Button } from '@/components/ui/button';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { journalArticles, journalArticlesEs } from '@/data/journal-articles';
+import { journalArticles, journalArticlesEs, getArticleSlug } from '@/data/journal-articles';
 import { ArrowRightIcon, ClockIcon, MailIcon } from '@/components/icons';
 import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
 
@@ -66,7 +66,7 @@ const Journal = () => {
       {/* Featured */}
       {featured && (
         <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
-          <Link to={localePath(`/journal/${featured.slug}`)} className="group grid grid-cols-1 lg:grid-cols-2 gap-8 bg-card border border-border rounded-sm overflow-hidden">
+          <Link to={localePath(`/journal/${getArticleSlug(featured, language)}`)} className="group grid grid-cols-1 lg:grid-cols-2 gap-8 bg-card border border-border rounded-sm overflow-hidden">
             <div className="aspect-[16/10] overflow-hidden">
               <img src={featured.image} alt={featured.title[language]} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="eager" width={1280} height={800} />
             </div>
@@ -109,7 +109,7 @@ const Journal = () => {
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
             {filtered.map((article, i) => (
               <ScrollReveal key={article.slug} delay={i * 80}>
-                <Link to={localePath(`/journal/${article.slug}`)} className="group block">
+                <Link to={localePath(`/journal/${getArticleSlug(article, language)}`)} className="group block">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm mb-4">
                     <img src={article.image} alt={article.title[language]} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={1280} height={800} />
                   </div>
@@ -154,7 +154,7 @@ const Journal = () => {
               <h3 className="text-lg mb-4">{language === 'es' ? 'Más Leídos' : 'Most Read'}</h3>
               <div className="space-y-4">
                 {journalArticles.slice(0, 4).map((a, i) => (
-                  <Link key={a.slug} to={localePath(`/journal/${a.slug}`)} className="flex items-start gap-3 group">
+                  <Link key={a.slug} to={localePath(`/journal/${getArticleSlug(a, language)}`)} className="flex items-start gap-3 group">
                     <span className="font-display text-2xl text-primary/40">{String(i + 1).padStart(2, '0')}</span>
                     <div>
                       <p className="text-sm font-body group-hover:text-primary transition-colors line-clamp-2">{a.title[language]}</p>
