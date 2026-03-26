@@ -52,6 +52,10 @@ export const journalArticles: JournalArticle[] = [
       es: 'Rendimiento de Inversión y Renta en Cancún 2026: Análisis por Zona',
       en: 'Cancún Investment Returns & Rental Yield 2026: A Zone-by-Zone Analysis',
     },
+    seoTitle: {
+      es: 'ROI y Rendimiento de Renta en Cancún 2026 | Rivana',
+      en: 'Cancún ROI & Rental Yield 2026 | Rivana',
+    },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
       es: 'Análisis completo de plusvalía, rendimientos de renta y ROI inmobiliario en Zona Hotelera, Puerto Cancún y Cancún Centro para 2026.',
