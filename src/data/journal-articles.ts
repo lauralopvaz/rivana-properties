@@ -7,6 +7,7 @@ import imgMayakoba from '@/assets/journal/mayakoba-vs-puerto-cancun.jpg';
 import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
 import imgCostaMundial from '@/assets/journal/costa-mujeres-mundial.jpg';
 import imgUruguayMayakoba from '@/assets/reserve-mayakoba-hero.jpg';
+import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
 
 export interface JournalArticle {
   slug: string;
