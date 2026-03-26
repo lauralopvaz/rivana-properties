@@ -200,6 +200,8 @@ const JournalPost = () => {
               language === 'en' ? <PreSaleGuideBodyEN /> : <PreSaleGuideBodyES />
             ) : slug === 'mayakoba-vs-puerto-cancun' ? (
               language === 'en' ? <MayakobaVsPuertoBodyEN /> : <MayakobaVsPuertoBodyES />
+            ) : slug === 'world-cup-2026-cancun-real-estate' ? (
+              language === 'en' ? <WorldCupBodyEN /> : <WorldCupBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
