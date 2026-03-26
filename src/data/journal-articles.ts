@@ -5,7 +5,7 @@ import imgLuxuryCondos from '@/assets/journal/luxury-condos-zona-hotelera.jpg';
 import imgCostaMujeres from '@/assets/journal/costa-mujeres-luxury.jpg';
 import imgMayakoba from '@/assets/journal/mayakoba-vs-puerto-cancun.jpg';
 import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
-import imgCostaMundial from '@/assets/journal/costa-mujeres-mundial.jpg';
+
 import imgUruguayMayakoba from '@/assets/reserve-mayakoba-hero.jpg';
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
 
