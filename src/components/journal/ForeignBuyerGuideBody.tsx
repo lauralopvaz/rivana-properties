@@ -294,7 +294,7 @@ export const ForeignBuyerGuideBodyES = () => {
         <strong className="text-foreground">Las relaciones directas con desarrolladores significan acceso real a preventa.</strong> Acceso a precios de preventa, inventario temprano y esquemas de pago que no estan disponibles a traves de agentes genericos.
       </p>
       <p>
-        <strong className="text-foreground">Asesoria sin presion, siempre.</strong> La voz de Rivana es la de un asesor de confianza que habla como un amigo que protege tu patrimonio.
+        <strong className="text-foreground">Asesoría personalizada, siempre.</strong> La voz de Rivana es la de un asesor de confianza que habla como un amigo que protege tu patrimonio.
       </p>
       <blockquote className="border-l-2 border-[hsl(var(--gold))] pl-6 py-4 my-8">
         <p className="font-display text-2xl italic text-foreground leading-relaxed">
