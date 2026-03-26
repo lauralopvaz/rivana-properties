@@ -513,9 +513,19 @@ export const destinations: DestinationConfig[] = [
       {
         segment: 'condos',
         seo: {
-          title: { es: 'Condominios en Venta — Cancún Centro | Rivana', en: 'Condos for Sale — Downtown Cancun | Rivana' },
-          h1: { es: 'Condominios en Venta — Cancún Centro', en: 'Condos for Sale — Downtown Cancun' },
-          description: { es: 'Condominios urbanos en venta en Cancún Centro. Precios accesibles con alta rentabilidad.', en: 'Urban condos for sale in downtown Cancun. Accessible prices with high rentability.' },
+          title: { es: 'Condos Cancún Centro en Venta | Rivana', en: 'Condos Downtown Cancun for Sale | Rivana' },
+          h1: { es: 'Condos en Venta — Cancún Centro', en: 'Condos for Sale — Downtown Cancun' },
+          description: { es: 'Condos urbanos en venta en Cancún Centro. Precios accesibles, alta demanda de renta y plusvalía constante.', en: 'Urban condos for sale in downtown Cancun. Accessible prices, high rental demand and steady appreciation.' },
+        },
+        intro: {
+          es: [
+            'Los condos en Cancún Centro representan la opción de inversión más accesible del municipio, con precios desde $5.2M MXN y una demanda de alquiler constante impulsada por profesionales y familias locales.',
+            'Desarrollos como Arbolada Towers y Cuore Cumbres ofrecen amenidades modernas en comunidades cerradas, con conectividad directa a la Zona Hotelera y el aeropuerto internacional.',
+          ],
+          en: [
+            'Condos in downtown Cancún represent the most accessible investment option in the municipality, with prices starting at $5.2M MXN and constant rental demand driven by local professionals and families.',
+            'Developments like Arbolada Towers and Cuore Cumbres offer modern amenities in gated communities, with direct connectivity to the Hotel Zone and international airport.',
+          ],
         },
       },
     ],
