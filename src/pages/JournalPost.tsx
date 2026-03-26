@@ -9,6 +9,7 @@ import { getDestination } from '@/data/destinations';
 import { ClockIcon, ArrowRightIcon, MailIcon } from '@/components/icons';
 import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
 import { ForeignBuyerGuideBodyEN, ForeignBuyerGuideBodyES } from '@/components/journal/ForeignBuyerGuideBody';
+import { UruguayMayakobaBodyES, UruguayMayakobaBodyEN } from '@/components/journal/UruguayMayakobaBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -61,6 +62,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['¿Pueden comprar extranjeros?', 'El Fideicomiso', 'Guía Paso a Paso', '¿Por qué 2026?', 'Por qué Rivana', 'Propiedades Destacadas', 'Preguntas Frecuentes']
       : ['Can Foreigners Buy?', 'The Fideicomiso', 'Step-by-Step Guide', 'Why 2026?', 'Why Rivana', 'Featured Properties', 'FAQ'])
+    : slug === 'uruguay-mayakoba-mundial-2026'
+    ? (language === 'es'
+      ? ['La Celeste en tu vecindario', 'Por qué Mayakoba', 'The Reserve at Mayakoba', 'Tu inversión y el Mundial', 'Vivir con la élite', 'Preguntas frecuentes']
+      : ['La Celeste in your neighborhood', 'Why Mayakoba', 'The Reserve at Mayakoba', 'World Cup & your investment', 'Living with the elite', 'Group H', 'FAQ'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -136,6 +141,14 @@ const JournalPost = () => {
                         → {d!.name[language]}
                       </Link>
                     ))}
+                    {slug === 'uruguay-mayakoba-mundial-2026' && (
+                      <Link
+                        to={localePath('/propiedad/the-reserve-at-mayakoba')}
+                        className="block text-sm font-body text-primary hover:text-primary/80 transition-colors"
+                      >
+                        → The Reserve at Mayakoba
+                      </Link>
+                    )}
                   </div>
                 </div>
               )}
@@ -146,6 +159,8 @@ const JournalPost = () => {
           <article className="lg:col-span-3 space-y-8">
             {slug === 'foreign-buyer-guide-mexico' ? (
               language === 'en' ? <ForeignBuyerGuideBodyEN /> : <ForeignBuyerGuideBodyES />
+            ) : slug === 'uruguay-mayakoba-mundial-2026' ? (
+              language === 'en' ? <UruguayMayakobaBodyEN /> : <UruguayMayakobaBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>

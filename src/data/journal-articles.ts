@@ -6,6 +6,7 @@ import imgCostaMujeres from '@/assets/journal/costa-mujeres-luxury.jpg';
 import imgMayakoba from '@/assets/journal/mayakoba-vs-puerto-cancun.jpg';
 import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
 import imgCostaMundial from '@/assets/journal/costa-mujeres-mundial.jpg';
+import imgUruguayMayakoba from '@/assets/reserve-mayakoba-hero.jpg';
 
 export interface JournalArticle {
   slug: string;
@@ -22,6 +23,24 @@ export interface JournalArticle {
 }
 
 export const journalArticles: JournalArticle[] = [
+  {
+    slug: 'uruguay-mayakoba-mundial-2026',
+    title: {
+      es: 'Uruguay Eligió Mayakoba para el Mundial 2026 — Y Tú Puedes Ser Propietario Ahí Mismo',
+      en: 'Uruguay Chose Mayakoba for the 2026 World Cup — And You Can Own Property There',
+    },
+    category: { es: 'Mercado', en: 'Market' },
+    excerpt: {
+      es: 'La selección de Uruguay, con Valverde, Darwin Núñez y Araujo, se concentrará en el Fairmont Mayakoba durante el Mundial FIFA 2026. Descubre por qué invertir en The Reserve at Mayakoba.',
+      en: 'Uruguay\'s national team will be based at Fairmont Mayakoba during FIFA World Cup 2026. Discover why now is the moment to invest in The Reserve at Mayakoba.',
+    },
+    date: 'Mar 25, 2026',
+    readTime: '9 min',
+    author: 'Alejandra Reyes',
+    featured: true,
+    image: imgUruguayMayakoba,
+    relatedDestinations: ['mayakoba', 'playa-del-carmen'],
+  },
   {
     slug: 'cancun-roi-rental-yield',
     title: {
