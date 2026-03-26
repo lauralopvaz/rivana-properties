@@ -133,6 +133,10 @@ export const journalArticles: JournalArticle[] = [
       es: 'Costa Mujeres: El Nuevo Epicentro de Inversión en el Caribe Mexicano',
       en: 'Costa Mujeres: The New Investment Epicenter of the Mexican Caribbean',
     },
+    seoTitle: {
+      es: 'Costa Mujeres: Destino Ultra Lujo | Rivana Properties',
+      en: 'Costa Mujeres: Ultra Luxury Destination | Rivana',
+    },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
       es: 'Por qué Costa Mujeres es la zona de mayor plusvalía en el corredor norte de Cancún en 2026. Análisis de precios, rendimientos, sub-zonas y propiedades Rivana.',
@@ -150,6 +154,10 @@ export const journalArticles: JournalArticle[] = [
     title: {
       es: 'Mayakoba vs Puerto Cancún: Comparativa Definitiva para el Inversionista de Lujo 2026',
       en: 'Mayakoba vs Puerto Cancún: The Definitive Luxury Investment Comparison for 2026',
+    },
+    seoTitle: {
+      es: 'Mayakoba vs Puerto Cancún: ¿Cuál elegir? | Rivana',
+      en: 'Mayakoba vs Puerto Cancún: Which to Choose? | Rivana',
     },
     category: { es: 'Destinos', en: 'Destinations' },
     excerpt: {
