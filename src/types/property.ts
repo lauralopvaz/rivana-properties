@@ -43,6 +43,8 @@ export interface PropertyDetail {
   id: string
   slug: string
   name: string
+  seoTitle?: string
+  seoTitleEn?: string
   zone: string
   zoneEn?: string
   status: PropertyStatus
