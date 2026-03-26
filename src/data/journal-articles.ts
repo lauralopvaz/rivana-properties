@@ -203,3 +203,7 @@ export const journalArticlesEs: JournalArticle[] = [
 ];
 
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
+
+/** Get the correct slug for an article based on language */
+export const getArticleSlug = (article: JournalArticle, language: 'es' | 'en') =>
+  language === 'en' && article.slugEn ? article.slugEn : article.slug;
