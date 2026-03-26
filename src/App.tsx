@@ -32,10 +32,10 @@ const RedirectPropertyEN = () => {
   return <Navigate to={`/en/property/${slug}`} replace />;
 };
 
-/** Redirect /en/propiedad/:slug → /propiedad/:slug */
-const RedirectPropertyES = () => {
+/** Redirect /en/propiedad/:slug → /en/property/:slug */
+const RedirectToENProperty = () => {
   const { slug } = useParams();
-  return <Navigate to={`/propiedad/${slug}`} replace />;
+  return <Navigate to={`/en/property/${slug}`} replace />;
 };
 
 const queryClient = new QueryClient();
