@@ -12,6 +12,7 @@ import { ForeignBuyerGuideBodyEN, ForeignBuyerGuideBodyES } from '@/components/j
 import { UruguayMayakobaBodyES, UruguayMayakobaBodyEN } from '@/components/journal/UruguayMayakobaBody';
 import { LuxuryCondosZHBodyES, LuxuryCondosZHBodyEN } from '@/components/journal/LuxuryCondosZHBody';
 import { CostaMujeresBodyES, CostaMujeresBodyEN } from '@/components/journal/CostaMujeresBody';
+import { CancunROIBodyES, CancunROIBodyEN } from '@/components/journal/CancunROIBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -76,6 +77,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['¿Qué es Costa Mujeres?', 'Precios por sub-zona', 'Los números', 'Por qué en 2026', 'Dhamar', 'Verificación Rivana', 'Perfil del comprador']
       : ['What is Costa Mujeres?', 'Prices by sub-zone', 'The numbers', 'Why in 2026', 'Dhamar', 'Rivana verification', 'Buyer profile'])
+    : slug === 'cancun-roi-rental-yield'
+    ? (language === 'es'
+      ? ['Contexto macro', 'Zona Hotelera', 'Puerto Cancún', 'Cancún Centro', 'Comparativa por zona', 'Factor STR', 'Efecto Mundial', 'Preguntas frecuentes']
+      : ['Macro context', 'Hotel Zone', 'Puerto Cancún', 'Downtown Cancún', 'Zone comparison', 'STR factor', 'World Cup effect', 'FAQ'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -175,6 +180,8 @@ const JournalPost = () => {
               language === 'en' ? <LuxuryCondosZHBodyEN /> : <LuxuryCondosZHBodyES />
             ) : slug === 'costa-mujeres-ultra-luxury-destination' ? (
               language === 'en' ? <CostaMujeresBodyEN /> : <CostaMujeresBodyES />
+            ) : slug === 'cancun-roi-rental-yield' ? (
+              language === 'en' ? <CancunROIBodyEN /> : <CancunROIBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
