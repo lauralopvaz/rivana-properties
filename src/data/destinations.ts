@@ -5,6 +5,7 @@ export interface DestinationSubPage {
     h1: { es: string; en: string };
     description: { es: string; en: string };
   };
+  intro?: { es: string[]; en: string[] };
 }
 
 export interface DestinationConfig {
