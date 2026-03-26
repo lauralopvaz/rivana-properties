@@ -8,6 +8,7 @@ import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
 
 import imgUruguayMayakoba from '@/assets/reserve-mayakoba-hero.jpg';
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
+const imgMondrianHero = '/images/mondrian/mondrian-hero.jpg';
 
 export interface JournalArticle {
   slug: string;
@@ -189,6 +190,28 @@ export const journalArticles: JournalArticle[] = [
     relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres', 'mayakoba'],
     /** EN uses a different slug */
     slugEn: 'why-invest-presale-cancun-riviera-maya-2026',
+  },
+  {
+    slug: 'mondrian-residences-grand-island-cancun-preventa',
+    slugEn: 'mondrian-residences-grand-island-cancun-presale',
+    title: {
+      es: 'Mondrian Residences Grand Island Cancún: El Relanzamiento que Redefine la Zona Hotelera',
+      en: 'Mondrian Residences Grand Island Cancun: The Complete Presale Guide for 2026',
+    },
+    seoTitle: {
+      es: 'Mondrian Residences Grand Island Cancún: Guía Completa de Preventa 2026',
+      en: 'Mondrian Residences Grand Island Cancun: 2026 Presale Guide',
+    },
+    category: { es: 'Inversión', en: 'Investment' },
+    excerpt: {
+      es: 'El relanzamiento más esperado de la Zona Hotelera. Precios desde $9M MXN, ROI 33%, entrega Q2 2027 y operación Accor desde el día uno.',
+      en: 'The most anticipated branded residences launch in Cancun\'s Hotel Zone. Prices from $514K USD, 33% ROI, Q2 2027 delivery, and Accor operation from day one.',
+    },
+    date: 'Mar 25, 2026',
+    readTime: '9 min',
+    author: 'Rivana Properties',
+    image: imgMondrianHero,
+    relatedDestinations: ['zona-hotelera'],
   },
 ];
 

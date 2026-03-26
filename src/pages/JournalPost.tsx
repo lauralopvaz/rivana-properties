@@ -16,6 +16,7 @@ import { CancunROIBodyES, CancunROIBodyEN } from '@/components/journal/CancunROI
 import { PreSaleGuideBodyES, PreSaleGuideBodyEN } from '@/components/journal/PreSaleGuideBody';
 import { MayakobaVsPuertoBodyES, MayakobaVsPuertoBodyEN } from '@/components/journal/MayakobaVsPuertoBody';
 import { WorldCupBodyES, WorldCupBodyEN } from '@/components/journal/WorldCupBody';
+import { MondrianPresaleBodyES, MondrianPresaleBodyEN } from '@/components/journal/MondrianPresaleBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -54,16 +55,78 @@ const JournalPost = () => {
   const seoTitle = article.seoTitle?.[language]
     || (articleTitle.length > 45 ? `${articleTitle.slice(0, 45)}… | Rivana` : `${articleTitle} | Rivana Journal`);
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: article.title[language],
-    description: article.excerpt[language],
-    author: { '@type': 'Person', name: article.author },
-    publisher: { '@type': 'Organization', name: 'Rivana Properties' },
-    datePublished: article.date,
-    url: `https://rivanaproperties.com/journal/${slug}`,
-  };
+  const isMondrianPresale = articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale';
+
+  const schema = isMondrianPresale
+    ? {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Article',
+            '@id': language === 'en'
+              ? 'https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-presale#article'
+              : 'https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-preventa#article',
+            headline: article.title[language],
+            description: article.excerpt[language],
+            image: 'https://rivanaproperties.com/images/mondrian/mondrian-hero.png',
+            datePublished: '2026-03-25T00:00:00-05:00',
+            dateModified: '2026-03-25T00:00:00-05:00',
+            ...(language === 'en' ? { inLanguage: 'en' } : {}),
+            author: { '@type': 'Organization', name: 'Rivana Properties', url: 'https://rivanaproperties.com' },
+            publisher: { '@type': 'Organization', name: 'Rivana Properties', url: 'https://rivanaproperties.com', logo: { '@type': 'ImageObject', url: 'https://rivanaproperties.com/logo.png' } },
+            mainEntityOfPage: { '@type': 'WebPage', '@id': `https://rivanaproperties.com${currentPath}` },
+            about: {
+              '@type': 'Residence',
+              name: 'Mondrian Residences at Grand Island Cancún',
+              description: language === 'en'
+                ? 'Branded residences operated by Accor under the Mondrian brand, within the Grand Island master development in Cancun\'s Hotel Zone.'
+                : 'Residencias de marca operadas por Accor bajo la marca Mondrian, dentro del desarrollo maestro Grand Island en la Zona Hotelera de Cancún.',
+              address: { '@type': 'PostalAddress', streetAddress: 'Km 16.5, Blvd. Kukulcán', addressLocality: 'Cancún', addressRegion: 'Quintana Roo', addressCountry: 'MX' },
+              offers: { '@type': 'Offer', priceCurrency: language === 'en' ? 'USD' : 'MXN', price: language === 'en' ? '475000' : '9050000', availability: 'https://schema.org/InStock', validThrough: '2026-06-01' },
+            },
+            keywords: language === 'en'
+              ? 'Mondrian Residences Cancun, Mondrian Residences Grand Island Cancun presale, luxury condos Cancun Hotel Zone, branded residences Cancun, Grupo Murano, Accor Cancun, Cancun real estate investment 2026'
+              : 'Mondrian Residences Cancún, Mondrian Residences Grand Island Cancún, preventa Mondrian Cancún, residencias de lujo Zona Hotelera Cancún, Grupo Murano, Accor Cancún, inversión inmobiliaria Cancún 2026',
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: language === 'en' ? 'Home' : 'Inicio', item: language === 'en' ? 'https://rivanaproperties.com/en' : 'https://rivanaproperties.com' },
+              { '@type': 'ListItem', position: 2, name: 'Journal', item: language === 'en' ? 'https://rivanaproperties.com/en/journal' : 'https://rivanaproperties.com/journal' },
+              { '@type': 'ListItem', position: 3, name: article.seoTitle?.[language] || article.title[language], item: `https://rivanaproperties.com${currentPath}` },
+            ],
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: language === 'en'
+              ? [
+                  { '@type': 'Question', name: 'How much does the Mondrian Residences Grand Island Cancun presale cost?', acceptedAnswer: { '@type': 'Answer', text: 'Mondrian Residences Grand Island Cancun presale starts from approximately $475,000 USD (9,050,000 MXN) for 1-bedroom units. The projected post-presale list price is approximately $630,000 USD, representing a 33% appreciation before the Q2 2027 delivery.' } },
+                  { '@type': 'Question', name: 'What is The Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'The Residences at Grand Island is the former name of the development now relaunched as Mondrian Residences at Grand Island Cancun. The rebranding was formalized following the agreement between Grupo Murano and Ennismore/Accor to operate the residential component under the Mondrian brand.' } },
+                  { '@type': 'Question', name: 'When will Mondrian Residences Cancun be delivered?', acceptedAnswer: { '@type': 'Answer', text: 'Mondrian Residences at Grand Island Cancun is scheduled for delivery in Q2 2027 (second quarter of 2027).' } },
+                  { '@type': 'Question', name: 'Who operates Mondrian Residences Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'Mondrian Residences at Grand Island Cancun is operated by Accor under the Mondrian brand, part of the Ennismore lifestyle hospitality platform. The developer is Grupo Murano (Nasdaq: MRNO).' } },
+                  { '@type': 'Question', name: 'What is the payment plan for Mondrian Residences Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'The payment plan is: 30% down payment at contract signing, 20% deferred over 12 monthly installments during construction, and 50% at delivery in Q2 2027.' } },
+                  { '@type': 'Question', name: 'Can foreigners buy at Mondrian Residences Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, foreign buyers can purchase through a bank trust (fideicomiso), the standard legal mechanism for foreigners acquiring real estate in Mexico\'s restricted zones. Rivana Properties provides fideicomiso advisory as part of the purchase process.' } },
+                ]
+              : [
+                  { '@type': 'Question', name: '¿Cuánto cuesta la preventa de Mondrian Residences Grand Island Cancún?', acceptedAnswer: { '@type': 'Answer', text: 'La preventa parte desde $9,050,000 MXN (aproximadamente $475,000 USD) para unidades de 1 recámara. El precio de lista post-preventa proyectado es de $12,000,000 MXN, una plusvalía del 33% antes de la entrega en Q2 2027.' } },
+                  { '@type': 'Question', name: '¿Qué es The Residences at Grand Island Cancún?', acceptedAnswer: { '@type': 'Answer', text: 'The Residences at Grand Island es el nombre anterior del proyecto que hoy se relanzó como Mondrian Residences at Grand Island Cancún tras el acuerdo entre Grupo Murano y Ennismore/Accor.' } },
+                  { '@type': 'Question', name: '¿Cuándo es la entrega de Mondrian Residences Cancún?', acceptedAnswer: { '@type': 'Answer', text: 'La entrega está programada para Q2 2027 (segundo trimestre de 2027).' } },
+                  { '@type': 'Question', name: '¿Quién opera Mondrian Residences Grand Island Cancún?', acceptedAnswer: { '@type': 'Answer', text: 'Son operadas por Accor bajo la marca Mondrian, parte de Ennismore. El desarrollador es Grupo Murano (Nasdaq: MRNO).' } },
+                  { '@type': 'Question', name: '¿Cuál es el plan de pagos de Mondrian Residences Cancún?', acceptedAnswer: { '@type': 'Answer', text: '30% de enganche al firma de contrato, 20% diferido en 12 mensualidades durante la construcción, y 50% a la entrega en Q2 2027.' } },
+                ],
+          },
+        ],
+      }
+    : {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: article.title[language],
+        description: article.excerpt[language],
+        author: { '@type': 'Person', name: article.author },
+        publisher: { '@type': 'Organization', name: 'Rivana Properties' },
+        datePublished: article.date,
+        url: `https://rivanaproperties.com/journal/${slug}`,
+      };
 
   const toc = slug === 'foreign-buyer-guide-mexico'
     ? (language === 'es'
@@ -97,6 +160,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['Inversión estructural', 'Números 2026', 'Impacto Mundial', 'Zona a zona', 'Renta vs Plusvalía', 'Qué verificar', 'Preguntas frecuentes']
       : ['Structural case', '2026 data', 'World Cup impact', 'Zone by zone', 'Rental vs appreciation', 'What to verify', 'FAQ'])
+    : (articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale')
+    ? (language === 'es'
+      ? ['Qué es Mondrian Residences', 'De The Residences a Mondrian', 'La marca Mondrian', 'Ubicación', 'Preventa: precio y ROI', 'Contexto macro', '¿Para quién es?', 'Proceso de compra']
+      : ['What is Mondrian Residences', 'From The Residences to Mondrian', 'The Mondrian brand', 'Location', 'Presale: price & ROI', 'Macro context', 'Who is it for?', 'How to buy'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -201,6 +268,8 @@ const JournalPost = () => {
               language === 'en' ? <MayakobaVsPuertoBodyEN /> : <MayakobaVsPuertoBodyES />
             ) : slug === 'world-cup-2026-cancun-real-estate' ? (
               language === 'en' ? <WorldCupBodyEN /> : <WorldCupBodyES />
+            ) : (articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale') ? (
+              language === 'en' ? <MondrianPresaleBodyEN /> : <MondrianPresaleBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
