@@ -98,6 +98,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['Inversión estructural', 'Números 2026', 'Impacto Mundial', 'Zona a zona', 'Renta vs Plusvalía', 'Qué verificar', 'Preguntas frecuentes']
       : ['Structural case', '2026 data', 'World Cup impact', 'Zone by zone', 'Rental vs appreciation', 'What to verify', 'FAQ'])
+    : (articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale')
+    ? (language === 'es'
+      ? ['Qué es Mondrian Residences', 'De The Residences a Mondrian', 'La marca Mondrian', 'Ubicación', 'Preventa: precio y ROI', 'Contexto macro', '¿Para quién es?', 'Proceso de compra']
+      : ['What is Mondrian Residences', 'From The Residences to Mondrian', 'The Mondrian brand', 'Location', 'Presale: price & ROI', 'Macro context', 'Who is it for?', 'How to buy'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -202,6 +206,8 @@ const JournalPost = () => {
               language === 'en' ? <MayakobaVsPuertoBodyEN /> : <MayakobaVsPuertoBodyES />
             ) : slug === 'world-cup-2026-cancun-real-estate' ? (
               language === 'en' ? <WorldCupBodyEN /> : <WorldCupBodyES />
+            ) : (articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale') ? (
+              language === 'en' ? <MondrianPresaleBodyEN /> : <MondrianPresaleBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
