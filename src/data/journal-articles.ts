@@ -14,6 +14,8 @@ export interface JournalArticle {
   /** Optional different slug for English route */
   slugEn?: string;
   title: { es: string; en: string };
+  /** Optional SEO title override (max 60 chars) */
+  seoTitle?: { es: string; en: string };
   category: { es: string; en: string };
   excerpt: { es: string; en: string };
   date: string;
@@ -67,6 +69,10 @@ export const journalArticles: JournalArticle[] = [
       es: 'Guía Completa para Compradores Extranjeros en México: Paso a Paso 2026',
       en: 'How to Buy Property in Mexico as a Foreigner: Complete 2026 Guide',
     },
+    seoTitle: {
+      es: 'Guía para Extranjeros: Comprar en México | Rivana',
+      en: 'Foreign Buyer Guide: Buy in Mexico | Rivana',
+    },
     category: { es: 'Guías', en: 'Guides' },
     excerpt: {
       es: 'Cómo comprar propiedad en México siendo extranjero: fideicomiso, costos de cierre, preventas y opciones de inversión en Cancún y la Riviera Maya. Guía actualizada 2026 para inversionistas de EE.UU., Canadá y Europa.',
@@ -83,6 +89,10 @@ export const journalArticles: JournalArticle[] = [
     title: {
       es: 'Cancún y el Mercado Inmobiliario en 2026: Todo lo que un Inversionista Necesita Saber',
       en: 'Cancún Real Estate in 2026: Everything an Investor Needs to Know',
+    },
+    seoTitle: {
+      es: 'Copa del Mundo 2026 y el Mercado Inmobiliario en Cancún',
+      en: 'Cancún Real Estate Market 2026: Investor Guide',
     },
     category: { es: 'Mercado', en: 'Market' },
     excerpt: {
