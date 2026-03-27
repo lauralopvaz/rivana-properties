@@ -108,10 +108,10 @@ export const LuxuryCondosZHBodyES = () => (
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">Kabeek Marina & Condos</h3>
     <p>
-      Kabeek Marina es un producto ultra-escaso: solo 30 residencias con muelle privado a la Laguna Nichupté para embarcaciones de hasta 80 pies — no existe comparable en el mercado de la Zona Hotelera. Las residencias van de 212 a 670 m² con doble vista al Mar Caribe y la laguna. Arquitectura de Humberto Artigas, uno de los arquitectos residenciales de lujo más reconocidos de México. Amenidades de resort completo: alberca semi-olímpica climatizada, spa europeo, lounge bar y marina privada.
+      Kabeek Marina es un producto ultra-escaso: solo 23 residencias con muelle privado a la Laguna Nichupté para embarcaciones de hasta 80 pies — no existe comparable en el mercado de la Zona Hotelera. Las residencias van de 212 a 670 m² con doble vista al Mar Caribe y la laguna. Arquitectura de Humberto Artigas, uno de los arquitectos residenciales de lujo más reconocidos de México. Amenidades de resort completo: alberca semi-olímpica climatizada, spa europeo, lounge bar y marina privada.
     </p>
     <p className="italic text-foreground">Perfil ideal: comprador de muy alto patrimonio que combina estilo de vida náutico con inversión en un activo verdaderamente escaso y sin competencia directa.</p>
-    <PropertyCard name="Kabeek Marina & Condos" tagline="Solo 30 residencias con muelle privado, doble vista" link="/propiedad/kabeek-marina-condos" />
+    <PropertyCard name="Kabeek Marina & Condos" tagline="Solo 23 residencias con muelle privado, doble vista" link="/propiedad/kabeek-marina-condos" />
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">SLS Ocean Beach — Puerto Cancún</h3>
     <p>

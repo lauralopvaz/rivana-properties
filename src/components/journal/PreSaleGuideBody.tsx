@@ -116,8 +116,8 @@ export const PreSaleGuideBodyES = () => {
       <PropertyCard name="Bay View Grand at Grand Island" badge="Preventa" detail="5 tipologías · Desde $586K USD · 40+ amenidades" link={localePath('/propiedad/bay-view-grand-grand-island')} />
 
       <p><strong className="text-foreground">Kabeek Marina & Condos</strong></p>
-      <p>Solo 30 residencias con muelle privado a la Laguna Nichupté para embarcaciones de hasta 80 pies. Doble vista Caribe y laguna. Arquitectura de Humberto Artigas. El activo más escaso de la Zona Hotelera — sin comparable en el mercado.</p>
-      <PropertyCard name="Kabeek Marina & Condos" badge="Preventa" detail="30 unidades · 212–670 m² · Muelle privado" link={localePath('/propiedad/kabeek-marina-condos')} />
+      <p>Solo 23 residencias con muelle privado a la Laguna Nichupté para embarcaciones de hasta 80 pies. Doble vista Caribe y laguna. Arquitectura de Humberto Artigas. El activo más escaso de la Zona Hotelera — sin comparable en el mercado.</p>
+      <PropertyCard name="Kabeek Marina & Condos" badge="Preventa" detail="23 unidades · 212–670 m² · Muelle privado" link={localePath('/propiedad/kabeek-marina-condos')} />
 
       <div className="my-4">
         <Link to={localePath('/cancun/zona-hotelera')} className="text-primary font-body text-sm hover:underline">Ver todas las preventas en Zona Hotelera →</Link>
