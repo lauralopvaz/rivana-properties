@@ -275,6 +275,8 @@ const JournalPost = () => {
               language === 'en' ? <WorldCupBodyEN /> : <WorldCupBodyES />
             ) : (articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale') ? (
               language === 'en' ? <MondrianPresaleBodyEN /> : <MondrianPresaleBodyES />
+            ) : (articleSlug === 'guia-preventa-cancun-2026' || slug === 'pre-sale-guide-cancun-2026') ? (
+              language === 'en' ? <GuiaPreventaCancunBodyEN /> : <GuiaPreventaCancunBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
