@@ -93,7 +93,7 @@ export const WorldCupBodyES = () => {
 
       <PropertyCard name="Mondrian Residences at Grand Island" badge="Preventa · ROI 33%" detail="Gestión Accor · Llave en mano · Desde $9,050,000 MXN · Entrega Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
       <PropertyCard name="Bay View Grand at Grand Island" badge="Preventa" detail="+40 amenidades · Filipão Nunes · Desde $586K USD · Ocupación >80%" link={localePath('/propiedad/bay-view-grand-grand-island')} />
-      <PropertyCard name="Kabeek Marina & Condos" badge="Preventa · Exclusivo" detail="Solo 30 residencias · Muelle privado 80 pies · Arq. Humberto Artigas" link={localePath('/propiedad/kabeek-marina-condos')} />
+      <PropertyCard name="Kabeek Marina & Condos" badge="Preventa · Exclusivo" detail="Solo 23 residencias · Muelle privado 80 pies · Arq. Humberto Artigas" link={localePath('/propiedad/kabeek-marina-condos')} />
 
       <Link to={localePath('/cancun/zona-hotelera')} className="inline-flex items-center gap-2 text-primary font-body text-sm hover:underline">Ver todas las propiedades en Zona Hotelera →</Link>
 

@@ -72,8 +72,8 @@ export const CancunROIBodyES = () => {
       <p><strong className="text-foreground">Bay View Grand at Grand Island</strong> — Más de 40 amenidades de resort, interiores de Filipão Nunes, cinco tipologías desde $586,000 USD. Ocupación vacacional superior al 80% anual. Inmediatamente comercializable en plataformas STR.</p>
       <PropertyCard name="Bay View Grand at Grand Island" badge="Preventa" detail="40+ amenidades · 5 tipologías · Desde $586K USD" link={localePath('/propiedad/bay-view-grand-grand-island')} />
 
-      <p><strong className="text-foreground">Kabeek Marina & Condos</strong> — Solo 30 residencias con muelle privado a la Laguna Nichupté para embarcaciones de hasta 80 pies. Doble vista Caribe y laguna. Arquitectura de Humberto Artigas. El activo más escaso de la Zona Hotelera.</p>
-      <PropertyCard name="Kabeek Marina & Condos" badge="Preventa Exclusiva" detail="30 unidades · Marina privada · Doble vista · Arq. Humberto Artigas" link={localePath('/propiedad/kabeek-marina-condos')} />
+      <p><strong className="text-foreground">Kabeek Marina & Condos</strong> — Solo 23 residencias con muelle privado a la Laguna Nichupté para embarcaciones de hasta 80 pies. Doble vista Caribe y laguna. Arquitectura de Humberto Artigas. El activo más escaso de la Zona Hotelera.</p>
+      <PropertyCard name="Kabeek Marina & Condos" badge="Preventa Exclusiva" detail="23 unidades · Marina privada · Doble vista · Arq. Humberto Artigas" link={localePath('/propiedad/kabeek-marina-condos')} />
 
       <div className="text-center my-4">
         <Link to={localePath('/cancun/zona-hotelera')} className="text-primary font-body text-sm hover:underline">Ver todas las propiedades en Zona Hotelera →</Link>

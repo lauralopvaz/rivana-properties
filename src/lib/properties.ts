@@ -54,6 +54,11 @@ import kabeekFachadaLaguna from '@/assets/kabeek-fachada-laguna.jpg';
 import kabeekLobbyDobleAltura from '@/assets/kabeek-lobby-doble-altura.jpg';
 import kabeekLobbyJardin from '@/assets/kabeek-lobby-jardin.jpg';
 import kabeekMasterplanAerea from '@/assets/kabeek-masterplan-aerea.jpg';
+import kabeekRecamaraPrincipal from '@/assets/kabeek-recamara-principal.jpg';
+import kabeekRestaurantePalapa from '@/assets/kabeek-restaurante-palapa.jpg';
+import kabeekSalaVistaLaguna from '@/assets/kabeek-sala-vista-laguna.jpg';
+import kabeekSpaHidromasaje from '@/assets/kabeek-spa-hidromasaje.jpg';
+import kabeekTerrazasJacuzzi from '@/assets/kabeek-terrazas-jacuzzi.jpg';
 import bayViewGrandHero from '@/assets/bay-view-grand-hero.jpg';
 import arboladaHero from '@/assets/arbolada-hero.jpg';
 import thompsonHero from '@/assets/thompson-hero.jpg';
@@ -594,9 +599,9 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Consultar',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: [kabeekFachadaAtardecer, kabeekFachadaEntrada, kabeekFachadaLaguna, kabeekLobbyDobleAltura, kabeekLobbyJardin, kabeekAlbercaCorredor, kabeekAlbercaMarina, kabeekClubBiblioteca, kabeekBanoVestidor, kabeekMasterplanAerea],
-    description: 'Kabeek Marina & Condos se ubica en la zona más tranquila de la Zona Hotelera de Cancún, sobre la Avenida Kukulkán, con muelle privado a la Laguna Nichupté y vistas al mar Caribe y a la laguna. Solo 30 residencias con diseño del reconocido arquitecto Humberto Artigas (Artigas Arquitectos). Un activo escaso en zona consolidada con demanda turística y residencial permanente.',
-    descriptionEn: 'Kabeek Marina & Condos sits on the calmest stretch of Cancún\'s Hotel Zone, directly on Blvd. Kukulkán, with a private dock on Laguna Nichupté and unobstructed views of both the Caribbean Sea and the lagoon. Only 30 residences designed by renowned architect Humberto Artigas (Artigas Arquitectos). A rare hard asset in a consolidated zone with permanent tourist and residential demand.',
+    images: [kabeekFachadaAtardecer, kabeekFachadaEntrada, kabeekFachadaLaguna, kabeekLobbyDobleAltura, kabeekLobbyJardin, kabeekAlbercaCorredor, kabeekAlbercaMarina, kabeekSalaVistaLaguna, kabeekRecamaraPrincipal, kabeekBanoVestidor, kabeekRestaurantePalapa, kabeekClubBiblioteca, kabeekSpaHidromasaje, kabeekTerrazasJacuzzi, kabeekMasterplanAerea],
+    description: 'Kabeek Marina & Condos se ubica en la zona más tranquila de la Zona Hotelera de Cancún, sobre la Avenida Kukulkán, con muelle privado a la Laguna Nichupté y vistas al mar Caribe y a la laguna. Solo 23 residencias con diseño del reconocido arquitecto Humberto Artigas (Artigas Arquitectos). Un activo escaso en zona consolidada con demanda turística y residencial permanente.',
+    descriptionEn: 'Kabeek Marina & Condos sits on the calmest stretch of Cancún\'s Hotel Zone, directly on Blvd. Kukulkán, with a private dock on Laguna Nichupté and unobstructed views of both the Caribbean Sea and the lagoon. Only 23 residences designed by renowned architect Humberto Artigas (Artigas Arquitectos). A rare hard asset in a consolidated zone with permanent tourist and residential demand.',
     features: [
       'Muelle privado (hasta 80 pies)', 'Alberca semi-olímpica climatizada', 'Spa', 'Gimnasio',
       'Lounge/Bar', 'Área de asadores', 'Kids Club', 'Seguridad 24/7',
@@ -625,11 +630,11 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     differentiators: [
       {
         type: 'exclusivo', layout: 'featured',
-        title: 'Solo 30 residencias con muelle privado',
-        titleEn: 'Only 30 residences with private marina',
+        title: 'Solo 23 residencias con muelle privado',
+        titleEn: 'Only 23 residences with private marina',
         description: 'Producto ultra-escaso en la Zona Hotelera con acceso náutico para embarcaciones de hasta 80 pies — no existe comparable en el mercado.',
         descriptionEn: 'Ultra-scarce product in the Hotel Zone with nautical access for vessels up to 80 feet — no comparable product on the market.',
-        stat: '30', statLabel: 'residencias', statLabelEn: 'residences',
+        stat: '23', statLabel: 'residencias', statLabelEn: 'residences',
         pills: ['Muelle privado', 'Humberto Artigas'],
         pillsEn: ['Private dock', 'Humberto Artigas'],
       },
