@@ -132,15 +132,15 @@ const Home = () => {
         <img src={homeHero} alt={language === 'es' ? 'Propiedad de lujo frente al mar en Cancún' : 'Luxury beachfront property in Cancún'} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[hsl(0_0%_0%/0.35)]" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center text-[hsl(var(--pearl))]">
-          <p className="eyebrow mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="eyebrow mb-6 animate-fade-in" style={{ animationDelay: '0.2s', fontSize: '16px' }}>
             {language === 'es' ? 'Asesoría Inmobiliaria de Lujo' : 'Luxury Real Estate Advisory'}
           </p>
           <h1 className="mb-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
             {t('hero.tagline').split(',')[0]},{' '}
             <em className="text-primary not-italic font-display italic">{t('hero.tagline').split(',')[1]}</em>
           </h1>
-          <p className="font-body text-lg text-[hsl(var(--pearl))]/80 max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.6s' }}>
-            {t('hero.subtitle')}
+          <p className="font-body text-[hsl(var(--pearl))]/80 max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.6s', fontSize: '21px' }}>
+            {language === 'es' ? 'Propiedades exclusivas en Cancún y la Riviera Maya' : 'Exclusive properties in Cancún and the Riviera Maya'}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.8s' }}>
             <Button variant="gold" size="lg" asChild>
