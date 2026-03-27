@@ -17,6 +17,7 @@ import { PreSaleGuideBodyES, PreSaleGuideBodyEN } from '@/components/journal/Pre
 import { MayakobaVsPuertoBodyES, MayakobaVsPuertoBodyEN } from '@/components/journal/MayakobaVsPuertoBody';
 import { WorldCupBodyES, WorldCupBodyEN } from '@/components/journal/WorldCupBody';
 import { MondrianPresaleBodyES, MondrianPresaleBodyEN } from '@/components/journal/MondrianPresaleBody';
+import { GuiaPreventaCancunBodyES, GuiaPreventaCancunBodyEN } from '@/components/journal/GuiaPreventaCancunBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -164,6 +165,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['Qué es Mondrian Residences', 'De The Residences a Mondrian', 'La marca Mondrian', 'Ubicación', 'Preventa: precio y ROI', 'Contexto macro', '¿Para quién es?', 'Proceso de compra']
       : ['What is Mondrian Residences', 'From The Residences to Mondrian', 'The Mondrian brand', 'Location', 'Presale: price & ROI', 'Macro context', 'Who is it for?', 'How to buy'])
+    : (articleSlug === 'guia-preventa-cancun-2026' || slug === 'pre-sale-guide-cancun-2026')
+    ? (language === 'es'
+      ? ['¿Qué es la preventa?', 'Ventajas', 'Riesgos', 'Mejores preventas Rivana', 'Esquemas de pago', '¿Por qué 2026?']
+      : ['What is pre-sale?', 'Advantages', 'Risks', 'Best Rivana pre-sales', 'Payment structures', 'Why 2026?'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -270,6 +275,8 @@ const JournalPost = () => {
               language === 'en' ? <WorldCupBodyEN /> : <WorldCupBodyES />
             ) : (articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale') ? (
               language === 'en' ? <MondrianPresaleBodyEN /> : <MondrianPresaleBodyES />
+            ) : (articleSlug === 'guia-preventa-cancun-2026' || slug === 'pre-sale-guide-cancun-2026') ? (
+              language === 'en' ? <GuiaPreventaCancunBodyEN /> : <GuiaPreventaCancunBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
