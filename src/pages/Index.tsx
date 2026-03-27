@@ -12,7 +12,7 @@ import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
 import { ProcessTimeline } from '@/components/home/ProcessTimeline';
 
-const homeHero = '/images/mondrian/mondrian-hero.jpg';
+import homeHero from '@/assets/home-hero-sls.jpg';
 import presaleHero from '@/assets/presale-hero.jpg';
 
 // Destination images
