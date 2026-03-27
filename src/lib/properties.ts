@@ -44,7 +44,16 @@ import fpDepBEsquina from '@/assets/mondrian/fp-dep-b-esquina.png';
 import fpDepCEsquina from '@/assets/mondrian/fp-dep-c-esquina.png';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
 import villageBluHero from '@/assets/village-blu-hero.jpg';
-import kabeekHero from '@/assets/kabeek-hero.jpg';
+import kabeekFachadaAtardecer from '@/assets/kabeek-fachada-atardecer.jpg';
+import kabeekAlbercaCorredor from '@/assets/kabeek-alberca-corredor.jpg';
+import kabeekAlbercaMarina from '@/assets/kabeek-alberca-marina.jpg';
+import kabeekBanoVestidor from '@/assets/kabeek-bano-vestidor.jpg';
+import kabeekClubBiblioteca from '@/assets/kabeek-club-biblioteca.jpg';
+import kabeekFachadaEntrada from '@/assets/kabeek-fachada-entrada.jpg';
+import kabeekFachadaLaguna from '@/assets/kabeek-fachada-laguna.jpg';
+import kabeekLobbyDobleAltura from '@/assets/kabeek-lobby-doble-altura.jpg';
+import kabeekLobbyJardin from '@/assets/kabeek-lobby-jardin.jpg';
+import kabeekMasterplanAerea from '@/assets/kabeek-masterplan-aerea.jpg';
 import bayViewGrandHero from '@/assets/bay-view-grand-hero.jpg';
 import arboladaHero from '@/assets/arbolada-hero.jpg';
 import thompsonHero from '@/assets/thompson-hero.jpg';
@@ -585,7 +594,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Consultar',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: [kabeekHero],
+    images: [kabeekFachadaAtardecer, kabeekFachadaEntrada, kabeekFachadaLaguna, kabeekLobbyDobleAltura, kabeekLobbyJardin, kabeekAlbercaCorredor, kabeekAlbercaMarina, kabeekClubBiblioteca, kabeekBanoVestidor, kabeekMasterplanAerea],
     description: 'Kabeek Marina & Condos se ubica en la zona más tranquila de la Zona Hotelera de Cancún, sobre la Avenida Kukulkán, con muelle privado a la Laguna Nichupté y vistas al mar Caribe y a la laguna. Solo 30 residencias con diseño del reconocido arquitecto Humberto Artigas (Artigas Arquitectos). Un activo escaso en zona consolidada con demanda turística y residencial permanente.',
     descriptionEn: 'Kabeek Marina & Condos sits on the calmest stretch of Cancún\'s Hotel Zone, directly on Blvd. Kukulkán, with a private dock on Laguna Nichupté and unobstructed views of both the Caribbean Sea and the lagoon. Only 30 residences designed by renowned architect Humberto Artigas (Artigas Arquitectos). A rare hard asset in a consolidated zone with permanent tourist and residential demand.',
     features: [
