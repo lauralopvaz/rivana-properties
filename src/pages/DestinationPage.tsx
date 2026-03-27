@@ -197,7 +197,8 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const seoTitle = subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
   const seoDescription = subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
   const h1Text = subPageConfig ? subPageConfig.seo.h1[language] : config.seo.h1[language];
-  const currentPath = subPage ? `${config.basePath}/${subPage}` : config.basePath;
+  const basePathLocale = language === 'en' ? `/en${config.basePath}` : config.basePath;
+  const currentPath = subPage ? `${basePathLocale}/${subPage}` : basePathLocale;
 
   const schema = {
     '@context': 'https://schema.org',
