@@ -128,21 +128,21 @@ const Home = () => {
       <SEOHead title={seoTitle} description={seoDesc} path={language === 'en' ? '/en' : '/'} schema={schema} ogImage="/images/mondrian/mondrian-hero.jpg" />
 
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img src={homeHero} alt={language === 'es' ? 'Propiedad de lujo frente al mar en Cancún' : 'Luxury beachfront property in Cancún'} className="absolute inset-0 w-full h-full object-cover" />
+      <section className="relative flex items-center justify-center overflow-hidden home-hero-section" style={{ height: '100vh', minHeight: '700px' }}>
+        <img src={homeHero} alt={language === 'es' ? 'Propiedad de lujo frente al mar en Cancún' : 'Luxury beachfront property in Cancún'} className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center 30%' }} />
         <div className="absolute inset-0 home-hero-overlay" style={{ background: 'linear-gradient(160deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.35) 100%)' }} />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center text-[hsl(var(--pearl))]">
-          <p className="eyebrow mb-6 animate-fade-in home-hero-eyebrow" style={{ animationDelay: '0.2s', fontSize: '16px', letterSpacing: '4px', fontWeight: 500 }}>
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center text-[hsl(var(--pearl))] home-hero-content flex flex-col justify-center items-center" style={{ paddingTop: '80px' }}>
+          <p className="eyebrow animate-fade-in home-hero-eyebrow" style={{ animationDelay: '0.2s', fontSize: '16px', letterSpacing: '4px', fontWeight: 500, marginBottom: '16px' }}>
             {language === 'es' ? 'Asesoría Inmobiliaria de Lujo' : 'Luxury Real Estate Advisory'}
           </p>
-          <h1 className="mb-6 animate-fade-up home-hero-h1" style={{ animationDelay: '0.4s', fontWeight: 600, textShadow: '0 2px 24px rgba(0,0,0,0.5)' }}>
+          <h1 className="animate-fade-up home-hero-h1" style={{ animationDelay: '0.4s', fontWeight: 600, textShadow: '0 2px 24px rgba(0,0,0,0.5)', fontSize: 'clamp(3rem, 5vw, 5rem)', marginBottom: '12px' }}>
             {t('hero.tagline').split(',')[0]},{' '}
             <em className="text-primary not-italic font-display italic">{t('hero.tagline').split(',')[1]}</em>
           </h1>
-          <p className="font-body text-[hsl(var(--pearl))]/80 max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.6s', fontSize: '21px', fontWeight: 400, textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}>
+          <p className="font-body text-[hsl(var(--pearl))]/80 max-w-2xl mx-auto animate-fade-up home-hero-subtitle" style={{ animationDelay: '0.6s', fontSize: '21px', fontWeight: 400, textShadow: '0 1px 10px rgba(0,0,0,0.5)', marginBottom: '0' }}>
             {language === 'es' ? 'Propiedades exclusivas en Cancún y la Riviera Maya' : 'Exclusive properties in Cancún and the Riviera Maya'}
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up home-hero-buttons" style={{ animationDelay: '0.8s' }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up home-hero-buttons" style={{ animationDelay: '0.8s', marginTop: '36px' }}>
             <Button variant="gold" size="lg" asChild>
               <Link to={localePath('/listings')}>{t('hero.explore')}</Link>
             </Button>
