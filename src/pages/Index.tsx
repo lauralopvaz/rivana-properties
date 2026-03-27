@@ -12,7 +12,7 @@ import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
 import { ProcessTimeline } from '@/components/home/ProcessTimeline';
 
-import homeHero from '@/assets/home-hero-sls.jpg';
+import homeHero from '@/assets/home-hero-main.jpg';
 import presaleHero from '@/assets/presale-hero.jpg';
 
 // Destination images
@@ -130,7 +130,7 @@ const Home = () => {
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <img src={homeHero} alt={language === 'es' ? 'Propiedad de lujo frente al mar en Cancún' : 'Luxury beachfront property in Cancún'} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-[hsl(0_0%_0%/0.35)]" />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.55) 100%)' }} />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center text-[hsl(var(--pearl))]">
           <p className="eyebrow mb-6 animate-fade-in" style={{ animationDelay: '0.2s', fontSize: '16px' }}>
             {language === 'es' ? 'Asesoría Inmobiliaria de Lujo' : 'Luxury Real Estate Advisory'}
