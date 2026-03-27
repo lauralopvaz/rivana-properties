@@ -192,6 +192,28 @@ export const journalArticles: JournalArticle[] = [
     slugEn: 'why-invest-presale-cancun-riviera-maya-2026',
   },
   {
+    slug: 'guia-preventa-cancun-2026',
+    slugEn: 'pre-sale-guide-cancun-2026',
+    title: {
+      es: 'Guía de Preventa en Cancún 2026: Todo lo que Necesitas Saber',
+      en: 'Pre-Sale Guide Cancún 2026: Everything You Need to Know',
+    },
+    seoTitle: {
+      es: 'Guía de Preventa en Cancún 2026 | Rivana',
+      en: 'Pre-Sale Guide Cancún 2026 | Rivana',
+    },
+    category: { es: 'Guías', en: 'Guides' },
+    excerpt: {
+      es: 'Todo lo que necesitas saber sobre comprar en preventa en Cancún este 2026. Ventajas, riesgos, esquemas de pago y las mejores oportunidades del portafolio Rivana.',
+      en: 'Everything you need to know about buying pre-sale property in Cancún in 2026. Advantages, risks, payment plans and the best opportunities from the Rivana portfolio.',
+    },
+    date: 'Mar 1, 2026',
+    readTime: '10 min',
+    author: 'Alejandra Reyes',
+    image: imgGuiaPreventa,
+    relatedDestinations: ['zona-hotelera', 'costa-mujeres', 'puerto-cancun'],
+  },
+  {
     slug: 'mondrian-residences-grand-island-cancun-preventa',
     slugEn: 'mondrian-residences-grand-island-cancun-presale',
     title: {
@@ -215,23 +237,8 @@ export const journalArticles: JournalArticle[] = [
   },
 ];
 
-// Spanish-only journal articles
-export const journalArticlesEs: JournalArticle[] = [
-  {
-    slug: 'guia-preventa-cancun-2026',
-    title: { es: 'Guía de Preventa en Cancún 2026', en: 'Pre-Sale Guide Cancun 2026' },
-    category: { es: 'Guías', en: 'Guides' },
-    excerpt: {
-      es: 'Todo lo que necesitas saber sobre comprar en preventa en Cancún este 2026.',
-      en: 'Everything you need to know about buying pre-sale in Cancún in 2026.',
-    },
-    date: 'Mar 1, 2026',
-    readTime: '10 min',
-    author: 'Alejandra Reyes',
-    image: imgGuiaPreventa,
-    relatedDestinations: ['zona-hotelera', 'costa-mujeres', 'puerto-cancun'],
-  },
-];
+// Legacy export kept for compatibility
+export const journalArticlesEs: JournalArticle[] = [];
 
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 
