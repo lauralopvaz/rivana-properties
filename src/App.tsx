@@ -89,6 +89,7 @@ const AppRoutes = () => (
     <Route path="/presale" element={<PreSale />} />
     <Route path="/propiedad/:slug" element={<PropertyDetailNew locale="es" />} />
     <Route path="/aviso-de-privacidad" element={<PrivacyPolicy />} />
+    <Route path="/cancun/departamentos-en-venta" element={<CancunCondos />} />
 
     {/* ── ENGLISH (/en prefix) ── */}
     <Route path="/en" element={<Index />} />
@@ -132,6 +133,7 @@ const AppRoutes = () => (
     <Route path="/en/presale" element={<PreSale />} />
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
+    <Route path="/en/cancun/condos-for-sale" element={<CancunCondos />} />
 
     {/* Redirects — consolidate all property routes to canonical paths */}
     <Route path="/property/:slug" element={<RedirectPropertyEN />} />
