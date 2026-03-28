@@ -24,6 +24,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import PropertyDetailNew from "./pages/PropertyDetailNew";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CancunCondos from "./pages/CancunCondos";
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
