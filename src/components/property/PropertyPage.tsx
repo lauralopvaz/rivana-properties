@@ -64,9 +64,10 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   const seoTitleOverride = locale === 'en' ? property.seoTitleEn : property.seoTitle;
   const shortZone = zone.split(',')[0].trim();
   const seoTitle = seoTitleOverride || `${property.name} — ${shortZone} | Rivana`;
-  const seoDesc = desc ? desc.slice(0, 155) : (locale === 'en'
+  const seoDescOverride = locale === 'en' ? property.seoDescriptionEn : property.seoDescription;
+  const seoDesc = seoDescOverride || (desc ? desc.slice(0, 155) : (locale === 'en'
     ? `${property.name} in ${zone}. Luxury real estate advisory with Rivana Properties.`
-    : `${property.name} en ${zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`);
+    : `${property.name} en ${zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`));
   const seoPath = locale === 'en' ? `/en/property/${property.slug}` : `/propiedad/${property.slug}`;
 
   return (
