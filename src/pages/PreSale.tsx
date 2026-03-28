@@ -165,20 +165,15 @@ const PreSale = () => {
     <div className="bg-white">
       <SEOHead
         title={L === 'es' ? 'Preventas Exclusivas Cancún & Riviera Maya | Rivana' : 'Exclusive Pre-Sales Cancún Riviera Maya | Rivana'}
-        description={L === 'es' ? 'Preventas exclusivas en Cancún y Riviera Maya. Mondrian, SLS, The Reserve, Dhamar y más. Plusvalía 15–33%, gestión incluida.' : 'Exclusive pre-sales in Cancún and Riviera Maya. Mondrian, SLS, The Reserve, Dhamar and more. 15–33% appreciation, managed returns.'}
+        description={L === 'es' ? 'Preventas de lujo en Cancún, Costa Mujeres, Puerto Morelos y Mayakoba. Mondrian, SLS, The Reserve y más. Desde $248,000 USD con gestión incluida.' : 'Luxury pre-sales in Cancún, Costa Mujeres, Puerto Morelos and Mayakoba. Mondrian, SLS, The Reserve and more. From $248,000 USD, managed returns.'}
         ogImage="/images/mondrian/mondrian-hero.jpg"
         path={L === 'en' ? '/en/presale' : '/presale'}
         schema={{
           "@context": "https://schema.org",
-          "@type": "Product",
-          name: "Mondrian Residences at Grand Island Cancún",
-          description: "Preventa exclusiva de Mondrian Residences at Grand Island Cancún. Condos de lujo desde $514K USD en la Zona Hotelera.",
-          offers: {
-            "@type": "Offer",
-            price: 514000,
-            priceCurrency: "USD",
-            availability: "https://schema.org/PreOrder",
-          },
+          "@type": "CollectionPage",
+          name: L === 'es' ? 'Preventas Exclusivas — Rivana Properties' : 'Exclusive Pre-Sales — Rivana Properties',
+          description: L === 'es' ? 'Portafolio de preventas de lujo en Cancún y la Riviera Maya' : 'Luxury pre-sale portfolio in Cancún and the Riviera Maya',
+          url: `https://rivanaproperties.com${L === 'en' ? '/en/presale' : '/presale'}`,
         }}
       />
 
