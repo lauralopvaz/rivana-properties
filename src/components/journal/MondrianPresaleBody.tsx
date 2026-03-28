@@ -7,7 +7,7 @@ const PropertyCard = ({ name, badge, detail, link }: { name: string; badge: stri
     <div className="flex items-start justify-between gap-4">
       <div>
         <span className="text-[10px] font-body uppercase tracking-widest text-primary">{badge}</span>
-        <h4 className="text-base mt-1 group-hover:text-primary transition-colors">{name}</h4>
+        <h3 className="text-base mt-1 group-hover:text-primary transition-colors">{name}</h3>
         <p className="text-sm text-muted-foreground font-body mt-1">{detail}</p>
       </div>
       <span className="text-primary text-lg shrink-0">→</span>

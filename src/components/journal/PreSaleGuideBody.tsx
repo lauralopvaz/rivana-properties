@@ -11,7 +11,7 @@ const PropertyCard = ({
     <div className="flex items-start justify-between gap-4 flex-wrap">
       <div>
         <span className="text-xs font-body tracking-wider uppercase text-primary">{badge}</span>
-        <h4 className="text-lg mt-1 group-hover:text-primary transition-colors">{name}</h4>
+        <h3 className="text-lg mt-1 group-hover:text-primary transition-colors">{name}</h3>
         <p className="text-sm text-muted-foreground font-body mt-1">{detail}</p>
         {tagline && <p className="text-sm text-primary/80 font-body italic mt-1">{tagline}</p>}
       </div>
