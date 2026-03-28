@@ -39,27 +39,8 @@ import thompsonHero from '@/assets/thompson-hero.jpg';
 import soleBluHero from '@/assets/sole-blu-hero.jpg';
 import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
-// Journal images
-import journalRoi from '@/assets/journal-roi.jpg';
-import journalBuyer from '@/assets/journal-buyer.jpg';
-import journalWorldcup from '@/assets/journal-worldcup.jpg';
 
-const destinationImages: Record<string, string> = {
-  'zona-hotelera': destZonaHotelera,
-  'puerto-cancun': destPuertoCancun,
-  'costa-mujeres': destCostaMujeres,
-  'mayakoba': destMayakoba,
-  'puerto-morelos': destPuertoMorelos,
-  'cancun-centro': destCancunCentro,
-  'tulum': destTulum,
-  'playa-del-carmen': destPlayaDelCarmen,
-};
 
-const journalImages: Record<string, string> = {
-  'cancun-roi-rental-yield': journalRoi,
-  'foreign-buyer-guide-mexico': journalBuyer,
-  'world-cup-2026-cancun-real-estate': journalWorldcup,
-};
 
 const featuredProperties = [
   { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
