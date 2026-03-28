@@ -140,7 +140,7 @@ const Home = () => {
             <em className="text-primary not-italic font-display italic">{t('hero.tagline').split(',')[1]}</em>
           </h1>
           <p className="font-body text-[hsl(var(--pearl))]/80 max-w-2xl mx-auto animate-fade-up home-hero-subtitle" style={{ animationDelay: '0.6s', fontSize: '21px', fontWeight: 400, textShadow: '0 1px 10px rgba(0,0,0,0.5)', marginBottom: '0' }}>
-            {language === 'es' ? <>Propiedades exclusivas en Cancún<br className="md:hidden" />y la Riviera Maya</> : <>Exclusive properties in Cancún<br className="md:hidden" />and the Riviera Maya</>}
+            {language === 'es' ? <>Propiedades exclusivas en Cancún{' '}<br className="md:hidden" />y la Riviera Maya</> : <>Exclusive properties in Cancún{' '}<br className="md:hidden" />and the Riviera Maya</>}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up home-hero-buttons" style={{ animationDelay: '0.8s', marginTop: '36px' }}>
             <Button variant="gold" size="lg" asChild>
