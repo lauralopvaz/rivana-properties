@@ -97,8 +97,8 @@ export const destinations: DestinationConfig[] = [
       {
         segment: 'condos',
         seo: {
-          title: { es: 'Condos Zona Hotelera Cancún en Venta | Rivana', en: 'Condos Cancun Hotel Zone for Sale | Rivana' },
-          h1: { es: 'Condos en Venta — Zona Hotelera Cancún', en: 'Condos for Sale — Cancun Hotel Zone' },
+          title: { es: 'Condos de Lujo Zona Hotelera Cancún | Rivana', en: 'Luxury Condos Cancún Hotel Zone | Rivana' },
+          h1: { es: 'Condos de Lujo en la Zona Hotelera de Cancún', en: 'Luxury Condos in Cancún\'s Hotel Zone' },
           description: { es: 'Condos de lujo en venta en la Zona Hotelera de Cancún. Frente al mar, preventa y entrega inmediata con rendimientos probados.', en: 'Luxury condos for sale in Cancun Hotel Zone. Beachfront, pre-sale and ready-to-move with proven rental yields.' },
         },
         intro: {
@@ -337,8 +337,8 @@ export const destinations: DestinationConfig[] = [
       {
         segment: 'penthouses',
         seo: {
-          title: { es: 'Penthouses Costa Mujeres — Inversión Cancún | Rivana', en: 'Penthouses Costa Mujeres — Cancun Investment | Rivana' },
-          h1: { es: 'Penthouses en Venta — Costa Mujeres', en: 'Penthouses for Sale — Costa Mujeres' },
+          title: { es: 'Penthouses Costa Mujeres Cancún | Rivana', en: 'Penthouses Costa Mujeres Cancún | Rivana' },
+          h1: { es: 'Penthouses en Costa Mujeres', en: 'Penthouses in Costa Mujeres' },
           description: { es: 'Penthouses de lujo en Costa Mujeres. Vista al mar, alta plusvalía y rendimientos excepcionales.', en: 'Luxury penthouses in Costa Mujeres. Ocean views, high appreciation and exceptional yields.' },
         },
         intro: {
@@ -513,8 +513,8 @@ export const destinations: DestinationConfig[] = [
       {
         segment: 'condos',
         seo: {
-          title: { es: 'Condos Cancún Centro en Venta | Rivana', en: 'Condos Downtown Cancun for Sale | Rivana' },
-          h1: { es: 'Condos en Venta — Cancún Centro', en: 'Condos for Sale — Downtown Cancun' },
+          title: { es: 'Condos en Venta Cancún Centro | Rivana', en: 'Condos for Sale Downtown Cancún | Rivana' },
+          h1: { es: 'Condos en Venta en Cancún Centro', en: 'Condos for Sale in Downtown Cancún' },
           description: { es: 'Condos urbanos en venta en Cancún Centro. Precios accesibles, alta demanda de renta y plusvalía constante.', en: 'Urban condos for sale in downtown Cancun. Accessible prices, high rental demand and steady appreciation.' },
         },
         intro: {
@@ -636,8 +636,8 @@ export const destinations: DestinationConfig[] = [
       {
         segment: 'condos',
         seo: {
-          title: { es: 'Condominios en Venta — Playa del Carmen | Rivana', en: 'Condos for Sale — Playa del Carmen | Rivana' },
-          h1: { es: 'Condominios en Venta — Playa del Carmen', en: 'Condos for Sale — Playa del Carmen' },
+          title: { es: 'Condos de Lujo Playa del Carmen | Rivana', en: 'Luxury Condos Playa del Carmen | Rivana' },
+          h1: { es: 'Condos de Lujo en Playa del Carmen', en: 'Luxury Condos in Playa del Carmen' },
           description: { es: 'Condominios de lujo en venta en Playa del Carmen. Cerca de la Quinta Avenida y la playa.', en: 'Luxury condos for sale in Playa del Carmen. Near Fifth Avenue and the beach.' },
         },
       },
