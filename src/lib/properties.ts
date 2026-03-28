@@ -10,6 +10,15 @@ import reserveTerrazaGolf from '@/assets/reserve-mayakoba-terraza-vista-golf-sel
 import reserveTipodCocina from '@/assets/reserve-mayakoba-tipod-cocina-isla.jpg';
 import reserveTipodRecamara2 from '@/assets/reserve-mayakoba-tipod-recamara2.jpg';
 import reserveWalkingCloset from '@/assets/reserve-mayakoba-walking-closet-bano.jpg';
+import reserveAlbercaRestaurante from '@/assets/reserve-mayakoba-alberca-restaurante.jpg';
+import reserveCasaClubFachada from '@/assets/reserve-mayakoba-casa-club-fachada.jpg';
+import reserveCasaClubLaguna from '@/assets/reserve-mayakoba-casa-club-laguna.jpg';
+import reserveGimnasio from '@/assets/reserve-mayakoba-gimnasio-vista-selva.jpg';
+import reserveKidsClub from '@/assets/reserve-mayakoba-kids-club.jpg';
+import reserveRestauranteMadera from '@/assets/reserve-mayakoba-restaurante-madera.jpg';
+import reserveSpaMasaje from '@/assets/reserve-mayakoba-spa-sala-masaje.jpg';
+import reserveWhiskeyBar from '@/assets/reserve-mayakoba-whiskey-bar-lounge.jpg';
+import reserveZonaEventos from '@/assets/reserve-mayakoba-zona-eventos-terraza.jpg';
 const mondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.jpg';
 const mondrianCoffeeBar = '/images/mondrian/mondrian-coffee-bar.jpg';
