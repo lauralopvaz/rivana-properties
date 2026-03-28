@@ -117,6 +117,10 @@ export const journalArticles: JournalArticle[] = [
       es: 'Condominios de Lujo en la Zona Hotelera de Cancún: Guía Definitiva 2026',
       en: 'Luxury Condos in Cancún\'s Hotel Zone: The Definitive 2026 Guide',
     },
+    seoTitle: {
+      es: 'Condos de Lujo Zona Hotelera Cancún 2026',
+      en: 'Hotel Zone Cancún Luxury Condos Guide 2026',
+    },
     category: { es: 'Destinos', en: 'Destinations' },
     excerpt: {
       es: 'Guía completa para comprar condominios de lujo en la Zona Hotelera de Cancún en 2026. Precios por zona, comparativa de desarrollos y propiedades del portafolio Rivana.',
