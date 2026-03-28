@@ -93,8 +93,8 @@ const Home = () => {
   const sortedDestinations = [...destinations].sort((a, b) => a.priority - b.priority);
 
   const seoTitle = language === 'es'
-    ? 'Propiedades de Lujo en Cancún y Riviera Maya | Rivana'
-    : 'Luxury Properties in Cancun & Riviera Maya | Rivana';
+    ? 'Propiedades de Lujo Cancún & Riviera Maya | Rivana'
+    : 'Luxury Real Estate Cancún & Riviera Maya | Rivana';
   const seoDesc = language === 'es'
     ? 'Tu inversión, tu legado. Asesoría inmobiliaria de lujo en Cancún y la Riviera Maya. Propiedades exclusivas para inversionistas visionarios.'
     : 'Your investment, your legacy. Luxury real estate advisory in Cancún and the Riviera Maya. Exclusive properties for visionary investors.';
