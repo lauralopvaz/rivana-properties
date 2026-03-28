@@ -1,5 +1,5 @@
 import type { PropertyDetail } from '@/types/property';
-import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
+
 import reserveFachadaJardin from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
 import reservePh4Comedor from '@/assets/reserve-mayakoba-ph4-comedor-vista-selva.jpg';
 import reservePh4RecamaraPrincipal from '@/assets/reserve-mayakoba-ph4-recamara-principal.jpg';
@@ -116,7 +116,7 @@ export const properties: PropertyDetail[] = [
     delivery: '2027–2028',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: [reserveFachadaJardin, reserveHero, reservePh4TerrazaAlberca, reserveTerrazaGolf, reserveCasaClubFachada, reserveCasaClubLaguna, reserveAlbercaRestaurante, reservePh4Comedor, reserveTipodCocina, reservePh4RecamaraPrincipal, reservePh4Recamara1Doble, reservePh4Recamara2Doble, reserveTipodRecamara2, reserveWalkingCloset, reserveRestauranteMadera, reserveZonaEventos, reserveWhiskeyBar, reserveGimnasio, reserveKidsClub, reserveSpaMasaje],
+    images: [reserveFachadaJardin, reservePh4TerrazaAlberca, reserveTerrazaGolf, reserveCasaClubFachada, reserveCasaClubLaguna, reserveAlbercaRestaurante, reservePh4Comedor, reserveTipodCocina, reservePh4RecamaraPrincipal, reservePh4Recamara1Doble, reservePh4Recamara2Doble, reserveTipodRecamara2, reserveWalkingCloset, reserveRestauranteMadera, reserveZonaEventos, reserveWhiskeyBar, reserveGimnasio, reserveKidsClub, reserveSpaMasaje],
     description: 'The Reserve at Mayakoba es un desarrollo residencial de ultra-lujo dentro del icónico complejo Mayakoba en la Riviera Maya. 144 departamentos distribuidos en 16 torres de baja altura rodeadas de naturaleza — 65% del terreno es conservación natural. Desarrollado por Sancus Capital Partners e Inmobilia, con arquitectura de L35 Arquitectos y Sepúlveda Arquitectos. Los propietarios tienen acceso a los servicios hoteleros de Banyan Tree Mayakoba: spa, room service y restaurantes de clase mundial.',
     descriptionEn: 'The Reserve at Mayakoba is an ultra-luxury residential development within the iconic Mayakoba complex in the Riviera Maya. 144 apartments across 16 low-rise towers surrounded by nature — 65% of the land is natural conservation. Developed by Sancus Capital Partners and Inmobilia, with architecture by L35 Arquitectos and Sepúlveda Arquitectos. Owners have access to Banyan Tree Mayakoba hotel services: spa, room service, and world-class restaurants.',
     features: [
