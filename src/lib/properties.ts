@@ -1,5 +1,15 @@
 import type { PropertyDetail } from '@/types/property';
 import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
+import reserveFachadaJardin from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
+import reservePh4Comedor from '@/assets/reserve-mayakoba-ph4-comedor-vista-selva.jpg';
+import reservePh4RecamaraPrincipal from '@/assets/reserve-mayakoba-ph4-recamara-principal.jpg';
+import reservePh4Recamara1Doble from '@/assets/reserve-mayakoba-ph4-recamara1-doble.jpg';
+import reservePh4Recamara2Doble from '@/assets/reserve-mayakoba-ph4-recamara2-doble.jpg';
+import reservePh4TerrazaAlberca from '@/assets/reserve-mayakoba-ph4-terraza-alberca-privada.jpg';
+import reserveTerrazaGolf from '@/assets/reserve-mayakoba-terraza-vista-golf-selva.jpg';
+import reserveTipodCocina from '@/assets/reserve-mayakoba-tipod-cocina-isla.jpg';
+import reserveTipodRecamara2 from '@/assets/reserve-mayakoba-tipod-recamara2.jpg';
+import reserveWalkingCloset from '@/assets/reserve-mayakoba-walking-closet-bano.jpg';
 const mondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.jpg';
 const mondrianCoffeeBar = '/images/mondrian/mondrian-coffee-bar.jpg';
