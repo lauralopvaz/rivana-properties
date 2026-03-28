@@ -31,7 +31,7 @@ import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
 import reserveHero from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
 import vellmariHero from '@/assets/vellmari-alberca-fachada-torres.jpg';
-import villageBluHero from '@/assets/village-blu-hero.jpg';
+import soleBluHero from '@/assets/sole-blu-fachada-principal-atardecer.jpg';
 import kabeekHero from '@/assets/kabeek-fachada-atardecer.jpg';
 import bayViewGrandHero from '@/assets/bvg-rooftop-pool-laguna.jpg';
 
@@ -58,7 +58,7 @@ const featuredProperties = [
   { name: 'Bay View Grand at Grand Island', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 451, price: '$586K', amenities: ['ocean', 'marina', 'golf'], image: bayViewGrandHero, slug: 'bay-view-grand-grand-island' },
   { name: 'Kabeek Marina & Condos', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 4, area: 670, price: 'Consultar', amenities: ['ocean', 'marina', 'spa'], image: kabeekHero, slug: 'kabeek-marina-condos' },
   { name: 'Vellmari Grand Living', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 714, price: '$14.8M MXN', amenities: ['marina', 'pool', 'spa'], image: vellmariHero, slug: 'vellmari-grand-living' },
-  { name: 'Village Blu Beach Apartments', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 1, area: 73, price: '$273K', amenities: ['ocean', 'pool', 'sunset'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
+  { name: 'Sole Blu Ocean Living', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 2, area: 122, price: '$295K', amenities: ['ocean', 'pool', 'sunset'], image: soleBluHero, slug: 'sole-blu-ocean-living' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
