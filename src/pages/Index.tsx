@@ -29,7 +29,7 @@ import destPlayaDelCarmen from '@/assets/dest-playa-del-carmen.jpg';
 const propMondrian = '/images/mondrian/mondrian-hero.jpg';
 import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
-import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
+import reserveHero from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
 import villageBluHero from '@/assets/village-blu-hero.jpg';
 import kabeekHero from '@/assets/kabeek-fachada-atardecer.jpg';
