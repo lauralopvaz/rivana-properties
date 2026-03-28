@@ -69,6 +69,12 @@ import bvgTerrazaAlbercaAtardecer from '@/assets/bvg-terraza-alberca-atardecer.j
 import bvgAmenityWineCellar from '@/assets/bvg-amenity-wine-cellar.jpg';
 import bvgAmenitySpaTratamiento from '@/assets/bvg-amenity-spa-tratamiento.jpg';
 import bvgAmenitySalonJuegos from '@/assets/bvg-amenity-salon-juegos.jpg';
+import bvgAereaComplejoLaguna from '@/assets/bvg-aerea-complejo-laguna.jpg';
+import bvgAlbercaInfinitaVistaPanoramica from '@/assets/bvg-alberca-infinita-vista-panoramica.jpg';
+import bvgAmenityCoworking from '@/assets/bvg-amenity-coworking.jpg';
+import bvgAmenityGimnasioYoga from '@/assets/bvg-amenity-gimnasio-yoga.jpg';
+import bvgAmenityKidsClub from '@/assets/bvg-amenity-kids-club.jpg';
+import bvgAmenityRestauranteLounge from '@/assets/bvg-amenity-restaurante-lounge.jpg';
 import arboladaHero from '@/assets/arbolada-hero.jpg';
 import thompsonHero from '@/assets/thompson-hero.jpg';
 import soleBluHero from '@/assets/sole-blu-hero.jpg';
