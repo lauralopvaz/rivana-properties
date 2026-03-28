@@ -46,7 +46,7 @@ const translations: Record<string, Record<Language, string>> = {
   // Sections
   'section.destinations': { es: 'Destinos', en: 'Destinations' },
   'section.collections': { es: 'Nuestras Colecciones', en: 'Our Collections' },
-  'section.featured': { es: 'Selección Curada', en: 'Curated Selection' },
+  'section.featured': { es: 'Selección Premium', en: 'Premium Selection' },
   'section.featuredTitle': { es: 'Propiedades Destacadas', en: 'Featured Properties' },
   'section.schedule': { es: 'Asesoría Personalizada', en: 'Personal Advisory' },
   'section.scheduleTitle': { es: 'Agenda una Visita', en: 'Schedule a Visit' },
