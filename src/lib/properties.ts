@@ -59,7 +59,16 @@ import kabeekRestaurantePalapa from '@/assets/kabeek-restaurante-palapa.jpg';
 import kabeekSalaVistaLaguna from '@/assets/kabeek-sala-vista-laguna.jpg';
 import kabeekSpaHidromasaje from '@/assets/kabeek-spa-hidromasaje.jpg';
 import kabeekTerrazasJacuzzi from '@/assets/kabeek-terrazas-jacuzzi.jpg';
-import bayViewGrandHero from '@/assets/bay-view-grand-hero.jpg';
+import bvgRooftopPoolLaguna from '@/assets/bvg-rooftop-pool-laguna.jpg';
+import bvgFachadaAlbercaExterior from '@/assets/bvg-fachada-alberca-exterior.jpg';
+import bvgFachadaTorreLaguna from '@/assets/bvg-fachada-torre-laguna.jpg';
+import bvgSalaInteriorAtardecer from '@/assets/bvg-sala-interior-atardecer.jpg';
+import bvgSalaVistaGolf from '@/assets/bvg-sala-vista-golf.jpg';
+import bvgCocinaComedor from '@/assets/bvg-cocina-comedor.jpg';
+import bvgTerrazaAlbercaAtardecer from '@/assets/bvg-terraza-alberca-atardecer.jpg';
+import bvgAmenityWineCellar from '@/assets/bvg-amenity-wine-cellar.jpg';
+import bvgAmenitySpaTratamiento from '@/assets/bvg-amenity-spa-tratamiento.jpg';
+import bvgAmenitySalonJuegos from '@/assets/bvg-amenity-salon-juegos.jpg';
 import arboladaHero from '@/assets/arbolada-hero.jpg';
 import thompsonHero from '@/assets/thompson-hero.jpg';
 import soleBluHero from '@/assets/sole-blu-hero.jpg';
@@ -677,7 +686,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Consultar',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: [bayViewGrandHero],
+    images: [bvgRooftopPoolLaguna, bvgFachadaAlbercaExterior, bvgFachadaTorreLaguna, bvgSalaInteriorAtardecer, bvgSalaVistaGolf, bvgCocinaComedor, bvgTerrazaAlbercaAtardecer, bvgAmenityWineCellar, bvgAmenitySpaTratamiento, bvgAmenitySalonJuegos],
     description: 'Un desarrollo exclusivo en la Zona Hotelera de Cancún que redefine el lujo. Condominios con terraza, brisa del mar y amenidades de resort completo. Interiores curados por Filipão Nunes, arquitecto portugués de reconocida presencia internacional cuyo diseño convierte a BVG en un santuario para experiencias sensoriales. 5 tipologías para diferentes perfiles: desde inversionista hasta usuario final de alto patrimonio.',
     descriptionEn: 'An exclusive development in Cancún\'s Hotel Zone that redefines luxury. Condominiums with terraces, sea breeze, and full resort amenities. Interiors curated by Filipão Nunes, a renowned Portuguese architect whose design transforms BVG into a sanctuary for sensory experiences. Five unit types for every buyer profile: from first-time luxury investor to ultra-high-net-worth end user.',
     features: [
