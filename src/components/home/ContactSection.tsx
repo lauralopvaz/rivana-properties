@@ -92,11 +92,6 @@ export const ContactSection = () => {
     e.currentTarget.style.borderColor = 'rgba(0,0,0,0.09)';
   };
 
-  const stats = [
-    { val: '6', label: L === 'es' ? 'Proyectos activos en preventa' : 'Active pre-sale projects' },
-    { val: '8–12%', label: L === 'es' ? 'Rendimiento anual estimado' : 'Estimated annual yield' },
-    { val: '15–33%', label: L === 'es' ? 'Plusvalía al entrega' : 'Capital gains at delivery' },
-  ];
 
   const benefits = L === 'es'
     ? ['Asesoría inmobiliaria personalizada', 'Acceso a proyectos exclusivos en preventa', 'Acompañamiento legal y financiero', 'Equipo bilingüe · ES · EN']
@@ -124,15 +119,6 @@ export const ContactSection = () => {
                   : 'The Mexican Caribbean is one of the real estate markets with the highest capital gains in Latin America. Tell us about your next investment and we\'ll design a tailored strategy.'}
               </p>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 mb-10">
-                {stats.map((s) => (
-                  <div key={s.val} className="text-center lg:text-left">
-                    <span className="font-display text-3xl lg:text-4xl text-primary">{s.val}</span>
-                    <p className="font-body text-sm text-muted-foreground mt-1 leading-snug">{s.label}</p>
-                  </div>
-                ))}
-              </div>
 
               <ul className="mb-8 space-y-3">
                 {benefits.map((b) => (
