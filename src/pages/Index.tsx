@@ -40,6 +40,17 @@ import soleBluHero from '@/assets/sole-blu-hero.jpg';
 import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 
+const destinationImages: Record<string, string> = {
+  'zona-hotelera': destZonaHotelera,
+  'puerto-cancun': destPuertoCancun,
+  'costa-mujeres': destCostaMujeres,
+  'mayakoba': destMayakoba,
+  'puerto-morelos': destPuertoMorelos,
+  'cancun-centro': destCancunCentro,
+  'tulum': destTulum,
+  'playa-del-carmen': destPlayaDelCarmen,
+};
+
 
 
 const featuredProperties = [
