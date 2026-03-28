@@ -217,7 +217,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={seoDescription} path={currentPath} schema={schema} ogImage={destImages[destinationKey]} />
+      <SEOHead title={seoTitle} description={seoDescription} path={currentPath} schema={schema} ogImage={destImages[destinationKey]} hreflangEs={esPath} hreflangEn={enPath} />
       
 
       {/* Breadcrumb */}
