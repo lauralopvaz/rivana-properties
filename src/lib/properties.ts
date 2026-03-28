@@ -692,7 +692,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Consultar',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: [bvgRooftopPoolLaguna, bvgFachadaAlbercaExterior, bvgFachadaTorreLaguna, bvgSalaInteriorAtardecer, bvgSalaVistaGolf, bvgCocinaComedor, bvgTerrazaAlbercaAtardecer, bvgAmenityWineCellar, bvgAmenitySpaTratamiento, bvgAmenitySalonJuegos],
+    images: [bvgRooftopPoolLaguna, bvgFachadaAlbercaExterior, bvgFachadaTorreLaguna, bvgAereaComplejoLaguna, bvgAlbercaInfinitaVistaPanoramica, bvgSalaInteriorAtardecer, bvgSalaVistaGolf, bvgCocinaComedor, bvgTerrazaAlbercaAtardecer, bvgAmenityWineCellar, bvgAmenitySpaTratamiento, bvgAmenitySalonJuegos, bvgAmenityCoworking, bvgAmenityGimnasioYoga, bvgAmenityKidsClub, bvgAmenityRestauranteLounge],
     description: 'Un desarrollo exclusivo en la Zona Hotelera de Cancún que redefine el lujo. Condominios con terraza, brisa del mar y amenidades de resort completo. Interiores curados por Filipão Nunes, arquitecto portugués de reconocida presencia internacional cuyo diseño convierte a BVG en un santuario para experiencias sensoriales. 5 tipologías para diferentes perfiles: desde inversionista hasta usuario final de alto patrimonio.',
     descriptionEn: 'An exclusive development in Cancún\'s Hotel Zone that redefines luxury. Condominiums with terraces, sea breeze, and full resort amenities. Interiors curated by Filipão Nunes, a renowned Portuguese architect whose design transforms BVG into a sanctuary for sensory experiences. Five unit types for every buyer profile: from first-time luxury investor to ultra-high-net-worth end user.',
     features: [
