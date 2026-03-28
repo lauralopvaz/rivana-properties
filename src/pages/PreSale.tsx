@@ -165,7 +165,7 @@ const PreSale = () => {
     <div className="bg-white">
       <SEOHead
         title={L === 'es' ? 'Preventas Exclusivas Cancún & Riviera Maya | Rivana' : 'Exclusive Pre-Sales Cancún Riviera Maya | Rivana'}
-        description={L === 'es' ? 'Accede a las mejores preventas en Cancún, Playa del Carmen y Riviera Maya. Condos y penthouses de lujo con rendimientos de hasta 12% anual. Consulta hoy.' : 'Access the best presale properties in Cancun, Playa del Carmen and Riviera Maya. Luxury condos and penthouses with up to 12% annual ROI. Inquire today.'}
+        description={L === 'es' ? 'Preventas exclusivas en Cancún y Riviera Maya. Mondrian, SLS, The Reserve, Dhamar y más. Plusvalía 15–33%, gestión incluida.' : 'Exclusive pre-sales in Cancún and Riviera Maya. Mondrian, SLS, The Reserve, Dhamar and more. 15–33% appreciation, managed returns.'}
         ogImage="/images/mondrian/mondrian-hero.jpg"
         path={L === 'en' ? '/en/presale' : '/presale'}
         schema={{
