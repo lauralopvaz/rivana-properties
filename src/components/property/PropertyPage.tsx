@@ -76,6 +76,8 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         description={seoDesc}
         path={seoPath}
         ogImage={property.images?.[0]}
+        hreflangEs={`/propiedad/${property.slug}`}
+        hreflangEn={`/en/property/${property.slug}`}
         schema={{
           "@context": "https://schema.org",
           "@type": "RealEstateListing",
