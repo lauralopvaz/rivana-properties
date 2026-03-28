@@ -650,4 +650,7 @@
   .home-hero-section {
     min-height: 100svh !important;
   }
+  .home-hero-section img {
+    object-position: center 60% !important;
+  }
 }
