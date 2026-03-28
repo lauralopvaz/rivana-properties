@@ -187,7 +187,7 @@ const JournalPost = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={schema} ogImage={article.image} />
+      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={schema} ogImage={article.image} hreflangEs={`/journal/${articleSlug}`} hreflangEn={`/en/journal/${enSlug}`} />
 
       {/* Reading Progress */}
       <div className="fixed top-0 left-0 right-0 z-[200]">
