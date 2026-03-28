@@ -1,5 +1,5 @@
 import type { PropertyDetail } from '@/types/property';
-import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
+
 import reserveFachadaJardin from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
 import reservePh4Comedor from '@/assets/reserve-mayakoba-ph4-comedor-vista-selva.jpg';
 import reservePh4RecamaraPrincipal from '@/assets/reserve-mayakoba-ph4-recamara-principal.jpg';
