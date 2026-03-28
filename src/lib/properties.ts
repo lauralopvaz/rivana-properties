@@ -10,6 +10,15 @@ import reserveTerrazaGolf from '@/assets/reserve-mayakoba-terraza-vista-golf-sel
 import reserveTipodCocina from '@/assets/reserve-mayakoba-tipod-cocina-isla.jpg';
 import reserveTipodRecamara2 from '@/assets/reserve-mayakoba-tipod-recamara2.jpg';
 import reserveWalkingCloset from '@/assets/reserve-mayakoba-walking-closet-bano.jpg';
+import reserveAlbercaRestaurante from '@/assets/reserve-mayakoba-alberca-restaurante.jpg';
+import reserveCasaClubFachada from '@/assets/reserve-mayakoba-casa-club-fachada.jpg';
+import reserveCasaClubLaguna from '@/assets/reserve-mayakoba-casa-club-laguna.jpg';
+import reserveGimnasio from '@/assets/reserve-mayakoba-gimnasio-vista-selva.jpg';
+import reserveKidsClub from '@/assets/reserve-mayakoba-kids-club.jpg';
+import reserveRestauranteMadera from '@/assets/reserve-mayakoba-restaurante-madera.jpg';
+import reserveSpaMasaje from '@/assets/reserve-mayakoba-spa-sala-masaje.jpg';
+import reserveWhiskeyBar from '@/assets/reserve-mayakoba-whiskey-bar-lounge.jpg';
+import reserveZonaEventos from '@/assets/reserve-mayakoba-zona-eventos-terraza.jpg';
 const mondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const mondrianFrontDesk = '/images/mondrian/mondrian-front-desk.jpg';
 const mondrianCoffeeBar = '/images/mondrian/mondrian-coffee-bar.jpg';
@@ -107,7 +116,7 @@ export const properties: PropertyDetail[] = [
     delivery: '2027–2028',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: [reserveFachadaJardin, reserveHero, reservePh4TerrazaAlberca, reserveTerrazaGolf, reservePh4Comedor, reserveTipodCocina, reservePh4RecamaraPrincipal, reservePh4Recamara1Doble, reservePh4Recamara2Doble, reserveTipodRecamara2, reserveWalkingCloset],
+    images: [reserveFachadaJardin, reserveHero, reservePh4TerrazaAlberca, reserveTerrazaGolf, reserveCasaClubFachada, reserveCasaClubLaguna, reserveAlbercaRestaurante, reservePh4Comedor, reserveTipodCocina, reservePh4RecamaraPrincipal, reservePh4Recamara1Doble, reservePh4Recamara2Doble, reserveTipodRecamara2, reserveWalkingCloset, reserveRestauranteMadera, reserveZonaEventos, reserveWhiskeyBar, reserveGimnasio, reserveKidsClub, reserveSpaMasaje],
     description: 'The Reserve at Mayakoba es un desarrollo residencial de ultra-lujo dentro del icónico complejo Mayakoba en la Riviera Maya. 144 departamentos distribuidos en 16 torres de baja altura rodeadas de naturaleza — 65% del terreno es conservación natural. Desarrollado por Sancus Capital Partners e Inmobilia, con arquitectura de L35 Arquitectos y Sepúlveda Arquitectos. Los propietarios tienen acceso a los servicios hoteleros de Banyan Tree Mayakoba: spa, room service y restaurantes de clase mundial.',
     descriptionEn: 'The Reserve at Mayakoba is an ultra-luxury residential development within the iconic Mayakoba complex in the Riviera Maya. 144 apartments across 16 low-rise towers surrounded by nature — 65% of the land is natural conservation. Developed by Sancus Capital Partners and Inmobilia, with architecture by L35 Arquitectos and Sepúlveda Arquitectos. Owners have access to Banyan Tree Mayakoba hotel services: spa, room service, and world-class restaurants.',
     features: [
