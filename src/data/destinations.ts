@@ -272,8 +272,8 @@ export const destinations: DestinationConfig[] = [
     priority: 1,
     seo: {
       title: {
-        es: 'Propiedades en Costa Mujeres, Cancún | Rivana',
-        en: 'Costa Mujeres Properties, Cancun | Rivana',
+        es: 'Propiedades de Lujo Costa Mujeres | Rivana',
+        en: 'Luxury Properties Costa Mujeres Cancún | Rivana',
       },
       description: {
         es: 'Propiedades de lujo en Costa Mujeres, Cancún Norte. Preventa con alto potencial de retorno. Penthouses e inversión. Rivana Properties.',
@@ -367,8 +367,8 @@ export const destinations: DestinationConfig[] = [
     priority: 2,
     seo: {
       title: {
-        es: 'Mayakoba — The Reserve en Venta | Rivana',
-        en: 'Mayakoba Luxury Properties | Rivana Properties',
+        es: 'Residencias de Lujo en Mayakoba | Rivana',
+        en: 'Luxury Residences Mayakoba Riviera Maya | Rivana',
       },
       description: {
         es: 'Residencias y villas de lujo en Mayakoba. The Reserve, campo de golf, inversión mundialista 2026. Rivana Properties.',
@@ -418,8 +418,8 @@ export const destinations: DestinationConfig[] = [
     priority: 2,
     seo: {
       title: {
-        es: 'Propiedades en Puerto Morelos | Rivana Properties',
-        en: 'Puerto Morelos Properties | Rivana Properties',
+        es: 'Propiedades Frente al Mar Puerto Morelos | Rivana',
+        en: 'Beachfront Properties Puerto Morelos | Rivana',
       },
       description: {
         es: 'Propiedades y condominios en Puerto Morelos frente al arrecife. Casas de playa y lujo costero con Rivana Properties.',
@@ -594,8 +594,8 @@ export const destinations: DestinationConfig[] = [
     priority: 2,
     seo: {
       title: {
-        es: 'Propiedades en Playa del Carmen | Rivana',
-        en: 'Playa del Carmen Properties | Rivana',
+        es: 'Propiedades de Lujo Playa del Carmen | Rivana',
+        en: 'Luxury Real Estate Playa del Carmen | Rivana',
       },
       description: {
         es: 'Propiedades de lujo en Playa del Carmen. Condos, penthouses y departamentos con alto retorno de inversión. Rivana Properties.',

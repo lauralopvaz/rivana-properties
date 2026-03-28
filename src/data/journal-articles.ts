@@ -54,7 +54,7 @@ export const journalArticles: JournalArticle[] = [
       en: 'Cancún Investment Returns & Rental Yield 2026: A Zone-by-Zone Analysis',
     },
     seoTitle: {
-      es: 'ROI y Rendimiento de Renta en Cancún 2026 | Rivana',
+      es: 'ROI y Rendimiento de Renta en Cancún 2026',
       en: 'Cancún ROI & Rental Yield 2026 | Rivana',
     },
     category: { es: 'Inversión', en: 'Investment' },
@@ -75,8 +75,8 @@ export const journalArticles: JournalArticle[] = [
       en: 'How to Buy Property in Mexico as a Foreigner: Complete 2026 Guide',
     },
     seoTitle: {
-      es: 'Guía para Extranjeros: Comprar en México | Rivana',
-      en: 'Foreign Buyer Guide: Buy in Mexico | Rivana',
+      es: 'Comprar en México Siendo Extranjero: Guía 2026',
+      en: 'Buy Property in Mexico as a Foreigner 2026',
     },
     category: { es: 'Guías', en: 'Guides' },
     excerpt: {
@@ -96,8 +96,8 @@ export const journalArticles: JournalArticle[] = [
       en: 'Cancún Real Estate in 2026: Everything an Investor Needs to Know',
     },
     seoTitle: {
-      es: 'Copa del Mundo 2026 y el Mercado Inmobiliario en Cancún',
-      en: 'Cancún Real Estate Market 2026: Investor Guide',
+      es: 'Cancún Real Estate 2026: Guía del Inversionista',
+      en: 'Cancún Real Estate 2026: Investor Guide',
     },
     category: { es: 'Mercado', en: 'Market' },
     excerpt: {
@@ -135,8 +135,8 @@ export const journalArticles: JournalArticle[] = [
       en: 'Costa Mujeres: The New Investment Epicenter of the Mexican Caribbean',
     },
     seoTitle: {
-      es: 'Costa Mujeres: Destino Ultra Lujo | Rivana Properties',
-      en: 'Costa Mujeres: Ultra Luxury Destination | Rivana',
+      es: 'Costa Mujeres: Zona de Inversión Top 2026',
+      en: 'Costa Mujeres Luxury Investment Guide 2026',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
@@ -157,8 +157,8 @@ export const journalArticles: JournalArticle[] = [
       en: 'Mayakoba vs Puerto Cancún: The Definitive Luxury Investment Comparison for 2026',
     },
     seoTitle: {
-      es: 'Mayakoba vs Puerto Cancún: ¿Cuál elegir? | Rivana',
-      en: 'Mayakoba vs Puerto Cancún: Which to Choose? | Rivana',
+      es: 'Mayakoba vs Puerto Cancún: ¿Cuál Elegir?',
+      en: 'Mayakoba vs Puerto Cancún: 2026 Comparison',
     },
     category: { es: 'Destinos', en: 'Destinations' },
     excerpt: {
