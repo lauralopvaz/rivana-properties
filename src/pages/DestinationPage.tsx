@@ -199,6 +199,8 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const h1Text = subPageConfig ? subPageConfig.seo.h1[language] : config.seo.h1[language];
   const basePathLocale = language === 'en' ? `/en${config.basePath}` : config.basePath;
   const currentPath = subPage ? `${basePathLocale}/${subPage}` : basePathLocale;
+  const esPath = subPage ? `${config.basePath}/${subPage}` : config.basePath;
+  const enPath = subPage ? `/en${config.basePath}/${subPage}` : `/en${config.basePath}`;
 
   const schema = {
     '@context': 'https://schema.org',
