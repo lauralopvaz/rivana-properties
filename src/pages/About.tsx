@@ -150,23 +150,50 @@ const About = () => {
       <section className="py-20 px-6 lg:px-10 max-w-[1400px] mx-auto">
         <ScrollReveal>
           <p className="eyebrow mb-4">{language === 'es' ? 'El Equipo' : 'The Team'}</p>
-          <h2 className="mb-12">{language === 'es' ? 'Conoce a Tus Asesores' : 'Meet Your Advisors'}</h2>
+          <h2 className="mb-3">
+            {language === 'es' ? 'Conoce a tus' : 'Meet your'}
+            <br />
+            <em className="italic text-primary">{language === 'es' ? 'asesoras' : 'advisors'}</em>
+          </h2>
+          <p className="text-muted-foreground font-body text-base leading-relaxed max-w-2xl mb-12">
+            {language === 'es'
+              ? 'Expertas en el Caribe Mexicano, guiadas por un compromiso absoluto con tu patrimonio y tu tranquilidad.'
+              : 'Experts in the Mexican Caribbean, driven by an absolute commitment to your wealth and peace of mind.'}
+          </p>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[840px] mx-auto">
           {team.map((member, i) => (
-            <ScrollReveal key={member.name} delay={i * 80}>
-              <div className="bg-card border border-border rounded-sm overflow-hidden">
-                <div className="relative h-56 bg-gradient-to-br from-[hsl(30_15%_90%)] to-muted">
-                  <img src={member.photo} alt={member.name} className={`w-full h-full object-cover ${member.imgPosition}`} />
-                  <span className="absolute bottom-3 right-3 text-xs font-body bg-muted/80 backdrop-blur text-foreground px-2 py-1 rounded-sm">{member.lang}</span>
+            <ScrollReveal key={member.name} delay={i * 150}>
+              <div className="group relative bg-white border border-[rgba(207,174,96,0.22)] overflow-hidden transition-shadow duration-500 hover:shadow-[0_12px_48px_rgba(207,174,96,0.15)]">
+                {/* Photo with 3:4 aspect ratio */}
+                <div className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className={`w-full h-full object-cover ${member.imgPosition} transition-transform duration-700 group-hover:scale-[1.04]`}
+                  />
+                  {/* Gold corner accents */}
+                  <span className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#CFAE60]" />
+                  <span className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#CFAE60]" />
+                  <span className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#CFAE60]" />
+                  <span className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#CFAE60]" />
+                  {/* Certified tag */}
+                  <span className="absolute top-4 left-4 font-body text-[9px] tracking-[3px] uppercase font-[400] bg-[#CFAE60] text-white px-3 py-1.5">
+                    {language === 'es' ? 'Asesora Certificada' : 'Certified Advisor'}
+                  </span>
+                  {/* Language badge */}
+                  <span className="absolute bottom-4 right-4 text-[11px] font-body bg-white/90 backdrop-blur-sm text-[#1C1C1C] px-2.5 py-1">{member.lang}</span>
                 </div>
+                {/* Content */}
                 <div className="p-6">
-                  <p className="eyebrow text-xs mb-1">{member.role[language]}</p>
-                  <h3 className="text-xl mb-1">{member.name}</h3>
-                  <p className="text-xs text-muted-foreground font-body mb-3">{member.zone}</p>
-                  <p className="text-sm text-muted-foreground font-body mb-4">{member.bio[language]}</p>
+                  <p className="font-body text-[9px] tracking-[3px] uppercase font-[400] text-[#CFAE60] mb-1.5">{member.role[language]}</p>
+                  <h3 className="font-display text-[22px] font-[300] text-[#1C1C1C] mb-1">{member.name}</h3>
+                  <p className="font-body text-[11px] tracking-[1px] text-[#4B4B4B] mb-4">{member.zone}</p>
+                  <p className="font-body text-[13px] font-[300] leading-[1.8] text-[#4B4B4B] mb-5">{member.bio[language]}</p>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1" onClick={() => openModal('llamada')}><PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}</Button>
+                    <Button variant="outline" size="sm" className="flex-1 border-[rgba(207,174,96,0.3)] hover:border-[#CFAE60] hover:bg-[rgba(207,174,96,0.05)]" onClick={() => openModal('llamada')}>
+                      <PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}
+                    </Button>
                     <Button variant="whatsapp" size="sm" className="flex-1" asChild>
                       <a href={`https://wa.me/52${member.phone}?text=${encodeURIComponent(`Hola, ${member.name}, me gustaría una asesoría inmobiliaria`)}`} target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> WhatsApp</a>
                     </Button>
