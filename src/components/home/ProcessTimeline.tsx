@@ -75,10 +75,10 @@ export const ProcessTimeline = () => {
                   <span className="font-display text-sm text-primary tracking-widest">
                     {step.num}
                   </span>
-                  <h3 className="font-display text-xl text-secondary font-light mt-2 mb-3">
+                  <h3 className="font-display text-2xl text-secondary font-light mt-2 mb-3">
                     {step.title[L]}
                   </h3>
-                  <p className="font-body text-sm text-muted-foreground leading-[1.85] max-w-[240px]">
+                  <p className="font-body text-base text-muted-foreground leading-[1.85] max-w-[280px]">
                     {step.desc[L]}
                   </p>
                 </div>
