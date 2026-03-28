@@ -39,10 +39,6 @@ import thompsonHero from '@/assets/thompson-hero.jpg';
 import soleBluHero from '@/assets/sole-blu-hero.jpg';
 import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
-// Journal images
-import journalRoi from '@/assets/journal-roi.jpg';
-import journalBuyer from '@/assets/journal-buyer.jpg';
-import journalWorldcup from '@/assets/journal-worldcup.jpg';
 
 const destinationImages: Record<string, string> = {
   'zona-hotelera': destZonaHotelera,
@@ -55,11 +51,7 @@ const destinationImages: Record<string, string> = {
   'playa-del-carmen': destPlayaDelCarmen,
 };
 
-const journalImages: Record<string, string> = {
-  'cancun-roi-rental-yield': journalRoi,
-  'foreign-buyer-guide-mexico': journalBuyer,
-  'world-cup-2026-cancun-real-estate': journalWorldcup,
-};
+
 
 const featuredProperties = [
   { name: 'Mondrian Residences', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
@@ -160,58 +152,6 @@ const Home = () => {
       {/* ── WHY RIVANA — ALLY ── */}
       <AllySection />
 
-      {/* ── COLLECTIONS GRID ── */}
-      <section className="py-24 lg:py-32 bg-background">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">{t('section.destinations')}</p>
-            <h2 className="mb-16 text-secondary">{t('section.collections')}</h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {sortedDestinations.map((d, i) => (
-              <ScrollReveal key={d.key} delay={i * 80} className={`${i === 0 ? 'md:col-span-2 lg:col-span-2' : ''} ${i === 1 ? 'h-full' : ''}`}>
-                <Link
-                  to={localePath(d.basePath)}
-                  className={`group block relative overflow-hidden rounded-sm ${i === 1 ? 'h-full min-h-[280px]' : 'aspect-[16/10]'}`}
-                >
-                  <img
-                    src={destinationImages[d.key]}
-                    alt={d.name[language]}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_0%/0.85)] via-[hsl(0_0%_0%/0.35)] to-[hsl(0_0%_0%/0.05)]" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    {d.chips[language][0] && (
-                      <span className="inline-block text-xs font-body font-medium tracking-wider uppercase bg-primary/30 text-primary px-3 py-1 rounded-sm mb-3 backdrop-blur-sm border border-primary/20">
-                        {d.chips[language][0]}
-                      </span>
-                    )}
-                    <h3 className="text-2xl mb-2 text-[hsl(var(--pearl))] drop-shadow-[0_1px_3px_hsl(0_0%_0%/0.5)]">{d.name[language]}</h3>
-                    {d.key !== 'tulum' && (
-                      <div className="flex items-center gap-4 text-sm text-[hsl(var(--pearl))]/80 font-body font-light">
-                        <span>{language === 'es' ? 'Desde' : 'From'} {d.stats[1]?.val}</span>
-                        <span>·</span>
-                        <span>{d.stats[0]?.val} {d.stats[0]?.label[language]}</span>
-                      </div>
-                    )}
-                    {d.key === 'tulum' && (
-                      <p className="text-sm text-[hsl(var(--pearl))]/60 font-body font-light italic">
-                        {language === 'es' ? 'Próximamente' : 'Coming Soon'}
-                      </p>
-                    )}
-                    <span className="inline-flex items-center gap-1 mt-3 text-sm text-primary font-body font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {t('card.explore')} <ArrowRightIcon className="w-4 h-4" />
-                    </span>
-                  </div>
-                </Link>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── FEATURED PROPERTIES ── */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -269,6 +209,58 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── COLLECTIONS GRID ── */}
+      <section className="py-24 lg:py-32 bg-background">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <ScrollReveal>
+            <p className="eyebrow mb-4">{t('section.destinations')}</p>
+            <h2 className="mb-16 text-secondary">{t('section.collections')}</h2>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {sortedDestinations.map((d, i) => (
+              <ScrollReveal key={d.key} delay={i * 80} className={`${i === 0 ? 'md:col-span-2 lg:col-span-2' : ''} ${i === 1 ? 'h-full' : ''}`}>
+                <Link
+                  to={localePath(d.basePath)}
+                  className={`group block relative overflow-hidden rounded-sm ${i === 1 ? 'h-full min-h-[280px]' : 'aspect-[16/10]'}`}
+                >
+                  <img
+                    src={destinationImages[d.key]}
+                    alt={d.name[language]}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_0%/0.85)] via-[hsl(0_0%_0%/0.35)] to-[hsl(0_0%_0%/0.05)]" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    {d.chips[language][0] && (
+                      <span className="inline-block text-xs font-body font-medium tracking-wider uppercase bg-primary/30 text-primary px-3 py-1 rounded-sm mb-3 backdrop-blur-sm border border-primary/20">
+                        {d.chips[language][0]}
+                      </span>
+                    )}
+                    <h3 className="text-2xl mb-2 text-[hsl(var(--pearl))] drop-shadow-[0_1px_3px_hsl(0_0%_0%/0.5)]">{d.name[language]}</h3>
+                    {d.key !== 'tulum' && (
+                      <div className="flex items-center gap-4 text-sm text-[hsl(var(--pearl))]/80 font-body font-light">
+                        <span>{language === 'es' ? 'Desde' : 'From'} {d.stats[1]?.val}</span>
+                        <span>·</span>
+                        <span>{d.stats[0]?.val} {d.stats[0]?.label[language]}</span>
+                      </div>
+                    )}
+                    {d.key === 'tulum' && (
+                      <p className="text-sm text-[hsl(var(--pearl))]/60 font-body font-light italic">
+                        {language === 'es' ? 'Próximamente' : 'Coming Soon'}
+                      </p>
+                    )}
+                    <span className="inline-flex items-center gap-1 mt-3 text-sm text-primary font-body font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {t('card.explore')} <ArrowRightIcon className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── PRESALE BANNER ── */}
       <PreSaleSection />
 
@@ -302,7 +294,7 @@ const Home = () => {
                 <Link to={localePath(`/journal/${post.slug}`)} className="group block">
                   <div className="aspect-[16/10] rounded-sm mb-4 overflow-hidden">
                     <img
-                      src={journalImages[post.slug] || journalRoi}
+                      src={post.image}
                       alt={post.title[language]}
                       className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                       loading="lazy"
