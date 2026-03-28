@@ -34,10 +34,7 @@ import vellmariHero from '@/assets/vellmari-hero.jpg';
 import villageBluHero from '@/assets/village-blu-hero.jpg';
 import kabeekHero from '@/assets/kabeek-fachada-atardecer.jpg';
 import bayViewGrandHero from '@/assets/bvg-rooftop-pool-laguna.jpg';
-import arboladaHero from '@/assets/arbolada-hero.jpg';
-import thompsonHero from '@/assets/thompson-hero.jpg';
-import soleBluHero from '@/assets/sole-blu-hero.jpg';
-import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
+
 
 
 const destinationImages: Record<string, string> = {
@@ -62,10 +59,6 @@ const featuredProperties = [
   { name: 'Kabeek Marina & Condos', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 4, area: 670, price: 'Consultar', amenities: ['ocean', 'marina', 'spa'], image: kabeekHero, slug: 'kabeek-marina-condos' },
   { name: 'Vellmari Grand Living', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 714, price: '$14.8M MXN', amenities: ['marina', 'pool', 'spa'], image: vellmariHero, slug: 'vellmari-grand-living' },
   { name: 'Village Blu Beach Apartments', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 1, area: 73, price: '$273K', amenities: ['ocean', 'pool', 'sunset'], image: villageBluHero, slug: 'village-blu-beach-apartments' },
-  { name: 'Arbolada Towers', zone: { es: 'Residencial Cancún', en: 'Cancún Residential' }, beds: 2, area: 94, price: '$5.2M MXN', amenities: ['pool', 'spa'], image: arboladaHero, slug: 'arbolada-towers' },
-  { name: 'Thompson Residences', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 803, price: '$730K', amenities: ['ocean', 'marina', 'golf'], image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
-  { name: 'Sole Blu Ocean Living', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 2, area: 136, price: '$392K', amenities: ['ocean', 'pool', 'sunset'], image: soleBluHero, slug: 'sole-blu-ocean-living' },
-  { name: 'Cuore Cumbres', zone: { es: 'Cancún Centro', en: 'Downtown Cancún' }, beds: 3, area: 346, price: 'Consultar', amenities: ['pool', 'spa'], image: cuoreCumbresHero, slug: 'cuore-cumbres-cancun' },
 ];
 
 const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
