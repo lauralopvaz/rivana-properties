@@ -471,6 +471,29 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         </div>
       </section>
 
+      {/* Related Article — Mayakoba vs Puerto Cancún */}
+      {(destinationKey === 'mayakoba' || destinationKey === 'puerto-cancun') && !subPage && (
+        <section className="py-12">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+            <ScrollReveal>
+              <div className="border border-border p-6 flex items-center justify-between gap-4 bg-card hover:border-primary/30 transition-colors">
+                <div>
+                  <p className="eyebrow text-xs mb-1">{language === 'es' ? 'Artículo Relacionado' : 'Related Article'}</p>
+                  <p className="font-display text-lg">
+                    {language === 'es'
+                      ? 'Mayakoba vs Puerto Cancún: Comparativa completa'
+                      : 'Mayakoba vs Puerto Cancún: Full comparison'}
+                  </p>
+                </div>
+                <Link to={localePath('/journal/mayakoba-vs-puerto-cancun')} className="text-primary font-body text-sm whitespace-nowrap hover:underline">
+                  {language === 'es' ? 'Leer →' : 'Read →'}
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
       {/* Related Destinations */}
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
