@@ -72,10 +72,10 @@ export const AllySection = () => {
                     {p.num}
                   </span>
                   <div>
-                    <h3 className="font-display text-xl text-secondary mb-2 font-light">
+                    <h3 className="font-display text-2xl text-secondary mb-2 font-light">
                       {p.title[L]}
                     </h3>
-                    <p className="font-body text-sm text-muted-foreground leading-[1.85]">
+                    <p className="font-body text-base text-muted-foreground leading-[1.85]">
                       {p.desc[L]}
                     </p>
                   </div>

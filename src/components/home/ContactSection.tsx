@@ -118,7 +118,7 @@ export const ContactSection = () => {
                   {L === 'es' ? 'Asesoría' : 'Advisory'}
                 </em>
               </h2>
-              <p className="font-body text-base text-muted-foreground leading-[1.85] mb-8 max-w-[400px]">
+              <p className="font-body text-lg text-muted-foreground leading-[1.85] mb-8 max-w-[400px]">
                 {L === 'es'
                   ? 'El Caribe Mexicano es uno de los mercados inmobiliarios con mayor plusvalía en Latinoamérica. Cuéntanos sobre tu próxima inversión y diseñaremos una estrategia a tu medida.'
                   : 'The Mexican Caribbean is one of the real estate markets with the highest capital gains in Latin America. Tell us about your next investment and we\'ll design a tailored strategy.'}
@@ -128,8 +128,8 @@ export const ContactSection = () => {
               <div className="grid grid-cols-3 gap-6 mb-10">
                 {stats.map((s) => (
                   <div key={s.val} className="text-center lg:text-left">
-                    <span className="font-display text-2xl lg:text-3xl text-primary">{s.val}</span>
-                    <p className="font-body text-xs text-muted-foreground mt-1 leading-snug">{s.label}</p>
+                    <span className="font-display text-3xl lg:text-4xl text-primary">{s.val}</span>
+                    <p className="font-body text-sm text-muted-foreground mt-1 leading-snug">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -138,7 +138,7 @@ export const ContactSection = () => {
                 {benefits.map((b) => (
                   <li key={b} className="flex items-center gap-3">
                     <span className="shrink-0 w-[6px] h-[6px] bg-primary" />
-                    <span className="font-body text-sm text-muted-foreground font-light">{b}</span>
+                    <span className="font-body text-base text-muted-foreground font-light">{b}</span>
                   </li>
                 ))}
               </ul>
