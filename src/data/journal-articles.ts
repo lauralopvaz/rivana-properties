@@ -6,7 +6,7 @@ import imgCostaMujeres from '@/assets/journal/costa-mujeres-luxury.jpg';
 import imgMayakoba from '@/assets/journal/mayakoba-vs-puerto-cancun.jpg';
 import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
 
-import imgUruguayMayakoba from '@/assets/reserve-mayakoba-hero.jpg';
+import imgUruguayMayakoba from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
 const imgMondrianHero = '/images/mondrian/mondrian-hero.jpg';
 
