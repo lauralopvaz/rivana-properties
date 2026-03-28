@@ -61,7 +61,16 @@ import fpDepBPrime from '@/assets/mondrian/fp-dep-b-prime.png';
 import fpCurvaB from '@/assets/mondrian/fp-curva-b.png';
 import fpDepBEsquina from '@/assets/mondrian/fp-dep-b-esquina.png';
 import fpDepCEsquina from '@/assets/mondrian/fp-dep-c-esquina.png';
-import vellmariHero from '@/assets/vellmari-hero.jpg';
+import vellmariHero from '@/assets/vellmari-alberca-fachada-torres.jpg';
+import vellmariAerea from '@/assets/vellmari-aerea-albercas-canchas.jpg';
+import vellmariChampagne from '@/assets/vellmari-alberca-camastros-champagne.jpg';
+import vellmariCancha from '@/assets/vellmari-cancha-futbol-jardin.jpg';
+import vellmariDeck from '@/assets/vellmari-deck-camastros-atardecer.jpg';
+import vellmariFachadaTorres from '@/assets/vellmari-fachada-dos-torres-atardecer.jpg';
+import vellmariEntrada from '@/assets/vellmari-fachada-entrada-acceso.jpg';
+import vellmariFirePit from '@/assets/vellmari-fire-pit-muelle-atardecer.jpg';
+import vellmariRecamara from '@/assets/vellmari-recamara-principal-balcon.jpg';
+import vellmariTerraza from '@/assets/vellmari-terraza-alberca-camastros.jpg';
 import villageBluHero from '@/assets/village-blu-hero.jpg';
 import kabeekFachadaAtardecer from '@/assets/kabeek-fachada-atardecer.jpg';
 import kabeekAlbercaCorredor from '@/assets/kabeek-alberca-corredor.jpg';
@@ -468,7 +477,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Dic 2026 / Jul 2027',
     roiEstimate: 0,
     plusvaliaEstimate: 0,
-    images: [vellmariHero],
+    images: [vellmariHero, vellmariFachadaTorres, vellmariChampagne, vellmariAerea, vellmariFirePit, vellmariDeck, vellmariRecamara, vellmariEntrada, vellmariTerraza, vellmariCancha],
     description: 'Un nuevo nivel de lujo en Puerto Cancún. 95 exclusivas residencias + 3 penthouses en 2 torres de 20 pisos en el corazón de Puerto Cancún. Vistas de 200 grados desde cada piso de ambas torres. Combina el entorno marítimo con diseño moderno de Ancona + Ancona Arquitectos. Acabados de lujo, armonía y confort. Plaza Puerto Cancún a menos de 500 metros con tiendas de lujo, restaurantes, entretenimiento y cine IMAX. Desarrollado por Urban Homes & Cadu Inmobiliaria con 18+ años de experiencia en Quintana Roo.',
     descriptionEn: 'A new level of luxury in Puerto Cancún. 95 exclusive residences + 3 penthouses in two 20-story towers in the heart of Puerto Cancún. 200-degree views from every floor of both towers. Combining the maritime environment with modern design by Ancona + Ancona Arquitectos. Luxury finishes, harmony, and comfort. Plaza Puerto Cancún less than 500 meters away with luxury shops, restaurants, entertainment, and IMAX cinema. Developed by Urban Homes & Cadu Inmobiliaria with 18+ years of experience in Quintana Roo.',
     features: [
