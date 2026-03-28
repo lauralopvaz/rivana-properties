@@ -632,14 +632,14 @@
     width: 100%;
   }
   .home-hero-subtitle {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
     text-align: center;
     width: 100%;
     white-space: normal !important;
   }
   .home-hero-buttons {
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 16px !important;
     width: 100%;
   }
   .home-hero-buttons > * {
