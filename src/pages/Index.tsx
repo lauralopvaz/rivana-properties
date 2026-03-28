@@ -294,7 +294,7 @@ const Home = () => {
                 <Link to={localePath(`/journal/${post.slug}`)} className="group block">
                   <div className="aspect-[16/10] rounded-sm mb-4 overflow-hidden">
                     <img
-                      src={journalImages[post.slug] || journalRoi}
+                      src={post.image}
                       alt={post.title[language]}
                       className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                       loading="lazy"
