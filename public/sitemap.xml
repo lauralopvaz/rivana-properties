@@ -3,37 +3,38 @@
   <!-- ══ SPANISH (default) ══ -->
 
   <!-- Homepage -->
-  <url><loc>https://rivanaproperties.com/</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://rivanaproperties.com/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
   <!-- Priority 0.9 — Top destinations -->
-  <url><loc>https://rivanaproperties.com/cancun/zona-hotelera</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/puerto-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/costa-mujeres</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/zona-hotelera</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/puerto-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/costa-mujeres</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <!-- Priority 0.8 — Sub-destinations, listings & presale -->
-  <url><loc>https://rivanaproperties.com/cancun/zona-hotelera/condos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/zona-hotelera/penthouses</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/zona-hotelera/preventa</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/puerto-cancun/marina</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/puerto-cancun/preventa</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/puerto-cancun/condos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/costa-mujeres/preventa</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/costa-mujeres/penthouses</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/mayakoba</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/puerto-morelos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/playa-del-carmen</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/playa-del-carmen/condos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/playa-del-carmen/preventa</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/centro</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/cancun/centro/condos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/tulum</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/presale</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rivanaproperties.com/listings</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <!-- Priority 0.8 — Sub-destinations, listings, presale & landing pages -->
+  <url><loc>https://rivanaproperties.com/cancun/zona-hotelera/condos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/zona-hotelera/penthouses</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/zona-hotelera/preventa</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/puerto-cancun/marina</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/puerto-cancun/preventa</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/puerto-cancun/condos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/costa-mujeres/preventa</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/costa-mujeres/penthouses</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/mayakoba</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/puerto-morelos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/playa-del-carmen</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/playa-del-carmen/condos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/playa-del-carmen/preventa</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/centro</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/centro/condos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/tulum</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/presale</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/listings</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/cancun/departamentos-en-venta</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Priority 0.7 — Content pages -->
-  <url><loc>https://rivanaproperties.com/journal</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/about</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/aviso-de-privacidad</loc><lastmod>2026-03-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://rivanaproperties.com/journal</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://rivanaproperties.com/about</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://rivanaproperties.com/aviso-de-privacidad</loc><lastmod>2026-03-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
   <!-- Priority 0.7 — Journal articles (ES) -->
   <url><loc>https://rivanaproperties.com/journal/uruguay-mayakoba-mundial-2026</loc><lastmod>2026-03-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -48,50 +49,52 @@
   <url><loc>https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-preventa</loc><lastmod>2026-03-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Priority 0.6 — Property detail pages (ES) -->
-  <url><loc>https://rivanaproperties.com/propiedad/mondrian-residences-grand-island-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/bay-view-grand-grand-island</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/kabeek-marina-condos</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/sls-ocean-beach-puerto-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/thompson-residences-puerto-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/vellmari-grand-living</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/dhamar-costa-mujeres</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/the-reserve-at-mayakoba</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/village-blu-beach-apartments</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/sole-blu-ocean-living</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/arbolada-towers</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://rivanaproperties.com/propiedad/cuore-cumbres-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/mondrian-residences-grand-island-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/bay-view-grand-grand-island</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/kabeek-marina-condos</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/sls-ocean-beach-puerto-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/thompson-residences-puerto-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/vellmari-grand-living</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/dhamar-costa-mujeres</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/the-reserve-at-mayakoba</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/village-blu-beach-apartments</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/sole-blu-ocean-living</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/arbolada-towers</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rivanaproperties.com/propiedad/cuore-cumbres-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- ══ ENGLISH (/en/) ══ -->
 
-  <url><loc>https://rivanaproperties.com/en</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 
   <!-- Destinations EN -->
-  <url><loc>https://rivanaproperties.com/en/cancun/zona-hotelera</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/puerto-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/costa-mujeres</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/zona-hotelera/condos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/zona-hotelera/penthouses</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/zona-hotelera/preventa</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/puerto-cancun/marina</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/puerto-cancun/preventa</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/puerto-cancun/condos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/costa-mujeres/preventa</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/costa-mujeres/penthouses</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/mayakoba</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/puerto-morelos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/playa-del-carmen</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/playa-del-carmen/condos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/playa-del-carmen/preventa</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/centro</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/cancun/centro/condos</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/tulum</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/presale</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/listings</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/zona-hotelera</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/puerto-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/costa-mujeres</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/zona-hotelera/condos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/zona-hotelera/penthouses</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/zona-hotelera/preventa</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/puerto-cancun/marina</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/puerto-cancun/preventa</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/puerto-cancun/condos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/costa-mujeres/preventa</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/costa-mujeres/penthouses</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/mayakoba</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/puerto-morelos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/playa-del-carmen</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/playa-del-carmen/condos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/playa-del-carmen/preventa</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/centro</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/centro/condos</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/tulum</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/presale</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/listings</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/condos-for-sale</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rivanaproperties.com/en/cancun/beachfront-condos-for-sale</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Content pages EN -->
-  <url><loc>https://rivanaproperties.com/en/journal</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/about</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/privacy-policy</loc><lastmod>2026-03-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://rivanaproperties.com/en/journal</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/about</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/privacy-policy</loc><lastmod>2026-03-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
   <!-- Journal articles EN -->
   <url><loc>https://rivanaproperties.com/en/journal/uruguay-mayakoba-mundial-2026</loc><lastmod>2026-03-25</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
@@ -106,16 +109,16 @@
   <url><loc>https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-presale</loc><lastmod>2026-03-25</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
   <!-- Property detail pages EN -->
-  <url><loc>https://rivanaproperties.com/en/property/mondrian-residences-grand-island-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/bay-view-grand-grand-island</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/kabeek-marina-condos</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/sls-ocean-beach-puerto-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/thompson-residences-puerto-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/vellmari-grand-living</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/dhamar-costa-mujeres</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/the-reserve-at-mayakoba</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/village-blu-beach-apartments</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/sole-blu-ocean-living</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/arbolada-towers</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://rivanaproperties.com/en/property/cuore-cumbres-cancun</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/mondrian-residences-grand-island-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/bay-view-grand-grand-island</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/kabeek-marina-condos</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/sls-ocean-beach-puerto-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/thompson-residences-puerto-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/vellmari-grand-living</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/dhamar-costa-mujeres</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/the-reserve-at-mayakoba</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/village-blu-beach-apartments</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/sole-blu-ocean-living</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/arbolada-towers</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rivanaproperties.com/en/property/cuore-cumbres-cancun</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
