@@ -11,7 +11,7 @@ import reserveHero from '@/assets/reserve-mayakoba-hero.jpg';
 import vellmariHero from '@/assets/vellmari-hero.jpg';
 import villageBluHero from '@/assets/village-blu-hero.jpg';
 import kabeekHero from '@/assets/kabeek-fachada-atardecer.jpg';
-import bayViewGrandHero from '@/assets/bay-view-grand-hero.jpg';
+import bayViewGrandHero from '@/assets/bvg-rooftop-pool-laguna.jpg';
 import arboladaHero from '@/assets/arbolada-hero.jpg';
 import thompsonHero from '@/assets/thompson-hero.jpg';
 import soleBluHero from '@/assets/sole-blu-hero.jpg';
