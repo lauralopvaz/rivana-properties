@@ -11,14 +11,15 @@ interface SEOHeadProps {
   noIndex?: boolean;
   schema?: object;
   ogImage?: string;
+  hreflangEs?: string;
+  hreflangEn?: string;
 }
 
 /**
  * Manages document <head> tags for SEO via react-helmet-async.
- * Automatically adds hreflang tags for ES/EN based on path.
- * ES is default (no prefix), EN is under /en/.
+ * When hreflangEs + hreflangEn are provided, uses them directly.
+ * Otherwise auto-computes hreflang from path.
  * Each language version is canonical of itself.
- * Handles /en/property/ ↔ /propiedad/ route mapping for hreflang.
  */
 export const SEOHead = ({
   title,
@@ -28,20 +29,24 @@ export const SEOHead = ({
   noIndex,
   schema,
   ogImage,
+  hreflangEs,
+  hreflangEn,
 }: SEOHeadProps) => {
   const resolvedOgImage = ogImage
     ? (ogImage.startsWith('http') ? ogImage : `${BASE_URL}${ogImage}`)
     : DEFAULT_OG_IMAGE;
 
-  // Compute the ES (default) base path from the current path
-  let esPath = path || '/';
-  let enPath = '/en';
+  let esPath: string;
+  let enPath: string;
 
-  if (path) {
-    // Strip /en prefix to get base path
+  if (hreflangEs && hreflangEn) {
+    // Explicit hreflang paths provided — use them directly
+    esPath = hreflangEs;
+    enPath = hreflangEn;
+  } else if (path) {
+    // Auto-compute from path
     const stripped = path.startsWith('/en') ? path.replace(/^\/en/, '') || '/' : path;
 
-    // Handle /en/property/[slug] → /propiedad/[slug] mapping
     if (path.startsWith('/en/property/')) {
       const slug = path.replace('/en/property/', '');
       esPath = `/propiedad/${slug}`;
@@ -53,6 +58,9 @@ export const SEOHead = ({
       esPath = stripped;
       enPath = esPath === '/' ? '/en' : `/en${esPath}`;
     }
+  } else {
+    esPath = '/';
+    enPath = '/en';
   }
 
   // Canonical points to SELF (each language version is canonical of itself)
