@@ -25,6 +25,7 @@ import NotFound from "./pages/NotFound";
 import PropertyDetailNew from "./pages/PropertyDetailNew";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CancunCondos from "./pages/CancunCondos";
+import BeachfrontCondos from "./pages/BeachfrontCondos";
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
@@ -134,6 +135,7 @@ const AppRoutes = () => (
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/en/cancun/condos-for-sale" element={<CancunCondos />} />
+    <Route path="/en/cancun/beachfront-condos-for-sale" element={<BeachfrontCondos />} />
 
     {/* Redirects — consolidate all property routes to canonical paths */}
     <Route path="/property/:slug" element={<RedirectPropertyEN />} />
