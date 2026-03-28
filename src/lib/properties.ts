@@ -105,7 +105,16 @@ import bvgAmenityKidsClub from '@/assets/bvg-amenity-kids-club.jpg';
 import bvgAmenityRestauranteLounge from '@/assets/bvg-amenity-restaurante-lounge.jpg';
 import arboladaHero from '@/assets/arbolada-hero.jpg';
 import thompsonHero from '@/assets/thompson-hero.jpg';
-import soleBluHero from '@/assets/sole-blu-hero.jpg';
+import soleBluHero from '@/assets/sole-blu-fachada-principal-atardecer.jpg';
+import soleBluAlberca from '@/assets/sole-blu-alberca-amenidades.jpg';
+import soleBluCocina from '@/assets/sole-blu-cocina-comedor-vista-mar.jpg';
+import soleBluFachadaDia from '@/assets/sole-blu-fachada-exterior-dia.jpg';
+import soleBluGimnasio from '@/assets/sole-blu-gimnasio.jpg';
+import soleBluLobby from '@/assets/sole-blu-lobby.jpg';
+import soleBluRooftopLounge from '@/assets/sole-blu-rooftop-lounge-vista-oceano.jpg';
+import soleBluPlungePool from '@/assets/sole-blu-rooftop-plunge-pool-mar.jpg';
+import soleBluPoolCamastros from '@/assets/sole-blu-rooftop-pool-camastros.jpg';
+import soleBluTerraza from '@/assets/sole-blu-terraza-balcon-vista-mar.jpg';
 import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 export const properties: PropertyDetail[] = [
@@ -1025,7 +1034,7 @@ images: [dhamarPrincipal, dhamarAlberca, dhamarRooftop, dhamarYogaPilates, dhama
     delivery: 'Verano 2026',
     roiEstimate: 10,
     plusvaliaEstimate: 25,
-    images: [soleBluHero],
+    images: [soleBluHero, soleBluFachadaDia, soleBluAlberca, soleBluCocina, soleBluRooftopLounge, soleBluPlungePool, soleBluPoolCamastros, soleBluTerraza, soleBluLobby, soleBluGimnasio],
     description: 'Sole BLU integra cada elemento para ofrecer un estilo de vida excepcional, amenidades tipo resort y una ubicación privilegiada frente al mar en Riviera Cancún. Toda la operación, renta y mantenimiento están cubiertos a través de la alianza con OPENKEY Destination Properties — tu única tarea es disfrutar.',
     descriptionEn: 'Sole BLU integrates every element to deliver an exceptional lifestyle, resort-grade amenities, and a privileged oceanfront location in Riviera Cancún — with all operations, rentals, and maintenance fully managed through a strategic alliance with OPENKEY Destination Properties. You own it. Someone else runs it.',
     features: [
