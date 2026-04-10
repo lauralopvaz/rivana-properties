@@ -300,7 +300,7 @@ export const properties: PropertyDetail[] = [
       deadlineDate: '2026-06-01',
       priceIncreasePercent: 33,
     },
-    brochureUrl: '/brochures/mondrian-residences.pdf',
+    brochureUrl: '/brochures/mondrian-residences-grand-island.pdf',
     differentiators: [
       {
         type: 'entrega', layout: 'featured',
