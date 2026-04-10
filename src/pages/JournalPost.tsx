@@ -17,6 +17,7 @@ import { PreSaleGuideBodyES, PreSaleGuideBodyEN } from '@/components/journal/Pre
 import { MayakobaVsPuertoBodyES, MayakobaVsPuertoBodyEN } from '@/components/journal/MayakobaVsPuertoBody';
 import { WorldCupBodyES, WorldCupBodyEN } from '@/components/journal/WorldCupBody';
 import { MondrianPresaleBodyES, MondrianPresaleBodyEN } from '@/components/journal/MondrianPresaleBody';
+import { MondrianGrandIslandBodyES, MondrianGrandIslandBodyEN } from '@/components/journal/MondrianGrandIslandBody';
 import { GuiaPreventaCancunBodyES, GuiaPreventaCancunBodyEN } from '@/components/journal/GuiaPreventaCancunBody';
 
 const JournalPost = () => {
@@ -165,6 +166,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['Qué es Mondrian Residences', 'De The Residences a Mondrian', 'La marca Mondrian', 'Ubicación', 'Preventa: precio y ROI', 'Contexto macro', '¿Para quién es?', 'Proceso de compra']
       : ['What is Mondrian Residences', 'From The Residences to Mondrian', 'The Mondrian brand', 'Location', 'Presale: price & ROI', 'Macro context', 'Who is it for?', 'How to buy'])
+    : articleSlug === 'mondrian-residences-grand-island-cancun-guide'
+    ? (language === 'es'
+      ? ['Respaldo Accor', 'Ubicación', 'Amenidades', 'Ficha del proyecto', 'Plan de pago', '¿Por qué 2026?', '¿Para quién es?', 'El siguiente paso']
+      : ['Accor backing', 'Location', 'Amenities', 'Project overview', 'Payment plan', 'Why 2026', 'Who is it for?', 'Next step'])
     : (articleSlug === 'guia-preventa-cancun-2026' || slug === 'pre-sale-guide-cancun-2026')
     ? (language === 'es'
       ? ['¿Qué es la preventa?', 'Ventajas', 'Riesgos', 'Mejores preventas Rivana', 'Esquemas de pago', '¿Por qué 2026?']
@@ -275,6 +280,8 @@ const JournalPost = () => {
               language === 'en' ? <WorldCupBodyEN /> : <WorldCupBodyES />
             ) : (articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale') ? (
               language === 'en' ? <MondrianPresaleBodyEN /> : <MondrianPresaleBodyES />
+            ) : articleSlug === 'mondrian-residences-grand-island-cancun-guide' ? (
+              language === 'en' ? <MondrianGrandIslandBodyEN /> : <MondrianGrandIslandBodyES />
             ) : (articleSlug === 'guia-preventa-cancun-2026' || slug === 'pre-sale-guide-cancun-2026') ? (
               language === 'en' ? <GuiaPreventaCancunBodyEN /> : <GuiaPreventaCancunBodyES />
             ) : (

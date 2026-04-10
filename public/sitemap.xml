@@ -453,4 +453,19 @@
   <url><loc>https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-preventa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-preventa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <url>
+    <loc>https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-guide</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-guide"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-guide</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-guide"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
