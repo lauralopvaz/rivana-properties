@@ -218,6 +218,27 @@ export const journalArticles: JournalArticle[] = [
     relatedDestinations: ['zona-hotelera', 'costa-mujeres', 'puerto-cancun'],
   },
   {
+    slug: 'mondrian-residences-grand-island-cancun-guide',
+    title: {
+      es: 'Mondrian Residences en Grand Island Cancún: la guía que necesitas antes de decidir',
+      en: 'Mondrian Residences at Grand Island Cancún: The Guide You Need Before You Decide',
+    },
+    seoTitle: {
+      es: 'Mondrian Residences en Grand Island Cancún — Lo Que Debes Saber',
+      en: 'Mondrian Residences Grand Island Cancún — Everything You Need to Know',
+    },
+    category: { es: 'Inversión', en: 'Investment' },
+    excerpt: {
+      es: 'Guía completa de Mondrian Residences: precio, plan de pagos, amenidades con campo de golf, respaldo Accor y vistas al mar y laguna que jamás serán obstruidas.',
+      en: 'Complete guide to Mondrian Residences Cancún: Accor backing, golf course, unobstructed Caribbean and lagoon views, pre-sale pricing and 30/20/50 payment plan.',
+    },
+    date: 'Apr 10, 2026',
+    readTime: '11 min',
+    author: 'Rivana Properties',
+    image: imgMondrianHero,
+    relatedDestinations: ['zona-hotelera'],
+  },
+  {
     slug: 'mondrian-residences-grand-island-cancun-preventa',
     slugEn: 'mondrian-residences-grand-island-cancun-presale',
     title: {
