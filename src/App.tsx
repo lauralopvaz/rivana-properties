@@ -143,6 +143,15 @@ const AppRoutes = () => (
     <Route path="/propiedades" element={<Navigate to="/listings" replace />} />
     <Route path="/nosotros" element={<Navigate to="/about" replace />} />
 
+    {/* Legacy WordPress / old-site catch-all redirects */}
+    <Route path="/wp-admin/*" element={<Navigate to="/" replace />} />
+    <Route path="/wp-content/*" element={<Navigate to="/" replace />} />
+    <Route path="/wp-includes/*" element={<Navigate to="/" replace />} />
+    <Route path="/feed/*" element={<Navigate to="/" replace />} />
+    <Route path="/tag/*" element={<Navigate to="/listings" replace />} />
+    <Route path="/category/*" element={<Navigate to="/listings" replace />} />
+    <Route path="/features/*" element={<Navigate to="/listings" replace />} />
+
     {/* 404 */}
     <Route path="*" element={<NotFound />} />
   </Routes>
