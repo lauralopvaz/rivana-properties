@@ -575,7 +575,7 @@ const PreSale = () => {
                     ? 'Gracias. Un asesor de Rivana también te contactará en menos de 2 horas para acompañarte personalmente.'
                     : 'Thank you. A Rivana advisor will also contact you within 2 hours to assist you personally.'}
                 </p>
-                <a href={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="ps-btn-gold ps-btn-full" style={{ display: 'block', textAlign: 'center', marginBottom: 12 }}>
+                <a href="/brochures/mondrian-residences-grand-island.pdf" target="_blank" rel="noopener noreferrer" className="ps-btn-gold ps-btn-full" style={{ display: 'block', textAlign: 'center', marginBottom: 12 }}>
                   {L === 'es' ? 'Ver Brochure Mondrian →' : 'View Mondrian Brochure →'}
                 </a>
                 <a href="https://wa.me/529988457224?text=Hola%2C%20quisiera%20recibir%20el%20PDF%20del%20brochure%20de%20Mondrian%20Residences" className="ps-btn-ghost-dark" target="_blank" rel="noopener noreferrer">
