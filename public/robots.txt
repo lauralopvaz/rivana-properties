@@ -1,19 +1,18 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
-Disallow: /en/propiedad/
-Disallow: /property/
-Disallow: /propiedades
+
+# Block old WordPress patterns
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /*?wpfpaction=
+Disallow: /*?postid=
+Disallow: /*?p=
+Disallow: /feed/
+Disallow: /*/feed/
+Disallow: /tag/
+Disallow: /category/
+Disallow: /nosotros/
+Disallow: /features/
 
 Sitemap: https://rivanaproperties.com/sitemap.xml
