@@ -110,7 +110,7 @@ const AppRoutes = () => (
     {/* P1: Costa Mujeres */}
     <Route path="/en/cancun/costa-mujeres" element={<DestinationPage destinationKey="costa-mujeres" />} />
     <Route path="/en/cancun/costa-mujeres/preventa" element={<DestinationPage destinationKey="costa-mujeres" subPage="preventa" />} />
-    <Route path="/en/cancun/costa-mujeres/penthouses" element={<DestinationPage destinationKey="costa-mujeres" subPage="penthouses" />} />
+    <Route path="/en/cancun/costa-mujeres/penthouses" element={<Navigate to="/en/cancun/costa-mujeres" replace />} />
 
     {/* P2 */}
     <Route path="/en/mayakoba" element={<DestinationPage destinationKey="mayakoba" />} />
