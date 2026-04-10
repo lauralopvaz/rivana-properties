@@ -141,6 +141,7 @@ const AppRoutes = () => (
     <Route path="/property/:slug" element={<RedirectPropertyEN />} />
     <Route path="/en/propiedad/:slug" element={<RedirectToENProperty />} />
     <Route path="/propiedades" element={<Navigate to="/listings" replace />} />
+    <Route path="/nosotros" element={<Navigate to="/about" replace />} />
 
     {/* 404 */}
     <Route path="*" element={<NotFound />} />
