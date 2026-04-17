@@ -576,7 +576,7 @@ const PreSale = () => {
                     : 'Thank you. A Rivana advisor will also contact you within 2 hours to assist you personally.'}
                 </p>
                 <a href="/brochures/mondrian-residences-grand-island.pdf" target="_blank" rel="noopener noreferrer" className="ps-btn-gold ps-btn-full" style={{ display: 'block', textAlign: 'center', marginBottom: 12 }}>
-                  {L === 'es' ? 'Ver Brochure Mondrian →' : 'View Mondrian Brochure →'}
+                  {L === 'es' ? 'Ver Brochure →' : 'View Brochure →'}
                 </a>
                 <a href="https://wa.me/529988457224?text=Hola%2C%20quisiera%20recibir%20el%20PDF%20del%20brochure%20de%20Mondrian%20Residences" className="ps-btn-ghost-dark" target="_blank" rel="noopener noreferrer">
                   {L === 'es' ? 'Recibir PDF por WhatsApp' : 'Receive PDF via WhatsApp'}

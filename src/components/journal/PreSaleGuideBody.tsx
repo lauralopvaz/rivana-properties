@@ -183,7 +183,7 @@ export const PreSaleGuideBodyES = () => {
       <p><strong className="text-foreground">Título del terreno.</strong> Debe ser escritura pública limpia, libre de gravámenes y no ser tierra ejidal. Tu notario verifica esto — y Rivana lo confirma antes de cualquier recomendación.</p>
       <p><strong className="text-foreground">Contrato de promesa de compraventa.</strong> Cada cláusula de entrega, penalidad por retraso y especificación técnica debe estar por escrito. Lo que no está escrito no existe legalmente.</p>
       <p><strong className="text-foreground">Permiso STR proyectado.</strong> Si tu objetivo es renta vacacional, el reglamento de condominio del futuro edificio debe permitirla. Verificamos esto antes de la primera conversación de precio.</p>
-      <p><strong className="text-foreground">Esquema de financiamiento del desarrollador.</strong> Un proyecto financiado exclusivamente por preventas sin respaldo bancario tiene mayor riesgo de retraso. Proyectos como Mondrian, SLS y The Reserve tienen estructuras financieras institucionales que reducen este riesgo significativamente.</p>
+      <p><strong className="text-foreground">Esquema de financiamiento del desarrollador.</strong> Un proyecto financiado exclusivamente por preventas sin respaldo bancario tiene mayor riesgo de retraso. Proyectos como The Residences at Grand Island Cancun, SLS y The Reserve tienen estructuras financieras institucionales que reducen este riesgo significativamente.</p>
 
       {/* ── Riesgos ── */}
       <h2 className="text-foreground" id="riesgos">Riesgos reales — y cómo mitigarlos</h2>
@@ -233,7 +233,7 @@ export const PreSaleGuideBodyES = () => {
       {/* ── Quote ── */}
       <blockquote className="border-l-2 border-primary pl-6 py-4 my-8">
         <p className="font-display text-xl italic text-foreground leading-relaxed">
-          "La preventa no es especular — es reconocer antes que el mercado el valor de lo que se está construyendo. Los que entraron en Mondrian en fase de lanzamiento no apostaron: calcularon."
+          "La preventa no es especular — es reconocer antes que el mercado el valor de lo que se está construyendo. Los que entraron en The Residences at Grand Island Cancun en fase de lanzamiento no apostaron: calcularon."
         </p>
       </blockquote>
 
@@ -372,7 +372,7 @@ export const PreSaleGuideBodyEN = () => {
       <p><strong className="text-foreground">Land title.</strong> Must be a clean public deed, free of encumbrances and not ejido land. Your notary verifies this — and Rivana confirms it before any recommendation.</p>
       <p><strong className="text-foreground">Purchase promise agreement.</strong> Every delivery clause, delay penalty and technical specification must be in writing. What is not written does not exist legally.</p>
       <p><strong className="text-foreground">Projected STR permit.</strong> If vacation rental income is your goal, the future building's condo bylaws must allow it. We verify this before the first price conversation.</p>
-      <p><strong className="text-foreground">Developer financing structure.</strong> A project financed exclusively by pre-sale buyers without institutional backing carries a higher delay risk. Projects like Mondrian, SLS and The Reserve have institutional financial structures that significantly reduce this risk.</p>
+      <p><strong className="text-foreground">Developer financing structure.</strong> A project financed exclusively by pre-sale buyers without institutional backing carries a higher delay risk. Projects like The Residences at Grand Island Cancun, SLS and The Reserve have institutional financial structures that significantly reduce this risk.</p>
 
       {/* ── Risks ── */}
       <h2 className="text-foreground" id="risks">Real risks — and how to mitigate them</h2>
@@ -422,7 +422,7 @@ export const PreSaleGuideBodyEN = () => {
       {/* ── Quote ── */}
       <blockquote className="border-l-2 border-primary pl-6 py-4 my-8">
         <p className="font-display text-xl italic text-foreground leading-relaxed">
-          "Pre-sale is not speculation — it is recognizing ahead of the market the value of what is being built. Those who entered Mondrian at launch did not gamble: they calculated."
+          "Pre-sale is not speculation — it is recognizing ahead of the market the value of what is being built. Those who entered The Residences at Grand Island Cancun at launch did not gamble: they calculated."
         </p>
       </blockquote>
 
