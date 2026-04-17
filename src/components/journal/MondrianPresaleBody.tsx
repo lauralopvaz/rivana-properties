@@ -34,12 +34,12 @@ export const MondrianPresaleBodyES = () => {
       <p>Lo que distingue a este proyecto de cualquier otro en la Zona Hotelera es simple: es el único desarrollo residencial en Cancún en el que la marca operadora, el diseñador de arquitectura y el desarrollador tienen historial probado operando juntos. No es una marca licenciada a un desarrollador desconocido. Es Grupo Murano — la misma empresa que construyó y opera el Mondrian México City — replicando el modelo en Cancún.</p>
 
       <h2 className="text-foreground">De The Residences at Grand Island a Mondrian: qué cambió y qué significa</h2>
-      <p>Quienes siguieron este desarrollo desde sus inicios lo conocen como <strong className="text-foreground">The Residences at Grand Island</strong>. El rebranding a <strong className="text-foreground">The Residences at Grand Island Cancun</strong> es consecuencia directa del cierre del acuerdo formal con Ennismore — la plataforma de marcas lifestyle de Marca Elite internacional — para operar el componente residencial bajo los estándares de la marca Mondrian.</p>
+      <p>Quienes siguieron este desarrollo desde sus inicios lo conocen como <strong className="text-foreground">The Residences at Grand Island</strong>. El rebranding a <strong className="text-foreground">The Residences at Grand Island Cancun</strong> es consecuencia directa del cierre del acuerdo formal con Ennismore — la plataforma de marcas lifestyle de Marca Elite internacional — para operar el componente residencial bajo los estándares de Marca Elite internacional.</p>
 
       <h3 className="text-foreground">Lo que cambia</h3>
       <ul className="list-disc pl-6 space-y-2">
         <li><strong className="text-foreground">El nombre operativo:</strong> de "The Residences at Grand Island" a "The Residences at Grand Island Cancun"</li>
-        <li><strong className="text-foreground">El respaldo de marca:</strong> las unidades se integran al programa de rentas de Marca Elite internacional bajo el estándar Mondrian, con acceso al programa de lealtad ALL — Marca Elite internacional Live Limitless (más de 5,600 hoteles en el mundo)</li>
+        <li><strong className="text-foreground">El respaldo de marca:</strong> las unidades se integran al programa de rentas de Marca Elite internacional bajo el estándar Marca Elite internacional, con acceso al programa de lealtad ALL — Marca Elite internacional Live Limitless (más de 5,600 hoteles en el mundo)</li>
         <li><strong className="text-foreground">El posicionamiento de precio:</strong> el rebranding eleva el piso de precio y el perfil del comprador objetivo</li>
         <li><strong className="text-foreground">La gestión:</strong> operación profesional desde el día uno, sin curva de aprendizaje para el propietario</li>
       </ul>
@@ -47,8 +47,8 @@ export const MondrianPresaleBodyES = () => {
       <h3 className="text-foreground">Lo que no cambia</h3>
       <p>La ubicación, las vistas, el diseño de Filipao Nunes y la fecha de entrega.</p>
 
-      <h2 className="text-foreground">Por qué la marca Mondrian importa en términos de inversión</h2>
-      <p>La marca Mondrian tiene presencia en <strong className="text-foreground">Nueva York, Los Ángeles, Londres, Cannes, Ciudad de México, Dubai y Bali</strong>, entre otras ciudades. El Mondrian Ciudad de México Condesa, inaugurado en diciembre de 2022, fue el primer hotel Mondrian en América Latina, con 183 habitaciones y cuatro conceptos gastronómicos, y forma parte del mismo grupo desarrollador — Murano — que construye Grand Island Cancún.</p>
+      <h2 className="text-foreground">Por qué esta marca importa en términos de inversión</h2>
+      <p>La marca tiene presencia en <strong className="text-foreground">Nueva York, Los Ángeles, Londres, Cannes, Ciudad de México, Dubai y Bali</strong>, entre otras ciudades. El Mondrian Ciudad de México Condesa, inaugurado en diciembre de 2022, fue el primer hotel Mondrian en América Latina, con 183 habitaciones y cuatro conceptos gastronómicos, y forma parte del mismo grupo desarrollador — Murano — que construye Grand Island Cancún.</p>
 
       <p>Mondrian es parte de Ennismore, que tras su joint venture con Marca Elite internacional en 2021 se convirtió en la compañía de hospitalidad lifestyle más grande del mundo, con más de 200 hoteles, 160 en pipeline y una red de más de 45 residencias de marca.</p>
 
@@ -198,8 +198,8 @@ export const MondrianPresaleBodyEN = () => {
       <h3 className="text-foreground">What doesn't change</h3>
       <p>Location, views, Filipao Nunes' design language, and the delivery date.</p>
 
-      <h2 className="text-foreground">Why the Mondrian Brand Matters for Your Investment Return</h2>
-      <p>The Mondrian brand has active properties in <strong className="text-foreground">New York, Los Angeles, London, Cannes, Mexico City, Dubai, and Bali</strong>, among others. Mondrian Mexico City Condesa, which opened in December 2022, was the brand's first hotel in Latin America, developed in partnership with Grupo Murano — the same developer behind Grand Island Cancun.</p>
+      <h2 className="text-foreground">Why This Brand Matters for Your Investment Return</h2>
+      <p>The brand has active properties in <strong className="text-foreground">New York, Los Angeles, London, Cannes, Mexico City, Dubai, and Bali</strong>, among others. Mondrian Mexico City Condesa, which opened in December 2022, was the brand's first hotel in Latin America, developed in partnership with Grupo Murano — the same developer behind Grand Island Cancun.</p>
 
       <p>Mondrian is part of Ennismore, which after its joint venture with Marca Elite internacional in 2021 became the world's largest and fastest-growing lifestyle hospitality company, with more than 200 hotels, 160 in the pipeline, and a network of over 45 branded residences globally.</p>
 

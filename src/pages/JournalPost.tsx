@@ -164,8 +164,8 @@ const JournalPost = () => {
       : ['Structural case', '2026 data', 'World Cup impact', 'Zone by zone', 'Rental vs appreciation', 'What to verify', 'FAQ'])
     : (articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale')
     ? (language === 'es'
-      ? ['Qué es The Residences at Grand Island Cancun', 'De The Residences a Mondrian', 'La marca Mondrian', 'Ubicación', 'Preventa: precio y ROI', 'Contexto macro', '¿Para quién es?', 'Proceso de compra']
-      : ['What is The Residences at Grand Island Cancun', 'From The Residences to Mondrian', 'The Mondrian brand', 'Location', 'Presale: price & ROI', 'Macro context', 'Who is it for?', 'How to buy'])
+      ? ['Qué es The Residences at Grand Island Cancun', 'De The Residences a Mondrian', 'La marca', 'Ubicación', 'Preventa: precio y ROI', 'Contexto macro', '¿Para quién es?', 'Proceso de compra']
+      : ['What is The Residences at Grand Island Cancun', 'From The Residences to Mondrian', 'The brand', 'Location', 'Presale: price & ROI', 'Macro context', 'Who is it for?', 'How to buy'])
     : articleSlug === 'mondrian-residences-grand-island-cancun-guide'
     ? (language === 'es'
       ? ['Respaldo Marca Elite internacional', 'Ubicación', 'Amenidades', 'Ficha del proyecto', 'Plan de pago', '¿Por qué 2026?', '¿Para quién es?', 'El siguiente paso']
