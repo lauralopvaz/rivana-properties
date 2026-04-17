@@ -182,7 +182,7 @@ export const CancunROIBodyES = () => {
         </div>
         <div>
           <p className="text-foreground font-semibold">¿Puedo obtener esos rendimientos siendo extranjero sin estar en México?</p>
-          <p>Sí. Los propietarios de fideicomisos pueden recibir ingresos por renta de forma remota. La gestión operativa puede delegarse a un property manager local o al programa de renta del desarrollador en edificios de marca como Mondrian o SLS.</p>
+          <p>Sí. Los propietarios de fideicomisos pueden recibir ingresos por renta de forma remota. La gestión operativa puede delegarse a un property manager local o al programa de renta del desarrollador en edificios de marca como The Residences at Grand Island Cancun o SLS.</p>
         </div>
         <div>
           <p className="text-foreground font-semibold">¿Qué impuestos aplican sobre los ingresos de renta en México?</p>
@@ -382,7 +382,7 @@ export const CancunROIBodyEN = () => {
         </div>
         <div>
           <p className="text-foreground font-semibold">Can I achieve those yields as a foreigner without being in Mexico?</p>
-          <p>Yes. Fideicomiso beneficiaries can receive rental income remotely. Operational management can be delegated to a local property manager or to the developer's rental program in branded buildings like Mondrian or SLS.</p>
+          <p>Yes. Fideicomiso beneficiaries can receive rental income remotely. Operational management can be delegated to a local property manager or to the developer's rental program in branded buildings like The Residences at Grand Island Cancun or SLS.</p>
         </div>
         <div>
           <p className="text-foreground font-semibold">What taxes apply to rental income in Mexico?</p>
