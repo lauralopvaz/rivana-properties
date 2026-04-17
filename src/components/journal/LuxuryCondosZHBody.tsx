@@ -88,13 +88,13 @@ export const LuxuryCondosZHBodyES = () => (
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun</h3>
     <p>
-      The Residences at Grand Island Cancun es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. La ubicación es en el km 16.5, con vistas simultáneas al Mar Caribe y a la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva dual.
+      The Residences at Grand Island Cancun es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Marca Elite internacional bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. La ubicación es en el km 16.5, con vistas simultáneas al Mar Caribe y a la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva dual.
     </p>
     <p>
       El desarrollo ofrece preventa desde $9,050,000 MXN con una plusvalía proyectada del 33% al precio de entrega — entrega Q2 2027. Plan de pago: 30% de enganche, 20% diferido en 12 meses, 50% a la entrega.
     </p>
     <p className="italic text-foreground">Perfil ideal: inversionista que quiere flujo de caja desde el primer día sin gestión directa, respaldado por una de las marcas hoteleras más reconocidas del mundo.</p>
-    <PropertyCard name="The Residences at Grand Island Cancun" tagline="Residencia de marca Accor en Grand Island, Zona Hotelera" link="/propiedad/mondrian-residences-grand-island-cancun" />
+    <PropertyCard name="The Residences at Grand Island Cancun" tagline="Residencia de marca Marca Elite internacional en Grand Island, Zona Hotelera" link="/propiedad/mondrian-residences-grand-island-cancun" />
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">Bay View Grand at Grand Island</h3>
     <p>
@@ -115,7 +115,7 @@ export const LuxuryCondosZHBodyES = () => (
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">SLS Ocean Beach — Puerto Cancún</h3>
     <p>
-      SLS Ocean Beach está en Novo Cancún, Puerto Cancún — residencias de lujo desarrolladas por Inmobilia, Ucalli y Related, con arquitectura por Arquitectonica e interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Accor). Unidades de 1 a 3 recámaras entre 191 y 356 m², desde $1.6 millones de dólares, con entrega en verano 2028.
+      SLS Ocean Beach está en Novo Cancún, Puerto Cancún — residencias de lujo desarrolladas por Inmobilia, Ucalli y Related, con arquitectura por Arquitectonica e interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Marca Elite internacional). Unidades de 1 a 3 recámaras entre 191 y 356 m², desde $1.6 millones de dólares, con entrega en verano 2028.
     </p>
     <p>
       Aunque su ubicación es Puerto Cancún en lugar de la Zona Hotelera estricta, SLS Ocean Beach es la apuesta de lujo de marca más sofisticada del corredor norte — con el mismo ecosistema de conectividad al aeropuerto y acceso directo al Caribe. Para el comprador que busca el respaldo de una marca hotelera global con presencia en Miami, Nueva York y Barcelona, esta es la opción más cercana a esa experiencia en el Caribe Mexicano.
@@ -131,10 +131,10 @@ export const LuxuryCondosZHBodyES = () => (
 
     <H2>Cómo elegir según tu perfil</H2>
     <div className="bg-card border border-border rounded-sm p-6 my-8 space-y-4">
-      <p><strong className="text-foreground">Flujo de caja inmediato sin gestión:</strong> The Residences at Grand Island Cancun. La gestión Accor opera por ti desde el primer día.</p>
+      <p><strong className="text-foreground">Flujo de caja inmediato sin gestión:</strong> The Residences at Grand Island Cancun. La gestión Marca Elite internacional opera por ti desde el primer día.</p>
       <p><strong className="text-foreground">Mayor número de amenidades con entrada flexible:</strong> Bay View Grand. Cinco tipologías, más de 40 amenidades, ocupación proyectada superior al 80%.</p>
       <p><strong className="text-foreground">Activo único e irrepetible:</strong> Kabeek Marina. Solo 30 unidades, muelle privado, sin competencia directa.</p>
-      <p><strong className="text-foreground">Lujo de marca más sofisticado:</strong> SLS Ocean Beach. Respaldo global de Ennismore y Accor.</p>
+      <p><strong className="text-foreground">Lujo de marca más sofisticado:</strong> SLS Ocean Beach. Respaldo global de Ennismore y Marca Elite internacional.</p>
       <p><strong className="text-foreground">Vida de marina con entregas próximas:</strong> Vellmari Grand Living. Torres de 20 pisos, 200° de vista, entrega diciembre 2026.</p>
     </div>
 
@@ -233,13 +233,13 @@ export const LuxuryCondosZHBodyEN = () => (
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun</h3>
     <p>
-      The Residences at Grand Island Cancun is a branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Located at km 16.5, with simultaneous views of the Caribbean Sea and Nichupté Lagoon — the only development in the Hotel Zone with that dual perspective.
+      The Residences at Grand Island Cancun is a branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Marca Elite internacional under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Located at km 16.5, with simultaneous views of the Caribbean Sea and Nichupté Lagoon — the only development in the Hotel Zone with that dual perspective.
     </p>
     <p>
       Pre-sale pricing starts at $9,050,000 MXN with 33% projected appreciation to delivery price — Q2 2027. Payment plan: 30% down, 20% deferred over 12 months, 50% at delivery.
     </p>
     <p className="italic text-foreground">Ideal profile: investor who wants cash flow from day one without direct management, backed by one of the world's most recognized hospitality brands.</p>
-    <PropertyCardEN name="The Residences at Grand Island Cancun" tagline="Accor-branded residence at Grand Island, Hotel Zone" link="/en/property/mondrian-residences-grand-island-cancun" />
+    <PropertyCardEN name="The Residences at Grand Island Cancun" tagline="Marca Elite internacional-branded residence at Grand Island, Hotel Zone" link="/en/property/mondrian-residences-grand-island-cancun" />
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">Bay View Grand at Grand Island</h3>
     <p>
@@ -260,7 +260,7 @@ export const LuxuryCondosZHBodyEN = () => (
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">SLS Ocean Beach — Puerto Cancún</h3>
     <p>
-      SLS Ocean Beach is located in Novo Cancún, Puerto Cancún — luxury residences developed by Inmobilia, Ucalli and Related, with architecture by Arquitectonica and interiors by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Accor). Units from 1 to 3 bedrooms, between 191 and 356 m², starting from $1.6 million USD, with delivery in Summer 2028.
+      SLS Ocean Beach is located in Novo Cancún, Puerto Cancún — luxury residences developed by Inmobilia, Ucalli and Related, with architecture by Arquitectonica and interiors by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Marca Elite internacional). Units from 1 to 3 bedrooms, between 191 and 356 m², starting from $1.6 million USD, with delivery in Summer 2028.
     </p>
     <p>
       Although its location is Puerto Cancún rather than the Hotel Zone proper, SLS Ocean Beach is the most sophisticated branded luxury play in the northern corridor — with the same airport connectivity ecosystem and direct Caribbean access. For the buyer who wants the backing of a global hospitality brand with presence in Miami, New York and Barcelona, this is the closest equivalent to that experience in the Mexican Caribbean.
@@ -276,10 +276,10 @@ export const LuxuryCondosZHBodyEN = () => (
 
     <H2>How to choose based on your profile</H2>
     <div className="bg-card border border-border rounded-sm p-6 my-8 space-y-4">
-      <p><strong className="text-foreground">Immediate cash flow without management:</strong> The Residences at Grand Island Cancun. Accor manages from day one. You receive the returns.</p>
+      <p><strong className="text-foreground">Immediate cash flow without management:</strong> The Residences at Grand Island Cancun. Marca Elite internacional manages from day one. You receive the returns.</p>
       <p><strong className="text-foreground">Most amenities with flexible entry:</strong> Bay View Grand. Five typologies, 40+ amenities, projected occupancy above 80%.</p>
       <p><strong className="text-foreground">Genuinely unique asset:</strong> Kabeek Marina. Only 30 units, private dock, no direct competition.</p>
-      <p><strong className="text-foreground">Most sophisticated branded luxury:</strong> SLS Ocean Beach. Global backing from Ennismore and Accor.</p>
+      <p><strong className="text-foreground">Most sophisticated branded luxury:</strong> SLS Ocean Beach. Global backing from Ennismore and Marca Elite internacional.</p>
       <p><strong className="text-foreground">Marina living with near-term delivery:</strong> Vellmari Grand Living. 20-story towers, 200° views, December 2026 delivery.</p>
     </div>
 

@@ -107,8 +107,8 @@ export const PreSaleGuideBodyES = () => {
       <h3 className="text-foreground text-xl mt-8">Zona Hotelera de Cancún</h3>
 
       <p><strong className="text-foreground">The Residences at Grand Island Cancun</strong> ⭐ <em>Destacado</em></p>
-      <p>Residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. El único desarrollo en la Zona Hotelera con vistas simultáneas al Mar Caribe y la Laguna Nichupté. Preventa desde $9,050,000 MXN con plusvalía proyectada del 33% al precio de entrega. Plan de pago: 30% de enganche, 20% diferido en 12 meses, 50% a la entrega. Entrega Q2 2027.</p>
-      <p>La gestión Accor opera por ti desde el primer día. Sin gestión directa. Sin curva de aprendizaje. Solo rendimientos.</p>
+      <p>Residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Marca Elite internacional bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. El único desarrollo en la Zona Hotelera con vistas simultáneas al Mar Caribe y la Laguna Nichupté. Preventa desde $9,050,000 MXN con plusvalía proyectada del 33% al precio de entrega. Plan de pago: 30% de enganche, 20% diferido en 12 meses, 50% a la entrega. Entrega Q2 2027.</p>
+      <p>La gestión Marca Elite internacional opera por ti desde el primer día. Sin gestión directa. Sin curva de aprendizaje. Solo rendimientos.</p>
       <PropertyCard name="The Residences at Grand Island Cancun" badge="Preventa · ROI 33%" detail="Llave en mano · Desde $9,050,000 MXN · Entrega Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
 
       <p><strong className="text-foreground">Bay View Grand at Grand Island</strong> ⭐ <em>Destacado</em></p>
@@ -127,7 +127,7 @@ export const PreSaleGuideBodyES = () => {
       <h3 className="text-foreground text-xl mt-8">Puerto Cancún</h3>
 
       <p><strong className="text-foreground">SLS Ocean Beach</strong> ⭐ <em>Destacado</em></p>
-      <p>Residencias de lujo en Novo Cancún desarrolladas por Inmobilia, Ucalli y Related. Arquitectura por Arquitectonica, interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Accor). Unidades de 191 a 356 m² desde $1.6 millones USD. Entrega verano 2028. El respaldo de marca global más sofisticado disponible en el Caribe Mexicano hoy.</p>
+      <p>Residencias de lujo en Novo Cancún desarrolladas por Inmobilia, Ucalli y Related. Arquitectura por Arquitectonica, interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Marca Elite internacional). Unidades de 191 a 356 m² desde $1.6 millones USD. Entrega verano 2028. El respaldo de marca global más sofisticado disponible en el Caribe Mexicano hoy.</p>
       <PropertyCard name="SLS Ocean Beach" badge="Preventa" detail="191–356 m² · Desde $1.6M USD · Entrega 2028" link={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} />
 
       <p><strong className="text-foreground">Vellmari Grand Living</strong></p>
@@ -296,8 +296,8 @@ export const PreSaleGuideBodyEN = () => {
       <h3 className="text-foreground text-xl mt-8">Hotel Zone — Cancún</h3>
 
       <p><strong className="text-foreground">The Residences at Grand Island Cancun</strong> ⭐ <em>Featured</em></p>
-      <p>A branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit delivered turnkey, fully furnished and equipped, ready to operate from day one. The only development in the Hotel Zone with simultaneous views of the Caribbean Sea and Nichupté Lagoon. Pre-sale from $9,050,000 MXN with 33% projected appreciation to delivery price. Payment plan: 30% down, 20% deferred over 12 months, 50% at delivery. Q2 2027 delivery.</p>
-      <p>Accor management from day one. No direct management. No learning curve. Just returns.</p>
+      <p>A branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Marca Elite internacional under the Mondrian brand. Every unit delivered turnkey, fully furnished and equipped, ready to operate from day one. The only development in the Hotel Zone with simultaneous views of the Caribbean Sea and Nichupté Lagoon. Pre-sale from $9,050,000 MXN with 33% projected appreciation to delivery price. Payment plan: 30% down, 20% deferred over 12 months, 50% at delivery. Q2 2027 delivery.</p>
+      <p>Marca Elite internacional management from day one. No direct management. No learning curve. Just returns.</p>
       <PropertyCard name="The Residences at Grand Island Cancun" badge="Pre-Sale · ROI 33%" detail="Turnkey · From $9,050,000 MXN · Q2 2027 delivery" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
 
       <p><strong className="text-foreground">Bay View Grand at Grand Island</strong> ⭐ <em>Featured</em></p>
@@ -316,7 +316,7 @@ export const PreSaleGuideBodyEN = () => {
       <h3 className="text-foreground text-xl mt-8">Puerto Cancún</h3>
 
       <p><strong className="text-foreground">SLS Ocean Beach</strong> ⭐ <em>Featured</em></p>
-      <p>Luxury residences in Novo Cancún developed by Inmobilia, Ucalli and Related. Architecture by Arquitectonica, interiors by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Accor). Units from 191 to 356 m², from $1.6 million USD. Summer 2028 delivery. The most sophisticated global brand backing available in the Mexican Caribbean today.</p>
+      <p>Luxury residences in Novo Cancún developed by Inmobilia, Ucalli and Related. Architecture by Arquitectonica, interiors by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Marca Elite internacional). Units from 191 to 356 m², from $1.6 million USD. Summer 2028 delivery. The most sophisticated global brand backing available in the Mexican Caribbean today.</p>
       <PropertyCard name="SLS Ocean Beach" badge="Pre-Sale" detail="191–356 m² · From $1.6M USD · Summer 2028" link={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} />
 
       <p><strong className="text-foreground">Vellmari Grand Living</strong></p>

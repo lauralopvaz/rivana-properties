@@ -66,7 +66,7 @@ export const CancunROIBodyES = () => {
 
       <h3 className="text-foreground text-xl">Propiedades Rivana en Zona Hotelera</h3>
 
-      <p><strong className="text-foreground">The Residences at Grand Island Cancun</strong> — Residencia de marca operada por Accor bajo la marca Mondrian. Entrega llave en mano, totalmente amueblada y equipada. Plusvalía preventa del 33%. Vista dual al Caribe y la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva. Desde $9,050,000 MXN, entrega Q2 2027. Gestión Accor desde el primer día, sin curva de aprendizaje ni gestión directa del propietario.</p>
+      <p><strong className="text-foreground">The Residences at Grand Island Cancun</strong> — Residencia de marca operada por Marca Elite internacional bajo la marca Mondrian. Entrega llave en mano, totalmente amueblada y equipada. Plusvalía preventa del 33%. Vista dual al Caribe y la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva. Desde $9,050,000 MXN, entrega Q2 2027. Gestión Marca Elite internacional desde el primer día, sin curva de aprendizaje ni gestión directa del propietario.</p>
       <PropertyCard name="The Residences at Grand Island Cancun" badge="Preventa" detail="Branded · Vista dual Caribe + Laguna · Desde $9.05M MXN · Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
 
       <p><strong className="text-foreground">Bay View Grand at Grand Island</strong> — Más de 40 amenidades de resort, interiores de Filipão Nunes, cinco tipologías desde $586,000 USD. Ocupación vacacional superior al 80% anual. Inmediatamente comercializable en plataformas STR.</p>
@@ -89,7 +89,7 @@ export const CancunROIBodyES = () => {
 
       <h3 className="text-foreground text-xl">Propiedades Rivana en Puerto Cancún</h3>
 
-      <p><strong className="text-foreground">SLS Ocean Beach</strong> — Residencias de lujo en Novo Cancún desarrolladas por Inmobilia, Ucalli y Related. Arquitectura por Arquitectonica, interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Accor). Unidades de 191 a 356 m² desde $1.6 millones USD. Entrega verano 2028. El respaldo de marca más sofisticado disponible en el corredor de Cancún.</p>
+      <p><strong className="text-foreground">SLS Ocean Beach</strong> — Residencias de lujo en Novo Cancún desarrolladas por Inmobilia, Ucalli y Related. Arquitectura por Arquitectonica, interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Marca Elite internacional). Unidades de 191 a 356 m² desde $1.6 millones USD. Entrega verano 2028. El respaldo de marca más sofisticado disponible en el corredor de Cancún.</p>
       <PropertyCard name="SLS Ocean Beach — Puerto Cancún" badge="Preventa" detail="Branded SLS · 191–356 m² · Desde $1.6M USD · Verano 2028" link={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} />
 
       <p><strong className="text-foreground">Vellmari Grand Living</strong> — 95 residencias más 3 penthouses en 2 torres de 20 pisos. Vistas de 200 grados desde cada piso. 20 amenidades premium: marina, albercas, pádel, pickleball, spa, gimnasio y kids club. Plaza Puerto Cancún a menos de 500 metros. Desde $846,000 USD, entregas diciembre 2026 y julio 2027.</p>
@@ -266,7 +266,7 @@ export const CancunROIBodyEN = () => {
 
       <h3 className="text-foreground text-xl">Rivana properties in the Hotel Zone</h3>
 
-      <p><strong className="text-foreground">The Residences at Grand Island Cancun</strong> — A branded residence operated by Accor under the Mondrian brand. Delivered turnkey, fully furnished and equipped. 33% pre-sale appreciation. Dual views of the Caribbean and Nichupté Lagoon — the only development in the Hotel Zone with that perspective. From $9,050,000 MXN, Q2 2027 delivery. Accor management from day one — no learning curve, no direct management required.</p>
+      <p><strong className="text-foreground">The Residences at Grand Island Cancun</strong> — A branded residence operated by Marca Elite internacional under the Mondrian brand. Delivered turnkey, fully furnished and equipped. 33% pre-sale appreciation. Dual views of the Caribbean and Nichupté Lagoon — the only development in the Hotel Zone with that perspective. From $9,050,000 MXN, Q2 2027 delivery. Marca Elite internacional management from day one — no learning curve, no direct management required.</p>
       <PropertyCard name="The Residences at Grand Island Cancun" badge="Pre-Sale" detail="Branded · Dual Caribbean + Lagoon views · From $9.05M MXN · Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
 
       <p><strong className="text-foreground">Bay View Grand at Grand Island</strong> — Over 40 resort amenities, interiors by Filipão Nunes, five typologies from $586,000 USD. Vacation occupancy above 80% annually. Immediately marketable on STR platforms.</p>
@@ -289,7 +289,7 @@ export const CancunROIBodyEN = () => {
 
       <h3 className="text-foreground text-xl">Rivana properties in Puerto Cancún</h3>
 
-      <p><strong className="text-foreground">SLS Ocean Beach</strong> — Luxury residences in Novo Cancún developed by Inmobilia, Ucalli and Related. Architecture by Arquitectonica, interiors by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Accor). Units from 191 to 356 m², from $1.6 million USD. Summer 2028 delivery. The most sophisticated branded luxury offering in the Cancún corridor.</p>
+      <p><strong className="text-foreground">SLS Ocean Beach</strong> — Luxury residences in Novo Cancún developed by Inmobilia, Ucalli and Related. Architecture by Arquitectonica, interiors by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Marca Elite internacional). Units from 191 to 356 m², from $1.6 million USD. Summer 2028 delivery. The most sophisticated branded luxury offering in the Cancún corridor.</p>
       <PropertyCard name="SLS Ocean Beach — Puerto Cancún" badge="Pre-Sale" detail="Branded SLS · 191–356 m² · From $1.6M USD · Summer 2028" link={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} />
 
       <p><strong className="text-foreground">Vellmari Grand Living</strong> — 95 residences plus 3 penthouses across 2 twenty-story towers. 200-degree views from every floor. 20 premium amenities: marina, pools, paddle tennis, pickleball, spa, gym and kids club. Plaza Puerto Cancún less than 500 meters away. From $846,000 USD, December 2026 and July 2027 deliveries.</p>

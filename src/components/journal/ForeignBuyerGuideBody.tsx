@@ -152,7 +152,7 @@ export const ForeignBuyerGuideBodyEN = () => {
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
       </p>
       <p>
-        <strong className="text-foreground">SLS Ocean Beach — Puerto Cancún</strong> — Developed by Inmobilia, Ucalli and Related. SLS Hotels brand (Ennismore + Accor). The most sophisticated branded luxury play in the northern corridor.{' '}
+        <strong className="text-foreground">SLS Ocean Beach — Puerto Cancún</strong> — Developed by Inmobilia, Ucalli and Related. SLS Hotels brand (Ennismore + Marca Elite internacional). The most sophisticated branded luxury play in the northern corridor.{' '}
         <Link to={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
       </p>
       <p>
@@ -316,11 +316,11 @@ export const ForeignBuyerGuideBodyES = () => {
         <Link to={localePath('/propiedad/the-reserve-at-mayakoba')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>
-        <strong className="text-foreground">The Residences at Grand Island Cancun</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por Accor. Precios de preventa disponibles.{' '}
+        <strong className="text-foreground">The Residences at Grand Island Cancun</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por Marca Elite internacional. Precios de preventa disponibles.{' '}
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>
-        <strong className="text-foreground">SLS Ocean Beach — Puerto Cancún</strong> — Desarrollado por Inmobilia, Ucalli y Related. Marca SLS Hotels (Ennismore + Accor). La inversión branded más sofisticada del corredor norte.{' '}
+        <strong className="text-foreground">SLS Ocean Beach — Puerto Cancún</strong> — Desarrollado por Inmobilia, Ucalli y Related. Marca SLS Hotels (Ennismore + Marca Elite internacional). La inversión branded más sofisticada del corredor norte.{' '}
         <Link to={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>

@@ -97,7 +97,7 @@ export const MayakobaVsPuertoBodyES = () => {
 
       <h3 className="text-foreground text-xl mt-8">Las propiedades Rivana en Puerto Cancún:</h3>
       <p><strong className="text-foreground">SLS Ocean Beach</strong> ⭐</p>
-      <p>Residencias de lujo en Novo Cancún desarrolladas por Inmobilia, Ucalli y Related. Arquitectura por Arquitectonica, interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Accor). Unidades de 191 a 356 m² desde $1.6 millones USD. Entrega verano 2028. El respaldo de marca más sofisticado del corredor — el equivalente en Puerto Cancún a lo que Banyan Tree representa en Mayakoba.</p>
+      <p>Residencias de lujo en Novo Cancún desarrolladas por Inmobilia, Ucalli y Related. Arquitectura por Arquitectonica, interiorismo por Bernardi + Peschard. Operado bajo la marca SLS Hotels (Ennismore + Marca Elite internacional). Unidades de 191 a 356 m² desde $1.6 millones USD. Entrega verano 2028. El respaldo de marca más sofisticado del corredor — el equivalente en Puerto Cancún a lo que Banyan Tree representa en Mayakoba.</p>
       <PropertyCard name="SLS Ocean Beach" badge="Preventa" detail="1–3 Rec. · 191–356 m² · Desde $1.6M USD" link={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} />
 
       <p><strong className="text-foreground">Vellmari Grand Living</strong></p>
@@ -198,7 +198,7 @@ export const MayakobaVsPuertoBodyEN = () => {
 
       <h3 className="text-foreground text-xl mt-8">Rivana properties in Puerto Cancún:</h3>
       <p><strong className="text-foreground">SLS Ocean Beach</strong> ⭐</p>
-      <p>Luxury residences in Novo Cancún developed by Inmobilia, Ucalli and Related. Architecture by Arquitectonica, interiors by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Accor). Units from 191 to 356 m², from $1.6 million USD. Summer 2028 delivery. The most sophisticated brand backing in the corridor — the Puerto Cancún equivalent of what Banyan Tree represents in Mayakoba.</p>
+      <p>Luxury residences in Novo Cancún developed by Inmobilia, Ucalli and Related. Architecture by Arquitectonica, interiors by Bernardi + Peschard. Operated under the SLS Hotels brand (Ennismore + Marca Elite internacional). Units from 191 to 356 m², from $1.6 million USD. Summer 2028 delivery. The most sophisticated brand backing in the corridor — the Puerto Cancún equivalent of what Banyan Tree represents in Mayakoba.</p>
       <PropertyCard name="SLS Ocean Beach" badge="Pre-Sale" detail="1–3 Bed · 191–356 m² · From $1.6M USD" link={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} />
 
       <p><strong className="text-foreground">Vellmari Grand Living</strong></p>
