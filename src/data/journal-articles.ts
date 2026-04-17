@@ -221,7 +221,7 @@ export const journalArticles: JournalArticle[] = [
     slug: 'mondrian-residences-grand-island-cancun-guide',
     title: {
       es: 'The Residences at Grand Island Cancun en Grand Island Cancún: la guía que necesitas antes de decidir',
-      en: 'The Residences at Grand Island Cancun at Grand Island Cancún: The Guide You Need Before You Decide',
+      en: 'The Residences at Grand Island Cancun: The Guide You Need Before You Decide',
     },
     seoTitle: {
       es: 'The Residences at Grand Island Cancun en Grand Island Cancún — Lo Que Debes Saber',
@@ -230,7 +230,7 @@ export const journalArticles: JournalArticle[] = [
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
       es: 'Guía completa de The Residences at Grand Island Cancun: precio, plan de pagos, amenidades con campo de golf, respaldo Accor y vistas al mar y laguna que jamás serán obstruidas.',
-      en: 'Complete guide to The Residences at Grand Island Cancun Cancún: Accor backing, golf course, unobstructed Caribbean and lagoon views, pre-sale pricing and 30/20/50 payment plan.',
+      en: 'Complete guide to The Residences at Grand Island Cancun: Accor backing, golf course, unobstructed Caribbean and lagoon views, pre-sale pricing and 30/20/50 payment plan.',
     },
     date: 'Apr 10, 2026',
     readTime: '11 min',

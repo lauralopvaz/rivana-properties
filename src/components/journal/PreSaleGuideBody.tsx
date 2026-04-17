@@ -106,7 +106,7 @@ export const PreSaleGuideBodyES = () => {
       {/* Zona Hotelera */}
       <h3 className="text-foreground text-xl mt-8">Zona Hotelera de Cancún</h3>
 
-      <p><strong className="text-foreground">The Residences at Grand Island Cancun at Grand Island Cancún</strong> ⭐ <em>Destacado</em></p>
+      <p><strong className="text-foreground">The Residences at Grand Island Cancun</strong> ⭐ <em>Destacado</em></p>
       <p>Residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. El único desarrollo en la Zona Hotelera con vistas simultáneas al Mar Caribe y la Laguna Nichupté. Preventa desde $9,050,000 MXN con plusvalía proyectada del 33% al precio de entrega. Plan de pago: 30% de enganche, 20% diferido en 12 meses, 50% a la entrega. Entrega Q2 2027.</p>
       <p>La gestión Accor opera por ti desde el primer día. Sin gestión directa. Sin curva de aprendizaje. Solo rendimientos.</p>
       <PropertyCard name="The Residences at Grand Island Cancun" badge="Preventa · ROI 33%" detail="Llave en mano · Desde $9,050,000 MXN · Entrega Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
@@ -295,7 +295,7 @@ export const PreSaleGuideBodyEN = () => {
       {/* Hotel Zone */}
       <h3 className="text-foreground text-xl mt-8">Hotel Zone — Cancún</h3>
 
-      <p><strong className="text-foreground">The Residences at Grand Island Cancun at Grand Island Cancún</strong> ⭐ <em>Featured</em></p>
+      <p><strong className="text-foreground">The Residences at Grand Island Cancun</strong> ⭐ <em>Featured</em></p>
       <p>A branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit delivered turnkey, fully furnished and equipped, ready to operate from day one. The only development in the Hotel Zone with simultaneous views of the Caribbean Sea and Nichupté Lagoon. Pre-sale from $9,050,000 MXN with 33% projected appreciation to delivery price. Payment plan: 30% down, 20% deferred over 12 months, 50% at delivery. Q2 2027 delivery.</p>
       <p>Accor management from day one. No direct management. No learning curve. Just returns.</p>
       <PropertyCard name="The Residences at Grand Island Cancun" badge="Pre-Sale · ROI 33%" detail="Turnkey · From $9,050,000 MXN · Q2 2027 delivery" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />

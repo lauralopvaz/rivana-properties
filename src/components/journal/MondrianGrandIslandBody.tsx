@@ -163,7 +163,7 @@ export const MondrianGrandIslandBodyEN = () => {
 
       <p className="font-display text-xl text-foreground italic">Your investment. Your legacy.</p>
 
-      <p>Some developments arrive at exactly the right moment. <strong className="text-foreground">The Residences at Grand Island Cancun at Grand Island, Cancún</strong>, is one of them: the full weight of Accor — the world's largest hotel group — behind every square meter, an address that will define a generation of Cancún real estate, unobstructed views of both the Caribbean Sea and Laguna de Nichupté that no future construction will ever block, and a pre-sale price that still makes sense before it no longer does.</p>
+      <p>Some developments arrive at exactly the right moment. <strong className="text-foreground">The Residences at Grand Island Cancun</strong>, is one of them: the full weight of Accor — the world's largest hotel group — behind every square meter, an address that will define a generation of Cancún real estate, unobstructed views of both the Caribbean Sea and Laguna de Nichupté that no future construction will ever block, and a pre-sale price that still makes sense before it no longer does.</p>
 
       <p>This guide is for the serious buyer. Here you'll find everything that matters: the project, the backing, the numbers, and why forward-thinking investors are moving now.</p>
 
