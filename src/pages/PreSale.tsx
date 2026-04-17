@@ -109,11 +109,11 @@ const PreSale = () => {
     : [{ n: '$514K', l: 'Price from USD' }, { n: '+33%', l: 'Projected appreciation' }, { n: 'Q2 2027', l: 'Turnkey delivery' }, { n: '8–12%', l: 'Estimated annual yield' }];
 
   const diffs = L === 'es' ? [
-    { n: '01', t: 'Operada por Marca Elite internacional — marca Mondrian', b: 'Uno de los grupos hoteleros más grandes del mundo. La marca Mondrian atrae al viajero de alto poder adquisitivo, lo que se traduce en ocupación premium y tarifas superiores desde el primer día de renta vacacional.' },
+    { n: '01', t: 'Operada por Marca Elite internacional', b: 'Uno de los grupos hoteleros más grandes del mundo. La marca atrae al viajero de alto poder adquisitivo, lo que se traduce en ocupación premium y tarifas superiores desde el primer día de renta vacacional.' },
     { n: '02', t: 'Vistas dobles únicas en la Zona Hotelera', b: 'El único desarrollo en el km 16.5 del Boulevard Kukulcán con vistas simultáneas al Mar Caribe y la Laguna Nichupté. Una perspectiva que no se repite en ningún otro proyecto de la zona.' },
     { n: '03', t: 'Llave en mano — genera desde el día uno', b: 'Cada unidad se entrega totalmente amueblada, equipada y lista para operar bajo gestión Marca Elite internacional. Sin curva de aprendizaje. Sin inversión adicional en mobiliario. Tus rendimientos comienzan desde la entrega.' },
   ] : [
-    { n: '01', t: 'Operated by Marca Elite internacional — Mondrian brand', b: 'One of the world\'s largest hotel groups. The Mondrian brand attracts high-net-worth travelers, translating to premium occupancy and superior rates from day one of vacation rental.' },
+    { n: '01', t: 'Operated by Marca Elite internacional', b: 'One of the world\'s largest hotel groups. The brand attracts high-net-worth travelers, translating to premium occupancy and superior rates from day one of vacation rental.' },
     { n: '02', t: 'Unique dual views in the Hotel Zone', b: 'The only development at km 16.5 on Boulevard Kukulcán with simultaneous Caribbean Sea and Nichupté Lagoon views. A perspective not replicated in any other project in the area.' },
     { n: '03', t: 'Turnkey — generating from day one', b: 'Every unit is delivered fully furnished, equipped, and ready to operate under Marca Elite internacional management. No learning curve. No additional furniture investment. Your returns begin at delivery.' },
   ];
@@ -215,8 +215,8 @@ const PreSale = () => {
         .ps-dif-card{background:#212121;padding:48px 38px;transition:background .25s}
         .ps-dif-card:hover{background:#292929}
         .ps-dif-n{font-family:'Cormorant Garamond',serif;font-size:3.6rem;font-weight:300;color:rgba(207,174,96,.15);line-height:1;margin-bottom:22px}
-        .ps-dif-t{font-family:'Cormorant Garamond',serif;font-size:1.32rem;font-weight:500;color:#F5F5F5;margin-bottom:14px;line-height:1.3}
-        .ps-dif-b{font-family:'Jost',sans-serif;font-size:0.96rem;font-weight:300;line-height:1.82;color:rgba(245,245,245,.46)}
+        .ps-dif-t{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:500;color:#FFFFFF;margin-bottom:16px;line-height:1.3}
+        .ps-dif-b{font-family:'Jost',sans-serif;font-size:1.08rem;font-weight:300;line-height:1.78;color:rgba(255,255,255,.85)}
 
         .ps-plan-sec{background:#F0EAE0;padding:100px 64px}
         .ps-plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
@@ -439,7 +439,7 @@ const PreSale = () => {
 
       {/* DIFERENCIADORES */}
       <section className="ps-dif-sec">
-        <div className="ps-sec-eye">{L === 'es' ? 'Por qué Mondrian' : 'Why Mondrian'}</div>
+        <div className="ps-sec-eye">{L === 'es' ? 'Por qué invertir aquí' : 'Why invest here'}</div>
         <h2>{L === 'es' ? <>Lo que hace <em>única</em><br />a esta propiedad</> : <>What makes this<br />property <em>unique</em></>}</h2>
         <div className="ps-dif-grid">
           {diffs.map((d) => (
