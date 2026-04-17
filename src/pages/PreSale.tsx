@@ -349,7 +349,7 @@ const PreSale = () => {
           <div className="ps-hero-eyebrow">
             {L === 'es' ? 'Preventa Exclusiva · Zona Hotelera, Cancún' : 'Exclusive Pre-Sale · Hotel Zone, Cancún'}
           </div>
-          <h1>The Residences at Grand Island Cancun<br /><em>at Grand Island</em></h1>
+          <h1>The Residences at Grand Island Cancun</h1>
           <p className="ps-hero-sub">
             {L === 'es'
               ? 'Residencia de marca diseñada por Filipao Nunes y operada por Accor. Entrega llave en mano Q2 2027. Precio de preventa desde $514,000 USD.'

@@ -18,7 +18,7 @@ export const MondrianGrandIslandBodyES = () => {
 
       <p className="font-display text-xl text-foreground italic">Tu inversión, tu legado.</p>
 
-      <p>Hay desarrollos que simplemente llegan en el momento correcto. <strong className="text-foreground">The Residences at Grand Island Cancun en Grand Island, Cancún</strong>, es uno de ellos: el respaldo de Accor — el grupo hotelero más grande del mundo — una ubicación que en cinco años todos van a reconocer, vistas al mar Caribe y a la Laguna de Nichupté que jamás serán obstruidas, y un precio de preventa que todavía hace posible lo que después será una cifra muy distinta.</p>
+      <p>Hay desarrollos que simplemente llegan en el momento correcto. <strong className="text-foreground">The Residences at Grand Island Cancun</strong>, es uno de ellos: el respaldo de Accor — el grupo hotelero más grande del mundo — una ubicación que en cinco años todos van a reconocer, vistas al mar Caribe y a la Laguna de Nichupté que jamás serán obstruidas, y un precio de preventa que todavía hace posible lo que después será una cifra muy distinta.</p>
 
       <p>Esta guía es para quien ya está evaluando con seriedad. Aquí encontrarás lo que necesitas saber sobre el proyecto, los números reales y por qué los inversionistas con visión están tomando posición hoy.</p>
 
@@ -181,7 +181,7 @@ export const MondrianGrandIslandBodyEN = () => {
       {/* CTA 1 */}
       <div className="my-10 text-center">
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')}>
-          <Button variant="gold" size="lg">View the The Residences at Grand Island Cancun property →</Button>
+          <Button variant="gold" size="lg">View the Residences at Grand Island Cancun property →</Button>
         </Link>
       </div>
 

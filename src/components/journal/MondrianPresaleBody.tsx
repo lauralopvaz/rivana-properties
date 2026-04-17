@@ -26,7 +26,7 @@ export const MondrianPresaleBodyES = () => {
 
       <p>Esta guía es el recurso más completo disponible sobre este desarrollo. Si estás evaluando la preventa de The Residences at Grand Island Cancun, aquí encuentras todo lo que necesitas saber.</p>
 
-      <h2 className="text-foreground">Qué es The Residences at Grand Island Cancun Grand Island Cancún</h2>
+      <h2 className="text-foreground">Qué es The Residences at Grand Island Cancun</h2>
       <p>The Residences at Grand Island Cancun es un proyecto de <strong className="text-foreground">residencias de marca</strong> (<em>branded residences</em>) ubicado dentro del desarrollo maestro Grand Island, en el kilómetro 16.5 de la Zona Hotelera de Cancún — una franja de 23 hectáreas que representa la apuesta de mayor escala en el mercado inmobiliario de lujo de Quintana Roo en los últimos veinte años.</p>
 
       <p>El proyecto ofrece unidades de <strong className="text-foreground">1 a 3 recámaras más loft</strong>, con superficies entre 76.96 y 164.75 m², diseñadas por <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — la firma portuguesa responsable del lenguaje visual de los Mondrian de Dubai y Doha — y operadas bajo la marca Mondrian por Accor, con entrega programada para <strong className="text-foreground">Q2 2027</strong>.</p>
@@ -148,7 +148,7 @@ export const MondrianPresaleBodyES = () => {
         <li><strong className="text-foreground">Escrituración y entrega (50%)</strong> — Q2 2027</li>
       </ol>
 
-      <p>Rivana Properties es asesor autorizado de The Residences at Grand Island Cancun Grand Island Cancún. Nuestro equipo puede acompañarte desde la primera consulta hasta la escritura, incluyendo asesoría en fideicomiso para compradores extranjeros.</p>
+      <p>Rivana Properties es asesor autorizado de The Residences at Grand Island Cancun. Nuestro equipo puede acompañarte desde la primera consulta hasta la escritura, incluyendo asesoría en fideicomiso para compradores extranjeros.</p>
 
       {/* ── CTA ── */}
       <div className="bg-card border border-border rounded-sm p-8 my-12 text-center">
@@ -175,9 +175,9 @@ export const MondrianPresaleBodyEN = () => {
     <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
       <p>The development formerly known as <strong className="text-foreground">The Residences at Grand Island</strong> has officially relaunched under one of the world's most recognizable hospitality brands: <strong className="text-foreground">The Residences at Grand Island Cancun</strong>. This isn't a cosmetic rebranding. It's the formalization of an agreement between <strong className="text-foreground">Grupo Murano</strong> — a Nasdaq-listed real estate company (ticker: MRNO) — and <strong className="text-foreground">Ennismore/Accor</strong>, the same partnership that operates Mondrian Mexico City Condesa, Latin America's first Mondrian property.</p>
 
-      <p>This guide is the most complete resource available in English on this development. If you're evaluating the The Residences at Grand Island Cancun presale, everything you need is here.</p>
+      <p>This guide is the most complete resource available in English on this development. If you're evaluating the Residences at Grand Island Cancun presale, everything you need is here.</p>
 
-      <h2 className="text-foreground">What Is The Residences at Grand Island Cancun Grand Island Cancun?</h2>
+      <h2 className="text-foreground">What Is The Residences at Grand Island Cancun?</h2>
       <p>The Residences at Grand Island Cancun is a <strong className="text-foreground">branded residences</strong> project within the Grand Island master development, located at <strong className="text-foreground">km 16.5 of Cancun's Hotel Zone</strong> — a 23-hectare estate that represents the largest luxury real estate bet in Quintana Roo in two decades.</p>
 
       <p>The project offers units ranging from <strong className="text-foreground">1 to 3 bedrooms plus loft</strong>, with surfaces between 829 and 1,773 sq ft, designed by <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — the Portuguese firm behind the Mondrian properties in Dubai and Doha — and operated under the Mondrian brand by Accor, with delivery scheduled for <strong className="text-foreground">Q2 2027</strong>.</p>
@@ -304,7 +304,7 @@ export const MondrianPresaleBodyEN = () => {
         <li><strong className="text-foreground">Closing and delivery (50%)</strong> — Q2 2027, with deed transfer</li>
       </ol>
 
-      <p>Rivana Properties is an authorized advisor for The Residences at Grand Island Cancun Grand Island Cancun. Our team accompanies you from first consultation to deed transfer, including fideicomiso advisory for foreign buyers.</p>
+      <p>Rivana Properties is an authorized advisor for The Residences at Grand Island Cancun. Our team accompanies you from first consultation to deed transfer, including fideicomiso advisory for foreign buyers.</p>
 
       {/* ── CTA ── */}
       <div className="bg-card border border-border rounded-sm p-8 my-12 text-center">

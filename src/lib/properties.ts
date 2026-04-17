@@ -228,7 +228,7 @@ export const properties: PropertyDetail[] = [
     id: 'mondrian-residences-grand-island-cancun',
     slug: 'mondrian-residences-grand-island-cancun',
     name: 'The Residences at Grand Island Cancun',
-    seoTitle: 'The Residences at Grand Island Cancun Grand Island Cancún | Rivana',
+    seoTitle: 'The Residences at Grand Island Cancun | Rivana',
     seoTitleEn: 'The Residences at Grand Island Cancun Hotel Zone | Rivana',
     seoDescription: 'Residencia de marca Accor en la Zona Hotelera de Cancún. Preventa desde $9,050,000 MXN, plusvalía 33%, entrega Q2 2027. Gestión hotelera desde el primer día.',
     seoDescriptionEn: "Accor-branded residence in Cancún's Hotel Zone. Pre-sale from $475K USD, 33% appreciation, Q2 2027 delivery. Hotel management from day one.",

@@ -225,7 +225,7 @@ export const journalArticles: JournalArticle[] = [
     },
     seoTitle: {
       es: 'The Residences at Grand Island Cancun en Grand Island Cancún — Lo Que Debes Saber',
-      en: 'The Residences at Grand Island Cancun Grand Island Cancún — Everything You Need to Know',
+      en: 'The Residences at Grand Island Cancun — Everything You Need to Know',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
@@ -242,12 +242,12 @@ export const journalArticles: JournalArticle[] = [
     slug: 'mondrian-residences-grand-island-cancun-preventa',
     slugEn: 'mondrian-residences-grand-island-cancun-presale',
     title: {
-      es: 'The Residences at Grand Island Cancun Grand Island Cancún: El Relanzamiento que Redefine la Zona Hotelera',
-      en: 'The Residences at Grand Island Cancun Grand Island Cancun: The Complete Presale Guide for 2026',
+      es: 'The Residences at Grand Island Cancun: El Relanzamiento que Redefine la Zona Hotelera',
+      en: 'The Residences at Grand Island Cancun: The Complete Presale Guide for 2026',
     },
     seoTitle: {
-      es: 'The Residences at Grand Island Cancun Grand Island Cancún: Guía Completa de Preventa 2026',
-      en: 'The Residences at Grand Island Cancun Grand Island Cancun: 2026 Presale Guide',
+      es: 'The Residences at Grand Island Cancun: Guía Completa de Preventa 2026',
+      en: 'The Residences at Grand Island Cancun: 2026 Presale Guide',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
