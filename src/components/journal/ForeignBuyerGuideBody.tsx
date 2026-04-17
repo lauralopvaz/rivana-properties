@@ -75,7 +75,7 @@ export const ForeignBuyerGuideBodyEN = () => {
           This is the single most important decision. Your agent should know local developers, pre-sale timelines, STR permit requirements by zone, and have experience guiding international buyers through the fideicomiso process.
         </StepItem>
         <StepItem num={2} label="Select your property.">
-          Pre-sale (preventa) and resale are the two main options. Pre-sale delivers the strongest entry prices and highest appreciation potential — typically 15–25% between purchase and delivery. Rivana's current portfolio includes The Reserve at Mayakoba (thereserveatmayakoba.com), The Residences at Grand Island Cancun at Grand Island Cancun, and Edificio Salvia in the Hotel Zone, one of the few buildings in Cancun with an active STR permit.
+          Pre-sale (preventa) and resale are the two main options. Pre-sale delivers the strongest entry prices and highest appreciation potential — typically 15–25% between purchase and delivery. Rivana's current portfolio includes The Reserve at Mayakoba (thereserveatmayakoba.com), The Residences at Grand Island Cancun, and Edificio Salvia in the Hotel Zone, one of the few buildings in Cancun with an active STR permit.
         </StepItem>
         <StepItem num={3} label="Prepare your documents.">
           Valid passport, proof of address in your home country, proof of funds, and RFC (Mexican tax ID, obtained during the transaction with your notary).
@@ -148,7 +148,7 @@ export const ForeignBuyerGuideBodyEN = () => {
         <Link to={localePath('/propiedad/the-reserve-at-mayakoba')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
       </p>
       <p>
-        <strong className="text-foreground">The Residences at Grand Island Cancun at Grand Island Cancún</strong> — Branded luxury residences in the Hotel Zone with hotel-managed rental program. Strong STR yields and brand-backed exit liquidity. Pre-sale pricing available.{' '}
+        <strong className="text-foreground">The Residences at Grand Island Cancun</strong> — Branded luxury residences in the Hotel Zone with hotel-managed rental program. Strong STR yields and brand-backed exit liquidity. Pre-sale pricing available.{' '}
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
       </p>
       <p>
@@ -243,7 +243,7 @@ export const ForeignBuyerGuideBodyES = () => {
           Esta es la decision mas importante. Tu agente debe conocer a los desarrolladores locales, los plazos de preventa, los requisitos de permisos STR por zona, y tener experiencia guiando a compradores internacionales a traves del proceso de fideicomiso.
         </StepItem>
         <StepItem num={2} label="Selecciona tu propiedad.">
-          Preventa y reventa son las dos opciones principales. La preventa ofrece los mejores precios de entrada y el mayor potencial de plusvalia — tipicamente 15–25% entre la compra y la entrega. El portafolio actual de Rivana incluye The Reserve at Mayakoba (thereserveatmayakoba.com), The Residences at Grand Island Cancun en Grand Island Cancun, y Edificio Salvia en la Zona Hotelera, uno de los pocos edificios en Cancun con permiso STR activo.
+          Preventa y reventa son las dos opciones principales. La preventa ofrece los mejores precios de entrada y el mayor potencial de plusvalia — tipicamente 15–25% entre la compra y la entrega. El portafolio actual de Rivana incluye The Reserve at Mayakoba (thereserveatmayakoba.com), The Residences at Grand Island Cancun, y Edificio Salvia en la Zona Hotelera, uno de los pocos edificios en Cancun con permiso STR activo.
         </StepItem>
         <StepItem num={3} label="Prepara tus documentos.">
           Pasaporte vigente, comprobante de domicilio en tu pais de origen, comprobante de fondos y RFC (obtenido durante la transaccion con tu notario).
@@ -316,7 +316,7 @@ export const ForeignBuyerGuideBodyES = () => {
         <Link to={localePath('/propiedad/the-reserve-at-mayakoba')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>
-        <strong className="text-foreground">The Residences at Grand Island Cancun en Grand Island Cancún</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por Accor. Precios de preventa disponibles.{' '}
+        <strong className="text-foreground">The Residences at Grand Island Cancun</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por Accor. Precios de preventa disponibles.{' '}
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>

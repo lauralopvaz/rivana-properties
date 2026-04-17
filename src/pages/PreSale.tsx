@@ -79,14 +79,14 @@ const PreSale = () => {
   const pad = (n: number) => String(n).padStart(2, '0');
 
   const faqs = L === 'es' ? [
-    { q: '¿Cuánto cuesta un departamento en The Residences at Grand Island Cancun Cancún?', a: 'El precio de preventa parte desde $514,000 USD para unidades de 76.96 m² hasta 164.75 m² con loft. En pesos equivale a desde $9,050,000 MXN, con un ahorro de $2,950,000 MXN frente al precio de lista de $12,000,000 MXN. A partir del 1 de junio de 2026, el precio aumenta 33%.' },
+    { q: '¿Cuánto cuesta un departamento en The Residences at Grand Island Cancun?', a: 'El precio de preventa parte desde $514,000 USD para unidades de 76.96 m² hasta 164.75 m² con loft. En pesos equivale a desde $9,050,000 MXN, con un ahorro de $2,950,000 MXN frente al precio de lista de $12,000,000 MXN. A partir del 1 de junio de 2026, el precio aumenta 33%.' },
     { q: '¿Puedo comprar siendo extranjero?', a: 'Sí. Los ciudadanos extranjeros pueden adquirir propiedades en zona turística en México a través de un fideicomiso bancario, regulado por la Ley de Inversión Extranjera. El proceso es estándar y ampliamente utilizado por inversionistas de EE.UU., Canadá y Europa. Nuestro equipo legal especializado te acompaña en cada paso.' },
     { q: '¿Qué incluye el precio? ¿La unidad viene amueblada?', a: 'Sí, la entrega es completamente llave en mano. La unidad incluye mobiliario, electrodomésticos, acabados premium diseñados por Filipao Nunes Arquitectos, y acceso a todas las amenidades del desarrollo maestro Grand Island: infinity pool, beach club, spa, gimnasio, restaurante rooftop, marina privada y campo de golf de 18 hoyos.' },
     { q: '¿Cuál es el rendimiento estimado de renta?', a: 'Las proyecciones para residencias de marca en Zona Hotelera de Cancún indican rendimientos de renta del 8–12% anual, con tasas de ocupación sostenidas por la gestión Accor y la demanda de plataformas de renta premium. Adicionalmente, el proyecto proyecta una plusvalía del 33% entre el precio de preventa y el valor a entrega. Los rendimientos son estimados y no garantizados.' },
     { q: 'Si reservo hoy, ¿queda fijo mi precio aunque suba antes del 1 de junio?', a: 'Sí. Una vez que formalizas tu reserva con el 30% de enganche, tu precio queda congelado contractualmente. Cualquier incremento posterior al 1 de junio no te afecta — tú ya compraste al precio de lanzamiento, con toda la plusvalía por delante.' },
     { q: '¿Puedo financiar el 50% final con un crédito bancario?', a: 'Sí. El saldo a la entrega puede cubrirse mediante crédito hipotecario en instituciones bancarias mexicanas (BBVA, Santander, HSBC, entre otras) o con financiamiento internacional. Nuestro equipo puede orientarte sobre las opciones más convenientes según tu perfil y país de residencia, sin costo adicional.' },
   ] : [
-    { q: 'How much does a unit at The Residences at Grand Island Cancun Cancún cost?', a: 'Pre-sale pricing starts at $514,000 USD for units from 76.96 m² up to 164.75 m² lofts. In MXN that\'s from $9,050,000, saving $2,950,000 MXN vs. the list price of $12,000,000 MXN. After June 1, 2026, prices increase by 33%.' },
+    { q: 'How much does a unit at The Residences at Grand Island Cancun cost?', a: 'Pre-sale pricing starts at $514,000 USD for units from 76.96 m² up to 164.75 m² lofts. In MXN that\'s from $9,050,000, saving $2,950,000 MXN vs. the list price of $12,000,000 MXN. After June 1, 2026, prices increase by 33%.' },
     { q: 'Can foreigners buy property?', a: 'Yes. Foreign citizens can purchase property in Mexico\'s tourist zones through a bank trust (fideicomiso), regulated by Mexico\'s Foreign Investment Law. The process is standard and widely used by investors from the US, Canada, and Europe. Our specialized legal team guides you every step.' },
     { q: 'What\'s included? Is the unit furnished?', a: 'Yes, delivery is fully turnkey. The unit includes furniture, appliances, premium finishes by Filipao Nunes Arquitectos, and access to all Grand Island amenities: infinity pool, beach club, spa, gym, rooftop restaurant, private marina, and 18-hole golf course.' },
     { q: 'What\'s the estimated rental yield?', a: 'Projections for branded residences in Cancún\'s Hotel Zone indicate 8–12% annual rental yields, sustained by Accor management and premium rental platform demand. Additionally, the project projects 33% appreciation between pre-sale and delivery. Returns are estimated and not guaranteed.' },
@@ -132,7 +132,7 @@ const PreSale = () => {
         schema={{
           "@context": "https://schema.org",
           "@type": "RealEstateListing",
-          name: "The Residences at Grand Island Cancun at Grand Island Cancún — Preventa",
+          name: "The Residences at Grand Island Cancun — Preventa",
           description: L === 'es' ? 'Residencia de marca en la Zona Hotelera de Cancún, diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Entrega llave en mano Q2 2027. Preventa desde $514,000 USD.' : 'Branded residence in Cancún\'s Hotel Zone, designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Turnkey delivery Q2 2027. Pre-sale from $514,000 USD.',
           url: `https://rivanaproperties.com${L === 'en' ? '/en/presale' : '/presale'}`,
           image: "https://rivanaproperties.com/images/mondrian/mondrian-hero.jpg",
@@ -349,7 +349,7 @@ const PreSale = () => {
           <div className="ps-hero-eyebrow">
             {L === 'es' ? 'Preventa Exclusiva · Zona Hotelera, Cancún' : 'Exclusive Pre-Sale · Hotel Zone, Cancún'}
           </div>
-          <h1>The Residences at Grand Island Cancun<br /><em>at Grand Island</em></h1>
+          <h1>The Residences at Grand Island Cancun</h1>
           <p className="ps-hero-sub">
             {L === 'es'
               ? 'Residencia de marca diseñada por Filipao Nunes y operada por Accor. Entrega llave en mano Q2 2027. Precio de preventa desde $514,000 USD.'
@@ -399,13 +399,13 @@ const PreSale = () => {
       {/* GALLERY */}
       <div className="ps-gallery">
         <div className="ps-gal-img">
-          <img src={mondrianHero} alt="The Residences at Grand Island Cancun at Grand Island — Vista exterior Zona Hotelera Cancún" />
+          <img src={mondrianHero} alt="The Residences at Grand Island Cancun — Vista exterior Zona Hotelera Cancún" />
         </div>
         <div className="ps-gal-img">
           <img src={mondrianFrontDesk} alt="The Residences at Grand Island Cancun — Lobby diseño Filipao Nunes Arquitectos" />
         </div>
         <div className="ps-gal-img">
-          <img src={mondrianCoffeeBar} alt="The Residences at Grand Island Cancun Cancún — Coffee bar amenidades premium Accor" />
+          <img src={mondrianCoffeeBar} alt="The Residences at Grand Island Cancun — Coffee bar amenidades premium Accor" />
         </div>
       </div>
 
@@ -417,8 +417,8 @@ const PreSale = () => {
         <h2>{L === 'es' ? <>¿Por qué invertir<br />en <em>preventa ahora?</em></> : <>Why invest<br />in <em>pre-sale now?</em></>}</h2>
         <p className="ps-body-t">
           {L === 'es'
-            ? <>El precio de preventa de <strong>$514,000 USD</strong> representa el precio de lanzamiento acordado con el desarrollador para los primeros inversionistas de The Residences at Grand Island Cancun at Grand Island Cancún. A partir del 1 de junio de 2026, el precio aumenta 33%, llevando el valor de entrada a aproximadamente <strong>$683,000 USD</strong>.</>
-            : <>The pre-sale price of <strong>$514,000 USD</strong> is the launch price agreed with the developer for early investors in The Residences at Grand Island Cancun at Grand Island Cancún. After June 1, 2026, the price increases by 33%, bringing the entry value to approximately <strong>$683,000 USD</strong>.</>}
+            ? <>El precio de preventa de <strong>$514,000 USD</strong> representa el precio de lanzamiento acordado con el desarrollador para los primeros inversionistas de The Residences at Grand Island Cancun. A partir del 1 de junio de 2026, el precio aumenta 33%, llevando el valor de entrada a aproximadamente <strong>$683,000 USD</strong>.</>
+            : <>The pre-sale price of <strong>$514,000 USD</strong> is the launch price agreed with the developer for early investors in The Residences at Grand Island Cancun. After June 1, 2026, the price increases by 33%, bringing the entry value to approximately <strong>$683,000 USD</strong>.</>}
         </p>
         <p className="ps-body-t">
           {L === 'es'

@@ -220,17 +220,17 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'mondrian-residences-grand-island-cancun-guide',
     title: {
-      es: 'The Residences at Grand Island Cancun en Grand Island Cancún: la guía que necesitas antes de decidir',
-      en: 'The Residences at Grand Island Cancun at Grand Island Cancún: The Guide You Need Before You Decide',
+      es: 'The Residences at Grand Island Cancun: la guía que necesitas antes de decidir',
+      en: 'The Residences at Grand Island Cancun: The Guide You Need Before You Decide',
     },
     seoTitle: {
-      es: 'The Residences at Grand Island Cancun en Grand Island Cancún — Lo Que Debes Saber',
-      en: 'The Residences at Grand Island Cancun Grand Island Cancún — Everything You Need to Know',
+      es: 'The Residences at Grand Island Cancun — Lo Que Debes Saber',
+      en: 'The Residences at Grand Island Cancun — Everything You Need to Know',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
       es: 'Guía completa de The Residences at Grand Island Cancun: precio, plan de pagos, amenidades con campo de golf, respaldo Accor y vistas al mar y laguna que jamás serán obstruidas.',
-      en: 'Complete guide to The Residences at Grand Island Cancun Cancún: Accor backing, golf course, unobstructed Caribbean and lagoon views, pre-sale pricing and 30/20/50 payment plan.',
+      en: 'Complete guide to The Residences at Grand Island Cancun: Accor backing, golf course, unobstructed Caribbean and lagoon views, pre-sale pricing and 30/20/50 payment plan.',
     },
     date: 'Apr 10, 2026',
     readTime: '11 min',
@@ -242,12 +242,12 @@ export const journalArticles: JournalArticle[] = [
     slug: 'mondrian-residences-grand-island-cancun-preventa',
     slugEn: 'mondrian-residences-grand-island-cancun-presale',
     title: {
-      es: 'The Residences at Grand Island Cancun Grand Island Cancún: El Relanzamiento que Redefine la Zona Hotelera',
-      en: 'The Residences at Grand Island Cancun Grand Island Cancun: The Complete Presale Guide for 2026',
+      es: 'The Residences at Grand Island Cancun: El Relanzamiento que Redefine la Zona Hotelera',
+      en: 'The Residences at Grand Island Cancun: The Complete Presale Guide for 2026',
     },
     seoTitle: {
-      es: 'The Residences at Grand Island Cancun Grand Island Cancún: Guía Completa de Preventa 2026',
-      en: 'The Residences at Grand Island Cancun Grand Island Cancun: 2026 Presale Guide',
+      es: 'The Residences at Grand Island Cancun: Guía Completa de Preventa 2026',
+      en: 'The Residences at Grand Island Cancun: 2026 Presale Guide',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {

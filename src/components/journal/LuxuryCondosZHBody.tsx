@@ -86,7 +86,7 @@ export const LuxuryCondosZHBodyES = () => (
 
     <H2>Propiedades Rivana en la Zona Hotelera y Puerto Cancún — análisis por perfil</H2>
 
-    <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun at Grand Island Cancún</h3>
+    <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun</h3>
     <p>
       The Residences at Grand Island Cancun es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. La ubicación es en el km 16.5, con vistas simultáneas al Mar Caribe y a la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva dual.
     </p>
@@ -231,7 +231,7 @@ export const LuxuryCondosZHBodyEN = () => (
 
     <H2>Rivana's Hotel Zone and Puerto Cancún portfolio — analysis by profile</H2>
 
-    <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun at Grand Island Cancún</h3>
+    <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun</h3>
     <p>
       The Residences at Grand Island Cancun is a branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Located at km 16.5, with simultaneous views of the Caribbean Sea and Nichupté Lagoon — the only development in the Hotel Zone with that dual perspective.
     </p>

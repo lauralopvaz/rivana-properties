@@ -227,9 +227,9 @@ export const properties: PropertyDetail[] = [
   {
     id: 'mondrian-residences-grand-island-cancun',
     slug: 'mondrian-residences-grand-island-cancun',
-    name: 'The Residences at Grand Island Cancun at Grand Island Cancún',
-    seoTitle: 'The Residences at Grand Island Cancun Grand Island Cancún | Rivana',
-    seoTitleEn: 'The Residences at Grand Island Cancun Cancún Hotel Zone | Rivana',
+    name: 'The Residences at Grand Island Cancun',
+    seoTitle: 'The Residences at Grand Island Cancun | Rivana',
+    seoTitleEn: 'The Residences at Grand Island Cancun Hotel Zone | Rivana',
     seoDescription: 'Residencia de marca Accor en la Zona Hotelera de Cancún. Preventa desde $9,050,000 MXN, plusvalía 33%, entrega Q2 2027. Gestión hotelera desde el primer día.',
     seoDescriptionEn: "Accor-branded residence in Cancún's Hotel Zone. Pre-sale from $475K USD, 33% appreciation, Q2 2027 delivery. Hotel management from day one.",
     zone: 'Cancún Zona Hotelera',
@@ -253,8 +253,8 @@ export const properties: PropertyDetail[] = [
       mondrianGym,
       mondrianPool,
     ],
-    description: 'The Residences at Grand Island Cancun at Grand Island es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. Invertir aquí es adquirir un activo que trabaja por ti, respaldado por una de las marcas hoteleras más reconocidas del mundo. Tu legado frente al Caribe.',
-    descriptionEn: 'The Residences at Grand Island Cancun at Grand Island is a branded residence within the most exclusive master development in Cancún\'s Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Investing here means acquiring an asset that works for you — backed by one of the most recognized hotel brands in the world. Your legacy on the Caribbean.',
+    description: 'The Residences at Grand Island Cancun es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. Invertir aquí es adquirir un activo que trabaja por ti, respaldado por una de las marcas hoteleras más reconocidas del mundo. Tu legado frente al Caribe.',
+    descriptionEn: 'The Residences at Grand Island Cancun is a branded residence within the most exclusive master development in Cancún\'s Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Investing here means acquiring an asset that works for you — backed by one of the most recognized hotel brands in the world. Your legacy on the Caribbean.',
     features: [
       'Alberca Infinity', 'Beach Club', 'Concierge 24/7', 'Spa & Wellness',
       'Gimnasio', 'Campo de Golf', 'Marina Privada', 'Vista al Mar',
