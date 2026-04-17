@@ -427,8 +427,8 @@ const PreSale = () => {
         </p>
         <p className="ps-body-t">
           {L === 'es'
-            ? 'A esto se suma el efecto multiplicador del Mundial FIFA 2026: Cancún y la Riviera Maya proyectan cifras de turismo sin precedente, con demanda de renta vacacional premium que beneficia directamente a residencias de marca como Mondrian en la Zona Hotelera.'
-            : 'Add to this the multiplier effect of the 2026 FIFA World Cup: Cancún and the Riviera Maya project unprecedented tourism figures, with premium vacation rental demand that directly benefits branded residences like Mondrian in the Hotel Zone.'}
+            ? 'A esto se suma el efecto multiplicador del Mundial FIFA 2026: Cancún y la Riviera Maya proyectan cifras de turismo sin precedente, con demanda de renta vacacional premium que beneficia directamente a las residencias de marca en la Zona Hotelera.'
+            : 'Add to this the multiplier effect of the 2026 FIFA World Cup: Cancún and the Riviera Maya project unprecedented tourism figures, with premium vacation rental demand that directly benefits branded residences in the Hotel Zone.'}
         </p>
         <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20sobre%20Mondrian%20Residences" className="ps-btn-gold" style={{ marginTop: 8 }}>
           {L === 'es' ? 'Trabajamos para ti — Agenda tu asesoría →' : 'We work for you — Schedule your advisory →'}
