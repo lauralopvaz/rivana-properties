@@ -243,7 +243,7 @@ export const ForeignBuyerGuideBodyES = () => {
           Esta es la decision mas importante. Tu agente debe conocer a los desarrolladores locales, los plazos de preventa, los requisitos de permisos STR por zona, y tener experiencia guiando a compradores internacionales a traves del proceso de fideicomiso.
         </StepItem>
         <StepItem num={2} label="Selecciona tu propiedad.">
-          Preventa y reventa son las dos opciones principales. La preventa ofrece los mejores precios de entrada y el mayor potencial de plusvalia — tipicamente 15–25% entre la compra y la entrega. El portafolio actual de Rivana incluye The Reserve at Mayakoba (thereserveatmayakoba.com), The Residences at Grand Island Cancun en Grand Island Cancun, y Edificio Salvia en la Zona Hotelera, uno de los pocos edificios en Cancun con permiso STR activo.
+          Preventa y reventa son las dos opciones principales. La preventa ofrece los mejores precios de entrada y el mayor potencial de plusvalia — tipicamente 15–25% entre la compra y la entrega. El portafolio actual de Rivana incluye The Reserve at Mayakoba (thereserveatmayakoba.com), The Residences at Grand Island Cancun, y Edificio Salvia en la Zona Hotelera, uno de los pocos edificios en Cancun con permiso STR activo.
         </StepItem>
         <StepItem num={3} label="Prepara tus documentos.">
           Pasaporte vigente, comprobante de domicilio en tu pais de origen, comprobante de fondos y RFC (obtenido durante la transaccion con tu notario).
@@ -316,7 +316,7 @@ export const ForeignBuyerGuideBodyES = () => {
         <Link to={localePath('/propiedad/the-reserve-at-mayakoba')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>
-        <strong className="text-foreground">The Residences at Grand Island Cancun en Grand Island Cancún</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por Accor. Precios de preventa disponibles.{' '}
+        <strong className="text-foreground">The Residences at Grand Island Cancun</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por Accor. Precios de preventa disponibles.{' '}
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>

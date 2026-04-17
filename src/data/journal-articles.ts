@@ -220,11 +220,11 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'mondrian-residences-grand-island-cancun-guide',
     title: {
-      es: 'The Residences at Grand Island Cancun en Grand Island Cancún: la guía que necesitas antes de decidir',
+      es: 'The Residences at Grand Island Cancun: la guía que necesitas antes de decidir',
       en: 'The Residences at Grand Island Cancun: The Guide You Need Before You Decide',
     },
     seoTitle: {
-      es: 'The Residences at Grand Island Cancun en Grand Island Cancún — Lo Que Debes Saber',
+      es: 'The Residences at Grand Island Cancun — Lo Que Debes Saber',
       en: 'The Residences at Grand Island Cancun — Everything You Need to Know',
     },
     category: { es: 'Inversión', en: 'Investment' },
