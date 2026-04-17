@@ -229,8 +229,8 @@ export const journalArticles: JournalArticle[] = [
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
-      es: 'Guía completa de The Residences at Grand Island Cancun: precio, plan de pagos, amenidades con campo de golf, respaldo Accor y vistas al mar y laguna que jamás serán obstruidas.',
-      en: 'Complete guide to The Residences at Grand Island Cancun: Accor backing, golf course, unobstructed Caribbean and lagoon views, pre-sale pricing and 30/20/50 payment plan.',
+      es: 'Guía completa de The Residences at Grand Island Cancun: precio, plan de pagos, amenidades con campo de golf, respaldo Marca Elite internacional y vistas al mar y laguna que jamás serán obstruidas.',
+      en: 'Complete guide to The Residences at Grand Island Cancun: Marca Elite internacional backing, golf course, unobstructed Caribbean and lagoon views, pre-sale pricing and 30/20/50 payment plan.',
     },
     date: 'Apr 10, 2026',
     readTime: '11 min',
@@ -251,8 +251,8 @@ export const journalArticles: JournalArticle[] = [
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
-      es: 'El relanzamiento más esperado de la Zona Hotelera. Precios desde $9M MXN, ROI 33%, entrega Q2 2027 y operación Accor desde el día uno.',
-      en: 'The most anticipated branded residences launch in Cancun\'s Hotel Zone. Prices from $514K USD, 33% ROI, Q2 2027 delivery, and Accor operation from day one.',
+      es: 'El relanzamiento más esperado de la Zona Hotelera. Precios desde $9M MXN, ROI 33%, entrega Q2 2027 y operación Marca Elite internacional desde el día uno.',
+      en: 'The most anticipated branded residences launch in Cancun\'s Hotel Zone. Prices from $514K USD, 33% ROI, Q2 2027 delivery, and Marca Elite internacional operation from day one.',
     },
     date: 'Mar 25, 2026',
     readTime: '9 min',

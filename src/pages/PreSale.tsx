@@ -82,14 +82,14 @@ const PreSale = () => {
     { q: '¿Cuánto cuesta un departamento en The Residences at Grand Island Cancun?', a: 'El precio de preventa parte desde $514,000 USD para unidades de 76.96 m² hasta 164.75 m² con loft. En pesos equivale a desde $9,050,000 MXN, con un ahorro de $2,950,000 MXN frente al precio de lista de $12,000,000 MXN. A partir del 1 de junio de 2026, el precio aumenta 33%.' },
     { q: '¿Puedo comprar siendo extranjero?', a: 'Sí. Los ciudadanos extranjeros pueden adquirir propiedades en zona turística en México a través de un fideicomiso bancario, regulado por la Ley de Inversión Extranjera. El proceso es estándar y ampliamente utilizado por inversionistas de EE.UU., Canadá y Europa. Nuestro equipo legal especializado te acompaña en cada paso.' },
     { q: '¿Qué incluye el precio? ¿La unidad viene amueblada?', a: 'Sí, la entrega es completamente llave en mano. La unidad incluye mobiliario, electrodomésticos, acabados premium diseñados por Filipao Nunes Arquitectos, y acceso a todas las amenidades del desarrollo maestro Grand Island: infinity pool, beach club, spa, gimnasio, restaurante rooftop, marina privada y campo de golf de 18 hoyos.' },
-    { q: '¿Cuál es el rendimiento estimado de renta?', a: 'Las proyecciones para residencias de marca en Zona Hotelera de Cancún indican rendimientos de renta del 8–12% anual, con tasas de ocupación sostenidas por la gestión Accor y la demanda de plataformas de renta premium. Adicionalmente, el proyecto proyecta una plusvalía del 33% entre el precio de preventa y el valor a entrega. Los rendimientos son estimados y no garantizados.' },
+    { q: '¿Cuál es el rendimiento estimado de renta?', a: 'Las proyecciones para residencias de marca en Zona Hotelera de Cancún indican rendimientos de renta del 8–12% anual, con tasas de ocupación sostenidas por la gestión Marca Elite internacional y la demanda de plataformas de renta premium. Adicionalmente, el proyecto proyecta una plusvalía del 33% entre el precio de preventa y el valor a entrega. Los rendimientos son estimados y no garantizados.' },
     { q: 'Si reservo hoy, ¿queda fijo mi precio aunque suba antes del 1 de junio?', a: 'Sí. Una vez que formalizas tu reserva con el 30% de enganche, tu precio queda congelado contractualmente. Cualquier incremento posterior al 1 de junio no te afecta — tú ya compraste al precio de lanzamiento, con toda la plusvalía por delante.' },
     { q: '¿Puedo financiar el 50% final con un crédito bancario?', a: 'Sí. El saldo a la entrega puede cubrirse mediante crédito hipotecario en instituciones bancarias mexicanas (BBVA, Santander, HSBC, entre otras) o con financiamiento internacional. Nuestro equipo puede orientarte sobre las opciones más convenientes según tu perfil y país de residencia, sin costo adicional.' },
   ] : [
     { q: 'How much does a unit at The Residences at Grand Island Cancun cost?', a: 'Pre-sale pricing starts at $514,000 USD for units from 76.96 m² up to 164.75 m² lofts. In MXN that\'s from $9,050,000, saving $2,950,000 MXN vs. the list price of $12,000,000 MXN. After June 1, 2026, prices increase by 33%.' },
     { q: 'Can foreigners buy property?', a: 'Yes. Foreign citizens can purchase property in Mexico\'s tourist zones through a bank trust (fideicomiso), regulated by Mexico\'s Foreign Investment Law. The process is standard and widely used by investors from the US, Canada, and Europe. Our specialized legal team guides you every step.' },
     { q: 'What\'s included? Is the unit furnished?', a: 'Yes, delivery is fully turnkey. The unit includes furniture, appliances, premium finishes by Filipao Nunes Arquitectos, and access to all Grand Island amenities: infinity pool, beach club, spa, gym, rooftop restaurant, private marina, and 18-hole golf course.' },
-    { q: 'What\'s the estimated rental yield?', a: 'Projections for branded residences in Cancún\'s Hotel Zone indicate 8–12% annual rental yields, sustained by Accor management and premium rental platform demand. Additionally, the project projects 33% appreciation between pre-sale and delivery. Returns are estimated and not guaranteed.' },
+    { q: 'What\'s the estimated rental yield?', a: 'Projections for branded residences in Cancún\'s Hotel Zone indicate 8–12% annual rental yields, sustained by Marca Elite internacional management and premium rental platform demand. Additionally, the project projects 33% appreciation between pre-sale and delivery. Returns are estimated and not guaranteed.' },
     { q: 'If I reserve today, is my price locked even if it goes up?', a: 'Yes. Once you formalize your reservation with the 30% down payment, your price is contractually locked. Any subsequent increase after June 1 won\'t affect you.' },
     { q: 'Can I finance the final 50% with a bank loan?', a: 'Yes. The balance at delivery can be covered through a mortgage from Mexican banks (BBVA, Santander, HSBC) or international financing. Our team can guide you on the best options based on your profile and country of residence, at no additional cost.' },
   ];
@@ -109,13 +109,13 @@ const PreSale = () => {
     : [{ n: '$514K', l: 'Price from USD' }, { n: '+33%', l: 'Projected appreciation' }, { n: 'Q2 2027', l: 'Turnkey delivery' }, { n: '8–12%', l: 'Estimated annual yield' }];
 
   const diffs = L === 'es' ? [
-    { n: '01', t: 'Operada por Accor — marca Mondrian', b: 'Uno de los grupos hoteleros más grandes del mundo. La marca Mondrian atrae al viajero de alto poder adquisitivo, lo que se traduce en ocupación premium y tarifas superiores desde el primer día de renta vacacional.' },
+    { n: '01', t: 'Operada por Marca Elite internacional — marca Mondrian', b: 'Uno de los grupos hoteleros más grandes del mundo. La marca Mondrian atrae al viajero de alto poder adquisitivo, lo que se traduce en ocupación premium y tarifas superiores desde el primer día de renta vacacional.' },
     { n: '02', t: 'Vistas dobles únicas en la Zona Hotelera', b: 'El único desarrollo en el km 16.5 del Boulevard Kukulcán con vistas simultáneas al Mar Caribe y la Laguna Nichupté. Una perspectiva que no se repite en ningún otro proyecto de la zona.' },
-    { n: '03', t: 'Llave en mano — genera desde el día uno', b: 'Cada unidad se entrega totalmente amueblada, equipada y lista para operar bajo gestión Accor. Sin curva de aprendizaje. Sin inversión adicional en mobiliario. Tus rendimientos comienzan desde la entrega.' },
+    { n: '03', t: 'Llave en mano — genera desde el día uno', b: 'Cada unidad se entrega totalmente amueblada, equipada y lista para operar bajo gestión Marca Elite internacional. Sin curva de aprendizaje. Sin inversión adicional en mobiliario. Tus rendimientos comienzan desde la entrega.' },
   ] : [
-    { n: '01', t: 'Operated by Accor — Mondrian brand', b: 'One of the world\'s largest hotel groups. The Mondrian brand attracts high-net-worth travelers, translating to premium occupancy and superior rates from day one of vacation rental.' },
+    { n: '01', t: 'Operated by Marca Elite internacional — Mondrian brand', b: 'One of the world\'s largest hotel groups. The Mondrian brand attracts high-net-worth travelers, translating to premium occupancy and superior rates from day one of vacation rental.' },
     { n: '02', t: 'Unique dual views in the Hotel Zone', b: 'The only development at km 16.5 on Boulevard Kukulcán with simultaneous Caribbean Sea and Nichupté Lagoon views. A perspective not replicated in any other project in the area.' },
-    { n: '03', t: 'Turnkey — generating from day one', b: 'Every unit is delivered fully furnished, equipped, and ready to operate under Accor management. No learning curve. No additional furniture investment. Your returns begin at delivery.' },
+    { n: '03', t: 'Turnkey — generating from day one', b: 'Every unit is delivered fully furnished, equipped, and ready to operate under Marca Elite internacional management. No learning curve. No additional furniture investment. Your returns begin at delivery.' },
   ];
 
   const trustItems = L === 'es'
@@ -133,7 +133,7 @@ const PreSale = () => {
           "@context": "https://schema.org",
           "@type": "RealEstateListing",
           name: "The Residences at Grand Island Cancun — Preventa",
-          description: L === 'es' ? 'Residencia de marca en la Zona Hotelera de Cancún, diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Entrega llave en mano Q2 2027. Preventa desde $514,000 USD.' : 'Branded residence in Cancún\'s Hotel Zone, designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Turnkey delivery Q2 2027. Pre-sale from $514,000 USD.',
+          description: L === 'es' ? 'Residencia de marca en la Zona Hotelera de Cancún, diseñada por Filipao Nunes Arquitectos y operada por Marca Elite internacional bajo la marca Mondrian. Entrega llave en mano Q2 2027. Preventa desde $514,000 USD.' : 'Branded residence in Cancún\'s Hotel Zone, designed by Filipao Nunes Arquitectos and operated by Marca Elite internacional under the Mondrian brand. Turnkey delivery Q2 2027. Pre-sale from $514,000 USD.',
           url: `https://rivanaproperties.com${L === 'en' ? '/en/presale' : '/presale'}`,
           image: "https://rivanaproperties.com/images/mondrian/mondrian-hero.jpg",
           offers: {
@@ -352,8 +352,8 @@ const PreSale = () => {
           <h1>The Residences at Grand Island Cancun</h1>
           <p className="ps-hero-sub">
             {L === 'es'
-              ? 'Residencia de marca diseñada por Filipao Nunes y operada por Accor. Entrega llave en mano Q2 2027. Precio de preventa desde $514,000 USD.'
-              : 'Branded residence designed by Filipao Nunes and operated by Accor. Turnkey delivery Q2 2027. Pre-sale pricing from $514,000 USD.'}
+              ? 'Residencia de marca diseñada por Filipao Nunes y operada por Marca Elite internacional. Entrega llave en mano Q2 2027. Precio de preventa desde $514,000 USD.'
+              : 'Branded residence designed by Filipao Nunes and operated by Marca Elite internacional. Turnkey delivery Q2 2027. Pre-sale pricing from $514,000 USD.'}
           </p>
           <div className="ps-hero-actions">
             <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20sobre%20Mondrian%20Residences" className="ps-btn-gold">
@@ -405,7 +405,7 @@ const PreSale = () => {
           <img src={mondrianFrontDesk} alt="The Residences at Grand Island Cancun — Lobby diseño Filipao Nunes Arquitectos" />
         </div>
         <div className="ps-gal-img">
-          <img src={mondrianCoffeeBar} alt="The Residences at Grand Island Cancun — Coffee bar amenidades premium Accor" />
+          <img src={mondrianCoffeeBar} alt="The Residences at Grand Island Cancun — Coffee bar amenidades premium Marca Elite internacional" />
         </div>
       </div>
 
