@@ -66,8 +66,8 @@ export const CancunROIBodyES = () => {
 
       <h3 className="text-foreground text-xl">Propiedades Rivana en Zona Hotelera</h3>
 
-      <p><strong className="text-foreground">Mondrian Residences at Grand Island Cancún</strong> — Residencia de marca operada por Accor bajo la marca Mondrian. Entrega llave en mano, totalmente amueblada y equipada. Plusvalía preventa del 33%. Vista dual al Caribe y la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva. Desde $9,050,000 MXN, entrega Q2 2027. Gestión Accor desde el primer día, sin curva de aprendizaje ni gestión directa del propietario.</p>
-      <PropertyCard name="Mondrian Residences at Grand Island Cancún" badge="Preventa" detail="Branded · Vista dual Caribe + Laguna · Desde $9.05M MXN · Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
+      <p><strong className="text-foreground">The Residences at Grand Island Cancun at Grand Island Cancún</strong> — Residencia de marca operada por Accor bajo la marca Mondrian. Entrega llave en mano, totalmente amueblada y equipada. Plusvalía preventa del 33%. Vista dual al Caribe y la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva. Desde $9,050,000 MXN, entrega Q2 2027. Gestión Accor desde el primer día, sin curva de aprendizaje ni gestión directa del propietario.</p>
+      <PropertyCard name="The Residences at Grand Island Cancun at Grand Island Cancún" badge="Preventa" detail="Branded · Vista dual Caribe + Laguna · Desde $9.05M MXN · Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
 
       <p><strong className="text-foreground">Bay View Grand at Grand Island</strong> — Más de 40 amenidades de resort, interiores de Filipão Nunes, cinco tipologías desde $586,000 USD. Ocupación vacacional superior al 80% anual. Inmediatamente comercializable en plataformas STR.</p>
       <PropertyCard name="Bay View Grand at Grand Island" badge="Preventa" detail="40+ amenidades · 5 tipologías · Desde $586K USD" link={localePath('/propiedad/bay-view-grand-grand-island')} />
@@ -266,8 +266,8 @@ export const CancunROIBodyEN = () => {
 
       <h3 className="text-foreground text-xl">Rivana properties in the Hotel Zone</h3>
 
-      <p><strong className="text-foreground">Mondrian Residences at Grand Island Cancún</strong> — A branded residence operated by Accor under the Mondrian brand. Delivered turnkey, fully furnished and equipped. 33% pre-sale appreciation. Dual views of the Caribbean and Nichupté Lagoon — the only development in the Hotel Zone with that perspective. From $9,050,000 MXN, Q2 2027 delivery. Accor management from day one — no learning curve, no direct management required.</p>
-      <PropertyCard name="Mondrian Residences at Grand Island Cancún" badge="Pre-Sale" detail="Branded · Dual Caribbean + Lagoon views · From $9.05M MXN · Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
+      <p><strong className="text-foreground">The Residences at Grand Island Cancun at Grand Island Cancún</strong> — A branded residence operated by Accor under the Mondrian brand. Delivered turnkey, fully furnished and equipped. 33% pre-sale appreciation. Dual views of the Caribbean and Nichupté Lagoon — the only development in the Hotel Zone with that perspective. From $9,050,000 MXN, Q2 2027 delivery. Accor management from day one — no learning curve, no direct management required.</p>
+      <PropertyCard name="The Residences at Grand Island Cancun at Grand Island Cancún" badge="Pre-Sale" detail="Branded · Dual Caribbean + Lagoon views · From $9.05M MXN · Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
 
       <p><strong className="text-foreground">Bay View Grand at Grand Island</strong> — Over 40 resort amenities, interiors by Filipão Nunes, five typologies from $586,000 USD. Vacation occupancy above 80% annually. Immediately marketable on STR platforms.</p>
       <PropertyCard name="Bay View Grand at Grand Island" badge="Pre-Sale" detail="40+ amenities · 5 typologies · From $586K USD" link={localePath('/propiedad/bay-view-grand-grand-island')} />

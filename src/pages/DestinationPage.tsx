@@ -100,7 +100,7 @@ interface DestProject {
 
 const projectsByDestination: Record<string, DestProject[]> = {
   'zona-hotelera': [
-    { name: 'Mondrian Residences', zone: 'Zona Hotelera', status: 'preventa', yield: '33%', beds: 3, area: 165, price: 514000, badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
+    { name: 'The Residences at Grand Island Cancun', zone: 'Zona Hotelera', status: 'preventa', yield: '33%', beds: 3, area: 165, price: 514000, badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
     { name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', status: 'preventa', beds: 4, area: 670, price: 0, badges: ['vista-mar', 'vista-marina', 'wellness', 'club-privado'], image: kabeekHero, slug: 'kabeek-marina-condos' },
     { name: 'Bay View Grand at Grand Island', zone: 'Zona Hotelera', status: 'preventa', beds: 3, area: 451, price: 586146, badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: bayViewGrandHero, slug: 'bay-view-grand-grand-island' },
   ],

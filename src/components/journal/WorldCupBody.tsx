@@ -91,7 +91,7 @@ export const WorldCupBodyES = () => {
 
       <p>Un departamento con vistas al mar puede generar ingresos atractivos en temporada alta. Las tarifas se cotizan en dólares y la demanda internacional puede elevar considerablemente el flujo mensual. El factor decisivo es siempre el permiso STR — los edificios con permiso activo generan entre 30 y 50% más de ingreso anual que los que operan en renta mensual.</p>
 
-      <PropertyCard name="Mondrian Residences at Grand Island" badge="Preventa · ROI 33%" detail="Gestión Accor · Llave en mano · Desde $9,050,000 MXN · Entrega Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
+      <PropertyCard name="The Residences at Grand Island Cancun at Grand Island" badge="Preventa · ROI 33%" detail="Gestión Accor · Llave en mano · Desde $9,050,000 MXN · Entrega Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
       <PropertyCard name="Bay View Grand at Grand Island" badge="Preventa" detail="+40 amenidades · Filipão Nunes · Desde $586K USD · Ocupación >80%" link={localePath('/propiedad/bay-view-grand-grand-island')} />
       <PropertyCard name="Kabeek Marina & Condos" badge="Preventa · Exclusivo" detail="Solo 23 residencias · Muelle privado 80 pies · Arq. Humberto Artigas" link={localePath('/propiedad/kabeek-marina-condos')} />
 
@@ -265,7 +265,7 @@ export const WorldCupBodyEN = () => {
 
       <p>A sea-view apartment can generate attractive income in high season. Rates are quoted in dollars and international demand can significantly elevate monthly cash flow. The decisive factor is always the STR permit — buildings with active permits generate 30 to 50% more annual income than those operating on monthly leases.</p>
 
-      <PropertyCard name="Mondrian Residences at Grand Island" badge="Pre-Sale · ROI 33%" detail="Accor management · Turnkey · From $9,050,000 MXN · Q2 2027 delivery" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
+      <PropertyCard name="The Residences at Grand Island Cancun at Grand Island" badge="Pre-Sale · ROI 33%" detail="Accor management · Turnkey · From $9,050,000 MXN · Q2 2027 delivery" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
       <PropertyCard name="Bay View Grand at Grand Island" badge="Pre-Sale" detail="40+ amenities · Filipão Nunes · From $586K USD · >80% occupancy" link={localePath('/propiedad/bay-view-grand-grand-island')} />
       <PropertyCard name="Kabeek Marina & Condos" badge="Pre-Sale · Exclusive" detail="Only 30 residences · Private dock 80 ft · Humberto Artigas" link={localePath('/propiedad/kabeek-marina-condos')} />
 
