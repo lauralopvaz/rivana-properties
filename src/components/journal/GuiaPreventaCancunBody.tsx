@@ -46,7 +46,7 @@ export const GuiaPreventaCancunBodyES = () => {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="block p-4 border border-border rounded-lg hover:border-primary transition-colors">
-          <p className="font-display text-sm text-primary">Mondrian Residences</p>
+          <p className="font-display text-sm text-primary">The Residences at Grand Island Cancun</p>
           <p className="text-sm text-muted-foreground">Zona Hotelera · Desde $9M MXN</p>
         </Link>
         <Link to={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} className="block p-4 border border-border rounded-lg hover:border-primary transition-colors">
@@ -154,7 +154,7 @@ export const GuiaPreventaCancunBodyEN = () => {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="block p-4 border border-border rounded-lg hover:border-primary transition-colors">
-          <p className="font-display text-sm text-primary">Mondrian Residences</p>
+          <p className="font-display text-sm text-primary">The Residences at Grand Island Cancun</p>
           <p className="text-sm text-muted-foreground">Hotel Zone · From $514K USD</p>
         </Link>
         <Link to={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} className="block p-4 border border-border rounded-lg hover:border-primary transition-colors">

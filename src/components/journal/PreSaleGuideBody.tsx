@@ -106,10 +106,10 @@ export const PreSaleGuideBodyES = () => {
       {/* Zona Hotelera */}
       <h3 className="text-foreground text-xl mt-8">Zona Hotelera de Cancún</h3>
 
-      <p><strong className="text-foreground">Mondrian Residences at Grand Island Cancún</strong> ⭐ <em>Destacado</em></p>
+      <p><strong className="text-foreground">The Residences at Grand Island Cancun at Grand Island Cancún</strong> ⭐ <em>Destacado</em></p>
       <p>Residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. El único desarrollo en la Zona Hotelera con vistas simultáneas al Mar Caribe y la Laguna Nichupté. Preventa desde $9,050,000 MXN con plusvalía proyectada del 33% al precio de entrega. Plan de pago: 30% de enganche, 20% diferido en 12 meses, 50% a la entrega. Entrega Q2 2027.</p>
       <p>La gestión Accor opera por ti desde el primer día. Sin gestión directa. Sin curva de aprendizaje. Solo rendimientos.</p>
-      <PropertyCard name="Mondrian Residences" badge="Preventa · ROI 33%" detail="Llave en mano · Desde $9,050,000 MXN · Entrega Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
+      <PropertyCard name="The Residences at Grand Island Cancun" badge="Preventa · ROI 33%" detail="Llave en mano · Desde $9,050,000 MXN · Entrega Q2 2027" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
 
       <p><strong className="text-foreground">Bay View Grand at Grand Island</strong> ⭐ <em>Destacado</em></p>
       <p>Más de 40 amenidades de resort, interiores de Filipão Nunes, cinco tipologías desde $586,000 USD. Ocupación vacacional superior al 80% anual. Inmediatamente comercializable en plataformas STR. El punto de entrada más flexible de la Zona Hotelera con amenidades que compiten con los mejores resorts del mundo.</p>
@@ -197,7 +197,7 @@ export const PreSaleGuideBodyES = () => {
       <h2 className="text-foreground" id="ventana-2026">La ventana de 2026 — por qué este año específicamente</h2>
       <p>El 2026 concentra tres catalizadores que rara vez se alinean simultáneamente en el mismo mercado:</p>
       <p><strong className="text-foreground">El Mundial FIFA 2026</strong> está generando una demanda global de atención sobre el Caribe Mexicano sin precedente histórico. Los compradores internacionales que evalúan el mercado por primera vez están llegando con el torneo como detonante.</p>
-      <p><strong className="text-foreground">La ventana de preventa a precios de 2024–2025 se está cerrando.</strong> En proyectos como Mondrian Residences, el precio aumenta 33% el 1 de junio de 2026. Una vez que los proyectos alcanzan su fase de entrega o de comercialización abierta, los precios de entrada habrán subido entre 15 y 33% sobre los actuales.</p>
+      <p><strong className="text-foreground">La ventana de preventa a precios de 2024–2025 se está cerrando.</strong> En proyectos como The Residences at Grand Island Cancun, el precio aumenta 33% el 1 de junio de 2026. Una vez que los proyectos alcanzan su fase de entrega o de comercialización abierta, los precios de entrada habrán subido entre 15 y 33% sobre los actuales.</p>
       <p><strong className="text-foreground">La infraestructura sigue llegando.</strong> El corredor Nichupté, las expansiones del aeropuerto y los nuevos accesos viales al norte de Cancún continúan comprimiendo los tiempos de traslado y expandiendo el valor de zonas como Costa Mujeres y Puerto Morelos.</p>
 
       {/* ── Preventa vs Reventa ── */}
@@ -295,10 +295,10 @@ export const PreSaleGuideBodyEN = () => {
       {/* Hotel Zone */}
       <h3 className="text-foreground text-xl mt-8">Hotel Zone — Cancún</h3>
 
-      <p><strong className="text-foreground">Mondrian Residences at Grand Island Cancún</strong> ⭐ <em>Featured</em></p>
+      <p><strong className="text-foreground">The Residences at Grand Island Cancun at Grand Island Cancún</strong> ⭐ <em>Featured</em></p>
       <p>A branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit delivered turnkey, fully furnished and equipped, ready to operate from day one. The only development in the Hotel Zone with simultaneous views of the Caribbean Sea and Nichupté Lagoon. Pre-sale from $9,050,000 MXN with 33% projected appreciation to delivery price. Payment plan: 30% down, 20% deferred over 12 months, 50% at delivery. Q2 2027 delivery.</p>
       <p>Accor management from day one. No direct management. No learning curve. Just returns.</p>
-      <PropertyCard name="Mondrian Residences" badge="Pre-Sale · ROI 33%" detail="Turnkey · From $9,050,000 MXN · Q2 2027 delivery" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
+      <PropertyCard name="The Residences at Grand Island Cancun" badge="Pre-Sale · ROI 33%" detail="Turnkey · From $9,050,000 MXN · Q2 2027 delivery" link={localePath('/propiedad/mondrian-residences-grand-island-cancun')} />
 
       <p><strong className="text-foreground">Bay View Grand at Grand Island</strong> ⭐ <em>Featured</em></p>
       <p>Over 40 resort amenities, interiors by Filipão Nunes, five typologies from $586,000 USD. Vacation occupancy above 80% annually. Immediately marketable on STR platforms. The most flexible entry point in the Hotel Zone with amenities that compete with the world's best resorts.</p>
@@ -386,7 +386,7 @@ export const PreSaleGuideBodyEN = () => {
       <h2 className="text-foreground" id="window-2026">The 2026 window — why this specific year</h2>
       <p>2026 concentrates three catalysts that rarely align simultaneously in the same market:</p>
       <p><strong className="text-foreground">FIFA World Cup 2026</strong> is generating unprecedented global attention on the Mexican Caribbean. International buyers evaluating the market for the first time are arriving with the tournament as the trigger.</p>
-      <p><strong className="text-foreground">The pre-sale window at 2024–2025 prices is closing.</strong> In projects like Mondrian Residences, the price increases 33% on June 1, 2026. Once projects reach delivery or open-market commercialization, entry prices will have risen 15 to 33% above current levels.</p>
+      <p><strong className="text-foreground">The pre-sale window at 2024–2025 prices is closing.</strong> In projects like The Residences at Grand Island Cancun, the price increases 33% on June 1, 2026. Once projects reach delivery or open-market commercialization, entry prices will have risen 15 to 33% above current levels.</p>
       <p><strong className="text-foreground">Infrastructure keeps arriving.</strong> The Nichupté corridor, airport expansions and new road access to northern Cancún continue compressing transfer times and expanding the value of zones like Costa Mujeres and Puerto Morelos.</p>
 
       {/* ── Pre-sale vs Resale ── */}

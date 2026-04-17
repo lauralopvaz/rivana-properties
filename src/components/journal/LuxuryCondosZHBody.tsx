@@ -86,15 +86,15 @@ export const LuxuryCondosZHBodyES = () => (
 
     <H2>Propiedades Rivana en la Zona Hotelera y Puerto Cancún — análisis por perfil</H2>
 
-    <h3 className="text-foreground font-display text-2xl mt-8 mb-3">Mondrian Residences at Grand Island Cancún</h3>
+    <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun at Grand Island Cancún</h3>
     <p>
-      Mondrian Residences es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. La ubicación es en el km 16.5, con vistas simultáneas al Mar Caribe y a la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva dual.
+      The Residences at Grand Island Cancun es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Accor bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. La ubicación es en el km 16.5, con vistas simultáneas al Mar Caribe y a la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva dual.
     </p>
     <p>
       El desarrollo ofrece preventa desde $9,050,000 MXN con una plusvalía proyectada del 33% al precio de entrega — entrega Q2 2027. Plan de pago: 30% de enganche, 20% diferido en 12 meses, 50% a la entrega.
     </p>
     <p className="italic text-foreground">Perfil ideal: inversionista que quiere flujo de caja desde el primer día sin gestión directa, respaldado por una de las marcas hoteleras más reconocidas del mundo.</p>
-    <PropertyCard name="Mondrian Residences" tagline="Residencia de marca Accor en Grand Island, Zona Hotelera" link="/propiedad/mondrian-residences-grand-island-cancun" />
+    <PropertyCard name="The Residences at Grand Island Cancun" tagline="Residencia de marca Accor en Grand Island, Zona Hotelera" link="/propiedad/mondrian-residences-grand-island-cancun" />
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">Bay View Grand at Grand Island</h3>
     <p>
@@ -131,7 +131,7 @@ export const LuxuryCondosZHBodyES = () => (
 
     <H2>Cómo elegir según tu perfil</H2>
     <div className="bg-card border border-border rounded-sm p-6 my-8 space-y-4">
-      <p><strong className="text-foreground">Flujo de caja inmediato sin gestión:</strong> Mondrian Residences. La gestión Accor opera por ti desde el primer día.</p>
+      <p><strong className="text-foreground">Flujo de caja inmediato sin gestión:</strong> The Residences at Grand Island Cancun. La gestión Accor opera por ti desde el primer día.</p>
       <p><strong className="text-foreground">Mayor número de amenidades con entrada flexible:</strong> Bay View Grand. Cinco tipologías, más de 40 amenidades, ocupación proyectada superior al 80%.</p>
       <p><strong className="text-foreground">Activo único e irrepetible:</strong> Kabeek Marina. Solo 30 unidades, muelle privado, sin competencia directa.</p>
       <p><strong className="text-foreground">Lujo de marca más sofisticado:</strong> SLS Ocean Beach. Respaldo global de Ennismore y Accor.</p>
@@ -231,15 +231,15 @@ export const LuxuryCondosZHBodyEN = () => (
 
     <H2>Rivana's Hotel Zone and Puerto Cancún portfolio — analysis by profile</H2>
 
-    <h3 className="text-foreground font-display text-2xl mt-8 mb-3">Mondrian Residences at Grand Island Cancún</h3>
+    <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun at Grand Island Cancún</h3>
     <p>
-      Mondrian Residences is a branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Located at km 16.5, with simultaneous views of the Caribbean Sea and Nichupté Lagoon — the only development in the Hotel Zone with that dual perspective.
+      The Residences at Grand Island Cancun is a branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Accor under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Located at km 16.5, with simultaneous views of the Caribbean Sea and Nichupté Lagoon — the only development in the Hotel Zone with that dual perspective.
     </p>
     <p>
       Pre-sale pricing starts at $9,050,000 MXN with 33% projected appreciation to delivery price — Q2 2027. Payment plan: 30% down, 20% deferred over 12 months, 50% at delivery.
     </p>
     <p className="italic text-foreground">Ideal profile: investor who wants cash flow from day one without direct management, backed by one of the world's most recognized hospitality brands.</p>
-    <PropertyCardEN name="Mondrian Residences" tagline="Accor-branded residence at Grand Island, Hotel Zone" link="/en/property/mondrian-residences-grand-island-cancun" />
+    <PropertyCardEN name="The Residences at Grand Island Cancun" tagline="Accor-branded residence at Grand Island, Hotel Zone" link="/en/property/mondrian-residences-grand-island-cancun" />
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">Bay View Grand at Grand Island</h3>
     <p>
@@ -276,7 +276,7 @@ export const LuxuryCondosZHBodyEN = () => (
 
     <H2>How to choose based on your profile</H2>
     <div className="bg-card border border-border rounded-sm p-6 my-8 space-y-4">
-      <p><strong className="text-foreground">Immediate cash flow without management:</strong> Mondrian Residences. Accor manages from day one. You receive the returns.</p>
+      <p><strong className="text-foreground">Immediate cash flow without management:</strong> The Residences at Grand Island Cancun. Accor manages from day one. You receive the returns.</p>
       <p><strong className="text-foreground">Most amenities with flexible entry:</strong> Bay View Grand. Five typologies, 40+ amenities, projected occupancy above 80%.</p>
       <p><strong className="text-foreground">Genuinely unique asset:</strong> Kabeek Marina. Only 30 units, private dock, no direct competition.</p>
       <p><strong className="text-foreground">Most sophisticated branded luxury:</strong> SLS Ocean Beach. Global backing from Ennismore and Accor.</p>

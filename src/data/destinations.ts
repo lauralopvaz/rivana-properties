@@ -104,11 +104,11 @@ export const destinations: DestinationConfig[] = [
         intro: {
           es: [
             'Los condos en la Zona Hotelera de Cancún representan la inversión inmobiliaria más sólida del Caribe Mexicano. Ubicados a lo largo de 23 kilómetros de playa, estos condominios ofrecen vista al mar, acceso a beach clubs y rendimientos de renta del 8-12% anual.',
-            'Desde estudios de una recámara ideales para Airbnb hasta unidades de tres recámaras para familias, la Zona Hotelera tiene condos para todo perfil de inversión. Los desarrollos como Mondrian Residences y Bay View Grand elevan el estándar con amenidades de marca internacional.',
+            'Desde estudios de una recámara ideales para Airbnb hasta unidades de tres recámaras para familias, la Zona Hotelera tiene condos para todo perfil de inversión. Los desarrollos como The Residences at Grand Island Cancun y Bay View Grand elevan el estándar con amenidades de marca internacional.',
           ],
           en: [
             'Condos in Cancun\'s Hotel Zone represent the strongest real estate investment in the Mexican Caribbean. Located along 23 kilometers of beachfront, these condominiums offer ocean views, beach club access, and rental yields of 8-12% annually.',
-            'From one-bedroom studios ideal for Airbnb to three-bedroom family units, the Hotel Zone has condos for every investment profile. Developments like Mondrian Residences and Bay View Grand raise the bar with internationally branded amenities.',
+            'From one-bedroom studios ideal for Airbnb to three-bedroom family units, the Hotel Zone has condos for every investment profile. Developments like The Residences at Grand Island Cancun and Bay View Grand raise the bar with internationally branded amenities.',
           ],
         },
       },
@@ -139,11 +139,11 @@ export const destinations: DestinationConfig[] = [
         },
         intro: {
           es: [
-            'La preventa en la Zona Hotelera de Cancún ofrece la oportunidad de adquirir propiedades frente al mar a precios significativamente menores al valor de entrega. Los desarrollos en preventa como Mondrian Residences proyectan una plusvalía del 33% entre la compra y la entrega.',
+            'La preventa en la Zona Hotelera de Cancún ofrece la oportunidad de adquirir propiedades frente al mar a precios significativamente menores al valor de entrega. Los desarrollos en preventa como The Residences at Grand Island Cancun proyectan una plusvalía del 33% entre la compra y la entrega.',
             'Los esquemas de pago en preventa permiten diferir hasta el 70% del valor hasta la entrega, con enganches desde el 10%. Es la forma más inteligente de invertir en el corredor turístico más importante de México.',
           ],
           en: [
-            'Pre-sale in Cancun\'s Hotel Zone offers the opportunity to acquire beachfront properties at prices significantly below delivery value. Pre-sale developments like Mondrian Residences project 33% appreciation between purchase and delivery.',
+            'Pre-sale in Cancun\'s Hotel Zone offers the opportunity to acquire beachfront properties at prices significantly below delivery value. Pre-sale developments like The Residences at Grand Island Cancun project 33% appreciation between purchase and delivery.',
             'Pre-sale payment plans allow deferring up to 70% of the value until delivery, with down payments from 10%. It\'s the smartest way to invest in Mexico\'s most important tourist corridor.',
           ],
         },

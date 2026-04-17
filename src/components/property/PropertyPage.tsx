@@ -156,8 +156,8 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
               className="text-primary hover:text-primary/80 font-body text-sm transition-colors"
             >
               {locale === 'en'
-                ? 'Mondrian Residences: Complete 2026 Presale Guide →'
-                : 'Mondrian Residences: Guía Completa de Preventa 2026 →'}
+                ? 'The Residences at Grand Island Cancun: Complete 2026 Presale Guide →'
+                : 'The Residences at Grand Island Cancun: Guía Completa de Preventa 2026 →'}
             </Link>
           </section>
         )}
