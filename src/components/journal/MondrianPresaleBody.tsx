@@ -22,18 +22,18 @@ export const MondrianPresaleBodyES = () => {
   const { localePath } = useLanguage();
   return (
     <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
-      <p>Lo que durante años se conoció como <strong className="text-foreground">The Residences at Grand Island</strong> acaba de recibir un nombre que cambia todo lo que significa invertir en la Zona Hotelera de Cancún: <strong className="text-foreground">The Residences at Grand Island Cancun</strong>. Este relanzamiento no es cosmético. Es el resultado de un acuerdo entre Grupo Murano — empresa listada en Nasdaq bajo el ticker MRNO — y Ennismore/Marca Elite internacional, la misma alianza que opera el Mondrian Ciudad de México en Condesa, uno de los hoteles boutique más reconocidos de América Latina.</p>
+      <p>Lo que durante años se conoció como <strong className="text-foreground">The Residences at Grand Island</strong> acaba de recibir un nombre que cambia todo lo que significa invertir en la Zona Hotelera de Cancún: <strong className="text-foreground">The Residences at Grand Island Cancun</strong>. Este relanzamiento no es cosmético. Es el resultado de un acuerdo entre Grupo Murano — empresa listada en Nasdaq bajo el ticker MRNO — y Ennismore/Marca Elite internacional, la misma alianza que opera el hotel boutique de la marca en Condesa, Ciudad de México, uno de los hoteles boutique más reconocidos de América Latina.</p>
 
       <p>Esta guía es el recurso más completo disponible sobre este desarrollo. Si estás evaluando la preventa de The Residences at Grand Island Cancun, aquí encuentras todo lo que necesitas saber.</p>
 
       <h2 className="text-foreground">Qué es The Residences at Grand Island Cancun</h2>
       <p>The Residences at Grand Island Cancun es un proyecto de <strong className="text-foreground">residencias de marca</strong> (<em>branded residences</em>) ubicado dentro del desarrollo maestro Grand Island, en el kilómetro 16.5 de la Zona Hotelera de Cancún — una franja de 23 hectáreas que representa la apuesta de mayor escala en el mercado inmobiliario de lujo de Quintana Roo en los últimos veinte años.</p>
 
-      <p>El proyecto ofrece unidades de <strong className="text-foreground">1 a 3 recámaras más loft</strong>, con superficies entre 76.96 y 164.75 m², diseñadas por <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — la firma portuguesa responsable del lenguaje visual de los Mondrian de Dubai y Doha — y operadas por Marca Elite internacional, con entrega programada para <strong className="text-foreground">Q2 2027</strong>.</p>
+      <p>El proyecto ofrece unidades de <strong className="text-foreground">1 a 3 recámaras más loft</strong>, con superficies entre 76.96 y 164.75 m², diseñadas por <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — la firma portuguesa responsable del lenguaje visual de sus propiedades insignia en Dubai y Doha — y operadas por Marca Elite internacional, con entrega programada para <strong className="text-foreground">Q2 2027</strong>.</p>
 
-      <p>Lo que distingue a este proyecto de cualquier otro en la Zona Hotelera es simple: es el único desarrollo residencial en Cancún en el que la marca operadora, el diseñador de arquitectura y el desarrollador tienen historial probado operando juntos. No es una marca licenciada a un desarrollador desconocido. Es Grupo Murano — la misma empresa que construyó y opera el Mondrian México City — replicando el modelo en Cancún.</p>
+      <p>Lo que distingue a este proyecto de cualquier otro en la Zona Hotelera es simple: es el único desarrollo residencial en Cancún en el que la marca operadora, el diseñador de arquitectura y el desarrollador tienen historial probado operando juntos. No es una marca licenciada a un desarrollador desconocido. Es Grupo Murano — la misma empresa que construyó y opera la propiedad de la marca en Ciudad de México — replicando el modelo en Cancún.</p>
 
-      <h2 className="text-foreground">De The Residences at Grand Island a Mondrian: qué cambió y qué significa</h2>
+      <h2 className="text-foreground">De The Residences at Grand Island a The Residences at Grand Island Cancun: qué cambió y qué significa</h2>
       <p>Quienes siguieron este desarrollo desde sus inicios lo conocen como <strong className="text-foreground">The Residences at Grand Island</strong>. El rebranding a <strong className="text-foreground">The Residences at Grand Island Cancun</strong> es consecuencia directa del cierre del acuerdo formal con Ennismore — la plataforma de marcas lifestyle de Marca Elite internacional — para operar el componente residencial bajo los estándares de Marca Elite internacional.</p>
 
       <h3 className="text-foreground">Lo que cambia</h3>
@@ -48,14 +48,14 @@ export const MondrianPresaleBodyES = () => {
       <p>La ubicación, las vistas, el diseño de Filipao Nunes y la fecha de entrega.</p>
 
       <h2 className="text-foreground">Por qué esta marca importa en términos de inversión</h2>
-      <p>La marca tiene presencia en <strong className="text-foreground">Nueva York, Los Ángeles, Londres, Cannes, Ciudad de México, Dubai y Bali</strong>, entre otras ciudades. El Mondrian Ciudad de México Condesa, inaugurado en diciembre de 2022, fue el primer hotel Mondrian en América Latina, con 183 habitaciones y cuatro conceptos gastronómicos, y forma parte del mismo grupo desarrollador — Murano — que construye Grand Island Cancún.</p>
+      <p>La marca tiene presencia en <strong className="text-foreground">Nueva York, Los Ángeles, Londres, Cannes, Ciudad de México, Dubai y Bali</strong>, entre otras ciudades. La propiedad insignia de la marca en Ciudad de México Condesa, inaugurada en diciembre de 2022, fue su primer hotel en América Latina, con 183 habitaciones y cuatro conceptos gastronómicos, y forma parte del mismo grupo desarrollador — Murano — que construye Grand Island Cancún.</p>
 
-      <p>Mondrian es parte de Ennismore, que tras su joint venture con Marca Elite internacional en 2021 se convirtió en la compañía de hospitalidad lifestyle más grande del mundo, con más de 200 hoteles, 160 en pipeline y una red de más de 45 residencias de marca.</p>
+      <p>La marca es parte de Ennismore, que tras su joint venture con Marca Elite internacional en 2021 se convirtió en la compañía de hospitalidad lifestyle más grande del mundo, con más de 200 hoteles, 160 en pipeline y una red de más de 45 residencias de marca.</p>
 
       <p>Para el inversionista, esto se traduce en algo concreto: las <strong className="text-foreground">residencias de marca operadas por cadenas del calibre de Marca Elite internacional</strong> generan históricamente entre un 20% y un 35% más de ingreso por renta que residencias sin afiliación hotelera en el mismo mercado, por tres razones:</p>
 
       <ul className="list-disc pl-6 space-y-2">
-        <li><strong className="text-foreground">Tarifa promedio más alta</strong> — el viajero de Mondrian está dispuesto a pagar más por reconocimiento de marca</li>
+        <li><strong className="text-foreground">Tarifa promedio más alta</strong> — el viajero de esta marca está dispuesto a pagar más por reconocimiento de marca</li>
         <li><strong className="text-foreground">Canal de distribución global</strong> — la propiedad entra al inventario de reservas de Marca Elite internacional inmediatamente</li>
         <li><strong className="text-foreground">Gestión operativa profesional</strong> — el propietario no gestiona nada; recibe rendimientos</li>
       </ul>
@@ -157,7 +157,7 @@ export const MondrianPresaleBodyES = () => {
           <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')}>
             <Button variant="gold" size="lg">Ver la propiedad completa →</Button>
           </Link>
-          <a href="https://wa.me/529988457224?text=Quiero%20información%20sobre%20Mondrian%20Residences%20Grand%20Island%20Cancún" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/529988457224?text=Quiero%20información%20sobre%20The%20Residences%20at%20Grand%20Island%20Cancun" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg">Hablar con un asesor por WhatsApp</Button>
           </a>
         </div>
@@ -173,24 +173,24 @@ export const MondrianPresaleBodyEN = () => {
   const { localePath } = useLanguage();
   return (
     <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
-      <p>The development formerly known as <strong className="text-foreground">The Residences at Grand Island</strong> has officially relaunched under one of the world's most recognizable hospitality brands: <strong className="text-foreground">The Residences at Grand Island Cancun</strong>. This isn't a cosmetic rebranding. It's the formalization of an agreement between <strong className="text-foreground">Grupo Murano</strong> — a Nasdaq-listed real estate company (ticker: MRNO) — and <strong className="text-foreground">Ennismore/Marca Elite internacional</strong>, the same partnership that operates Mondrian Mexico City Condesa, Latin America's first Mondrian property.</p>
+      <p>The development formerly known as <strong className="text-foreground">The Residences at Grand Island</strong> has officially relaunched under one of the world's most recognizable hospitality brands: <strong className="text-foreground">The Residences at Grand Island Cancun</strong>. This isn't a cosmetic rebranding. It's the formalization of an agreement between <strong className="text-foreground">Grupo Murano</strong> — a Nasdaq-listed real estate company (ticker: MRNO) — and <strong className="text-foreground">Ennismore/Marca Elite internacional</strong>, the same partnership that operates the brand's flagship boutique hotel in Mexico City Condesa, the brand's first property in Latin America.</p>
 
       <p>This guide is the most complete resource available in English on this development. If you're evaluating the Residences at Grand Island Cancun presale, everything you need is here.</p>
 
       <h2 className="text-foreground">What Is The Residences at Grand Island Cancun?</h2>
       <p>The Residences at Grand Island Cancun is a <strong className="text-foreground">branded residences</strong> project within the Grand Island master development, located at <strong className="text-foreground">km 16.5 of Cancun's Hotel Zone</strong> — a 23-hectare estate that represents the largest luxury real estate bet in Quintana Roo in two decades.</p>
 
-      <p>The project offers units ranging from <strong className="text-foreground">1 to 3 bedrooms plus loft</strong>, with surfaces between 829 and 1,773 sq ft, designed by <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — the Portuguese firm behind the Mondrian properties in Dubai and Doha — and operated by Marca Elite internacional, with delivery scheduled for <strong className="text-foreground">Q2 2027</strong>.</p>
+      <p>The project offers units ranging from <strong className="text-foreground">1 to 3 bedrooms plus loft</strong>, with surfaces between 829 and 1,773 sq ft, designed by <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — the Portuguese firm behind the brand's flagship properties in Dubai and Doha — and operated by Marca Elite internacional, with delivery scheduled for <strong className="text-foreground">Q2 2027</strong>.</p>
 
-      <p>What separates this project from every other development in Cancun's Hotel Zone is straightforward: it's the only residential development in the city where the brand operator, the architect, and the developer have a proven track record working together. This isn't a licensed brand on an unknown developer. It's Grupo Murano — the same company that built and operates Mondrian Mexico City — replicating the model in Cancun.</p>
+      <p>What separates this project from every other development in Cancun's Hotel Zone is straightforward: it's the only residential development in the city where the brand operator, the architect, and the developer have a proven track record working together. This isn't a licensed brand on an unknown developer. It's Grupo Murano — the same company that built and operates the brand's property in Mexico City — replicating the model in Cancun.</p>
 
-      <h2 className="text-foreground">From The Residences at Grand Island to Mondrian: What Changed and Why It Matters</h2>
-      <p>Many investors who followed this project from its early stages know it as <strong className="text-foreground">The Residences at Grand Island</strong>. The rebranding to <strong className="text-foreground">The Residences at Grand Island Cancun</strong> is the result of the formal closing of the agreement with Ennismore to operate the residential component under Mondrian standards.</p>
+      <h2 className="text-foreground">From The Residences at Grand Island to The Residences at Grand Island Cancun: What Changed and Why It Matters</h2>
+      <p>Many investors who followed this project from its early stages know it as <strong className="text-foreground">The Residences at Grand Island</strong>. The rebranding to <strong className="text-foreground">The Residences at Grand Island Cancun</strong> is the result of the formal closing of the agreement with Ennismore to operate the residential component under Marca Elite internacional standards.</p>
 
       <h3 className="text-foreground">What changes</h3>
       <ul className="list-disc pl-6 space-y-2">
         <li><strong className="text-foreground">The operating name:</strong> from "The Residences at Grand Island" to "The Residences at Grand Island Cancun"</li>
-        <li><strong className="text-foreground">Brand backing:</strong> units integrate into Marca Elite internacional's rental program under Mondrian standards, with access to the ALL — Marca Elite internacional Live Limitless loyalty program (5,600+ hotels worldwide)</li>
+        <li><strong className="text-foreground">Brand backing:</strong> units integrate into Marca Elite internacional's rental program under Marca Elite internacional standards, with access to the ALL — Marca Elite internacional Live Limitless loyalty program (5,600+ hotels worldwide)</li>
         <li><strong className="text-foreground">Price positioning:</strong> the rebranding raises the price floor and the target buyer profile</li>
         <li><strong className="text-foreground">Day-one management:</strong> professional Marca Elite internacional operation from the first day of delivery — no management curve for the owner</li>
       </ul>
@@ -199,14 +199,14 @@ export const MondrianPresaleBodyEN = () => {
       <p>Location, views, Filipao Nunes' design language, and the delivery date.</p>
 
       <h2 className="text-foreground">Why This Brand Matters for Your Investment Return</h2>
-      <p>The brand has active properties in <strong className="text-foreground">New York, Los Angeles, London, Cannes, Mexico City, Dubai, and Bali</strong>, among others. Mondrian Mexico City Condesa, which opened in December 2022, was the brand's first hotel in Latin America, developed in partnership with Grupo Murano — the same developer behind Grand Island Cancun.</p>
+      <p>The brand has active properties in <strong className="text-foreground">New York, Los Angeles, London, Cannes, Mexico City, Dubai, and Bali</strong>, among others. The brand's flagship Mexico City Condesa property, which opened in December 2022, was its first hotel in Latin America, developed in partnership with Grupo Murano — the same developer behind Grand Island Cancun.</p>
 
-      <p>Mondrian is part of Ennismore, which after its joint venture with Marca Elite internacional in 2021 became the world's largest and fastest-growing lifestyle hospitality company, with more than 200 hotels, 160 in the pipeline, and a network of over 45 branded residences globally.</p>
+      <p>The brand is part of Ennismore, which after its joint venture with Marca Elite internacional in 2021 became the world's largest and fastest-growing lifestyle hospitality company, with more than 200 hotels, 160 in the pipeline, and a network of over 45 branded residences globally.</p>
 
       <p>For investors, this translates into concrete numbers. Branded residences operated by global hotel chains historically generate between <strong className="text-foreground">20% and 35% more rental income</strong> than non-affiliated residences in the same market, for three reasons:</p>
 
       <ul className="list-disc pl-6 space-y-2">
-        <li><strong className="text-foreground">Higher average daily rate</strong> — Mondrian guests pay a premium for brand recognition and service consistency</li>
+        <li><strong className="text-foreground">Higher average daily rate</strong> — Brand guests pay a premium for brand recognition and service consistency</li>
         <li><strong className="text-foreground">Global distribution channel</strong> — your unit enters Marca Elite internacional's reservation inventory on day one</li>
         <li><strong className="text-foreground">Hands-off management</strong> — you own the asset; Marca Elite internacional handles the operations</li>
       </ul>
@@ -313,7 +313,7 @@ export const MondrianPresaleBodyEN = () => {
           <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')}>
             <Button variant="gold" size="lg">View the full property listing →</Button>
           </Link>
-          <a href="https://wa.me/529988457224?text=I%20want%20information%20about%20Mondrian%20Residences%20Grand%20Island%20Cancun" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/529988457224?text=I%20want%20information%20about%20The%20Residences%20at%20Grand%20Island%20Cancun" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg">Talk to an advisor on WhatsApp</Button>
           </a>
         </div>
