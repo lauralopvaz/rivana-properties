@@ -88,7 +88,7 @@ export const LuxuryCondosZHBodyES = () => (
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun</h3>
     <p>
-      The Residences at Grand Island Cancun es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Marca Elite internacional bajo la marca Mondrian. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. La ubicación es en el km 16.5, con vistas simultáneas al Mar Caribe y a la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva dual.
+      The Residences at Grand Island Cancun es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera — diseñada por Filipao Nunes Arquitectos y operada por Marca Elite internacional. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. La ubicación es en el km 16.5, con vistas simultáneas al Mar Caribe y a la Laguna Nichupté — el único desarrollo en la Zona Hotelera con esa perspectiva dual.
     </p>
     <p>
       El desarrollo ofrece preventa desde $9,050,000 MXN con una plusvalía proyectada del 33% al precio de entrega — entrega Q2 2027. Plan de pago: 30% de enganche, 20% diferido en 12 meses, 50% a la entrega.
@@ -233,7 +233,7 @@ export const LuxuryCondosZHBodyEN = () => (
 
     <h3 className="text-foreground font-display text-2xl mt-8 mb-3">The Residences at Grand Island Cancun</h3>
     <p>
-      The Residences at Grand Island Cancun is a branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Marca Elite internacional under the Mondrian brand. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Located at km 16.5, with simultaneous views of the Caribbean Sea and Nichupté Lagoon — the only development in the Hotel Zone with that dual perspective.
+      The Residences at Grand Island Cancun is a branded residence within the most exclusive master development in the Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Marca Elite internacional. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Located at km 16.5, with simultaneous views of the Caribbean Sea and Nichupté Lagoon — the only development in the Hotel Zone with that dual perspective.
     </p>
     <p>
       Pre-sale pricing starts at $9,050,000 MXN with 33% projected appreciation to delivery price — Q2 2027. Payment plan: 30% down, 20% deferred over 12 months, 50% at delivery.

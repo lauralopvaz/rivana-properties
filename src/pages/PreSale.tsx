@@ -133,7 +133,7 @@ const PreSale = () => {
           "@context": "https://schema.org",
           "@type": "RealEstateListing",
           name: "The Residences at Grand Island Cancun — Preventa",
-          description: L === 'es' ? 'Residencia de marca en la Zona Hotelera de Cancún, diseñada por Filipao Nunes Arquitectos y operada por Marca Elite internacional bajo la marca Mondrian. Entrega llave en mano Q2 2027. Preventa desde $514,000 USD.' : 'Branded residence in Cancún\'s Hotel Zone, designed by Filipao Nunes Arquitectos and operated by Marca Elite internacional under the Mondrian brand. Turnkey delivery Q2 2027. Pre-sale from $514,000 USD.',
+          description: L === 'es' ? 'Residencia de marca en la Zona Hotelera de Cancún, diseñada por Filipao Nunes Arquitectos y operada por Marca Elite internacional. Entrega llave en mano Q2 2027. Preventa desde $514,000 USD.' : 'Branded residence in Cancún\'s Hotel Zone, designed by Filipao Nunes Arquitectos and operated by Marca Elite internacional. Turnkey delivery Q2 2027. Pre-sale from $514,000 USD.',
           url: `https://rivanaproperties.com${L === 'en' ? '/en/presale' : '/presale'}`,
           image: "https://rivanaproperties.com/images/mondrian/mondrian-hero.jpg",
           offers: {
