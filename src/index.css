@@ -11,7 +11,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 11%;
     --primary: 40 52% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary-foreground: 0 0% 11%;
     --secondary: 207 52% 32%;
     --secondary-foreground: 0 0% 100%;
     --muted: 30 15% 93%;
@@ -27,7 +27,7 @@
 
     /* Rivana custom tokens */
     --gold: 40 52% 60%;
-    --gold-text: 40 60% 45%;
+    --gold-text: 36 65% 28%;
     --deep-black: 0 0% 11%;
     --pearl: 0 0% 96%;
     --sapphire: 207 52% 32%;
@@ -45,7 +45,7 @@
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 11%;
     --sidebar-primary: 40 52% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 11%;
     --sidebar-accent: 30 15% 93%;
     --sidebar-accent-foreground: 0 0% 11%;
     --sidebar-border: 30 15% 88%;
