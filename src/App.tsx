@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,19 +13,20 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { GrainOverlay } from "@/components/GrainOverlay";
 
+// Eagerly load the homepage so the initial paint is not delayed by a chunk fetch.
 import Index from "./pages/Index";
-import DestinationPage from "./pages/DestinationPage";
-import PropertyDetail from "./pages/PropertyDetail";
-import PreSale from "./pages/PreSale";
-import Listings from "./pages/Listings";
-import Journal from "./pages/Journal";
-import JournalPost from "./pages/JournalPost";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import PropertyDetailNew from "./pages/PropertyDetailNew";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import CancunCondos from "./pages/CancunCondos";
-import BeachfrontCondos from "./pages/BeachfrontCondos";
+// Lazy-load remaining routes to reduce initial JS payload.
+const DestinationPage = lazy(() => import("./pages/DestinationPage"));
+const PreSale = lazy(() => import("./pages/PreSale"));
+const Listings = lazy(() => import("./pages/Listings"));
+const Journal = lazy(() => import("./pages/Journal"));
+const JournalPost = lazy(() => import("./pages/JournalPost"));
+const About = lazy(() => import("./pages/About"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const PropertyDetailNew = lazy(() => import("./pages/PropertyDetailNew"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const CancunCondos = lazy(() => import("./pages/CancunCondos"));
+const BeachfrontCondos = lazy(() => import("./pages/BeachfrontCondos"));
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
@@ -183,7 +184,9 @@ const App = () => (
             
             <GrainOverlay />
             <Navbar />
-            <AppRoutes />
+            <Suspense fallback={null}>
+              <AppRoutes />
+            </Suspense>
             <Footer />
             <WhatsAppButton />
             <SchedulingModal />
