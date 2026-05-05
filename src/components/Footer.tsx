@@ -17,7 +17,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand + Newsletter */}
           <div>
-            <Link to={localePath('/')} className="font-display text-3xl tracking-[4px] text-foreground">
+            <Link to={localePath('/')} className="font-display text-3xl tracking-[4px] text-primary">
               RIVANA
             </Link>
             <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-xs">
@@ -67,7 +67,7 @@ export const Footer = () => {
                     disabled={nl.loading}
                     style={{
                       background: '#CFAE60',
-                      color: '#1C1C1C',
+                      color: '#fff',
                       textTransform: 'uppercase',
                       letterSpacing: '2px',
                       fontSize: '12px',
