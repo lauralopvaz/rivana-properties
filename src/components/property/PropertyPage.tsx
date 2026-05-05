@@ -24,13 +24,21 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   const formRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+    const measure = () => {
+      ticking = false;
       if (!formRef.current) return;
       const rect = formRef.current.getBoundingClientRect();
       setStickyVisible(rect.top > window.innerHeight || rect.bottom < 0);
     };
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(measure);
+      }
+    };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    measure();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
