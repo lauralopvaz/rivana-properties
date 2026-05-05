@@ -7,13 +7,18 @@
       window.gtag = gtag;
       gtag('js', new Date());
       gtag('config', 'G-GF2HEGMYK1');
+      function __loadGA(){
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GF2HEGMYK1';
+        document.head.appendChild(s);
+      }
       window.addEventListener('load', function () {
-        setTimeout(function () {
-          var s = document.createElement('script');
-          s.async = true;
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GF2HEGMYK1';
-          document.head.appendChild(s);
-        }, 1500);
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(function(){ setTimeout(__loadGA, 2500); }, { timeout: 6000 });
+        } else {
+          setTimeout(__loadGA, 4000);
+        }
       });
     </script>
     <meta charset="UTF-8" />
@@ -31,9 +36,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <!-- Meta Pixel Code -->
     <script>
-      window.addEventListener('load', function () {
-        setTimeout(function () {
-          !function(f,b,e,v,n,t,s)
+      function __loadFbq(){
+        !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};
           if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -41,9 +45,15 @@
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '2413105422385252');
-          fbq('track', 'PageView');
-        }, 1800);
+        fbq('init', '2413105422385252');
+        fbq('track', 'PageView');
+      }
+      window.addEventListener('load', function () {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(function(){ setTimeout(__loadFbq, 3000); }, { timeout: 7000 });
+        } else {
+          setTimeout(__loadFbq, 4500);
+        }
       });
     </script>
     <!-- End Meta Pixel Code -->
