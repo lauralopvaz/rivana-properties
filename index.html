@@ -1,8 +1,21 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GF2HEGMYK1"></script>
-    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-GF2HEGMYK1');</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-GF2HEGMYK1');
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GF2HEGMYK1';
+          document.head.appendChild(s);
+        }, 1500);
+      });
+    </script>
     <meta charset="UTF-8" />
     <meta name="google-site-verification" content="UBWajV-a3GSdQ6LjAcIdx829O-MImrTGBdWNyM07ZaE" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,16 +29,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <!-- Meta Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '2413105422385252');
-      fbq('track', 'PageView');
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '2413105422385252');
+          fbq('track', 'PageView');
+        }, 1800);
+      });
     </script>
     <!-- End Meta Pixel Code -->
 </head>
