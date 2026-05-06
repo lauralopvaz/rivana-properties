@@ -306,6 +306,8 @@ const JournalPost = () => {
               language === 'en' ? <MondrianGrandIslandBodyEN /> : <MondrianGrandIslandBodyES />
             ) : (articleSlug === 'guia-preventa-cancun-2026' || slug === 'pre-sale-guide-cancun-2026') ? (
               language === 'en' ? <GuiaPreventaCancunBodyEN /> : <GuiaPreventaCancunBodyES />
+            ) : articleSlug === 'puente-nichupte-zona-hotelera-cancun-plusvalia' ? (
+              language === 'en' ? <PuenteNichupteBodyEN /> : <PuenteNichupteBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
