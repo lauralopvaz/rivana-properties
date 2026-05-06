@@ -20,6 +20,7 @@ import { MondrianPresaleBodyES, MondrianPresaleBodyEN } from '@/components/journ
 import { MondrianGrandIslandBodyES, MondrianGrandIslandBodyEN } from '@/components/journal/MondrianGrandIslandBody';
 import { GuiaPreventaCancunBodyES, GuiaPreventaCancunBodyEN } from '@/components/journal/GuiaPreventaCancunBody';
 import { PuenteNichupteBodyES, PuenteNichupteBodyEN } from '@/components/journal/PuenteNichupteBody';
+import { PortugalMayakobaBodyES, PortugalMayakobaBodyEN } from '@/components/journal/PortugalMayakobaBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -60,8 +61,29 @@ const JournalPost = () => {
 
   const isMondrianPresale = articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale';
   const isPuenteNichupte = articleSlug === 'puente-nichupte-zona-hotelera-cancun-plusvalia';
+  const isPortugalMayakoba = articleSlug === 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria';
 
-  const schema = isPuenteNichupte
+  const schema = isPortugalMayakoba
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: 'Portugal Eligió la Riviera Maya para el Mundial 2026 — El Mapa Inmobiliario del Caribe Mexicano Cambia Para Siempre',
+        description: article.excerpt[language],
+        image: `https://rivanaproperties.com${article.image}`,
+        datePublished: '2026-05-05',
+        dateModified: '2026-05-05',
+        author: { '@type': 'Organization', name: 'Rivana Properties', url: 'https://rivanaproperties.com' },
+        publisher: { '@type': 'Organization', name: 'Rivana Properties', logo: { '@type': 'ImageObject', url: 'https://rivanaproperties.com/logo.png' } },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': `https://rivanaproperties.com${currentPath}` },
+        inLanguage: language === 'en' ? 'en' : 'es-MX',
+        articleSection: 'Mercado',
+        keywords: 'Portugal Mundial 2026 Riviera Maya, Cristiano Ronaldo Mayakoba, inversión inmobiliaria Mayakoba, Fairmont Mayakoba Copa del Mundo, renta vacacional Riviera Maya 2026, plusvalía Mayakoba, The Reserve at Mayakoba',
+        about: [
+          { '@type': 'Place', name: 'Mayakoba' },
+          { '@type': 'Event', name: 'Copa del Mundo FIFA 2026', startDate: '2026-06-11', endDate: '2026-07-19' },
+        ],
+      }
+    : isPuenteNichupte
     ? {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -196,6 +218,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['Los números', '¿Por qué importa?', 'Zonas ganadoras', 'El momento es hoy', 'Grand Island', 'Continuidad', 'El veredicto']
       : ['The numbers', 'Why it matters', 'Winning zones', 'The moment is now', 'Grand Island', 'Resilience', 'The verdict'])
+    : articleSlug === 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria'
+    ? (language === 'es'
+      ? ['La selección', 'Por qué Mayakoba', 'Cancún hub mundial', 'Efecto mediático', 'Comprador de lujo', 'The Reserve at Mayakoba']
+      : ['The squad', 'Why Mayakoba', 'Cancún global hub', 'Media effect', 'Luxury buyer', 'The Reserve at Mayakoba'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -308,6 +334,8 @@ const JournalPost = () => {
               language === 'en' ? <GuiaPreventaCancunBodyEN /> : <GuiaPreventaCancunBodyES />
             ) : articleSlug === 'puente-nichupte-zona-hotelera-cancun-plusvalia' ? (
               language === 'en' ? <PuenteNichupteBodyEN /> : <PuenteNichupteBodyES />
+            ) : articleSlug === 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria' ? (
+              language === 'en' ? <PortugalMayakobaBodyEN /> : <PortugalMayakobaBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>

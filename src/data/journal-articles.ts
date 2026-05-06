@@ -31,6 +31,28 @@ export interface JournalArticle {
 
 export const journalArticles: JournalArticle[] = [
   {
+    slug: 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria',
+    title: {
+      es: 'Portugal Eligió la Riviera Maya para el Mundial 2026 — El Mapa Inmobiliario del Caribe Mexicano Cambia Para Siempre',
+      en: 'Portugal Chose the Riviera Maya for the 2026 World Cup — The Mexican Caribbean Real Estate Map Changes Forever',
+    },
+    seoTitle: {
+      es: 'Portugal Mundial 2026 Riviera Maya — Inversión',
+      en: 'Portugal World Cup 2026 Riviera Maya — Investment',
+    },
+    category: { es: 'Mercado', en: 'Market' },
+    excerpt: {
+      es: 'Cristiano Ronaldo y Portugal tendrán base en Fairmont Mayakoba durante el Mundial FIFA 2026. Analizamos el impacto en demanda de renta vacacional y plusvalía en Mayakoba y la Riviera Maya.',
+      en: 'Cristiano Ronaldo and Portugal will be based at Fairmont Mayakoba during FIFA World Cup 2026. We analyze the impact on vacation rental demand and appreciation across Mayakoba and the Riviera Maya.',
+    },
+    date: 'May 5, 2026',
+    readTime: '13 min',
+    author: 'Rivana Properties',
+    featured: true,
+    image: imgUruguayMayakoba,
+    relatedDestinations: ['mayakoba', 'playa-del-carmen'],
+  },
+  {
     slug: 'puente-nichupte-zona-hotelera-cancun-plusvalia',
     title: {
       es: 'El Puente Nichupté Acaba de Abrir — y la Zona Hotelera de Cancún Ya No Es la Misma',
