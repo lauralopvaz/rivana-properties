@@ -5,6 +5,7 @@ import imgLuxuryCondos from '@/assets/journal/luxury-condos-zona-hotelera.jpg';
 import imgCostaMujeres from '@/assets/journal/costa-mujeres-luxury.jpg';
 import imgMayakoba from '@/assets/journal/mayakoba-vs-puerto-cancun.jpg';
 import imgGuiaPreventa from '@/assets/journal/guia-preventa.jpg';
+import imgPuenteNichupte from '@/assets/journal/puente-nichupte.jpg';
 
 import imgUruguayMayakoba from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
@@ -29,6 +30,28 @@ export interface JournalArticle {
 }
 
 export const journalArticles: JournalArticle[] = [
+  {
+    slug: 'puente-nichupte-zona-hotelera-cancun-plusvalia',
+    title: {
+      es: 'El Puente Nichupté Acaba de Abrir — y la Zona Hotelera de Cancún Ya No Es la Misma',
+      en: 'The Nichupté Bridge Just Opened — and Cancún\'s Hotel Zone Will Never Be the Same',
+    },
+    seoTitle: {
+      es: 'Puente Nichupté: Plusvalía en la Zona Hotelera Cancún',
+      en: 'Nichupté Bridge: Hotel Zone Cancún Appreciation 2026',
+    },
+    category: { es: 'Mercado', en: 'Market' },
+    excerpt: {
+      es: 'El Puente Nichupté abrió el 2 de mayo de 2026. 11.2 km que conectan Cancún con la Zona Hotelera en 10 minutos. Analizamos el impacto real en plusvalía e inversión en proyectos como The Residences at Grand Island y Bay View Grand.',
+      en: 'The Nichupté Bridge opened on May 2, 2026. 11.2 km connecting Cancún with the Hotel Zone in 10 minutes. We analyze the real impact on appreciation and investment for projects like The Residences at Grand Island and Bay View Grand.',
+    },
+    date: 'May 5, 2026',
+    readTime: '9 min',
+    author: 'Rivana Properties',
+    featured: true,
+    image: imgPuenteNichupte,
+    relatedDestinations: ['zona-hotelera'],
+  },
   {
     slug: 'uruguay-mayakoba-mundial-2026',
     title: {

@@ -19,6 +19,7 @@ import { WorldCupBodyES, WorldCupBodyEN } from '@/components/journal/WorldCupBod
 import { MondrianPresaleBodyES, MondrianPresaleBodyEN } from '@/components/journal/MondrianPresaleBody';
 import { MondrianGrandIslandBodyES, MondrianGrandIslandBodyEN } from '@/components/journal/MondrianGrandIslandBody';
 import { GuiaPreventaCancunBodyES, GuiaPreventaCancunBodyEN } from '@/components/journal/GuiaPreventaCancunBody';
+import { PuenteNichupteBodyES, PuenteNichupteBodyEN } from '@/components/journal/PuenteNichupteBody';
 
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -58,8 +59,25 @@ const JournalPost = () => {
     || (articleTitle.length > 45 ? `${articleTitle.slice(0, 45)}… | Rivana` : `${articleTitle} | Rivana Journal`);
 
   const isMondrianPresale = articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale';
+  const isPuenteNichupte = articleSlug === 'puente-nichupte-zona-hotelera-cancun-plusvalia';
 
-  const schema = isMondrianPresale
+  const schema = isPuenteNichupte
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: 'El Puente Nichupté Acaba de Abrir — y la Zona Hotelera de Cancún Ya No Es la Misma',
+        description: article.excerpt[language],
+        image: `https://rivanaproperties.com${article.image}`,
+        datePublished: '2026-05-05',
+        dateModified: '2026-05-05',
+        author: { '@type': 'Organization', name: 'Rivana Properties', url: 'https://rivanaproperties.com' },
+        publisher: { '@type': 'Organization', name: 'Rivana Properties', logo: { '@type': 'ImageObject', url: 'https://rivanaproperties.com/logo.png' } },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': `https://rivanaproperties.com${currentPath}` },
+        inLanguage: language === 'en' ? 'en' : 'es-MX',
+        articleSection: 'Mercado',
+        keywords: 'Puente Nichupté, Zona Hotelera Cancún, plusvalía Cancún 2026, inversión inmobiliaria Cancún, The Residences at Grand Island, Bay View Grand, infraestructura Cancún',
+      }
+    : isMondrianPresale
     ? {
         '@context': 'https://schema.org',
         '@graph': [
@@ -174,6 +192,10 @@ const JournalPost = () => {
     ? (language === 'es'
       ? ['¿Qué es la preventa?', 'Ventajas', 'Riesgos', 'Mejores preventas Rivana', 'Esquemas de pago', '¿Por qué 2026?']
       : ['What is pre-sale?', 'Advantages', 'Risks', 'Best Rivana pre-sales', 'Payment structures', 'Why 2026?'])
+    : articleSlug === 'puente-nichupte-zona-hotelera-cancun-plusvalia'
+    ? (language === 'es'
+      ? ['Los números', '¿Por qué importa?', 'Zonas ganadoras', 'El momento es hoy', 'Grand Island', 'Continuidad', 'El veredicto']
+      : ['The numbers', 'Why it matters', 'Winning zones', 'The moment is now', 'Grand Island', 'Resilience', 'The verdict'])
     : [
       language === 'es' ? 'Introducción' : 'Introduction',
       language === 'es' ? 'Panorama del Mercado' : 'Market Overview',
@@ -284,6 +306,8 @@ const JournalPost = () => {
               language === 'en' ? <MondrianGrandIslandBodyEN /> : <MondrianGrandIslandBodyES />
             ) : (articleSlug === 'guia-preventa-cancun-2026' || slug === 'pre-sale-guide-cancun-2026') ? (
               language === 'en' ? <GuiaPreventaCancunBodyEN /> : <GuiaPreventaCancunBodyES />
+            ) : articleSlug === 'puente-nichupte-zona-hotelera-cancun-plusvalia' ? (
+              language === 'en' ? <PuenteNichupteBodyEN /> : <PuenteNichupteBodyES />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
