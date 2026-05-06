@@ -216,8 +216,8 @@ const JournalPost = () => {
       : ['What is pre-sale?', 'Advantages', 'Risks', 'Best Rivana pre-sales', 'Payment structures', 'Why 2026?'])
     : articleSlug === 'puente-nichupte-zona-hotelera-cancun-plusvalia'
     ? (language === 'es'
-      ? ['Los números', '¿Por qué importa?', 'Zonas ganadoras', 'El momento es hoy', 'Grand Island', 'Continuidad', 'El veredicto']
-      : ['The numbers', 'Why it matters', 'Winning zones', 'The moment is now', 'Grand Island', 'Resilience', 'The verdict'])
+      ? ['Los números', 'Cómo se construyó', '¿Por qué importa?', 'Zonas ganadoras', 'El momento es hoy', 'Grand Island', 'Continuidad', 'El veredicto']
+      : ['The numbers', 'How it was built', 'Why it matters', 'Winning zones', 'The moment is now', 'Grand Island', 'Resilience', 'The verdict'])
     : articleSlug === 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria'
     ? (language === 'es'
       ? ['La selección', 'Por qué Mayakoba', 'Cancún hub mundial', 'Efecto mediático', 'Comprador de lujo', 'The Reserve at Mayakoba']

@@ -30,6 +30,23 @@ export const PuenteNichupteBodyES = () => {
 
       <p>La inversión total superó los <strong className="text-foreground">10,300 millones de pesos</strong>. El puente es completamente gratuito. Y ya está operando.</p>
 
+      <h2 className="text-foreground">Cómo se construyó: ingeniería que vale conocer</h2>
+      <p>El Puente Nichupté no es solo grande — es técnicamente extraordinario, y su historia de construcción explica por qué representa una obra de permanencia real para el destino.</p>
+
+      <p>El reto principal apareció durante la excavación: en el kilómetro 2.5 del viaducto, los ingenieros descubrieron una <strong className="text-foreground">caverna natural de 67 metros de diámetro y más de 200 metros de profundidad</strong> en el lecho marino de la laguna — una de las peculiaridades del terreno kárstico de la Península de Yucatán que ningún estudio previo había anticipado. La solución fue extraordinaria: la SICT tuvo que construir dentro del Puente Nichupté otro "puente" — un arco prefabricado — a fin de salvar esa caverna y garantizar la seguridad de la estructura.</p>
+
+      <p>El <strong className="text-foreground">Arco Metálico de 100 metros</strong> que libra la caverna se realizó con 25 dovelas en arco. La estructura pesa 593.6 toneladas y está sostenida por zapatas diseñadas específicamente para reducir los riesgos asociados al terreno kárstico.</p>
+
+      <p>Para el resto del viaducto sobre la laguna, los números son igualmente contundentes. La zona Top Down, de 700 metros de longitud, se ejecutó con 84 pilotes a 30 metros de profundidad, con 21 cabezales, 147 trabes y 21 claros de losa. En la zona lagunar de 6.5 kilómetros destacan <strong className="text-foreground">788 pilas</strong>.</p>
+
+      <p>El puente también integra tecnología de última generación: sistemas de transporte inteligente (ITS) conectados a un C4 de seguridad, iluminación LED, ciclopista y paraderos, con una sección transversal de 14.9 metros. La estructura incluye un gálibo de cinco metros en el canal de navegación para el paso de embarcaciones.</p>
+
+      <p>Y hay un dato que rara vez aparece en la conversación inmobiliaria pero que es altamente relevante para el inversionista a largo plazo: la obra puso especial atención en el cuidado del medio ambiente, con la <strong className="text-foreground">rehabilitación de 306 hectáreas de manglar</strong>, la apertura de 40 km de canales, el rescate y reubicación de flora y vegetación nativa, el rescate y protección de pastos marinos, y el monitoreo de la calidad del agua y del ecosistema lagunar.</p>
+
+      <p>Un puente que protege activamente el ecosistema que hace único al destino no solo es técnicamente admirable — es exactamente el tipo de infraestructura que sustenta el valor inmobiliario a largo plazo. La Laguna Nichupté sigue siendo laguna, el manglar sigue siendo manglar, y la Zona Hotelera sigue siendo el corredor natural más privilegiado del Caribe mexicano.</p>
+
+      <p><strong className="text-foreground">Lo que viene después del puente:</strong> con una inversión de 484 millones de pesos ya inició la construcción del <strong className="text-foreground">Distribuidor Vial Kukulcán</strong>, que enlazará directamente el Puente Nichupté con la Zona Hotelera en Punta Nizuc-Cancún, con 770 metros de longitud adicional. El sistema de conectividad que está transformando la Zona Hotelera no terminó el 2 de mayo — está en expansión.</p>
+
       <h2 className="text-foreground">¿Por qué importa esto para un inversionista?</h2>
       <p>La conectividad es el motor silencioso de la plusvalía inmobiliaria. Cuando una zona se vuelve más accesible, más personas quieren vivir, vacacionar e invertir en ella. La mejora en conectividad influye directamente en la plusvalía inmobiliaria: al reducir tiempos de traslado y aumentar la accesibilidad, zonas bien ubicadas dentro de esta red incrementan su atractivo para inversión residencial y patrimonial, impulsando la demanda y el valor por metro cuadrado.</p>
 
