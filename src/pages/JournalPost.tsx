@@ -22,6 +22,21 @@ import { GuiaPreventaCancunBodyES, GuiaPreventaCancunBodyEN } from '@/components
 import { PuenteNichupteBodyES, PuenteNichupteBodyEN } from '@/components/journal/PuenteNichupteBody';
 import { PortugalMayakobaBodyES, PortugalMayakobaBodyEN } from '@/components/journal/PortugalMayakobaBody';
 
+const parseArticleDate = (dateStr: string): string => {
+  const months: Record<string, string> = {
+    Jan: '01', Feb: '02', Mar: '03', Apr: '04', May: '05', Jun: '06',
+    Jul: '07', Aug: '08', Sep: '09', Oct: '10', Nov: '11', Dec: '12',
+  };
+  const parts = dateStr.trim().split(/\s+/);
+  if (parts.length >= 3) {
+    const month = months[parts[0]] || '01';
+    const day = parts[1].replace(',', '').padStart(2, '0');
+    const year = parts[2];
+    return `${year}-${month}-${day}`;
+  }
+  return dateStr;
+};
+
 const JournalPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { language, localePath } = useLanguage();
@@ -164,10 +179,27 @@ const JournalPost = () => {
         '@type': 'Article',
         headline: article.title[language],
         description: article.excerpt[language],
-        author: { '@type': 'Person', name: article.author },
-        publisher: { '@type': 'Organization', name: 'Rivana Properties' },
-        datePublished: article.date,
-        url: `https://rivanaproperties.com/journal/${slug}`,
+        image: article.image.startsWith('http')
+          ? article.image
+          : `https://rivanaproperties.com${article.image}`,
+        datePublished: parseArticleDate(article.date),
+        dateModified: parseArticleDate(article.date),
+        author: {
+          '@type': 'Organization',
+          name: 'Rivana Properties',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Rivana Properties',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://rivanaproperties.com/images/rivana-logo.png',
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://rivanaproperties.com${currentPath}`,
+        },
       };
 
   const toc = slug === 'foreign-buyer-guide-mexico'
