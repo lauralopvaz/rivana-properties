@@ -153,29 +153,18 @@ const Home = () => {
       <AllySection />
 
       {/* ── FEATURED PROPERTIES ── */}
-      <section className="py-12 md:py-16 lg:py-20 bg-background">
+      <section className="py-16 lg:py-20 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="flex items-end justify-between gap-4 mb-8 md:mb-16">
-              <div>
-                <p className="eyebrow mb-4">{t('section.featured')}</p>
-                <h2 className="text-secondary mb-0">{t('section.featuredTitle')}</h2>
-              </div>
-              <span className="md:hidden flex items-center gap-1.5 text-[11px] font-body uppercase tracking-[2px] text-primary whitespace-nowrap pb-1">
-                <span>{language === 'es' ? 'Desliza' : 'Swipe'}</span>
-                <ArrowRightIcon className="w-3.5 h-3.5 swipe-hint" />
-              </span>
-            </div>
+            <p className="eyebrow mb-4">{t('section.featured')}</p>
+            <h2 className="mb-16 text-secondary">{t('section.featuredTitle')}</h2>
           </ScrollReveal>
 
-          <div
-            className="flex md:grid md:grid-cols-2 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none -mx-6 px-6 md:mx-0 md:px-0 pb-4 md:pb-0"
-            style={{ scrollbarWidth: 'none' }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {featuredProperties.map((p, i) => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
-                <ScrollReveal key={p.name} delay={i * 100} className="shrink-0 w-[85%] snap-start md:w-auto md:shrink">
+                <ScrollReveal key={p.name} delay={i * 100}>
                   <Link to={localePath(`/propiedad/${p.slug}`)} className="group block bg-card rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.06)] border border-border">
                     <div className="aspect-[16/10] overflow-hidden">
                       <img
