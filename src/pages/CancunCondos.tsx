@@ -11,7 +11,7 @@ import vellmariHero from '@/assets/vellmari-hero.jpg';
 import kabeekHero from '@/assets/kabeek-fachada-atardecer.jpg';
 import bayViewGrandHero from '@/assets/bvg-rooftop-pool-laguna.jpg';
 import arboladaHero from '@/assets/arbolada-hero.jpg';
-import thompsonHero from '@/assets/thompson-hero.jpg';
+import thompsonHero from '@/assets/thompson-sky-beach.webp';
 import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 interface Property {
