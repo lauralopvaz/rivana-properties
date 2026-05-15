@@ -11,7 +11,7 @@ import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
 import { ProcessTimeline } from '@/components/home/ProcessTimeline';
 
-import homeHero from '@/assets/home-hero-main.jpg';
+import homeHero from '@/assets/bvg-rooftop-pool-laguna.jpg';
 import presaleHero from '@/assets/presale-hero.jpg';
 
 // Destination images — real property photography
