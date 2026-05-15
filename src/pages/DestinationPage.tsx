@@ -202,14 +202,40 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const esPath = subPage ? `${config.basePath}/${subPage}` : config.basePath;
   const enPath = subPage ? `/en${config.basePath}/${subPage}` : `/en${config.basePath}`;
 
+  const homeName = language === 'en' ? 'Home' : 'Inicio';
+  const homeUrl = language === 'en' ? 'https://rivanaproperties.com/en' : 'https://rivanaproperties.com';
+  const destUrl = `https://rivanaproperties.com${language === 'en' ? `/en${config.basePath}` : config.basePath}`;
+
+  const breadcrumbItems: Record<string, unknown>[] = [
+    { '@type': 'ListItem', position: 1, name: homeName, item: homeUrl },
+    { '@type': 'ListItem', position: 2, name: config.name[language], item: destUrl },
+  ];
+
+  if (subPage && subPageConfig) {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: subPageConfig.seo.h1[language],
+      item: `https://rivanaproperties.com${currentPath}`,
+    });
+  }
+
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'RealEstateListing',
-    name: h1Text,
-    description: seoDescription,
-    url: `https://rivanaproperties.com${currentPath}`,
-    areaServed: { '@type': 'Place', name: config.name[language] },
-    broker: { '@type': 'RealEstateAgent', name: 'Rivana Properties', url: 'https://rivanaproperties.com' },
+    '@graph': [
+      {
+        '@type': 'RealEstateListing',
+        name: h1Text,
+        description: seoDescription,
+        url: `https://rivanaproperties.com${currentPath}`,
+        areaServed: { '@type': 'Place', name: config.name[language] },
+        broker: { '@type': 'RealEstateAgent', name: 'Rivana Properties', url: 'https://rivanaproperties.com' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbItems,
+      },
+    ],
   };
 
   const relatedDests = config.relatedDestinations.map((key) => getDestination(key)).filter(Boolean);
