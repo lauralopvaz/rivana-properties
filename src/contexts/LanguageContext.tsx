@@ -109,7 +109,7 @@ const translations: Record<string, Record<Language, string>> = {
   'dest.viewProject': { es: 'Ver Proyecto', en: 'View Project' },
 
   // About
-  'about.tagline': { es: 'No somos una agencia.', en: 'Not just an agency.' },
+  'about.tagline': { es: 'Somos tu aliado.', en: 'We\'re your ally.' },
   'about.partner': { es: 'Tu aliado.', en: 'Your Partner.' },
 
   // Listings

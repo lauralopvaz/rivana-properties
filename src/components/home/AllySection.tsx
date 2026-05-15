@@ -41,12 +41,8 @@ export const AllySection = () => {
             <p className="eyebrow mb-4">
               {L === 'es' ? 'Por Qué Rivana' : 'Why Rivana'}
             </p>
-            <h2 className="mb-6 text-secondary">
-              {L === 'es' ? 'No somos una agencia.' : 'We\'re not an agency.'}
-              <br />
-              <em className="not-italic text-primary italic">
-                {L === 'es' ? 'Somos tu aliado.' : 'We\'re your ally.'}
-              </em>
+            <h2 className="mb-6 text-secondary italic text-primary">
+              {L === 'es' ? 'Somos tu aliado.' : 'We\'re your ally.'}
             </h2>
             <p className="font-body text-base text-muted-foreground leading-[1.85] max-w-[480px]">
               {L === 'es'
