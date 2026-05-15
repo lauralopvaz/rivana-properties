@@ -179,10 +179,27 @@ const JournalPost = () => {
         '@type': 'Article',
         headline: article.title[language],
         description: article.excerpt[language],
-        author: { '@type': 'Person', name: article.author },
-        publisher: { '@type': 'Organization', name: 'Rivana Properties' },
-        datePublished: article.date,
-        url: `https://rivanaproperties.com/journal/${slug}`,
+        image: article.image.startsWith('http')
+          ? article.image
+          : `https://rivanaproperties.com${article.image}`,
+        datePublished: parseArticleDate(article.date),
+        dateModified: parseArticleDate(article.date),
+        author: {
+          '@type': 'Organization',
+          name: 'Rivana Properties',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Rivana Properties',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://rivanaproperties.com/images/rivana-logo.png',
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://rivanaproperties.com${currentPath}`,
+        },
       };
 
   const toc = slug === 'foreign-buyer-guide-mexico'
