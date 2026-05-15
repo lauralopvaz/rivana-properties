@@ -15,15 +15,15 @@ import { ProcessTimeline } from '@/components/home/ProcessTimeline';
 import homeHero from '@/assets/home-hero-main.jpg';
 import presaleHero from '@/assets/presale-hero.jpg';
 
-// Destination images
-import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
-import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
-import destCostaMujeres from '@/assets/dest-costa-mujeres.jpg';
-import destMayakoba from '@/assets/dest-mayakoba.jpg';
-import destPuertoMorelos from '@/assets/dest-puerto-morelos.jpg';
-import destCancunCentro from '@/assets/dest-cancun-centro.jpg';
+// Destination images — real property photography
+import destZonaHotelera from '@/assets/bvg-aerea-complejo-laguna.jpg';
+import destPuertoCancun from '@/assets/sls-marina.jpg';
+import destCostaMujeres from '@/assets/dhamar-beachclub1.jpg';
+import destMayakoba from '@/assets/reserve-mayakoba-casa-club-laguna.jpg';
+import destPuertoMorelos from '@/assets/sole-blu-fachada-exterior-dia.jpg';
+import destCancunCentro from '@/assets/cuore-cumbres-hero.jpg';
 import destTulum from '@/assets/dest-tulum.jpg';
-import destPlayaDelCarmen from '@/assets/dest-playa-del-carmen.jpg';
+import destPlayaDelCarmen from '@/assets/village-blu-hero.jpg';
 
 // Property images
 const propMondrian = '/images/mondrian/mondrian-hero.jpg';
