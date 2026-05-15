@@ -131,9 +131,15 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
         >
         {active === "general" && (
           <div className="prop-tab-text-wrap">
-            <p className="font-body font-light prop-text-base" style={{ color: "#4B4B4B" }}>
-              {description}
-            </p>
+            {description.split(/\n\n+/).map((para, i) => (
+              <p
+                key={i}
+                className="font-body font-light prop-text-base"
+                style={{ color: "#4B4B4B", marginBottom: i < description.split(/\n\n+/).length - 1 ? '1rem' : 0 }}
+              >
+                {para}
+              </p>
+            ))}
           </div>
         )}
 
