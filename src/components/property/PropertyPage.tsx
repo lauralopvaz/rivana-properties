@@ -111,6 +111,10 @@ function getDifferentiator(property: PropertyDetail, locale: Locale): string {
 }
 
 function getSeoTitle(property: PropertyDetail, locale: Locale): string {
+  if (locale === 'es') {
+    const override = seoTitleEsBySlug[property.slug];
+    if (override) return override;
+  }
   const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
   const shortZone = zone.split(',')[0].trim();
   const type = getPropertyType(property, locale);
@@ -119,6 +123,10 @@ function getSeoTitle(property: PropertyDetail, locale: Locale): string {
 }
 
 function getSeoDescription(property: PropertyDetail, locale: Locale): string {
+  if (locale === 'es') {
+    const override = seoDescEsBySlug[property.slug];
+    if (override) return override;
+  }
   const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
   const shortZone = zone.split(',')[0].trim();
   const differentiator = getDifferentiator(property, locale);
