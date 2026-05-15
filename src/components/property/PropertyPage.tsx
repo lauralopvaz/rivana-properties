@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
+import { formatUSD } from "@/lib/formatPrice";
 import type { PropertyDetail, UnitType, Locale } from "@/types/property";
 import { PropertyHero } from "./PropertyHero";
 import { PropertyGalleryStrip } from "./PropertyGalleryStrip";
@@ -11,6 +12,124 @@ import { PropertyContactForm } from "./PropertyContactForm";
 import { PropertyStickyBar } from "./PropertyStickyBar";
 import { ReservePriceModal } from "./ReservePriceModal";
 import { UnitDetailModal } from "./UnitDetailModal";
+
+// ── SEO helpers ──
+
+const propertyTypeBySlug: Record<string, { es: string; en: string }> = {
+  'mondrian-residences-grand-island-cancun': { es: 'Depto en Preventa', en: 'Pre-Sale Condo' },
+  'dhamar-costa-mujeres': { es: 'Depto en Preventa', en: 'Pre-Sale Condo' },
+  'sls-ocean-beach-puerto-cancun': { es: 'Penthouse', en: 'Penthouse' },
+  'bay-view-grand-grand-island': { es: 'Depto en Preventa', en: 'Pre-Sale Condo' },
+  'vellmari-grand-living': { es: 'Residencia', en: 'Residence' },
+  'village-blu-beach': { es: 'Depto Frente al Mar', en: 'Beachfront Condo' },
+  'arbolada-towers': { es: 'Depto Entrega Inmediata', en: 'Immediate Delivery Condo' },
+  'thompson-residences-puerto-cancun': { es: 'Penthouse', en: 'Penthouse' },
+  'sole-blu-ocean-living': { es: 'Depto Frente al Mar', en: 'Beachfront Condo' },
+  'kabeek-marina-condos': { es: 'Depto en Preventa', en: 'Pre-Sale Condo' },
+  'the-reserve-at-mayakoba': { es: 'Residencia', en: 'Residence' },
+  'cuore-cumbres-cancun': { es: 'Depto en Preventa', en: 'Pre-Sale Condo' },
+};
+
+const differentiatorBySlug: Record<string, { es: string; en: string }> = {
+  'mondrian-residences-grand-island-cancun': {
+    es: 'Operado por Marca Elite internacional, llave en mano, ROI 33%',
+    en: 'Operated by Marca Elite internacional, turnkey, 33% appreciation',
+  },
+  'dhamar-costa-mujeres': {
+    es: 'Preventa frente al mar con alberca infinity',
+    en: 'Pre-sale beachfront with infinity pool',
+  },
+  'sls-ocean-beach-puerto-cancun': {
+    es: 'Residencias de lujo SLS Hotels, Arquitectonica + Marca Elite internacional',
+    en: 'SLS Hotels luxury residences, Arquitectonica + Marca Elite internacional',
+  },
+  'bay-view-grand-grand-island': {
+    es: '40+ amenidades, interiores Filipão Nunes, ocupación >80%',
+    en: '40+ amenities, Filipão Nunes interiors, 80%+ occupancy',
+  },
+  'vellmari-grand-living': {
+    es: 'Vistas 200°, marina privada, 20 amenidades premium',
+    en: '200° views, private marina, 20 premium amenities',
+  },
+  'village-blu-beach': {
+    es: 'Frente al mar en Puerto Morelos, gestión OPENKEY',
+    en: 'Beachfront Puerto Morelos, OPENKEY management',
+  },
+  'arbolada-towers': {
+    es: 'Comunidad integral ELEVA Capital, 80% vendido',
+    en: 'ELEVA Capital integrated community, 80% sold',
+  },
+  'thompson-residences-puerto-cancun': {
+    es: 'By Invitation Only, Thompson Hotels™ / Hyatt™',
+    en: 'By Invitation Only, Thompson Hotels™ / Hyatt™',
+  },
+  'sole-blu-ocean-living': {
+    es: 'Frente al mar Puerto Morelos, gestión 100% OPENKEY, ROI ~10%',
+    en: 'Beachfront Puerto Morelos, 100% OPENKEY management, ~10% ROI',
+  },
+  'kabeek-marina-condos': {
+    es: 'Solo 23 residencias con muelle privado, Humberto Artigas',
+    en: 'Only 23 residences with private dock, Humberto Artigas',
+  },
+  'the-reserve-at-mayakoba': {
+    es: 'Servicios hoteleros Banyan Tree, campo de golf PGA',
+    en: 'Banyan Tree hotel services, PGA golf course',
+  },
+  'cuore-cumbres-cancun': {
+    es: 'Uso mixto Live·Work·Enjoy, ELEVA Capital + Métric D',
+    en: 'Mixed-use Live·Work·Enjoy, ELEVA Capital + Métric D',
+  },
+};
+
+function getPropertyType(property: PropertyDetail, locale: Locale): string {
+  const mapped = propertyTypeBySlug[property.slug];
+  if (mapped) return mapped[locale];
+  // Fallback heuristics
+  if (property.status === 'entrega-inmediata') return locale === 'en' ? 'Immediate Delivery Condo' : 'Depto Entrega Inmediata';
+  const desc = (property.description + ' ' + (property.descriptionEn || '')).toLowerCase();
+  if (desc.includes('frente al mar') || desc.includes('beachfront') || desc.includes('oceanfront')) {
+    return locale === 'en' ? 'Beachfront Condo' : 'Depto Frente al Mar';
+  }
+  const hasPenthouse = property.units.some((u) => u.name.includes('Penthouse') || u.name.includes('PH'));
+  if (hasPenthouse) return 'Penthouse';
+  if (property.name.toLowerCase().includes('residencia') || property.name.toLowerCase().includes('residences')) {
+    return locale === 'en' ? 'Residence' : 'Residencia';
+  }
+  return locale === 'en' ? 'Pre-Sale Condo' : 'Depto en Preventa';
+}
+
+function getDifferentiator(property: PropertyDetail, locale: Locale): string {
+  const mapped = differentiatorBySlug[property.slug];
+  if (mapped) return mapped[locale];
+  // Fallback: first differentiator title or first sentence of description
+  const firstDiff = property.differentiators?.[0];
+  if (firstDiff) {
+    return locale === 'en' && firstDiff.titleEn ? firstDiff.titleEn : firstDiff.title;
+  }
+  const desc = locale === 'en' && property.descriptionEn ? property.descriptionEn : property.description;
+  return desc.split('.')[0];
+}
+
+function getSeoTitle(property: PropertyDetail, locale: Locale): string {
+  const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
+  const shortZone = zone.split(',')[0].trim();
+  const type = getPropertyType(property, locale);
+  const price = formatUSD(property.priceFromUSD);
+  return `${property.name} — ${type} desde ${price} | ${shortZone} Cancún | Rivana`;
+}
+
+function getSeoDescription(property: PropertyDetail, locale: Locale): string {
+  const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
+  const shortZone = zone.split(',')[0].trim();
+  const differentiator = getDifferentiator(property, locale);
+  const price = formatUSD(property.priceFromUSD);
+  if (locale === 'en') {
+    const raw = `${property.name} in ${shortZone}. ${differentiator}. From ${price}. Personalized advisory with Rivana Properties.`;
+    return raw.length > 155 ? raw.slice(0, 152) + '...' : raw;
+  }
+  const raw = `${property.name} en ${shortZone}. ${differentiator}. Desde ${price}. Asesoría personalizada con Rivana Properties.`;
+  return raw.length > 155 ? raw.slice(0, 152) + '...' : raw;
+}
 
 interface PropertyPageProps {
   property: PropertyDetail;
@@ -68,14 +187,9 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   // Locale-aware SEO
   const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
   const desc = locale === 'en' && property.descriptionEn ? property.descriptionEn : property.description;
-  // Use seoTitle override if available, otherwise auto-generate
-  const seoTitleOverride = locale === 'en' ? property.seoTitleEn : property.seoTitle;
   const shortZone = zone.split(',')[0].trim();
-  const seoTitle = seoTitleOverride || `${property.name} — ${shortZone} | Rivana`;
-  const seoDescOverride = locale === 'en' ? property.seoDescriptionEn : property.seoDescription;
-  const seoDesc = seoDescOverride || (desc ? desc.slice(0, 155) : (locale === 'en'
-    ? `${property.name} in ${zone}. Luxury real estate advisory with Rivana Properties.`
-    : `${property.name} en ${zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`));
+  const seoTitle = getSeoTitle(property, locale);
+  const seoDesc = getSeoDescription(property, locale);
   const seoPath = locale === 'en' ? `/en/property/${property.slug}` : `/propiedad/${property.slug}`;
 
   const minBedrooms = property.bedrooms.match(/\d+/)?.[0] ?? undefined;
