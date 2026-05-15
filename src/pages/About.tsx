@@ -75,7 +75,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
             <p className="eyebrow mb-4">{language === 'es' ? 'Sobre Rivana' : 'About Rivana'}</p>
-            <h1 className="mb-6">{language === 'es' ? 'No somos una agencia.' : 'Not Just an Agency.'}<br /><em className="italic text-primary">{language === 'es' ? 'Tu aliado.' : 'Your Partner.'}</em></h1>
+            <h1 className="mb-6 italic text-primary">{language === 'es' ? 'Somos tu aliado.' : 'Your Ally.'}</h1>
             <p className="text-muted-foreground font-body text-base leading-relaxed mb-8 max-w-lg">
               {language === 'es'
                 ? 'No vendemos propiedades. Construimos legados. Rivana Properties es una firma boutique de asesoría inmobiliaria que combina profundo conocimiento local con estándares globales de inversión.'
