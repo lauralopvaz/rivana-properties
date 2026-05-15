@@ -32,7 +32,7 @@ const parseArticleDate = (dateStr: string): string => {
     const month = months[parts[0]] || '01';
     const day = parts[1].replace(',', '').padStart(2, '0');
     const year = parts[2];
-    return `${year}-${month}-${day}`;
+    return `${year}-${month}-${day}T00:00:00-06:00`;
   }
   return dateStr;
 };
