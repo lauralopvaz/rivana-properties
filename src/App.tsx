@@ -151,7 +151,10 @@ const AppRoutes = () => (
     <Route path="/feed/*" element={<Navigate to="/" replace />} />
     <Route path="/tag/*" element={<Navigate to="/listings" replace />} />
     <Route path="/category/*" element={<Navigate to="/listings" replace />} />
-    <Route path="/features/*" element={<Navigate to="/listings" replace />} />
+    <Route path="/features/*" element={<Navigate to="/our-properties/" replace />} />
+    <Route path="/status/*" element={<Navigate to="/our-properties/" replace />} />
+    <Route path="/compare-listings/*" element={<Navigate to="/our-properties/" replace />} />
+    <Route path="/property-type/*" element={<Navigate to="/our-properties/" replace />} />
 
     {/* 404 */}
     <Route path="*" element={<NotFound />} />
