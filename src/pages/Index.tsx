@@ -217,7 +217,10 @@ const Home = () => {
             <h2 className="mb-16 text-secondary">{t('section.collections')}</h2>
           </ScrollReveal>
 
-          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none -mx-6 px-6 md:mx-0 md:px-0 pb-4 md:pb-0 scrollbar-hide">
+          <div
+            className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none -mx-6 px-6 md:mx-0 md:px-0 pb-4 md:pb-0"
+            style={{ scrollbarWidth: 'none' }}
+          >
             {sortedDestinations.map((d, i) => (
               <ScrollReveal key={d.key} delay={i * 80} className={`shrink-0 w-[85%] snap-start md:w-auto md:shrink ${i === 0 ? 'md:col-span-2 lg:col-span-2' : ''} ${i === 1 ? 'md:h-full' : ''}`}>
                 <Link
