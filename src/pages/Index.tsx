@@ -175,9 +175,9 @@ const Home = () => {
             {featuredProperties.map((p, i) => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
-                <ScrollReveal key={p.name} delay={i * 100} className="shrink-0 w-[85%] snap-start md:w-auto md:shrink h-full flex">
-                  <Link to={localePath(`/propiedad/${p.slug}`)} className="group flex flex-col w-full h-full bg-card rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.06)] border border-border">
-                    <div className="aspect-[16/10] overflow-hidden shrink-0">
+                <ScrollReveal key={p.name} delay={i * 100} className="shrink-0 w-[85%] snap-start md:w-auto md:shrink">
+                  <Link to={localePath(`/propiedad/${p.slug}`)} className="group block bg-card rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.06)] border border-border">
+                    <div className="aspect-[16/10] overflow-hidden">
                       <img
                         src={p.image}
                         alt={`${p.name} — ${zoneName}`}
@@ -185,7 +185,7 @@ const Home = () => {
                         loading="lazy"
                       />
                     </div>
-                    <div className="p-6 flex flex-col flex-1">
+                    <div className="p-6">
                       <span className="eyebrow text-xs">{zoneName}</span>
                       <h3 className="text-xl mt-2 mb-4 text-secondary">{p.name}</h3>
                       <div className="flex items-center gap-5 text-sm text-muted-foreground font-body mb-4">
@@ -193,7 +193,7 @@ const Home = () => {
                         <span className="flex items-center gap-1.5"><RulerIcon className="w-4 h-4" /> {p.area} m²</span>
                         <span className="flex items-center gap-1.5"><DollarIcon className="w-4 h-4" /> {p.price}</span>
                       </div>
-                      <div className="flex items-center justify-between mt-auto">
+                      <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           {p.amenities.map((a) => {
                             const amenity = amenityIcons[a];
