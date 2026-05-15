@@ -26,7 +26,7 @@ const seoTitleEsBySlug: Record<string, string> = {
   'village-blu-beach-apartments': 'Village Blu Beach — Depto Frente al Mar desde $273K USD | Puerto Morelos | Rivana',
   'village-blu-beach': 'Village Blu Beach — Depto Frente al Mar desde $273K USD | Puerto Morelos | Rivana',
   'arbolada-towers': 'Arbolada Towers — Entrega Inmediata desde $263K USD | Cancún Centro | Rivana',
-  'thompson-residences-puerto-cancun': 'Thompson Residences — Penthouse desde $730K USD | Puerto Cancún | Rivana',
+  'thompson-residences-puerto-cancun': 'Thompson Private Residences Puerto Cancún | Departamentos de Lujo Frente al Mar Caribe',
   'sole-blu-ocean-living': 'Sole Blu Ocean Living — Depto Frente al Mar desde $392K USD | Puerto Morelos | Rivana',
   'cuore-cumbres-cancun': 'Cuore Cumbres — Preventa Residencial | Cancún Centro | Rivana',
 };
@@ -41,7 +41,7 @@ const seoDescEsBySlug: Record<string, string> = {
   'village-blu-beach-apartments': 'Village Blu en Puerto Morelos. Departamentos frente al arrecife, rendimiento estimado 8.8%. Desde $273K USD. Asesórate con Rivana.',
   'village-blu-beach': 'Village Blu en Puerto Morelos. Departamentos frente al arrecife, rendimiento estimado 8.8%. Desde $273K USD. Asesórate con Rivana.',
   'arbolada-towers': 'Arbolada Towers en Cancún Centro. Entrega inmediata, alberca infinity, comunidad cerrada. Desde $263K USD. Asesórate con Rivana Properties.',
-  'thompson-residences-puerto-cancun': 'Thompson Residences en Puerto Cancún. Penthouses 5 rec., 803 m², frente al mar y campo de golf. Desde $730K USD. Asesórate con Rivana.',
+  'thompson-residences-puerto-cancun': 'Thompson Private Residences Puerto Cancún — residencias by invitation con elevador privado, terrazas al Mar Caribe y servicios de resort 24/7.',
   'sole-blu-ocean-living': 'Sole Blu Ocean Living en Puerto Morelos. Frente al mar, rendimiento ~10%, beach club privado. Desde $392K USD. Asesórate con Rivana.',
   'cuore-cumbres-cancun': 'Cuore Cumbres en Cancún Centro. Preventa residencial, alberca infinity, pet friendly, comunidad cerrada. Consulta precio con Rivana.',
 };
