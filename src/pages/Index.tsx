@@ -89,17 +89,22 @@ const Home = () => {
     '@type': 'RealEstateAgent',
     name: 'Rivana Properties',
     url: 'https://rivanaproperties.com',
-    description: seoDesc,
-    areaServed: [
-      { '@type': 'Place', name: 'Cancún' },
-      { '@type': 'Place', name: 'Riviera Maya' },
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+52-998-845-7224',
-      contactType: 'sales',
-      availableLanguage: ['Spanish', 'English'],
+    logo: 'https://rivanaproperties.com/images/rivana-logo.png',
+    description: 'Asesoría inmobiliaria de lujo en Cancún y la Riviera Maya. Propiedades exclusivas para inversionistas visionarios.',
+    telephone: '+52-998-845-7224',
+    email: 'rivanapropertiesmx@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Cancún',
+      addressRegion: 'Quintana Roo',
+      addressCountry: 'MX',
     },
+    areaServed: ['Cancún', 'Riviera Maya', 'Costa Mujeres', 'Mayakoba', 'Puerto Morelos'],
+    sameAs: [
+      'https://www.facebook.com/rivanaproperties',
+      'https://www.instagram.com/rivana.properties',
+      'https://mx.pinterest.com/rivanapropertiesmx/',
+    ],
   };
 
   const recentArticles = journalArticles.slice(0, 3);
