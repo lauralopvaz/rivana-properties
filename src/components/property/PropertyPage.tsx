@@ -78,6 +78,47 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
     : `${property.name} en ${zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`));
   const seoPath = locale === 'en' ? `/en/property/${property.slug}` : `/propiedad/${property.slug}`;
 
+  const minBedrooms = property.bedrooms.match(/\d+/)?.[0] ?? undefined;
+  const minSqmMatch = property.sqmRange.match(/([\d.]+)/);
+  const minSqm = minSqmMatch ? parseFloat(minSqmMatch[1]) : undefined;
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Apartment',
+    name: property.name,
+    description: desc,
+    url: `https://rivanaproperties.com${seoPath}`,
+    image: property.images?.[0]
+      ? (property.images[0].startsWith('http') ? property.images[0] : `https://rivanaproperties.com${property.images[0]}`)
+      : undefined,
+    ...(minBedrooms ? { numberOfRooms: minBedrooms } : {}),
+    ...(minSqm
+      ? {
+          floorSize: {
+            '@type': 'QuantitativeValue',
+            value: String(minSqm),
+            unitCode: 'MTK',
+          },
+        }
+      : {}),
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: zone.split(',')[0].trim(),
+      addressRegion: 'Quintana Roo',
+      addressCountry: 'MX',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: String(Math.round(Number(property.priceFromUSD))),
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      seller: {
+        '@type': 'RealEstateAgent',
+        name: 'Rivana Properties',
+      },
+    },
+  };
+
   return (
     <div className="prop-page-wrapper pt-20">
       <SEOHead
@@ -87,27 +128,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
         ogImage={property.images?.[0]}
         hreflangEs={`/propiedad/${property.slug}`}
         hreflangEn={`/en/property/${property.slug}`}
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "RealEstateListing",
-          name: property.name,
-          description: seoDesc,
-          url: `https://rivanaproperties.com${seoPath}`,
-          image: property.images?.[0] ? (property.images[0].startsWith('http') ? property.images[0] : `https://rivanaproperties.com${property.images[0]}`) : undefined,
-          datePosted: "2025-01-01",
-          offers: {
-            "@type": "Offer",
-            price: String(Math.round(Number(property.priceFromUSD))),
-            priceCurrency: "USD",
-            availability: "https://schema.org/InStock",
-          },
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: zone.split(',')[0].trim(),
-            addressRegion: "Quintana Roo",
-            addressCountry: "MX",
-          },
-        }}
+        schema={schema}
       />
       {/* Full-width sections */}
       <PropertyHero
