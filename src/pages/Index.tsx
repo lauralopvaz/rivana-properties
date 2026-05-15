@@ -7,7 +7,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { destinations } from '@/data/destinations';
 import { journalArticles } from '@/data/journal-articles';
 import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, WavesIcon, GolfIcon, SparklesIcon, AnchorIcon, SunIcon, SwimIcon } from '@/components/icons';
-import { PreSaleSection } from '@/components/home/PreSaleSection';
 import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
 import { ProcessTimeline } from '@/components/home/ProcessTimeline';
@@ -261,12 +260,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* ── PRESALE BANNER ── */}
-      <PreSaleSection />
-
-
-
 
       {/* ── OUR PROCESS ── */}
       <ProcessTimeline />
