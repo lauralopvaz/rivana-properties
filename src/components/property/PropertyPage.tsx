@@ -15,6 +15,37 @@ import { UnitDetailModal } from "./UnitDetailModal";
 
 // ── SEO helpers ──
 
+const seoTitleEsBySlug: Record<string, string> = {
+  'mondrian-residences-grand-island-cancun': 'The Residences at Grand Island — Preventa desde $514K USD | Zona Hotelera Cancún | Rivana',
+  'dhamar-costa-mujeres': 'Dhamar — Depto en Preventa desde $248K USD | Costa Mujeres Cancún | Rivana',
+  'sls-ocean-beach-puerto-cancun': 'SLS Ocean Beach — Residencia desde $1.6M USD | Puerto Cancún | Rivana',
+  'the-reserve-at-mayakoba': 'The Reserve at Mayakoba — Preventa desde $1.1M USD | Mayakoba Riviera Maya | Rivana',
+  'bay-view-grand-grand-island': 'Bay View Grand at Grand Island — Preventa desde $586K USD | Zona Hotelera Cancún | Rivana',
+  'kabeek-marina-condos': 'Kabeek Marina & Condos — Preventa | Zona Hotelera Cancún | Rivana',
+  'vellmari-grand-living': 'Vellmari Grand Living — Residencia desde $846K USD | Puerto Cancún | Rivana',
+  'village-blu-beach-apartments': 'Village Blu Beach — Depto Frente al Mar desde $273K USD | Puerto Morelos | Rivana',
+  'village-blu-beach': 'Village Blu Beach — Depto Frente al Mar desde $273K USD | Puerto Morelos | Rivana',
+  'arbolada-towers': 'Arbolada Towers — Entrega Inmediata desde $263K USD | Cancún Centro | Rivana',
+  'thompson-residences-puerto-cancun': 'Thompson Residences — Penthouse desde $730K USD | Puerto Cancún | Rivana',
+  'sole-blu-ocean-living': 'Sole Blu Ocean Living — Depto Frente al Mar desde $392K USD | Puerto Morelos | Rivana',
+  'cuore-cumbres-cancun': 'Cuore Cumbres — Preventa Residencial | Cancún Centro | Rivana',
+};
+
+const seoDescEsBySlug: Record<string, string> = {
+  'mondrian-residences-grand-island-cancun': 'The Residences at Grand Island en Zona Hotelera Cancún. Operado por Accor, llave en mano, ROI 33%. Desde $514K USD. Asesórate con Rivana.',
+  'dhamar-costa-mujeres': 'Dhamar en Costa Mujeres, Cancún. Preventa frente al mar, alberca infinity, vista al manglar. Desde $248K USD. Asesórate con Rivana.',
+  'the-reserve-at-mayakoba': 'The Reserve at Mayakoba, Riviera Maya. Golf, wellness y selva. Campo de golf Banyan Tree. Desde $1.1M USD. Asesórate con Rivana Properties.',
+  'bay-view-grand-grand-island': 'Bay View Grand en Zona Hotelera Cancún. 40+ amenidades, marina privada, interiores Filipão Nunes. Desde $586K USD. Asesórate con Rivana.',
+  'kabeek-marina-condos': 'Kabeek Marina & Condos en Zona Hotelera Cancún. Vista al mar y marina privada, wellness y spa. Preventa exclusiva. Asesórate con Rivana.',
+  'vellmari-grand-living': 'Vellmari Grand Living en Puerto Cancún. Residencia de 714 m², vista a la marina, golf y spa. Desde $846K USD. Asesórate con Rivana.',
+  'village-blu-beach-apartments': 'Village Blu en Puerto Morelos. Departamentos frente al arrecife, rendimiento estimado 8.8%. Desde $273K USD. Asesórate con Rivana.',
+  'village-blu-beach': 'Village Blu en Puerto Morelos. Departamentos frente al arrecife, rendimiento estimado 8.8%. Desde $273K USD. Asesórate con Rivana.',
+  'arbolada-towers': 'Arbolada Towers en Cancún Centro. Entrega inmediata, alberca infinity, comunidad cerrada. Desde $263K USD. Asesórate con Rivana Properties.',
+  'thompson-residences-puerto-cancun': 'Thompson Residences en Puerto Cancún. Penthouses 5 rec., 803 m², frente al mar y campo de golf. Desde $730K USD. Asesórate con Rivana.',
+  'sole-blu-ocean-living': 'Sole Blu Ocean Living en Puerto Morelos. Frente al mar, rendimiento ~10%, beach club privado. Desde $392K USD. Asesórate con Rivana.',
+  'cuore-cumbres-cancun': 'Cuore Cumbres en Cancún Centro. Preventa residencial, alberca infinity, pet friendly, comunidad cerrada. Consulta precio con Rivana.',
+};
+
 const propertyTypeBySlug: Record<string, { es: string; en: string }> = {
   'mondrian-residences-grand-island-cancun': { es: 'Depto en Preventa', en: 'Pre-Sale Condo' },
   'dhamar-costa-mujeres': { es: 'Depto en Preventa', en: 'Pre-Sale Condo' },
