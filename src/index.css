@@ -171,6 +171,15 @@
   animation: blink-dot 1.5s ease-in-out infinite;
 }
 
+/* Swipe hint — invites horizontal scrolling on mobile carousels */
+@keyframes swipe-hint {
+  0%, 100% { transform: translateX(0); opacity: 0.55; }
+  50% { transform: translateX(10px); opacity: 1; }
+}
+.swipe-hint {
+  animation: swipe-hint 1.6s ease-in-out infinite;
+}
+
 /* Reading progress */
 .reading-progress {
   height: 3px;

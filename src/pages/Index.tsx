@@ -210,11 +210,20 @@ const Home = () => {
       </section>
 
       {/* ── COLLECTIONS GRID ── */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-12 md:py-24 lg:py-32 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <p className="eyebrow mb-4">{t('section.destinations')}</p>
-            <h2 className="mb-16 text-secondary">{t('section.collections')}</h2>
+            <div className="flex items-end justify-between gap-4 mb-8 md:mb-16">
+              <div>
+                <p className="eyebrow mb-4">{t('section.destinations')}</p>
+                <h2 className="text-secondary mb-0">{t('section.collections')}</h2>
+              </div>
+              {/* Mobile swipe hint */}
+              <span className="md:hidden flex items-center gap-1.5 text-[11px] font-body uppercase tracking-[2px] text-primary whitespace-nowrap pb-1">
+                <span>{language === 'es' ? 'Desliza' : 'Swipe'}</span>
+                <ArrowRightIcon className="w-3.5 h-3.5 swipe-hint" />
+              </span>
+            </div>
           </ScrollReveal>
 
           <div
