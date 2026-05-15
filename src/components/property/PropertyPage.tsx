@@ -187,14 +187,9 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
   // Locale-aware SEO
   const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
   const desc = locale === 'en' && property.descriptionEn ? property.descriptionEn : property.description;
-  // Use seoTitle override if available, otherwise auto-generate
-  const seoTitleOverride = locale === 'en' ? property.seoTitleEn : property.seoTitle;
   const shortZone = zone.split(',')[0].trim();
-  const seoTitle = seoTitleOverride || `${property.name} — ${shortZone} | Rivana`;
-  const seoDescOverride = locale === 'en' ? property.seoDescriptionEn : property.seoDescription;
-  const seoDesc = seoDescOverride || (desc ? desc.slice(0, 155) : (locale === 'en'
-    ? `${property.name} in ${zone}. Luxury real estate advisory with Rivana Properties.`
-    : `${property.name} en ${zone}. Asesoría inmobiliaria de lujo con Rivana Properties.`));
+  const seoTitle = getSeoTitle(property, locale);
+  const seoDesc = getSeoDescription(property, locale);
   const seoPath = locale === 'en' ? `/en/property/${property.slug}` : `/propiedad/${property.slug}`;
 
   const minBedrooms = property.bedrooms.match(/\d+/)?.[0] ?? undefined;
