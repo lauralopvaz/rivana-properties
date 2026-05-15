@@ -1,18 +1,46 @@
+# robots.txt — rivanaproperties.com
+
+# Última actualización: mayo 2026
+
 User-agent: *
 Allow: /
 
-# Block old WordPress patterns
-Disallow: /wp-admin/
-Disallow: /wp-content/
-Disallow: /wp-includes/
+# ── Parámetros de plugins (favoritos, comparador, paginación con params) ──
+
 Disallow: /*?wpfpaction=
-Disallow: /*?postid=
-Disallow: /*?p=
-Disallow: /feed/
-Disallow: /*/feed/
-Disallow: /tag/
-Disallow: /category/
-Disallow: /nosotros/
+Disallow: /*?wpfpaction=add*
+Disallow: /*?ids=
+Disallow: /*?ct_city=*&search-listings=true
+Disallow: /*?search-listings=true
+
+# ── Páginas funcionales sin valor SEO ──
+
+Disallow: /compare-listings/
+Disallow: /compare-listings/*
+
+# ── Taxonomías heredadas de WordPress ──
+
 Disallow: /features/
+Disallow: /features/*
+
+# ── Status pages (sin contenido editorial) ──
+
+Disallow: /status/
+Disallow: /status/*
+
+# ── Paginación con parámetros basura ──
+
+Disallow: /page/*?wpfpaction=
+Disallow: /agents/*/page/*?wpfpaction=
+
+# ── Admin y rutas internas ──
+
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-json/
+Disallow: /api/
+Disallow: /_next/
+
+# ── Sitemap ──
 
 Sitemap: https://rivanaproperties.com/sitemap.xml
