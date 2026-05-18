@@ -24,7 +24,7 @@ const team = [
   {
     name: 'Celia Candela', initial: 'C',
     role: { es: 'Especialista en Destino', en: 'Destination Specialist' },
-    zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9981118888', photo: advisorCelia, imgPosition: 'object-[center_65%]',
+    zone: 'Cancún · Riviera Maya', lang: 'EN · ES', phone: '9988457224', photo: advisorCelia, imgPosition: 'object-[center_65%]',
     bio: {
       es: 'Celia conoce el Caribe mexicano como pocos. Su dominio del territorio — desde Cancún hasta la Riviera Maya — le permite conectar a cada cliente con el destino que realmente le corresponde, combinando visión de mercado con un conocimiento local que va más allá de los datos.',
       en: 'Celia knows the Mexican Caribbean like few others. Her command of the territory — from Cancún to the Riviera Maya — allows her to connect each client with the destination that truly fits them, combining market vision with local knowledge that goes beyond the data.',
