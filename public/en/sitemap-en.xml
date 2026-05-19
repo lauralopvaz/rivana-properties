@@ -319,4 +319,106 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/zona-hotelera/condos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/zona-hotelera/condos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/cancun/zona-hotelera/condos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/zona-hotelera/condos"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/zona-hotelera/penthouses</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/zona-hotelera/penthouses"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/cancun/zona-hotelera/penthouses"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/zona-hotelera/penthouses"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/zona-hotelera/preventa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/zona-hotelera/preventa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/cancun/zona-hotelera/preventa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/zona-hotelera/preventa"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/puerto-cancun/condos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/puerto-cancun/condos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/cancun/puerto-cancun/condos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/puerto-cancun/condos"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/puerto-cancun/marina</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/puerto-cancun/marina"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/cancun/puerto-cancun/marina"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/puerto-cancun/marina"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/puerto-cancun/preventa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/puerto-cancun/preventa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/cancun/puerto-cancun/preventa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/puerto-cancun/preventa"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/costa-mujeres/preventa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/costa-mujeres/preventa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/cancun/costa-mujeres/preventa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/costa-mujeres/preventa"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/centro/condos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/centro/condos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/cancun/centro/condos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/centro/condos"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/playa-del-carmen/condos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/playa-del-carmen/condos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/playa-del-carmen/condos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/playa-del-carmen/condos"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/playa-del-carmen/preventa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/playa-del-carmen/preventa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/playa-del-carmen/preventa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/playa-del-carmen/preventa"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/condos-for-sale</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/condos-for-sale"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/condos-for-sale"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/cancun/beachfront-condos-for-sale</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/beachfront-condos-for-sale"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/cancun/beachfront-condos-for-sale"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/en/property/village-blu-beach-apartments</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/village-blu-beach-apartments"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rivanaproperties.com/propiedad/village-blu-beach-apartments"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/en/property/village-blu-beach-apartments"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
