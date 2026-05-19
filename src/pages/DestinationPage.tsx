@@ -642,6 +642,28 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         </section>
       )}
 
+      {/* Reserve at Mayakoba editorial section — EN Mayakoba only */}
+      {isMKEn && (
+        <section className="py-20 bg-card border-y border-border">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+            <ScrollReveal>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <h2>The Reserve at Mayakoba: what ownership inside the estate actually means</h2>
+                <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
+                  <p>
+                    <Link to={localePath('/propiedad/the-reserve-at-mayakoba')} className="text-primary hover:underline">The Reserve at Mayakoba</Link>
+                    {' is not an adjacent development that markets itself on proximity to the resort complex. It is a residential community built inside the Mayakoba estate — within the same gated perimeter, canal system, and security infrastructure as Rosewood, Fairmont, Banyan Tree, and Alila.'}
+                  </p>
+                  <p>Owners have access to the amenities and services of the Mayakoba community: the El Camaleón Golf Club, beach club facilities, the canal navigation network, and the resort concierge infrastructure. Four-bedroom villas of 660 square metres are designed for families and buyers who want space — genuinely liveable floor plans, not the compressed layouts typical of condo tower developments elsewhere in the Riviera Maya.</p>
+                  <p>The investment profile suits buyers with a five-to-ten-year horizon who are acquiring a primary or secondary residence at the top of the Riviera Maya market, with rental income during non-occupancy periods and a capital appreciation thesis built on fixed supply in an internationally certified destination.</p>
+                  <p>Pricing from USD $1.1M. Payment structure and delivery timeline available through Rivana advisory. Celia manages the Mayakoba relationship directly and can arrange a private tour of the estate and the showroom — something we strongly recommend before any decision of this scale. The physical experience of Mayakoba changes the conversation significantly.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
       {/* Featured Projects — Redesigned cards matching Listings */}
       {(projectsByDestination[destinationKey]?.length ?? 0) > 0 && (
         <section className="py-20">
