@@ -9,6 +9,7 @@ import imgPuenteNichupte from '@/assets/journal/puente-nichupte.jpg';
 
 import imgUruguayMayakoba from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
+import imgCanadianBuyer from '@/assets/journal/foreign-buyer-guide.jpg';
 const imgMondrianHero = '/images/mondrian/mondrian-hero.jpg';
 
 export interface JournalArticle {
@@ -30,6 +31,28 @@ export interface JournalArticle {
 }
 
 export const journalArticles: JournalArticle[] = [
+  {
+    slug: 'buying-property-mexico-canadian-2026-guide',
+    slugEn: 'buying-property-mexico-canadian-2026-guide',
+    title: {
+      es: 'Comprar Propiedad en México Siendo Canadiense: Guía Completa 2026',
+      en: 'Buying Property in Mexico as a Canadian: The 2026 Complete Guide',
+    },
+    seoTitle: {
+      es: 'Comprar en México Siendo Canadiense: Guía 2026',
+      en: 'Buying Property in Mexico as a Canadian: 2026 Guide',
+    },
+    category: { es: 'Guías', en: 'Guides' },
+    excerpt: {
+      es: 'Todo lo que los canadienses deben saber antes de comprar en Cancún y la Riviera Maya: fideicomiso, T1135, costos de cierre, estrategia snowbird y las mejores zonas en 2026.',
+      en: 'Everything Canadians need to know before buying property in Cancún and the Riviera Maya: fideicomiso, T1135 disclosure, closing costs, snowbird strategy, and the best zones for 2026.',
+    },
+    date: 'May 15, 2026',
+    readTime: '14 min',
+    author: 'Rivana Properties Advisory Team',
+    image: imgCanadianBuyer,
+    relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres', 'mayakoba', 'puerto-morelos'],
+  },
   {
     slug: 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria',
     title: {
