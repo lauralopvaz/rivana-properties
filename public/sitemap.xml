@@ -7,20 +7,11 @@
     <loc>https://rivanaproperties.com/</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/"/>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://rivanaproperties.com/en</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rivanaproperties.com/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- LISTINGS PAGE -->
+  <!-- LISTINGS -->
   <url>
     <loc>https://rivanaproperties.com/listings</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/listings"/>
@@ -28,24 +19,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/listings</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/listings"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/listings"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
 
-  <!-- PRESALE PAGE -->
+  <!-- PRESALE -->
   <url>
     <loc>https://rivanaproperties.com/presale</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/presale"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/presale"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/presale</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/presale"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/presale"/>
     <changefreq>weekly</changefreq>
@@ -60,24 +37,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/about</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/about"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/about"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
   <!-- JOURNAL INDEX -->
   <url>
     <loc>https://rivanaproperties.com/journal</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/journal</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal"/>
     <changefreq>weekly</changefreq>
@@ -90,14 +53,8 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
 
-  <!-- ===== PROPIEDADES (12) ===== -->
-  <!-- The Residences at Grand Island Cancun -->
+  <!-- ===== PROPIEDADES ===== -->
   <url>
     <loc>https://rivanaproperties.com/propiedad/mondrian-residences-grand-island-cancun</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/mondrian-residences-grand-island-cancun"/>
@@ -106,30 +63,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rivanaproperties.com/en/property/mondrian-residences-grand-island-cancun</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/mondrian-residences-grand-island-cancun"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/mondrian-residences-grand-island-cancun"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Dhamar -->
-  <url>
     <loc>https://rivanaproperties.com/propiedad/dhamar-costa-mujeres</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/dhamar-costa-mujeres"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/dhamar-costa-mujeres"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/property/dhamar-costa-mujeres</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/dhamar-costa-mujeres"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/dhamar-costa-mujeres"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- SLS Ocean Beach -->
   <url>
     <loc>https://rivanaproperties.com/propiedad/sls-ocean-beach-puerto-cancun</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/sls-ocean-beach-puerto-cancun"/>
@@ -138,30 +77,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rivanaproperties.com/en/property/sls-ocean-beach-puerto-cancun</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/sls-ocean-beach-puerto-cancun"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/sls-ocean-beach-puerto-cancun"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- The Reserve at Mayakoba -->
-  <url>
     <loc>https://rivanaproperties.com/propiedad/the-reserve-at-mayakoba</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/the-reserve-at-mayakoba"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/the-reserve-at-mayakoba"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/property/the-reserve-at-mayakoba</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/the-reserve-at-mayakoba"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/the-reserve-at-mayakoba"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Bay View Grand -->
   <url>
     <loc>https://rivanaproperties.com/propiedad/bay-view-grand-grand-island</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/bay-view-grand-grand-island"/>
@@ -170,30 +91,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rivanaproperties.com/en/property/bay-view-grand-grand-island</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/bay-view-grand-grand-island"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/bay-view-grand-grand-island"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Kabeek Marina -->
-  <url>
     <loc>https://rivanaproperties.com/propiedad/kabeek-marina-condos</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/kabeek-marina-condos"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/kabeek-marina-condos"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/property/kabeek-marina-condos</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/kabeek-marina-condos"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/kabeek-marina-condos"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Vellmari Grand Living -->
   <url>
     <loc>https://rivanaproperties.com/propiedad/vellmari-grand-living</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/vellmari-grand-living"/>
@@ -202,30 +105,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rivanaproperties.com/en/property/vellmari-grand-living</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/vellmari-grand-living"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/vellmari-grand-living"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Village Blu -->
-  <url>
     <loc>https://rivanaproperties.com/propiedad/village-blu-beach-apartments</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/village-blu-beach-apartments"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/village-blu-beach-apartments"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/property/village-blu-beach-apartments</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/village-blu-beach-apartments"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/village-blu-beach-apartments"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Sole Blu Ocean Living -->
   <url>
     <loc>https://rivanaproperties.com/propiedad/sole-blu-ocean-living</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/sole-blu-ocean-living"/>
@@ -234,30 +119,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rivanaproperties.com/en/property/sole-blu-ocean-living</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/sole-blu-ocean-living"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/sole-blu-ocean-living"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Thompson Residences -->
-  <url>
     <loc>https://rivanaproperties.com/propiedad/thompson-residences-puerto-cancun</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/thompson-residences-puerto-cancun"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/thompson-residences-puerto-cancun"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/property/thompson-residences-puerto-cancun</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/thompson-residences-puerto-cancun"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/thompson-residences-puerto-cancun"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Arbolada Towers -->
   <url>
     <loc>https://rivanaproperties.com/propiedad/arbolada-towers</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/arbolada-towers"/>
@@ -266,151 +133,72 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rivanaproperties.com/en/property/arbolada-towers</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/arbolada-towers"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/arbolada-towers"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Cuore Cumbres -->
-  <url>
     <loc>https://rivanaproperties.com/propiedad/cuore-cumbres-cancun</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/cuore-cumbres-cancun"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/cuore-cumbres-cancun"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/property/cuore-cumbres-cancun</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/propiedad/cuore-cumbres-cancun"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/property/cuore-cumbres-cancun"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
-  <!-- ===== DESTINOS (8) ===== -->
+  <!-- ===== DESTINOS ===== -->
   <url>
     <loc>https://rivanaproperties.com/cancun/zona-hotelera</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/cancun/zona-hotelera"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/zona-hotelera"/>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/cancun/zona-hotelera</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/cancun/zona-hotelera"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/zona-hotelera"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://rivanaproperties.com/cancun/puerto-cancun</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/cancun/puerto-cancun"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/puerto-cancun"/>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/cancun/puerto-cancun</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/cancun/puerto-cancun"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/puerto-cancun"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://rivanaproperties.com/cancun/costa-mujeres</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/cancun/costa-mujeres"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/costa-mujeres"/>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/cancun/costa-mujeres</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/cancun/costa-mujeres"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/costa-mujeres"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://rivanaproperties.com/mayakoba</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/mayakoba"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/mayakoba"/>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/mayakoba</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/mayakoba"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/mayakoba"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://rivanaproperties.com/puerto-morelos</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/puerto-morelos"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/puerto-morelos"/>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/puerto-morelos</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/puerto-morelos"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/puerto-morelos"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://rivanaproperties.com/playa-del-carmen</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/playa-del-carmen"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/playa-del-carmen"/>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/playa-del-carmen</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/playa-del-carmen"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/playa-del-carmen"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://rivanaproperties.com/cancun/centro</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/cancun/centro"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/centro"/>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/cancun/centro</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/cancun/centro"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/cancun/centro"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://rivanaproperties.com/tulum</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/tulum"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/tulum"/>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://rivanaproperties.com/en/tulum</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/tulum"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/tulum"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- ===== JOURNAL (10 articles) ===== -->
+  <!-- ===== JOURNAL ARTICLES ===== -->
   <url>
     <loc>https://rivanaproperties.com/journal/uruguay-mayakoba-mundial-2026</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/uruguay-mayakoba-mundial-2026"/>
@@ -419,40 +207,68 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rivanaproperties.com/en/journal/uruguay-mayakoba-mundial-2026</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/uruguay-mayakoba-mundial-2026"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/uruguay-mayakoba-mundial-2026"/>
+    <loc>https://rivanaproperties.com/journal/cancun-roi-rental-yield</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/cancun-roi-rental-yield"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/cancun-roi-rental-yield"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <url><loc>https://rivanaproperties.com/journal/cancun-roi-rental-yield</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/en/journal/cancun-roi-rental-yield</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://rivanaproperties.com/journal/foreign-buyer-guide-mexico</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/en/journal/foreign-buyer-guide-mexico</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://rivanaproperties.com/journal/world-cup-2026-cancun-real-estate</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/en/journal/world-cup-2026-cancun-real-estate</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://rivanaproperties.com/journal/luxury-condos-zona-hotelera-cancun-2026-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/en/journal/luxury-condos-zona-hotelera-cancun-2026-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://rivanaproperties.com/journal/costa-mujeres-ultra-luxury-destination</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/en/journal/costa-mujeres-ultra-luxury-destination</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://rivanaproperties.com/journal/mayakoba-vs-puerto-cancun</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/en/journal/mayakoba-vs-puerto-cancun</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://rivanaproperties.com/journal/invertir-en-preventa-cancun-riviera-maya-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/en/journal/invertir-en-preventa-cancun-riviera-maya-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://rivanaproperties.com/journal/guia-preventa-cancun-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/en/journal/guia-preventa-cancun-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-preventa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-preventa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
+  <url>
+    <loc>https://rivanaproperties.com/journal/foreign-buyer-guide-mexico</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/foreign-buyer-guide-mexico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/foreign-buyer-guide-mexico"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/journal/world-cup-2026-cancun-real-estate</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/world-cup-2026-cancun-real-estate"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/world-cup-2026-cancun-real-estate"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/journal/luxury-condos-zona-hotelera-cancun-2026-guide</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/luxury-condos-zona-hotelera-cancun-2026-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/luxury-condos-zona-hotelera-cancun-2026-guide"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/journal/costa-mujeres-ultra-luxury-destination</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/costa-mujeres-ultra-luxury-destination"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/costa-mujeres-ultra-luxury-destination"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/journal/mayakoba-vs-puerto-cancun</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/mayakoba-vs-puerto-cancun"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/mayakoba-vs-puerto-cancun"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/journal/invertir-en-preventa-cancun-riviera-maya-2026</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/invertir-en-preventa-cancun-riviera-maya-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/invertir-en-preventa-cancun-riviera-maya-2026"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/journal/guia-preventa-cancun-2026</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/guia-preventa-cancun-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/guia-preventa-cancun-2026"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-preventa</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-preventa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-presale"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-guide</loc>
     <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-guide"/>
@@ -461,11 +277,11 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-guide</loc>
-    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/mondrian-residences-grand-island-cancun-guide"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/mondrian-residences-grand-island-cancun-guide"/>
+    <loc>https://rivanaproperties.com/journal/comprar-propiedad-mexico-canadienses-2026</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://rivanaproperties.com/journal/comprar-propiedad-mexico-canadienses-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rivanaproperties.com/en/journal/buying-property-mexico-canadian-2026-guide"/>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
