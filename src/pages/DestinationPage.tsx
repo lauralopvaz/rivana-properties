@@ -35,14 +35,14 @@ import destCancunCentro from '@/assets/dest-cancun-centro.jpg';
 import destTulum from '@/assets/dest-tulum.jpg';
 
 const destImages: Record<string, string> = {
-  'zona-hotelera': destZonaHotelera,
-  'puerto-cancun': destPuertoCancun,
-  'costa-mujeres': destCostaMujeres,
-  'mayakoba': destMayakoba,
-  'puerto-morelos': destPuertoMorelos,
-  'cancun-centro': destCancunCentro,
-  'tulum': destTulum,
-  'playa-del-carmen': destMayakoba,
+  'zona-hotelera': bayViewGrandHero,
+  'puerto-cancun': thompsonHero,
+  'costa-mujeres': dhamarPrincipal,
+  'mayakoba': reserveHero,
+  'puerto-morelos': soleBluHero,
+  'cancun-centro': cuoreCumbresHero,
+  'tulum': villageBluHero,
+  'playa-del-carmen': vellmariHero,
 };
 
 interface DestinationPageProps {
