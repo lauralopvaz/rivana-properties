@@ -187,27 +187,6 @@ export default function Advisory() {
         </div>
       </section>
 
-      {/* SECTION 4 — WHO THIS IS FOR */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">Our clients</p>
-            <h2 className="text-secondary mb-12">The buyers Rivana works with</h2>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {PROFILES.map((p) => (
-              <ScrollReveal key={p.tag}>
-                <div className="p-7 h-full bg-background" style={{ border: '1px solid rgba(0,0,0,0.08)' }}>
-                  <p className="font-body font-medium uppercase mb-3" style={{ color: 'hsl(var(--gold))', letterSpacing: '2px', fontSize: '14px' }}>Profile</p>
-                  <h3 className="font-display text-2xl text-secondary mb-4">{p.tag}</h3>
-                  <p className="font-body font-light text-secondary/80" style={{ fontSize: '18px', lineHeight: 1.75 }}>{p.body}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* SECTION 5 — WHY RIVANA */}
       <section className="py-16 lg:py-24" style={{ backgroundColor: 'hsl(var(--paper))' }}>
         <div className="max-w-[900px] mx-auto px-6 lg:px-10">
@@ -335,8 +314,8 @@ export default function Advisory() {
                     <input id="adv-email" type="email" required value={form.email} onChange={(e) => update('email', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }} />
                   </div>
                   <div>
-                    <label htmlFor="adv-phone" className={labelStyle}>Phone / WhatsApp (optional)</label>
-                    <input id="adv-phone" type="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="+1 (area code) number" className="w-full px-3 py-3 font-body font-light focus:outline-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }} />
+                    <label htmlFor="adv-phone" className={labelStyle}>Phone / WhatsApp *</label>
+                    <input id="adv-phone" type="tel" required value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="+1 (area code) number" className="w-full px-3 py-3 font-body font-light focus:outline-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }} />
                   </div>
                   <div>
                     <label htmlFor="adv-country" className={labelStyle}>Country of residence *</label>
