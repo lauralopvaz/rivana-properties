@@ -21,6 +21,7 @@ import { MondrianGrandIslandBodyES, MondrianGrandIslandBodyEN } from '@/componen
 import { GuiaPreventaCancunBodyES, GuiaPreventaCancunBodyEN } from '@/components/journal/GuiaPreventaCancunBody';
 import { PuenteNichupteBodyES, PuenteNichupteBodyEN } from '@/components/journal/PuenteNichupteBody';
 import { PortugalMayakobaBodyES, PortugalMayakobaBodyEN } from '@/components/journal/PortugalMayakobaBody';
+import { CanadianBuyerGuideBodyEN } from '@/components/journal/CanadianBuyerGuideBody';
 
 const parseArticleDate = (dateStr: string): string => {
   const months: Record<string, string> = {
@@ -369,6 +370,8 @@ const JournalPost = () => {
               language === 'en' ? <PuenteNichupteBodyEN /> : <PuenteNichupteBodyES />
             ) : articleSlug === 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria' ? (
               language === 'en' ? <PortugalMayakobaBodyEN /> : <PortugalMayakobaBodyES />
+            ) : articleSlug === 'buying-property-mexico-canadian-2026-guide' ? (
+              <CanadianBuyerGuideBodyEN />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
