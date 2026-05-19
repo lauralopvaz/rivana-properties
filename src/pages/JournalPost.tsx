@@ -78,6 +78,62 @@ const JournalPost = () => {
   const isMondrianPresale = articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale';
   const isPuenteNichupte = articleSlug === 'puente-nichupte-zona-hotelera-cancun-plusvalia';
   const isPortugalMayakoba = articleSlug === 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria';
+  const isCanadianGuide = articleSlug === 'buying-property-mexico-canadian-2026-guide';
+
+  const canadianFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Do I need to be a Mexican resident to buy property in Mexico as a Canadian?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. You do not need residency, a visa, or even a prior visit to Mexico. Canadians can purchase property through a fideicomiso bank trust and complete the entire process remotely after an initial visit.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I rent out my Mexican property on Airbnb as a Canadian?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, subject to your development's HOA rules and local zoning. Most developments in Cancún and the Riviera Maya allow short-term vacation rentals. If you generate rental income, you must report it on your Canadian T1135 and it triggers Mexican income tax obligations. Coordinate with a cross-border tax specialist.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is a fideicomiso and do Canadians need one?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "A fideicomiso is a Mexican bank trust that allows foreigners to legally own property in Mexico's coastal Restricted Zone. Since Cancún and the Riviera Maya fall within this zone, Canadians must use a fideicomiso to hold title. The bank holds legal title as trustee while you retain full ownership rights: sell, rent, renovate, and inherit.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the T1135 form and does it apply to my Mexican property?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Form T1135 is a Canada Revenue Agency filing requirement. If the total cost of your foreign property exceeded CAD $100,000 at any point during the tax year, you must file T1135 with your annual Canadian tax return. Mexican real estate held through a fideicomiso counts as specified foreign property. Penalties for non-disclosure are CAD $25 per day up to CAD $2,500 per year.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the closing costs for Canadians buying property in Mexico?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Closing costs typically range from 5% to 8% of the purchase price and include the Property Acquisition Tax (ISAI, 3–4%), Notario Público fees (0.5–1%), fideicomiso setup (USD $1,000–$2,500), SRE permit (USD $1,500–$2,000), and Public Registry registration (0.5–1%). On a USD $400,000 purchase, budget approximately USD $24,000–$32,000.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I use my RRSP or TFSA to buy property in Mexico?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. RRSP and TFSA accounts cannot hold direct foreign real estate. However, assets held inside registered Canadian accounts do not count toward your T1135 threshold, so they do not affect your foreign property disclosure obligation.',
+        },
+      },
+    ],
+  };
 
   const schema = isPortugalMayakoba
     ? {
@@ -274,7 +330,7 @@ const JournalPost = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={schema} ogImage={article.image} hreflangEs={`/journal/${articleSlug}`} hreflangEn={`/en/journal/${enSlug}`} />
+      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={isCanadianGuide ? [schema, canadianFaqSchema] : schema} ogImage={article.image} hreflangEs={`/journal/${articleSlug}`} hreflangEn={`/en/journal/${enSlug}`} />
 
       {/* Reading Progress */}
       <div className="fixed top-0 left-0 right-0 z-[200]">

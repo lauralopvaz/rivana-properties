@@ -9,7 +9,7 @@ interface SEOHeadProps {
   canonical?: string;
   path?: string;
   noIndex?: boolean;
-  schema?: object;
+  schema?: object | object[];
   ogImage?: string;
   hreflangEs?: string;
   hreflangEn?: string;
@@ -109,7 +109,11 @@ export const SEOHead = ({
 
       {/* JSON-LD Schema */}
       {schema && (
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+        Array.isArray(schema)
+          ? schema.map((s, i) => (
+              <script key={i} type="application/ld+json">{JSON.stringify(s)}</script>
+            ))
+          : <script type="application/ld+json">{JSON.stringify(schema)}</script>
       )}
     </Helmet>
   );
