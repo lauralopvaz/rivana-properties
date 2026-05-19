@@ -287,7 +287,7 @@ export default function Advisory() {
                 </div>
               ))}
               <p className="font-body font-light text-secondary/70 pt-3 border-t border-border" style={{ fontSize: '17px', lineHeight: 1.7 }}>
-                Every inquiry is handled personally by a Rivana advisor — not a chatbot, not a call centre.
+                Every inquiry is handled personally by a Rivana advisor — not a chatbot, not a call center.
               </p>
             </aside>
 
