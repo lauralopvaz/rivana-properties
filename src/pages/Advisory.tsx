@@ -128,18 +128,18 @@ export default function Advisory() {
           <h1 className="text-secondary mb-5" style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', lineHeight: 1.1 }}>
             Your local advisory team in Cancún and the <em className="text-primary not-italic font-display italic">Riviera Maya</em>
           </h1>
-          <p className="font-body font-light text-muted-foreground max-w-3xl mb-8" style={{ fontSize: '20px', lineHeight: 1.6 }}>
+          <p className="font-body font-light text-muted-foreground max-w-3xl mb-8" style={{ fontSize: '23px', lineHeight: 1.6 }}>
             We search the market. We attend the site visits. We give you the honest picture. You make the decision — from home, with full information.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
-            <a href="#advisory-form" className="inline-flex items-center justify-center px-7 py-3.5 font-body font-light uppercase" style={{ letterSpacing: '3px', backgroundColor: 'hsl(var(--gold))', color: '#FFFFFF', fontSize: '13px', borderRadius: 0 }}>
+            <a href="#advisory-form" className="inline-flex items-center justify-center px-7 py-3.5 font-body font-light uppercase" style={{ letterSpacing: '3px', backgroundColor: 'hsl(var(--gold))', color: '#FFFFFF', fontSize: '16px', borderRadius: 0 }}>
               Start my property search →
             </a>
-            <Link to="/en/listings" className="inline-flex items-center justify-center px-7 py-3.5 font-body font-light uppercase" style={{ letterSpacing: '3px', border: '1px solid hsl(var(--gold))', color: 'hsl(var(--gold))', fontSize: '13px', borderRadius: 0 }}>
+            <Link to="/en/listings" className="inline-flex items-center justify-center px-7 py-3.5 font-body font-light uppercase" style={{ letterSpacing: '3px', border: '1px solid hsl(var(--gold))', color: 'hsl(var(--gold))', fontSize: '16px', borderRadius: 0 }}>
               Browse listings →
             </Link>
           </div>
-          <p className="font-body font-light text-muted-foreground" style={{ fontSize: '12px' }}>
+          <p className="font-body font-light text-muted-foreground" style={{ fontSize: '15px' }}>
             Bilingual · ES · EN · No buyer fees · Response within 2 business hours
           </p>
         </div>
@@ -151,7 +151,7 @@ export default function Advisory() {
           <ScrollReveal>
             <p className="eyebrow mb-4">Why buyers need a local advisor</p>
             <h2 className="text-secondary mb-8">Buying property in Mexico from abroad is not like buying at home</h2>
-            <div className="space-y-5 font-body font-light text-secondary/85" style={{ fontSize: '17px', lineHeight: 1.8 }}>
+            <div className="space-y-5 font-body font-light text-secondary/85" style={{ fontSize: '20px', lineHeight: 1.8 }}>
               <p>The Cancún and Riviera Maya market is not transparent by North American standards. Developers control their own pricing, inventory, and disclosure. Renders are beautiful and delivery timelines are optimistic. Two developments on the same street can have completely different legal situations, rental yield realities, and construction track records — and both will tell you they are the best option.</p>
               <p>Without someone on the ground who has visited the site, met the developer, reviewed the permits, and compared real rental data from similar units — you are making a six-figure decision based on a PDF brochure and a WhatsApp conversation.</p>
               <p>That is the problem Rivana's advisory service solves.</p>
@@ -178,7 +178,7 @@ export default function Advisory() {
                   </div>
                   <div className="flex-1 pt-2">
                     <h3 className="font-display text-2xl text-secondary mb-3">{s.label}</h3>
-                    <p className="font-body font-light text-secondary/85" style={{ fontSize: '16px', lineHeight: 1.8 }}>{s.body}</p>
+                    <p className="font-body font-light text-secondary/85" style={{ fontSize: '19px', lineHeight: 1.8 }}>{s.body}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -198,9 +198,9 @@ export default function Advisory() {
             {PROFILES.map((p) => (
               <ScrollReveal key={p.tag}>
                 <div className="p-7 h-full bg-background" style={{ border: '1px solid rgba(0,0,0,0.08)' }}>
-                  <p className="font-body font-medium uppercase mb-3" style={{ color: 'hsl(var(--gold))', letterSpacing: '2px', fontSize: '11px' }}>Profile</p>
+                  <p className="font-body font-medium uppercase mb-3" style={{ color: 'hsl(var(--gold))', letterSpacing: '2px', fontSize: '14px' }}>Profile</p>
                   <h3 className="font-display text-2xl text-secondary mb-4">{p.tag}</h3>
-                  <p className="font-body font-light text-secondary/80" style={{ fontSize: '15px', lineHeight: 1.75 }}>{p.body}</p>
+                  <p className="font-body font-light text-secondary/80" style={{ fontSize: '18px', lineHeight: 1.75 }}>{p.body}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -214,7 +214,7 @@ export default function Advisory() {
           <ScrollReveal>
             <p className="eyebrow mb-4">Why Rivana</p>
             <h2 className="text-secondary mb-8">We represent you. Not the developer.</h2>
-            <div className="space-y-5 font-body font-light text-secondary/85" style={{ fontSize: '17px', lineHeight: 1.8 }}>
+            <div className="space-y-5 font-body font-light text-secondary/85" style={{ fontSize: '20px', lineHeight: 1.8 }}>
               <p>In the Cancún and Riviera Maya market, most "real estate agents" are developer sales representatives. They work for the seller. Their commission comes from the developer. Their incentive is to move inventory, not to protect your investment.</p>
               <p>Rivana operates differently. We are a buyer-oriented advisory firm. Our fee is paid by the developer on completed transactions — which means our service costs you nothing — but our analysis and recommendations are built around your goals, not the developer's sales targets.</p>
               <p>This means we will tell you when a development is overpriced relative to the market. We will flag permit issues, construction delays, and developer red flags before you commit. We will recommend a competitor's project if it genuinely fits your profile better than ours. And we will give you rental yield estimates based on real Airbnb and Vrbo data from comparable units in the same zone — not the developer's marketing projections.</p>
@@ -245,13 +245,13 @@ export default function Advisory() {
                 <Link to={`/en${z.href}`} className="font-display text-xl text-secondary hover:text-primary transition-colors">
                   {z.label}
                 </Link>
-                <p className="font-body font-light text-secondary/75 mt-1.5" style={{ fontSize: '15px', lineHeight: 1.6 }}>
+                <p className="font-body font-light text-secondary/75 mt-1.5" style={{ fontSize: '18px', lineHeight: 1.6 }}>
                   {z.desc} <span className="text-primary">{z.from}.</span>
                 </p>
               </div>
             ))}
           </div>
-          <p className="font-body font-light text-secondary/80 max-w-3xl" style={{ fontSize: '16px', lineHeight: 1.8 }}>
+          <p className="font-body font-light text-secondary/80 max-w-3xl" style={{ fontSize: '19px', lineHeight: 1.8 }}>
             Not sure which zone fits your profile? That is exactly the conversation we start with. Most buyers arrive thinking they want one zone and end up in a different one after a proper analysis. We have seen it enough times to know: the right zone depends on your specific use case, risk tolerance, and timeline — not on which render looks most beautiful.
           </p>
         </div>
@@ -269,7 +269,7 @@ export default function Advisory() {
                 <AccordionTrigger className="font-display text-lg text-left text-secondary py-5 hover:no-underline">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="font-body font-light text-secondary/80 pb-5" style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                <AccordionContent className="font-body font-light text-secondary/80 pb-5" style={{ fontSize: '18px', lineHeight: 1.8 }}>
                   {f.a}
                 </AccordionContent>
               </AccordionItem>
@@ -284,7 +284,7 @@ export default function Advisory() {
           <ScrollReveal>
             <p className="eyebrow mb-4">Start your search</p>
             <h2 className="text-secondary mb-5">Tell us what you're looking for</h2>
-            <p className="font-body font-light text-secondary/80 max-w-2xl mb-12" style={{ fontSize: '16px', lineHeight: 1.7 }}>
+            <p className="font-body font-light text-secondary/80 max-w-2xl mb-12" style={{ fontSize: '19px', lineHeight: 1.7 }}>
               Every Rivana advisory engagement begins the same way: a conversation. Fill in the form below and one of our advisors will contact you within two business hours — by email to confirm, then by video call at a time that works for your schedule.
             </p>
           </ScrollReveal>
@@ -303,11 +303,11 @@ export default function Advisory() {
                   </div>
                   <div>
                     <h3 className="font-display text-lg text-secondary mb-1.5">{label}</h3>
-                    <p className="font-body font-light text-secondary/75" style={{ fontSize: '14px', lineHeight: 1.65 }}>{text}</p>
+                    <p className="font-body font-light text-secondary/75" style={{ fontSize: '17px', lineHeight: 1.65 }}>{text}</p>
                   </div>
                 </div>
               ))}
-              <p className="font-body font-light text-secondary/70 pt-3 border-t border-border" style={{ fontSize: '14px', lineHeight: 1.7 }}>
+              <p className="font-body font-light text-secondary/70 pt-3 border-t border-border" style={{ fontSize: '17px', lineHeight: 1.7 }}>
                 Every inquiry is handled personally by a Rivana advisor — not a chatbot, not a call centre.
               </p>
             </aside>
@@ -325,23 +325,23 @@ export default function Advisory() {
                     </p>
                   </div>
                 ) : (
-                <form onSubmit={submit} className="flex flex-col gap-5" style={{ fontSize: '11px', letterSpacing: '2px' }}>
+                <form onSubmit={submit} className="flex flex-col gap-5" style={{ fontSize: '14px', letterSpacing: '2px' }}>
                   <div>
                     <label htmlFor="adv-name" className={labelStyle}>Name *</label>
-                    <input id="adv-name" required value={form.name} onChange={(e) => update('name', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none" style={{ ...inputStyle, fontSize: '15px', letterSpacing: 'normal' }} />
+                    <input id="adv-name" required value={form.name} onChange={(e) => update('name', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }} />
                   </div>
                   <div>
                     <label htmlFor="adv-email" className={labelStyle}>Email *</label>
-                    <input id="adv-email" type="email" required value={form.email} onChange={(e) => update('email', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none" style={{ ...inputStyle, fontSize: '15px', letterSpacing: 'normal' }} />
+                    <input id="adv-email" type="email" required value={form.email} onChange={(e) => update('email', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }} />
                   </div>
                   <div>
                     <label htmlFor="adv-phone" className={labelStyle}>Phone / WhatsApp (optional)</label>
-                    <input id="adv-phone" type="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="+1 (area code) number" className="w-full px-3 py-3 font-body font-light focus:outline-none" style={{ ...inputStyle, fontSize: '15px', letterSpacing: 'normal' }} />
+                    <input id="adv-phone" type="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="+1 (area code) number" className="w-full px-3 py-3 font-body font-light focus:outline-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }} />
                   </div>
                   <div>
                     <label htmlFor="adv-country" className={labelStyle}>Country of residence *</label>
                     <div className="relative">
-                      <select id="adv-country" required value={form.country} onChange={(e) => update('country', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none appearance-none" style={{ ...inputStyle, fontSize: '15px', letterSpacing: 'normal' }}>
+                      <select id="adv-country" required value={form.country} onChange={(e) => update('country', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none appearance-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }}>
                         <option value="">Select…</option>
                         <option>United States</option>
                         <option>Canada</option>
@@ -353,7 +353,7 @@ export default function Advisory() {
                   <div>
                     <label htmlFor="adv-budget" className={labelStyle}>Budget range *</label>
                     <div className="relative">
-                      <select id="adv-budget" required value={form.budget} onChange={(e) => update('budget', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none appearance-none" style={{ ...inputStyle, fontSize: '15px', letterSpacing: 'normal' }}>
+                      <select id="adv-budget" required value={form.budget} onChange={(e) => update('budget', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none appearance-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }}>
                         <option value="">Select…</option>
                         <option>Under $300K USD</option>
                         <option>$300K – $600K USD</option>
@@ -367,7 +367,7 @@ export default function Advisory() {
                   <div>
                     <label htmlFor="adv-goal" className={labelStyle}>Primary goal *</label>
                     <div className="relative">
-                      <select id="adv-goal" required value={form.goal} onChange={(e) => update('goal', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none appearance-none" style={{ ...inputStyle, fontSize: '15px', letterSpacing: 'normal' }}>
+                      <select id="adv-goal" required value={form.goal} onChange={(e) => update('goal', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none appearance-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }}>
                         <option value="">Select…</option>
                         <option>Rental income / investment returns</option>
                         <option>Vacation home / snowbird retreat</option>
@@ -384,7 +384,7 @@ export default function Advisory() {
                       {ZONE_OPTIONS.map((z) => (
                         <label key={z} className="flex items-center gap-2 px-3 py-2.5 cursor-pointer" style={{ border: '1px solid rgba(0,0,0,0.07)', backgroundColor: zones.includes(z) ? 'rgba(207,174,96,0.08)' : 'hsl(var(--paper))', minHeight: 44 }}>
                           <input type="checkbox" checked={zones.includes(z)} onChange={() => toggleZone(z)} className="accent-[#CFAE60]" />
-                          <span className="font-body font-light text-secondary" style={{ fontSize: '14px', letterSpacing: 'normal' }}>{z}</span>
+                          <span className="font-body font-light text-secondary" style={{ fontSize: '17px', letterSpacing: 'normal' }}>{z}</span>
                         </label>
                       ))}
                     </div>
@@ -392,7 +392,7 @@ export default function Advisory() {
                   <div>
                     <label htmlFor="adv-call" className={labelStyle}>Preferred call time *</label>
                     <div className="relative">
-                      <select id="adv-call" required value={form.callTime} onChange={(e) => update('callTime', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none appearance-none" style={{ ...inputStyle, fontSize: '15px', letterSpacing: 'normal' }}>
+                      <select id="adv-call" required value={form.callTime} onChange={(e) => update('callTime', e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none appearance-none" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal' }}>
                         <option value="">Select…</option>
                         <option>Morning (9am–12pm EST)</option>
                         <option>Afternoon (12pm–5pm EST)</option>
@@ -404,12 +404,12 @@ export default function Advisory() {
                   </div>
                   <div>
                     <label htmlFor="adv-notes" className={labelStyle}>Anything else you want us to know</label>
-                    <textarea id="adv-notes" rows={4} value={form.notes} onChange={(e) => update('notes', e.target.value)} placeholder="Timeline, concerns, specific requirements, previous experience with Mexican real estate…" className="w-full px-3 py-3 font-body font-light focus:outline-none resize-y" style={{ ...inputStyle, fontSize: '15px', letterSpacing: 'normal', minHeight: 110 }} />
+                    <textarea id="adv-notes" rows={4} value={form.notes} onChange={(e) => update('notes', e.target.value)} placeholder="Timeline, concerns, specific requirements, previous experience with Mexican real estate…" className="w-full px-3 py-3 font-body font-light focus:outline-none resize-y" style={{ ...inputStyle, fontSize: '18px', letterSpacing: 'normal', minHeight: 110 }} />
                   </div>
-                  <button type="submit" disabled={loading} className="w-full mt-2 py-4 font-body font-light uppercase flex items-center justify-center gap-2" style={{ letterSpacing: '3px', backgroundColor: '#CFAE60', color: '#1C1C1C', fontSize: '13px', borderRadius: 0, opacity: loading ? 0.7 : 1, minHeight: 52 }}>
+                  <button type="submit" disabled={loading} className="w-full mt-2 py-4 font-body font-light uppercase flex items-center justify-center gap-2" style={{ letterSpacing: '3px', backgroundColor: '#CFAE60', color: '#1C1C1C', fontSize: '16px', borderRadius: 0, opacity: loading ? 0.7 : 1, minHeight: 52 }}>
                     {loading ? (<><Loader2 size={14} className="animate-spin" />Sending…</>) : (<>Start my property search →</>)}
                   </button>
-                  <p className="font-body font-light text-center text-secondary/65" style={{ fontSize: '12px', letterSpacing: 'normal', lineHeight: 1.6 }}>
+                  <p className="font-body font-light text-center text-secondary/65" style={{ fontSize: '15px', letterSpacing: 'normal', lineHeight: 1.6 }}>
                     Your information is confidential and will never be shared with third parties. No obligation. No fees. Response within 2 business hours.
                   </p>
                 </form>
@@ -427,15 +427,15 @@ export default function Advisory() {
             <h2 className="text-secondary mb-8" style={{ fontSize: 'clamp(1.9rem, 3.2vw, 2.8rem)', lineHeight: 1.2 }}>
               The market rewards buyers who move with <em className="text-primary not-italic font-display italic">good information</em>.
             </h2>
-            <div className="space-y-5 font-body font-light text-secondary/85 mb-8" style={{ fontSize: '17px', lineHeight: 1.8 }}>
+            <div className="space-y-5 font-body font-light text-secondary/85 mb-8" style={{ fontSize: '20px', lineHeight: 1.8 }}>
               <p>Cancún and the Riviera Maya have delivered 8–12% annual appreciation across most segments for the past four years. The buyers who captured that appreciation were not the fastest movers. They were the best-informed ones — buyers who understood which zone, which developer, and which entry price represented genuine value rather than a well-marketed pitch.</p>
               <p>That is what Rivana's advisory service delivers. Not urgency. Information.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-5">
-              <Link to="/en/listings" className="font-body text-primary hover:underline" style={{ fontSize: '15px' }}>
+              <Link to="/en/listings" className="font-body text-primary hover:underline" style={{ fontSize: '18px' }}>
                 Browse current listings →
               </Link>
-              <Link to="/en/journal" className="font-body text-primary hover:underline" style={{ fontSize: '15px' }}>
+              <Link to="/en/journal" className="font-body text-primary hover:underline" style={{ fontSize: '18px' }}>
                 Read our market journal →
               </Link>
             </div>
