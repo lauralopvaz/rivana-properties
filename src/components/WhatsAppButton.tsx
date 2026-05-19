@@ -11,12 +11,12 @@ export const WhatsAppButton = () => {
       href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-[200] w-14 h-14 rounded-full bg-[#25d366] flex items-center justify-center shadow-lg wa-pulse hover:scale-110 transition-transform"
+      className="fixed bottom-6 right-6 z-[200] w-16 h-16 rounded-full bg-[#25d366] flex items-center justify-center shadow-lg wa-pulse hover:scale-110 transition-transform"
       aria-label="Contact us on WhatsApp"
     >
       <svg
         viewBox="0 0 32 32"
-        className="w-7 h-7"
+        className="w-11 h-11"
         fill="#FFFFFF"
         aria-hidden="true"
       >
