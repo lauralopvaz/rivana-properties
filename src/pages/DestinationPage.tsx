@@ -706,7 +706,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('dest.commonQuestions')}</p>
-            <h2 className="mb-12">{isZHEn ? 'Common questions about buying in the Hotel Zone' : isCMEn ? 'Common questions about investing in Costa Mujeres' : t('dest.faq')}</h2>
+            <h2 className="mb-12">{isZHEn ? 'Common questions about buying in the Hotel Zone' : isCMEn ? 'Common questions about investing in Costa Mujeres' : isPCEn ? 'Common questions about buying in Puerto Cancún' : t('dest.faq')}</h2>
           </ScrollReveal>
           <div className="max-w-3xl space-y-3">
             {currentFaqs.map((faq, i) => (
@@ -731,6 +731,11 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
           {isCMEn && (
             <div className="max-w-3xl mt-12 text-muted-foreground font-body text-base leading-relaxed">
               <p>Costa Mujeres is the zone where Rivana has the strongest conviction heading into the second half of 2026. The infrastructure cycle, the brand arrivals, and the pre-sale pricing window at Dhamar create a combination that does not frequently align in a single market at a single moment. If you are evaluating a first purchase in the Cancún corridor or adding to an existing portfolio, this is the conversation we most want to have. Celia leads our Costa Mujeres advisory and has closed transactions across multiple sub-zones in the corridor. Schedule a call or request pricing directly — floor plans and payment structures are available for immediate qualified review.</p>
+            </div>
+          )}
+          {isPCEn && (
+            <div className="max-w-3xl mt-12 text-muted-foreground font-body text-base leading-relaxed">
+              <p>Puerto Cancún is Rivana's highest-average-ticket market, and it is the zone we know most thoroughly. SLS Ocean Beach, Thompson Private Residences, and Vellmari Grand Living each occupy a distinct position within the district — different buyer profiles, different investment structures, different rental yield mechanisms. Understanding which one aligns with your objectives requires a detailed conversation, not a brochure. Celia leads our Puerto Cancún advisory and has guided buyers through all three developments. Schedule a call or request pricing directly — floor plans, payment structures, and comparative analysis across the three listings are available immediately for qualified buyers.</p>
             </div>
           )}
         </div>
