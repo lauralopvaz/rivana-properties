@@ -244,7 +244,33 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   };
 
   const relatedDests = config.relatedDestinations.map((key) => getDestination(key)).filter(Boolean);
-  const currentFaqs = faqs[language] || faqs.es;
+  const zhEnFaqs = [
+    {
+      q: "What is the price range for condos in Cancún's Hotel Zone?",
+      a: 'Entry-level luxury condominiums in the Hotel Zone start at approximately $514,000 USD for a three-bedroom unit with ocean views. Pricing varies by sub-zone — Punta Cancún runs roughly $3,200 USD per square metre, the central strip around $2,800/m², and the southern Punta Nizuc zone around $2,500/m². Penthouses and larger units in premium buildings exceed $1.5M USD. Pre-sale pricing is typically 15–33% below projected delivery value, making it the most advantageous entry point for investors.',
+    },
+    {
+      q: "Can foreigners buy condos in Cancún's Hotel Zone?",
+      a: "Yes, fully and without restriction. Americans, Canadians, Europeans, and buyers of any nationality can purchase property in the Hotel Zone. Since all Hotel Zone property falls within Mexico's coastal Restricted Zone, foreign buyers hold title through a fideicomiso — a government-regulated bank trust that grants full ownership rights including the right to sell, rent, renovate, and pass the property to heirs. The process is straightforward and well-established; Rivana's team manages it from start to close.",
+    },
+    {
+      q: 'What rental yields can I expect from a Hotel Zone condo?',
+      a: "Well-managed Hotel Zone condominiums have historically generated annual rental yields of 8% to 12% of purchase price through short-term vacation rentals. Cancún's Hotel Zone receives over 12 million international visitors per year, driving occupancy rates of 65–78% on professionally managed units. Peak season (December–March and summer) commands significantly higher nightly rates. Exact yields depend on location within the strip, property finishes, management quality, and whether the unit belongs to a branded hotel program.",
+    },
+    {
+      q: 'What are the closing costs for buying in the Hotel Zone?',
+      a: 'Foreign buyers should budget 5–8% of the purchase price in closing costs. The main components are the Property Acquisition Tax (ISAI, approximately 3% of assessed value), Notario Público fees (0.5–1%), fideicomiso setup ($1,000–$2,500 USD), Ministry of Foreign Affairs permit ($1,500–$2,000 USD), and Public Registry registration (0.5–1%). On many pre-sale developments, the developer absorbs a portion of closing costs as an incentive — Rivana negotiates these terms as part of its standard advisory process.',
+    },
+    {
+      q: 'How does the Nichupté Bridge affect Hotel Zone property values?',
+      a: 'Significantly, particularly for the southern zone (Km 12–23). Before the bridge opened in May 2026, the southern Hotel Zone was 30–45 minutes from downtown by road. The bridge cuts that to under 10 minutes, directly closing the infrastructure gap that had kept southern zone prices below their beach and view quality. Properties like The Residences at Grand Island Cancun and Bay View Grand — both in the Punta Nizuc area — are positioned to capture the most direct appreciation benefit as the market reprices to reflect the new connectivity.',
+    },
+    {
+      q: 'What is the process for buying pre-sale property in the Hotel Zone?',
+      a: 'Pre-sale purchases typically involve a signing deposit (10–30% of purchase price), followed by staged payments during the construction period, and a final payment at delivery. No mortgage or bank financing is required during construction. The process takes 45–90 days from signed agreement to formal closing. Rivana manages due diligence, notary coordination, fideicomiso setup, and developer negotiation on your behalf. Advisory is complimentary — our fees are paid by the developer on completed transactions.',
+    },
+  ];
+  const currentFaqs = isZHEn ? zhEnFaqs : (faqs[language] || faqs.es);
 
   return (
     <div>
@@ -325,13 +351,35 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <h2>{subPageConfig
-                ? (language === 'es' ? `${subPageConfig.seo.h1.es}` : `${subPageConfig.seo.h1.en}`)
-                : (language === 'es' ? `¿Por qué ${config.name[language]}?` : `Why ${config.name[language]}?`)
+              <h2>{isZHEn
+                ? "Why invest in Cancún's Hotel Zone?"
+                : subPageConfig
+                  ? (language === 'es' ? `${subPageConfig.seo.h1.es}` : `${subPageConfig.seo.h1.en}`)
+                  : (language === 'es' ? `¿Por qué ${config.name[language]}?` : `Why ${config.name[language]}?`)
               }</h2>
-              <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
-                {(subPageConfig?.intro?.[language] || config.intro[language]).map((p, i) => (<p key={i}>{p}</p>))}
-              </div>
+              {isZHEn ? (
+                <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
+                  <p>Cancún's Hotel Zone — known locally as the Zona Hotelera — is the most established luxury real estate corridor in the Mexican Caribbean, and one of the most liquid real estate markets in all of Latin America. A narrow 23-kilometre barrier island separating the Caribbean Sea from Laguna Nichupté, it concentrates more international hotel brands, direct-flight connectivity, and sustained rental demand than any comparable coastal market in Mexico.</p>
+                  <p>For foreign buyers — American, Canadian, and European — the Hotel Zone has consistently delivered what matters most: proven appreciation, high occupancy rates, and an ownership experience that works entirely in English at every stage of the process.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">A market permanently changed by infrastructure</h3>
+                  <p>In May 2026, the Nichupté Bridge opened after years of construction. The 11.2-kilometre crossing connects downtown Cancún directly to the southern Hotel Zone, reducing travel time from the city centre to under 10 minutes by car. For property owners, this means faster airport access (Cancún International Airport is 15 minutes from the southern zone), easier connectivity for tenants and guests, and structural upward pressure on property values in previously underserved parts of the strip.</p>
+                  <p>The bridge is the single most significant infrastructure event in the Hotel Zone in two decades. Properties south of Km 12 — including The Residences at Grand Island Cancun and Bay View Grand at Grand Island — sit directly in the appreciation corridor it has created.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">What the numbers show</h3>
+                  <p>The Hotel Zone draws over 12 million international tourists per year, making it the highest-traffic coastal destination in Mexico. Average short-term rental occupancy across well-managed condominiums runs between 65% and 78% annually, with peak rates climbing significantly from December through March and during events like the 2026 FIFA World Cup. The annual rental yield on a professionally managed Hotel Zone property ranges from 8% to 12% of purchase price, depending on location within the strip, finishes, and management quality.</p>
+                  <p>Pre-sale appreciation — the difference between the price paid at contract and the appraised value at delivery — has run at 15% to 33% across Hotel Zone developments delivered in recent years. The Residences at Grand Island Cancun, Rivana's flagship listing in the zone, projects 33% appreciation between pre-sale entry and Q2 2027 delivery.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">The three sub-zones and what they mean for buyers</h3>
+                  <p>The Hotel Zone is not a single homogeneous market. Pricing, rental dynamics, and buyer profiles vary meaningfully across its three sub-zones:</p>
+                  <p><strong className="text-foreground">Punta Cancún (Km 1–9)</strong> is the commercial heart — closest to downtown, walkable to La Isla Shopping Village and the Forum by the Sea, and surrounded by the highest concentration of nightlife and restaurants in the region. Prices here run approximately $3,200 USD per square metre. Best for buyers prioritising rental income and proximity to services.</p>
+                  <p><strong className="text-foreground">Central Zone (Km 10–16)</strong> is where the Hotel Zone's best beaches sit. The widest white-sand stretches, the major international resort properties, and the strongest short-term rental demand are concentrated here. Prices average $2,800 USD per square metre. Best for buyers who want the classic Hotel Zone experience: beachfront, resort amenities, and consistent occupancy.</p>
+                  <p><strong className="text-foreground">Punta Nizuc (Km 17–23)</strong> is the southern residential end — quieter, less commercial, and adjacent to the Nizuc reef. The Nichupté Bridge has made this previously distant zone genuinely accessible. Prices average $2,500 USD per square metre. Best for buyers prioritising privacy and long-term appreciation over immediate rental yield.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">Foreign ownership: straightforward and legally protected</h3>
+                  <p>All coastal property in Mexico's Hotel Zone falls within the Restricted Zone defined by Article 27 of the Mexican Constitution, which means foreign buyers — regardless of nationality — hold title through a fideicomiso bank trust rather than direct ownership. This is the standard legal structure for all international buyers in the area and grants full ownership rights: sell, rent, renovate, inherit. The fideicomiso is established at closing and managed by a Mexican bank of your choosing. Rivana coordinates the entire process.</p>
+                </div>
+              ) : (
+                <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
+                  {(subPageConfig?.intro?.[language] || config.intro[language]).map((p, i) => (<p key={i}>{p}</p>))}
+                </div>
+              )}
             </div>
           </ScrollReveal>
         </div>
@@ -359,6 +407,24 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* Nichupté Bridge effect — EN Hotel Zone only */}
+      {isZHEn && (
+        <section className="py-20 bg-card border-y border-border">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+            <ScrollReveal>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <h2>The Nichupté Bridge effect: what it means for your investment</h2>
+                <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
+                  <p>The May 2026 opening of the Nichupté Bridge is not a minor convenience update — it is a structural change to the Hotel Zone's investment thesis. Before the bridge, the southern Hotel Zone (Km 12–23) was functionally isolated from downtown Cancún. Residents and guests faced 30–45 minute drives around the lagoon to reach the airport, hospitals, and commercial centres. That friction suppressed property values in the southern zone relative to its actual beach and view quality.</p>
+                  <p>The bridge eliminates that friction. The Cancún International Airport is now 15 minutes from the Grand Island complex. Downtown healthcare, banking, and commercial infrastructure are under 10 minutes away. The price gap between the southern zone and the central strip has already begun to close, and analysts tracking the Quintana Roo market expect continued convergence over the next 18–24 months.</p>
+                  <p>For buyers considering The Residences at Grand Island Cancun or Bay View Grand at Grand Island — both located in the Punta Nizuc zone — the timing is meaningful. Pre-sale pricing reflects the pre-bridge reality. Delivery pricing will reflect the new one.</p>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
       )}
@@ -482,7 +548,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('dest.commonQuestions')}</p>
-            <h2 className="mb-12">{t('dest.faq')}</h2>
+            <h2 className="mb-12">{isZHEn ? 'Common questions about buying in the Hotel Zone' : t('dest.faq')}</h2>
           </ScrollReveal>
           <div className="max-w-3xl space-y-3">
             {currentFaqs.map((faq, i) => (
@@ -499,6 +565,11 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
               </ScrollReveal>
             ))}
           </div>
+          {isZHEn && (
+            <div className="max-w-3xl mt-12 text-muted-foreground font-body text-base leading-relaxed">
+              <p>The Hotel Zone is Rivana's most active market. Our team has closed transactions in all three sub-zones and across every price point in the current portfolio. If you are evaluating The Residences at Grand Island Cancun, Bay View Grand, or Kabeek Marina — or want a comparative analysis across all three — schedule a call with Celia, our Hotel Zone specialist. She will walk you through current pricing, floor plan availability, payment structures, and honest context on what each development delivers for your specific investment profile.</p>
+            </div>
+          )}
         </div>
       </section>
 
