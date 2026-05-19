@@ -783,7 +783,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('dest.commonQuestions')}</p>
-            <h2 className="mb-12">{isZHEn ? 'Common questions about buying in the Hotel Zone' : isCMEn ? 'Common questions about investing in Costa Mujeres' : isPCEn ? 'Common questions about buying in Puerto Cancún' : t('dest.faq')}</h2>
+            <h2 className="mb-12">{isZHEn ? 'Common questions about buying in the Hotel Zone' : isCMEn ? 'Common questions about investing in Costa Mujeres' : isPCEn ? 'Common questions about buying in Puerto Cancún' : isMKEn ? 'Common questions about buying in Mayakoba' : t('dest.faq')}</h2>
           </ScrollReveal>
           <div className="max-w-3xl space-y-3">
             {currentFaqs.map((faq, i) => (
@@ -813,6 +813,11 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
           {isPCEn && (
             <div className="max-w-3xl mt-12 text-muted-foreground font-body text-base leading-relaxed">
               <p>Puerto Cancún is Rivana's highest-average-ticket market, and it is the zone we know most thoroughly. SLS Ocean Beach, Thompson Private Residences, and Vellmari Grand Living each occupy a distinct position within the district — different buyer profiles, different investment structures, different rental yield mechanisms. Understanding which one aligns with your objectives requires a detailed conversation, not a brochure. Celia leads our Puerto Cancún advisory and has guided buyers through all three developments. Schedule a call or request pricing directly — floor plans, payment structures, and comparative analysis across the three listings are available immediately for qualified buyers.</p>
+            </div>
+          )}
+          {isMKEn && (
+            <div className="max-w-3xl mt-12 text-muted-foreground font-body text-base leading-relaxed">
+              <p>Mayakoba is the zone where Rivana has the fewest conversations and the most conviction. The Reserve at Mayakoba is not a development that benefits from high-volume marketing — it is a development where the right buyer, properly briefed on what ownership inside the estate actually delivers, makes the decision themselves. Celia has managed the Mayakoba client relationship since Rivana's founding and knows the property, the developer, and the estate's operations in detail. If you are evaluating The Reserve at Mayakoba seriously, the right next step is a private tour, not a brochure. We will arrange it.</p>
             </div>
           )}
         </div>
