@@ -56,7 +56,7 @@ export default function Advisory() {
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.country || !form.budget || !form.goal || !form.callTime) return;
+    if (!form.name || !form.email || !form.phone || !form.country || !form.budget || !form.goal || !form.callTime) return;
     setLoading(true);
     const message = [
       `Country: ${form.country}`,
