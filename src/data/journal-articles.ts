@@ -32,6 +32,28 @@ export interface JournalArticle {
 
 export const journalArticles: JournalArticle[] = [
   {
+    slug: 'retire-cancun-riviera-maya-american-canadian-2026',
+    slugEn: 'retire-cancun-riviera-maya-american-canadian-2026',
+    title: {
+      es: 'Retirarse en Cancún y la Riviera Maya: Guía 2026 para Estadounidenses y Canadienses',
+      en: 'Retiring in Cancún and the Riviera Maya: The 2026 Guide for Americans and Canadians',
+    },
+    seoTitle: {
+      es: 'Retirarse en Cancún y Riviera Maya: Guía 2026',
+      en: 'Retiring in Cancún & Riviera Maya: 2026 Guide',
+    },
+    category: { es: 'Estilo de vida', en: 'Lifestyle' },
+    excerpt: {
+      es: 'Todo lo que estadounidenses y canadienses necesitan saber para retirarse en Cancún y la Riviera Maya en 2026 — costo de vida, visas, salud, propiedad y las mejores zonas para comprar.',
+      en: 'Everything Americans and Canadians need to know about retiring in Cancún and the Riviera Maya in 2026 — cost of living, visas, healthcare, property ownership, and the best zones to buy.',
+    },
+    date: 'May 19, 2026',
+    readTime: '13 min',
+    author: 'Rivana Properties Advisory Team',
+    image: imgCanadianBuyer,
+    relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'mayakoba', 'puerto-morelos', 'playa-del-carmen'],
+  },
+  {
     slug: 'buying-property-mexico-canadian-2026-guide',
     slugEn: 'buying-property-mexico-canadian-2026-guide',
     title: {

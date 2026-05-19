@@ -22,6 +22,7 @@ import { GuiaPreventaCancunBodyES, GuiaPreventaCancunBodyEN } from '@/components
 import { PuenteNichupteBodyES, PuenteNichupteBodyEN } from '@/components/journal/PuenteNichupteBody';
 import { PortugalMayakobaBodyES, PortugalMayakobaBodyEN } from '@/components/journal/PortugalMayakobaBody';
 import { CanadianBuyerGuideBodyEN } from '@/components/journal/CanadianBuyerGuideBody';
+import { RetireCancunBodyEN } from '@/components/journal/RetireCancunBody';
 
 const parseArticleDate = (dateStr: string): string => {
   const months: Record<string, string> = {
@@ -79,6 +80,20 @@ const JournalPost = () => {
   const isPuenteNichupte = articleSlug === 'puente-nichupte-zona-hotelera-cancun-plusvalia';
   const isPortugalMayakoba = articleSlug === 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria';
   const isCanadianGuide = articleSlug === 'buying-property-mexico-canadian-2026-guide';
+  const isRetireGuide = articleSlug === 'retire-cancun-riviera-maya-american-canadian-2026';
+
+  const retireFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'How much does it cost to retire in Cancún or the Riviera Maya?', acceptedAnswer: { '@type': 'Answer', text: 'A comfortable retirement for a couple in Cancún or the Riviera Maya costs approximately USD $2,500–$4,900 per month, assuming property ownership (HOA + utilities), private healthcare, dining out, and travel. This is roughly 40–50% of the cost of an equivalent lifestyle in Miami, Phoenix, or Vancouver.' } },
+      { '@type': 'Question', name: 'Do Americans and Canadians need a special visa to retire in Mexico?', acceptedAnswer: { '@type': 'Answer', text: 'Mexico does not have a dedicated "retirement visa". Most retirees use either the Temporary Resident Visa (requiring USD $4,400/month income or USD $74,000 in savings) or the Permanent Resident Visa (USD $7,400/month or USD $300,000 in savings). Owning a Mexican property valued at approximately USD $174,000+ also qualifies you independently for Temporary Residency. Snowbirds can stay up to 180 days on a tourist permit without applying for residency.' } },
+      { '@type': 'Question', name: 'Is healthcare in Cancún good enough for retirees?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Cancún has two JCI-accredited private hospitals — Galenia Hospital and Hospital Amerimed — with English-speaking specialists across cardiology, oncology, orthopaedics, and neurology. Procedures cost 50–70% less than equivalent US private care. Private health insurance for a couple in their 60s runs approximately USD $3,500–$5,900 per year.' } },
+      { '@type': 'Question', name: 'Does Medicare cover Americans living in Mexico?', acceptedAnswer: { '@type': 'Answer', text: 'No. Medicare does not travel with you to Mexico and will not cover services received there. US retirees in Mexico must rely on international private health insurance — providers include Cigna Global, Aetna International, and Allianz.' } },
+      { '@type': 'Question', name: 'Can Americans and Canadians own property in Cancún?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Because all property in Cancún and the Riviera Maya is in Mexico\'s coastal Restricted Zone, foreign buyers hold title through a fideicomiso — a government-regulated bank trust that grants full ownership rights including sale, rental, renovation, and inheritance.' } },
+      { '@type': 'Question', name: 'What are the best zones in Cancún for retirees?', acceptedAnswer: { '@type': 'Answer', text: 'The Hotel Zone is best for active retirees who want walkability and rental income. Puerto Cancún suits those who want luxury and quiet. Puerto Morelos appeals to retirees seeking a small-town Caribbean life. Mayakoba is the choice for executive retirees who want a world-class resort address. Playa del Carmen fits cosmopolitan retirees who want urban energy.' } },
+    ],
+  };
 
   const canadianFaqSchema = {
     '@context': 'https://schema.org',
