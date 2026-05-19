@@ -27,6 +27,7 @@ const PropertyDetailNew = lazy(() => import("./pages/PropertyDetailNew"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const CancunCondos = lazy(() => import("./pages/CancunCondos"));
 const BeachfrontCondos = lazy(() => import("./pages/BeachfrontCondos"));
+const Advisory = lazy(() => import("./pages/Advisory"));
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
@@ -137,6 +138,7 @@ const AppRoutes = () => (
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/en/cancun/condos-for-sale" element={<CancunCondos />} />
     <Route path="/en/cancun/beachfront-condos-for-sale" element={<BeachfrontCondos />} />
+    <Route path="/en/advisory" element={<Advisory />} />
 
     {/* Redirects — consolidate all property routes to canonical paths */}
     <Route path="/property/:slug" element={<RedirectPropertyEN />} />

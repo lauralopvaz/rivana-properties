@@ -19,6 +19,7 @@ export const Navbar = () => {
   const navLinks = [
     { label: t('nav.listings'), href: '/listings' },
     { label: t('nav.presale'), href: '/presale' },
+    ...(language === 'en' ? [{ label: 'Advisory', href: '/advisory' }] : []),
     { label: t('nav.journal'), href: '/journal' },
     { label: t('nav.about'), href: '/about' },
   ];
