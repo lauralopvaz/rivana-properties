@@ -197,20 +197,25 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const isZHEn = destinationKey === 'zona-hotelera' && language === 'en' && !subPage;
   const isCMEn = destinationKey === 'costa-mujeres' && language === 'en' && !subPage;
   const isPCEn = destinationKey === 'puerto-cancun' && language === 'en' && !subPage;
+  const isMKEn = destinationKey === 'mayakoba' && language === 'en' && !subPage;
   const seoTitle = isZHEn
     ? 'Luxury Condos for Sale in Cancún Hotel Zone — 2026 Guide | Rivana'
     : isCMEn
       ? 'Luxury Condos for Sale in Costa Mujeres — 2026 Investment Guide | Rivana'
       : isPCEn
         ? 'Luxury Condos & Marina Residences for Sale in Puerto Cancún — 2026 Guide | Rivana'
-        : subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
+        : isMKEn
+          ? 'Mayakoba Real Estate for Sale — The Reserve at Mayakoba 2026 | Rivana'
+          : subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
   const seoDescription = isZHEn
     ? "Beachfront condos and penthouses for sale in Cancún's Hotel Zone from $514K USD. Zone-by-zone pricing, 8–12% rental yields, pre-sale opportunities, and bilingual advisory for foreign buyers."
     : isCMEn
       ? 'Pre-sale condos and oceanfront residences in Costa Mujeres from $248K USD. The fastest-appreciating luxury corridor north of Cancún — St. Regis, 22% YoY growth, and Dhamar available now through Rivana.'
       : isPCEn
         ? 'Marina residences, branded condos, and beachfront penthouses in Puerto Cancún from $730K USD. SLS, Thompson Hotels by Hyatt, Grand Hyatt — the most prestigious residential address in Cancún. Rivana advisory.'
-        : subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
+        : isMKEn
+          ? 'Luxury villas and residences inside Mayakoba — home to Four Seasons, Rosewood, Banyan Tree, and Fairmont. The Reserve at Mayakoba from $1.1M USD. FIFA World Cup 2026 base camp. Rivana advisory.'
+          : subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
   const h1Text = subPageConfig ? subPageConfig.seo.h1[language] : config.seo.h1[language];
   const basePathLocale = language === 'en' ? `/en${config.basePath}` : config.basePath;
   const currentPath = subPage ? `${basePathLocale}/${subPage}` : basePathLocale;
