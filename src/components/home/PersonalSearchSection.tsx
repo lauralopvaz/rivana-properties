@@ -7,6 +7,7 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 export function PersonalSearchSection() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [budget, setBudget] = useState('');
   const [goal, setGoal] = useState('');
   const [callTime, setCallTime] = useState('');
@@ -20,6 +21,7 @@ export function PersonalSearchSection() {
     const { error } = await supabase.from('leads').insert({
       first_name: name,
       email,
+      phone,
       interest: 'personal_search',
       message: `Budget: ${budget || '—'} | Goal: ${goal || '—'} | Best time: ${callTime || '—'}`,
       source_page: window.location.pathname,
@@ -104,6 +106,7 @@ export function PersonalSearchSection() {
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                   <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" required className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle} />
                   <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your email" required className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle} />
+                  <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Your phone" className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle} />
                   <select value={budget} onChange={(e) => setBudget(e.target.value)} className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle}>
                     <option value="">Budget</option>
                     <option>Under $300K USD</option>
