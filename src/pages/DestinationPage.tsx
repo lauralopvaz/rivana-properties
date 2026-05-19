@@ -195,12 +195,17 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
 
   const subPageConfig = subPage ? config.subPages.find((sp) => sp.segment === subPage) : undefined;
   const isZHEn = destinationKey === 'zona-hotelera' && language === 'en' && !subPage;
+  const isCMEn = destinationKey === 'costa-mujeres' && language === 'en' && !subPage;
   const seoTitle = isZHEn
     ? 'Luxury Condos for Sale in Cancún Hotel Zone — 2026 Guide | Rivana'
-    : subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
+    : isCMEn
+      ? 'Luxury Condos for Sale in Costa Mujeres — 2026 Investment Guide | Rivana'
+      : subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
   const seoDescription = isZHEn
     ? "Beachfront condos and penthouses for sale in Cancún's Hotel Zone from $514K USD. Zone-by-zone pricing, 8–12% rental yields, pre-sale opportunities, and bilingual advisory for foreign buyers."
-    : subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
+    : isCMEn
+      ? 'Pre-sale condos and oceanfront residences in Costa Mujeres from $248K USD. The fastest-appreciating luxury corridor north of Cancún — St. Regis, 22% YoY growth, and Dhamar available now through Rivana.'
+      : subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
   const h1Text = subPageConfig ? subPageConfig.seo.h1[language] : config.seo.h1[language];
   const basePathLocale = language === 'en' ? `/en${config.basePath}` : config.basePath;
   const currentPath = subPage ? `${basePathLocale}/${subPage}` : basePathLocale;
@@ -270,7 +275,40 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
       a: 'Pre-sale purchases typically involve a signing deposit (10–30% of purchase price), followed by staged payments during the construction period, and a final payment at delivery. No mortgage or bank financing is required during construction. The process takes 45–90 days from signed agreement to formal closing. Rivana manages due diligence, notary coordination, fideicomiso setup, and developer negotiation on your behalf. Advisory is complimentary — our fees are paid by the developer on completed transactions.',
     },
   ];
-  const currentFaqs = isZHEn ? zhEnFaqs : (faqs[language] || faqs.es);
+  const cmEnFaqs = [
+    {
+      q: 'Where exactly is Costa Mujeres and how far is it from Cancún?',
+      a: "Costa Mujeres is located immediately north of Cancún's city limits, approximately 20 minutes by car from the Hotel Zone and 25–30 minutes from Cancún International Airport via the current route. The Cancún–Costa Mujeres Tourist Boulevard — a 25-kilometre highway under construction with a 2.7 billion peso government commitment — will reduce airport-to-zone travel time to under 20 minutes upon completion. The zone runs along 26 kilometres of Caribbean coastline facing Isla Mujeres, with a breakwater-protected beach that keeps the water calm and clear year-round.",
+    },
+    {
+      q: 'What price range can I expect for condos in Costa Mujeres?',
+      a: "Entry-level pre-sale condominiums in Costa Mujeres currently start at USD $248,000 for a three-bedroom unit through Rivana's Dhamar listing. Broader market pricing in the zone runs from approximately USD $200,000 for boutique one-bedroom units to USD $600,000+ for premium oceanfront residences and penthouses. The St. Regis branded residences occupy the top of the market at significantly higher price points. Pre-sale pricing in the zone is typically 20–35% below projected delivery value, which is the primary driver of investor interest at this stage of development.",
+    },
+    {
+      q: 'What is the rental yield potential in Costa Mujeres?',
+      a: 'Well-managed units in Costa Mujeres generate annual rental yields of 8–12% of purchase price through short-term vacation rentals. The zone attracts an upscale traveler profile — guests who specifically want the quieter, more exclusive alternative to the Hotel Zone — which supports competitive nightly rates. Ultra-luxury brand arrivals (St. Regis, Atelier, Excellence Coral) create an aspirational destination context that elevates perceived value across all properties in the corridor, including residential units listed on Airbnb and Vrbo.',
+    },
+    {
+      q: 'Can foreigners buy property in Costa Mujeres?',
+      a: "Yes, without restriction. Americans, Canadians, and all foreign nationals can legally purchase property in Costa Mujeres. Since the zone falls within Mexico's coastal Restricted Zone (within 50 kilometres of the coast), foreign buyers hold title through a fideicomiso — a government-regulated bank trust established since 1973 that grants full ownership rights including the right to sell, rent, renovate, and pass the property to heirs. Rivana manages the full closing process including fideicomiso setup, notary coordination, and due diligence.",
+    },
+    {
+      q: "What is Dhamar and why is it Rivana's featured Costa Mujeres listing?",
+      a: 'Dhamar is a pre-sale luxury residential development in Costa Mujeres offering three-bedroom oceanfront units starting at USD $248,000 — one of the most accessible entry points in the zone for a project at this quality level. The development features ocean views, a beach club, an infinity pool, and the amenity infrastructure consistent with the corridor\'s ultra-luxury positioning. As a pre-sale project, buyers enter at construction pricing with projected appreciation of 20–35% between signing and delivery. Rivana has full pricing, floor plan, and payment structure information available for qualified buyers — schedule an advisory call or request information directly through the page form.',
+    },
+    {
+      q: "How does Costa Mujeres compare to Cancún's Hotel Zone as an investment?",
+      a: 'The two zones serve different investment theses. The Hotel Zone offers the highest established rental demand, deepest property management infrastructure, and proximity to Cancún\'s hospital and commercial services — it is the lower-risk, more liquid option. Costa Mujeres offers higher appreciation potential, lower density, a superior beach environment, and entry pricing that has not yet caught up to the zone\'s actual quality level — it is the higher-upside option for investors with a five-to-seven-year horizon. Many Rivana clients hold properties in both zones. For a direct comparison, see our Mayakoba vs. Puerto Cancún analysis, or request a personalised Costa Mujeres vs. Hotel Zone comparison from our advisory team.',
+      aNode: (
+        <>
+          The two zones serve different investment theses. The Hotel Zone offers the highest established rental demand, deepest property management infrastructure, and proximity to Cancún's hospital and commercial services — it is the lower-risk, more liquid option. Costa Mujeres offers higher appreciation potential, lower density, a superior beach environment, and entry pricing that has not yet caught up to the zone's actual quality level — it is the higher-upside option for investors with a five-to-seven-year horizon. Many Rivana clients hold properties in both zones. For a direct comparison, see our{' '}
+          <Link to={localePath('/journal/mayakoba-vs-puerto-cancun')} className="text-primary hover:underline">Mayakoba vs. Puerto Cancún</Link>
+          {' '}analysis, or request a personalised Costa Mujeres vs. Hotel Zone comparison from our advisory team.
+        </>
+      ),
+    },
+  ];
+  const currentFaqs = isZHEn ? zhEnFaqs : isCMEn ? cmEnFaqs : (faqs[language] || faqs.es);
 
   return (
     <div>
@@ -353,7 +391,9 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <h2>{isZHEn
                 ? "Why invest in Cancún's Hotel Zone?"
-                : subPageConfig
+                : isCMEn
+                  ? 'Why Costa Mujeres is the highest-conviction investment on the Caribbean coast'
+                  : subPageConfig
                   ? (language === 'es' ? `${subPageConfig.seo.h1.es}` : `${subPageConfig.seo.h1.en}`)
                   : (language === 'es' ? `¿Por qué ${config.name[language]}?` : `Why ${config.name[language]}?`)
               }</h2>
@@ -374,6 +414,22 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                   <p><strong className="text-foreground">Punta Nizuc (Km 17–23)</strong> is the southern residential end — quieter, less commercial, and adjacent to the Nizuc reef. The Nichupté Bridge has made this previously distant zone genuinely accessible. Prices average $2,500 USD per square metre. Best for buyers prioritising privacy and long-term appreciation over immediate rental yield.</p>
                   <h3 className="font-display text-2xl text-foreground mt-6">Foreign ownership: straightforward and legally protected</h3>
                   <p>All coastal property in Mexico's Hotel Zone falls within the Restricted Zone defined by Article 27 of the Mexican Constitution, which means foreign buyers — regardless of nationality — hold title through a fideicomiso bank trust rather than direct ownership. This is the standard legal structure for all international buyers in the area and grants full ownership rights: sell, rent, renovate, inherit. The fideicomiso is established at closing and managed by a Mexican bank of your choosing. Rivana coordinates the entire process.</p>
+                </div>
+              ) : isCMEn ? (
+                <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
+                  <p>Twenty minutes north of Cancún's Hotel Zone, where the coastline curves toward Isla Mujeres and the Caribbean opens into an unobstructed horizon, lies the most compelling real estate investment on Mexico's Caribbean coast in 2026. Costa Mujeres is not emerging anymore — it has emerged. What it has not yet done is fully reprice to reflect that reality. That window is closing.</p>
+                  <p>The numbers tell the story directly: Costa Mujeres has delivered 22% year-over-year appreciation, the highest of any sub-market in the Cancún metropolitan area. Pre-sale developments in the zone are generating 8–12% annual rental yields once delivered and under professional management. And the factors driving these figures are structural — infrastructure, brand arrivals, and constrained supply — not speculative.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">The St. Regis effect</h3>
+                  <p>In mid-2026, the St. Regis Costa Mujeres Resort opened its doors — the first St. Regis resort property in the Mexican Caribbean. With just 158 rooms and 80 branded residences, it is the antithesis of the mega-resort model that defined the Hotel Zone for decades. Butler service, ultra-low density, and the global prestige of the Marriott luxury portfolio have formally established Costa Mujeres as Mexico's premier ultra-luxury coastal corridor.</p>
+                  <p>This matters for property investors in a specific way: branded luxury hotels are the most reliable proxy for sustained real estate appreciation that exists in coastal markets. When a St. Regis, Four Seasons, or Rosewood commits a flagship property to a destination, it sends a signal to institutional investors, developers, and high-net-worth buyers worldwide that the location is investable at the highest level. Costa Mujeres now carries that signal. Dhamar, Rivana's featured pre-sale listing in this zone, is positioned directly within this corridor.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">Infrastructure that changes the calculus</h3>
+                  <p>The Quintana Roo state government has committed 2.7 billion pesos to the Cancún–Costa Mujeres Tourist Boulevard — a 25-kilometre direct highway connection that will reduce travel time from Cancún International Airport to the Costa Mujeres waterfront to under 20 minutes. Construction is underway. When complete, this infrastructure investment will eliminate the primary friction point that has historically kept Costa Mujeres pricing below its quality level: travel time from the airport and city services.</p>
+                  <p>Combined with the May 2026 opening of the Nichupté Bridge — which has already decongested Cancún's main arterial and freed traffic flow northward — Costa Mujeres is in the middle of an infrastructure cycle that historically precedes the steepest appreciation in any coastal real estate market.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">What makes Costa Mujeres structurally different from the Hotel Zone</h3>
+                  <p>The Hotel Zone is a 23-kilometre strip with no land left to develop. Every project that delivers there competes for the same finite supply of buildable beach-adjacent parcels. Costa Mujeres has room to grow — but not unlimited room. The zone is a master-planned luxury corridor with strict density controls that have deliberately kept it low-rise and low-density. The developments already committed — St. Regis, Atelier, Excellence Coral, Majestic Mirage, and the residential projects entering the market now — are filling a corridor that will be complete within four to five years.</p>
+                  <p>For investors, this is the most important variable: you are buying pre-completion in a zone where the supply ceiling is visible and approaching. Buyers who enter before that ceiling is reached historically capture the most significant appreciation. Pre-sale entry into Dhamar puts buyers at today's pricing with delivery timed precisely to coincide with the zone's full establishment as an ultra-luxury destination.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">The 26 kilometres that define the investment thesis</h3>
+                  <p>Costa Mujeres occupies 26 kilometres of Caribbean coastline with a breakwater-protected beach that keeps the water consistently calm and clear — a physical characteristic that the Hotel Zone, exposed to open-ocean swells, cannot replicate. This is not a marketing claim; it is a geographic fact that drives meaningfully higher satisfaction rates among short-term rental guests and repeat visitors, which in turn supports above-average occupancy and nightly rates for professionally managed units in the zone.</p>
                 </div>
               ) : (
                 <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
@@ -407,6 +463,28 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* 2026 revaluation section — EN Costa Mujeres only */}
+      {isCMEn && (
+        <section className="py-20 bg-card border-y border-border">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+            <ScrollReveal>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <h2>2026: the year Costa Mujeres became Mexico's ultra-luxury address</h2>
+                <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
+                  <p>The convergence of events in 2026 has done more to establish Costa Mujeres's global profile than the previous decade of development combined. In a single calendar year: the St. Regis opened its first Mexican Caribbean property here; the Cancún–Costa Mujeres Tourist Boulevard broke ground with a 2.7 billion peso government commitment; the Nichupté Bridge eliminated Cancún's chronic traffic bottleneck and improved northbound access to the zone; and the FIFA World Cup brought 30 days of sustained international media attention to the Cancún metropolitan area as a world-class destination.</p>
+                  <p>Each of these events would independently move a real estate market. Together, they have created a revaluation moment — the kind that, in retrospect, investors identify as the inflection point after which prices never returned to prior levels.</p>
+                  <p>
+                    The pre-sale window for developments like{' '}
+                    <Link to={localePath('/propiedad/dhamar-costa-mujeres')} className="text-primary hover:underline">Dhamar</Link>
+                    {' '}exists precisely because construction timelines create a lag between a market's revaluation and its full pricing reflection in new inventory. Buyers who enter during that lag capture the spread. Rivana's advisory team can model this spread specifically for your investment profile and budget — schedule a call to see the numbers.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
       )}
@@ -548,7 +626,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('dest.commonQuestions')}</p>
-            <h2 className="mb-12">{isZHEn ? 'Common questions about buying in the Hotel Zone' : t('dest.faq')}</h2>
+            <h2 className="mb-12">{isZHEn ? 'Common questions about buying in the Hotel Zone' : isCMEn ? 'Common questions about investing in Costa Mujeres' : t('dest.faq')}</h2>
           </ScrollReveal>
           <div className="max-w-3xl space-y-3">
             {currentFaqs.map((faq, i) => (
@@ -560,7 +638,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
                     </span>
                   </button>
-                  {openFaq === i && (<div className="px-6 pb-4 text-sm text-muted-foreground font-body animate-fade-in">{faq.a}</div>)}
+                  {openFaq === i && (<div className="px-6 pb-4 text-sm text-muted-foreground font-body animate-fade-in">{(faq as { aNode?: React.ReactNode }).aNode ?? faq.a}</div>)}
                 </div>
               </ScrollReveal>
             ))}
@@ -568,6 +646,11 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
           {isZHEn && (
             <div className="max-w-3xl mt-12 text-muted-foreground font-body text-base leading-relaxed">
               <p>The Hotel Zone is Rivana's most active market. Our team has closed transactions in all three sub-zones and across every price point in the current portfolio. If you are evaluating The Residences at Grand Island Cancun, Bay View Grand, or Kabeek Marina — or want a comparative analysis across all three — schedule a call with Celia, our Hotel Zone specialist. She will walk you through current pricing, floor plan availability, payment structures, and honest context on what each development delivers for your specific investment profile.</p>
+            </div>
+          )}
+          {isCMEn && (
+            <div className="max-w-3xl mt-12 text-muted-foreground font-body text-base leading-relaxed">
+              <p>Costa Mujeres is the zone where Rivana has the strongest conviction heading into the second half of 2026. The infrastructure cycle, the brand arrivals, and the pre-sale pricing window at Dhamar create a combination that does not frequently align in a single market at a single moment. If you are evaluating a first purchase in the Cancún corridor or adding to an existing portfolio, this is the conversation we most want to have. Celia leads our Costa Mujeres advisory and has closed transactions across multiple sub-zones in the corridor. Schedule a call or request pricing directly — floor plans and payment structures are available for immediate qualified review.</p>
             </div>
           )}
         </div>
