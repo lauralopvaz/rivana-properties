@@ -39,6 +39,7 @@ export function PersonalSearchSection() {
     border: '1px solid rgba(0,0,0,0.07)',
     color: '#1C1C1C',
     borderRadius: 0,
+    fontSize: '17px',
   };
 
   return (
@@ -108,10 +109,10 @@ export function PersonalSearchSection() {
                 <p className="eyebrow mb-3">Personal Brief</p>
                 <h3 className="font-display text-2xl mb-6 text-secondary">Tell us what you're looking for</h3>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                  <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" required className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle} />
-                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your email" required className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle} />
-                  <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Your phone" className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle} />
-                  <select value={budget} onChange={(e) => setBudget(e.target.value)} className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle}>
+                  <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" required className="w-full px-3 py-3 font-body font-light focus:outline-none" style={inputStyle} />
+                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your email" required className="w-full px-3 py-3 font-body font-light focus:outline-none" style={inputStyle} />
+                  <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Your phone" className="w-full px-3 py-3 font-body font-light focus:outline-none" style={inputStyle} />
+                  <select value={budget} onChange={(e) => setBudget(e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none" style={inputStyle}>
                     <option value="">Budget</option>
                     <option>Under $300K USD</option>
                     <option>$300K – $600K USD</option>
@@ -119,7 +120,7 @@ export function PersonalSearchSection() {
                     <option>$1M – $2M USD</option>
                     <option>$2M+ USD</option>
                   </select>
-                  <select value={goal} onChange={(e) => setGoal(e.target.value)} className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle}>
+                  <select value={goal} onChange={(e) => setGoal(e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none" style={inputStyle}>
                     <option value="">What matters most</option>
                     <option>Rental income / investment returns</option>
                     <option>Vacation home / snowbird retreat</option>
@@ -127,7 +128,7 @@ export function PersonalSearchSection() {
                     <option>Pure appreciation play</option>
                     <option>Not sure yet — I need guidance</option>
                   </select>
-                  <select value={callTime} onChange={(e) => setCallTime(e.target.value)} className="w-full px-3 py-3 font-body font-light text-sm focus:outline-none" style={inputStyle}>
+                  <select value={callTime} onChange={(e) => setCallTime(e.target.value)} className="w-full px-3 py-3 font-body font-light focus:outline-none" style={inputStyle}>
                     <option value="">Best time to reach you</option>
                     <option>Morning (9–12 EST)</option>
                     <option>Afternoon (12–5 EST)</option>
