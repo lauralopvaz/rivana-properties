@@ -10,6 +10,7 @@ import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, WavesIcon, GolfIcon, Sp
 import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
 import { ProcessTimeline } from '@/components/home/ProcessTimeline';
+import { PersonalSearchSection } from '@/components/home/PersonalSearchSection';
 
 import homeHero from '@/assets/thompson-sky-beach.webp';
 import presaleHero from '@/assets/presale-hero.jpg';
@@ -208,6 +209,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* ── PERSONAL PROPERTY SEARCH (EN only) ── */}
+      {language === 'en' && <PersonalSearchSection />}
 
       {/* ── COLLECTIONS GRID ── */}
       <section className="py-12 md:py-24 lg:py-32 bg-background">
