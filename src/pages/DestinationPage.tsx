@@ -196,16 +196,21 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const subPageConfig = subPage ? config.subPages.find((sp) => sp.segment === subPage) : undefined;
   const isZHEn = destinationKey === 'zona-hotelera' && language === 'en' && !subPage;
   const isCMEn = destinationKey === 'costa-mujeres' && language === 'en' && !subPage;
+  const isPCEn = destinationKey === 'puerto-cancun' && language === 'en' && !subPage;
   const seoTitle = isZHEn
     ? 'Luxury Condos for Sale in Cancún Hotel Zone — 2026 Guide | Rivana'
     : isCMEn
       ? 'Luxury Condos for Sale in Costa Mujeres — 2026 Investment Guide | Rivana'
-      : subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
+      : isPCEn
+        ? 'Luxury Condos & Marina Residences for Sale in Puerto Cancún — 2026 Guide | Rivana'
+        : subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
   const seoDescription = isZHEn
     ? "Beachfront condos and penthouses for sale in Cancún's Hotel Zone from $514K USD. Zone-by-zone pricing, 8–12% rental yields, pre-sale opportunities, and bilingual advisory for foreign buyers."
     : isCMEn
       ? 'Pre-sale condos and oceanfront residences in Costa Mujeres from $248K USD. The fastest-appreciating luxury corridor north of Cancún — St. Regis, 22% YoY growth, and Dhamar available now through Rivana.'
-      : subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
+      : isPCEn
+        ? 'Marina residences, branded condos, and beachfront penthouses in Puerto Cancún from $730K USD. SLS, Thompson Hotels by Hyatt, Grand Hyatt — the most prestigious residential address in Cancún. Rivana advisory.'
+        : subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
   const h1Text = subPageConfig ? subPageConfig.seo.h1[language] : config.seo.h1[language];
   const basePathLocale = language === 'en' ? `/en${config.basePath}` : config.basePath;
   const currentPath = subPage ? `${basePathLocale}/${subPage}` : basePathLocale;
@@ -308,7 +313,40 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
       ),
     },
   ];
-  const currentFaqs = isZHEn ? zhEnFaqs : isCMEn ? cmEnFaqs : (faqs[language] || faqs.es);
+  const pcEnFaqs = [
+    {
+      q: 'What is the price range for condos and residences in Puerto Cancún?',
+      a: 'Entry-level condominiums in Puerto Cancún start at approximately $400,000 USD for non-view units in standard buildings. Branded residences — SLS Ocean Beach, Thompson Private Residences, and Vellmari Grand Living — start at $730,000 USD for Thompson and $1.6M USD for SLS, reflecting the premium associated with branded hotel management and beachfront or marina positioning. Marina waterfront homes with private dock access reach $15M USD and above. The zone commands the highest sustained price-per-square-metre in the Cancún metropolitan area, with pricing in the marina sub-zone running approximately $3,800 USD per square metre for new branded developments.',
+    },
+    {
+      q: "What makes Puerto Cancún different from Cancún's Hotel Zone?",
+      a: 'The Hotel Zone is a beach-first tourist corridor — high rental demand, established infrastructure, but dense and commercial. Puerto Cancún is a master-planned residential district built around a private marina, championship golf course, gated residential neighbourhoods, international schools, and a lifestyle shopping centre with 220+ tenants. It is where full-time residents and long-term property owners choose to live, not where tourists pass through. The two zones serve different buyer profiles and investment theses — Puerto Cancún attracts buyers who prioritise residential quality of life alongside rental yield, while the Hotel Zone optimises for short-term rental income above other considerations. For a detailed comparison, read our Mayakoba vs. Puerto Cancún analysis.',
+      aNode: (
+        <>
+          The Hotel Zone is a beach-first tourist corridor — high rental demand, established infrastructure, but dense and commercial. Puerto Cancún is a master-planned residential district built around a private marina, championship golf course, gated residential neighbourhoods, international schools, and a lifestyle shopping centre with 220+ tenants. It is where full-time residents and long-term property owners choose to live, not where tourists pass through. The two zones serve different buyer profiles and investment theses — Puerto Cancún attracts buyers who prioritise residential quality of life alongside rental yield, while the Hotel Zone optimises for short-term rental income above other considerations. For a detailed comparison, read our{' '}
+          <Link to={localePath('/journal/mayakoba-vs-puerto-cancun')} className="text-primary hover:underline">Mayakoba vs. Puerto Cancún</Link>
+          {' '}analysis.
+        </>
+      ),
+    },
+    {
+      q: 'What rental yields do Puerto Cancún properties generate?',
+      a: 'Branded residences in Puerto Cancún — particularly SLS Ocean Beach and Thompson Private Residences — generate annual rental yields of 8–12% of purchase price through short-term vacation rentals, consistent with the broader Cancún luxury market. The key advantage of branded developments is the hotel management infrastructure: the SLS and Thompson hotel operations manage rental bookings, housekeeping, and guest services professionally, which sustains higher occupancy and nightly rates than self-managed units. The July 2026 opening of the Grand Hyatt Cancún Beach Resort within the district is expected to elevate nightly rate benchmarks across all Puerto Cancún properties by increasing international visitor awareness of the zone.',
+    },
+    {
+      q: 'Can foreigners buy property in Puerto Cancún?',
+      a: "Yes, without restriction. Puerto Cancún falls within Mexico's coastal Restricted Zone, which means all foreign buyers — American, Canadian, European, or any nationality — hold title through a fideicomiso bank trust rather than direct ownership. The fideicomiso is a government-regulated structure in place since 1973 that grants full ownership rights including the right to sell, rent, renovate, and pass property to heirs. All three of Rivana's Puerto Cancún listings — SLS Ocean Beach, Thompson Residences, and Vellmari Grand Living — have established fideicomiso frameworks that our team manages from contract through closing.",
+    },
+    {
+      q: 'What is Thompson Private Residences and why is it significant?',
+      a: 'Thompson Private Residences Puerto Cancún is the first independent residential development in the world under the Thompson Hotels brand by Hyatt, recognised with the Paris Design Award for excellence in hospitality and residential design. Developed by AZUL Hospitality & Real Estate Group — a group with over 40 years of experience and more than 25 exclusive projects in Cancún and the Riviera Maya, and Hyatt\'s "Developer of the Year" in 2023 — it represents the translation of Thompson\'s lifestyle hospitality standard into a full-time residential product. At launch, over 50% of units were already placed, reflecting sustained international investor demand. Rivana has full pricing, floor plan, and payment structure details available for qualified buyers.',
+    },
+    {
+      q: 'How does the Grand Hyatt opening affect Puerto Cancún property values?',
+      a: 'Significantly and durably. A 500-room Grand Hyatt is a Category 6 flagship property that participates in the global World of Hyatt loyalty programme, bringing millions of high-income members into direct awareness of Puerto Cancún as a destination. Historically, the arrival of a grand-scale internationally branded resort in a residential district generates the following sequence: elevated international visitor volume, higher average daily rates across competing hotels and rental properties, increased demand for short-term residential rentals, and sustained upward pressure on purchase prices for properties within the district. Puerto Cancún is entering that sequence now. Buyers in SLS Ocean Beach, Thompson Residences, and Vellmari Grand Living are positioned to benefit directly.',
+    },
+  ];
+  const currentFaqs = isZHEn ? zhEnFaqs : isCMEn ? cmEnFaqs : isPCEn ? pcEnFaqs : (faqs[language] || faqs.es);
 
   return (
     <div>
@@ -393,7 +431,9 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                 ? "Why invest in Cancún's Hotel Zone?"
                 : isCMEn
                   ? 'Why Costa Mujeres is the highest-conviction investment on the Caribbean coast'
-                  : subPageConfig
+                  : isPCEn
+                    ? "Puerto Cancún: where Cancún's most discerning buyers have always lived — and why 2026 changes everything"
+                    : subPageConfig
                   ? (language === 'es' ? `${subPageConfig.seo.h1.es}` : `${subPageConfig.seo.h1.en}`)
                   : (language === 'es' ? `¿Por qué ${config.name[language]}?` : `Why ${config.name[language]}?`)
               }</h2>
@@ -430,6 +470,20 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                   <p>For investors, this is the most important variable: you are buying pre-completion in a zone where the supply ceiling is visible and approaching. Buyers who enter before that ceiling is reached historically capture the most significant appreciation. Pre-sale entry into Dhamar puts buyers at today's pricing with delivery timed precisely to coincide with the zone's full establishment as an ultra-luxury destination.</p>
                   <h3 className="font-display text-2xl text-foreground mt-6">The 26 kilometres that define the investment thesis</h3>
                   <p>Costa Mujeres occupies 26 kilometres of Caribbean coastline with a breakwater-protected beach that keeps the water consistently calm and clear — a physical characteristic that the Hotel Zone, exposed to open-ocean swells, cannot replicate. This is not a marketing claim; it is a geographic fact that drives meaningfully higher satisfaction rates among short-term rental guests and repeat visitors, which in turn supports above-average occupancy and nightly rates for professionally managed units in the zone.</p>
+                </div>
+              ) : isPCEn ? (
+                <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
+                  <p>Puerto Cancún is not a resort destination. It is the city's most refined residential district — a master-planned community built around a private full-service marina, an 18-hole championship golf course, and a coastal lifestyle that is deliberately separated from the tourist corridor two kilometres to the south. It is where Cancún's most successful families live, where international executives relocate when they move to the city, and where the highest price-per-square-metre in the metropolitan area has been consistently sustained for over a decade.</p>
+                  <p>That positioning is not changing in 2026. What is changing is the scale of institutional validation arriving in a single calendar year.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">The Grand Hyatt effect</h3>
+                  <p>On July 1, 2026, the Grand Hyatt Cancún Beach Resort opens its doors in Puerto Cancún — a 500-room luxury property with 16 dining venues, nine swimming pools, an indoor-outdoor spa, 30,000 square feet of event space, and direct beach access. This is the grand-scale beachfront resort that Puerto Cancún has always had the infrastructure to support but never had. Its arrival fundamentally repositions the district for an international audience.</p>
+                  <p>For property investors, what the Grand Hyatt represents is a formal signal from one of the world's largest hospitality corporations — Hyatt Hotels Corporation — that Puerto Cancún is a destination worthy of a flagship property. The Grand Hyatt anchors Puerto Cancún as the marina-and-golf district between the Hotel Zone and downtown, a property that will reshape how visitors think about Puerto Cancún as a base. Institutional hospitality investment of this scale consistently precedes the next leg of residential price appreciation in any coastal market. It brings international visitor awareness, raises the average nightly rate of the surrounding area, and validates the investment thesis for buyers who have been evaluating the zone.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">Three global brands. One district.</h3>
+                  <p>Puerto Cancún now houses three internationally branded residential developments simultaneously: Thompson Private Residences — the first independent residential development in the world under the Thompson Hotels brand by Hyatt, recognised with the Paris Design Award for excellence in hospitality and residential design. SLS Ocean Beach, backed by Related Group — one of the United States' most respected luxury developers — with the SLS brand operating the hotel and residences programme from day one. And Vellmari Grand Living, a large-format marina-front residence with direct lagoon and marina access.</p>
+                  <p>This brand concentration in a single district is rare in any market. In Cancún it is unprecedented. What it means for buyers: the rental management infrastructure, the international buyer demand, and the brand recognition that sustains premium nightly rates across all three developments reinforce each other. A buyer in any one of these projects benefits from the halo effect of the others.</p>
+                  <h3 className="font-display text-2xl text-foreground mt-6">The physical advantages that cannot be replicated</h3>
+                  <p>Puerto Cancún occupies the geographic sweet spot between the Hotel Zone and downtown Cancún — close enough to the tourist corridor for rental demand, far enough from it for residential quality of life. The private marina provides yacht berths, waterfront dining, and a walking promenade that functions as a genuine urban amenity. The community includes a full-service marina, golf course, resorts, condominiums, single-family homes, a state-of-the-art fitness and recreation centre, a protected natural reserve, and a lifestyle shopping mall with over 220 tenants including fine dining, art galleries and children's entertainment.</p>
+                  <p>No other district in Cancún combines this range of amenities within a single, gated, master-planned footprint. The Hotel Zone has the beach but lacks the marina lifestyle and residential density controls. Costa Mujeres has the appreciation upside but is 20 minutes from the city. Puerto Cancún sits at the intersection of both — premium lifestyle infrastructure and genuine city access — which is why it has commanded the highest sustained price-per-square-metre in the market for over a decade and will continue to do so.</p>
                 </div>
               ) : (
                 <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
@@ -500,6 +554,32 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                   <p>The May 2026 opening of the Nichupté Bridge is not a minor convenience update — it is a structural change to the Hotel Zone's investment thesis. Before the bridge, the southern Hotel Zone (Km 12–23) was functionally isolated from downtown Cancún. Residents and guests faced 30–45 minute drives around the lagoon to reach the airport, hospitals, and commercial centres. That friction suppressed property values in the southern zone relative to its actual beach and view quality.</p>
                   <p>The bridge eliminates that friction. The Cancún International Airport is now 15 minutes from the Grand Island complex. Downtown healthcare, banking, and commercial infrastructure are under 10 minutes away. The price gap between the southern zone and the central strip has already begun to close, and analysts tracking the Quintana Roo market expect continued convergence over the next 18–24 months.</p>
                   <p>For buyers considering The Residences at Grand Island Cancun or Bay View Grand at Grand Island — both located in the Punta Nizuc zone — the timing is meaningful. Pre-sale pricing reflects the pre-bridge reality. Delivery pricing will reflect the new one.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {/* 2026 Grand Hyatt section — EN Puerto Cancún only */}
+      {isPCEn && (
+        <section className="py-20 bg-card border-y border-border">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+            <ScrollReveal>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <h2>2026: the year Puerto Cancún gained its beachfront anchor</h2>
+                <div className="space-y-4 text-muted-foreground font-body text-base leading-relaxed">
+                  <p>For years, the single gap in Puerto Cancún's otherwise complete luxury infrastructure was the absence of a grand-scale beachfront resort. Hotels existed in the district, but nothing that matched the scale and brand recognition of the Hotel Zone's flagship properties. The Grand Hyatt Cancún Beach Resort, opening July 2026, closes that gap permanently.</p>
+                  <p>The 500-room Grand Hyatt Cancún Beach Resort features 28 rooms with private plunge pools, a spa, fitness centre, several swimming pools, beach club access, and 16 food and beverage options. It participates in the World of Hyatt loyalty programme, which brings the district into the consideration set of the global Hyatt member base — tens of millions of high-income travellers making booking decisions year-round.</p>
+                  <p>
+                    For residential owners in{' '}
+                    <Link to={localePath('/propiedad/sls-ocean-beach-puerto-cancun')} className="text-primary hover:underline">SLS Ocean Beach</Link>
+                    {', '}
+                    <Link to={localePath('/propiedad/thompson-residences-puerto-cancun')} className="text-primary hover:underline">Thompson Residences</Link>
+                    {', and '}
+                    <Link to={localePath('/propiedad/vellmari-grand-living')} className="text-primary hover:underline">Vellmari Grand Living</Link>
+                    {', this means elevated short-term rental demand, higher average nightly rates, and a more internationally recognised address for listing platforms. The rising tide of the Grand Hyatt lifts all three developments directly.'}
+                  </p>
                 </div>
               </div>
             </ScrollReveal>
@@ -626,7 +706,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <p className="eyebrow mb-4">{t('dest.commonQuestions')}</p>
-            <h2 className="mb-12">{isZHEn ? 'Common questions about buying in the Hotel Zone' : isCMEn ? 'Common questions about investing in Costa Mujeres' : t('dest.faq')}</h2>
+            <h2 className="mb-12">{isZHEn ? 'Common questions about buying in the Hotel Zone' : isCMEn ? 'Common questions about investing in Costa Mujeres' : isPCEn ? 'Common questions about buying in Puerto Cancún' : t('dest.faq')}</h2>
           </ScrollReveal>
           <div className="max-w-3xl space-y-3">
             {currentFaqs.map((faq, i) => (
@@ -651,6 +731,11 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
           {isCMEn && (
             <div className="max-w-3xl mt-12 text-muted-foreground font-body text-base leading-relaxed">
               <p>Costa Mujeres is the zone where Rivana has the strongest conviction heading into the second half of 2026. The infrastructure cycle, the brand arrivals, and the pre-sale pricing window at Dhamar create a combination that does not frequently align in a single market at a single moment. If you are evaluating a first purchase in the Cancún corridor or adding to an existing portfolio, this is the conversation we most want to have. Celia leads our Costa Mujeres advisory and has closed transactions across multiple sub-zones in the corridor. Schedule a call or request pricing directly — floor plans and payment structures are available for immediate qualified review.</p>
+            </div>
+          )}
+          {isPCEn && (
+            <div className="max-w-3xl mt-12 text-muted-foreground font-body text-base leading-relaxed">
+              <p>Puerto Cancún is Rivana's highest-average-ticket market, and it is the zone we know most thoroughly. SLS Ocean Beach, Thompson Private Residences, and Vellmari Grand Living each occupy a distinct position within the district — different buyer profiles, different investment structures, different rental yield mechanisms. Understanding which one aligns with your objectives requires a detailed conversation, not a brochure. Celia leads our Puerto Cancún advisory and has guided buyers through all three developments. Schedule a call or request pricing directly — floor plans, payment structures, and comparative analysis across the three listings are available immediately for qualified buyers.</p>
             </div>
           )}
         </div>
