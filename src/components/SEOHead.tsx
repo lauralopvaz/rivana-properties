@@ -70,7 +70,7 @@ export const SEOHead = ({
   const hreflangLinks = [
     { lang: 'es', href: `${BASE_URL}${esPath}` },
     { lang: 'en', href: `${BASE_URL}${enPath}` },
-    { lang: 'x-default', href: `${BASE_URL}${esPath}` },
+    { lang: 'x-default', href: `${BASE_URL}${enPath}` },
   ];
 
   // Determine og:locale based on path
