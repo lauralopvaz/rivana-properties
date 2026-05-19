@@ -351,7 +351,40 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
       a: 'Significantly and durably. A 500-room Grand Hyatt is a Category 6 flagship property that participates in the global World of Hyatt loyalty programme, bringing millions of high-income members into direct awareness of Puerto Cancún as a destination. Historically, the arrival of a grand-scale internationally branded resort in a residential district generates the following sequence: elevated international visitor volume, higher average daily rates across competing hotels and rental properties, increased demand for short-term residential rentals, and sustained upward pressure on purchase prices for properties within the district. Puerto Cancún is entering that sequence now. Buyers in SLS Ocean Beach, Thompson Residences, and Vellmari Grand Living are positioned to benefit directly.',
     },
   ];
-  const currentFaqs = isZHEn ? zhEnFaqs : isCMEn ? cmEnFaqs : isPCEn ? pcEnFaqs : (faqs[language] || faqs.es);
+  const mkEnFaqs = [
+    {
+      q: 'What exactly is Mayakoba and where is it located?',
+      a: "Mayakoba is a 240-hectare master-planned eco-luxury resort estate on the Caribbean coast of the Riviera Maya, located approximately 45 minutes south of Cancún International Airport along Federal Highway 307, near Playa del Carmen. The complex houses four five-star hotel brands — Rosewood Mayakoba, Fairmont Mayakoba, Banyan Tree Mayakoba, and Alila Mayakoba — connected by a system of cenote-fed lagoon canals navigable by boat. The El Camaleón Golf Club, a PGA Tour championship course and host of the Mayakoba Golf Classic, runs through the estate. The Fairmont Mayakoba served as the official base camp for Uruguay's national team during the 2026 FIFA World Cup, following FIFA technical certification of the facilities.",
+    },
+    {
+      q: 'What is The Reserve at Mayakoba and how is it different from other Riviera Maya developments?',
+      a: 'The Reserve at Mayakoba is the only residential development located inside the Mayakoba estate perimeter — within the same gated complex, security infrastructure, and canal system as the four hotel brands. It is not an adjacent or nearby development; it is inside. Owners have access to Mayakoba\'s shared amenities including golf, beach club, and concierge services. The development comprises 144 four-bedroom villas of 660 square metres — larger floor plans than the compressed condo layouts typical of the Riviera Maya market — designed for buyers seeking a genuine primary or secondary residence at the top of the luxury tier. Supply is fixed and finite: when the 144 units are sold, no additional inventory can be created within the estate.',
+    },
+    {
+      q: 'What is the price range and investment thesis for The Reserve at Mayakoba?',
+      a: "The Reserve at Mayakoba is priced from USD $1.1M for a four-bedroom villa of 660 square metres. The investment thesis rests on three factors: fixed supply within an irreplaceable, internationally certified location; rental income potential supported by the Mayakoba brand ecosystem during non-occupancy periods; and 16% year-over-year appreciation that reflects the zone's sustained premium positioning. The World Cup 2026 has accelerated global awareness of Mayakoba as a destination, bringing institutional credibility from FIFA's base camp certification that belongs to the address permanently. Buyers with a five-to-ten-year horizon entering at current pre-sale pricing are positioned ahead of the full valuation that accompanies the estate's completed residential build-out.",
+    },
+    {
+      q: 'Can Americans and Canadians buy property inside Mayakoba?',
+      a: "Yes, without restriction. As with all coastal property in Mexico, The Reserve at Mayakoba is purchased through a fideicomiso — a government-regulated bank trust that grants foreign buyers full ownership rights including the right to sell, rent, renovate, and pass the property to heirs. The Mayakoba estate's legal and administrative infrastructure is well-established, with decades of international ownership experience across the hotel brands and their associated residential products. Rivana's advisory team manages the complete acquisition process including fideicomiso setup, notary coordination, and title due diligence.",
+    },
+    {
+      q: 'What does the 2026 FIFA World Cup base camp selection mean for Mayakoba property values?',
+      a: "The selection of Fairmont Mayakoba as the official base camp for Uruguay's national team during FIFA World Cup 2026 is a structural credential, not a temporary event. FIFA's base camp certification process evaluates security, privacy, medical services, nutrition infrastructure, and training facilities against the most demanding international standards. A property that passes that evaluation — and which hosted a national team during the most-watched global sporting event in history — carries a permanent marker of operational excellence. For Mayakoba real estate, this translates into sustained international awareness among the highest-income traveller demographic and long-term validation of the destination's premium positioning. The appreciation effect is durable because the credential is permanent.",
+    },
+    {
+      q: 'How does Mayakoba compare to Puerto Cancún or Costa Mujeres as an investment?',
+      a: "The three zones serve distinct investment profiles. Puerto Cancún offers the highest liquidity and the strongest rental management infrastructure in Cancún proper — the right choice for buyers who prioritise ease of management and urban access alongside investment returns. Costa Mujeres offers the highest short-term appreciation upside in the corridor, with pre-sale pricing that has not yet caught up to the zone's actual quality level. Mayakoba occupies a separate category entirely: it is the only option that places a buyer inside an internationally recognised, multi-brand resort estate with a finite and irreplaceable supply ceiling. For a direct zone-by-zone comparison, read our Mayakoba vs. Puerto Cancún analysis. For buyers unsure which profile fits, Rivana's advisory process begins with exactly this conversation.",
+      aNode: (
+        <>
+          The three zones serve distinct investment profiles. Puerto Cancún offers the highest liquidity and the strongest rental management infrastructure in Cancún proper — the right choice for buyers who prioritise ease of management and urban access alongside investment returns. Costa Mujeres offers the highest short-term appreciation upside in the corridor, with pre-sale pricing that has not yet caught up to the zone's actual quality level. Mayakoba occupies a separate category entirely: it is the only option that places a buyer inside an internationally recognised, multi-brand resort estate with a finite and irreplaceable supply ceiling. For a direct zone-by-zone comparison, read our{' '}
+          <Link to={localePath('/journal/mayakoba-vs-puerto-cancun')} className="text-primary hover:underline">Mayakoba vs. Puerto Cancún</Link>
+          {' '}analysis. For buyers unsure which profile fits, Rivana's advisory process begins with exactly this conversation.
+        </>
+      ),
+    },
+  ];
+  const currentFaqs = isZHEn ? zhEnFaqs : isCMEn ? cmEnFaqs : isPCEn ? pcEnFaqs : isMKEn ? mkEnFaqs : (faqs[language] || faqs.es);
 
   return (
     <div>
