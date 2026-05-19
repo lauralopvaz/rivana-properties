@@ -345,7 +345,7 @@ const JournalPost = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={isCanadianGuide ? [schema, canadianFaqSchema] : schema} ogImage={article.image} hreflangEs={`/journal/${articleSlug}`} hreflangEn={`/en/journal/${enSlug}`} />
+      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={isCanadianGuide ? [schema, canadianFaqSchema] : isRetireGuide ? [schema, retireFaqSchema] : schema} ogImage={article.image} hreflangEs={`/journal/${articleSlug}`} hreflangEn={`/en/journal/${enSlug}`} />
 
       {/* Reading Progress */}
       <div className="fixed top-0 left-0 right-0 z-[200]">
@@ -443,6 +443,8 @@ const JournalPost = () => {
               language === 'en' ? <PortugalMayakobaBodyEN /> : <PortugalMayakobaBodyES />
             ) : articleSlug === 'buying-property-mexico-canadian-2026-guide' ? (
               <CanadianBuyerGuideBodyEN />
+            ) : articleSlug === 'retire-cancun-riviera-maya-american-canadian-2026' ? (
+              <RetireCancunBodyEN />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
