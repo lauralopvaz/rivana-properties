@@ -194,8 +194,13 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   if (!config) return <div className="pt-32 text-center"><h1>Destination not found</h1></div>;
 
   const subPageConfig = subPage ? config.subPages.find((sp) => sp.segment === subPage) : undefined;
-  const seoTitle = subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
-  const seoDescription = subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
+  const isZHEn = destinationKey === 'zona-hotelera' && language === 'en' && !subPage;
+  const seoTitle = isZHEn
+    ? 'Luxury Condos for Sale in Cancún Hotel Zone — 2026 Guide | Rivana'
+    : subPageConfig ? subPageConfig.seo.title[language] : config.seo.title[language];
+  const seoDescription = isZHEn
+    ? "Beachfront condos and penthouses for sale in Cancún's Hotel Zone from $514K USD. Zone-by-zone pricing, 8–12% rental yields, pre-sale opportunities, and bilingual advisory for foreign buyers."
+    : subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
   const h1Text = subPageConfig ? subPageConfig.seo.h1[language] : config.seo.h1[language];
   const basePathLocale = language === 'en' ? `/en${config.basePath}` : config.basePath;
   const currentPath = subPage ? `${basePathLocale}/${subPage}` : basePathLocale;
