@@ -31,7 +31,7 @@ export const ImmediateDeliveryCard = ({ unit, priority = false }: Props) => {
           style={{ background: ready ? '#CFAE60' : '#1C1C1C' }}
         >
           {ready
-            ? language === 'es' ? '✓ Listo Ahora' : '✓ Ready Now'
+            ? language === 'es' ? '✓ Llave en mano' : '✓ Ready Now'
             : language === 'es' ? 'Personalización' : 'Custom Build'}
         </span>
       </div>
