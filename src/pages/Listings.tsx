@@ -167,7 +167,10 @@ const Listings = () => {
   const { language, localePath } = useLanguage();
   const L = language;
   const allZones = L === 'es' ? 'Todas las Zonas' : 'All Zones';
-  const allStatus = L === 'es' ? 'Todo el Estatus' : 'All Status';
+  const availabilityLabel = L === 'es' ? 'Disponibilidad' : 'Availability';
+  const allStatus = L === 'es' ? 'Todos' : 'All';
+  const preSaleLabel = L === 'es' ? 'Preventa' : 'Pre-sale';
+  const immediateLabel = L === 'es' ? 'Entrega Inmediata' : 'Immediate Delivery';
   const allTypes = L === 'es' ? 'Todos los Tipos' : 'All Types';
   const [zone, setZone] = useState(allZones);
   const [status, setStatus] = useState(allStatus);
@@ -196,7 +199,7 @@ const Listings = () => {
     .filter(p => zone === allZones || p.zone === zone)
     .filter(p => {
       if (status === allStatus) return true;
-      if (status === (L === 'es' ? 'Preventa' : 'Pre-Sale')) return p.status === 'preventa';
+      if (status === preSaleLabel) return p.status === 'preventa';
       return p.status === 'entrega-inmediata';
     })
     .filter(p => {
@@ -237,7 +240,7 @@ const Listings = () => {
   };
 
   const zonesL = [allZones, 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Residencial Cancún', 'Tulum', 'Cancún Centro'];
-  const statusesL = [allStatus, L === 'es' ? 'Preventa' : 'Pre-Sale', L === 'es' ? 'Entrega Inmediata' : 'Ready to Move'];
+  const statusesL = [allStatus, immediateLabel, preSaleLabel];
   const typesL = [allTypes, L === 'es' ? 'Departamento' : 'Apartment', L === 'es' ? 'Condominio' : 'Condo', 'Penthouse', 'Villa'];
 
   const seoTitle = L === 'es' ? 'Propiedades en Venta — Cancún | Rivana' : 'Properties for Sale — Cancún | Rivana';
@@ -266,8 +269,8 @@ const Listings = () => {
             ))}
           </FilterDropdown>
 
-          {/* Status */}
-          <FilterDropdown label={allStatus} activeLabel={status} isOpen={openFilter === 'status'} onToggle={() => toggle('status')}>
+          {/* Availability (Disponibilidad) */}
+          <FilterDropdown label={availabilityLabel} activeLabel={status === allStatus ? availabilityLabel : status} isOpen={openFilter === 'status'} onToggle={() => toggle('status')}>
             {statusesL.map(s => (
               <button key={s} onClick={() => { setStatus(s); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: s === status ? '#CFAE60' : '#1C1C1C' }}>
                 {s}
