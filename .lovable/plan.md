@@ -1,62 +1,96 @@
-## Implementation Plan: "Ready Now" / "Entregas Inmediatas"
+## Plan: Edificio Salvia · Zona Hotelera
+
+Goal: Add the Salvia Building (3 turn-key oceanfront penthouses in Chac Mool / Forum Beach, Hotel Zone) as a new "Immediate Delivery / Turn-Key Operating Business" pillar of the site, fully bilingual ES/EN, consistent with the existing editorial luxury system (Cormorant + Jost, gold #CFAE60 / black #1C1C1C, border-radius 0).
 
 ### 1. Data layer
-Create `src/data/immediate-delivery.ts` with the 4 La Amada units (305L, 205M, 2BR, PH 07M) typed for bilingual use:
-- id, slug, unitName, subtitle (ES/EN), location, area, beds/baths/parking
-- price MXN, furnished status, moveInReady label (ES/EN)
-- features list (ES/EN), badge label, detail URLs, image
-- `moveInReady: boolean` flag for filtering (305L = false, others = true)
 
-### 2. Home page section ("Ready Now" / "Listo Ahora")
-Edit `src/pages/Index.tsx`. Insert a new `<section>` immediately after Featured Properties:
-- Eyebrow + H2 + subtitle (bilingual)
-- 4-column responsive grid (1 / 2 / 4 cols) of compact cards
-- Each card: image, "✅ Listo Ahora" gold pill badge, unit name + subtitle, location, m² · beds · baths, MXN price, "Ver Detalles" link → unit page, "Agendar Tour" → WhatsApp with prefilled message
-- CTA "Explorar todas las propiedades listas" → `/entregas-inmediatas`
-- Reuse existing tokens (`bg-background`, `text-secondary`, `text-primary`, Cormorant + Jost), `rounded-sm`, gold accents — consistent with the rest of Home
+Create `src/data/salvia-units.ts` — the canonical bilingual source for the 3 units. Each unit includes: id, slug, code, asking price (USD + MXN derived), area (sq ft + m²), layout, capacity, beds/baths, views, balcony type, hurricane shutters flag, Airbnb rating / reviews / track-record years, average annual revenue (USD), 2025 net income, 2025 expenses, average nightly rate, average occupancy, peak occupancy, monthly maintenance, beach tax, property tax, gross ROI, net ROI, full 5-year (or 3-year) performance history table, amenities/upgrades lists (ES/EN), images, WhatsApp prefilled message (ES/EN), SEO meta (ES/EN).
+
+Also export:
+- `salviaBuilding` — bilingual building metadata (description, value props, amenities, location, distances, transport, staff/services/facilities, comparison table headers).
+- `salviaUnits` — array of 3 units (3B, 2A, 604AB).
+- Helpers: `salviaUnitPath(slug, isEnglish)`, `salviaLandingPath(isEnglish)`, `formatUSD(n)`, `whatsappUrl(msg)`.
+
+### 2. Images
+
+Use existing `src/assets/la-amada.jpg` as a placeholder hero only if no Salvia photo is available — but the prompt lists 9 unit images (e.g. `salvia-3b-bedroom.jpg`). Since no binaries were attached, generate three editorial placeholder hero images per unit + one building hero via `imagegen` (ocean penthouse interiors, wrap-around balcony, building exterior with pool), upload them via `lovable-assets`, and reference the `.asset.json` URLs. When the user later sends real photos we'll swap the asset JSON.
 
 ### 3. Reusable card
-New `src/components/ImmediateDeliveryCard.tsx` so Home, Listings filter results, and the dedicated page all render identically.
 
-### 4. Listings filter rename
-Edit `src/pages/Listings.tsx`:
-- Rename the "Estatus" filter to "Disponibilidad" (ES) / "Availability" (EN)
-- Options: Todos / Entrega Inmediata / Preventas (ES); All / Immediate Delivery / Pre-sale (EN)
-- When "Entrega Inmediata" is selected, restrict results to properties flagged `moveInReady` (the 3 La Amada ready units injected into the listings data source) and render the ✅ badge on those cards
-- Keep all other filters untouched
+New `src/components/SalviaUnitCard.tsx` — editorial card showing image, gold "Turn-Key · Immediate Delivery" pill, unit code + name, beds · baths · sq ft, rating ★ + reviews, asking price USD, ROI badge (gold for highest), "Ver Detalles" → unit page + "WhatsApp" → prefilled message. Used on Home, Immediate Delivery page, and Listings.
 
-### 5. Dedicated page `/entregas-inmediatas` (ES) and `/en/immediate-delivery` (EN)
-New `src/pages/ImmediateDelivery.tsx` with bilingual copy driven by `useLanguage()`. Sections in order:
+### 4. Dedicated landing page
 
-1. **Hero** — La Amada aerial, headline, subhead, primary CTA "Explorar Propiedades" → scroll to grid
-2. **Why Choose Ready Now** — 4 benefit cards (No Delays, Immediate Income, All Included, Zero Stress) with icons from `src/components/icons.tsx`
-3. **Featured Grid** — 4 units via `ImmediateDeliveryCard`
-4. **Ready Now vs Pre-Sale** — comparison table (6 rows: timeline, furnishing, income, customization, rental, pricing)
-5. **Investment Benefits** — 3 cards (Rental Income, Tax Advantage, Flexibility)
-6. **What's Included** — 2-column list (Furnished checklist / Unfurnished checklist)
-7. **Process Timeline** — 4 steps (Consultation → Tour → Offer → Close 30–45 days)
-8. **FAQ** — Accordion with the 5 Q&A from the brief
-9. **Final CTA** — Schedule private showing (opens existing `SchedulingModal`) + WhatsApp +52 998 845 7224
+New `src/pages/SalviaBuilding.tsx` mounted at `/zona-hotelera/edificio-salvia` (ES) and `/en/hotel-zone/salvia-building` (EN). Sections:
 
-`SEOHead` with bilingual title/description, self-canonical + hreflang via the existing pattern, `ItemList` JSON-LD of the 4 units.
+1. Hero — full-width building image, eyebrow "Edificio Salvia · Zona Hotelera", H1 bilingual headline, sub "Three oceanfront penthouses · verified returns up to 11.45%", primary CTA "Explore Penthouses" (scroll), WhatsApp secondary.
+2. Operating-business explainer — short paragraph about the authorized STR permit (1 of only 2–3 in the Hotel Zone) and the "buy a business, not just a condo" thesis.
+3. "Why invest in Salvia" — 5 value-prop cards (Unique Permit, Turn-Key Business, Proven ROI up to 11.45%, 5-star Location, Hotel Services Included).
+4. Stats strip — $60K+ avg annual income · 54% avg occupancy · 4.80★ avg rating · 30+ restaurants 1 min · 24h security · 11.45% highest gross ROI.
+5. The 3 penthouses — `SalviaUnitCard` grid (3 cols desktop, 1 mobile), 604AB highlighted with "Guest Favorite" gold ribbon.
+6. Comparison table — full 18-row spec/financial table, horizontally scrollable on mobile, sticky first column.
+7. Performance history — small per-unit table (year / gross revenue / nights / occupancy) inside a tabbed component.
+8. Location & amenities — two-column block: left = walking-distance highlights (1 min / 5 min / transport); right = building staff / services / facilities lists.
+9. Financial transparency note — short paragraph + "All figures verifiable on Airbnb" reassurance (no ROI legal disclaimer per project constraint).
+10. Final CTA — "Schedule a private showing" opens existing global `SchedulingModal` + WhatsApp button.
 
-### 6. Routing
-Edit `src/App.tsx`: lazy-load `ImmediateDelivery` and add:
-- `/entregas-inmediatas`
-- `/en/immediate-delivery`
+`SEOHead` with bilingual title/description, self-canonical + hreflang, ItemList JSON-LD wrapping 3 `RealEstateListing` items (USD price, address, bedrooms, bathrooms, floor size, aggregateRating from Airbnb stats, `datePosted` in YYYY-MM-DD).
 
-### 7. Sitemaps
-Add the two URLs to `public/sitemap.xml` and `public/en/sitemap-en.xml` (priority 0.9, with hreflang alternates).
+### 5. Individual unit pages
+
+New `src/pages/SalviaUnit.tsx` (one component, slug-driven) mounted at:
+- `/zona-hotelera/edificio-salvia/penthouse-3b`
+- `/zona-hotelera/edificio-salvia/penthouse-2a`
+- `/zona-hotelera/edificio-salvia/penthouse-604ab`
+- `/en/hotel-zone/salvia-building/penthouse-3b`
+- `/en/hotel-zone/salvia-building/penthouse-2a`
+- `/en/hotel-zone/salvia-building/penthouse-604ab`
+
+Sections: hero image + price/ROI/rating chips · spec grid · amenities/upgrades · 5-year performance table · financial breakdown card (avg revenue, 2025 net, expenses, nightly rate, occupancy, maintenance, taxes) · building info recap · location · WhatsApp CTA. SEO uses the per-unit meta from the brief plus `RealEstateListing` JSON-LD.
+
+### 6. Home page integration
+
+Edit `src/pages/Index.tsx` — add an "Edificio Salvia · Zona Hotelera" section directly below the existing Featured Properties block: eyebrow + H2, 1-sentence intro, 3-column `SalviaUnitCard` grid, CTA "Ver todas las unidades Salvia" → Salvia landing. Mirrors the look of the existing Immediate Delivery teaser.
+
+### 7. Listings filter
+
+Edit `src/pages/Listings.tsx` — extend the existing "Disponibilidad / Availability" filter so "Entrega Inmediata / Immediate Delivery" returns both the La Amada ready units AND the 3 Salvia penthouses. Add Salvia entries to whatever feeds the listings grid (likely via a thin adapter that maps `SalviaUnit` → the existing listing card shape) so cards render in the same grid; gold "Turn-Key" badge on each.
+
+### 8. Routing
+
+Edit `src/App.tsx` — lazy-load `SalviaBuilding` and `SalviaUnit`, add the 8 routes (2 landing + 6 unit).
+
+### 9. Sitemaps
+
+Add the 8 URLs to `public/sitemap.xml` and `public/en/sitemap-en.xml` with hreflang alternates (priority 0.9 for landing, 0.8 for units).
+
+### Technical notes
+
+- Bilingual via existing `useLanguage()` + `LanguageContext` pattern.
+- Self-canonical with hreflang on every new page, per the SEO memory rules.
+- Strict H1 → H2 → H3 hierarchy, WCAG-AA contrast, all images get descriptive `alt` + `loading="lazy"`.
+- USD prices kept clean integers for JSON-LD; `datePosted` formatted YYYY-MM-DD.
+- No ROI legal disclaimers anywhere (project constraint).
+- WhatsApp uses existing `+52 998 845 7224` with per-unit prefilled messages.
+- No backend/Supabase changes needed — data lives in `src/data/salvia-units.ts` (matches how `immediate-delivery.ts` and `properties.ts` already work).
 
 ### Files
-- new `src/data/immediate-delivery.ts`
-- new `src/components/ImmediateDeliveryCard.tsx`
-- new `src/pages/ImmediateDelivery.tsx`
-- edit `src/pages/Index.tsx`
-- edit `src/pages/Listings.tsx`
-- edit `src/App.tsx`
-- edit `public/sitemap.xml`, `public/en/sitemap-en.xml`
 
-### Out of scope (confirm before adding)
-- Brochure download, financing-info form, and "compare units" tool on the dedicated page — listed in the brief's CTA block but not yet present in the app; will render the buttons only if you confirm targets, otherwise omit.
-- No changes to the existing La Amada landing or unit detail pages.
+New:
+- `src/data/salvia-units.ts`
+- `src/components/SalviaUnitCard.tsx`
+- `src/pages/SalviaBuilding.tsx`
+- `src/pages/SalviaUnit.tsx`
+- `src/assets/salvia-building.jpg.asset.json` (+ 3 unit hero asset JSONs)
+
+Edited:
+- `src/pages/Index.tsx` (Salvia section)
+- `src/pages/Listings.tsx` (filter + adapter)
+- `src/App.tsx` (8 new routes)
+- `public/sitemap.xml`, `public/en/sitemap-en.xml`
+
+### Confirm before building
+
+1. Real Salvia photography — none was attached. Approve generating editorial placeholders now (swap later when you send the 9 listed JPGs), or hold off until you upload them?
+2. Slugs above (`/zona-hotelera/edificio-salvia/…` and `/en/hotel-zone/salvia-building/…`) — keep, or use `/preventa`-style flat slugs like `/edificio-salvia` and `/en/salvia-building`?
+3. The brief's metadata says the Immediate Delivery page should live at `/en/immediate-delivery` (which already exists for La Amada). Should Salvia (a) get its own standalone landing as planned above and ALSO appear inside the existing `/entregas-inmediatas` page, or (b) replace the dedicated Salvia landing with a new "Salvia Building" section appended to the existing Immediate Delivery page?
