@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useSchedulingModal } from "@/contexts/SchedulingModalContext";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { LA_AMADA_HERO_IMAGE } from "@/data/immediate-delivery";
 
 type UnitId = "305l" | "205m" | "2br" | "ph07m";
 
