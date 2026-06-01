@@ -697,7 +697,7 @@ export default function ImmediateDelivery() {
               href={whatsappUrl(WHATSAPP_GENERIC[language])}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 h-14 border border-white/40 text-white font-body text-sm tracking-wide hover:bg-white/10 transition"
+              className="inline-flex items-center justify-center h-14 px-10 font-body text-base tracking-wide bg-[#1C1C1C] text-white border border-white/40 hover:bg-[#1C1C1C]/90 transition-colors"
             >
               Mas información de Salvia
             </a>
