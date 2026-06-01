@@ -284,7 +284,7 @@ export default function SalviaUnit() {
               ? 'Talk to a Rivana advisor to review the full data room, financial statements and Airbnb history.'
               : 'Habla con un asesor Rivana para revisar el data room completo, los estados financieros y el historial Airbnb.'}
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap justify-center gap-[16px]">
             <Button
               size="lg"
               onClick={() => openModal()}
@@ -299,7 +299,7 @@ export default function SalviaUnit() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-12 px-6 font-body text-sm tracking-wide border border-white/40 text-white hover:bg-white/10"
             >
-              WhatsApp +52 998 845 7224
+              Mas información de Salvia
             </a>
           </div>
         </div>
