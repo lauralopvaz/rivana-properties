@@ -438,6 +438,20 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                       {sp.segment === 'preventa' ? (language === 'es' ? 'Preventa' : 'Pre-Sale') : sp.segment.charAt(0).toUpperCase() + sp.segment.slice(1)}
                     </Link>
                   ))}
+                  {(projectsByDestination[destinationKey] || []).some((p) => p.status === 'entrega-inmediata') && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setStatusFilter('entrega-inmediata');
+                        setTimeout(() => {
+                          document.getElementById('featured-projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 50);
+                      }}
+                      className={`text-xs font-body tracking-wider uppercase px-4 py-2 border transition-colors ${statusFilter === 'entrega-inmediata' ? 'border-primary bg-primary/10 text-primary' : 'border-border text-muted-foreground hover:border-primary/30'}`}
+                    >
+                      {language === 'es' ? 'Entrega Inmediata' : 'Move-In Ready'}
+                    </button>
+                  )}
                 </div>
               )}
             </div>
@@ -669,7 +683,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
 
       {/* Featured Projects — Redesigned cards matching Listings */}
       {(projectsByDestination[destinationKey]?.length ?? 0) > 0 && (
-        <section className="py-20">
+        <section id="featured-projects" className="py-20">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <ScrollReveal>
               <p className="eyebrow mb-4">{t('dest.featuredProjects')}</p>
