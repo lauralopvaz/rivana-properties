@@ -234,7 +234,7 @@ const Home = () => {
                 </p>
               </div>
               <Link
-                to={localePath(language === 'es' ? '/entregas-inmediatas' : '/immediate-delivery')}
+                to={language === 'es' ? '/entregas-inmediatas' : '/en/immediate-delivery'}
                 className="text-sm text-primary font-body flex items-center gap-1 gold-underline whitespace-nowrap"
               >
                 {language === 'es' ? 'Ver todas las propiedades listas' : 'Explore all ready properties'}
