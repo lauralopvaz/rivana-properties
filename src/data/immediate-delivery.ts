@@ -1,5 +1,3 @@
-import type { ComponentType } from 'react'
-
 export interface ImmediateUnit {
   id: string
   /** Slug used in listings; routes to /costa-mujeres/la-amada (no per-unit page yet) */
@@ -166,5 +164,3 @@ export const unitDetailPath = (isEnglish: boolean) =>
 
 export const whatsappUrl = (msg: string) =>
   `https://wa.me/529988457224?text=${encodeURIComponent(msg)}`
-
-export type { ComponentType }
