@@ -67,14 +67,14 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '3', label: { es: 'Proyectos', en: 'Projects' } },
+      { val: '4', label: { es: 'Proyectos', en: 'Projects' } },
       { val: '$514K', label: { es: 'Desde USD', en: 'From USD' } },
       { val: '33%', label: { es: 'Plusvalía Preventa', en: 'Pre-Sale Appreciation' } },
       { val: 'The Residences at Grand Island Cancun', label: { es: 'Desarrollo Destacado', en: 'Featured Development' } },
     ],
     chips: {
-      es: ['Ubicación Prime', 'Frente al Mar', '⚽ Mundial 2026'],
-      en: ['Prime Location', 'Beachfront', '⚽ World Cup 2026'],
+      es: ['Ubicación Prime', 'Frente al Mar', 'Entrega Inmediata'],
+      en: ['Prime Location', 'Beachfront', 'Immediate Delivery'],
     },
     intro: {
       es: [
