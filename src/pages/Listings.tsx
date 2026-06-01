@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIcon, AnchorIcon, StarIcon } from '@/components/icons';
+import { moveInReadyUnits } from '@/data/immediate-delivery';
 
 const propMondrian = '/images/mondrian/mondrian-hero.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
@@ -101,8 +102,25 @@ const allProperties: Property[] = [
   { id: 19, name: 'Cuore Cumbres', zone: 'Cancún Centro', type: 'condominio', beds: 3, area: 346, price: 0, priceM2: 0, status: 'preventa', badges: ['alberca-infinity', 'pet-friendly', 'comunidad-cerrada'], image: cuoreCumbresHero, slug: 'cuore-cumbres-cancun' },
 ]; // properties
 
+/* Inject La Amada move-in-ready units (link to landing, not a per-unit page yet). */
+const MXN_TO_USD = 1 / 17.5;
+const laAmadaListings: Property[] = moveInReadyUnits.map((u, idx) => ({
+  id: 1000 + idx,
+  name: `La Amada — ${u.code}`,
+  zone: 'Costa Mujeres',
+  type: 'condominio',
+  beds: u.bedrooms,
+  area: u.area,
+  price: Math.round(u.priceMXN * MXN_TO_USD),
+  priceM2: Math.round((u.priceMXN * MXN_TO_USD) / u.area),
+  status: 'entrega-inmediata',
+  badges: ['frente-mar', 'beach-club', 'club-privado'],
+  image: u.image,
+  slug: u.slug,
+}));
+allProperties.push(...laAmadaListings);
+
 const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Residencial Cancún', 'Tulum', 'Cancún Centro'];
-const statuses = ['Todo el Estatus', 'Preventa', 'Entrega Inmediata'];
 const types = ['Todos los Tipos', 'Departamento', 'Condominio', 'Penthouse', 'Villa'];
 
 /* ── Filter dropdown wrapper ── */
