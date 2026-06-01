@@ -392,14 +392,14 @@ export default function SalviaBuilding() {
               : 'Recorre el edificio, conoce al equipo y revisa los números con un asesor Rivana.'}
           </p>
           <div className="flex flex-wrap justify-center gap-[16px]">
-            <Button
-              size="lg"
+            <button
+              type="button"
               onClick={() => openModal()}
-              className="rounded-none"
-              style={{ background: '#CFAE60', color: '#fff' }}
+              className="inline-flex items-center justify-center h-14 px-10 font-body text-base tracking-wide text-white hover:brightness-110 transition-all"
+              style={{ background: '#CFAE60' }}
             >
               {isEnglish ? 'Schedule Private Showing' : 'Agendar Visita Privada'}
-            </Button>
+            </button>
             <a
               href={salviaWhatsAppUrl(GENERIC_WHATSAPP[language])}
               target="_blank"
