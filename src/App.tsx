@@ -28,6 +28,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const CancunCondos = lazy(() => import("./pages/CancunCondos"));
 const BeachfrontCondos = lazy(() => import("./pages/BeachfrontCondos"));
 const Advisory = lazy(() => import("./pages/Advisory"));
+const LaAmada = lazy(() => import("./pages/LaAmada"));
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
@@ -69,6 +70,7 @@ const AppRoutes = () => (
     <Route path="/cancun/costa-mujeres" element={<DestinationPage destinationKey="costa-mujeres" />} />
     <Route path="/cancun/costa-mujeres/preventa" element={<DestinationPage destinationKey="costa-mujeres" subPage="preventa" />} />
     <Route path="/cancun/costa-mujeres/penthouses" element={<DestinationPage destinationKey="costa-mujeres" subPage="penthouses" />} />
+    <Route path="/costa-mujeres/la-amada" element={<LaAmada />} />
 
     {/* P2: Mayakoba, Puerto Morelos & Playa del Carmen */}
     <Route path="/mayakoba" element={<DestinationPage destinationKey="mayakoba" />} />
@@ -113,6 +115,7 @@ const AppRoutes = () => (
     <Route path="/en/cancun/costa-mujeres" element={<DestinationPage destinationKey="costa-mujeres" />} />
     <Route path="/en/cancun/costa-mujeres/preventa" element={<DestinationPage destinationKey="costa-mujeres" subPage="preventa" />} />
     <Route path="/en/cancun/costa-mujeres/penthouses" element={<Navigate to="/en/cancun/costa-mujeres" replace />} />
+    <Route path="/en/costa-mujeres/la-amada" element={<LaAmada />} />
 
     {/* P2 */}
     <Route path="/en/mayakoba" element={<DestinationPage destinationKey="mayakoba" />} />
