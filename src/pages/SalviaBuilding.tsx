@@ -404,7 +404,7 @@ export default function SalviaBuilding() {
               href={salviaWhatsAppUrl(GENERIC_WHATSAPP[language])}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-12 font-body tracking-wide border-[#1C1C1C] text-[#1C1C1C] hover:bg-[#1C1C1C] hover:text-white transition-colors pr-[40px] border-0 text-base px-[40px]"
+              className="inline-flex items-center justify-center h-14 px-10 font-body text-base tracking-wide bg-[#1C1C1C] text-white hover:bg-[#1C1C1C]/90 transition-colors"
             >
               Mas información de Salvia
             </a>

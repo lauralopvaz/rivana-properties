@@ -297,7 +297,7 @@ export default function SalviaUnit() {
               href={salviaWhatsAppUrl(unit.whatsappMsg[language])}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-12 px-6 font-body text-sm tracking-wide border border-white/40 text-white hover:bg-white/10"
+              className="inline-flex items-center justify-center h-14 px-10 font-body text-base tracking-wide bg-[#1C1C1C] text-white border border-white/40 hover:bg-[#1C1C1C]/90 transition-colors"
             >
               Mas información de Salvia
             </a>
