@@ -568,9 +568,9 @@ export default function LaAmada() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-14 px-10 bg-[#25d366] text-white font-body text-sm tracking-wide hover:brightness-110 transition"
+              className="inline-flex items-center justify-center h-14 px-10 font-body text-sm tracking-wide hover:brightness-110 transition bg-slate-100 text-slate-800"
             >
-              WhatsApp · +52 998 845 7224
+              ​Quiero más información
             </a>
             <button
               onClick={() => openModal()}
