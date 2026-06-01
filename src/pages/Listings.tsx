@@ -4,6 +4,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIcon, AnchorIcon, StarIcon } from '@/components/icons';
 import { moveInReadyUnits } from '@/data/immediate-delivery';
+import { salviaUnits, salviaUnitPath } from '@/data/salvia-units';
 
 const propMondrian = '/images/mondrian/mondrian-hero.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
@@ -119,6 +120,25 @@ const laAmadaListings: Property[] = moveInReadyUnits.map((u, idx) => ({
   slug: u.slug,
 }));
 allProperties.push(...laAmadaListings);
+
+/* Inject Salvia Building units (Zona Hotelera, immediate delivery). */
+const SQFT_TO_M2 = 0.092903;
+const salviaListings: Property[] = salviaUnits.map((u, idx) => ({
+  id: 2000 + idx,
+  name: `Edificio Salvia — ${u.code}`,
+  zone: 'Zona Hotelera',
+  type: 'condominio',
+  beds: u.bedrooms,
+  area: Math.round(u.floorAreaSqFt * SQFT_TO_M2),
+  price: u.askingPriceUSD,
+  priceM2: Math.round(u.askingPriceUSD / (u.floorAreaSqFt * SQFT_TO_M2)),
+  status: 'entrega-inmediata',
+  yield: `${u.grossRoiPct.toFixed(1)}%`,
+  badges: ['vista-mar', 'frente-mar', 'alberca-infinity'],
+  image: u.image,
+  slug: `salvia-${u.slug}`,
+}));
+allProperties.push(...salviaListings);
 
 const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Residencial Cancún', 'Tulum', 'Cancún Centro'];
 const types = ['Todos los Tipos', 'Departamento', 'Condominio', 'Penthouse', 'Villa'];
@@ -416,7 +436,11 @@ const Listings = () => {
             {filtered.map(p => (
               <Link
                 key={p.id}
-                to={localePath(p.slug.startsWith('la-amada-') ? '/costa-mujeres/la-amada' : `/propiedad/${p.slug}`)}
+                to={
+                  p.slug.startsWith('salvia-')
+                    ? salviaUnitPath(p.slug.replace(/^salvia-/, ''), L === 'en')
+                    : localePath(p.slug.startsWith('la-amada-') ? '/costa-mujeres/la-amada' : `/propiedad/${p.slug}`)
+                }
                 className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
               >
                 {/* Image */}
