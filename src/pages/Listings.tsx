@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { BedIcon, RulerIcon, TrendingUpIcon, ChevronDownIcon, WavesIcon, GolfIcon, AnchorIcon, StarIcon } from '@/components/icons';
+import { moveInReadyUnits } from '@/data/immediate-delivery';
 
 const propMondrian = '/images/mondrian/mondrian-hero.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
@@ -101,8 +102,25 @@ const allProperties: Property[] = [
   { id: 19, name: 'Cuore Cumbres', zone: 'Cancún Centro', type: 'condominio', beds: 3, area: 346, price: 0, priceM2: 0, status: 'preventa', badges: ['alberca-infinity', 'pet-friendly', 'comunidad-cerrada'], image: cuoreCumbresHero, slug: 'cuore-cumbres-cancun' },
 ]; // properties
 
+/* Inject La Amada move-in-ready units (link to landing, not a per-unit page yet). */
+const MXN_TO_USD = 1 / 17.5;
+const laAmadaListings: Property[] = moveInReadyUnits.map((u, idx) => ({
+  id: 1000 + idx,
+  name: `La Amada — ${u.code}`,
+  zone: 'Costa Mujeres',
+  type: 'condominio',
+  beds: u.bedrooms,
+  area: u.area,
+  price: Math.round(u.priceMXN * MXN_TO_USD),
+  priceM2: Math.round((u.priceMXN * MXN_TO_USD) / u.area),
+  status: 'entrega-inmediata',
+  badges: ['frente-mar', 'beach-club', 'club-privado'],
+  image: u.image,
+  slug: u.slug,
+}));
+allProperties.push(...laAmadaListings);
+
 const zones = ['Todas las Zonas', 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Residencial Cancún', 'Tulum', 'Cancún Centro'];
-const statuses = ['Todo el Estatus', 'Preventa', 'Entrega Inmediata'];
 const types = ['Todos los Tipos', 'Departamento', 'Condominio', 'Penthouse', 'Villa'];
 
 /* ── Filter dropdown wrapper ── */
@@ -149,7 +167,10 @@ const Listings = () => {
   const { language, localePath } = useLanguage();
   const L = language;
   const allZones = L === 'es' ? 'Todas las Zonas' : 'All Zones';
-  const allStatus = L === 'es' ? 'Todo el Estatus' : 'All Status';
+  const availabilityLabel = L === 'es' ? 'Disponibilidad' : 'Availability';
+  const allStatus = L === 'es' ? 'Todos' : 'All';
+  const preSaleLabel = L === 'es' ? 'Preventa' : 'Pre-sale';
+  const immediateLabel = L === 'es' ? 'Entrega Inmediata' : 'Immediate Delivery';
   const allTypes = L === 'es' ? 'Todos los Tipos' : 'All Types';
   const [zone, setZone] = useState(allZones);
   const [status, setStatus] = useState(allStatus);
@@ -178,7 +199,7 @@ const Listings = () => {
     .filter(p => zone === allZones || p.zone === zone)
     .filter(p => {
       if (status === allStatus) return true;
-      if (status === (L === 'es' ? 'Preventa' : 'Pre-Sale')) return p.status === 'preventa';
+      if (status === preSaleLabel) return p.status === 'preventa';
       return p.status === 'entrega-inmediata';
     })
     .filter(p => {
@@ -219,7 +240,7 @@ const Listings = () => {
   };
 
   const zonesL = [allZones, 'Zona Hotelera', 'Puerto Cancún', 'Costa Mujeres', 'Playa del Carmen', 'Mayakoba', 'Puerto Morelos', 'Residencial Cancún', 'Tulum', 'Cancún Centro'];
-  const statusesL = [allStatus, L === 'es' ? 'Preventa' : 'Pre-Sale', L === 'es' ? 'Entrega Inmediata' : 'Ready to Move'];
+  const statusesL = [allStatus, immediateLabel, preSaleLabel];
   const typesL = [allTypes, L === 'es' ? 'Departamento' : 'Apartment', L === 'es' ? 'Condominio' : 'Condo', 'Penthouse', 'Villa'];
 
   const seoTitle = L === 'es' ? 'Propiedades en Venta — Cancún | Rivana' : 'Properties for Sale — Cancún | Rivana';
@@ -248,8 +269,8 @@ const Listings = () => {
             ))}
           </FilterDropdown>
 
-          {/* Status */}
-          <FilterDropdown label={allStatus} activeLabel={status} isOpen={openFilter === 'status'} onToggle={() => toggle('status')}>
+          {/* Availability (Disponibilidad) */}
+          <FilterDropdown label={availabilityLabel} activeLabel={status === allStatus ? availabilityLabel : status} isOpen={openFilter === 'status'} onToggle={() => toggle('status')}>
             {statusesL.map(s => (
               <button key={s} onClick={() => { setStatus(s); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: s === status ? '#CFAE60' : '#1C1C1C' }}>
                 {s}
@@ -395,7 +416,7 @@ const Listings = () => {
             {filtered.map(p => (
               <Link
                 key={p.id}
-                to={localePath(`/propiedad/${p.slug}`)}
+                to={localePath(p.slug.startsWith('la-amada-') ? '/costa-mujeres/la-amada' : `/propiedad/${p.slug}`)}
                 className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
               >
                 {/* Image */}
@@ -408,7 +429,7 @@ const Listings = () => {
                       className="text-[12px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]"
                       style={{ background: p.status === 'preventa' ? '#26547D' : '#1C1C1C' }}
                     >
-                      {p.status === 'preventa' ? (L === 'es' ? 'Preventa' : 'Pre-Sale') : (L === 'es' ? 'Entrega Inmediata' : 'Ready to Move')}
+                      {p.status === 'preventa' ? (L === 'es' ? 'Preventa' : 'Pre-sale') : (L === 'es' ? 'Entrega Inmediata' : 'Immediate Delivery')}
                     </span>
                     {p.yield && (
                       <span className="text-[12px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>

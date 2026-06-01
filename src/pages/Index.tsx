@@ -11,6 +11,8 @@ import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
 import { ProcessTimeline } from '@/components/home/ProcessTimeline';
 import { PersonalSearchSection } from '@/components/home/PersonalSearchSection';
+import { ImmediateDeliveryCard } from '@/components/ImmediateDeliveryCard';
+import { immediateDeliveryUnits } from '@/data/immediate-delivery';
 
 import homeHero from '@/assets/thompson-sky-beach.webp';
 import presaleHero from '@/assets/presale-hero.jpg';
@@ -212,6 +214,43 @@ const Home = () => {
 
       {/* ── PERSONAL PROPERTY SEARCH (EN only) ── */}
       {language === 'en' && <PersonalSearchSection />}
+
+      {/* ── READY NOW / LISTO AHORA ── */}
+      <section className="py-16 lg:py-20 bg-background border-t border-border">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <ScrollReveal>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+              <div>
+                <p className="eyebrow mb-4">
+                  {language === 'es' ? 'Entrega Inmediata' : 'Immediate Delivery'}
+                </p>
+                <h2 className="text-secondary mb-3">
+                  {language === 'es' ? 'Listo Ahora' : 'Ready Now'}
+                </h2>
+                <p className="font-body font-light text-muted-foreground max-w-xl" style={{ fontSize: '16px', lineHeight: 1.7 }}>
+                  {language === 'es'
+                    ? 'Residencias amuebladas listas para ocupación inmediata o renta vacacional.'
+                    : 'Fully furnished residences ready for immediate occupancy or vacation rental income.'}
+                </p>
+              </div>
+              <Link
+                to={language === 'es' ? '/entregas-inmediatas' : '/en/immediate-delivery'}
+                className="text-sm text-primary font-body flex items-center gap-1 gold-underline whitespace-nowrap"
+              >
+                {language === 'es' ? 'Ver todas las propiedades listas' : 'Explore all ready properties'}
+                <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {immediateDeliveryUnits.map((u, i) => (
+              <ScrollReveal key={u.id} delay={i * 80}>
+                <ImmediateDeliveryCard unit={u} />
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── COLLECTIONS GRID ── */}
       <section className="py-12 md:py-24 lg:py-32 bg-background">
