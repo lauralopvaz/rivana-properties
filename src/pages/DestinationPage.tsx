@@ -28,6 +28,7 @@ import soleBluHero from '@/assets/sole-blu-fachada-principal-atardecer.jpg';
 import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
+import salviaBeachAsset from '@/assets/salvia/salvia-beach.jpg.asset.json';
 import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
 import destCostaMujeres from '@/assets/dest-costa-mujeres.jpg';
 import destMayakoba from '@/assets/dest-mayakoba.jpg';
@@ -105,6 +106,7 @@ const projectsByDestination: Record<string, DestProject[]> = {
     { name: 'The Residences at Grand Island Cancun', zone: 'Zona Hotelera', status: 'preventa', yield: '33%', beds: 3, area: 165, price: 514000, badges: ['vista-mar', 'club-privado', 'beach-club', 'wellness'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
     { name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', status: 'preventa', beds: 4, area: 670, price: 0, badges: ['vista-mar', 'vista-marina', 'wellness', 'club-privado'], image: kabeekHero, slug: 'kabeek-marina-condos' },
     { name: 'Bay View Grand at Grand Island', zone: 'Zona Hotelera', status: 'preventa', beds: 3, area: 451, price: 586146, badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: bayViewGrandHero, slug: 'bay-view-grand-grand-island' },
+    { name: 'Edificio Salvia', zone: 'Zona Hotelera', status: 'entrega-inmediata', yield: '11.4%', beds: 3, area: 93, price: 360000, badges: ['frente-mar', 'vista-mar', 'beach-club'], image: salviaBeachAsset.url, slug: 'edificio-salvia', href: '/zona-hotelera/edificio-salvia' },
   ],
   'puerto-cancun': [
     { name: 'Thompson Residences', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 803, price: 730000, badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
