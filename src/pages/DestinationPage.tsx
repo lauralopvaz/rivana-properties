@@ -675,11 +675,37 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
               <p className="eyebrow mb-4">{t('dest.featuredProjects')}</p>
               <h2 className="mb-12">{t('dest.newDevelopments')}</h2>
             </ScrollReveal>
+            {(() => {
+              const all = projectsByDestination[destinationKey] || [];
+              const statuses = new Set(all.map((p) => p.status));
+              if (statuses.size < 2) return null;
+              const opts: { key: 'all' | 'preventa' | 'entrega-inmediata'; label: { es: string; en: string } }[] = [
+                { key: 'all', label: { es: 'Todo', en: 'All' } },
+                { key: 'preventa', label: { es: 'Preventa', en: 'Pre-Sale' } },
+                { key: 'entrega-inmediata', label: { es: 'Entrega Inmediata', en: 'Immediate Delivery' } },
+              ];
+              return (
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {opts.map((o) => (
+                    <button
+                      key={o.key}
+                      type="button"
+                      onClick={() => setStatusFilter(o.key)}
+                      className={`text-xs font-body tracking-wider uppercase px-4 py-2 border transition-colors ${statusFilter === o.key ? 'border-primary bg-primary/10 text-primary' : 'border-border text-muted-foreground hover:border-primary/30'}`}
+                    >
+                      {o.label[language]}
+                    </button>
+                  ))}
+                </div>
+              );
+            })()}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3" style={{ gap: '2px', background: '#F8F6F2' }}>
-              {(projectsByDestination[destinationKey] || []).map((p, i) => (
+              {(projectsByDestination[destinationKey] || [])
+                .filter((p) => statusFilter === 'all' || p.status === statusFilter)
+                .map((p, i) => (
                 <ScrollReveal key={p.name} delay={i * 100}>
                   <Link
-                    to={localePath(`/propiedad/${p.slug}`)}
+                    to={localePath(p.href ?? `/propiedad/${p.slug}`)}
                     className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
                   >
                     {/* Image */}
@@ -687,8 +713,10 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                       <img src={p.image} alt={`${p.name} — ${p.zone}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
                       <div className="absolute inset-0 bg-transparent group-hover:bg-[rgba(207,174,96,0.12)] transition-colors duration-300" />
                       <div className="absolute top-3 left-3 flex flex-col gap-1.5">
-                        <span className="text-[12px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]" style={{ background: '#26547D' }}>
-                          {language === 'es' ? 'Preventa' : 'Pre-Sale'}
+                        <span className="text-[12px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]" style={{ background: p.status === 'entrega-inmediata' ? '#CFAE60' : '#26547D' }}>
+                          {p.status === 'entrega-inmediata'
+                            ? (language === 'es' ? 'Entrega Inmediata' : 'Move-In Ready')
+                            : (language === 'es' ? 'Preventa' : 'Pre-Sale')}
                         </span>
                         {p.yield && (
                           <span className="text-[12px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
