@@ -289,14 +289,14 @@ export const destinations: DestinationConfig[] = [
       },
     },
     stats: [
-      { val: '1', label: { es: 'Proyecto', en: 'Project' } },
+      { val: '2', label: { es: 'Proyectos', en: 'Projects' } },
       { val: '$248K', label: { es: 'Desde USD', en: 'From USD' } },
       { val: '22%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
       { val: 'Dhamar', label: { es: 'Desarrollo Destacado', en: 'Featured Development' } },
     ],
     chips: {
-      es: ['Preventa Abierta', '8-12% Rendimiento', '⚽ Mundial 2026'],
-      en: ['Pre-Sale Open', '8-12% Yield', '⚽ World Cup 2026'],
+      es: ['Preventa Abierta', 'Entrega Inmediata', '8-12% Rendimiento'],
+      en: ['Pre-Sale Open', 'Move-In Ready', '8-12% Yield'],
     },
     intro: {
       es: [
