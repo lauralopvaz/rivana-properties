@@ -436,7 +436,11 @@ const Listings = () => {
             {filtered.map(p => (
               <Link
                 key={p.id}
-                to={localePath(p.slug.startsWith('la-amada-') ? '/costa-mujeres/la-amada' : `/propiedad/${p.slug}`)}
+                to={
+                  p.slug.startsWith('salvia-')
+                    ? salviaUnitPath(p.slug.replace(/^salvia-/, ''), L === 'en')
+                    : localePath(p.slug.startsWith('la-amada-') ? '/costa-mujeres/la-amada' : `/propiedad/${p.slug}`)
+                }
                 className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
               >
                 {/* Image */}
