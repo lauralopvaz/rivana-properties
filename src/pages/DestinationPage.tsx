@@ -683,7 +683,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
 
       {/* Featured Projects — Redesigned cards matching Listings */}
       {(projectsByDestination[destinationKey]?.length ?? 0) > 0 && (
-        <section className="py-20">
+        <section id="featured-projects" className="py-20">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <ScrollReveal>
               <p className="eyebrow mb-4">{t('dest.featuredProjects')}</p>
