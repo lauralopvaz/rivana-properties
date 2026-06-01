@@ -23,8 +23,9 @@ export interface ImmediateUnit {
   whatsappMsg: { es: string; en: string }
 }
 
-const LA_AMADA_HERO =
-  'https://images.unsplash.com/photo-1582268611958-ebfd161df9d8?auto=format&fit=crop&w=1600&q=80'
+import laAmadaAsset from '@/assets/la-amada.jpg.asset.json'
+
+const LA_AMADA_HERO = laAmadaAsset.url
 const LA_AMADA_INTERIOR =
   'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80'
 const LA_AMADA_BEACHFRONT =
