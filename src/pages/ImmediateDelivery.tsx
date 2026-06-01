@@ -684,7 +684,7 @@ export default function ImmediateDelivery() {
               ? 'Personal advisory from a Rivana specialist — not a chatbot, not a call center.'
               : 'Asesoría personal de un especialista Rivana — no un chatbot, no un call center.'}
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap justify-center gap-[16px]">
             <Button
               variant="gold"
               size="lg"
@@ -699,7 +699,7 @@ export default function ImmediateDelivery() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-10 h-14 border border-white/40 text-white font-body text-sm tracking-wide hover:bg-white/10 transition"
             >
-              WhatsApp +52 998 845 7224
+              Mas información de Salvia
             </a>
           </div>
           <p className="mt-6 font-body text-[13px] text-white/50">
