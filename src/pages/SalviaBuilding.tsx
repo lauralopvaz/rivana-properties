@@ -122,7 +122,7 @@ export default function SalviaBuilding() {
               href={salviaWhatsAppUrl(GENERIC_WHATSAPP[language])}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-12 font-body tracking-wide border-[#1C1C1C] text-[#1C1C1C] hover:bg-[#1C1C1C] hover:text-white transition-colors pr-[40px] border-0 text-base px-[40px]"
+              className="inline-flex items-center justify-center px-10 h-14 font-body text-sm tracking-wide border border-white/40 text-white hover:bg-white/10"
             >
               Mas información de Salvia
             </a>
