@@ -10,6 +10,7 @@ import imgPuenteNichupte from '@/assets/journal/puente-nichupte.jpg';
 import imgUruguayMayakoba from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
 import imgCanadianBuyer from '@/assets/journal/foreign-buyer-guide.jpg';
+import imgRetireCancun from '@/assets/journal/retire-cancun-riviera-maya.jpg';
 const imgMondrianHero = '/images/mondrian/mondrian-hero.jpg';
 
 export interface JournalArticle {
@@ -50,7 +51,7 @@ export const journalArticles: JournalArticle[] = [
     date: 'May 19, 2026',
     readTime: '13 min',
     author: 'Rivana Properties Advisory Team',
-    image: imgCanadianBuyer,
+    image: imgRetireCancun,
     relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'mayakoba', 'puerto-morelos', 'playa-del-carmen'],
   },
   {
