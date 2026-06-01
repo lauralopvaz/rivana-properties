@@ -29,6 +29,7 @@ import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
 import salviaBeachAsset from '@/assets/salvia/salvia-beach.jpg.asset.json';
+import { salviaLandingPath } from '@/data/salvia-units';
 import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
 import destCostaMujeres from '@/assets/dest-costa-mujeres.jpg';
 import destMayakoba from '@/assets/dest-mayakoba.jpg';
@@ -722,7 +723,11 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                 .map((p, i) => (
                 <ScrollReveal key={p.name} delay={i * 100}>
                   <Link
-                    to={localePath(p.href ?? `/propiedad/${p.slug}`)}
+                    to={
+                      p.slug === 'edificio-salvia'
+                        ? salviaLandingPath(language === 'en')
+                        : localePath(p.href ?? `/propiedad/${p.slug}`)
+                    }
                     className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
                   >
                     {/* Image */}
