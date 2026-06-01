@@ -416,7 +416,7 @@ const Listings = () => {
             {filtered.map(p => (
               <Link
                 key={p.id}
-                to={localePath(`/propiedad/${p.slug}`)}
+                to={localePath(p.slug.startsWith('la-amada-') ? '/costa-mujeres/la-amada' : `/propiedad/${p.slug}`)}
                 className="group block bg-white transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.10)] hover:-translate-y-[2px]"
               >
                 {/* Image */}
@@ -429,7 +429,7 @@ const Listings = () => {
                       className="text-[12px] tracking-[2px] uppercase font-body text-white px-[10px] py-[5px]"
                       style={{ background: p.status === 'preventa' ? '#26547D' : '#1C1C1C' }}
                     >
-                      {p.status === 'preventa' ? (L === 'es' ? 'Preventa' : 'Pre-Sale') : (L === 'es' ? 'Entrega Inmediata' : 'Ready to Move')}
+                      {p.status === 'preventa' ? (L === 'es' ? 'Preventa' : 'Pre-sale') : (L === 'es' ? 'Entrega Inmediata' : 'Immediate Delivery')}
                     </span>
                     {p.yield && (
                       <span className="text-[12px] px-[10px] py-[5px] font-body flex items-center gap-1 text-white" style={{ background: '#CFAE60' }}>
