@@ -225,7 +225,7 @@ const Home = () => {
                   {language === 'es' ? 'Entrega Inmediata' : 'Immediate Delivery'}
                 </p>
                 <h2 className="text-secondary mb-3">
-                  {language === 'es' ? 'Listo Ahora' : 'Ready Now'}
+                  {language === 'es' ? 'Llave en mano' : 'Ready Now'}
                 </h2>
                 <p className="font-body font-light text-muted-foreground max-w-xl" style={{ fontSize: '16px', lineHeight: 1.7 }}>
                   {language === 'es'
