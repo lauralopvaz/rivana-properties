@@ -11,6 +11,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { ImmediateDeliveryCard } from '@/components/ImmediateDeliveryCard'
+import { SalviaUnitCard } from '@/components/SalviaUnitCard'
+import { salviaUnits } from '@/data/salvia-units'
 import {
   immediateDeliveryUnits,
   formatMXN,
@@ -392,6 +394,40 @@ export default function ImmediateDelivery() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {immediateDeliveryUnits.map((u, i) => (
               <ImmediateDeliveryCard key={u.id} unit={u} priority={i === 0} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SALVIA UNITS GRID */}
+      <section className="py-20 lg:py-28" style={{ background: '#FAF8F4' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+            <div>
+              <p
+                className="font-body text-xs tracking-[0.4em] uppercase mb-4"
+                style={{ color: '#CFAE60' }}
+              >
+                {isEnglish ? 'Available Now' : 'Disponibles Ahora'}
+              </p>
+              <h2
+                className="font-display font-light"
+                style={{ fontSize: 'clamp(30px, 4vw, 46px)', lineHeight: 1.15 }}
+              >
+                {isEnglish
+                  ? 'Three turn-key residences at Salvia Building'
+                  : 'Tres residencias llave en mano en Edificio Salvia'}
+              </h2>
+            </div>
+            <p className="font-body font-light text-muted-foreground max-w-md">
+              {isEnglish
+                ? 'Operating short-term rental units in Cancún Hotel Zone with proven Airbnb track record.'
+                : 'Unidades operando en renta vacacional en la Zona Hotelera de Cancún con historial comprobado en Airbnb.'}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {salviaUnits.map((u, i) => (
+              <SalviaUnitCard key={u.slug} unit={u} priority={i === 0} />
             ))}
           </div>
         </div>
