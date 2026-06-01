@@ -30,6 +30,8 @@ const BeachfrontCondos = lazy(() => import("./pages/BeachfrontCondos"));
 const Advisory = lazy(() => import("./pages/Advisory"));
 const LaAmada = lazy(() => import("./pages/LaAmada"));
 const ImmediateDelivery = lazy(() => import("./pages/ImmediateDelivery"));
+const SalviaBuilding = lazy(() => import("./pages/SalviaBuilding"));
+const SalviaUnit = lazy(() => import("./pages/SalviaUnit"));
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
@@ -97,6 +99,8 @@ const AppRoutes = () => (
     <Route path="/aviso-de-privacidad" element={<PrivacyPolicy />} />
     <Route path="/cancun/departamentos-en-venta" element={<CancunCondos />} />
     <Route path="/entregas-inmediatas" element={<ImmediateDelivery />} />
+    <Route path="/zona-hotelera/edificio-salvia" element={<SalviaBuilding />} />
+    <Route path="/zona-hotelera/edificio-salvia/:slug" element={<SalviaUnit />} />
 
     {/* ── ENGLISH (/en prefix) ── */}
     <Route path="/en" element={<Index />} />
@@ -145,6 +149,8 @@ const AppRoutes = () => (
     <Route path="/en/cancun/beachfront-condos-for-sale" element={<BeachfrontCondos />} />
     <Route path="/en/advisory" element={<Advisory />} />
     <Route path="/en/immediate-delivery" element={<ImmediateDelivery />} />
+    <Route path="/en/hotel-zone/salvia-building" element={<SalviaBuilding />} />
+    <Route path="/en/hotel-zone/salvia-building/:slug" element={<SalviaUnit />} />
 
     {/* Redirects — consolidate all property routes to canonical paths */}
     <Route path="/property/:slug" element={<RedirectPropertyEN />} />
