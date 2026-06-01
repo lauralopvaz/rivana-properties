@@ -292,7 +292,7 @@ export default function ImmediateDelivery() {
             {isEnglish ? (
               <>Ready Now. <em className="not-italic text-[#CFAE60]">Move In Today.</em></>
             ) : (
-              <>Listo Ahora. <em className="not-italic text-[#CFAE60]">Habítalo Hoy.</em></>
+              <>Llave en mano. <em className="not-italic text-[#CFAE60]">Habítalo Hoy.</em></>
             )}
           </h1>
           <p
@@ -329,10 +329,10 @@ export default function ImmediateDelivery() {
           <div className="text-center mb-16">
             <p
               className="font-body text-xs tracking-[0.4em] uppercase mb-4"
-              style={{ color: '#CFAE60' }}
-            >
-              {isEnglish ? 'Why Ready Now' : 'Por qué elegir Listo Ahora'}
-            </p>
+                style={{ color: '#CFAE60' }}
+              >
+                {isEnglish ? 'Why Ready Now' : 'Por qué elegir Llave en mano'}
+              </p>
             <h2
               className="font-display font-light"
               style={{ fontSize: 'clamp(30px, 4vw, 46px)', lineHeight: 1.2 }}
@@ -411,7 +411,7 @@ export default function ImmediateDelivery() {
               className="font-display font-light"
               style={{ fontSize: 'clamp(28px, 3.6vw, 42px)' }}
             >
-              {isEnglish ? 'Ready Now vs Pre-Sale' : 'Listo Ahora vs Preventa'}
+              {isEnglish ? 'Ready Now vs Pre-Sale' : 'Llave en mano vs Preventa'}
             </h2>
           </div>
           <div className="overflow-x-auto bg-white border border-border">
@@ -466,7 +466,7 @@ export default function ImmediateDelivery() {
               className="font-display font-light"
               style={{ fontSize: 'clamp(28px, 3.6vw, 42px)' }}
             >
-              {isEnglish ? 'Why investors choose ready-now' : 'Por qué los inversionistas eligen listo ahora'}
+              {isEnglish ? 'Why investors choose ready-now' : 'Por qué los inversionistas eligen llave en mano'}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
