@@ -27,6 +27,7 @@ const translations: Record<string, Record<Language, string>> = {
   'nav.tulum': { es: 'Tulum', en: 'Tulum' },
   'nav.listings': { es: 'Propiedades', en: 'Listings' },
   'nav.presale': { es: 'Preventa', en: 'Pre-Sale' },
+  'nav.immediate': { es: 'Entrega Inmediata', en: 'Immediate Delivery' },
   'nav.journal': { es: 'Journal', en: 'Journal' },
   'nav.about': { es: 'Nosotros', en: 'About' },
   'nav.advisor': { es: 'Hablar con un Asesor', en: 'Speak with an Advisor' },
