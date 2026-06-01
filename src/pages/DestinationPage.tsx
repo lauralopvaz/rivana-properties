@@ -112,7 +112,7 @@ const projectsByDestination: Record<string, DestProject[]> = {
   ],
   'costa-mujeres': [
     { name: 'Dhamar', zone: 'Costa Mujeres', status: 'preventa', beds: 3, area: 178, price: 248000, badges: ['vista-mar', 'beach-club', 'alberca-infinity', 'wellness'], image: dhamarPrincipal, slug: 'dhamar-costa-mujeres' },
-    { name: 'La Amada Residences', zone: 'Costa Mujeres', status: 'entrega-inmediata', beds: 3, area: 305, price: 0, badges: ['frente-mar', 'beach-club', 'alberca-infinity', 'wellness'], image: 'https://images.unsplash.com/photo-1582268611958-ebfd161df9d8?auto=format&fit=crop&w=1600&q=80', slug: 'la-amada-residences', href: '/costa-mujeres/la-amada' },
+    { name: 'La Amada Residences', zone: 'Costa Mujeres', status: 'entrega-inmediata', beds: 3, area: 305, price: 0, badges: ['frente-mar', 'beach-club', 'alberca-infinity', 'wellness'], image: laAmadaAsset.url, slug: 'la-amada-residences', href: '/costa-mujeres/la-amada' },
   ],
   'mayakoba': [
     { name: 'The Reserve at Mayakoba', zone: 'Mayakoba', status: 'preventa', beds: 4, area: 660, price: 1141000, badges: ['golf', 'wellness', 'comunidad-cerrada'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },

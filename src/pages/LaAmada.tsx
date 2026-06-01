@@ -293,7 +293,7 @@ export default function LaAmada() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "linear-gradient(160deg, rgba(28,28,28,0.55) 0%, rgba(28,28,28,0.15) 55%, rgba(28,28,28,0.75) 100%), url('https://images.unsplash.com/photo-1582268611958-ebfd161df9d8?auto=format&fit=crop&w=2400&q=80')",
+              `linear-gradient(160deg, rgba(28,28,28,0.55) 0%, rgba(28,28,28,0.15) 55%, rgba(28,28,28,0.75) 100%), url('${LA_AMADA_HERO_IMAGE}')`,
           }}
           aria-hidden
         />
