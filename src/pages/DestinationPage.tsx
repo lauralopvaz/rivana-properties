@@ -157,6 +157,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [destFormLoading, setDestFormLoading] = useState(false);
   const [destFormSuccess, setDestFormSuccess] = useState(false);
+  const [statusFilter, setStatusFilter] = useState<'all' | 'preventa' | 'entrega-inmediata'>('all');
   const { openModal } = useSchedulingModal();
   const { language, localePath, t } = useLanguage();
 
