@@ -75,7 +75,7 @@ export const ForeignBuyerGuideBodyEN = () => {
           This is the single most important decision. Your agent should know local developers, pre-sale timelines, STR permit requirements by zone, and have experience guiding international buyers through the fideicomiso process.
         </StepItem>
         <StepItem num={2} label="Select your property.">
-          Pre-sale (preventa) and resale are the two main options. Pre-sale delivers the strongest entry prices and highest appreciation potential — typically 15–25% between purchase and delivery. Rivana's current portfolio includes The Reserve at Mayakoba (thereserveatmayakoba.com), The Residences at Grand Island Cancun, and Edificio Salvia in the Hotel Zone, one of the few buildings in Cancun with an active STR permit.
+          Pre-sale (preventa) and resale are the two main options. Pre-sale delivers the strongest entry prices and highest appreciation potential — typically 15–25% between purchase and delivery. Rivana's current portfolio includes The Reserve at Mayakoba (thereserveatmayakoba.com), Mondrian Residences at Grand Island Cancun, and Edificio Salvia in the Hotel Zone, one of the few buildings in Cancun with an active STR permit.
         </StepItem>
         <StepItem num={3} label="Prepare your documents.">
           Valid passport, proof of address in your home country, proof of funds, and RFC (Mexican tax ID, obtained during the transaction with your notary).
@@ -124,13 +124,13 @@ export const ForeignBuyerGuideBodyEN = () => {
         <strong className="text-foreground">Fully bilingual, without exception.</strong> Every contract clause, every negotiation, every closing is explained in your language. No moments where you sign something without fully understanding it.
       </p>
       <p>
-        <strong className="text-foreground">We verify STR permits before any recommendation.</strong> Not every building in Cancun allows Airbnb. At Rivana, rental permit eligibility is one of the first filters we apply — especially relevant for Edificio Salvia and The Residences at Grand Island, two of the few Hotel Zone properties with active permits.
+        <strong className="text-foreground">We verify STR permits before any recommendation.</strong> Not every building in Cancun allows Airbnb. At Rivana, rental permit eligibility is one of the first filters we apply — especially relevant for Edificio Salvia and Mondrian Residences at Grand Island, two of the few Hotel Zone properties with active permits.
       </p>
       <p>
         <strong className="text-foreground">We confirm clean, non-ejido title on every property.</strong> Ejido land is the single most common legal trap for foreign buyers in Mexico. We verify title status before recommending anything.
       </p>
       <p>
-        <strong className="text-foreground">Direct developer relationships mean real pre-sale access.</strong> Our team has direct relationships with developers behind The Reserve at Mayakoba, The Residences at Grand Island Cancun, and our broader portfolio — giving you access to pre-sale pricing and payment plans not available through generic agents.
+        <strong className="text-foreground">Direct developer relationships mean real pre-sale access.</strong> Our team has direct relationships with developers behind The Reserve at Mayakoba, Mondrian Residences at Grand Island Cancun, and our broader portfolio — giving you access to pre-sale pricing and payment plans not available through generic agents.
       </p>
       <p>
         <strong className="text-foreground">No-pressure advisory, always.</strong> Rivana's voice is that of a trusted advisor who speaks as a friend protecting your patrimony — not a closer chasing a transaction. You move at your pace, with full information.
@@ -148,7 +148,7 @@ export const ForeignBuyerGuideBodyEN = () => {
         <Link to={localePath('/propiedad/the-reserve-at-mayakoba')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
       </p>
       <p>
-        <strong className="text-foreground">The Residences at Grand Island Cancun</strong> — Branded luxury residences in the Hotel Zone with hotel-managed rental program. Strong STR yields and brand-backed exit liquidity. Pre-sale pricing available.{' '}
+        <strong className="text-foreground">Mondrian Residences at Grand Island Cancun</strong> — Branded luxury residences in the Hotel Zone with hotel-managed rental program. Strong STR yields and brand-backed exit liquidity. Pre-sale pricing available.{' '}
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[hsl(var(--gold))] hover:underline">View property →</Link>
       </p>
       <p>
@@ -243,7 +243,7 @@ export const ForeignBuyerGuideBodyES = () => {
           Esta es la decision mas importante. Tu agente debe conocer a los desarrolladores locales, los plazos de preventa, los requisitos de permisos STR por zona, y tener experiencia guiando a compradores internacionales a traves del proceso de fideicomiso.
         </StepItem>
         <StepItem num={2} label="Selecciona tu propiedad.">
-          Preventa y reventa son las dos opciones principales. La preventa ofrece los mejores precios de entrada y el mayor potencial de plusvalia — tipicamente 15–25% entre la compra y la entrega. El portafolio actual de Rivana incluye The Reserve at Mayakoba (thereserveatmayakoba.com), The Residences at Grand Island Cancun, y Edificio Salvia en la Zona Hotelera, uno de los pocos edificios en Cancun con permiso STR activo.
+          Preventa y reventa son las dos opciones principales. La preventa ofrece los mejores precios de entrada y el mayor potencial de plusvalia — tipicamente 15–25% entre la compra y la entrega. El portafolio actual de Rivana incluye The Reserve at Mayakoba (thereserveatmayakoba.com), Mondrian Residences at Grand Island Cancun, y Edificio Salvia en la Zona Hotelera, uno de los pocos edificios en Cancun con permiso STR activo.
         </StepItem>
         <StepItem num={3} label="Prepara tus documentos.">
           Pasaporte vigente, comprobante de domicilio en tu pais de origen, comprobante de fondos y RFC (obtenido durante la transaccion con tu notario).
@@ -292,7 +292,7 @@ export const ForeignBuyerGuideBodyES = () => {
         <strong className="text-foreground">Equipo completamente bilingue, sin excepcion.</strong> Cada clausula contractual, cada negociacion, cada cierre se explica en tu idioma. No hay momentos en que firmes algo sin entenderlo completamente.
       </p>
       <p>
-        <strong className="text-foreground">Verificamos permisos de renta antes de cualquier recomendacion.</strong> No todos los edificios en Cancun permiten Airbnb. En Rivana, la elegibilidad de permiso STR es uno de los primeros filtros que aplicamos — especialmente relevante para Edificio Salvia y The Residences at Grand Island.
+        <strong className="text-foreground">Verificamos permisos de renta antes de cualquier recomendacion.</strong> No todos los edificios en Cancun permiten Airbnb. En Rivana, la elegibilidad de permiso STR es uno de los primeros filtros que aplicamos — especialmente relevante para Edificio Salvia y Mondrian Residences at Grand Island.
       </p>
       <p>
         <strong className="text-foreground">Confirmamos titulo limpio, libre de ejido, en cada propiedad.</strong> El terreno ejidal es la trampa legal mas comun para compradores extranjeros en Mexico.
@@ -316,7 +316,7 @@ export const ForeignBuyerGuideBodyES = () => {
         <Link to={localePath('/propiedad/the-reserve-at-mayakoba')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>
-        <strong className="text-foreground">The Residences at Grand Island Cancun</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por Marca Elite internacional. Precios de preventa disponibles.{' '}
+        <strong className="text-foreground">Mondrian Residences at Grand Island Cancun</strong> — Residencias de lujo de marca en la Zona Hotelera con programa de renta administrado por Marca Elite internacional. Precios de preventa disponibles.{' '}
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className="text-[hsl(var(--gold))] hover:underline">Ver propiedad →</Link>
       </p>
       <p>

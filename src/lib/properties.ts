@@ -237,9 +237,9 @@ export const properties: PropertyDetail[] = [
   {
     id: 'mondrian-residences-grand-island-cancun',
     slug: 'mondrian-residences-grand-island-cancun',
-    name: 'The Residences at Grand Island Cancun',
-    seoTitle: 'The Residences at Grand Island Cancun | Rivana',
-    seoTitleEn: 'The Residences at Grand Island Cancun Hotel Zone | Rivana',
+    name: 'Mondrian Residences at Grand Island Cancun',
+    seoTitle: 'Mondrian Residences at Grand Island Cancun | Rivana',
+    seoTitleEn: 'Mondrian Residences at Grand Island Cancun Hotel Zone | Rivana',
     seoDescription: 'Residencia de marca Marca Elite internacional en la Zona Hotelera de Cancún. Preventa desde $9,050,000 MXN, plusvalía 33%, entrega Q2 2027. Gestión hotelera desde el primer día.',
     seoDescriptionEn: "Marca Elite internacional-branded residence in Cancún's Hotel Zone. Pre-sale from $475K USD, 33% appreciation, Q2 2027 delivery. Hotel management from day one.",
     zone: 'Cancún Zona Hotelera',
@@ -263,8 +263,8 @@ export const properties: PropertyDetail[] = [
       mondrianGym,
       mondrianPool,
     ],
-    description: 'The Residences at Grand Island Cancun es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Marca Elite internacional. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. Invertir aquí es adquirir un activo que trabaja por ti, respaldado por una de las marcas hoteleras más reconocidas del mundo. Tu legado frente al Caribe.',
-    descriptionEn: 'The Residences at Grand Island Cancun is a branded residence within the most exclusive master development in Cancún\'s Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Marca Elite internacional. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Investing here means acquiring an asset that works for you — backed by one of the most recognized hotel brands in the world. Your legacy on the Caribbean.',
+    description: 'Mondrian Residences at Grand Island Cancun es una residencia de marca dentro del desarrollo maestro más exclusivo de la Zona Hotelera de Cancún — diseñada por Filipao Nunes Arquitectos y operada por Marca Elite internacional. Cada unidad se entrega llave en mano, totalmente amueblada y equipada, lista para operar desde el primer día. Invertir aquí es adquirir un activo que trabaja por ti, respaldado por una de las marcas hoteleras más reconocidas del mundo. Tu legado frente al Caribe.',
+    descriptionEn: 'Mondrian Residences at Grand Island Cancun is a branded residence within the most exclusive master development in Cancún\'s Hotel Zone — designed by Filipao Nunes Arquitectos and operated by Marca Elite internacional. Every unit is delivered turnkey, fully furnished and equipped, ready to operate from day one. Investing here means acquiring an asset that works for you — backed by one of the most recognized hotel brands in the world. Your legacy on the Caribbean.',
     features: [
       'Alberca Infinity', 'Beach Club', 'Concierge 24/7', 'Spa & Wellness',
       'Gimnasio', 'Campo de Golf', 'Marina Privada', 'Vista al Mar',

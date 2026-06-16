@@ -202,7 +202,7 @@ export const CanadianBuyerGuideBodyEN = () => {
         The Hotel Zone is a 20-kilometre barrier island with the Caribbean on one side and Laguna Nichupté on the other. The May 2026 opening of the Nichupté Bridge has fundamentally changed access to the zone — travel from downtown Cancún to the southern Hotel Zone now takes under 10 minutes by car.
       </p>
       <p>
-        For Canadians who want direct beach access, resort amenities, walkability to restaurants and services, and strong short-term rental demand, the Hotel Zone is the natural starting point. The Residences at Grand Island Cancun — Rivana's flagship listing in this zone — offers branded residences from USD $514,000 with ocean views and a 30/20/50 payment plan that works well for pre-sale buyers.
+        For Canadians who want direct beach access, resort amenities, walkability to restaurants and services, and strong short-term rental demand, the Hotel Zone is the natural starting point. Mondrian Residences at Grand Island Cancun — Rivana's flagship listing in this zone — offers branded residences from USD $514,000 with ocean views and a 30/20/50 payment plan that works well for pre-sale buyers.
       </p>
 
       <H3>
