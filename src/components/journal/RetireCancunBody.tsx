@@ -198,7 +198,7 @@ export const RetireCancunBodyEN = () => {
         For retirees who want to be able to walk to dinner, who value proximity to Galenia and Amerimed hospitals, and who plan to generate rental income during months back in North America, the Hotel Zone is the practical choice. It also has the most developed property management infrastructure in the region.
       </p>
       <p className="text-sm">
-        Rivana listings here: The Residences at Grand Island Cancun from USD $514K · Bay View Grand at Grand Island from USD $586K · Kabeek Marina & Condos
+        Rivana listings here: Mondrian Residences at Grand Island Cancun from USD $514K · Bay View Grand at Grand Island from USD $586K · Kabeek Marina & Condos
       </p>
 
       <H3>

@@ -110,8 +110,8 @@ export const journalArticles: JournalArticle[] = [
     },
     category: { es: 'Mercado', en: 'Market' },
     excerpt: {
-      es: 'El Puente Nichupté abrió el 2 de mayo de 2026. 11.2 km que conectan Cancún con la Zona Hotelera en 10 minutos. Analizamos el impacto real en plusvalía e inversión en proyectos como The Residences at Grand Island y Bay View Grand.',
-      en: 'The Nichupté Bridge opened on May 2, 2026. 11.2 km connecting Cancún with the Hotel Zone in 10 minutes. We analyze the real impact on appreciation and investment for projects like The Residences at Grand Island and Bay View Grand.',
+      es: 'El Puente Nichupté abrió el 2 de mayo de 2026. 11.2 km que conectan Cancún con la Zona Hotelera en 10 minutos. Analizamos el impacto real en plusvalía e inversión en proyectos como Mondrian Residences at Grand Island y Bay View Grand.',
+      en: 'The Nichupté Bridge opened on May 2, 2026. 11.2 km connecting Cancún with the Hotel Zone in 10 minutes. We analyze the real impact on appreciation and investment for projects like Mondrian Residences at Grand Island and Bay View Grand.',
     },
     date: 'May 5, 2026',
     readTime: '9 min',
@@ -311,17 +311,17 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'mondrian-residences-grand-island-cancun-guide',
     title: {
-      es: 'The Residences at Grand Island Cancun: la guía que necesitas antes de decidir',
-      en: 'The Residences at Grand Island Cancun: The Guide You Need Before You Decide',
+      es: 'Mondrian Residences at Grand Island Cancun: la guía que necesitas antes de decidir',
+      en: 'Mondrian Residences at Grand Island Cancun: The Guide You Need Before You Decide',
     },
     seoTitle: {
-      es: 'The Residences at Grand Island Cancun — Lo Que Debes Saber',
-      en: 'The Residences at Grand Island Cancun — Everything You Need to Know',
+      es: 'Mondrian Residences at Grand Island Cancun — Lo Que Debes Saber',
+      en: 'Mondrian Residences at Grand Island Cancun — Everything You Need to Know',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
-      es: 'Guía completa de The Residences at Grand Island Cancun: precio, plan de pagos, amenidades con campo de golf, respaldo Marca Elite internacional y vistas al mar y laguna que jamás serán obstruidas.',
-      en: 'Complete guide to The Residences at Grand Island Cancun: Marca Elite internacional backing, golf course, unobstructed Caribbean and lagoon views, pre-sale pricing and 30/20/50 payment plan.',
+      es: 'Guía completa de Mondrian Residences at Grand Island Cancun: precio, plan de pagos, amenidades con campo de golf, respaldo Marca Elite internacional y vistas al mar y laguna que jamás serán obstruidas.',
+      en: 'Complete guide to Mondrian Residences at Grand Island Cancun: Marca Elite internacional backing, golf course, unobstructed Caribbean and lagoon views, pre-sale pricing and 30/20/50 payment plan.',
     },
     date: 'Apr 10, 2026',
     readTime: '11 min',
@@ -333,12 +333,12 @@ export const journalArticles: JournalArticle[] = [
     slug: 'mondrian-residences-grand-island-cancun-preventa',
     slugEn: 'mondrian-residences-grand-island-cancun-presale',
     title: {
-      es: 'The Residences at Grand Island Cancun: El Relanzamiento que Redefine la Zona Hotelera',
-      en: 'The Residences at Grand Island Cancun: The Complete Presale Guide for 2026',
+      es: 'Mondrian Residences at Grand Island Cancun: El Relanzamiento que Redefine la Zona Hotelera',
+      en: 'Mondrian Residences at Grand Island Cancun: The Complete Presale Guide for 2026',
     },
     seoTitle: {
-      es: 'The Residences at Grand Island Cancun: Guía Completa de Preventa 2026',
-      en: 'The Residences at Grand Island Cancun: 2026 Presale Guide',
+      es: 'Mondrian Residences at Grand Island Cancun: Guía Completa de Preventa 2026',
+      en: 'Mondrian Residences at Grand Island Cancun: 2026 Presale Guide',
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {

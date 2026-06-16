@@ -16,7 +16,7 @@ import { UnitDetailModal } from "./UnitDetailModal";
 // ── SEO helpers ──
 
 const seoTitleEsBySlug: Record<string, string> = {
-  'mondrian-residences-grand-island-cancun': 'The Residences at Grand Island — Preventa desde $514K USD | Zona Hotelera Cancún | Rivana',
+  'mondrian-residences-grand-island-cancun': 'Mondrian Residences at Grand Island — Preventa desde $514K USD | Zona Hotelera Cancún | Rivana',
   'dhamar-costa-mujeres': 'Dhamar — Depto en Preventa desde $248K USD | Costa Mujeres Cancún | Rivana',
   'sls-ocean-beach-puerto-cancun': 'SLS Ocean Beach — Residencia desde $1.6M USD | Puerto Cancún | Rivana',
   'the-reserve-at-mayakoba': 'The Reserve at Mayakoba — Preventa desde $1.1M USD | Mayakoba Riviera Maya | Rivana',
@@ -32,7 +32,7 @@ const seoTitleEsBySlug: Record<string, string> = {
 };
 
 const seoDescEsBySlug: Record<string, string> = {
-  'mondrian-residences-grand-island-cancun': 'The Residences at Grand Island en Zona Hotelera Cancún. Operado por Accor, llave en mano, ROI 33%. Desde $514K USD. Asesórate con Rivana.',
+  'mondrian-residences-grand-island-cancun': 'Mondrian Residences at Grand Island en Zona Hotelera Cancún. Operado por Accor, llave en mano, ROI 33%. Desde $514K USD. Asesórate con Rivana.',
   'dhamar-costa-mujeres': 'Dhamar en Costa Mujeres, Cancún. Preventa frente al mar, alberca infinity, vista al manglar. Desde $248K USD. Asesórate con Rivana.',
   'the-reserve-at-mayakoba': 'The Reserve at Mayakoba, Riviera Maya. Golf, wellness y selva. Campo de golf Banyan Tree. Desde $1.1M USD. Asesórate con Rivana Properties.',
   'bay-view-grand-grand-island': 'Bay View Grand en Zona Hotelera Cancún. 40+ amenidades, marina privada, interiores Filipão Nunes. Desde $586K USD. Asesórate con Rivana.',
@@ -338,8 +338,8 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
               className="text-primary hover:text-primary/80 font-body text-sm transition-colors"
             >
               {locale === 'en'
-                ? 'The Residences at Grand Island Cancun: Complete 2026 Presale Guide →'
-                : 'The Residences at Grand Island Cancun: Guía Completa de Preventa 2026 →'}
+                ? 'Mondrian Residences at Grand Island Cancun: Complete 2026 Presale Guide →'
+                : 'Mondrian Residences at Grand Island Cancun: Guía Completa de Preventa 2026 →'}
             </Link>
           </section>
         )}

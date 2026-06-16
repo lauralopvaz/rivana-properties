@@ -184,7 +184,7 @@ const JournalPost = () => {
         mainEntityOfPage: { '@type': 'WebPage', '@id': `https://rivanaproperties.com${currentPath}` },
         inLanguage: language === 'en' ? 'en' : 'es-MX',
         articleSection: 'Mercado',
-        keywords: 'Puente Nichupté, Zona Hotelera Cancún, plusvalía Cancún 2026, inversión inmobiliaria Cancún, The Residences at Grand Island, Bay View Grand, infraestructura Cancún',
+        keywords: 'Puente Nichupté, Zona Hotelera Cancún, plusvalía Cancún 2026, inversión inmobiliaria Cancún, Mondrian Residences at Grand Island, Bay View Grand, infraestructura Cancún',
       }
     : isMondrianPresale
     ? {
@@ -206,7 +206,7 @@ const JournalPost = () => {
             mainEntityOfPage: { '@type': 'WebPage', '@id': `https://rivanaproperties.com${currentPath}` },
             about: {
               '@type': 'Residence',
-              name: 'The Residences at Grand Island Cancun',
+              name: 'Mondrian Residences at Grand Island Cancun',
               description: language === 'en'
                 ? 'Branded residences operated by Marca Elite internacional, within the Grand Island master development in Cancun\'s Hotel Zone.'
                 : 'Residencias de marca operadas por Marca Elite internacional, dentro del desarrollo maestro Grand Island en la Zona Hotelera de Cancún.',
@@ -214,8 +214,8 @@ const JournalPost = () => {
               offers: { '@type': 'Offer', priceCurrency: language === 'en' ? 'USD' : 'MXN', price: language === 'en' ? '475000' : '9050000', availability: 'https://schema.org/InStock', validThrough: '2026-06-01' },
             },
             keywords: language === 'en'
-              ? 'The Residences at Grand Island Cancun, The Residences at Grand Island Cancun presale, luxury condos Cancun Hotel Zone, branded residences Cancun, Grupo Murano, Marca Elite internacional Cancun, Cancun real estate investment 2026'
-              : 'The Residences at Grand Island Cancun, The Residences at Grand Island Cancun, preventa The Residences at Grand Island Cancun, residencias de lujo Zona Hotelera Cancún, Grupo Murano, Marca Elite internacional Cancún, inversión inmobiliaria Cancún 2026',
+              ? 'Mondrian Residences at Grand Island Cancun, Mondrian Residences at Grand Island Cancun presale, luxury condos Cancun Hotel Zone, branded residences Cancun, Grupo Murano, Marca Elite internacional Cancun, Cancun real estate investment 2026'
+              : 'Mondrian Residences at Grand Island Cancun, Mondrian Residences at Grand Island Cancun, preventa Mondrian Residences at Grand Island Cancun, residencias de lujo Zona Hotelera Cancún, Grupo Murano, Marca Elite internacional Cancún, inversión inmobiliaria Cancún 2026',
           },
           {
             '@type': 'BreadcrumbList',
@@ -229,19 +229,19 @@ const JournalPost = () => {
             '@type': 'FAQPage',
             mainEntity: language === 'en'
               ? [
-                  { '@type': 'Question', name: 'How much does the Residences at Grand Island Cancun presale cost?', acceptedAnswer: { '@type': 'Answer', text: 'The Residences at Grand Island Cancun presale starts from approximately $475,000 USD (9,050,000 MXN) for 1-bedroom units. The projected post-presale list price is approximately $630,000 USD, representing a 33% appreciation before the Q2 2027 delivery.' } },
-                  { '@type': 'Question', name: 'What is The Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'The Residences at Grand Island is the former name of the development now relaunched as The Residences at Grand Island Cancun. The rebranding was formalized following the agreement between Grupo Murano and Ennismore/Marca Elite internacional to operate the residential component.' } },
-                  { '@type': 'Question', name: 'When will The Residences at Grand Island Cancun be delivered?', acceptedAnswer: { '@type': 'Answer', text: 'The Residences at Grand Island Cancun is scheduled for delivery in Q2 2027 (second quarter of 2027).' } },
-                  { '@type': 'Question', name: 'Who operates The Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'The Residences at Grand Island Cancun is operated by Marca Elite internacional, part of the Ennismore lifestyle hospitality platform. The developer is Grupo Murano (Nasdaq: MRNO).' } },
-                  { '@type': 'Question', name: 'What is the payment plan for The Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'The payment plan is: 30% down payment at contract signing, 20% deferred over 12 monthly installments during construction, and 50% at delivery in Q2 2027.' } },
-                  { '@type': 'Question', name: 'Can foreigners buy at The Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, foreign buyers can purchase through a bank trust (fideicomiso), the standard legal mechanism for foreigners acquiring real estate in Mexico\'s restricted zones. Rivana Properties provides fideicomiso advisory as part of the purchase process.' } },
+                  { '@type': 'Question', name: 'How much does the Residences at Grand Island Cancun presale cost?', acceptedAnswer: { '@type': 'Answer', text: 'Mondrian Residences at Grand Island Cancun presale starts from approximately $475,000 USD (9,050,000 MXN) for 1-bedroom units. The projected post-presale list price is approximately $630,000 USD, representing a 33% appreciation before the Q2 2027 delivery.' } },
+                  { '@type': 'Question', name: 'What is Mondrian Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'Mondrian Residences at Grand Island is the former name of the development now relaunched as Mondrian Residences at Grand Island Cancun. The rebranding was formalized following the agreement between Grupo Murano and Ennismore/Marca Elite internacional to operate the residential component.' } },
+                  { '@type': 'Question', name: 'When will Mondrian Residences at Grand Island Cancun be delivered?', acceptedAnswer: { '@type': 'Answer', text: 'Mondrian Residences at Grand Island Cancun is scheduled for delivery in Q2 2027 (second quarter of 2027).' } },
+                  { '@type': 'Question', name: 'Who operates Mondrian Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'Mondrian Residences at Grand Island Cancun is operated by Marca Elite internacional, part of the Ennismore lifestyle hospitality platform. The developer is Grupo Murano (Nasdaq: MRNO).' } },
+                  { '@type': 'Question', name: 'What is the payment plan for Mondrian Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'The payment plan is: 30% down payment at contract signing, 20% deferred over 12 monthly installments during construction, and 50% at delivery in Q2 2027.' } },
+                  { '@type': 'Question', name: 'Can foreigners buy at Mondrian Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, foreign buyers can purchase through a bank trust (fideicomiso), the standard legal mechanism for foreigners acquiring real estate in Mexico\'s restricted zones. Rivana Properties provides fideicomiso advisory as part of the purchase process.' } },
                 ]
               : [
-                  { '@type': 'Question', name: '¿Cuánto cuesta la preventa de The Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'La preventa parte desde $9,050,000 MXN (aproximadamente $475,000 USD) para unidades de 1 recámara. El precio de lista post-preventa proyectado es de $12,000,000 MXN, una plusvalía del 33% antes de la entrega en Q2 2027.' } },
-                  { '@type': 'Question', name: '¿Qué es The Residences at Grand Island Cancún?', acceptedAnswer: { '@type': 'Answer', text: 'The Residences at Grand Island es el nombre anterior del proyecto que hoy se relanzó como The Residences at Grand Island Cancun tras el acuerdo entre Grupo Murano y Ennismore/Marca Elite internacional.' } },
-                  { '@type': 'Question', name: '¿Cuándo es la entrega de The Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'La entrega está programada para Q2 2027 (segundo trimestre de 2027).' } },
-                  { '@type': 'Question', name: '¿Quién opera The Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'Son operadas por Marca Elite internacional, parte de Ennismore. El desarrollador es Grupo Murano (Nasdaq: MRNO).' } },
-                  { '@type': 'Question', name: '¿Cuál es el plan de pagos de The Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: '30% de enganche al firma de contrato, 20% diferido en 12 mensualidades durante la construcción, y 50% a la entrega en Q2 2027.' } },
+                  { '@type': 'Question', name: '¿Cuánto cuesta la preventa de Mondrian Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'La preventa parte desde $9,050,000 MXN (aproximadamente $475,000 USD) para unidades de 1 recámara. El precio de lista post-preventa proyectado es de $12,000,000 MXN, una plusvalía del 33% antes de la entrega en Q2 2027.' } },
+                  { '@type': 'Question', name: '¿Qué es Mondrian Residences at Grand Island Cancún?', acceptedAnswer: { '@type': 'Answer', text: 'Mondrian Residences at Grand Island es el nombre anterior del proyecto que hoy se relanzó como Mondrian Residences at Grand Island Cancun tras el acuerdo entre Grupo Murano y Ennismore/Marca Elite internacional.' } },
+                  { '@type': 'Question', name: '¿Cuándo es la entrega de Mondrian Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'La entrega está programada para Q2 2027 (segundo trimestre de 2027).' } },
+                  { '@type': 'Question', name: '¿Quién opera Mondrian Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: 'Son operadas por Marca Elite internacional, parte de Ennismore. El desarrollador es Grupo Murano (Nasdaq: MRNO).' } },
+                  { '@type': 'Question', name: '¿Cuál es el plan de pagos de Mondrian Residences at Grand Island Cancun?', acceptedAnswer: { '@type': 'Answer', text: '30% de enganche al firma de contrato, 20% diferido en 12 mensualidades durante la construcción, y 50% a la entrega en Q2 2027.' } },
                 ],
           },
         ],
@@ -309,8 +309,8 @@ const JournalPost = () => {
       : ['Structural case', '2026 data', 'World Cup impact', 'Zone by zone', 'Rental vs appreciation', 'What to verify', 'FAQ'])
     : (articleSlug === 'mondrian-residences-grand-island-cancun-preventa' || slug === 'mondrian-residences-grand-island-cancun-presale')
     ? (language === 'es'
-      ? ['Qué es The Residences at Grand Island Cancun', 'De The Residences a The Residences at Grand Island Cancun', 'La marca', 'Ubicación', 'Preventa: precio y ROI', 'Contexto macro', '¿Para quién es?', 'Proceso de compra']
-      : ['What is The Residences at Grand Island Cancun', 'From The Residences to The Residences at Grand Island Cancun', 'The brand', 'Location', 'Presale: price & ROI', 'Macro context', 'Who is it for?', 'How to buy'])
+      ? ['Qué es Mondrian Residences at Grand Island Cancun', 'De The Residences a Mondrian Residences at Grand Island Cancun', 'La marca', 'Ubicación', 'Preventa: precio y ROI', 'Contexto macro', '¿Para quién es?', 'Proceso de compra']
+      : ['What is Mondrian Residences at Grand Island Cancun', 'From The Residences to Mondrian Residences at Grand Island Cancun', 'The brand', 'Location', 'Presale: price & ROI', 'Macro context', 'Who is it for?', 'How to buy'])
     : articleSlug === 'mondrian-residences-grand-island-cancun-guide'
     ? (language === 'es'
       ? ['Respaldo Marca Elite internacional', 'Ubicación', 'Amenidades', 'Ficha del proyecto', 'Plan de pago', '¿Por qué 2026?', '¿Para quién es?', 'El siguiente paso']
