@@ -212,6 +212,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── OUR PROCESS ── */}
+      <ProcessTimeline />
+
       {/* ── PERSONAL PROPERTY SEARCH (EN only) ── */}
       {language === 'en' && <PersonalSearchSection />}
 
@@ -315,9 +318,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* ── OUR PROCESS ── */}
-      <ProcessTimeline />
 
       {/* ── CONTACT & INVESTMENT FORM ── */}
       <ContactSection />
