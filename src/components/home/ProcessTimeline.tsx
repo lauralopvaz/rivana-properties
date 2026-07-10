@@ -100,8 +100,8 @@ export const ProcessTimeline = () => {
               </h3>
               <p className="font-body text-base text-muted-foreground leading-[1.85]">
                 {L === 'es'
-                  ? 'Agenda una asesoría gratuita y recibe un plan de inversión personalizado para tu perfil.'
-                  : 'Schedule a free advisory session and receive a personalized investment plan for your profile.'}
+                  ? 'Agenda una asesoría y recibe un plan de inversión personalizado para tu perfil.'
+                  : 'Schedule an advisory session and receive a personalized investment plan for your profile.'}
               </p>
             </div>
             <Button
@@ -110,7 +110,7 @@ export const ProcessTimeline = () => {
               onClick={() => openModal('asesoria')}
               className="rounded-none shrink-0 text-foreground hover:text-foreground"
             >
-              {L === 'es' ? 'Agendar asesoría gratuita' : 'Schedule free advisory'}
+              {L === 'es' ? 'Agendar llamada con Rivana' : 'Schedule call with Rivana'}
             </Button>
           </div>
         </ScrollReveal>
