@@ -108,7 +108,7 @@ export const ProcessTimeline = () => {
               variant="gold"
               size="lg"
               onClick={() => openModal('asesoria')}
-              className="rounded-none shrink-0"
+              className="rounded-none shrink-0 text-foreground hover:text-foreground"
             >
               {L === 'es' ? 'Agendar asesoría gratuita' : 'Schedule free advisory'}
             </Button>
