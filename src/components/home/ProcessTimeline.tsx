@@ -90,6 +90,30 @@ export const ProcessTimeline = () => {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* Lead magnet CTA */}
+        <ScrollReveal delay={500}>
+          <div className="mt-20 pt-12 border-t border-border flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div className="max-w-xl">
+              <h3 className="font-display text-2xl text-secondary font-light mb-3">
+                {L === 'es' ? '¿Listo para dar el primer paso?' : 'Ready to take the first step?'}
+              </h3>
+              <p className="font-body text-base text-muted-foreground leading-[1.85]">
+                {L === 'es'
+                  ? 'Agenda una asesoría gratuita y recibe un plan de inversión personalizado para tu perfil.'
+                  : 'Schedule a free advisory session and receive a personalized investment plan for your profile.'}
+              </p>
+            </div>
+            <Button
+              variant="gold"
+              size="lg"
+              onClick={() => openModal('asesoria')}
+              className="rounded-none shrink-0"
+            >
+              {L === 'es' ? 'Agendar asesoría gratuita' : 'Schedule free advisory'}
+            </Button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
