@@ -611,8 +611,8 @@ const PreSale = () => {
                     {c.fBudgets.map((o) => <option key={o}>{o}</option>)}
                   </select>
                 </div>
-                <button type="submit" style={{ ...btnGold, width: '100%', marginTop: 12, padding: '20px 24px' }}>
-                  {c.fSubmit}
+                <button type="submit" disabled={submitting} style={{ ...btnGold, width: '100%', marginTop: 12, padding: '20px 24px', opacity: submitting ? 0.6 : 1, cursor: submitting ? 'wait' : 'pointer' }}>
+                  {submitting ? (L === 'es' ? 'Enviando…' : 'Sending…') : c.fSubmit}
                 </button>
                 <p style={{ ...eyebrowStyle, textTransform: 'none', letterSpacing: 0, fontSize: 11, color: 'rgba(28,28,28,0.45)', textAlign: 'center', lineHeight: 1.6, fontWeight: 300 }}>{c.fPrivacy}</p>
               </form>
