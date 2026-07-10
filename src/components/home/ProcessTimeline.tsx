@@ -107,7 +107,7 @@ export const ProcessTimeline = () => {
               onClick={() => openModal('asesoria')}
               className="rounded-none shrink-0 text-foreground hover:text-foreground"
             >
-              {L === 'es' ? 'Agendar llamada con Rivana' : 'Schedule call with Rivana'}
+              {L === 'es' ? 'Agendar una asesoría con Rivana' : 'Schedule an advisory session with Rivana'}
             </Button>
           </div>
         </ScrollReveal>
