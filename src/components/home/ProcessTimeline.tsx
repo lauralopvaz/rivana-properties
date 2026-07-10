@@ -1,5 +1,8 @@
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
+import { Button } from '@/components/ui/button';
+
 
 const steps = [
   {
