@@ -14,7 +14,14 @@ const PrivacyPolicy = () => {
 
   return (
     <>
-      <SEOHead title={title} description={description} path={path} noIndex />
+      <SEOHead
+        title={title}
+        description={description}
+        path={path}
+        hreflangEs="/aviso-de-privacidad"
+        hreflangEn="/en/privacy-policy"
+        noIndex
+      />
 
       <main className="min-h-screen bg-background pt-32 pb-24">
         <article className="max-w-[720px] mx-auto px-6">
