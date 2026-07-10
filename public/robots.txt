@@ -43,5 +43,6 @@ Disallow: /_next/
 
 # ── Sitemap ──
 
+Sitemap: https://rivanaproperties.com/sitemap-index.xml
 Sitemap: https://rivanaproperties.com/sitemap.xml
 Sitemap: https://rivanaproperties.com/sitemap-en.xml
