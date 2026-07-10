@@ -212,6 +212,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── OUR PROCESS ── */}
+      <ProcessTimeline />
+
       {/* ── PERSONAL PROPERTY SEARCH (EN only) ── */}
       {language === 'en' && <PersonalSearchSection />}
 
