@@ -164,7 +164,7 @@ const Home = () => {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {featuredProperties.map((p, i) => {
+            {featuredProperties.slice(0, 6).map((p, i) => {
               const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
               return (
                 <ScrollReveal key={p.name} delay={i * 100}>
