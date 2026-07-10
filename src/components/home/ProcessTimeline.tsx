@@ -14,8 +14,8 @@ const steps = [
     num: '02',
     title: { es: 'Selección', en: 'Selection' },
     desc: {
-      es: 'Presentamos las mejores opciones del mercado con análisis comparativo de ROI, plusvalía y riesgo.',
-      en: 'We present the best market options with comparative ROI, capital gains and risk analysis.',
+      es: 'Presentamos las mejores opciones del mercado con análisis comparativo de ROI, plusvalía y oportunidad.',
+      en: 'We present the best market options with comparative ROI, capital gains and opportunity analysis.',
     },
   },
   {
