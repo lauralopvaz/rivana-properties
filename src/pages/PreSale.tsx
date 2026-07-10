@@ -384,6 +384,27 @@ const PreSale = () => {
         ? 'Un asesor te contactará en las próximas 24 horas.'
         : 'An advisor will reach out within the next 24 hours.',
     });
+    try {
+      const w = window as unknown as {
+        gtag?: (...args: unknown[]) => void;
+        dataLayer?: Array<Record<string, unknown>>;
+      };
+      const payload = {
+        event_category: 'lead',
+        event_label: 'presale',
+        source_page: L === 'en' ? '/en/presale' : '/presale',
+        language: L,
+        property_name: 'Mondrian Residences at Grand Island Cancun',
+        destination: 'zona-hotelera',
+        unit: unit || 'unspecified',
+        budget: budget || 'unspecified',
+      };
+      w.gtag?.('event', 'generate_lead', payload);
+      w.dataLayer = w.dataLayer || [];
+      w.dataLayer.push({ event: 'generate_lead', ...payload });
+    } catch {
+      /* analytics failures must not break UX */
+    }
     setSent(true);
   };
 
