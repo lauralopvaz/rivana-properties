@@ -41,6 +41,7 @@ const steps = [
 
 export const ProcessTimeline = () => {
   const { language } = useLanguage();
+  const { openModal } = useSchedulingModal();
   const L = language;
 
   return (
