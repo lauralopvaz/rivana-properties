@@ -93,14 +93,7 @@ export const ProcessTimeline = () => {
 
         {/* Lead magnet CTA */}
         <ScrollReveal delay={500}>
-          <div className="mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-            <div className="max-w-xl">
-              <p className="font-body text-base text-muted-foreground leading-[1.85]">
-                {L === 'es'
-                  ? 'Agenda una asesoría y recibe un plan de inversión personalizado para tu perfil.'
-                  : 'Schedule an advisory session and receive a personalized investment plan for your profile.'}
-              </p>
-            </div>
+          <div className="mt-20 flex justify-center">
             <Button
               variant="gold"
               size="lg"
