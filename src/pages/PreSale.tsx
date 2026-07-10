@@ -412,30 +412,63 @@ const PreSale = () => {
     <>
       <SEOHead
         title={L === 'es'
-          ? 'Mondrian Residences · Preventa Grand Island Cancún | Rivana'
-          : 'Mondrian Residences · Grand Island Cancún Pre-Sale | Rivana'}
+          ? 'Mondrian Residences Grand Island Cancún · Preventa desde $514K | Rivana'
+          : 'Mondrian Residences Grand Island Cancún · Pre-Sale from $514K | Rivana'}
         description={L === 'es'
-          ? 'Departamentos frente al mar en preventa dentro de Grand Island, Zona Hotelera Cancún. Desde $514K USD, entrega Q2 2027, plan 30/20/50. Asesoría Rivana.'
-          : 'Beachfront pre-sale residences inside Grand Island, Cancún Hotel Zone. From $514K USD, delivery Q2 2027, 30/20/50 plan. Rivana advisory.'}
+          ? 'Preventa Mondrian Residences en Grand Island, Zona Hotelera Cancún. Vistas 360° al Mar Caribe, Laguna Nichupté y golf. Desde $514K USD, entrega Q2 2027, plan 30/20/50.'
+          : 'Mondrian Residences pre-sale inside Grand Island, Cancún Hotel Zone. 360° views over the Caribbean Sea, Nichupté Lagoon and golf course. From $514K USD, delivery Q2 2027, 30/20/50 plan.'}
         ogImage={IMG_HERO}
         path={L === 'en' ? '/en/presale' : '/presale'}
         hreflangEs="/presale"
         hreflangEn="/en/presale"
-        schema={{
-          '@context': 'https://schema.org',
-          '@type': 'Residence',
-          name: 'Mondrian Residences at Grand Island Cancún',
-          description: L === 'es'
-            ? 'Residencias de marca en Grand Island, Zona Hotelera de Cancún, con vistas 360° a la Laguna Nichupté, Mar Caribe y campo de golf.'
-            : 'Branded residences at Grand Island, Cancún Hotel Zone, with 360° views over Nichupté Lagoon, the Caribbean Sea, and the golf course.',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'Boulevard Kukulcán km 16.5, Zona Hotelera',
-            addressLocality: 'Cancún',
-            addressRegion: 'Quintana Roo',
-            addressCountry: 'MX',
+        schema={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Residence',
+            name: 'Mondrian Residences at Grand Island Cancún',
+            description: L === 'es'
+              ? 'Residencias de marca en Grand Island, Zona Hotelera de Cancún, con vistas 360° a la Laguna Nichupté, Mar Caribe y campo de golf. Preventa desde $514,000 USD, entrega llave en mano Q2 2027.'
+              : 'Branded residences at Grand Island, Cancún Hotel Zone, with 360° views over Nichupté Lagoon, the Caribbean Sea, and the golf course. Pre-sale from $514,000 USD, turnkey delivery Q2 2027.',
+            url: `https://rivanaproperties.com${L === 'en' ? '/en/presale' : '/presale'}`,
+            image: `https://rivanaproperties.com${IMG_HERO}`,
+            inLanguage: L === 'en' ? 'en' : 'es',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Boulevard Kukulcán km 16.5, Zona Hotelera',
+              addressLocality: 'Cancún',
+              addressRegion: 'Quintana Roo',
+              addressCountry: 'MX',
+            },
           },
-        }}
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Offer',
+            name: L === 'es' ? 'Preventa Mondrian Residences Grand Island' : 'Mondrian Residences Grand Island pre-sale',
+            url: `https://rivanaproperties.com${L === 'en' ? '/en/presale' : '/presale'}`,
+            price: '514000',
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            seller: { '@type': 'RealEstateAgent', name: 'Rivana Properties' },
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: L === 'es' ? 'Inicio' : 'Home', item: `https://rivanaproperties.com${L === 'en' ? '/en' : '/'}` },
+              { '@type': 'ListItem', position: 2, name: L === 'es' ? 'Preventa' : 'Pre-Sale', item: `https://rivanaproperties.com${L === 'en' ? '/en/presale' : '/presale'}` },
+            ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            inLanguage: L === 'en' ? 'en' : 'es',
+            mainEntity: c.faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          },
+        ]}
       />
 
       <div style={{ background: IVORY, color: INK, minHeight: '100vh' }}>
