@@ -95,6 +95,7 @@ const AppRoutes = () => (
     <Route path="/about" element={<About />} />
     <Route path="/listings" element={<Listings />} />
     <Route path="/presale" element={<PreSale />} />
+    <Route path="/es/presale" element={<Navigate to="/presale" replace />} />
     <Route path="/propiedad/:slug" element={<PropertyDetailNew locale="es" />} />
     <Route path="/aviso-de-privacidad" element={<PrivacyPolicy />} />
     <Route path="/cancun/departamentos-en-venta" element={<CancunCondos />} />
