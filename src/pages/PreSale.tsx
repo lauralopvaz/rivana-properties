@@ -341,9 +341,11 @@ const PreSale = () => {
   const L: L = language as L;
   const c = t[L];
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (submitting) return;
     const fd = new FormData(e.currentTarget);
     const name = String(fd.get('name') || '').trim();
     const email = String(fd.get('email') || '').trim();
@@ -354,21 +356,35 @@ const PreSale = () => {
       toast({ title: 'Error', description: L === 'es' ? 'Por favor completa todos los campos.' : 'Please fill in all fields.', variant: 'destructive' });
       return;
     }
-    await supabase.from('leads').insert({
+    setSubmitting(true);
+    const { error } = await supabase.from('leads').insert({
       first_name: name,
       email,
       phone,
+      budget: budget || null,
       property_name: 'Mondrian Residences at Grand Island Cancun',
       interest: 'presale-brochure',
       source_page: L === 'en' ? '/en/presale' : '/presale',
-      notes: `Unit: ${unit} · Budget: ${budget}`,
+      message: unit ? `Unit type: ${unit}` : null,
+    });
+    setSubmitting(false);
+    if (error) {
+      toast({
+        title: L === 'es' ? 'No se pudo enviar' : 'Could not send',
+        description: L === 'es'
+          ? 'Ocurrió un error al enviar tu solicitud. Por favor intenta de nuevo o escríbenos por WhatsApp.'
+          : 'There was an error submitting your request. Please try again or reach us on WhatsApp.',
+        variant: 'destructive',
+      });
+      return;
+    }
+    toast({
+      title: L === 'es' ? '¡Recibido!' : 'Received!',
+      description: L === 'es'
+        ? 'Un asesor te contactará en las próximas 24 horas.'
+        : 'An advisor will reach out within the next 24 hours.',
     });
     setSent(true);
-    setTimeout(() => {
-      window.open(waUrl(L === 'es'
-        ? 'Hola, acabo de registrarme en la landing de Mondrian Residences. Quiero recibir el brochure y asesoría en la preventa.'
-        : 'Hi, I just registered on the Mondrian Residences landing. I would like to receive the brochure and pre-sale advisory.'), '_blank');
-    }, 200);
   };
 
   return (
@@ -595,8 +611,8 @@ const PreSale = () => {
                     {c.fBudgets.map((o) => <option key={o}>{o}</option>)}
                   </select>
                 </div>
-                <button type="submit" style={{ ...btnGold, width: '100%', marginTop: 12, padding: '20px 24px' }}>
-                  {c.fSubmit}
+                <button type="submit" disabled={submitting} style={{ ...btnGold, width: '100%', marginTop: 12, padding: '20px 24px', opacity: submitting ? 0.6 : 1, cursor: submitting ? 'wait' : 'pointer' }}>
+                  {submitting ? (L === 'es' ? 'Enviando…' : 'Sending…') : c.fSubmit}
                 </button>
                 <p style={{ ...eyebrowStyle, textTransform: 'none', letterSpacing: 0, fontSize: 11, color: 'rgba(28,28,28,0.45)', textAlign: 'center', lineHeight: 1.6, fontWeight: 300 }}>{c.fPrivacy}</p>
               </form>
