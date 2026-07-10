@@ -319,9 +319,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── OUR PROCESS ── */}
-      <ProcessTimeline />
-
       {/* ── CONTACT & INVESTMENT FORM ── */}
       <ContactSection />
 
