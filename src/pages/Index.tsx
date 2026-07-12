@@ -9,6 +9,7 @@ import { journalArticles } from '@/data/journal-articles';
 import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, WavesIcon, GolfIcon, SparklesIcon, AnchorIcon, SunIcon, SwimIcon } from '@/components/icons';
 import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
+import { MondrianSpotlight } from '@/components/home/MondrianSpotlight';
 import { ProcessTimeline } from '@/components/home/ProcessTimeline';
 import { PersonalSearchSection } from '@/components/home/PersonalSearchSection';
 import { ImmediateDeliveryCard } from '@/components/ImmediateDeliveryCard';
