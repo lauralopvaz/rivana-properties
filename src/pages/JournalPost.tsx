@@ -404,9 +404,15 @@ const JournalPost = () => {
     ];
 
   // Related articles based on shared destinations
-  const related = journalArticles
-    .filter((a) => a.slug !== slug && a.relatedDestinations.some((d) => article.relatedDestinations.includes(d)))
-    .slice(0, 3);
+  // Manual interlinking wins; falls back to shared-destination heuristic.
+  const allArticlesForRelated = [...journalArticles, ...journalArticlesEs];
+  const related = article.relatedSlugs?.length
+    ? article.relatedSlugs
+        .map((s) => allArticlesForRelated.find((a) => a.slug === s || a.slugEn === s))
+        .filter(Boolean) as typeof journalArticles
+    : journalArticles
+        .filter((a) => a.slug !== slug && a.relatedDestinations.some((d) => article.relatedDestinations.includes(d)))
+        .slice(0, 3);
 
   // Internal links to related destinations
   const relatedDests = article.relatedDestinations
