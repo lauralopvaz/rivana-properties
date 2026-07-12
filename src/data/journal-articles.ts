@@ -18,6 +18,7 @@ const imgInvertirBienesRaices = imgCancunRoi;
 const imgPreventaPuertoCancun = imgMayakoba;
 const imgDeptosCostaMujeres = imgCostaMujeres;
 const imgPermisoAirbnb = imgLuxuryCondos;
+const imgPlusvaliaCancun = imgCancunRoi;
 
 export interface JournalArticle {
   slug: string;

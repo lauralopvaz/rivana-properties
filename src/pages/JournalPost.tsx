@@ -31,6 +31,7 @@ import { InvertirBienesRaicesCancunBody } from '@/components/journal/InvertirBie
 import { PreventaPuertoCancunBody } from '@/components/journal/PreventaPuertoCancunBody';
 import { DeptosVentaCostaMujeresBody } from '@/components/journal/DeptosVentaCostaMujeresBody';
 import { PermisoAirbnbCancunBody } from '@/components/journal/PermisoAirbnbCancunBody';
+import { PlusvaliaCancun2026Body } from '@/components/journal/PlusvaliaCancun2026Body';
 import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
 const parseArticleDate = (dateStr: string): string => {
@@ -564,6 +565,8 @@ const JournalPost = () => {
               <DeptosVentaCostaMujeresBody />
             ) : articleSlug === 'departamentos-con-permiso-airbnb-cancun' ? (
               <PermisoAirbnbCancunBody />
+            ) : articleSlug === 'plusvalia-en-cancun-2026' ? (
+              <PlusvaliaCancun2026Body />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>

@@ -120,6 +120,7 @@ const entries: Entry[] = [
   { es: "/journal/preventa-puerto-cancun", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
   { es: "/journal/departamentos-en-venta-costa-mujeres", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
   { es: "/journal/departamentos-con-permiso-airbnb-cancun", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
+  { es: "/journal/plusvalia-en-cancun-2026", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
 
   // Retiring in Cancún — Canadian guide (bilingual, different slug per language)
   { es: "/journal/retirarse-en-cancun-2026-guia-canadiense", en: "/en/journal/retiring-in-cancun-2026-canadian-guide", priority: "0.7", changefreq: "monthly" },
