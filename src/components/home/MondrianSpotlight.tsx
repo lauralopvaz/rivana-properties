@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from '@/components/icons';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
+import { formatUSD, formatMXN } from '@/lib/formatPrice';
 
 import mondrianHero from '@/assets/mondrian-hero.jpg';
 
