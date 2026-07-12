@@ -16,6 +16,7 @@ interface Entry {
   en?: string; // path with leading slash, or undefined if ES-only
   priority?: string;
   changefreq?: Freq;
+  lastmod?: string; // ISO YYYY-MM-DD
 }
 
 /** Bilingual + single-language public routes. Noindex pages (privacy) are omitted. */
@@ -131,6 +132,7 @@ function urlBlock(loc: string, e: Entry): string {
     `  <url>`,
     `    <loc>${loc}</loc>`,
     altLinks(e),
+    e.lastmod ? `    <lastmod>${e.lastmod}</lastmod>` : "",
     e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : "",
     e.priority ? `    <priority>${e.priority}</priority>` : "",
     `  </url>`,
