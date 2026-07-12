@@ -128,6 +128,7 @@ const entries: Entry[] = [
   { en: "/en/journal/cancun-condos-for-sale", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
   { en: "/en/journal/pre-construction-condos-cancun", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
   { en: "/en/journal/costa-mujeres-real-estate", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
+  { en: "/en/journal/best-places-to-buy-property-riviera-maya", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
 
   // Retiring in Cancún — Canadian guide (bilingual, different slug per language)
   { es: "/journal/retirarse-en-cancun-2026-guia-canadiense", en: "/en/journal/retiring-in-cancun-2026-canadian-guide", priority: "0.7", changefreq: "monthly" },
