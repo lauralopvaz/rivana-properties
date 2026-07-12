@@ -179,7 +179,7 @@ export const ForeignBuyerCancunBody = () => {
 
       <WhatsAppCta
         title="Get the Checklist Before You Get the Keys"
-        body='The difference between a smooth foreign purchase and a stressful one is knowing the sequence before you start it. Text "FOREIGN BUYER" on WhatsApp and receive the Foreign Buyer\u2019s Closing Checklist \u2014 every document, cost, and timeline stage \u2014 plus a free 30-minute call with an advisor who closes cross-border deals every week. Already have a property in mind? Send us the listing and we will run the red-flag screen before you commit.'
+        body={'The difference between a smooth foreign purchase and a stressful one is knowing the sequence before you start it. Text "FOREIGN BUYER" on WhatsApp and receive the Foreign Buyer’s Closing Checklist — every document, cost, and timeline stage — plus a free 30-minute call with an advisor who closes cross-border deals every week. Already have a property in mind? Send us the listing and we will run the red-flag screen before you commit.'}
         keyword="FOREIGN BUYER"
         message="Please send the Foreign Buyer's Closing Checklist and book a 30-minute call"
         slug={slug}
