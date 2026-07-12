@@ -30,6 +30,7 @@ import { DeptosVentaZonaHoteleraBody } from '@/components/journal/DeptosVentaZon
 import { InvertirBienesRaicesCancunBody } from '@/components/journal/InvertirBienesRaicesCancunBody';
 import { PreventaPuertoCancunBody } from '@/components/journal/PreventaPuertoCancunBody';
 import { DeptosVentaCostaMujeresBody } from '@/components/journal/DeptosVentaCostaMujeresBody';
+import { PermisoAirbnbCancunBody } from '@/components/journal/PermisoAirbnbCancunBody';
 import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
 const parseArticleDate = (dateStr: string): string => {
@@ -561,6 +562,8 @@ const JournalPost = () => {
               <PreventaPuertoCancunBody />
             ) : articleSlug === 'departamentos-en-venta-costa-mujeres' ? (
               <DeptosVentaCostaMujeresBody />
+            ) : articleSlug === 'departamentos-con-permiso-airbnb-cancun' ? (
+              <PermisoAirbnbCancunBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
