@@ -17,6 +17,7 @@ const imgDeptosPreventa = imgGuiaPreventa;
 const imgInvertirBienesRaices = imgCancunRoi;
 const imgPreventaPuertoCancun = imgMayakoba;
 const imgDeptosCostaMujeres = imgCostaMujeres;
+const imgPermisoAirbnb = imgLuxuryCondos;
 
 export interface JournalArticle {
   slug: string;
