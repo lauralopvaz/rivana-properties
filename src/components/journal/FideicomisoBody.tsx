@@ -118,10 +118,15 @@ export const FideicomisoBody = () => {
       <Callout>
         <p>
           Ready to see how the trust maps to a real purchase? Read our{' '}
-          <Link to={localePath('/journal/buying-property-mexico-canadian-2026-guide')} className={gold}>
-            step-by-step guide for foreign buyers in Cancún
+          <Link to={localePath('/journal/buying-property-in-cancun-as-a-foreigner')} className={gold}>
+            step-by-step guide to buying property in Cancún as a foreigner
           </Link>{' '}
-          — the process, the documents, and the timeline, front to back.
+          — process, documents, and timeline, front to back. If you already know the corridor, jump
+          straight into{' '}
+          <Link to={localePath('/journal/cancun-condos-for-sale')} className={gold}>
+            Cancún condos for sale in 2026
+          </Link>
+          .
         </p>
       </Callout>
 
