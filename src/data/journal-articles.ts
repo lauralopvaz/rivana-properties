@@ -441,6 +441,57 @@ export const journalArticles: JournalArticle[] = [
   },
 ];
 journalArticles.unshift({
+  slug: 'departamentos-en-venta-zona-hotelera-cancun',
+  title: {
+    es: 'Departamentos en Venta en la Zona Hotelera de Cancún: Lo Que Debes Saber en 2026',
+    en: 'Condos for Sale in Cancún’s Hotel Zone: What You Need to Know in 2026',
+  },
+  seoTitle: {
+    es: 'Departamentos en Venta en la Zona Hotelera de Cancún | Rivana',
+    en: 'Condos for Sale in Cancún’s Hotel Zone | Rivana',
+  },
+  category: { es: 'Guías', en: 'Guides' },
+  excerpt: {
+    es: 'Departamentos en venta en la Zona Hotelera de Cancún: precios 2026, penthouses con permiso de renta vacacional y preventas de lujo. Asesoría Rivana.',
+    en: 'Condos for sale in Cancún’s Hotel Zone: 2026 pricing, penthouses with vacation-rental permits and luxury pre-sales. Rivana advisory.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '9 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgLuxuryCondos,
+  relatedDestinations: ['zona-hotelera'],
+  whatsappKeyword: 'ZONA HOTELERA',
+  whatsappMessage: {
+    es: 'Quiero la Selección Premium de departamentos en venta en la Zona Hotelera de Cancún',
+    en: 'I would like Rivana’s Premium Selection of condos for sale in Cancún’s Hotel Zone',
+  },
+  relatedSlugs: [
+    'luxury-condos-zona-hotelera-cancun-2026-guide',
+    'departamentos-en-preventa-cancun',
+    'mondrian-residences-grand-island-cancun-guide',
+  ],
+  faqs: {
+    es: [
+      { q: '¿Es buen momento para comprar en la Zona Hotelera?', a: 'Los datos de 2025 muestran la mayor apreciación del país en el estado, tasas de Banxico a la baja (7% desde diciembre 2025) y obras de conectividad en curso. Nadie garantiza el futuro, pero los fundamentos del corredor —escasez de suelo, demanda turística, infraestructura— son los más sólidos de México.' },
+      { q: '¿Puedo comprar sin estar en México?', a: 'Sí. Coordinamos visitas virtuales en video, documentación digital y cierre mediante poder notarial. Una parte relevante de nuestros clientes extranjeros compra de forma remota.' },
+      { q: '¿Qué me conviene: producto terminado o preventa?', a: 'Depende de tu tesis: flujo inmediato (Salvia, con permisos de renta) o captura de plusvalía durante construcción (Mondrian). En una llamada de 30 minutos definimos cuál corresponde a tu perfil.' },
+    ],
+    en: [
+      { q: 'Is it a good time to buy in the Hotel Zone?', a: '2025 data shows the state led national appreciation, Banxico rates fell to 7% in December 2025, and connectivity projects are underway. No one guarantees the future, but the corridor’s fundamentals —limited land, tourism demand, infrastructure— are the strongest in Mexico.' },
+      { q: 'Can I buy without being in Mexico?', a: 'Yes. We coordinate live video walkthroughs, digital documentation and closing via power of attorney. A meaningful share of our international clients close remotely.' },
+      { q: 'Turnkey or pre-sale?', a: 'It depends on your thesis: immediate cash flow (Salvia, with rental permits) or capturing appreciation during construction (Mondrian). A 30-minute call is enough to define which fits your profile.' },
+    ],
+  },
+  sources: [
+    { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
+    { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+    { title: 'Normativa estatal de hospedaje', url: 'https://qroo.gob.mx/', publisher: 'Gobierno de Quintana Roo' },
+  ],
+});
+
+journalArticles.unshift({
   slug: 'departamentos-en-preventa-cancun',
   title: {
     es: 'Departamentos en Preventa en Cancún: Guía 2026 para Comprar Bien',
