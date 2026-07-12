@@ -880,6 +880,62 @@ journalArticles.unshift({
   ],
 });
 
+journalArticles.unshift({
+  slug: 'buying-property-in-cancun-as-a-foreigner',
+  slugEn: 'buying-property-in-cancun-as-a-foreigner',
+  enOnly: true,
+  title: {
+    es: 'Buying Property in Cancún as a Foreigner: The Complete 2026 Process',
+    en: 'Buying Property in Cancún as a Foreigner: The Complete 2026 Process',
+  },
+  seoTitle: {
+    es: 'Buying Property in Cancún as a Foreigner 2026 | Rivana',
+    en: 'Buying Property in Cancún as a Foreigner 2026 | Rivana',
+  },
+  category: { es: 'Guides', en: 'Guides' },
+  excerpt: {
+    es: 'Step-by-step guide to buying property in Cancún as a foreigner: fideicomiso, closing costs, remote purchase, 2026 residency rules, and expert advisory.',
+    en: 'Step-by-step guide to buying property in Cancún as a foreigner: fideicomiso, closing costs, remote purchase, 2026 residency rules, and expert advisory.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '10 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgForeignBuyer,
+  relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres'],
+  whatsappKeyword: 'FOREIGN BUYER',
+  whatsappMessage: {
+    es: "Please send the Foreign Buyer's Closing Checklist and book a 30-minute call",
+    en: "Please send the Foreign Buyer's Closing Checklist and book a 30-minute call",
+  },
+  relatedSlugs: [
+    'fideicomiso-mexico-bank-trust-explained',
+    'buying-property-mexico-canadian-2026-guide',
+    'foreign-buyer-guide-mexico',
+  ],
+  faqs: {
+    es: [
+      { q: 'Do I need Mexican residency to buy property?', a: 'No. Tourists can legally purchase; residency and ownership are independent. Ownership can, however, help support a residency application at some consulates.' },
+      { q: 'Can my U.S. LLC or Canadian corporation buy?', a: 'Foreign entities can participate through Mexican structures; for most personal-use buyers the fideicomiso is simpler and cheaper. We map the right structure with cross-border counsel for your case.' },
+      { q: 'What happens to the trust when I die?', a: 'You name substitute beneficiaries directly in the fideicomiso — the property passes to your heirs without probate. It is one of the structure\u2019s genuine advantages over direct ownership back home.' },
+      { q: 'How long does closing take?', a: 'A typical trust-based closing runs 45–90 days from accepted offer, driven mostly by trust-permit and notario timelines. Pre-construction follows the build calendar with staged payments.' },
+    ],
+    en: [
+      { q: 'Do I need Mexican residency to buy property?', a: 'No. Tourists can legally purchase; residency and ownership are independent. Ownership can, however, help support a residency application at some consulates.' },
+      { q: 'Can my U.S. LLC or Canadian corporation buy?', a: 'Foreign entities can participate through Mexican structures; for most personal-use buyers the fideicomiso is simpler and cheaper. We map the right structure with cross-border counsel for your case.' },
+      { q: 'What happens to the trust when I die?', a: 'You name substitute beneficiaries directly in the fideicomiso — the property passes to your heirs without probate. It is one of the structure\u2019s genuine advantages over direct ownership back home.' },
+      { q: 'How long does closing take?', a: 'A typical trust-based closing runs 45–90 days from accepted offer, driven mostly by trust-permit and notario timelines. Pre-construction follows the build calendar with staged payments.' },
+    ],
+  },
+  sources: [
+    { title: 'Mexican consulate visa guides 2026 (property-based qualification, ~USD $624,000+)', url: 'https://www.gob.mx/sre', publisher: 'Secretaría de Relaciones Exteriores' },
+    { title: 'Financial Criteria for Residency in Mexico 2026 (UMA-based thresholds)', url: 'https://www.mexperience.com/', publisher: 'Mexperience' },
+    { title: '2026 Mexico immigration fee changes', url: 'https://www.expatden.com/', publisher: 'ExpatDen / Mexico Relocation Guide' },
+    { title: 'Foreign-buyer framework stability, early 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+  ],
+});
+
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 
 /** Get the correct slug for an article based on language */
