@@ -14,6 +14,7 @@ import imgRetireCancun from '@/assets/journal/retire-cancun-riviera-maya.jpg';
 const imgMondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const imgDemo = '/images/mondrian/mondrian-hero.jpg'; // placeholder for template demo
 const imgDeptosPreventa = imgGuiaPreventa;
+const imgInvertirBienesRaices = imgCancunRoi;
 
 export interface JournalArticle {
   slug: string;
@@ -546,6 +547,60 @@ journalArticles.unshift({
 
 // Legacy export kept for compatibility
 export const journalArticlesEs: JournalArticle[] = [];
+
+journalArticles.unshift({
+  slug: 'invertir-en-bienes-raices-cancun',
+  title: {
+    es: 'Invertir en Bienes Raíces en Cancún: La Guía Basada en Datos (2026)',
+    en: 'Investing in Cancún Real Estate: The Data-Driven Guide (2026)',
+  },
+  seoTitle: {
+    es: 'Invertir en Bienes Raíces en Cancún 2026: Guía con Datos | Rivana',
+    en: 'Invest in Cancún Real Estate 2026: Data-Driven Guide | Rivana',
+  },
+  category: { es: 'Inversión', en: 'Investment' },
+  excerpt: {
+    es: 'Cómo invertir en bienes raíces en Cancún en 2026: apreciación oficial SHF, estrategias de renta, zonas con mayor plusvalía y cómo empezar con Rivana.',
+    en: 'How to invest in Cancún real estate in 2026: official SHF appreciation data, rental strategies, top-appreciation zones and how to start with Rivana.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '10 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgInvertirBienesRaices,
+  relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres'],
+  whatsappKeyword: 'INVERSIÓN',
+  whatsappMessage: {
+    es: 'Quiero agendar la llamada de descubrimiento y recibir la Selección Premium de inversión en Cancún',
+    en: 'I would like to book a discovery call and receive Rivana’s Premium Selection for Cancún investment',
+  },
+  relatedSlugs: [
+    'departamentos-en-preventa-cancun',
+    'departamentos-en-venta-zona-hotelera-cancun',
+    'cancun-roi-rental-yield',
+  ],
+  faqs: {
+    es: [
+      { q: '¿Cuánto capital necesito para empezar?', a: 'En preventa, el enganche típico es 20-30% del valor. El ticket de entrada al portafolio Rivana varía por corredor; en la llamada inicial te damos el mapa completo de opciones según tu presupuesto.' },
+      { q: '¿Puedo invertir sin vivir en México?', a: 'Sí. Una parte importante de nuestros clientes son inversionistas remotos: cierre por poder notarial, administración de rentas y reportes a distancia.' },
+      { q: '¿Qué zona tiene mayor potencial en 2026?', a: 'Depende de la estrategia: Zona Hotelera para flujo vacacional, Grand Island para preventa de marca, Costa Mujeres para recorrido de plusvalía en consolidación. El error común es elegir zona antes que tesis.' },
+      { q: '¿Cómo sé que el desarrollador es confiable?', a: 'Historial de entregas, estructura legal de los pagos, licencias del proyecto y situación del suelo. Es el filtro de cinco puntos que aplicamos antes de incluir cualquier desarrollo en la Selección Premium.' },
+    ],
+    en: [
+      { q: 'How much capital do I need to start?', a: 'For pre-sale, the typical down payment is 20-30% of the value. The entry ticket to Rivana’s portfolio varies by corridor; the discovery call maps every option to your budget.' },
+      { q: 'Can I invest without living in Mexico?', a: 'Yes. A significant share of our clients are remote investors: closing by power of attorney, rental management and reporting from abroad.' },
+      { q: 'Which zone has the most potential in 2026?', a: 'It depends on the thesis: Hotel Zone for vacation cash flow, Grand Island for branded pre-sale, Costa Mujeres for appreciation runway in consolidation. Choosing the zone before the thesis is the common mistake.' },
+      { q: 'How do I know the developer is reliable?', a: 'Delivery track record, legal structure of the payments, project permits and land status. It is the five-point filter we apply before including any development in the Premium Selection.' },
+    ],
+  },
+  sources: [
+    { title: 'Índice SHF de Precios de la Vivienda 2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+    { title: 'Absorción del mercado inmobiliario en Quintana Roo', url: 'https://adiqroo.mx/', publisher: 'Asociación de Desarrolladores Inmobiliarios de Quintana Roo' },
+    { title: 'Snowbird trends toward Mexico', url: 'https://www.theglobeandmail.com/', publisher: 'The Globe and Mail' },
+  ],
+});
 
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 
