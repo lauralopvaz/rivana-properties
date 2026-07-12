@@ -936,6 +936,62 @@ journalArticles.unshift({
   ],
 });
 
+journalArticles.unshift({
+  slug: 'cancun-condos-for-sale',
+  slugEn: 'cancun-condos-for-sale',
+  enOnly: true,
+  title: {
+    es: "Cancún Condos for Sale: The 2026 Buyer's Guide by Area, Price, and Strategy",
+    en: "Cancún Condos for Sale: The 2026 Buyer's Guide by Area, Price, and Strategy",
+  },
+  seoTitle: {
+    es: "Cancún Condos for Sale in 2026: Buyer's Guide | Rivana",
+    en: "Cancún Condos for Sale in 2026: Buyer's Guide | Rivana",
+  },
+  category: { es: 'Guides', en: 'Guides' },
+  excerpt: {
+    es: "Cancún condos for sale: 2026 prices by area, how foreigners buy safely, and Rivana's Premium Selection — Hotel Zone, Puerto Cancún & Costa Mujeres.",
+    en: "Cancún condos for sale: 2026 prices by area, how foreigners buy safely, and Rivana's Premium Selection — Hotel Zone, Puerto Cancún & Costa Mujeres.",
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '11 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgLuxuryCondos,
+  relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres'],
+  whatsappKeyword: 'CONDOS',
+  whatsappMessage: {
+    es: "Please send today's Premium Selection of Cancún condos and a side-by-side comparison",
+    en: "Please send today's Premium Selection of Cancún condos and a side-by-side comparison",
+  },
+  relatedSlugs: [
+    'fideicomiso-mexico-bank-trust-explained',
+    'buying-property-in-cancun-as-a-foreigner',
+    'mayakoba-vs-puerto-cancun',
+  ],
+  faqs: {
+    es: [
+      { q: 'Can Americans and Canadians own beachfront condos in Cancún?', a: 'Yes — through the fideicomiso bank trust, with full rights to use, rent, inherit, and sell. Thousands of foreign owners close this way every year.' },
+      { q: 'What are the closing costs?', a: 'Plan for roughly 5-8% of the purchase price all-in: transfer tax (ISAI), notario fees, and trust setup. Ongoing costs are the annual trust fee and Mexico\u2019s unusually low property tax.' },
+      { q: 'Can I buy remotely without flying to Mexico?', a: 'Yes. Rivana runs video tours, digital documentation, and closing by power of attorney. A significant share of our foreign clients complete their purchase without traveling.' },
+      { q: 'Is 2026 a good time to buy in Cancún?', a: 'Nobody can guarantee the future. What the data shows: Mexico\u2019s highest state-level appreciation in 2025 (+14.3%, SHF), Banxico\u2019s rate down to 7% (December 2025), and infrastructure still under construction. The fundamentals are the strongest in the country — the right unit in the right corridor is what turns them into your result.' },
+    ],
+    en: [
+      { q: 'Can Americans and Canadians own beachfront condos in Cancún?', a: 'Yes — through the fideicomiso bank trust, with full rights to use, rent, inherit, and sell. Thousands of foreign owners close this way every year.' },
+      { q: 'What are the closing costs?', a: 'Plan for roughly 5-8% of the purchase price all-in: transfer tax (ISAI), notario fees, and trust setup. Ongoing costs are the annual trust fee and Mexico\u2019s unusually low property tax.' },
+      { q: 'Can I buy remotely without flying to Mexico?', a: 'Yes. Rivana runs video tours, digital documentation, and closing by power of attorney. A significant share of our foreign clients complete their purchase without traveling.' },
+      { q: 'Is 2026 a good time to buy in Cancún?', a: 'Nobody can guarantee the future. What the data shows: Mexico\u2019s highest state-level appreciation in 2025 (+14.3%, SHF), Banxico\u2019s rate down to 7% (December 2025), and infrastructure still under construction. The fundamentals are the strongest in the country — the right unit in the right corridor is what turns them into your result.' },
+    ],
+  },
+  sources: [
+    { title: 'SHF 2025 Home Price Index', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
+    { title: 'Cancún 2026 market analysis — per-m² pricing, Banxico rate', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+    { title: 'Transaction origin — 70-75% Mexican national buyers', url: 'https://adiqroo.mx/', publisher: "Quintana Roo Developers' Association" },
+    { title: 'Canadian snowbird demand shift', url: 'https://www.theglobeandmail.com/', publisher: 'Snowbird Advisor via The Globe and Mail / CBC News' },
+  ],
+});
+
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 
 /** Get the correct slug for an article based on language */
