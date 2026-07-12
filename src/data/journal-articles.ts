@@ -395,3 +395,12 @@ export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 /** Get the correct slug for an article based on language */
 export const getArticleSlug = (article: JournalArticle, language: 'es' | 'en') =>
   language === 'en' && article.slugEn ? article.slugEn : article.slug;
+
+/** Retrieve FAQs for an article by slug and language; returns [] if none. */
+export const getArticleFaqs = (slug: string, language: 'es' | 'en') => {
+  const article = [...journalArticles, ...journalArticlesEs].find(
+    (a) => a.slug === slug || a.slugEn === slug,
+  );
+  return article?.faqs?.[language] ?? [];
+};
+  language === 'en' && article.slugEn ? article.slugEn : article.slug;
