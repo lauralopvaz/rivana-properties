@@ -17,6 +17,7 @@ const imgDeptosPreventa = imgGuiaPreventa;
 const imgInvertirBienesRaices = imgCancunRoi;
 const imgPreventaPuertoCancun = imgMayakoba;
 const imgDeptosCostaMujeres = imgCostaMujeres;
+const imgPermisoAirbnb = imgLuxuryCondos;
 
 export interface JournalArticle {
   slug: string;
@@ -708,6 +709,60 @@ journalArticles.unshift({
     { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
     { title: 'Snowbird trends toward Mexico', url: 'https://www.theglobeandmail.com/', publisher: 'The Globe and Mail' },
     { title: 'Playa Mujeres — información pública del corredor', url: 'https://www.playamujeres.com.mx/', publisher: 'Playa Mujeres' },
+  ],
+});
+
+journalArticles.unshift({
+  slug: 'departamentos-con-permiso-airbnb-cancun',
+  title: {
+    es: 'Departamentos con Permiso Airbnb en Cancún: El Activo Más Escaso del Mercado (2026)',
+    en: 'Airbnb-Permitted Condos in Cancún: The Market’s Scarcest Asset (2026)',
+  },
+  seoTitle: {
+    es: 'Departamentos con Permiso Airbnb en Cancún: Guía 2026 | Rivana',
+    en: 'Airbnb-Permitted Condos in Cancún: 2026 Guide | Rivana',
+  },
+  category: { es: 'Inversión', en: 'Investment' },
+  excerpt: {
+    es: 'Departamentos con permiso de renta vacacional en Cancún: qué exige la ley, por qué el permiso multiplica el valor y qué unidades hay disponibles hoy.',
+    en: 'Vacation-rental permitted condos in Cancún: what the law requires, why the permit multiplies value and which units are available today.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '10 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgPermisoAirbnb,
+  relatedDestinations: ['zona-hotelera'],
+  whatsappKeyword: 'SALVIA',
+  whatsappMessage: {
+    es: 'Quiero disponibilidad y análisis financiero de los penthouses de Salvia con permiso de renta vacacional',
+    en: 'I would like availability and financial analysis for the Salvia penthouses with vacation-rental permits',
+  },
+  relatedSlugs: [
+    'departamentos-en-venta-zona-hotelera-cancun',
+    'invertir-en-bienes-raices-cancun',
+    'luxury-condos-zona-hotelera-cancun-2026-guide',
+  ],
+  faqs: {
+    es: [
+      { q: '¿Cómo verifico que un departamento realmente puede operar en Airbnb?', a: 'Tres documentos: el reglamento del condominio (que permita corta estancia), el registro estatal de hospedaje y la situación fiscal del vendedor si la unidad ya operaba. Es la due diligence estándar que Rivana ejecuta antes de presentarte cualquier unidad como "apta para renta vacacional".' },
+      { q: '¿Los permisos se transfieren al comprar?', a: 'La operación en regla se estructura en el cierre: verificamos la continuidad del esquema (registro, condominio, régimen fiscal del nuevo propietario) para que no haya un solo día fuera de norma.' },
+      { q: '¿Cuánto produce un penthouse en la Zona Hotelera?', a: 'Depende de tarifa, ocupación y costos — por eso entregamos el modelo financiero de la unidad específica con tres escenarios en lugar de un porcentaje de folleto. Pídelo sin costo.' },
+      { q: '¿Puedo operar si vivo fuera de México?', a: 'Sí: es el caso de la mayoría de los propietarios de este segmento. Con administración profesional recibes reportes y depósitos sin gestionar huéspedes ni limpiezas.' },
+    ],
+    en: [
+      { q: 'How do I verify a condo can legally operate on Airbnb?', a: 'Three documents: the condominium bylaws (short-stay permitted), the state hospitality registration and the seller’s tax status if the unit was already operating. Standard due diligence Rivana runs before presenting any unit as "vacation-rental ready".' },
+      { q: 'Do the permits transfer at closing?', a: 'Compliant operation is structured at closing: we verify continuity of the scheme (registration, condominium, new owner’s tax regime) so there is not a single day out of norm.' },
+      { q: 'How much does a Hotel Zone penthouse produce?', a: 'It depends on rate, occupancy and costs — that is why we deliver the specific-unit financial model with three scenarios instead of a brochure percentage. Request it at no cost.' },
+      { q: 'Can I operate if I live outside Mexico?', a: 'Yes: it is the case for most owners in this segment. With professional management you receive reports and deposits without handling guests or cleanings.' },
+    ],
+  },
+  sources: [
+    { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
+    { title: 'Índice SHF de Precios de la Vivienda 2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Ley del Impuesto al Hospedaje de Quintana Roo', url: 'https://qroo.gob.mx/', publisher: 'Gobierno de Quintana Roo' },
+    { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
   ],
 });
 
