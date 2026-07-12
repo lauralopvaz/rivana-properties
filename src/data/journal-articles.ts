@@ -33,6 +33,28 @@ export interface JournalArticle {
 
 export const journalArticles: JournalArticle[] = [
   {
+    slug: 'retirarse-en-cancun-2026-guia-canadiense',
+    slugEn: 'retiring-in-cancun-2026-canadian-guide',
+    title: {
+      es: 'Retirarse en Cancún 2026 – Guía Canadiense',
+      en: 'Retiring in Cancún 2026 – The Canadian Guide',
+    },
+    seoTitle: {
+      es: 'Retirarse en Cancún 2026: Guía para Canadienses | Rivana',
+      en: 'Retiring in Cancún 2026: The Canadian Guide | Rivana',
+    },
+    category: { es: 'Estilo de vida', en: 'Lifestyle' },
+    excerpt: {
+      es: 'Nuevas reglas de visa 2026, costo de vida real y dónde comprar: Cancún, Puerto Morelos o Costa Mujeres. La guía para jubilados canadienses.',
+      en: 'New 2026 visa rules, real cost of living, and where to buy: Cancún, Puerto Morelos or Costa Mujeres. The guide for Canadian retirees.',
+    },
+    date: 'Jul 12, 2026',
+    readTime: '12 min',
+    author: 'Rivana Properties Advisory Team',
+    image: imgRetireCancun,
+    relatedDestinations: ['costa-mujeres', 'puerto-morelos', 'puerto-cancun', 'zona-hotelera'],
+  },
+  {
     slug: 'retire-cancun-riviera-maya-american-canadian-2026',
     slugEn: 'retire-cancun-riviera-maya-american-canadian-2026',
     title: {
