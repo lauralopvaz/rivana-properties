@@ -181,7 +181,7 @@ export const CancunCondosForSaleBody = () => {
 
       <WhatsAppCta
         title="See Today's Availability — Not Last Month's Listings"
-        body='The best condos in Cancún — high floors, protected views, rental permits — move through direct relationships before they reach the portals. Text "CONDOS" on WhatsApp and receive today\u2019s Premium Selection: available units in the Hotel Zone, Puerto Cancún, and Costa Mujeres, current price lists, and a side-by-side comparison built for your budget. Prefer to start with a conversation? Book a free 30-minute discovery video call.'
+        body={'The best condos in Cancún — high floors, protected views, rental permits — move through direct relationships before they reach the portals. Text "CONDOS" on WhatsApp and receive today’s Premium Selection: available units in the Hotel Zone, Puerto Cancún, and Costa Mujeres, current price lists, and a side-by-side comparison built for your budget. Prefer to start with a conversation? Book a free 30-minute discovery video call.'}
         keyword="CONDOS"
         message="Please send today's Premium Selection of Cancún condos and a side-by-side comparison"
         slug={slug}
