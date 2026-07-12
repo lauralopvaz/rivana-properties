@@ -1048,6 +1048,62 @@ journalArticles.unshift({
   ],
 });
 
+journalArticles.unshift({
+  slug: 'costa-mujeres-real-estate',
+  slugEn: 'costa-mujeres-real-estate',
+  enOnly: true,
+  title: {
+    es: "Costa Mujeres Real Estate: Buying Into the Riviera Maya's Consolidating Luxury Corridor",
+    en: "Costa Mujeres Real Estate: Buying Into the Riviera Maya's Consolidating Luxury Corridor",
+  },
+  seoTitle: {
+    es: "Costa Mujeres Real Estate: 2026 Buyer's Guide | Rivana",
+    en: "Costa Mujeres Real Estate: 2026 Buyer's Guide | Rivana",
+  },
+  category: { es: 'Guides', en: 'Guides' },
+  excerpt: {
+    es: 'Costa Mujeres real estate guide 2026: why the luxury corridor north of Cancún is consolidating, current prices, La Amada Residence units, and how to buy.',
+    en: 'Costa Mujeres real estate guide 2026: why the luxury corridor north of Cancún is consolidating, current prices, La Amada Residence units, and how to buy.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '11 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgCostaMujeres,
+  relatedDestinations: ['costa-mujeres', 'zona-hotelera', 'puerto-cancun'],
+  whatsappKeyword: 'COSTA MUJERES',
+  whatsappMessage: {
+    es: "Please send today's available La Amada Residence units and the Costa Mujeres appreciation brief",
+    en: "Please send today's available La Amada Residence units and the Costa Mujeres appreciation brief",
+  },
+  relatedSlugs: [
+    'fideicomiso-mexico-bank-trust-explained',
+    'buying-property-in-cancun-as-a-foreigner',
+    'pre-construction-condos-cancun',
+  ],
+  faqs: {
+    es: [
+      { q: 'Is Costa Mujeres a good investment in 2026?', a: 'The fundamentals are what an investor wants to see: Mexico\u2019s #1 appreciating state (+14.3%, SHF 2025), a master-planned corridor with luxury brands already operating, finite beachfront, and pricing still in its consolidation phase. No investment is guaranteed; this one is unusually well supported by data.' },
+      { q: 'How far is it from the airport and from Cancún?', a: '25-35 minutes from Cancún International Airport; 20-30 minutes from downtown Cancún and its private hospitals.' },
+      { q: 'Can I tour units remotely?', a: 'Yes — live video walkthroughs of the available La Amada Residence units and the corridor, with digital documentation and remote closing if you proceed.' },
+      { q: 'Are vacation rentals allowed?', a: "It depends on each development\u2019s condo regime plus state lodging registration. We flag rental viability on every unit we present, and steer your strategy to where it\u2019s compliant from day one." },
+    ],
+    en: [
+      { q: 'Is Costa Mujeres a good investment in 2026?', a: 'The fundamentals are what an investor wants to see: Mexico\u2019s #1 appreciating state (+14.3%, SHF 2025), a master-planned corridor with luxury brands already operating, finite beachfront, and pricing still in its consolidation phase. No investment is guaranteed; this one is unusually well supported by data.' },
+      { q: 'How far is it from the airport and from Cancún?', a: '25-35 minutes from Cancún International Airport; 20-30 minutes from downtown Cancún and its private hospitals.' },
+      { q: 'Can I tour units remotely?', a: 'Yes — live video walkthroughs of the available La Amada Residence units and the corridor, with digital documentation and remote closing if you proceed.' },
+      { q: 'Are vacation rentals allowed?', a: "It depends on each development\u2019s condo regime plus state lodging registration. We flag rental viability on every unit we present, and steer your strategy to where it\u2019s compliant from day one." },
+    ],
+  },
+  sources: [
+    { title: '2025 state and municipal appreciation', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
+    { title: 'Rental yields — Mexico, December 2025', url: 'https://www.globalpropertyguide.com/latin-america/mexico/rental-yields', publisher: 'Global Property Guide' },
+    { title: 'Canadian snowbird demand shift 2025-2026', url: 'https://www.theglobeandmail.com/', publisher: 'Snowbird Advisor via The Globe and Mail / CBC News' },
+    { title: 'Playa Mujeres / Costa Mujeres master plan', url: 'https://www.playamujeres.com/', publisher: 'Playa Mujeres public information' },
+  ],
+});
+
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 
 /** Get the correct slug for an article based on language */
