@@ -1104,6 +1104,63 @@ journalArticles.unshift({
   ],
 });
 
+journalArticles.unshift({
+  slug: 'best-places-to-buy-property-riviera-maya',
+  slugEn: 'best-places-to-buy-property-riviera-maya',
+  enOnly: true,
+  title: {
+    es: 'The Best Places to Buy Property in the Riviera Maya in 2026 (Ranked by Strategy, Not Hype)',
+    en: 'The Best Places to Buy Property in the Riviera Maya in 2026 (Ranked by Strategy, Not Hype)',
+  },
+  seoTitle: {
+    es: 'Best Places to Buy Property in the Riviera Maya (2026) | Rivana',
+    en: 'Best Places to Buy Property in the Riviera Maya (2026) | Rivana',
+  },
+  category: { es: 'Guides', en: 'Guides' },
+  excerpt: {
+    es: 'Data-driven ranking of the best places to buy in the Riviera Maya 2026: Cancún, Puerto Cancún, Costa Mujeres, Playa del Carmen, Mayakoba, Puerto Morelos, Tulum.',
+    en: 'Data-driven ranking of the best places to buy in the Riviera Maya 2026: Cancún, Puerto Cancún, Costa Mujeres, Playa del Carmen, Mayakoba, Puerto Morelos, Tulum.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '12 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgMayakoba,
+  relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres', 'mayakoba', 'playa-del-carmen', 'puerto-morelos', 'tulum'],
+  whatsappKeyword: 'RIVIERA MAYA',
+  whatsappMessage: {
+    es: "Please send the Zone-by-Zone Investment Map 2026 and today's Premium Selection across corridors",
+    en: "Please send the Zone-by-Zone Investment Map 2026 and today's Premium Selection across corridors",
+  },
+  relatedSlugs: [
+    'costa-mujeres-real-estate',
+    'cancun-condos-for-sale',
+    'pre-construction-condos-cancun',
+  ],
+  faqs: {
+    es: [
+      { q: 'Which area has the highest appreciation?', a: 'By official data, the state leads Mexico (+14.3% in 2025, SHF) with Benito Juárez/Cancún among the top municipalities. By relative upside, Costa Mujeres\u2019 consolidation phase is the strongest thesis for 2026 — with the longer horizon that implies.' },
+      { q: 'Where do most American and Canadian buyers purchase?', a: 'Cancún\u2019s corridors and Playa del Carmen historically lead; Costa Mujeres is the fastest-growing choice for the new wave — particularly Canadians shifting from U.S. winters.' },
+      { q: 'Which zones allow Airbnb-style rentals?', a: 'It\u2019s decided building by building (condo bylaws) plus state registration and lodging tax — not zone by zone. Units with permits in place are the scarce asset; we flag rental viability on every property we present.' },
+      { q: 'Tulum or Cancún — which is the better investment?', a: 'Cancún offers deeper data, infrastructure, and exit liquidity; Tulum offers brand heat with wider variance. For a first Riviera Maya purchase, the probability-weighted answer is Cancún\u2019s corridors — for the experienced buyer with strict due diligence, Tulum can earn its place.' },
+    ],
+    en: [
+      { q: 'Which area has the highest appreciation?', a: 'By official data, the state leads Mexico (+14.3% in 2025, SHF) with Benito Juárez/Cancún among the top municipalities. By relative upside, Costa Mujeres\u2019 consolidation phase is the strongest thesis for 2026 — with the longer horizon that implies.' },
+      { q: 'Where do most American and Canadian buyers purchase?', a: 'Cancún\u2019s corridors and Playa del Carmen historically lead; Costa Mujeres is the fastest-growing choice for the new wave — particularly Canadians shifting from U.S. winters.' },
+      { q: 'Which zones allow Airbnb-style rentals?', a: 'It\u2019s decided building by building (condo bylaws) plus state registration and lodging tax — not zone by zone. Units with permits in place are the scarce asset; we flag rental viability on every property we present.' },
+      { q: 'Tulum or Cancún — which is the better investment?', a: 'Cancún offers deeper data, infrastructure, and exit liquidity; Tulum offers brand heat with wider variance. For a first Riviera Maya purchase, the probability-weighted answer is Cancún\u2019s corridors — for the experienced buyer with strict due diligence, Tulum can earn its place.' },
+    ],
+  },
+  sources: [
+    { title: '2025 state and municipal price index', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
+    { title: 'Rental yields — Mexico, December 2025', url: 'https://www.globalpropertyguide.com/latin-america/mexico/rental-yields', publisher: 'Global Property Guide' },
+    { title: 'Canadian demand shift', url: 'https://www.theglobeandmail.com/', publisher: 'Snowbird Advisor via The Globe and Mail' },
+    { title: 'Cancún corridors and infrastructure analysis', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+    { title: 'Puerto Morelos Reef National Park / Mesoamerican Reef', url: 'https://www.gob.mx/conanp', publisher: 'CONANP' },
+  ],
+});
+
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 
 /** Get the correct slug for an article based on language */
