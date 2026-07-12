@@ -48,6 +48,8 @@ export interface JournalArticle {
   faqs?: { es: { q: string; a: string }[]; en: { q: string; a: string }[] };
   /** External sources rendered at the foot of the article */
   sources?: { title: string; url: string; publisher?: string }[];
+  /** EN-only article: hreflang points to the EN URL for both es and en; hidden from ES sitemap. */
+  enOnly?: boolean;
 }
 
 export const journalArticles: JournalArticle[] = [

@@ -139,8 +139,8 @@ export const buildWhatsAppUrl = (keyword: string, message: string) => {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
 };
 
-export const buildUtm = (slug: string) =>
-  `?utm_source=journal&utm_medium=blog&utm_campaign=tier1-transaccional&utm_content=${encodeURIComponent(slug)}`;
+export const buildUtm = (slug: string, campaign: string = 'tier1-transaccional') =>
+  `?utm_source=journal&utm_medium=blog&utm_campaign=${campaign}&utm_content=${encodeURIComponent(slug)}`;
 
 interface CtaProps {
   title: string;
@@ -151,6 +151,8 @@ interface CtaProps {
   waLabel?: string;
   emailLabel?: string;
   emailSubject?: string;
+  /** UTM campaign override. Defaults to 'tier1-transaccional' (ES cluster). Use 'tier1-english' for EN cluster. */
+  campaign?: string;
 }
 
 export const WhatsAppCta = ({
@@ -162,10 +164,12 @@ export const WhatsAppCta = ({
   waLabel,
   emailLabel,
   emailSubject,
+  campaign,
 }: CtaProps) => {
   const { language } = useLanguage();
-  const waHref = `${buildWhatsAppUrl(keyword, message)}&${buildUtm(slug).slice(1)}`;
-  const mailHref = `mailto:${EMAIL}?subject=${encodeURIComponent(emailSubject || `[${keyword.toUpperCase()}] ${message}`)}${buildUtm(slug).replace('?', '&')}`;
+  const utm = buildUtm(slug, campaign);
+  const waHref = `${buildWhatsAppUrl(keyword, message)}&${utm.slice(1)}`;
+  const mailHref = `mailto:${EMAIL}?subject=${encodeURIComponent(emailSubject || `[${keyword.toUpperCase()}] ${message}`)}${utm.replace('?', '&')}`;
 
   return (
     <div className="my-10 border border-[hsl(var(--gold)_/_0.4)] bg-[hsl(var(--gold)_/_0.05)] p-6 lg:p-8">
