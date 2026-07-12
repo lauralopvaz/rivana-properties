@@ -115,6 +115,9 @@ const entries: Entry[] = [
 
   // Retiring in Cancún — Canadian guide (bilingual, different slug per language)
   { es: "/journal/retirarse-en-cancun-2026-guia-canadiense", en: "/en/journal/retiring-in-cancun-2026-canadian-guide", priority: "0.7", changefreq: "monthly" },
+
+  // Journal Tier-1 template demo (internal reference)
+  { es: "/journal/journal-template-demo", en: "/en/journal/journal-template-demo", priority: "0.3", changefreq: "yearly", lastmod: "2026-07-12" },
 ];
 
 function altLinks(e: Entry): string {
