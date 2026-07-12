@@ -1,8 +1,13 @@
 /// <reference types="vite/client" />
-/// <reference types="vite-imagetools/client" />
+
+// vite-imagetools `?responsive` picture object.
+interface ResponsivePicture {
+  sources: Record<string, string>;
+  img: { src: string; w: number; h: number };
+}
 
 declare module "*?responsive" {
-  const value: import("vite-imagetools/dist/types").Picture;
+  const value: ResponsivePicture;
   export default value;
 }
 

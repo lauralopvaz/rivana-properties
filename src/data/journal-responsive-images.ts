@@ -4,8 +4,6 @@
 // variants without changing the existing `article.image` string contract
 // (which is still used for JSON-LD schema, og:image, and background CSS).
 
-import type { Picture } from "vite-imagetools/dist/types";
-
 import imgCancunRoi from "@/assets/journal/cancun-roi.jpg?responsive";
 import imgForeignBuyer from "@/assets/journal/foreign-buyer-guide.jpg?responsive";
 import imgWorldCup from "@/assets/journal/world-cup-2026.jpg?responsive";
@@ -27,7 +25,7 @@ import urlGuiaPreventa from "@/assets/journal/guia-preventa.jpg";
 import urlPuenteNichupte from "@/assets/journal/puente-nichupte.jpg";
 import urlRetireCancun from "@/assets/journal/retire-cancun-riviera-maya.jpg";
 
-const map: Record<string, Picture> = {
+const map: Record<string, ResponsivePicture> = {
   [urlCancunRoi]: imgCancunRoi,
   [urlForeignBuyer]: imgForeignBuyer,
   [urlWorldCup]: imgWorldCup,
@@ -39,6 +37,6 @@ const map: Record<string, Picture> = {
   [urlRetireCancun]: imgRetireCancun,
 };
 
-export function getResponsiveImage(url: string): Picture | undefined {
+export function getResponsiveImage(url: string): ResponsivePicture | undefined {
   return map[url];
 }
