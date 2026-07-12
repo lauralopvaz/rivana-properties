@@ -32,6 +32,7 @@ import { PreventaPuertoCancunBody } from '@/components/journal/PreventaPuertoCan
 import { DeptosVentaCostaMujeresBody } from '@/components/journal/DeptosVentaCostaMujeresBody';
 import { PermisoAirbnbCancunBody } from '@/components/journal/PermisoAirbnbCancunBody';
 import { PlusvaliaCancun2026Body } from '@/components/journal/PlusvaliaCancun2026Body';
+import { FideicomisoBody } from '@/components/journal/FideicomisoBody';
 import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
 const parseArticleDate = (dateStr: string): string => {
@@ -81,7 +82,11 @@ const JournalPost = () => {
 
   const articleSlug = article.slug;
   const enSlug = article.slugEn || article.slug;
-  const currentPath = language === 'en' ? `/en/journal/${enSlug}` : `/journal/${articleSlug}`;
+  const currentPath = article.enOnly
+    ? `/en/journal/${enSlug}`
+    : language === 'en'
+      ? `/en/journal/${enSlug}`
+      : `/journal/${articleSlug}`;
   const articleTitle = article.title[language];
   const seoTitle = article.seoTitle?.[language]
     || (articleTitle.length > 45 ? `${articleTitle.slice(0, 45)}… | Rivana` : `${articleTitle} | Rivana Journal`);
@@ -101,6 +106,7 @@ const JournalPost = () => {
     'departamentos-en-venta-costa-mujeres',
     'departamentos-con-permiso-airbnb-cancun',
     'plusvalia-en-cancun-2026',
+    'fideicomiso-mexico-bank-trust-explained',
   ];
   const isTier1Cluster = tier1ClusterSlugs.includes(articleSlug);
 
@@ -452,7 +458,7 @@ const JournalPost = () => {
             : [schema, autoBreadcrumbSchema, ...(autoFaqSchema ? [autoFaqSchema] : [])]
         }
         ogImage={article.image}
-        hreflangEs={`/journal/${articleSlug}`}
+        hreflangEs={article.enOnly ? `/en/journal/${enSlug}` : `/journal/${articleSlug}`}
         hreflangEn={`/en/journal/${enSlug}`}
       />
 
@@ -577,6 +583,8 @@ const JournalPost = () => {
               <PermisoAirbnbCancunBody />
             ) : articleSlug === 'plusvalia-en-cancun-2026' ? (
               <PlusvaliaCancun2026Body />
+            ) : articleSlug === 'fideicomiso-mexico-bank-trust-explained' ? (
+              <FideicomisoBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>

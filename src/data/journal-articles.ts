@@ -48,6 +48,8 @@ export interface JournalArticle {
   faqs?: { es: { q: string; a: string }[]; en: { q: string; a: string }[] };
   /** External sources rendered at the foot of the article */
   sources?: { title: string; url: string; publisher?: string }[];
+  /** EN-only article: hreflang points to the EN URL for both es and en; hidden from ES sitemap. */
+  enOnly?: boolean;
 }
 
 export const journalArticles: JournalArticle[] = [
@@ -820,6 +822,61 @@ journalArticles.unshift({
     { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
     { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
     { title: 'Snowbird trends toward Mexico', url: 'https://www.theglobeandmail.com/', publisher: 'The Globe and Mail' },
+  ],
+});
+
+journalArticles.unshift({
+  slug: 'fideicomiso-mexico-bank-trust-explained',
+  slugEn: 'fideicomiso-mexico-bank-trust-explained',
+  enOnly: true,
+  title: {
+    es: 'The Fideicomiso Explained: How Foreigners Safely Own Coastal Property in Mexico',
+    en: 'The Fideicomiso Explained: How Foreigners Safely Own Coastal Property in Mexico',
+  },
+  seoTitle: {
+    es: "Fideicomiso: Mexico's Bank Trust for Foreigners | Rivana",
+    en: "Fideicomiso: Mexico's Bank Trust for Foreigners | Rivana",
+  },
+  category: { es: 'Guides', en: 'Guides' },
+  excerpt: {
+    es: "What a fideicomiso is, how Mexico's bank trust protects foreign buyers, real costs, inheritance rules, and myths debunked — explained by Rivana Properties.",
+    en: "What a fideicomiso is, how Mexico's bank trust protects foreign buyers, real costs, inheritance rules, and myths debunked — explained by Rivana Properties.",
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '9 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgForeignBuyer,
+  relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres'],
+  whatsappKeyword: 'TRUST',
+  whatsappMessage: {
+    es: 'I would like the Fideicomiso Cost & Process one-pager and a trust structure map for a specific property',
+    en: 'I would like the Fideicomiso Cost & Process one-pager and a trust structure map for a specific property',
+  },
+  relatedSlugs: [
+    'buying-property-mexico-canadian-2026-guide',
+    'foreign-buyer-guide-mexico',
+    'luxury-condos-zona-hotelera-cancun-2026-guide',
+  ],
+  faqs: {
+    es: [
+      { q: 'Is the 50-year term a problem?', a: "No — it's renewable indefinitely, you can sell at any time during it, and renewals are administrative. No owner loses a property to term expiry in practice." },
+      { q: 'Which banks act as trustees?', a: "Major regulated Mexican banks with dedicated trust divisions. We help clients compare trustee fees and service quality — they are not identical." },
+      { q: 'Can my spouse and I both be on the trust?', a: "Yes, co-beneficiaries are standard — and you'll name substitute beneficiaries (children, heirs) at the same time." },
+      { q: 'Does the trust affect my U.S. or Canadian taxes?', a: "Foreign property ownership carries reporting obligations back home. The IRS has clarified typical fideicomisos are generally not treated as foreign trusts for the most burdensome reporting — but your accountant makes that call for your facts. We connect clients with cross-border tax specialists as standard practice." },
+    ],
+    en: [
+      { q: 'Is the 50-year term a problem?', a: "No — it's renewable indefinitely, you can sell at any time during it, and renewals are administrative. No owner loses a property to term expiry in practice." },
+      { q: 'Which banks act as trustees?', a: "Major regulated Mexican banks with dedicated trust divisions. We help clients compare trustee fees and service quality — they are not identical." },
+      { q: 'Can my spouse and I both be on the trust?', a: "Yes, co-beneficiaries are standard — and you'll name substitute beneficiaries (children, heirs) at the same time." },
+      { q: 'Does the trust affect my U.S. or Canadian taxes?', a: "Foreign property ownership carries reporting obligations back home. The IRS has clarified typical fideicomisos are generally not treated as foreign trusts for the most burdensome reporting — but your accountant makes that call for your facts. We connect clients with cross-border tax specialists as standard practice." },
+    ],
+  },
+  sources: [
+    { title: 'Mexican Constitution Art. 27 & Foreign Investment Law (restricted zone framework)', url: 'https://www.gob.mx/', publisher: 'Gobierno de México' },
+    { title: 'Cancún Real Estate Market Analysis 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+    { title: 'Notario and trustee-bank practice — Quintana Roo', url: 'https://www.notariadomexicano.org.mx/', publisher: 'Colegio Nacional del Notariado Mexicano' },
   ],
 });
 
