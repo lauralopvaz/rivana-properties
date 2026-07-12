@@ -455,6 +455,9 @@ const JournalPost = () => {
             <span>·</span>
             <span className="flex items-center gap-1"><ClockIcon className="w-3 h-3" /> {article.readTime} {language === 'es' ? 'de lectura' : 'read'}</span>
           </div>
+          {updatedLabel && (
+            <p className="mt-3 text-xs font-body uppercase tracking-[0.15em] text-[hsl(var(--gold))]">{updatedLabel}</p>
+          )}
         </div>
       </section>
 
