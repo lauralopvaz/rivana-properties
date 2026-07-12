@@ -403,4 +403,4 @@ export const getArticleFaqs = (slug: string, language: 'es' | 'en') => {
   );
   return article?.faqs?.[language] ?? [];
 };
-  language === 'en' && article.slugEn ? article.slugEn : article.slug;
+
