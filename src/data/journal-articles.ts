@@ -603,6 +603,59 @@ journalArticles.unshift({
   ],
 });
 
+journalArticles.unshift({
+  slug: 'preventa-puerto-cancun',
+  title: {
+    es: 'Preventa en Puerto Cancún: Invertir en el Corredor Más Exclusivo de la Ciudad',
+    en: 'Pre-Sale in Puerto Cancún: Investing in the City’s Most Exclusive Corridor',
+  },
+  seoTitle: {
+    es: 'Preventa en Puerto Cancún 2026: Marina, Golf y Plusvalía | Rivana',
+    en: 'Puerto Cancún Pre-Sale 2026: Marina, Golf & Appreciation | Rivana',
+  },
+  category: { es: 'Destinos', en: 'Destinations' },
+  excerpt: {
+    es: 'Preventas en Puerto Cancún: la comunidad de marina y golf más exclusiva de Cancún. Precios, disponibilidad y asesoría de Selección Premium con Rivana.',
+    en: 'Pre-sales in Puerto Cancún: Cancún’s most exclusive marina-and-golf community. Pricing, availability and Rivana’s Premium Selection advisory.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '9 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgPreventaPuertoCancun,
+  relatedDestinations: ['puerto-cancun'],
+  whatsappKeyword: 'PUERTO CANCÚN',
+  whatsappMessage: {
+    es: 'Quiero la Selección Premium y la disponibilidad vigente de preventas en Puerto Cancún',
+    en: 'I would like Rivana’s Premium Selection and current availability for Puerto Cancún pre-sales',
+  },
+  relatedSlugs: [
+    'departamentos-en-preventa-cancun',
+    'invertir-en-bienes-raices-cancun',
+    'mayakoba-vs-puerto-cancun',
+  ],
+  faqs: {
+    es: [
+      { q: '¿Desde cuánto puedo entrar a una preventa en Puerto Cancún?', a: 'Los tickets del corredor son los más altos de la ciudad; el punto de entrada depende de la torre y la etapa de la lista de precios. Solicita la disponibilidad vigente para ver el mapa completo de opciones por presupuesto.' },
+      { q: '¿Qué es mejor: preventa o torre entregada?', a: 'Preventa maximiza plusvalía y flexibilidad de pago; torre entregada da uso o renta inmediata. Con frecuencia la respuesta correcta es comparar la misma tipología en ambas modalidades — ese comparativo es parte del análisis que preparamos.' },
+      { q: '¿Se puede rentar en Puerto Cancún?', a: 'La renta de largo plazo es común y tiene demanda sólida. La renta vacacional depende del reglamento de cada condominio; si tu tesis es STR, te orientamos hacia las torres y unidades donde es viable — o hacia nuestro inventario con permisos en la Zona Hotelera.' },
+      { q: '¿Cuánto tarda en entregarse una preventa?', a: 'Los ciclos típicos de obra son de 24 a 36 meses según la etapa en la que entres. El contrato debe estipular fecha de entrega y penalizaciones por retraso — verificación estándar de nuestro filtro.' },
+    ],
+    en: [
+      { q: 'What is the entry ticket for a Puerto Cancún pre-sale?', a: 'This corridor holds the city’s highest tickets; the entry point depends on the tower and price-list stage. Request current availability to see the full map of options by budget.' },
+      { q: 'Pre-sale or delivered tower?', a: 'Pre-sale maximizes appreciation and payment flexibility; a delivered tower gives immediate use or rental. Often the right answer is comparing the same layout in both formats — that comparison is part of the analysis we prepare.' },
+      { q: 'Can I rent in Puerto Cancún?', a: 'Long-term rental is common with solid demand. Vacation rental depends on each condominium’s rules; if your thesis is STR, we point you to towers where it is viable — or to our Hotel Zone inventory with rental permits.' },
+      { q: 'How long does a pre-sale take to deliver?', a: 'Typical construction cycles run 24 to 36 months depending on the stage you enter. The contract must state delivery date and delay penalties — a standard check in our filter.' },
+    ],
+  },
+  sources: [
+    { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
+    { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+    { title: 'Plan maestro Puerto Cancún', url: 'https://www.puertocancun.com/', publisher: 'Puerto Cancún' },
+  ],
+});
+
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 
 /** Get the correct slug for an article based on language */
