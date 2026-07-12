@@ -18,4 +18,19 @@ declare module "*?responsive" {
   export default value;
 }
 
+declare module "*.jpg?responsive" {
+  const value: ResponsivePicture;
+  export default value;
+}
+
+declare module "*.jpeg?responsive" {
+  const value: ResponsivePicture;
+  export default value;
+}
+
+declare module "*.png?responsive" {
+  const value: ResponsivePicture;
+  export default value;
+}
+
 export {};
