@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { journalArticles, journalArticlesEs, getArticleSlug } from '@/data/journal-articles';
 import { ArrowRightIcon, ClockIcon, MailIcon } from '@/components/icons';
 import { useNewsletterSubscribe } from '@/hooks/useNewsletterSubscribe';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 const categories = {
   es: ['Todos', 'Inversión', 'Mercado', 'Guías', 'Destinos', 'Lifestyle', 'Legal'],
@@ -68,7 +69,14 @@ const Journal = () => {
         <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
           <Link to={localePath(`/journal/${getArticleSlug(featured, language)}`)} className="group grid grid-cols-1 lg:grid-cols-2 gap-8 bg-card border border-border rounded-sm overflow-hidden">
             <div className="aspect-[16/10] overflow-hidden">
-              <img src={featured.image} alt={featured.title[language]} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="eager" width={1280} height={800} />
+              <ResponsiveImage
+                src={featured.image}
+                alt={`${featured.title[language]} — ${featured.category[language]} · Rivana Properties`}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="eager"
+                fetchPriority="high"
+                sizes="(min-width: 1024px) 1024px, 100vw"
+              />
             </div>
             <div className="p-8 flex flex-col justify-center">
               <span className="eyebrow text-xs mb-3">{featured.category[language]}</span>
@@ -112,7 +120,13 @@ const Journal = () => {
               <ScrollReveal key={article.slug} delay={i * 80}>
                 <Link to={localePath(`/journal/${getArticleSlug(article, language)}`)} className="group block">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm mb-4">
-                    <img src={article.image} alt={article.title[language]} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={1280} height={800} />
+                    <ResponsiveImage
+                      src={article.image}
+                      alt={`${article.title[language]} — ${article.category[language]}`}
+                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                      loading="lazy"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    />
                   </div>
                   <span className="eyebrow text-xs">{article.category[language]}</span>
                   <h3 className="mt-2 mb-2 group-hover:text-primary transition-colors">{article.title[language]}</h3>
