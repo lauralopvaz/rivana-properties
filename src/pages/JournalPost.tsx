@@ -538,6 +538,8 @@ const JournalPost = () => {
               <RetireCancunBodyEN />
             ) : articleSlug === 'retirarse-en-cancun-2026-guia-canadiense' ? (
               <RetiringCanadianBody />
+            ) : isDemoTemplate ? (
+              <Tier1DemoBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
