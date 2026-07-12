@@ -23,6 +23,7 @@ import { PuenteNichupteBodyES, PuenteNichupteBodyEN } from '@/components/journal
 import { PortugalMayakobaBodyES, PortugalMayakobaBodyEN } from '@/components/journal/PortugalMayakobaBody';
 import { CanadianBuyerGuideBodyEN } from '@/components/journal/CanadianBuyerGuideBody';
 import { RetireCancunBodyEN } from '@/components/journal/RetireCancunBody';
+import { RetiringCanadianBody } from '@/components/journal/RetiringCanadianBody';
 
 const parseArticleDate = (dateStr: string): string => {
   const months: Record<string, string> = {
@@ -81,6 +82,35 @@ const JournalPost = () => {
   const isPortugalMayakoba = articleSlug === 'portugal-mundial-2026-riviera-maya-inversion-inmobiliaria';
   const isCanadianGuide = articleSlug === 'buying-property-mexico-canadian-2026-guide';
   const isRetireGuide = articleSlug === 'retire-cancun-riviera-maya-american-canadian-2026';
+  const isRetireCanadian = articleSlug === 'retirarse-en-cancun-2026-guia-canadiense';
+
+  const retireCanadianFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: language === 'en'
+      ? [
+          { '@type': 'Question', name: 'Can I spend the winter in Mexico without a visa?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Canadians may enter as visitors for up to 180 days — enough for the November–April season. Temporary residency becomes relevant when you want to stay longer, open local accounts more easily, or build a path to permanent residency.' } },
+          { '@type': 'Question', name: 'Is it safe to buy property as a foreigner?', acceptedAnswer: { '@type': 'Answer', text: 'The fideicomiso bank trust has been operating for decades and is the standard vehicle for thousands of foreign owners along the coast. The real safety keys are verifying the land is not unregularized ejido, working with a licensed notary public, and buying from developers with a verifiable track record.' } },
+          { '@type': 'Question', name: 'What about my provincial medical coverage?', acceptedAnswer: { '@type': 'Answer', text: 'Canadian provincial plans do not cover care in Mexico and require minimum annual presence in your province to stay active. Snowbirds use travel insurance; full-time residents contract private international or Mexican health insurance.' } },
+          { '@type': 'Question', name: 'Is it better to buy now or wait?', acceptedAnswer: { '@type': 'Answer', text: 'Quintana Roo led national appreciation in 2025 (+14.3%, SHF), there are ~22,000 new units in the state pipeline for 2025–2026, and Banxico lowered its rate to 7% in December 2025. The right decision depends on horizon, liquidity and the specific zone.' } },
+        ]
+      : [
+          { '@type': 'Question', name: '¿Puedo pasar el invierno en México sin tramitar visa?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los canadienses pueden ingresar como visitantes hasta por 180 días, suficiente para la temporada noviembre-abril. La residencia temporal se vuelve relevante cuando quieres quedarte más tiempo o construir el camino a la residencia permanente.' } },
+          { '@type': 'Question', name: '¿Es seguro comprar propiedad como extranjero?', acceptedAnswer: { '@type': 'Answer', text: 'El fideicomiso bancario lleva décadas operando y es la vía estándar para miles de propietarios extranjeros en la zona costera. Las claves reales son verificar que el terreno no sea ejidal sin regularizar, trabajar con notario público, y comprar con desarrolladores con historial verificable.' } },
+          { '@type': 'Question', name: '¿Qué pasa con mi cobertura médica provincial?', acceptedAnswer: { '@type': 'Answer', text: 'Los planes provinciales canadienses no te cubren en México y exigen presencia mínima anual. Los snowbirds usan seguro de viaje; los residentes de tiempo completo contratan seguro médico privado internacional o mexicano. Cancún tiene hospitales privados acreditados.' } },
+          { '@type': 'Question', name: '¿Conviene comprar ahora o esperar?', acceptedAnswer: { '@type': 'Answer', text: 'Quintana Roo lideró la apreciación nacional en 2025 (+14.3%, SHF), hay ~22,000 unidades nuevas en el pipeline estatal 2025-2026, y Banxico bajó su tasa a 7% en diciembre de 2025. La decisión correcta depende de horizonte, liquidez y zona.' } },
+        ],
+  };
+
+  const retireCanadianBreadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: language === 'en' ? 'Home' : 'Inicio', item: language === 'en' ? 'https://rivanaproperties.com/en' : 'https://rivanaproperties.com' },
+      { '@type': 'ListItem', position: 2, name: 'Journal', item: language === 'en' ? 'https://rivanaproperties.com/en/journal' : 'https://rivanaproperties.com/journal' },
+      { '@type': 'ListItem', position: 3, name: article?.title[language] || '', item: `https://rivanaproperties.com${language === 'en' ? '/en/journal/retiring-in-cancun-2026-canadian-guide' : '/journal/retirarse-en-cancun-2026-guia-canadiense'}` },
+    ],
+  };
 
   const retireFaqSchema = {
     '@context': 'https://schema.org',
@@ -345,7 +375,7 @@ const JournalPost = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={isCanadianGuide ? [schema, canadianFaqSchema] : isRetireGuide ? [schema, retireFaqSchema] : schema} ogImage={article.image} hreflangEs={`/journal/${articleSlug}`} hreflangEn={`/en/journal/${enSlug}`} />
+      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={isCanadianGuide ? [schema, canadianFaqSchema] : isRetireGuide ? [schema, retireFaqSchema] : isRetireCanadian ? [schema, retireCanadianFaqSchema, retireCanadianBreadcrumbSchema] : schema} ogImage={article.image} hreflangEs={`/journal/${articleSlug}`} hreflangEn={`/en/journal/${enSlug}`} />
 
       {/* Reading Progress */}
       <div className="fixed top-0 left-0 right-0 z-[200]">
@@ -445,6 +475,8 @@ const JournalPost = () => {
               <CanadianBuyerGuideBodyEN />
             ) : articleSlug === 'retire-cancun-riviera-maya-american-canadian-2026' ? (
               <RetireCancunBodyEN />
+            ) : articleSlug === 'retirarse-en-cancun-2026-guia-canadiense' ? (
+              <RetiringCanadianBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
