@@ -25,6 +25,7 @@ import { CanadianBuyerGuideBodyEN } from '@/components/journal/CanadianBuyerGuid
 import { RetireCancunBodyEN } from '@/components/journal/RetireCancunBody';
 import { RetiringCanadianBody } from '@/components/journal/RetiringCanadianBody';
 import { Tier1DemoBody } from '@/components/journal/Tier1DemoBody';
+import { DeptosPreventaCancunBody } from '@/components/journal/DeptosPreventaCancunBody';
 import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
 const parseArticleDate = (dateStr: string): string => {
@@ -546,6 +547,8 @@ const JournalPost = () => {
               <RetiringCanadianBody />
             ) : isDemoTemplate ? (
               <Tier1DemoBody />
+            ) : articleSlug === 'departamentos-en-preventa-cancun' ? (
+              <DeptosPreventaCancunBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
