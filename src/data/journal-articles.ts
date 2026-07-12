@@ -16,6 +16,7 @@ const imgDemo = '/images/mondrian/mondrian-hero.jpg'; // placeholder for templat
 const imgDeptosPreventa = imgGuiaPreventa;
 const imgInvertirBienesRaices = imgCancunRoi;
 const imgPreventaPuertoCancun = imgMayakoba;
+const imgDeptosCostaMujeres = imgCostaMujeres;
 
 export interface JournalArticle {
   slug: string;
@@ -653,6 +654,60 @@ journalArticles.unshift({
     { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
     { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
     { title: 'Plan maestro Puerto Cancún', url: 'https://www.puertocancun.com/', publisher: 'Puerto Cancún' },
+  ],
+});
+
+journalArticles.unshift({
+  slug: 'departamentos-en-venta-costa-mujeres',
+  title: {
+    es: 'Departamentos en Venta en Costa Mujeres: El Corredor Que Está Escribiendo Su Mejor Capítulo',
+    en: 'Condos for Sale in Costa Mujeres: The Corridor Writing Its Best Chapter',
+  },
+  seoTitle: {
+    es: 'Departamentos en Venta en Costa Mujeres 2026 | Rivana Properties',
+    en: 'Condos for Sale in Costa Mujeres 2026 | Rivana Properties',
+  },
+  category: { es: 'Destinos', en: 'Destinations' },
+  excerpt: {
+    es: 'Departamentos en venta en Costa Mujeres: el corredor de lujo en consolidación al norte de Cancún. La Amada Residence y Selección Premium de Rivana.',
+    en: 'Condos for sale in Costa Mujeres: the consolidating luxury corridor north of Cancún. La Amada Residence and Rivana’s Premium Selection.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '9 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgDeptosCostaMujeres,
+  relatedDestinations: ['costa-mujeres'],
+  whatsappKeyword: 'COSTA MUJERES',
+  whatsappMessage: {
+    es: 'Quiero la Selección Premium de Costa Mujeres y la disponibilidad vigente de La Amada Residence',
+    en: 'I would like Rivana’s Costa Mujeres Premium Selection and current availability at La Amada Residence',
+  },
+  relatedSlugs: [
+    'invertir-en-bienes-raices-cancun',
+    'cancun-roi-rental-yield',
+    'costa-mujeres-ultra-luxury-destination',
+  ],
+  faqs: {
+    es: [
+      { q: '¿Costa Mujeres es buena inversión en 2026?', a: 'Los fundamentos son los que un inversionista quiere ver: estado líder en apreciación (+14.3% SHF 2025), corredor master-planned con marcas de lujo operando, frente de playa finito y precio aún en fase de consolidación. Ninguna inversión está garantizada; ésta está inusualmente bien respaldada por datos.' },
+      { q: '¿Qué tan lejos está del aeropuerto y de Cancún?', a: '25-35 minutos del aeropuerto internacional y 20-30 del centro de Cancún y sus hospitales privados.' },
+      { q: '¿Puedo conocer las unidades sin viajar?', a: 'Sí: recorridos en video de las unidades disponibles de La Amada Residence y del corredor, con documentación digital y cierre remoto si decides avanzar.' },
+      { q: '¿Hay opciones de renta vacacional?', a: 'Depende del reglamento de cada desarrollo; te orientamos hacia las unidades donde tu estrategia de renta es viable y en regla.' },
+    ],
+    en: [
+      { q: 'Is Costa Mujeres a good investment in 2026?', a: 'The fundamentals are what an investor wants to see: state leading national appreciation (+14.3% SHF 2025), master-planned corridor with luxury brands already operating, finite beachfront and prices still in consolidation. No investment is guaranteed; this one is unusually well backed by data.' },
+      { q: 'How far is it from the airport and Cancún?', a: '25-35 minutes from Cancún International Airport and 20-30 minutes from downtown Cancún and its private hospitals.' },
+      { q: 'Can I visit the units without traveling?', a: 'Yes: live video walkthroughs of available La Amada Residence units and the corridor, digital documentation and remote closing if you decide to move forward.' },
+      { q: 'Are there vacation-rental options?', a: 'It depends on each development’s rules; we steer you to units where your rental strategy is both viable and compliant.' },
+    ],
+  },
+  sources: [
+    { title: 'Índice SHF de Precios de la Vivienda 2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
+    { title: 'Snowbird trends toward Mexico', url: 'https://www.theglobeandmail.com/', publisher: 'The Globe and Mail' },
+    { title: 'Playa Mujeres — información pública del corredor', url: 'https://www.playamujeres.com.mx/', publisher: 'Playa Mujeres' },
   ],
 });
 
