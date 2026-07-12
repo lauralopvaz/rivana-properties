@@ -649,6 +649,9 @@ const JournalPost = () => {
                 </div>
               </div>
             )}
+
+            {/* External sources */}
+            {article.sources?.length ? <Sources items={article.sources} /> : null}
           </article>
         </div>
       </section>
