@@ -28,6 +28,7 @@ import { Tier1DemoBody } from '@/components/journal/Tier1DemoBody';
 import { DeptosPreventaCancunBody } from '@/components/journal/DeptosPreventaCancunBody';
 import { DeptosVentaZonaHoteleraBody } from '@/components/journal/DeptosVentaZonaHoteleraBody';
 import { InvertirBienesRaicesCancunBody } from '@/components/journal/InvertirBienesRaicesCancunBody';
+import { PreventaPuertoCancunBody } from '@/components/journal/PreventaPuertoCancunBody';
 import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
 const parseArticleDate = (dateStr: string): string => {
@@ -555,6 +556,8 @@ const JournalPost = () => {
               <DeptosVentaZonaHoteleraBody />
             ) : articleSlug === 'invertir-en-bienes-raices-cancun' ? (
               <InvertirBienesRaicesCancunBody />
+            ) : articleSlug === 'preventa-puerto-cancun' ? (
+              <PreventaPuertoCancunBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
