@@ -38,6 +38,7 @@ import { CancunCondosForSaleBody } from '@/components/journal/CancunCondosForSal
 import { PreConstructionCondosCancunBody } from '@/components/journal/PreConstructionCondosCancunBody';
 import { CostaMujeresRealEstateBody } from '@/components/journal/CostaMujeresRealEstateBody';
 import { BestPlacesRivieraMayaBody } from '@/components/journal/BestPlacesRivieraMayaBody';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
 const parseArticleDate = (dateStr: string): string => {
@@ -482,7 +483,14 @@ const JournalPost = () => {
       {/* Hero */}
       <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-28">
         <div className="absolute inset-0">
-          <img src={article.image} alt={article.title[language]} className="w-full h-full object-cover opacity-25" loading="eager" width={1280} height={800} />
+          <ResponsiveImage
+            src={article.image}
+            alt={`${article.title[language]} — ${article.category[language]} · Rivana Properties`}
+            className="w-full h-full object-cover opacity-25"
+            loading="eager"
+            fetchPriority="high"
+            sizes="100vw"
+          />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <span className="eyebrow mb-4 inline-block">{article.category[language]}</span>
@@ -699,7 +707,13 @@ const JournalPost = () => {
                   {related.map((a) => (
                     <Link key={a.slug} to={localePath(`/journal/${getArticleSlug(a, language)}`)} className="group">
                       <div className="aspect-[16/10] overflow-hidden rounded-sm mb-3">
-                        <img src={a.image} alt={a.title[language]} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={1280} height={800} />
+                        <ResponsiveImage
+                          src={a.image}
+                          alt={`${a.title[language]} — ${a.category[language]}`}
+                          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                          loading="lazy"
+                          sizes="(min-width: 768px) 33vw, 100vw"
+                        />
                       </div>
                       <span className="eyebrow text-xs">{a.category[language]}</span>
                       <p className="text-sm font-body mt-1 group-hover:text-primary transition-colors line-clamp-2">{a.title[language]}</p>
