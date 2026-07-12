@@ -767,6 +767,60 @@ journalArticles.unshift({
   ],
 });
 
+journalArticles.unshift({
+  slug: 'plusvalia-en-cancun-2026',
+  title: {
+    es: 'Plusvalía en Cancún 2026: Los Datos Oficiales y Dónde Se Está Concentrando',
+    en: 'Cancún Appreciation 2026: The Official Data and Where It Is Concentrating',
+  },
+  seoTitle: {
+    es: 'Plusvalía en Cancún 2026: Datos Oficiales por Zona | Rivana',
+    en: 'Cancún Appreciation 2026: Official Data by Zone | Rivana',
+  },
+  category: { es: 'Mercado', en: 'Market' },
+  excerpt: {
+    es: 'Plusvalía en Cancún 2026 con datos oficiales SHF: +14.3% estatal, zonas ganadoras, motores de valor y cómo capturarla. Análisis de Rivana Properties.',
+    en: 'Cancún appreciation 2026 with official SHF data: +14.3% statewide, winning zones, value drivers and how to capture it. A Rivana Properties analysis.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '11 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgPlusvaliaCancun,
+  relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres'],
+  whatsappKeyword: 'PLUSVALÍA',
+  whatsappMessage: {
+    es: 'Quiero el análisis de plusvalía por corredor de Rivana (2026) con datos SHF y comparativo por presupuesto',
+    en: 'I would like the Rivana appreciation-by-corridor analysis (2026) with SHF data and a comparison by budget',
+  },
+  relatedSlugs: [
+    'departamentos-en-preventa-cancun',
+    'preventa-puerto-cancun',
+    'departamentos-en-venta-costa-mujeres',
+  ],
+  faqs: {
+    es: [
+      { q: '¿Cuál es la plusvalía real de Cancún en 2026?', a: 'El dato oficial más reciente: +14.3% anual estatal en 2025 y +12.8% trimestral en Benito Juárez (SHF). Para 2026, los análisis de mercado proyectan continuidad de crecimiento apoyada en infraestructura y demanda; los porcentajes exactos varían por corredor y producto.' },
+      { q: '¿Qué zona de Cancún tiene mayor plusvalía?', a: 'Por recorrido relativo, Costa Mujeres (consolidación); por escasez, Zona Hotelera y Puerto Cancún; por efecto de infraestructura, los corredores de Huayacán y Colosio. La respuesta correcta depende de tu horizonte y tesis.' },
+      { q: '¿La preventa siempre da más plusvalía?', a: 'Amplifica la captura cuando el desarrollo y el corredor son correctos — y amplifica el riesgo cuando no. Por eso el filtro de desarrollador es tan importante como el precio de lista.' },
+      { q: '¿Cómo comparo la plusvalía entre dos unidades concretas?', a: 'Con un análisis comparativo: precio por m² contra la zona, posición de la unidad, capacidad de renta y escenarios de salida. Es exactamente el documento que Rivana prepara antes de que decidas.' },
+    ],
+    en: [
+      { q: 'What is the real appreciation of Cancún in 2026?', a: 'The most recent official data: +14.3% annual statewide in 2025 and +12.8% quarterly in Benito Juárez (SHF). For 2026, market analyses project continued growth supported by infrastructure and demand; exact percentages vary by corridor and product.' },
+      { q: 'Which zone of Cancún has the highest appreciation?', a: 'By relative runway, Costa Mujeres (consolidation); by scarcity, the Hotel Zone and Puerto Cancún; by infrastructure impact, the Huayacán and Colosio corridors. The right answer depends on your horizon and thesis.' },
+      { q: 'Does pre-sale always yield more appreciation?', a: 'It amplifies capture when the development and corridor are right — and amplifies risk when they are not. That is why the developer filter matters as much as list price.' },
+      { q: 'How do I compare appreciation between two specific units?', a: 'With a comparative analysis: price per m² against the zone, unit position, rental capacity and exit scenarios. It is exactly the document Rivana prepares before you decide.' },
+    ],
+  },
+  sources: [
+    { title: 'Índice SHF de Precios de la Vivienda 2023-2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
+    { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+    { title: 'Snowbird trends toward Mexico', url: 'https://www.theglobeandmail.com/', publisher: 'The Globe and Mail' },
+  ],
+});
+
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 
 /** Get the correct slug for an article based on language */
