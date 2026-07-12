@@ -124,6 +124,7 @@ const entries: Entry[] = [
 
   // EN-only Tier-1 cluster (foreign-buyer intent)
   { en: "/en/journal/fideicomiso-mexico-bank-trust-explained", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
+  { en: "/en/journal/buying-property-in-cancun-as-a-foreigner", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
 
   // Retiring in Cancún — Canadian guide (bilingual, different slug per language)
   { es: "/journal/retirarse-en-cancun-2026-guia-canadiense", en: "/en/journal/retiring-in-cancun-2026-canadian-guide", priority: "0.7", changefreq: "monthly" },
