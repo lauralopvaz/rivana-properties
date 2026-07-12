@@ -834,8 +834,8 @@ journalArticles.unshift({
     en: 'The Fideicomiso Explained: How Foreigners Safely Own Coastal Property in Mexico',
   },
   seoTitle: {
-    es: "Fideicomiso Explained: Mexico's Bank Trust for Foreigners | Rivana",
-    en: "Fideicomiso Explained: Mexico's Bank Trust for Foreigners | Rivana",
+    es: "Fideicomiso: Mexico's Bank Trust for Foreigners | Rivana",
+    en: "Fideicomiso: Mexico's Bank Trust for Foreigners | Rivana",
   },
   category: { es: 'Guides', en: 'Guides' },
   excerpt: {
