@@ -34,9 +34,9 @@ const content = {
     en: 'The pinnacle of contemporary Caribbean living',
   },
   stats: {
-    roi: {
-      label: { es: 'ROI Proyectado', en: 'Projected ROI' },
-      value: { es: '33%', en: '33%' },
+    price: {
+      label: { es: 'Desde', en: 'From' },
+      value: { es: formatMXN(9_050_000), en: formatUSD(514_000) },
     },
     plan: {
       label: { es: 'Plan de Pago', en: 'Payment Plan' },
