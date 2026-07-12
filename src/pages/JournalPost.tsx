@@ -37,6 +37,7 @@ import { ForeignBuyerCancunBody } from '@/components/journal/ForeignBuyerCancunB
 import { CancunCondosForSaleBody } from '@/components/journal/CancunCondosForSaleBody';
 import { PreConstructionCondosCancunBody } from '@/components/journal/PreConstructionCondosCancunBody';
 import { CostaMujeresRealEstateBody } from '@/components/journal/CostaMujeresRealEstateBody';
+import { BestPlacesRivieraMayaBody } from '@/components/journal/BestPlacesRivieraMayaBody';
 import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
 const parseArticleDate = (dateStr: string): string => {
@@ -115,6 +116,7 @@ const JournalPost = () => {
     'cancun-condos-for-sale',
     'pre-construction-condos-cancun',
     'costa-mujeres-real-estate',
+    'best-places-to-buy-property-riviera-maya',
   ];
   const isTier1Cluster = tier1ClusterSlugs.includes(articleSlug);
 
@@ -601,6 +603,8 @@ const JournalPost = () => {
               <PreConstructionCondosCancunBody />
             ) : articleSlug === 'costa-mujeres-real-estate' ? (
               <CostaMujeresRealEstateBody />
+            ) : articleSlug === 'best-places-to-buy-property-riviera-maya' ? (
+              <BestPlacesRivieraMayaBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
