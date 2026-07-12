@@ -142,9 +142,9 @@ export const MondrianSpotlight = () => {
               <div className="grid grid-cols-2 gap-8 border-t border-border pt-10 mb-12">
                 <div className="space-y-1">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-body">
-                    {content.stats.roi.label[L]}
+                    {content.stats.price.label[L]}
                   </p>
-                  <p className="text-2xl md:text-3xl font-display text-secondary">{content.stats.roi.value[L]}</p>
+                  <p className="text-2xl md:text-3xl font-display text-secondary">{content.stats.price.value[L]}</p>
                 </div>
                 <div className="space-y-1">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-body">
