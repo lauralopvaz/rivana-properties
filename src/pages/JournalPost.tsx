@@ -24,6 +24,8 @@ import { PortugalMayakobaBodyES, PortugalMayakobaBodyEN } from '@/components/jou
 import { CanadianBuyerGuideBodyEN } from '@/components/journal/CanadianBuyerGuideBody';
 import { RetireCancunBodyEN } from '@/components/journal/RetireCancunBody';
 import { RetiringCanadianBody } from '@/components/journal/RetiringCanadianBody';
+import { Tier1DemoBody } from '@/components/journal/Tier1DemoBody';
+import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
 const parseArticleDate = (dateStr: string): string => {
   const months: Record<string, string> = {
@@ -83,6 +85,44 @@ const JournalPost = () => {
   const isCanadianGuide = articleSlug === 'buying-property-mexico-canadian-2026-guide';
   const isRetireGuide = articleSlug === 'retire-cancun-riviera-maya-american-canadian-2026';
   const isRetireCanadian = articleSlug === 'retirarse-en-cancun-2026-guia-canadiense';
+  const isDemoTemplate = articleSlug === 'journal-template-demo';
+
+  /* ---------------- Auto-schema (all Tier-1 articles) ---------------- */
+  // Auto BreadcrumbList — emitted for every article
+  const autoBreadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: language === 'en' ? 'Home' : 'Inicio', item: `https://rivanaproperties.com${language === 'en' ? '/en' : ''}` },
+      { '@type': 'ListItem', position: 2, name: 'Journal', item: `https://rivanaproperties.com${language === 'en' ? '/en/journal' : '/journal'}` },
+      { '@type': 'ListItem', position: 3, name: article.title[language], item: `https://rivanaproperties.com${currentPath}` },
+    ],
+  };
+
+  // Auto FAQPage — from article.faqs when present
+  const autoFaqSchema = article.faqs?.[language]?.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: article.faqs[language].map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      }
+    : null;
+
+  const formatUpdated = (iso?: string) => {
+    if (!iso) return null;
+    try {
+      const d = new Date(iso + (iso.length === 10 ? 'T00:00:00' : ''));
+      const monthEs = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+      const monthEn = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      const m = language === 'es' ? monthEs[d.getMonth()] : monthEn[d.getMonth()];
+      return language === 'es' ? `Actualizado ${m} ${d.getFullYear()}` : `Updated ${m} ${d.getFullYear()}`;
+    } catch { return null; }
+  };
+  const updatedLabel = formatUpdated(article.updatedDate);
 
   const retireCanadianFaqSchema = {
     '@context': 'https://schema.org',
@@ -364,9 +404,15 @@ const JournalPost = () => {
     ];
 
   // Related articles based on shared destinations
-  const related = journalArticles
-    .filter((a) => a.slug !== slug && a.relatedDestinations.some((d) => article.relatedDestinations.includes(d)))
-    .slice(0, 3);
+  // Manual interlinking wins; falls back to shared-destination heuristic.
+  const allArticlesForRelated = [...journalArticles, ...journalArticlesEs];
+  const related = article.relatedSlugs?.length
+    ? article.relatedSlugs
+        .map((s) => allArticlesForRelated.find((a) => a.slug === s || a.slugEn === s))
+        .filter(Boolean) as typeof journalArticles
+    : journalArticles
+        .filter((a) => a.slug !== slug && a.relatedDestinations.some((d) => article.relatedDestinations.includes(d)))
+        .slice(0, 3);
 
   // Internal links to related destinations
   const relatedDests = article.relatedDestinations
@@ -375,7 +421,25 @@ const JournalPost = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={isCanadianGuide ? [schema, canadianFaqSchema] : isRetireGuide ? [schema, retireFaqSchema] : isRetireCanadian ? [schema, retireCanadianFaqSchema, retireCanadianBreadcrumbSchema] : schema} ogImage={article.image} hreflangEs={`/journal/${articleSlug}`} hreflangEn={`/en/journal/${enSlug}`} />
+      <SEOHead
+        title={seoTitle}
+        description={article.excerpt[language]}
+        path={currentPath}
+        schema={
+          isCanadianGuide
+            ? [schema, canadianFaqSchema, autoBreadcrumbSchema]
+            : isRetireGuide
+            ? [schema, retireFaqSchema, autoBreadcrumbSchema]
+            : isRetireCanadian
+            ? [schema, retireCanadianFaqSchema, retireCanadianBreadcrumbSchema]
+            : [schema, autoBreadcrumbSchema, ...(autoFaqSchema ? [autoFaqSchema] : [])]
+        }
+        ogImage={article.image}
+        hreflangEs={`/journal/${articleSlug}`}
+        hreflangEn={`/en/journal/${enSlug}`}
+      />
+
+      <JournalBreadcrumb title={article.title[language]} />
 
       {/* Reading Progress */}
       <div className="fixed top-0 left-0 right-0 z-[200]">
@@ -397,6 +461,9 @@ const JournalPost = () => {
             <span>·</span>
             <span className="flex items-center gap-1"><ClockIcon className="w-3 h-3" /> {article.readTime} {language === 'es' ? 'de lectura' : 'read'}</span>
           </div>
+          {updatedLabel && (
+            <p className="mt-3 text-xs font-body uppercase tracking-[0.15em] text-[hsl(var(--gold))]">{updatedLabel}</p>
+          )}
         </div>
       </section>
 
@@ -477,6 +544,8 @@ const JournalPost = () => {
               <RetireCancunBodyEN />
             ) : articleSlug === 'retirarse-en-cancun-2026-guia-canadiense' ? (
               <RetiringCanadianBody />
+            ) : isDemoTemplate ? (
+              <Tier1DemoBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
@@ -580,6 +649,9 @@ const JournalPost = () => {
                 </div>
               </div>
             )}
+
+            {/* External sources */}
+            {article.sources?.length ? <Sources items={article.sources} /> : null}
           </article>
         </div>
       </section>
