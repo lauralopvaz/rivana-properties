@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from '@/components/icons';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
+import { formatUSD, formatMXN } from '@/lib/formatPrice';
 
 import mondrianHero from '@/assets/mondrian-hero.jpg';
 
@@ -33,9 +34,9 @@ const content = {
     en: 'The pinnacle of contemporary Caribbean living',
   },
   stats: {
-    roi: {
-      label: { es: 'ROI Proyectado', en: 'Projected ROI' },
-      value: { es: '33%', en: '33%' },
+    price: {
+      label: { es: 'Desde', en: 'From' },
+      value: { es: formatMXN(9_050_000), en: formatUSD(514_000) },
     },
     plan: {
       label: { es: 'Plan de Pago', en: 'Payment Plan' },
@@ -141,9 +142,9 @@ export const MondrianSpotlight = () => {
               <div className="grid grid-cols-2 gap-8 border-t border-border pt-10 mb-12">
                 <div className="space-y-1">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-body">
-                    {content.stats.roi.label[L]}
+                    {content.stats.price.label[L]}
                   </p>
-                  <p className="text-2xl md:text-3xl font-display text-secondary">{content.stats.roi.value[L]}</p>
+                  <p className="text-2xl md:text-3xl font-display text-secondary">{content.stats.price.value[L]}</p>
                 </div>
                 <div className="space-y-1">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-body">
