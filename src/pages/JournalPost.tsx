@@ -415,7 +415,25 @@ const JournalPost = () => {
 
   return (
     <div>
-      <SEOHead title={seoTitle} description={article.excerpt[language]} path={currentPath} schema={isCanadianGuide ? [schema, canadianFaqSchema] : isRetireGuide ? [schema, retireFaqSchema] : isRetireCanadian ? [schema, retireCanadianFaqSchema, retireCanadianBreadcrumbSchema] : schema} ogImage={article.image} hreflangEs={`/journal/${articleSlug}`} hreflangEn={`/en/journal/${enSlug}`} />
+      <SEOHead
+        title={seoTitle}
+        description={article.excerpt[language]}
+        path={currentPath}
+        schema={
+          isCanadianGuide
+            ? [schema, canadianFaqSchema, autoBreadcrumbSchema]
+            : isRetireGuide
+            ? [schema, retireFaqSchema, autoBreadcrumbSchema]
+            : isRetireCanadian
+            ? [schema, retireCanadianFaqSchema, retireCanadianBreadcrumbSchema]
+            : [schema, autoBreadcrumbSchema, ...(autoFaqSchema ? [autoFaqSchema] : [])]
+        }
+        ogImage={article.image}
+        hreflangEs={`/journal/${articleSlug}`}
+        hreflangEn={`/en/journal/${enSlug}`}
+      />
+
+      <JournalBreadcrumb title={article.title[language]} />
 
       {/* Reading Progress */}
       <div className="fixed top-0 left-0 right-0 z-[200]">
