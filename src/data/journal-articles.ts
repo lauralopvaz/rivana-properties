@@ -29,6 +29,18 @@ export interface JournalArticle {
   image: string;
   /** Related destination keys for internal linking */
   relatedDestinations: string[];
+  /** ISO date YYYY-MM-DD for "Actualizado {mes año}" and JSON-LD dateModified */
+  updatedDate?: string;
+  /** WhatsApp CTA keyword (e.g. "PREVENTA"), used in template CTAs */
+  whatsappKeyword?: string;
+  /** Prefilled WhatsApp message per language */
+  whatsappMessage?: { es: string; en: string };
+  /** Manual related-article slugs (3). Overrides destination-based auto-related. */
+  relatedSlugs?: string[];
+  /** FAQ entries — used to auto-render FAQPage JSON-LD */
+  faqs?: { es: { q: string; a: string }[]; en: { q: string; a: string }[] };
+  /** External sources rendered at the foot of the article */
+  sources?: { title: string; url: string; publisher?: string }[];
 }
 
 export const journalArticles: JournalArticle[] = [
