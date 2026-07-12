@@ -113,6 +113,9 @@ const entries: Entry[] = [
   // ES-only journal post (Canadian buyers)
   { es: "/journal/comprar-propiedad-mexico-canadienses-2026", priority: "0.7", changefreq: "monthly" },
 
+  // ES-only Tier-1 cluster — transactional
+  { es: "/journal/departamentos-en-preventa-cancun", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
+
   // Retiring in Cancún — Canadian guide (bilingual, different slug per language)
   { es: "/journal/retirarse-en-cancun-2026-guia-canadiense", en: "/en/journal/retiring-in-cancun-2026-canadian-guide", priority: "0.7", changefreq: "monthly" },
 

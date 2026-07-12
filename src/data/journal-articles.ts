@@ -13,6 +13,7 @@ import imgCanadianBuyer from '@/assets/journal/foreign-buyer-guide.jpg';
 import imgRetireCancun from '@/assets/journal/retire-cancun-riviera-maya.jpg';
 const imgMondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const imgDemo = '/images/mondrian/mondrian-hero.jpg'; // placeholder for template demo
+const imgDeptosPreventa = imgGuiaPreventa;
 
 export interface JournalArticle {
   slug: string;
@@ -439,6 +440,58 @@ export const journalArticles: JournalArticle[] = [
     ],
   },
 ];
+journalArticles.unshift({
+  slug: 'departamentos-en-preventa-cancun',
+  title: {
+    es: 'Departamentos en Preventa en Cancún: Guía 2026 para Comprar Bien',
+    en: 'Pre-Sale Condos in Cancún: 2026 Buyer’s Guide',
+  },
+  seoTitle: {
+    es: 'Departamentos en Preventa en Cancún 2026 | Rivana Properties',
+    en: 'Pre-Sale Condos in Cancún 2026 | Rivana Properties',
+  },
+  category: { es: 'Guías', en: 'Guides' },
+  excerpt: {
+    es: 'Departamentos en preventa en Cancún con precios de lanzamiento, planes de pago y plusvalía documentada. Selección Premium de Rivana con asesoría experta.',
+    en: 'Pre-sale condos in Cancún: launch pricing, payment plans and documented appreciation. Rivana’s Premium Selection with expert advisory.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '8 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgDeptosPreventa,
+  relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres'],
+  whatsappKeyword: 'PREVENTA',
+  whatsappMessage: {
+    es: 'Quiero la lista de unidades y precios vigentes de la Selección Premium de preventas en Cancún',
+    en: 'I would like the list of available units and current pricing for Rivana’s pre-sale selection in Cancún',
+  },
+  relatedSlugs: [
+    'cancun-roi-rental-yield',
+    'invertir-en-preventa-cancun-riviera-maya-2026',
+    'mondrian-residences-grand-island-cancun-guide',
+  ],
+  faqs: {
+    es: [
+      { q: '¿Cuánto enganche necesito?', a: 'El estándar del mercado es 20-30% a la firma, con mensualidades durante obra y liquidación contra entrega. Cada desarrollo tiene su esquema; en la Selección Premium de Rivana hay opciones con distintos niveles de entrada.' },
+      { q: '¿Puedo revender antes de la entrega?', a: 'En muchos desarrollos sí, mediante cesión de derechos. Las condiciones (momento permitido, comisión del desarrollador) varían por contrato y son parte de lo que revisamos antes de que firmes.' },
+      { q: '¿La plusvalía está garantizada?', a: 'No, y desconfía de quien te la garantice. Lo que existe son datos históricos (SHF: +14.3% estatal en 2025) y motores estructurales verificables. Nuestro trabajo es ubicarte en los corredores donde esos motores concentran valor.' },
+      { q: '¿Qué pasa si el desarrollador se retrasa?', a: 'Los contratos serios estipulan penalizaciones por retraso y fechas límite. Es uno de los cinco puntos de nuestro filtro y una de las razones por las que trabajamos con desarrolladores de historial verificable.' },
+    ],
+    en: [
+      { q: 'How much down payment do I need?', a: 'The market standard is 20-30% at signing, with monthly installments during construction and the balance at delivery. Each development has its own schedule; Rivana’s Premium Selection includes options with different entry levels.' },
+      { q: 'Can I resell before delivery?', a: 'In many developments yes, through an assignment of rights. Timing and developer fees vary by contract and are part of what we review before you sign.' },
+      { q: 'Is appreciation guaranteed?', a: 'No — and be wary of anyone who guarantees it. What exists is historical data (SHF: +14.3% statewide in 2025) and verifiable structural drivers. Our job is to place you in the corridors where those drivers concentrate value.' },
+      { q: 'What happens if the developer is delayed?', a: 'Serious contracts include delay penalties and hard deadlines. It is one of the five points in our filter and one of the reasons we only work with developers who have a verifiable track record.' },
+    ],
+  },
+  sources: [
+    { title: 'Índice SHF de Precios de la Vivienda 2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+    { title: 'Absorción del mercado inmobiliario en Quintana Roo', url: 'https://adiqroo.mx/', publisher: 'Asociación de Desarrolladores Inmobiliarios de Quintana Roo' },
+  ],
+});
 
 // Legacy export kept for compatibility
 export const journalArticlesEs: JournalArticle[] = [];
