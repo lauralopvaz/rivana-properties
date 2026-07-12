@@ -93,6 +93,16 @@ const JournalPost = () => {
   const isRetireGuide = articleSlug === 'retire-cancun-riviera-maya-american-canadian-2026';
   const isRetireCanadian = articleSlug === 'retirarse-en-cancun-2026-guia-canadiense';
   const isDemoTemplate = articleSlug === 'journal-template-demo';
+  const tier1ClusterSlugs = [
+    'departamentos-en-preventa-cancun',
+    'departamentos-en-venta-zona-hotelera-cancun',
+    'invertir-en-bienes-raices-cancun',
+    'preventa-puerto-cancun',
+    'departamentos-en-venta-costa-mujeres',
+    'departamentos-con-permiso-airbnb-cancun',
+    'plusvalia-en-cancun-2026',
+  ];
+  const isTier1Cluster = tier1ClusterSlugs.includes(articleSlug);
 
   /* ---------------- Auto-schema (all Tier-1 articles) ---------------- */
   // Auto BreadcrumbList — emitted for every article
@@ -325,7 +335,7 @@ const JournalPost = () => {
       }
     : {
         '@context': 'https://schema.org',
-        '@type': isRetireCanadian ? 'BlogPosting' : 'Article',
+        '@type': isRetireCanadian || isTier1Cluster ? 'BlogPosting' : 'Article',
         headline: article.title[language],
         description: article.excerpt[language],
         image: article.image.startsWith('http')
