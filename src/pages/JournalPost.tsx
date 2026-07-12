@@ -278,7 +278,7 @@ const JournalPost = () => {
       }
     : {
         '@context': 'https://schema.org',
-        '@type': 'Article',
+        '@type': isRetireCanadian ? 'BlogPosting' : 'Article',
         headline: article.title[language],
         description: article.excerpt[language],
         image: article.image.startsWith('http')
