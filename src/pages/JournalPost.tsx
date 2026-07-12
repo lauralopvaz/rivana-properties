@@ -35,6 +35,7 @@ import { PlusvaliaCancun2026Body } from '@/components/journal/PlusvaliaCancun202
 import { FideicomisoBody } from '@/components/journal/FideicomisoBody';
 import { ForeignBuyerCancunBody } from '@/components/journal/ForeignBuyerCancunBody';
 import { CancunCondosForSaleBody } from '@/components/journal/CancunCondosForSaleBody';
+import { PreConstructionCondosCancunBody } from '@/components/journal/PreConstructionCondosCancunBody';
 import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
 const parseArticleDate = (dateStr: string): string => {
@@ -111,6 +112,7 @@ const JournalPost = () => {
     'fideicomiso-mexico-bank-trust-explained',
     'buying-property-in-cancun-as-a-foreigner',
     'cancun-condos-for-sale',
+    'pre-construction-condos-cancun',
   ];
   const isTier1Cluster = tier1ClusterSlugs.includes(articleSlug);
 
@@ -593,6 +595,8 @@ const JournalPost = () => {
               <ForeignBuyerCancunBody />
             ) : articleSlug === 'cancun-condos-for-sale' ? (
               <CancunCondosForSaleBody />
+            ) : articleSlug === 'pre-construction-condos-cancun' ? (
+              <PreConstructionCondosCancunBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>

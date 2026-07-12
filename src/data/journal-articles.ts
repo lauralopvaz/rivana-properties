@@ -992,6 +992,62 @@ journalArticles.unshift({
   ],
 });
 
+journalArticles.unshift({
+  slug: 'pre-construction-condos-cancun',
+  slugEn: 'pre-construction-condos-cancun',
+  enOnly: true,
+  title: {
+    es: "Pre-Construction Condos in Cancún: How Launch Pricing and Mexico's #1 Appreciation Compound",
+    en: "Pre-Construction Condos in Cancún: How Launch Pricing and Mexico's #1 Appreciation Compound",
+  },
+  seoTitle: {
+    es: 'Pre-Construction Condos in Cancún: 2026 Investor Guide',
+    en: 'Pre-Construction Condos in Cancún: 2026 Investor Guide',
+  },
+  category: { es: 'Guides', en: 'Guides' },
+  excerpt: {
+    es: 'Pre-construction condos in Cancún: launch pricing, developer payment plans, how foreigners buy safely, and the flagship 2026 opportunity — Mondrian Residences.',
+    en: 'Pre-construction condos in Cancún: launch pricing, developer payment plans, how foreigners buy safely, and the flagship 2026 opportunity — Mondrian Residences.',
+  },
+  date: 'Jul 12, 2026',
+  updatedDate: '2026-07-12',
+  readTime: '11 min',
+  author: 'Rivana Properties Advisory Team',
+  featured: true,
+  image: imgGuiaPreventa,
+  relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres'],
+  whatsappKeyword: 'PRE-CON',
+  whatsappMessage: {
+    es: "Please send Mondrian's current price list and the pre-construction Premium Selection with payment plans",
+    en: "Please send Mondrian's current price list and the pre-construction Premium Selection with payment plans",
+  },
+  relatedSlugs: [
+    'fideicomiso-mexico-bank-trust-explained',
+    'buying-property-in-cancun-as-a-foreigner',
+    'cancun-condos-for-sale',
+  ],
+  faqs: {
+    es: [
+      { q: 'What deposit is required?', a: "Market standard is 20-30% at signing, staged payments during construction, balance at delivery. Each development's schedule differs; the Premium Selection includes options at different entry levels." },
+      { q: 'Can I resell before delivery?', a: "In most projects yes, via assignment of rights — subject to contract terms (earliest permitted moment, developer fee). It is one of the clauses we review before you commit." },
+      { q: 'What if the developer delays?', a: 'Serious contracts stipulate delivery dates and delay penalties. It is filter point #2, and one reason we only work with developers whose delivery history is verifiable.' },
+      { q: 'Can I buy pre-construction remotely from the U.S. or Canada?', a: 'Yes — video walkthroughs of the sales gallery and site, digital documentation, and closing by power of attorney. A significant share of pre-construction buyers in our portfolio never visit until delivery.' },
+    ],
+    en: [
+      { q: 'What deposit is required?', a: "Market standard is 20-30% at signing, staged payments during construction, balance at delivery. Each development's schedule differs; the Premium Selection includes options at different entry levels." },
+      { q: 'Can I resell before delivery?', a: "In most projects yes, via assignment of rights — subject to contract terms (earliest permitted moment, developer fee). It is one of the clauses we review before you commit." },
+      { q: 'What if the developer delays?', a: 'Serious contracts stipulate delivery dates and delay penalties. It is filter point #2, and one reason we only work with developers whose delivery history is verifiable.' },
+      { q: 'Can I buy pre-construction remotely from the U.S. or Canada?', a: 'Yes — video walkthroughs of the sales gallery and site, digital documentation, and closing by power of attorney. A significant share of pre-construction buyers in our portfolio never visit until delivery.' },
+    ],
+  },
+  sources: [
+    { title: 'SHF 2025 Home Price Index', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
+    { title: 'Banxico 7%, mortgage rates, 22,000-unit pipeline, Hotel Zone per-m² pricing', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
+    { title: 'Absorption cycles and buyer origin', url: 'https://adiqroo.mx/', publisher: "Quintana Roo Developers' Association" },
+    { title: 'Canadian snowbird demand shift', url: 'https://www.theglobeandmail.com/', publisher: 'Snowbird Advisor via The Globe and Mail' },
+  ],
+});
+
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
 
 /** Get the correct slug for an article based on language */
