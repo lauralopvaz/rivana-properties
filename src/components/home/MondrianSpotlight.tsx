@@ -107,7 +107,7 @@ export const MondrianSpotlight = () => {
               {/* Detail inset */}
               <div className="absolute -bottom-10 -right-6 xl:-right-10 w-[45%] hidden lg:block z-20 border-[10px] border-[hsl(var(--background))] shadow-2xl">
                 <img
-                  src={mondrianBeachClub}
+                  src="/images/mondrian/mondrian-beach-club.jpg"
                   alt={L === 'es' ? 'Detalle del beach club en Mondrian Residences' : 'Mondrian Residences beach club detail'}
                   className="w-full aspect-square object-cover"
                   loading="lazy"
