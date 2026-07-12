@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from '@/components/icons';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
-import { formatUSD, formatMXN } from '@/lib/formatPrice';
+import { formatUSD } from '@/lib/formatPrice';
 
 import mondrianHero from '@/assets/mondrian-hero.jpg';
 
@@ -36,7 +36,7 @@ const content = {
   stats: {
     price: {
       label: { es: 'Desde', en: 'From' },
-      value: { es: formatMXN(9_050_000), en: formatUSD(514_000) },
+      value: { es: formatUSD(514_000), en: formatUSD(514_000) },
     },
     plan: {
       label: { es: 'Plan de Pago', en: 'Payment Plan' },
