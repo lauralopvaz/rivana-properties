@@ -386,6 +386,58 @@ export const journalArticles: JournalArticle[] = [
     image: imgMondrianHero,
     relatedDestinations: ['zona-hotelera'],
   },
+  {
+    slug: 'journal-template-demo',
+    slugEn: 'journal-template-demo',
+    title: {
+      es: 'Template Tier-1 del Journal — Demo de infraestructura',
+      en: 'Journal Tier-1 template — Infrastructure demo',
+    },
+    seoTitle: {
+      es: 'Template Tier-1 del Journal | Rivana',
+      en: 'Journal Tier-1 Template | Rivana',
+    },
+    category: { es: 'Interno', en: 'Internal' },
+    excerpt: {
+      es: 'Demostración de todos los componentes reutilizables del template Tier-1 del Journal: breadcrumb, tabla, callout, FAQ, CTA WhatsApp y fuentes.',
+      en: 'Demonstration of every reusable Tier-1 Journal primitive: breadcrumb, table, callout, FAQ, WhatsApp CTA and sources block.',
+    },
+    date: 'Jul 12, 2026',
+    updatedDate: '2026-07-12',
+    readTime: '4 min',
+    author: 'Rivana Properties Advisory Team',
+    image: imgDemo,
+    relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'mayakoba'],
+    whatsappKeyword: 'PREVENTA',
+    whatsappMessage: {
+      es: 'Quiero información sobre preventa en Cancún y Riviera Maya',
+      en: 'I would like info about pre-sale in Cancún and Riviera Maya',
+    },
+    relatedSlugs: [
+      'mondrian-residences-grand-island-cancun-preventa',
+      'cancun-roi-rental-yield',
+      'guia-preventa-cancun-2026',
+    ],
+    faqs: {
+      es: [
+        { q: '¿Qué es el template Tier-1?', a: 'Un layout reutilizable del Journal con breadcrumb, tabla, callout, FAQ, CTA de WhatsApp y bloque de fuentes ya integrados. Cada nuevo artículo del cluster lo hereda.' },
+        { q: '¿Cómo se agrega un nuevo artículo?', a: 'Se declara la entrada en src/data/journal-articles.ts (con faqs, relatedSlugs, whatsappKeyword y updatedDate), se crea un componente body basado en Tier1DemoBody y se enlaza en JournalPost.tsx.' },
+        { q: '¿El sitemap se actualiza solo?', a: 'Sí. El script scripts/generate-sitemaps.ts corre en predev y prebuild e incluye el artículo con lastmod = updatedDate o date de publicación.' },
+        { q: '¿Se generan solos los JSON-LD?', a: 'Sí. El template emite BlogPosting, FAQPage (a partir de faqs) y BreadcrumbList automáticamente para cada artículo.' },
+      ],
+      en: [
+        { q: 'What is the Tier-1 template?', a: 'A reusable Journal layout with breadcrumb, table, callout, FAQ, WhatsApp CTA and sources block already wired. Every new cluster article inherits it.' },
+        { q: 'How do I add a new article?', a: 'Declare the entry in src/data/journal-articles.ts (with faqs, relatedSlugs, whatsappKeyword and updatedDate), create a body component based on Tier1DemoBody, and wire it in JournalPost.tsx.' },
+        { q: 'Does the sitemap update automatically?', a: 'Yes. The scripts/generate-sitemaps.ts script runs on predev and prebuild and includes the article with lastmod = updatedDate or the published date.' },
+        { q: 'Is JSON-LD auto-generated?', a: 'Yes. The template emits BlogPosting, FAQPage (from faqs) and BreadcrumbList automatically for each article.' },
+      ],
+    },
+    sources: [
+      { title: 'Rich Results Test — Google Search Central', url: 'https://search.google.com/test/rich-results', publisher: 'Google' },
+      { title: 'Schema.org — BlogPosting', url: 'https://schema.org/BlogPosting', publisher: 'Schema.org' },
+      { title: 'Schema.org — FAQPage', url: 'https://schema.org/FAQPage', publisher: 'Schema.org' },
+    ],
+  },
 ];
 
 // Legacy export kept for compatibility
