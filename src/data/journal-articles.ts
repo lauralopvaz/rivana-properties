@@ -16,6 +16,7 @@ const imgDemo = '/images/mondrian/mondrian-hero.jpg'; // placeholder for templat
 const imgDeptosPreventa = imgGuiaPreventa;
 const imgInvertirBienesRaices = imgCancunRoi;
 const imgPreventaPuertoCancun = imgMayakoba;
+const imgDeptosCostaMujeres = imgCostaMujeres;
 
 export interface JournalArticle {
   slug: string;
