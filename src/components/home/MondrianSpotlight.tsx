@@ -6,7 +6,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
 
 import mondrianHero from '@/assets/mondrian-hero.jpg';
-import mondrianBeachClub from '@/assets/mondrian-beach-club.jpg';
 
 const content = {
   eyebrow: {
