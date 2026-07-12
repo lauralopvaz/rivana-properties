@@ -452,7 +452,7 @@ journalArticles.unshift({
     en: 'Condos for Sale in Cancún’s Hotel Zone: What You Need to Know in 2026',
   },
   seoTitle: {
-    es: 'Departamentos en Venta en la Zona Hotelera de Cancún | Rivana',
+    es: 'Departamentos en Venta Zona Hotelera Cancún | Rivana',
     en: 'Condos for Sale in Cancún’s Hotel Zone | Rivana',
   },
   category: { es: 'Guías', en: 'Guides' },
@@ -561,7 +561,7 @@ journalArticles.unshift({
     en: 'Investing in Cancún Real Estate: The Data-Driven Guide (2026)',
   },
   seoTitle: {
-    es: 'Invertir en Bienes Raíces en Cancún 2026: Guía con Datos | Rivana',
+    es: 'Invertir en Bienes Raíces en Cancún 2026: Guía | Rivana',
     en: 'Invest in Cancún Real Estate 2026: Data-Driven Guide | Rivana',
   },
   category: { es: 'Inversión', en: 'Investment' },
@@ -615,7 +615,7 @@ journalArticles.unshift({
     en: 'Pre-Sale in Puerto Cancún: Investing in the City’s Most Exclusive Corridor',
   },
   seoTitle: {
-    es: 'Preventa en Puerto Cancún 2026: Marina, Golf y Plusvalía | Rivana',
+    es: 'Preventa en Puerto Cancún 2026: Marina y Golf | Rivana',
     en: 'Puerto Cancún Pre-Sale 2026: Marina, Golf & Appreciation | Rivana',
   },
   category: { es: 'Destinos', en: 'Destinations' },
@@ -668,7 +668,7 @@ journalArticles.unshift({
     en: 'Condos for Sale in Costa Mujeres: The Corridor Writing Its Best Chapter',
   },
   seoTitle: {
-    es: 'Departamentos en Venta en Costa Mujeres 2026 | Rivana Properties',
+    es: 'Departamentos en Venta en Costa Mujeres 2026 | Rivana',
     en: 'Condos for Sale in Costa Mujeres 2026 | Rivana Properties',
   },
   category: { es: 'Destinos', en: 'Destinations' },
@@ -722,7 +722,7 @@ journalArticles.unshift({
     en: 'Airbnb-Permitted Condos in Cancún: The Market’s Scarcest Asset (2026)',
   },
   seoTitle: {
-    es: 'Departamentos con Permiso Airbnb en Cancún: Guía 2026 | Rivana',
+    es: 'Departamentos con Permiso Airbnb en Cancún 2026 | Rivana',
     en: 'Airbnb-Permitted Condos in Cancún: 2026 Guide | Rivana',
   },
   category: { es: 'Inversión', en: 'Investment' },
