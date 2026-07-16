@@ -13,6 +13,7 @@ import imgMayakoba from "@/assets/journal/mayakoba-vs-puerto-cancun.jpg?responsi
 import imgGuiaPreventa from "@/assets/journal/guia-preventa.jpg?responsive";
 import imgPuenteNichupte from "@/assets/journal/puente-nichupte.jpg?responsive";
 import imgRetireCancun from "@/assets/journal/retire-cancun-riviera-maya.jpg?responsive";
+import imgBrokerLujo from "@/assets/journal/broker-inmobiliario-lujo-cancun.jpg?responsive";
 
 // Plain URL imports — used as the map key (matches article.image values).
 import urlCancunRoi from "@/assets/journal/cancun-roi.jpg";
@@ -24,6 +25,7 @@ import urlMayakoba from "@/assets/journal/mayakoba-vs-puerto-cancun.jpg";
 import urlGuiaPreventa from "@/assets/journal/guia-preventa.jpg";
 import urlPuenteNichupte from "@/assets/journal/puente-nichupte.jpg";
 import urlRetireCancun from "@/assets/journal/retire-cancun-riviera-maya.jpg";
+import urlBrokerLujo from "@/assets/journal/broker-inmobiliario-lujo-cancun.jpg";
 
 const map: Record<string, ResponsivePicture> = {
   [urlCancunRoi]: imgCancunRoi,
@@ -35,6 +37,7 @@ const map: Record<string, ResponsivePicture> = {
   [urlGuiaPreventa]: imgGuiaPreventa,
   [urlPuenteNichupte]: imgPuenteNichupte,
   [urlRetireCancun]: imgRetireCancun,
+  [urlBrokerLujo]: imgBrokerLujo,
 };
 
 export function getResponsiveImage(url: string): ResponsivePicture | undefined {

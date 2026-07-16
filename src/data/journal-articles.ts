@@ -11,6 +11,7 @@ import imgUruguayMayakoba from '@/assets/reserve-mayakoba-fachada-alberca-jardin
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
 import imgCanadianBuyer from '@/assets/journal/foreign-buyer-guide.jpg';
 import imgRetireCancun from '@/assets/journal/retire-cancun-riviera-maya.jpg';
+import imgBrokerLujo from '@/assets/journal/broker-inmobiliario-lujo-cancun.jpg';
 const imgMondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const imgDemo = '/images/mondrian/mondrian-hero.jpg'; // placeholder for template demo
 const imgDeptosPreventa = imgGuiaPreventa;
@@ -1159,6 +1160,53 @@ journalArticles.unshift({
     { title: 'Cancún corridors and infrastructure analysis', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
     { title: 'Puerto Morelos Reef National Park / Mesoamerican Reef', url: 'https://www.gob.mx/conanp', publisher: 'CONANP' },
   ],
+});
+
+journalArticles.unshift({
+  slug: 'que-es-un-broker-inmobiliario-de-lujo-cancun',
+  title: {
+    es: '¿Qué es un Broker Inmobiliario de Lujo? Guía para Invertir en Cancún 2026',
+    en: 'What Is a Luxury Real Estate Broker? A 2026 Guide to Investing in Cancún',
+  },
+  seoTitle: {
+    es: '¿Qué es un Broker Inmobiliario de Lujo? Guía Cancún 2026',
+    en: 'What Is a Luxury Real Estate Broker? Cancún 2026',
+  },
+  category: { es: 'Guías', en: 'Guides' },
+  excerpt: {
+    es: 'Descubre qué hace un broker inmobiliario de lujo, en qué se diferencia de un vendedor y cómo un buen acompañamiento protege tu inversión en Cancún.',
+    en: 'Learn what a luxury real estate broker actually does, how they differ from a salesperson, and how the right advisory protects your investment in Cancún.',
+  },
+  date: 'Jul 16, 2026',
+  updatedDate: '2026-07-16',
+  readTime: '8 min',
+  author: 'Rivana Properties Advisory Team',
+  image: imgBrokerLujo,
+  relatedDestinations: ['zona-hotelera', 'puerto-cancun', 'costa-mujeres'],
+  whatsappKeyword: 'ASESORÍA',
+  whatsappMessage: {
+    es: 'Quiero agendar una asesoría privada con un broker de Rivana y conocer mi Selección Premium',
+    en: 'I would like to book a private advisory call with a Rivana broker and see my Premium Selection',
+  },
+  relatedSlugs: [
+    'guia-preventa-cancun-2026',
+    'fideicomiso-mexico-bank-trust-explained',
+    'invertir-en-bienes-raices-cancun',
+  ],
+  faqs: {
+    es: [
+      { q: '¿Cuánto cuesta el servicio de un broker inmobiliario en Cancún?', a: 'Para el comprador, en la gran mayoría de los casos, nada adicional: la comisión del broker la cubre el desarrollador o el vendedor, y el precio de la propiedad es el mismo con o sin representación. El análisis, la negociación y el acompañamiento juegan a tu favor sin encarecer tu compra.' },
+      { q: '¿Un extranjero puede comprar propiedad en Cancún con un broker?', a: 'Sí. Los extranjeros pueden adquirir propiedades en la zona costera mediante un fideicomiso bancario, una figura legal segura y probada. Parte del acompañamiento de Rivana es guiarte en ese proceso, en tu idioma y paso a paso.' },
+      { q: '¿Qué diferencia hay entre un agente inmobiliario y un broker?', a: 'En la práctica mexicana los términos se mezclan, pero la diferencia útil es de enfoque: el agente típicamente coloca inventario; el broker o asesor patrimonial diseña una estrategia de inversión y representa tus intereses de principio a fin.' },
+      { q: '¿Cómo empiezo?', a: 'Con una conversación. Cuéntanos qué quieres lograr con tu inversión y te decimos, con números sobre la mesa, cómo se ve el camino. Escríbenos por WhatsApp y agenda tu asesoría — es el primer paso del proceso, y es sin costo.' },
+    ],
+    en: [
+      { q: 'How much does a real estate broker cost in Cancún?', a: 'For the buyer, in almost every case, nothing extra: the broker fee is covered by the developer or seller, and the property price is the same with or without representation. Analysis, negotiation and support work in your favor without raising your purchase price.' },
+      { q: 'Can a foreigner buy property in Cancún with a broker?', a: 'Yes. Foreigners can acquire property in the coastal zone through a bank trust (fideicomiso), a safe and well-established legal vehicle. Part of Rivana\u2019s advisory is guiding you through that process, in your language and step by step.' },
+      { q: 'What is the difference between an agent and a broker?', a: 'In Mexican practice the terms blur, but the useful distinction is focus: the agent typically places inventory; the broker or wealth advisor designs an investment strategy and represents your interests from start to finish.' },
+      { q: 'How do I get started?', a: 'With a conversation. Tell us what you want to achieve with your investment and we will show you, with numbers on the table, what the path looks like. Message us on WhatsApp and book your advisory — it is the first step, at no cost.' },
+    ],
+  },
 });
 
 export const getAllArticles = () => [...journalArticles, ...journalArticlesEs];
