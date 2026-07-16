@@ -51,6 +51,8 @@ export interface JournalArticle {
   sources?: { title: string; url: string; publisher?: string }[];
   /** EN-only article: hreflang points to the EN URL for both es and en; hidden from ES sitemap. */
   enOnly?: boolean;
+  /** ES-only article: hreflang points to the ES URL for both es and en; hidden from EN listings. */
+  esOnly?: boolean;
 }
 
 export const journalArticles: JournalArticle[] = [
@@ -450,6 +452,7 @@ export const journalArticles: JournalArticle[] = [
 ];
 journalArticles.unshift({
   slug: 'departamentos-en-venta-zona-hotelera-cancun',
+  esOnly: true,
   title: {
     es: 'Departamentos en Venta en la Zona Hotelera de Cancún: Lo Que Debes Saber en 2026',
     en: 'Condos for Sale in Cancún’s Hotel Zone: What You Need to Know in 2026',
@@ -503,6 +506,7 @@ journalArticles.unshift({
 
 journalArticles.unshift({
   slug: 'departamentos-en-preventa-cancun',
+  esOnly: true,
   title: {
     es: 'Departamentos en Preventa en Cancún: Guía 2026 para Comprar Bien',
     en: 'Pre-Sale Condos in Cancún: 2026 Buyer’s Guide',
@@ -559,6 +563,7 @@ export const journalArticlesEs: JournalArticle[] = [];
 
 journalArticles.unshift({
   slug: 'invertir-en-bienes-raices-cancun',
+  esOnly: true,
   title: {
     es: 'Invertir en Bienes Raíces en Cancún: La Guía Basada en Datos (2026)',
     en: 'Investing in Cancún Real Estate: The Data-Driven Guide (2026)',
@@ -613,6 +618,7 @@ journalArticles.unshift({
 
 journalArticles.unshift({
   slug: 'preventa-puerto-cancun',
+  esOnly: true,
   title: {
     es: 'Preventa en Puerto Cancún: Invertir en el Corredor Más Exclusivo de la Ciudad',
     en: 'Pre-Sale in Puerto Cancún: Investing in the City’s Most Exclusive Corridor',
@@ -666,6 +672,7 @@ journalArticles.unshift({
 
 journalArticles.unshift({
   slug: 'departamentos-en-venta-costa-mujeres',
+  esOnly: true,
   title: {
     es: 'Departamentos en Venta en Costa Mujeres: El Corredor Que Está Escribiendo Su Mejor Capítulo',
     en: 'Condos for Sale in Costa Mujeres: The Corridor Writing Its Best Chapter',
@@ -720,6 +727,7 @@ journalArticles.unshift({
 
 journalArticles.unshift({
   slug: 'departamentos-con-permiso-airbnb-cancun',
+  esOnly: true,
   title: {
     es: 'Departamentos con Permiso Airbnb en Cancún: El Activo Más Escaso del Mercado (2026)',
     en: 'Airbnb-Permitted Condos in Cancún: The Market’s Scarcest Asset (2026)',
@@ -774,6 +782,7 @@ journalArticles.unshift({
 
 journalArticles.unshift({
   slug: 'plusvalia-en-cancun-2026',
+  esOnly: true,
   title: {
     es: 'Plusvalía en Cancún 2026: Los Datos Oficiales y Dónde Se Está Concentrando',
     en: 'Cancún Appreciation 2026: The Official Data and Where It Is Concentrating',
@@ -1164,6 +1173,7 @@ journalArticles.unshift({
 
 journalArticles.unshift({
   slug: 'que-es-un-broker-inmobiliario-de-lujo-cancun',
+  esOnly: true,
   title: {
     es: '¿Qué es un Broker Inmobiliario de Lujo? Guía para Invertir en Cancún 2026',
     en: 'What Is a Luxury Real Estate Broker? A 2026 Guide to Investing in Cancún',
