@@ -623,7 +623,7 @@
 /* ── Home Hero mobile overrides ── */
 @media (max-width: 768px) {
   .home-hero-overlay {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.55) 100%) !important;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 50%, rgba(0,0,0,0.72) 100%) !important;
   }
   .home-hero-content {
     padding-left: 24px !important;
