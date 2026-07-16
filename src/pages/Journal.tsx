@@ -19,10 +19,11 @@ const Journal = () => {
   const [activeCat, setActiveCat] = useState(language === 'es' ? 'Todos' : 'All');
   const nl = useNewsletterSubscribe();
 
-  // Combine articles based on language
-  const allArticles = language === 'es'
-    ? [...journalArticles, ...journalArticlesEs]
-    : journalArticles;
+  // Filter articles by language: EN version hides esOnly, ES version hides enOnly.
+  const combined = [...journalArticles, ...journalArticlesEs];
+  const allArticles = language === 'en'
+    ? combined.filter((a) => !a.esOnly)
+    : combined.filter((a) => !a.enOnly);
 
   const featured = allArticles.find((a) => a.featured) || allArticles[0];
   const filtered = allArticles.filter((a) => {
