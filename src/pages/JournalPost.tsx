@@ -91,9 +91,11 @@ const JournalPost = () => {
   const enSlug = article.slugEn || article.slug;
   const currentPath = article.enOnly
     ? `/en/journal/${enSlug}`
-    : language === 'en'
-      ? `/en/journal/${enSlug}`
-      : `/journal/${articleSlug}`;
+    : article.esOnly
+      ? `/journal/${articleSlug}`
+      : language === 'en'
+        ? `/en/journal/${enSlug}`
+        : `/journal/${articleSlug}`;
   const articleTitle = article.title[language];
   const seoTitle = article.seoTitle?.[language]
     || (articleTitle.length > 45 ? `${articleTitle.slice(0, 45)}… | Rivana` : `${articleTitle} | Rivana Journal`);
@@ -472,7 +474,7 @@ const JournalPost = () => {
         }
         ogImage={article.image}
         hreflangEs={article.enOnly ? `/en/journal/${enSlug}` : `/journal/${articleSlug}`}
-        hreflangEn={`/en/journal/${enSlug}`}
+        hreflangEn={article.esOnly ? `/journal/${articleSlug}` : `/en/journal/${enSlug}`}
       />
 
       <JournalBreadcrumb title={article.title[language]} />
