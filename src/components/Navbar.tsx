@@ -133,6 +133,21 @@ export const Navbar = () => {
       {mobileOpen && (
         <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border animate-fade-in">
           <div className="flex flex-col px-6 py-8 gap-6">
+            {/* Mobile language switcher */}
+            <Link
+              to={switchLanguageUrl()}
+              className="flex items-center gap-2 font-body text-sm tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              </svg>
+              {language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+            </Link>
+
+            <div className="border-t border-border" />
+
             {/* Destinations section */}
             <div>
               <p className="eyebrow text-xs mb-3">{t('nav.destinations')}</p>
@@ -160,19 +175,6 @@ export const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-
-            {/* Mobile language switcher */}
-            <Link
-              to={switchLanguageUrl()}
-              className="flex items-center gap-2 font-body text-sm tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="2" y1="12" x2="22" y2="12" />
-                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-              </svg>
-              {language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
-            </Link>
 
             <Button variant="gold" className="mt-4" asChild>
             <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer" aria-label={language === 'es' ? 'Contactar asesor por WhatsApp' : 'Contact advisor via WhatsApp'}>
