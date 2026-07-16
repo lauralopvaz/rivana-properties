@@ -169,7 +169,7 @@ const Journal = () => {
             <div className="bg-card border border-border rounded-sm p-6">
               <h3 className="text-lg mb-4">{language === 'es' ? 'Más Leídos' : 'Most Read'}</h3>
               <div className="space-y-4">
-                {journalArticles.slice(0, 4).map((a, i) => (
+                {allArticles.slice(0, 4).map((a, i) => (
                   <Link key={a.slug} to={localePath(`/journal/${getArticleSlug(a, language)}`)} className="flex items-start gap-3 group">
                     <span className="font-display text-2xl text-primary/40">{String(i + 1).padStart(2, '0')}</span>
                     <div>
