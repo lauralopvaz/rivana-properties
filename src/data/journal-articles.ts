@@ -11,6 +11,7 @@ import imgUruguayMayakoba from '@/assets/reserve-mayakoba-fachada-alberca-jardin
 import imgPreSaleGuide from '@/assets/journal/guia-preventa.jpg';
 import imgCanadianBuyer from '@/assets/journal/foreign-buyer-guide.jpg';
 import imgRetireCancun from '@/assets/journal/retire-cancun-riviera-maya.jpg';
+import imgBrokerLujo from '@/assets/journal/broker-inmobiliario-lujo-cancun.jpg';
 const imgMondrianHero = '/images/mondrian/mondrian-hero.jpg';
 const imgDemo = '/images/mondrian/mondrian-hero.jpg'; // placeholder for template demo
 const imgDeptosPreventa = imgGuiaPreventa;
