@@ -38,6 +38,7 @@ import { CancunCondosForSaleBody } from '@/components/journal/CancunCondosForSal
 import { PreConstructionCondosCancunBody } from '@/components/journal/PreConstructionCondosCancunBody';
 import { CostaMujeresRealEstateBody } from '@/components/journal/CostaMujeresRealEstateBody';
 import { BestPlacesRivieraMayaBody } from '@/components/journal/BestPlacesRivieraMayaBody';
+import { BrokerLujoCancunBody } from '@/components/journal/BrokerLujoCancunBody';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { JournalBreadcrumb, Sources } from '@/components/journal/primitives';
 
@@ -118,6 +119,7 @@ const JournalPost = () => {
     'pre-construction-condos-cancun',
     'costa-mujeres-real-estate',
     'best-places-to-buy-property-riviera-maya',
+    'que-es-un-broker-inmobiliario-de-lujo-cancun',
   ];
   const isTier1Cluster = tier1ClusterSlugs.includes(articleSlug);
 
@@ -613,6 +615,8 @@ const JournalPost = () => {
               <CostaMujeresRealEstateBody />
             ) : articleSlug === 'best-places-to-buy-property-riviera-maya' ? (
               <BestPlacesRivieraMayaBody />
+            ) : articleSlug === 'que-es-un-broker-inmobiliario-de-lujo-cancun' ? (
+              <BrokerLujoCancunBody />
             ) : (
             <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
               <p>{article.excerpt[language]}</p>
