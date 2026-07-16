@@ -51,6 +51,8 @@ export interface JournalArticle {
   sources?: { title: string; url: string; publisher?: string }[];
   /** EN-only article: hreflang points to the EN URL for both es and en; hidden from ES sitemap. */
   enOnly?: boolean;
+  /** ES-only article: hreflang points to the ES URL for both es and en; hidden from EN listings. */
+  esOnly?: boolean;
 }
 
 export const journalArticles: JournalArticle[] = [
