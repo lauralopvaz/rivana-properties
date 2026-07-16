@@ -126,26 +126,41 @@ const Home = () => {
       {/* ── HERO ── */}
       <section className="relative flex items-center justify-center overflow-hidden home-hero-section" style={{ height: '100vh', minHeight: '700px' }}>
         <img src={homeHero} alt={language === 'es' ? 'Propiedad de lujo frente al mar en Cancún' : 'Luxury beachfront property in Cancún'} className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center 30%' }} />
-        <div className="absolute inset-0 home-hero-overlay" style={{ background: 'linear-gradient(160deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.35) 100%)' }} />
+        <div className="absolute inset-0 home-hero-overlay" style={{ background: 'linear-gradient(160deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.52) 100%)' }} />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center text-[hsl(var(--pearl))] home-hero-content flex flex-col justify-center items-center" style={{ paddingTop: '80px' }}>
-          <p className="eyebrow animate-fade-in home-hero-eyebrow" style={{ animationDelay: '0.2s', fontSize: '16px', letterSpacing: '4px', fontWeight: 500, marginBottom: '16px' }}>
-            {language === 'es' ? 'Asesoría Inmobiliaria de Lujo' : 'Luxury Real Estate Advisory'}
+          <p className="eyebrow animate-fade-in home-hero-eyebrow" style={{ animationDelay: '0.2s', fontSize: '16px', letterSpacing: '4px', fontWeight: 500, marginBottom: '16px', color: '#CFAE60' }}>
+            {language === 'es' ? 'ASESORÍA INMOBILIARIA DE LUJO' : 'LUXURY REAL ESTATE ADVISORY'}
           </p>
-          <h1 className="animate-fade-up home-hero-h1" style={{ animationDelay: '0.4s', fontWeight: 600, textShadow: '0 2px 24px rgba(0,0,0,0.5)', fontSize: 'clamp(3rem, 5vw, 5rem)', marginBottom: '12px' }}>
-            {t('hero.tagline').split(',')[0]},{' '}
-            <em className="text-primary not-italic font-display italic">{t('hero.tagline').split(',')[1]}</em>
+          <h1 className="animate-fade-up home-hero-h1 text-[hsl(var(--pearl))]" style={{ animationDelay: '0.4s', fontWeight: 600, textShadow: '0 2px 24px rgba(0,0,0,0.5)', fontSize: 'clamp(3rem, 5vw, 5rem)', marginBottom: '12px' }}>
+            {language === 'es' ? 'Tu broker en la Riviera Maya' : 'Your broker in the Riviera Maya'}
           </h1>
-          <p className="font-body text-[hsl(var(--pearl))]/80 max-w-2xl mx-auto animate-fade-up home-hero-subtitle" style={{ animationDelay: '0.6s', fontSize: '21px', fontWeight: 400, textShadow: '0 1px 10px rgba(0,0,0,0.5)', marginBottom: '0' }}>
-            {language === 'es' ? <>Propiedades exclusivas en Cancún{' '}<br className="md:hidden" />y la Riviera Maya</> : <>Exclusive properties in Cancún{' '}<br className="md:hidden" />and the Riviera Maya</>}
+          <p className="font-body text-[hsl(var(--pearl))]/90 max-w-2xl mx-auto animate-fade-up home-hero-subtitle" style={{ animationDelay: '0.6s', fontSize: '21px', fontWeight: 400, textShadow: '0 1px 10px rgba(0,0,0,0.5)', marginBottom: '0' }}>
+            {language === 'es'
+              ? 'Te acompañamos en cada paso: selección premium, proceso legal y las mejores oportunidades frente al mar'
+              : 'We guide you every step of the way: premium selection, legal process and the best beachfront opportunities'}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up home-hero-buttons" style={{ animationDelay: '0.8s', marginTop: '36px' }}>
             <Button variant="gold" size="lg" asChild>
-              <Link to={localePath('/listings')}>{t('hero.explore')}</Link>
+              <a
+                href="https://wa.me/529988457224?text=HOME%20HERO%20%E2%80%94%20Quiero%20iniciar%20mi%20asesor%C3%ADa%20inmobiliaria"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {language === 'es' ? 'Inicia tu asesoría →' : 'Start your advisory →'}
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="border-[hsl(var(--pearl))] text-[hsl(var(--pearl))] hover:bg-[hsl(var(--pearl))]/10" asChild>
-              <Link to={localePath('/cancun/zona-hotelera')}>{t('hero.destinations')}</Link>
+              <Link to={localePath('/listings')}>{language === 'es' ? 'Explorar propiedades' : 'Explore properties'}</Link>
             </Button>
           </div>
+          <p
+            className="font-body animate-fade-up text-[hsl(var(--pearl))]/80"
+            style={{ animationDelay: '1s', fontSize: '13px', letterSpacing: '0.5px', marginTop: '20px', textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
+          >
+            {language === 'es'
+              ? 'Propiedades desde $250K USD en Cancún · Puerto Cancún · Costa Mujeres'
+              : 'Properties from $250K USD in Cancún · Puerto Cancún · Costa Mujeres'}
+          </p>
         </div>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-scroll-hint">
           <span className="w-px h-8 bg-primary/50" />
