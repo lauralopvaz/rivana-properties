@@ -15,7 +15,7 @@ import { PersonalSearchSection } from '@/components/home/PersonalSearchSection';
 import { ImmediateDeliveryCard } from '@/components/ImmediateDeliveryCard';
 import { immediateDeliveryUnits } from '@/data/immediate-delivery';
 
-import homeHero from '@/assets/thompson-sky-beach.webp';
+import homeHero from '@/assets/home-hero-main.jpg';
 import presaleHero from '@/assets/presale-hero.jpg';
 
 // Destination images — real property photography
