@@ -124,7 +124,7 @@ const Home = () => {
       {/* ── HERO ── */}
       <section className="relative flex items-center justify-center overflow-hidden home-hero-section" style={{ height: '100vh', minHeight: '700px' }}>
         <img src={homeHero} alt={language === 'es' ? 'Propiedad de lujo frente al mar en Cancún' : 'Luxury beachfront property in Cancún'} className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center 30%' }} />
-        <div className="absolute inset-0 home-hero-overlay" style={{ background: 'linear-gradient(160deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.56) 100%)' }} />
+        <div className="absolute inset-0 home-hero-overlay" style={{ background: 'linear-gradient(160deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.36) 100%)' }} />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 text-center text-[hsl(var(--pearl))] home-hero-content flex flex-col justify-center items-center" style={{ paddingTop: '80px' }}>
           <p className="eyebrow animate-fade-in home-hero-eyebrow" style={{ animationDelay: '0.2s', fontSize: '16px', letterSpacing: '4px', fontWeight: 500, marginBottom: '16px', color: '#CFAE60' }}>
             {language === 'es' ? 'ASESORÍA INMOBILIARIA DE LUJO' : 'LUXURY REAL ESTATE ADVISORY'}
