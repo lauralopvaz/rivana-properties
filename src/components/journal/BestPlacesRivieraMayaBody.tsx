@@ -34,7 +34,7 @@ export const BestPlacesRivieraMayaBody = () => {
         <li>
           <strong>Official appreciation data</strong> — Mexico's Federal Mortgage Society (SHF)
           index, not listing-site guesses. The state backdrop:{' '}
-          <strong>Quintana Roo led all of Mexico with +14.3% home-price growth in 2025</strong>{' '}
+          <strong>Quintana Roo led all of Mexico with +14.3% home-price growth in 2026</strong>{' '}
           (national average ~8.2%), after double-digit years in 2023-2024.
         </li>
         <li>
@@ -60,7 +60,7 @@ export const BestPlacesRivieraMayaBody = () => {
       <p>
         A 22-km sandbar between lagoon and Caribbean that cannot be extended, carrying Mexico's
         highest nightly rates and its deepest tourist demand (the country's second-busiest airport
-        feeds it daily). Benito Juárez posted +12.8% in Q1 2025 alone. The corridor rewards two
+        feeds it daily). Benito Juárez posted +12.8% in Q1 2026 alone. The corridor rewards two
         plays: units with <strong>short-term rental permits in place</strong> — genuinely scarce,
         since most building bylaws prohibit STR (Rivana's{' '}
         <Link to={localePath('/zona-hotelera/edificio-salvia')} className={gold}>

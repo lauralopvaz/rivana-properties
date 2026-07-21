@@ -18,7 +18,7 @@ export const InvertirBienesRaicesCancunBody = () => {
     <JournalBody>
       <p>
         Invertir en bienes raíces en Cancún dejó de ser una corazonada para convertirse en una tesis
-        respaldada por datos oficiales. En 2025, Quintana Roo registró la mayor apreciación de
+        respaldada por datos oficiales. En 2026, Quintana Roo registró la mayor apreciación de
         vivienda de todo México: <strong>+14.3% anual</strong> según el índice de la Sociedad
         Hipotecaria Federal, frente a un promedio nacional de ~8.2%. No fue un año atípico: el estado
         encadenó incrementos de doble dígito en 2023 y 2024 (+11.8% a +13.4%), impulsado por
@@ -42,20 +42,20 @@ export const InvertirBienesRaicesCancunBody = () => {
         <strong>2. Demanda diversificada, no dependiente de un solo comprador.</strong> Entre 70% y
         75% de las transacciones en Quintana Roo son de compradores nacionales —Monterrey,
         Guadalajara, Bajío— que compran para patrimonio, retiro o renta de largo plazo. A eso se suma
-        el capital extranjero, con una novedad 2025-2026: el giro de los snowbirds canadienses hacia
+        el capital extranjero, con una novedad 2026-2026: el giro de los snowbirds canadienses hacia
         México (la proporción que eligió destinos fuera de EE.UU. casi se duplicó, del 12% al 23%,
         según Snowbird Advisor), documentado por CBC y The Globe and Mail. Un mercado con múltiples
         perfiles de demanda es un mercado con liquidez de salida.
       </p>
       <p>
         <strong>3. Escasez donde importa.</strong> El pipeline estatal de ~22,000 unidades para
-        2025-2026 se concentra en corredores de expansión; el suelo premium —Zona Hotelera, Puerto
+        2026-2026 se concentra en corredores de expansión; el suelo premium —Zona Hotelera, Puerto
         Cancún, primera línea de Costa Mujeres— es finito. La absorción estatal mantiene ciclos de
         inventario de 14-18 meses: profundidad sin saturación.
       </p>
       <p>
         <strong>4. Costo de capital a la baja.</strong> Banxico recortó su tasa a 7% en diciembre de
-        2025. Las hipotecas mexicanas siguen en 10-12%, por lo que el esquema dominante para
+        2026. Las hipotecas mexicanas siguen en 10-12%, por lo que el esquema dominante para
         inversionistas sigue siendo preventa con planes de pago del desarrollador — apalancamiento
         sin intereses bancarios.
       </p>
@@ -112,13 +112,13 @@ export const InvertirBienesRaicesCancunBody = () => {
       <p>
         Seamos directos, porque es lo que distingue a un asesor de un vendedor: los rendimientos
         brutos de renta en México promedian <strong>~6% anual</strong> (Global Property Guide,
-        diciembre 2025). La renta vacacional bien operada en corredores turísticos puede superar ese
+        diciembre 2026). La renta vacacional bien operada en corredores turísticos puede superar ese
         promedio — pero "bien operada" significa permisos en regla, pricing dinámico, operación
         profesional y cumplimiento fiscal (registro estatal e impuesto al hospedaje en Quintana Roo).
       </p>
       <p>
         El retorno total de una inversión en Cancún se compone de dos líneas:{' '}
-        <strong>flujo de renta + apreciación del activo</strong>. Con la apreciación estatal de 2025
+        <strong>flujo de renta + apreciación del activo</strong>. Con la apreciación estatal de 2026
         en +14.3% y rentas brutas en el rango de mercado, el retorno combinado de una unidad correcta
         compite con casi cualquier clase de activo en México — pero la palabra clave es "correcta".
         Por eso en Rivana no publicamos porcentajes promocionales: construimos el análisis financiero

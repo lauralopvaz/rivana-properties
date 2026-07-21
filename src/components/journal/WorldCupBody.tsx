@@ -53,20 +53,20 @@ export const WorldCupBodyES = () => {
           </div>
           <div>
             <span className="font-display text-3xl text-primary">$40B+</span>
-            <p className="text-xs text-muted-foreground font-body mt-1">IED México 2025</p>
+            <p className="text-xs text-muted-foreground font-body mt-1">IED México 2026</p>
           </div>
           <div>
             <span className="font-display text-3xl text-primary">8.9%</span>
-            <p className="text-xs text-muted-foreground font-body mt-1">Índice SHF Q3 2025</p>
+            <p className="text-xs text-muted-foreground font-body mt-1">Índice SHF Q3 2026</p>
           </div>
         </div>
       </div>
 
-      <p>El mercado inmobiliario del Caribe Mexicano proyecta crecimiento sólido en 2026, con plusvalía estimada entre 7% y 9% anual en zonas clave como Cancún y Playa del Carmen. El Índice SHF de Precios de la Vivienda registró 8.9% de apreciación anual al tercer trimestre de 2025, con Quintana Roo superando la media nacional.</p>
+      <p>El mercado inmobiliario del Caribe Mexicano proyecta crecimiento sólido en 2026, con plusvalía estimada entre 7% y 9% anual en zonas clave como Cancún y Playa del Carmen. El Índice SHF de Precios de la Vivienda registró 8.9% de apreciación anual al tercer trimestre de 2026, con Quintana Roo superando la media nacional.</p>
 
       <p>Las proyecciones conservadoras para 2026 muestran crecimiento interanual en torno al 8–12% para segmentos demandados. El lujo y el frente al mar siguen liderando apreciación y demanda, tanto por compradores extranjeros como nacionales de alto poder adquisitivo.</p>
 
-      <p>México superó los $40,000 millones USD en Inversión Extranjera Directa al tercer trimestre de 2025. Los principales inversionistas en Quintana Roo son España y Estados Unidos, enfocados en hotelería boutique, servicios inmobiliarios y vivienda vacacional.</p>
+      <p>México superó los $40,000 millones USD en Inversión Extranjera Directa al tercer trimestre de 2026. Los principales inversionistas en Quintana Roo son España y Estados Unidos, enfocados en hotelería boutique, servicios inmobiliarios y vivienda vacacional.</p>
 
       <p>Lo que estos números dicen en conjunto: el mercado no es especulativo — es maduro, con demanda real, capital institucional respaldando la oferta y un ciclo de apreciación que ya lleva más de una década de tendencia positiva interrumpida únicamente por COVID (y que se recuperó en tiempo récord).</p>
 
@@ -227,20 +227,20 @@ export const WorldCupBodyEN = () => {
           </div>
           <div>
             <span className="font-display text-3xl text-primary">$40B+</span>
-            <p className="text-xs text-muted-foreground font-body mt-1">Mexico FDI 2025</p>
+            <p className="text-xs text-muted-foreground font-body mt-1">Mexico FDI 2026</p>
           </div>
           <div>
             <span className="font-display text-3xl text-primary">8.9%</span>
-            <p className="text-xs text-muted-foreground font-body mt-1">SHF Index Q3 2025</p>
+            <p className="text-xs text-muted-foreground font-body mt-1">SHF Index Q3 2026</p>
           </div>
         </div>
       </div>
 
-      <p>The Mexican Caribbean real estate market projects solid growth in 2026, with estimated appreciation of 7% to 9% annually in key zones including Cancún and Playa del Carmen. The SHF Housing Price Index recorded 8.9% annual appreciation through Q3 2025, with Quintana Roo exceeding the national average.</p>
+      <p>The Mexican Caribbean real estate market projects solid growth in 2026, with estimated appreciation of 7% to 9% annually in key zones including Cancún and Playa del Carmen. The SHF Housing Price Index recorded 8.9% annual appreciation through Q3 2026, with Quintana Roo exceeding the national average.</p>
 
       <p>Conservative projections for 2026 show year-over-year growth of 8 to 12% for in-demand segments. Luxury and beachfront continue to lead appreciation and demand, driven by both foreign and high-net-worth domestic buyers.</p>
 
-      <p>Mexico exceeded $40 billion USD in Foreign Direct Investment through Q3 2025. The leading investors in Quintana Roo are Spain and the United States, focused on boutique hospitality, real estate services and vacation residential.</p>
+      <p>Mexico exceeded $40 billion USD in Foreign Direct Investment through Q3 2026. The leading investors in Quintana Roo are Spain and the United States, focused on boutique hospitality, real estate services and vacation residential.</p>
 
       <p>What these numbers say collectively: this market is not speculative — it is mature, backed by real demand, institutional capital supporting supply and an appreciation cycle that has maintained a positive trend for over a decade, interrupted only by COVID (from which it recovered at record speed).</p>
 

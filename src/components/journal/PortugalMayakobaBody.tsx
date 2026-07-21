@@ -19,7 +19,7 @@ export const PortugalMayakobaBodyES = () => {
       <h2 className="text-foreground">La selección que llegará a Mayakoba</h2>
       <p>Para entender el peso de esta decisión, conviene conocer al equipo que estará entrenando en la Riviera Maya durante el verano de 2026.</p>
 
-      <p>Portugal ganó su segundo título de la Liga de Naciones en 2025 y actualmente es uno de los equipos más fuertes de Europa, con una plantilla equilibrada y de calidad en todas las posiciones. Llegan al Mundial como uno de los candidatos más serios del torneo.</p>
+      <p>Portugal ganó su segundo título de la Liga de Naciones en 2026 y actualmente es uno de los equipos más fuertes de Europa, con una plantilla equilibrada y de calidad en todas las posiciones. Llegan al Mundial como uno de los candidatos más serios del torneo.</p>
 
       <p>La plantilla que dirigirá Roberto Martínez desde Mayakoba es de primer orden mundial. <strong className="text-foreground">Cristiano Ronaldo</strong> — con 41 años al inicio del torneo — estará plenamente recuperado y liderará el ataque, en lo que muy probablemente será su última Copa del Mundo. A su alrededor, <strong className="text-foreground">Bruno Fernandes y Bernardo Silva</strong> han rendido a un nivel constante en sus clubes, con <strong className="text-foreground">Vitinha</strong> llamado a desempeñar un papel clave en el centro del campo. En defensa, João Cancelo y Nuno Mendes aportan velocidad y experiencia en los laterales. En el ataque, Rafael Leão del AC Milan y Francisco Conceição son activos valiosos que aportarán velocidad y desborde en las bandas.</p>
 

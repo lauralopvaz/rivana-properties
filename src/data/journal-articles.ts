@@ -485,13 +485,13 @@ journalArticles.unshift({
   ],
   faqs: {
     es: [
-      { q: '¿Es buen momento para comprar en la Zona Hotelera?', a: 'Los datos de 2025 muestran la mayor apreciación del país en el estado, tasas de Banxico a la baja (7% desde diciembre 2025) y obras de conectividad en curso. Nadie garantiza el futuro, pero los fundamentos del corredor —escasez de suelo, demanda turística, infraestructura— son los más sólidos de México.' },
+      { q: '¿Es buen momento para comprar en la Zona Hotelera?', a: 'Los datos de 2026 muestran la mayor apreciación del país en el estado, tasas de Banxico a la baja (7% desde diciembre 2026) y obras de conectividad en curso. Nadie garantiza el futuro, pero los fundamentos del corredor —escasez de suelo, demanda turística, infraestructura— son los más sólidos de México.' },
       { q: '¿Puedo comprar sin estar en México?', a: 'Sí. Coordinamos visitas virtuales en video, documentación digital y cierre mediante poder notarial. Una parte relevante de nuestros clientes extranjeros compra de forma remota.' },
       { q: '¿Qué me conviene: producto terminado o preventa?', a: 'Depende de tu tesis: flujo inmediato (Salvia, con permisos de renta) o captura de plusvalía durante construcción (Mondrian). En una llamada de 30 minutos definimos cuál corresponde a tu perfil.' },
       { q: '¿Qué precio por m² esperar en la Zona Hotelera en 2026?', a: 'El rango vigente va de ~USD $3,000 a $4,500/m² según ubicación, vista y desarrollador. Los penthouses con permiso de renta vacacional operan en el techo del rango por su escasez estructural.' },
     ],
     en: [
-      { q: 'Is it a good time to buy in the Hotel Zone?', a: '2025 data shows the state led national appreciation, Banxico rates fell to 7% in December 2025, and connectivity projects are underway. No one guarantees the future, but the corridor’s fundamentals —limited land, tourism demand, infrastructure— are the strongest in Mexico.' },
+      { q: 'Is it a good time to buy in the Hotel Zone?', a: '2026 data shows the state led national appreciation, Banxico rates fell to 7% in December 2026, and connectivity projects are underway. No one guarantees the future, but the corridor’s fundamentals —limited land, tourism demand, infrastructure— are the strongest in Mexico.' },
       { q: 'Can I buy without being in Mexico?', a: 'Yes. We coordinate live video walkthroughs, digital documentation and closing via power of attorney. A meaningful share of our international clients close remotely.' },
       { q: 'Turnkey or pre-sale?', a: 'It depends on your thesis: immediate cash flow (Salvia, with rental permits) or capturing appreciation during construction (Mondrian). A 30-minute call is enough to define which fits your profile.' },
       { q: 'What price per m² should I expect in the Hotel Zone in 2026?', a: 'The current range runs from ~USD $3,000 to $4,500/m² depending on location, view and developer. Penthouses with vacation-rental permits sit at the top of the range because of their structural scarcity.' },
@@ -541,18 +541,18 @@ journalArticles.unshift({
     es: [
       { q: '¿Cuánto enganche necesito?', a: 'El estándar del mercado es 20-30% a la firma, con mensualidades durante obra y liquidación contra entrega. Cada desarrollo tiene su esquema; en la Selección Premium de Rivana hay opciones con distintos niveles de entrada.' },
       { q: '¿Puedo revender antes de la entrega?', a: 'En muchos desarrollos sí, mediante cesión de derechos. Las condiciones (momento permitido, comisión del desarrollador) varían por contrato y son parte de lo que revisamos antes de que firmes.' },
-      { q: '¿La plusvalía está garantizada?', a: 'No, y desconfía de quien te la garantice. Lo que existe son datos históricos (SHF: +14.3% estatal en 2025) y motores estructurales verificables. Nuestro trabajo es ubicarte en los corredores donde esos motores concentran valor.' },
+      { q: '¿La plusvalía está garantizada?', a: 'No, y desconfía de quien te la garantice. Lo que existe son datos históricos (SHF: +14.3% estatal en 2026) y motores estructurales verificables. Nuestro trabajo es ubicarte en los corredores donde esos motores concentran valor.' },
       { q: '¿Qué pasa si el desarrollador se retrasa?', a: 'Los contratos serios estipulan penalizaciones por retraso y fechas límite. Es uno de los cinco puntos de nuestro filtro y una de las razones por las que trabajamos con desarrolladores de historial verificable.' },
     ],
     en: [
       { q: 'How much down payment do I need?', a: 'The market standard is 20-30% at signing, with monthly installments during construction and the balance at delivery. Each development has its own schedule; Rivana’s Premium Selection includes options with different entry levels.' },
       { q: 'Can I resell before delivery?', a: 'In many developments yes, through an assignment of rights. Timing and developer fees vary by contract and are part of what we review before you sign.' },
-      { q: 'Is appreciation guaranteed?', a: 'No — and be wary of anyone who guarantees it. What exists is historical data (SHF: +14.3% statewide in 2025) and verifiable structural drivers. Our job is to place you in the corridors where those drivers concentrate value.' },
+      { q: 'Is appreciation guaranteed?', a: 'No — and be wary of anyone who guarantees it. What exists is historical data (SHF: +14.3% statewide in 2026) and verifiable structural drivers. Our job is to place you in the corridors where those drivers concentrate value.' },
       { q: 'What happens if the developer is delayed?', a: 'Serious contracts include delay penalties and hard deadlines. It is one of the five points in our filter and one of the reasons we only work with developers who have a verifiable track record.' },
     ],
   },
   sources: [
-    { title: 'Índice SHF de Precios de la Vivienda 2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Índice SHF de Precios de la Vivienda 2026', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
     { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
     { title: 'Absorción del mercado inmobiliario en Quintana Roo', url: 'https://adiqroo.mx/', publisher: 'Asociación de Desarrolladores Inmobiliarios de Quintana Roo' },
   ],
@@ -609,7 +609,7 @@ journalArticles.unshift({
     ],
   },
   sources: [
-    { title: 'Índice SHF de Precios de la Vivienda 2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Índice SHF de Precios de la Vivienda 2026', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
     { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
     { title: 'Absorción del mercado inmobiliario en Quintana Roo', url: 'https://adiqroo.mx/', publisher: 'Asociación de Desarrolladores Inmobiliarios de Quintana Roo' },
     { title: 'Snowbird trends toward Mexico', url: 'https://www.theglobeandmail.com/', publisher: 'The Globe and Mail' },
@@ -705,20 +705,20 @@ journalArticles.unshift({
   ],
   faqs: {
     es: [
-      { q: '¿Costa Mujeres es buena inversión en 2026?', a: 'Los fundamentos son los que un inversionista quiere ver: estado líder en apreciación (+14.3% SHF 2025), corredor master-planned con marcas de lujo operando, frente de playa finito y precio aún en fase de consolidación. Ninguna inversión está garantizada; ésta está inusualmente bien respaldada por datos.' },
+      { q: '¿Costa Mujeres es buena inversión en 2026?', a: 'Los fundamentos son los que un inversionista quiere ver: estado líder en apreciación (+14.3% SHF 2026), corredor master-planned con marcas de lujo operando, frente de playa finito y precio aún en fase de consolidación. Ninguna inversión está garantizada; ésta está inusualmente bien respaldada por datos.' },
       { q: '¿Qué tan lejos está del aeropuerto y de Cancún?', a: '25-35 minutos del aeropuerto internacional y 20-30 del centro de Cancún y sus hospitales privados.' },
       { q: '¿Puedo conocer las unidades sin viajar?', a: 'Sí: recorridos en video de las unidades disponibles de La Amada Residence y del corredor, con documentación digital y cierre remoto si decides avanzar.' },
       { q: '¿Hay opciones de renta vacacional?', a: 'Depende del reglamento de cada desarrollo; te orientamos hacia las unidades donde tu estrategia de renta es viable y en regla.' },
     ],
     en: [
-      { q: 'Is Costa Mujeres a good investment in 2026?', a: 'The fundamentals are what an investor wants to see: state leading national appreciation (+14.3% SHF 2025), master-planned corridor with luxury brands already operating, finite beachfront and prices still in consolidation. No investment is guaranteed; this one is unusually well backed by data.' },
+      { q: 'Is Costa Mujeres a good investment in 2026?', a: 'The fundamentals are what an investor wants to see: state leading national appreciation (+14.3% SHF 2026), master-planned corridor with luxury brands already operating, finite beachfront and prices still in consolidation. No investment is guaranteed; this one is unusually well backed by data.' },
       { q: 'How far is it from the airport and Cancún?', a: '25-35 minutes from Cancún International Airport and 20-30 minutes from downtown Cancún and its private hospitals.' },
       { q: 'Can I visit the units without traveling?', a: 'Yes: live video walkthroughs of available La Amada Residence units and the corridor, digital documentation and remote closing if you decide to move forward.' },
       { q: 'Are there vacation-rental options?', a: 'It depends on each development’s rules; we steer you to units where your rental strategy is both viable and compliant.' },
     ],
   },
   sources: [
-    { title: 'Índice SHF de Precios de la Vivienda 2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Índice SHF de Precios de la Vivienda 2026', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
     { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
     { title: 'Snowbird trends toward Mexico', url: 'https://www.theglobeandmail.com/', publisher: 'The Globe and Mail' },
     { title: 'Playa Mujeres — información pública del corredor', url: 'https://www.playamujeres.com.mx/', publisher: 'Playa Mujeres' },
@@ -774,7 +774,7 @@ journalArticles.unshift({
   },
   sources: [
     { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
-    { title: 'Índice SHF de Precios de la Vivienda 2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Índice SHF de Precios de la Vivienda 2026', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
     { title: 'Ley del Impuesto al Hospedaje de Quintana Roo', url: 'https://qroo.gob.mx/', publisher: 'Gobierno de Quintana Roo' },
     { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
   ],
@@ -815,20 +815,20 @@ journalArticles.unshift({
   ],
   faqs: {
     es: [
-      { q: '¿Cuál es la plusvalía real de Cancún en 2026?', a: 'El dato oficial más reciente: +14.3% anual estatal en 2025 y +12.8% trimestral en Benito Juárez (SHF). Para 2026, los análisis de mercado proyectan continuidad de crecimiento apoyada en infraestructura y demanda; los porcentajes exactos varían por corredor y producto.' },
+      { q: '¿Cuál es la plusvalía real de Cancún en 2026?', a: 'El dato oficial más reciente: +14.3% anual estatal en 2026 y +12.8% trimestral en Benito Juárez (SHF). Para 2026, los análisis de mercado proyectan continuidad de crecimiento apoyada en infraestructura y demanda; los porcentajes exactos varían por corredor y producto.' },
       { q: '¿Qué zona de Cancún tiene mayor plusvalía?', a: 'Por recorrido relativo, Costa Mujeres (consolidación); por escasez, Zona Hotelera y Puerto Cancún; por efecto de infraestructura, los corredores de Huayacán y Colosio. La respuesta correcta depende de tu horizonte y tesis.' },
       { q: '¿La preventa siempre da más plusvalía?', a: 'Amplifica la captura cuando el desarrollo y el corredor son correctos — y amplifica el riesgo cuando no. Por eso el filtro de desarrollador es tan importante como el precio de lista.' },
       { q: '¿Cómo comparo la plusvalía entre dos unidades concretas?', a: 'Con un análisis comparativo: precio por m² contra la zona, posición de la unidad, capacidad de renta y escenarios de salida. Es exactamente el documento que Rivana prepara antes de que decidas.' },
     ],
     en: [
-      { q: 'What is the real appreciation of Cancún in 2026?', a: 'The most recent official data: +14.3% annual statewide in 2025 and +12.8% quarterly in Benito Juárez (SHF). For 2026, market analyses project continued growth supported by infrastructure and demand; exact percentages vary by corridor and product.' },
+      { q: 'What is the real appreciation of Cancún in 2026?', a: 'The most recent official data: +14.3% annual statewide in 2026 and +12.8% quarterly in Benito Juárez (SHF). For 2026, market analyses project continued growth supported by infrastructure and demand; exact percentages vary by corridor and product.' },
       { q: 'Which zone of Cancún has the highest appreciation?', a: 'By relative runway, Costa Mujeres (consolidation); by scarcity, the Hotel Zone and Puerto Cancún; by infrastructure impact, the Huayacán and Colosio corridors. The right answer depends on your horizon and thesis.' },
       { q: 'Does pre-sale always yield more appreciation?', a: 'It amplifies capture when the development and corridor are right — and amplifies risk when they are not. That is why the developer filter matters as much as list price.' },
       { q: 'How do I compare appreciation between two specific units?', a: 'With a comparative analysis: price per m² against the zone, unit position, rental capacity and exit scenarios. It is exactly the document Rivana prepares before you decide.' },
     ],
   },
   sources: [
-    { title: 'Índice SHF de Precios de la Vivienda 2023-2025', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
+    { title: 'Índice SHF de Precios de la Vivienda 2023-2026', url: 'https://www.gob.mx/shf', publisher: 'Sociedad Hipotecaria Federal' },
     { title: 'Global Property Guide — Mexico Housing Market', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'Global Property Guide' },
     { title: 'Análisis del mercado inmobiliario Cancún 2026', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
     { title: 'Snowbird trends toward Mexico', url: 'https://www.theglobeandmail.com/', publisher: 'The Globe and Mail' },
@@ -985,17 +985,17 @@ journalArticles.unshift({
       { q: 'Can Americans and Canadians own beachfront condos in Cancún?', a: 'Yes — through the fideicomiso bank trust, with full rights to use, rent, inherit, and sell. Thousands of foreign owners close this way every year.' },
       { q: 'What are the closing costs?', a: 'Plan for roughly 5-8% of the purchase price all-in: transfer tax (ISAI), notario fees, and trust setup. Ongoing costs are the annual trust fee and Mexico\u2019s unusually low property tax.' },
       { q: 'Can I buy remotely without flying to Mexico?', a: 'Yes. Rivana runs video tours, digital documentation, and closing by power of attorney. A significant share of our foreign clients complete their purchase without traveling.' },
-      { q: 'Is 2026 a good time to buy in Cancún?', a: 'Nobody can guarantee the future. What the data shows: Mexico\u2019s highest state-level appreciation in 2025 (+14.3%, SHF), Banxico\u2019s rate down to 7% (December 2025), and infrastructure still under construction. The fundamentals are the strongest in the country — the right unit in the right corridor is what turns them into your result.' },
+      { q: 'Is 2026 a good time to buy in Cancún?', a: 'Nobody can guarantee the future. What the data shows: Mexico\u2019s highest state-level appreciation in 2026 (+14.3%, SHF), Banxico\u2019s rate down to 7% (December 2026), and infrastructure still under construction. The fundamentals are the strongest in the country — the right unit in the right corridor is what turns them into your result.' },
     ],
     en: [
       { q: 'Can Americans and Canadians own beachfront condos in Cancún?', a: 'Yes — through the fideicomiso bank trust, with full rights to use, rent, inherit, and sell. Thousands of foreign owners close this way every year.' },
       { q: 'What are the closing costs?', a: 'Plan for roughly 5-8% of the purchase price all-in: transfer tax (ISAI), notario fees, and trust setup. Ongoing costs are the annual trust fee and Mexico\u2019s unusually low property tax.' },
       { q: 'Can I buy remotely without flying to Mexico?', a: 'Yes. Rivana runs video tours, digital documentation, and closing by power of attorney. A significant share of our foreign clients complete their purchase without traveling.' },
-      { q: 'Is 2026 a good time to buy in Cancún?', a: 'Nobody can guarantee the future. What the data shows: Mexico\u2019s highest state-level appreciation in 2025 (+14.3%, SHF), Banxico\u2019s rate down to 7% (December 2025), and infrastructure still under construction. The fundamentals are the strongest in the country — the right unit in the right corridor is what turns them into your result.' },
+      { q: 'Is 2026 a good time to buy in Cancún?', a: 'Nobody can guarantee the future. What the data shows: Mexico\u2019s highest state-level appreciation in 2026 (+14.3%, SHF), Banxico\u2019s rate down to 7% (December 2026), and infrastructure still under construction. The fundamentals are the strongest in the country — the right unit in the right corridor is what turns them into your result.' },
     ],
   },
   sources: [
-    { title: 'SHF 2025 Home Price Index', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
+    { title: 'SHF 2026 Home Price Index', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
     { title: 'Cancún 2026 market analysis — per-m² pricing, Banxico rate', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
     { title: 'Transaction origin — 70-75% Mexican national buyers', url: 'https://adiqroo.mx/', publisher: "Quintana Roo Developers' Association" },
     { title: 'Canadian snowbird demand shift', url: 'https://www.theglobeandmail.com/', publisher: 'Snowbird Advisor via The Globe and Mail / CBC News' },
@@ -1051,7 +1051,7 @@ journalArticles.unshift({
     ],
   },
   sources: [
-    { title: 'SHF 2025 Home Price Index', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
+    { title: 'SHF 2026 Home Price Index', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
     { title: 'Banxico 7%, mortgage rates, 22,000-unit pipeline, Hotel Zone per-m² pricing', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
     { title: 'Absorption cycles and buyer origin', url: 'https://adiqroo.mx/', publisher: "Quintana Roo Developers' Association" },
     { title: 'Canadian snowbird demand shift', url: 'https://www.theglobeandmail.com/', publisher: 'Snowbird Advisor via The Globe and Mail' },
@@ -1094,22 +1094,22 @@ journalArticles.unshift({
   ],
   faqs: {
     es: [
-      { q: 'Is Costa Mujeres a good investment in 2026?', a: 'The fundamentals are what an investor wants to see: Mexico\u2019s #1 appreciating state (+14.3%, SHF 2025), a master-planned corridor with luxury brands already operating, finite beachfront, and pricing still in its consolidation phase. No investment is guaranteed; this one is unusually well supported by data.' },
+      { q: 'Is Costa Mujeres a good investment in 2026?', a: 'The fundamentals are what an investor wants to see: Mexico\u2019s #1 appreciating state (+14.3%, SHF 2026), a master-planned corridor with luxury brands already operating, finite beachfront, and pricing still in its consolidation phase. No investment is guaranteed; this one is unusually well supported by data.' },
       { q: 'How far is it from the airport and from Cancún?', a: '25-35 minutes from Cancún International Airport; 20-30 minutes from downtown Cancún and its private hospitals.' },
       { q: 'Can I tour units remotely?', a: 'Yes — live video walkthroughs of the available La Amada Residence units and the corridor, with digital documentation and remote closing if you proceed.' },
       { q: 'Are vacation rentals allowed?', a: "It depends on each development\u2019s condo regime plus state lodging registration. We flag rental viability on every unit we present, and steer your strategy to where it\u2019s compliant from day one." },
     ],
     en: [
-      { q: 'Is Costa Mujeres a good investment in 2026?', a: 'The fundamentals are what an investor wants to see: Mexico\u2019s #1 appreciating state (+14.3%, SHF 2025), a master-planned corridor with luxury brands already operating, finite beachfront, and pricing still in its consolidation phase. No investment is guaranteed; this one is unusually well supported by data.' },
+      { q: 'Is Costa Mujeres a good investment in 2026?', a: 'The fundamentals are what an investor wants to see: Mexico\u2019s #1 appreciating state (+14.3%, SHF 2026), a master-planned corridor with luxury brands already operating, finite beachfront, and pricing still in its consolidation phase. No investment is guaranteed; this one is unusually well supported by data.' },
       { q: 'How far is it from the airport and from Cancún?', a: '25-35 minutes from Cancún International Airport; 20-30 minutes from downtown Cancún and its private hospitals.' },
       { q: 'Can I tour units remotely?', a: 'Yes — live video walkthroughs of the available La Amada Residence units and the corridor, with digital documentation and remote closing if you proceed.' },
       { q: 'Are vacation rentals allowed?', a: "It depends on each development\u2019s condo regime plus state lodging registration. We flag rental viability on every unit we present, and steer your strategy to where it\u2019s compliant from day one." },
     ],
   },
   sources: [
-    { title: '2025 state and municipal appreciation', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
-    { title: 'Rental yields — Mexico, December 2025', url: 'https://www.globalpropertyguide.com/latin-america/mexico/rental-yields', publisher: 'Global Property Guide' },
-    { title: 'Canadian snowbird demand shift 2025-2026', url: 'https://www.theglobeandmail.com/', publisher: 'Snowbird Advisor via The Globe and Mail / CBC News' },
+    { title: '2026 state and municipal appreciation', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
+    { title: 'Rental yields — Mexico, December 2026', url: 'https://www.globalpropertyguide.com/latin-america/mexico/rental-yields', publisher: 'Global Property Guide' },
+    { title: 'Canadian snowbird demand shift 2026-2026', url: 'https://www.theglobeandmail.com/', publisher: 'Snowbird Advisor via The Globe and Mail / CBC News' },
     { title: 'Playa Mujeres / Costa Mujeres master plan', url: 'https://www.playamujeres.com/', publisher: 'Playa Mujeres public information' },
   ],
 });
@@ -1150,21 +1150,21 @@ journalArticles.unshift({
   ],
   faqs: {
     es: [
-      { q: 'Which area has the highest appreciation?', a: 'By official data, the state leads Mexico (+14.3% in 2025, SHF) with Benito Juárez/Cancún among the top municipalities. By relative upside, Costa Mujeres\u2019 consolidation phase is the strongest thesis for 2026 — with the longer horizon that implies.' },
+      { q: 'Which area has the highest appreciation?', a: 'By official data, the state leads Mexico (+14.3% in 2026, SHF) with Benito Juárez/Cancún among the top municipalities. By relative upside, Costa Mujeres\u2019 consolidation phase is the strongest thesis for 2026 — with the longer horizon that implies.' },
       { q: 'Where do most American and Canadian buyers purchase?', a: 'Cancún\u2019s corridors and Playa del Carmen historically lead; Costa Mujeres is the fastest-growing choice for the new wave — particularly Canadians shifting from U.S. winters.' },
       { q: 'Which zones allow Airbnb-style rentals?', a: 'It\u2019s decided building by building (condo bylaws) plus state registration and lodging tax — not zone by zone. Units with permits in place are the scarce asset; we flag rental viability on every property we present.' },
       { q: 'Tulum or Cancún — which is the better investment?', a: 'Cancún offers deeper data, infrastructure, and exit liquidity; Tulum offers brand heat with wider variance. For a first Riviera Maya purchase, the probability-weighted answer is Cancún\u2019s corridors — for the experienced buyer with strict due diligence, Tulum can earn its place.' },
     ],
     en: [
-      { q: 'Which area has the highest appreciation?', a: 'By official data, the state leads Mexico (+14.3% in 2025, SHF) with Benito Juárez/Cancún among the top municipalities. By relative upside, Costa Mujeres\u2019 consolidation phase is the strongest thesis for 2026 — with the longer horizon that implies.' },
+      { q: 'Which area has the highest appreciation?', a: 'By official data, the state leads Mexico (+14.3% in 2026, SHF) with Benito Juárez/Cancún among the top municipalities. By relative upside, Costa Mujeres\u2019 consolidation phase is the strongest thesis for 2026 — with the longer horizon that implies.' },
       { q: 'Where do most American and Canadian buyers purchase?', a: 'Cancún\u2019s corridors and Playa del Carmen historically lead; Costa Mujeres is the fastest-growing choice for the new wave — particularly Canadians shifting from U.S. winters.' },
       { q: 'Which zones allow Airbnb-style rentals?', a: 'It\u2019s decided building by building (condo bylaws) plus state registration and lodging tax — not zone by zone. Units with permits in place are the scarce asset; we flag rental viability on every property we present.' },
       { q: 'Tulum or Cancún — which is the better investment?', a: 'Cancún offers deeper data, infrastructure, and exit liquidity; Tulum offers brand heat with wider variance. For a first Riviera Maya purchase, the probability-weighted answer is Cancún\u2019s corridors — for the experienced buyer with strict due diligence, Tulum can earn its place.' },
     ],
   },
   sources: [
-    { title: '2025 state and municipal price index', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
-    { title: 'Rental yields — Mexico, December 2025', url: 'https://www.globalpropertyguide.com/latin-america/mexico/rental-yields', publisher: 'Global Property Guide' },
+    { title: '2026 state and municipal price index', url: 'https://www.globalpropertyguide.com/latin-america/mexico', publisher: 'SHF via Global Property Guide' },
+    { title: 'Rental yields — Mexico, December 2026', url: 'https://www.globalpropertyguide.com/latin-america/mexico/rental-yields', publisher: 'Global Property Guide' },
     { title: 'Canadian demand shift', url: 'https://www.theglobeandmail.com/', publisher: 'Snowbird Advisor via The Globe and Mail' },
     { title: 'Cancún corridors and infrastructure analysis', url: 'https://www.thelatinvestor.com/', publisher: 'TheLatinvestor' },
     { title: 'Puerto Morelos Reef National Park / Mesoamerican Reef', url: 'https://www.gob.mx/conanp', publisher: 'CONANP' },

@@ -65,7 +65,7 @@ export const PermisoAirbnbCancunBody = () => {
         headers={['Motor', 'Qué aporta']}
         rows={[
           ['Tarifa por noche más alta de México', 'La Zona Hotelera concentra la demanda turística premium del país, alimentada por el segundo aeropuerto más transitado de México.'],
-          ['Flujo + apreciación', 'Los rendimientos brutos de renta en México promedian ~6% anual (Global Property Guide, dic. 2025); la renta vacacional bien operada en corredores turísticos puede superar ese promedio — y por debajo del flujo corre la apreciación del estado líder del país (+14.3% en 2025 según SHF).'],
+          ['Flujo + apreciación', 'Los rendimientos brutos de renta en México promedian ~6% anual (Global Property Guide, dic. 2026); la renta vacacional bien operada en corredores turísticos puede superar ese promedio — y por debajo del flujo corre la apreciación del estado líder del país (+14.3% en 2026 según SHF).'],
           ['Prima de escasez a la reventa', 'Cuando decidas salir, no venderás "un departamento": venderás un negocio en operación con permisos, historial y calendario de reservas. Ese comprador paga prima.'],
         ]}
       />

@@ -116,7 +116,7 @@ export const RetireCancunBodyEN = () => {
         Income sources that qualify include US Social Security, Canadian CPP and OAS, pension income, 401(k)/RRSP distributions, rental income, and investment dividends. The process begins at a Mexican consulate in your home country, not in Mexico itself.
       </p>
       <p>
-        <strong className="text-foreground">Important 2026 update:</strong> Government processing fees doubled in 2026 following legislative changes enacted in late 2025. The full "five-year journey" from temporary to permanent residency now costs approximately USD $2,700 per person in government fees — still modest in absolute terms, but worth factoring into your planning.
+        <strong className="text-foreground">Important 2026 update:</strong> Government processing fees doubled in 2026 following legislative changes enacted in late 2026. The full "five-year journey" from temporary to permanent residency now costs approximately USD $2,700 per person in government fees — still modest in absolute terms, but worth factoring into your planning.
       </p>
       <H3>Option 2: Permanent Resident Visa (Residente Permanente)</H3>
       <p>

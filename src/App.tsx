@@ -171,6 +171,24 @@ const AppRoutes = () => (
     <Route path="/compare-listings/*" element={<Navigate to="/our-properties/" replace />} />
     <Route path="/property-type/*" element={<Navigate to="/our-properties/" replace />} />
 
+    {/* Legacy 2025 pre-sale guide URLs → current 2026 versions */}
+    <Route
+      path="/en/invertir-en-preventa-en-cancun-en-2025-vale-la-pena-guia-para-principiantes"
+      element={<Navigate to="/en/journal/pre-construction-condos-cancun" replace />}
+    />
+    <Route
+      path="/en/invertir-en-preventa-en-cancun-en-2025-vale-la-pena-guia-para-principiantes/"
+      element={<Navigate to="/en/journal/pre-construction-condos-cancun" replace />}
+    />
+    <Route
+      path="/invertir-en-preventa-en-cancun-en-2025-vale-la-pena-guia-para-principiantes"
+      element={<Navigate to="/journal/invertir-en-preventa-cancun-riviera-maya-2026" replace />}
+    />
+    <Route
+      path="/invertir-en-preventa-en-cancun-en-2025-vale-la-pena-guia-para-principiantes/"
+      element={<Navigate to="/journal/invertir-en-preventa-cancun-riviera-maya-2026" replace />}
+    />
+
     {/* 404 */}
     <Route path="*" element={<NotFound />} />
   </Routes>
