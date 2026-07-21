@@ -121,7 +121,7 @@ export const ForeignBuyerCancunBody = () => {
 
       <H2>The 2026 Bonus: Your Property Can Support Your Residency File</H2>
       <p>
-        Here's what most guides haven't caught up with. Since July 2025, Mexico recalculated
+        Here's what most guides haven't caught up with. Since July 2026, Mexico recalculated
         residency financial requirements using the UMA index, and in January 2026 government fees
         roughly doubled. The 2026 thresholds: temporary residency requires roughly{' '}
         <strong>USD $4,400/month in income or ~USD $74,000 in savings</strong>; permanent residency

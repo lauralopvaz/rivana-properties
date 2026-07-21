@@ -41,7 +41,7 @@ export const DeptosVentaZonaHoteleraBody = () => {
         headers={['Motor', 'Qué está pasando en 2026']}
         rows={[
           ['Turismo estructural', 'Cancún opera el segundo aeropuerto más transitado de México, con conectividad directa a Norteamérica, Europa y Sudamérica.'],
-          ['Apreciación líder', 'SHF: Quintana Roo lideró la apreciación nacional en 2025 (+14.3% anual); Benito Juárez creció +12.8% en Q1.'],
+          ['Apreciación líder', 'SHF: Quintana Roo lideró la apreciación nacional en 2026 (+14.3% anual); Benito Juárez creció +12.8% en Q1.'],
           ['Infraestructura nueva', 'El Puente Nichupté conectará el centro con la Zona Hotelera y descongestionará el acceso al corredor.'],
         ]}
       />
@@ -133,7 +133,7 @@ export const DeptosVentaZonaHoteleraBody = () => {
       <H2>Renta vacacional en la Zona Hotelera: números honestos</H2>
       <p>
         Los rendimientos brutos de renta en México promedian ~6% anual según Global Property Guide
-        (diciembre 2025). La Zona Hotelera, por tarifa por noche y ocupación turística, puede
+        (diciembre 2026). La Zona Hotelera, por tarifa por noche y ocupación turística, puede
         superar ese promedio en unidades bien operadas — pero el resultado real depende de cuatro
         variables que analizamos unidad por unidad antes de que compres:
       </p>

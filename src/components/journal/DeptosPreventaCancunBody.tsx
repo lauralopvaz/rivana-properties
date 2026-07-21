@@ -28,9 +28,9 @@ export const DeptosPreventaCancunBody = () => {
         Comprar un departamento en preventa en Cancún es, hoy por hoy, una de las estrategias más
         eficientes para entrar al mercado inmobiliario de mayor apreciación de México. No es una
         frase de marketing: según el índice de la Sociedad Hipotecaria Federal (SHF), Quintana Roo
-        lideró la apreciación nacional de vivienda en 2025 con <strong>+14.3% anual</strong>, muy
+        lideró la apreciación nacional de vivienda en 2026 con <strong>+14.3% anual</strong>, muy
         por encima del promedio nacional de ~8.2%, y el municipio de Benito Juárez —donde se ubica
-        Cancún— registró <strong>+12.8%</strong> tan solo en el primer trimestre de 2025.
+        Cancún— registró <strong>+12.8%</strong> tan solo en el primer trimestre de 2026.
       </p>
 
       <p>
@@ -58,7 +58,7 @@ export const DeptosPreventaCancunBody = () => {
         mensualidades durante la construcción y un pago final contra entrega. Esto permite a un
         inversionista apalancar su capital sin intereses bancarios — relevante cuando las tasas
         hipotecarias en México siguen en 10-12% pese al recorte de Banxico a 7% en diciembre de
-        2025.
+        2026.
       </p>
 
       <H2>Los números: por qué la preventa en Cancún funciona en 2026</H2>
@@ -70,7 +70,7 @@ export const DeptosPreventaCancunBody = () => {
           ['Conectividad', 'Tren Maya y modernización aeroportuaria amplían el alcance turístico y residencial de toda la región.'],
           ['Infraestructura urbana', 'Puente Nichupté y ampliación del Bulevar Colosio redefinen tiempos de traslado y valor de los corredores.'],
           ['Demanda diversificada', '70–75% de las transacciones vienen de compradores nacionales, complementadas por flujo extranjero creciente.'],
-          ['Oferta en absorción sana', '~22,000 unidades en pipeline estatal 2025-2026 con inventarios en ciclos de 14 a 18 meses.'],
+          ['Oferta en absorción sana', '~22,000 unidades en pipeline estatal 2026-2026 con inventarios en ciclos de 14 a 18 meses.'],
         ]}
         caption="Motores estructurales del mercado inmobiliario de Cancún, 2026."
       />

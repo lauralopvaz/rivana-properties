@@ -37,7 +37,7 @@ export const PreventaPuertoCancunBody = () => {
         rows={[
           ['Escasez planificada', 'A diferencia de los corredores de expansión, Puerto Cancún tiene un plan maestro cerrado: cuando el suelo residencial se agote, no habrá más. Cada torre nueva se construye sobre un inventario de tierra decreciente — soporte de valor de largo plazo.'],
           ['Ecosistema de lujo operando', 'Marina con acceso directo al mar, golf, retail premium, restaurantes, torres residenciales consolidadas y seguridad perimetral. El comprador no apuesta a que la zona "se haga": entra a una comunidad que ya funciona.'],
-          ['Corredor de tickets altos', 'Las propiedades premium parten cerca de USD $800,000 y escalan con vista a marina, golf o mar. Benito Juárez creció +12.8% en Q1 2025 (SHF) y Quintana Roo lideró el país con +14.3% anual — el segmento de lujo ha sido beneficiario directo.'],
+          ['Corredor de tickets altos', 'Las propiedades premium parten cerca de USD $800,000 y escalan con vista a marina, golf o mar. Benito Juárez creció +12.8% en Q1 2026 (SHF) y Quintana Roo lideró el país con +14.3% anual — el segmento de lujo ha sido beneficiario directo.'],
           ['Conectividad en mejora', 'La ampliación del Bulevar Colosio y el Puente Nichupté están reconfigurando la movilidad del frente norte, del cual Puerto Cancún es el ancla de lujo.'],
         ]}
       />
@@ -51,7 +51,7 @@ export const PreventaPuertoCancunBody = () => {
         headers={['#', 'Ventaja']}
         rows={[
           ['1', 'Listas de precios ascendentes por diseño. Los desarrolladores escalonan precios conforme avanza la obra y se agota cada torre. Entrar temprano en la torre correcta es la diferencia de doble dígito a la entrega.'],
-          ['2', 'Apalancamiento sin banco. Enganche típico de 20-30% y mensualidades durante construcción, sin intereses — relevante con hipotecas mexicanas en 10-12% pese al recorte de Banxico a 7% (diciembre 2025).'],
+          ['2', 'Apalancamiento sin banco. Enganche típico de 20-30% y mensualidades durante construcción, sin intereses — relevante con hipotecas mexicanas en 10-12% pese al recorte de Banxico a 7% (diciembre 2026).'],
           ['3', 'Demanda de reventa y renta asegurada por el ecosistema. Las torres terminadas mantienen demanda constante de compra y renta de largo plazo de ejecutivos y residentes de alto perfil.'],
           ['4', 'Perfil de vecindario protegido. El plan maestro regula densidades, alturas y usos: la inversión no convive con la incertidumbre de qué construirán junto a tu torre.'],
         ]}

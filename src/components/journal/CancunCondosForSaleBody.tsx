@@ -30,11 +30,11 @@ export const CancunCondosForSaleBody = () => {
         Start with the number that frames everything: according to Mexico's Federal Mortgage
         Society (SHF) — the government body that tracks national home prices through appraisals —{' '}
         <strong>
-          Quintana Roo posted +14.3% year-over-year home-price appreciation in 2025, the highest of
+          Quintana Roo posted +14.3% year-over-year home-price appreciation in 2026, the highest of
           any state in Mexico
         </strong>
         , against a national average of roughly 8.2%. The municipality of Benito Juárez, where
-        Cancún sits, recorded +12.8% in the first quarter of 2025 alone, outpacing Guadalajara,
+        Cancún sits, recorded +12.8% in the first quarter of 2026 alone, outpacing Guadalajara,
         Querétaro, and Mexico City.
       </p>
       <p>

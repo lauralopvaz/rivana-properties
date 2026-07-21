@@ -54,15 +54,15 @@ export const RetiringCanadianBody = () => {
   if (language === 'en') {
     return (
       <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
-        <p>Something shifted in the winter of 2025–2026. Snowbird Advisor's annual survey of more than 4,000 Canadian travellers found that the share of snowbirds choosing destinations outside the United States nearly doubled — from 12% to 23% in a single year — while those planning to winter in the US dropped from 82% to 70%. CBC News and The Globe and Mail have documented the trend: couples from Ontario, after decades in Florida, are buying property in Mexico, citing lower costs, safety and quality of life.</p>
+        <p>Something shifted in the winter of 2026–2026. Snowbird Advisor's annual survey of more than 4,000 Canadian travellers found that the share of snowbirds choosing destinations outside the United States nearly doubled — from 12% to 23% in a single year — while those planning to winter in the US dropped from 82% to 70%. CBC News and The Globe and Mail have documented the trend: couples from Ontario, after decades in Florida, are buying property in Mexico, citing lower costs, safety and quality of life.</p>
         <p>If you are Canadian and weighing this move, this guide gathers what you need to know in 2026 — including recent regulatory changes that many outdated articles do not reflect — with data from official and verifiable sources.</p>
 
         <Callout>
           <ul className="list-disc pl-6 space-y-1">
             <li>~400,000 Canadian snowbirds travel south each winter (Canadian Snowbird Association / Envision Financial)</li>
-            <li>12% → 23%: snowbirds choosing non-US destinations between 2024 and 2025 (Snowbird Advisor)</li>
+            <li>12% → 23%: snowbirds choosing non-US destinations between 2024 and 2026 (Snowbird Advisor)</li>
             <li>180 days: visa-free visitor stay for Canadians in Mexico (INM)</li>
-            <li>+14.3%: home-price appreciation in Quintana Roo in 2025 — the highest in Mexico (SHF / Global Property Guide)</li>
+            <li>+14.3%: home-price appreciation in Quintana Roo in 2026 — the highest in Mexico (SHF / Global Property Guide)</li>
           </ul>
         </Callout>
 
@@ -74,11 +74,11 @@ export const RetiringCanadianBody = () => {
         <H2>What changed in 2026: Mexico's new residency rules (read this first)</H2>
         <Callout>
           <p className="text-foreground font-semibold">This is what most guides online still don't tell you.</p>
-          <p>Since July 2025, Mexico recalculated residency financial requirements based on the UMA, and on January 1, 2026, processing fees essentially doubled. In practical 2026 terms:</p>
+          <p>Since July 2026, Mexico recalculated residency financial requirements based on the UMA, and on January 1, 2026, processing fees essentially doubled. In practical 2026 terms:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Visitor (no visa):</strong> Canadians can stay up to 180 days — enough for a full snowbird winter.</li>
             <li><strong className="text-foreground">Temporary Residency (1 to 4 years):</strong> requires demonstrating roughly USD $4,400 in monthly income (last 6 months) or approximately USD $74,000 in savings/investments (12-month average). Exact figures vary ±5–10% by consulate and exchange rate.</li>
-            <li><strong className="text-foreground">Permanent Residency:</strong> roughly USD $7,300–7,400 monthly or ~USD $294,000–300,000 in savings; since July 2025, the direct route from abroad is reserved for retirees and pensioners.</li>
+            <li><strong className="text-foreground">Permanent Residency:</strong> roughly USD $7,300–7,400 monthly or ~USD $294,000–300,000 in savings; since July 2026, the direct route from abroad is reserved for retirees and pensioners.</li>
             <li><strong className="text-foreground">Property owners:</strong> owning Mexican real estate valued above ~USD $624,000 is an alternative qualifying path at some consulates.</li>
             <li><strong className="text-foreground">Couples:</strong> may apply as a family unit using one spouse's income, with a 50% discount on government fees.</li>
           </ul>
@@ -105,17 +105,17 @@ export const RetiringCanadianBody = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-sm italic">Illustrative ranges based on Numbeo, Mexico Relocation Guide and Rivana's local market observation (2025–2026).</p>
+        <p className="text-sm italic">Illustrative ranges based on Numbeo, Mexico Relocation Guide and Rivana's local market observation (2026–2026).</p>
 
         <Callout>
           <p><strong className="text-foreground">Important note on healthcare:</strong> Canadian provincial plans (OHIP, RAMQ, etc.) do not cover care in Mexico, and keeping coverage requires meeting minimum-presence rules in your province. Every snowbird needs travel insurance or private international health insurance. The good news: Cancún has private hospitals meeting international standards (Galenia, Amerimed, Hospiten, among others) and is one of Mexico's top medical-tourism hubs.</p>
         </Callout>
 
         <H2>The real estate market in official data, not promises</H2>
-        <p>Official data from the Federal Mortgage Society (SHF) show that Quintana Roo led national appreciation in 2025 at +14.3% year-on-year, well above the national average of ~8.2%. The municipality of Benito Juárez (Cancún) posted +12.8% in the first quarter of 2025, among the most dynamic in the country.</p>
+        <p>Official data from the Federal Mortgage Society (SHF) show that Quintana Roo led national appreciation in 2026 at +14.3% year-on-year, well above the national average of ~8.2%. The municipality of Benito Juárez (Cancún) posted +12.8% in the first quarter of 2026, among the most dynamic in the country.</p>
         <p>The drivers are structural, not speculative: the Maya Train and airport modernization improved regional connectivity; urban works such as the Nichupté Bridge and the widening of Boulevard Colosio are reshaping mobility in Cancún; and demand combines domestic buyers (70–75% of transactions in Quintana Roo) with growing foreign interest — including the new Canadian flow documented by CBC and The Globe and Mail.</p>
         <Callout>
-          <p><strong className="text-foreground">2025–2026 reference pricing:</strong> the residential average in Cancún hovers around USD $2,400/m², with the Hotel Zone and beachfront between USD $3,000–4,500/m², and emerging corridors from ~USD $1,800–2,500/m². Gross rental yields in Mexico average ~6% annually (Global Property Guide, Dec 2025), with meaningful variation by zone and operating model. Well-managed vacation rentals can outperform, but results depend on occupancy, seasonality and tax compliance — which is why serious analysis is done property by property, not with generic percentages.</p>
+          <p><strong className="text-foreground">2026–2026 reference pricing:</strong> the residential average in Cancún hovers around USD $2,400/m², with the Hotel Zone and beachfront between USD $3,000–4,500/m², and emerging corridors from ~USD $1,800–2,500/m². Gross rental yields in Mexico average ~6% annually (Global Property Guide, Dec 2026), with meaningful variation by zone and operating model. Well-managed vacation rentals can outperform, but results depend on occupancy, seasonality and tax compliance — which is why serious analysis is done property by property, not with generic percentages.</p>
         </Callout>
 
         <H2>Can a Canadian buy coastal property? Yes — here's how</H2>
@@ -181,7 +181,7 @@ export const RetiringCanadianBody = () => {
         />
         <FaqItem
           q="Is it better to buy now or wait?"
-          a="No serious advisor will guarantee the future. What the data says: Quintana Roo led national appreciation in 2025 (+14.3%, SHF), there are ~22,000 new units in the state pipeline for 2025–2026 that will bring more options, and Banxico lowered its rate to 7% in December 2025. The right decision depends on your horizon, your liquidity and the zone — and that is analyzed case by case."
+          a="No serious advisor will guarantee the future. What the data says: Quintana Roo led national appreciation in 2026 (+14.3%, SHF), there are ~22,000 new units in the state pipeline for 2026–2026 that will bring more options, and Banxico lowered its rate to 7% in December 2026. The right decision depends on your horizon, your liquidity and the zone — and that is analyzed case by case."
         />
 
         <H2>Why Canadians work with Rivana</H2>
@@ -204,10 +204,10 @@ export const RetiringCanadianBody = () => {
 
         <H3>Sources and references</H3>
         <ul className="list-disc pl-6 space-y-2 text-sm">
-          <li>Snowbird Advisor survey of 4,000 snowbirds (Oct 2025), cited by The Globe and Mail and TravelPulse Canada — 12% → 23% shift to non-US destinations.</li>
+          <li>Snowbird Advisor survey of 4,000 snowbirds (Oct 2026), cited by The Globe and Mail and TravelPulse Canada — 12% → 23% shift to non-US destinations.</li>
           <li><a href="https://www.cbc.ca/news/canada/toronto/ontario-snowbirds-choose-mexico-9.7063503" rel="nofollow noopener" target="_blank" className="underline">CBC News (Jan 2026). "Meet the Ontario snowbirds ditching the U.S. and wintering in Mexico".</a></li>
-          <li>Sociedad Hipotecaria Federal (SHF) — price index: Quintana Roo +12.2% (Q1 2025) and +14.3% annual 2025; Benito Juárez +12.8%. Via <a href="https://www.globalpropertyguide.com/latin-america/mexico/price-history" rel="nofollow noopener" target="_blank" className="underline">Global Property Guide</a>.</li>
-          <li>Global Property Guide (Dec 2025) — gross rental yields ~6% national average.</li>
+          <li>Sociedad Hipotecaria Federal (SHF) — price index: Quintana Roo +12.2% (Q1 2026) and +14.3% annual 2026; Benito Juárez +12.8%. Via <a href="https://www.globalpropertyguide.com/latin-america/mexico/price-history" rel="nofollow noopener" target="_blank" className="underline">Global Property Guide</a>.</li>
+          <li>Global Property Guide (Dec 2026) — gross rental yields ~6% national average.</li>
           <li><a href="https://www.mexperience.com/financial-criteria-for-residency-in-mexico/" rel="nofollow noopener" target="_blank" className="underline">Mexperience — "Financial Criteria for Legal Residency in Mexico 2026" (UMA 2026: $117.31 MXN).</a></li>
           <li>Mexican consulates — 2026 visa guidance, including the property route (~USD $624,000+).</li>
           <li>ExpatDen / Mexico Relocation Guide — 2026 changes: doubled fees, thresholds ~USD $4,400/month or ~$74,000 in savings.</li>
@@ -222,15 +222,15 @@ export const RetiringCanadianBody = () => {
   // Spanish
   return (
     <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
-      <p>Algo cambió en el invierno 2025-2026. Según la encuesta anual de Snowbird Advisor a más de 4,000 viajeros canadienses, la proporción de snowbirds que eligieron destinos fuera de Estados Unidos casi se duplicó: del 12% al 23% en un solo año, mientras que quienes planeaban invernar en EE.UU. cayeron del 82% al 70%. Medios como CBC News y The Globe and Mail han documentado la tendencia: parejas de Ontario que después de décadas en Florida están comprando propiedad en México, citando menores costos, seguridad y calidad de vida.</p>
+      <p>Algo cambió en el invierno 2026-2026. Según la encuesta anual de Snowbird Advisor a más de 4,000 viajeros canadienses, la proporción de snowbirds que eligieron destinos fuera de Estados Unidos casi se duplicó: del 12% al 23% en un solo año, mientras que quienes planeaban invernar en EE.UU. cayeron del 82% al 70%. Medios como CBC News y The Globe and Mail han documentado la tendencia: parejas de Ontario que después de décadas en Florida están comprando propiedad en México, citando menores costos, seguridad y calidad de vida.</p>
       <p>Si eres canadiense y estás evaluando este movimiento, esta guía reúne lo que necesitas saber en 2026 —incluyendo cambios regulatorios recientes que muchos artículos desactualizados no reflejan— con datos de fuentes oficiales y verificables.</p>
 
       <Callout>
         <ul className="list-disc pl-6 space-y-1">
           <li>~400,000 snowbirds canadienses viajan al sur cada invierno (Canadian Snowbird Association / Envision Financial)</li>
-          <li>12% → 23%: snowbirds eligiendo destinos no-EE.UU. de 2024 a 2025 (Snowbird Advisor)</li>
+          <li>12% → 23%: snowbirds eligiendo destinos no-EE.UU. de 2024 a 2026 (Snowbird Advisor)</li>
           <li>180 días: estancia como visitante sin visa para canadienses en México (INM)</li>
-          <li>+14.3%: apreciación de vivienda en Quintana Roo en 2025, la más alta de México (SHF / Global Property Guide)</li>
+          <li>+14.3%: apreciación de vivienda en Quintana Roo en 2026, la más alta de México (SHF / Global Property Guide)</li>
         </ul>
       </Callout>
 
@@ -242,11 +242,11 @@ export const RetiringCanadianBody = () => {
       <H2>Lo que cambió en 2026: las nuevas reglas de residencia (léelo antes que nada)</H2>
       <Callout>
         <p className="text-foreground font-semibold">Esto es lo que la mayoría de las guías en internet todavía no te dice.</p>
-        <p>Desde julio de 2025, México recalculó los requisitos financieros de residencia con base en la UMA, y el 1 de enero de 2026 las tarifas de trámite prácticamente se duplicaron. En términos prácticos para 2026:</p>
+        <p>Desde julio de 2026, México recalculó los requisitos financieros de residencia con base en la UMA, y el 1 de enero de 2026 las tarifas de trámite prácticamente se duplicaron. En términos prácticos para 2026:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong className="text-foreground">Visitante (sin visa):</strong> los canadienses pueden permanecer hasta 180 días — suficiente para un invierno completo de snowbird.</li>
           <li><strong className="text-foreground">Residencia Temporal (1 a 4 años):</strong> requiere demostrar aproximadamente USD $4,400 mensuales de ingreso (últimos 6 meses) o alrededor de USD $74,000 en ahorros/inversiones (promedio de 12 meses). Los montos exactos varían ±5-10% según el consulado y el tipo de cambio.</li>
-          <li><strong className="text-foreground">Residencia Permanente:</strong> alrededor de USD $7,300-7,400 mensuales o ~USD $294,000-300,000 en ahorros; desde julio 2025, la vía directa desde el extranjero quedó reservada para jubilados y pensionados.</li>
+          <li><strong className="text-foreground">Residencia Permanente:</strong> alrededor de USD $7,300-7,400 mensuales o ~USD $294,000-300,000 en ahorros; desde julio 2026, la vía directa desde el extranjero quedó reservada para jubilados y pensionados.</li>
           <li><strong className="text-foreground">Propietarios:</strong> ser dueño de un inmueble en México con valor superior a ~USD $624,000 es una vía alternativa de calificación ante algunos consulados.</li>
           <li><strong className="text-foreground">Parejas:</strong> pueden aplicar como unidad familiar con el ingreso de uno de los cónyuges, con 50% de descuento en tarifas gubernamentales.</li>
         </ul>
@@ -274,17 +274,17 @@ export const RetiringCanadianBody = () => {
           </tbody>
         </table>
       </div>
-      <p className="text-sm italic">Rangos ilustrativos con base en Numbeo, Mexico Relocation Guide y observación de mercado local de Rivana (2025-2026).</p>
+      <p className="text-sm italic">Rangos ilustrativos con base en Numbeo, Mexico Relocation Guide y observación de mercado local de Rivana (2026-2026).</p>
 
       <Callout>
         <p><strong className="text-foreground">Nota importante sobre salud:</strong> los planes provinciales canadienses (OHIP, RAMQ, etc.) no cubren atención en México, y mantener la cobertura exige respetar reglas de presencia mínima en tu provincia. Todo snowbird necesita seguro de viaje o seguro médico privado internacional. La buena noticia: Cancún cuenta con hospitales privados de estándar internacional (Galenia, Amerimed, Hospiten, entre otros) y es uno de los polos de turismo médico más importantes de México.</p>
       </Callout>
 
       <H2>El mercado inmobiliario en datos oficiales, no en promesas</H2>
-      <p>Los datos oficiales de la Sociedad Hipotecaria Federal (SHF) muestran que Quintana Roo lideró la apreciación nacional en 2025 con +14.3% anual, muy por encima del promedio nacional de ~8.2%. El municipio de Benito Juárez (Cancún) registró +12.8% en el primer trimestre de 2025, entre los más dinámicos del país.</p>
+      <p>Los datos oficiales de la Sociedad Hipotecaria Federal (SHF) muestran que Quintana Roo lideró la apreciación nacional en 2026 con +14.3% anual, muy por encima del promedio nacional de ~8.2%. El municipio de Benito Juárez (Cancún) registró +12.8% en el primer trimestre de 2026, entre los más dinámicos del país.</p>
       <p>Los motores son estructurales, no especulativos: el Tren Maya y la modernización de aeropuertos mejoraron la conectividad regional; obras urbanas como el Puente Nichupté y la ampliación del Bulevar Colosio están redefiniendo la movilidad de Cancún; y la demanda combina compradores nacionales (70-75% de las transacciones en Quintana Roo) con creciente interés extranjero —incluido el nuevo flujo canadiense que documentan CBC y The Globe and Mail.</p>
       <Callout>
-        <p><strong className="text-foreground">Precios de referencia 2025-2026:</strong> el promedio residencial en Cancún ronda los USD $2,400/m², con la Zona Hotelera y frentes de playa entre USD $3,000-4,500/m², y corredores emergentes desde ~USD $1,800-2,500/m². Los rendimientos brutos de renta en México promedian ~6% anual (Global Property Guide, dic. 2025), con variaciones importantes por zona y modelo operativo. En renta vacacional bien gestionada los resultados pueden ser mayores, pero dependen de ocupación, temporada y cumplimiento fiscal — por eso el análisis serio se hace propiedad por propiedad, no con porcentajes genéricos.</p>
+        <p><strong className="text-foreground">Precios de referencia 2026-2026:</strong> el promedio residencial en Cancún ronda los USD $2,400/m², con la Zona Hotelera y frentes de playa entre USD $3,000-4,500/m², y corredores emergentes desde ~USD $1,800-2,500/m². Los rendimientos brutos de renta en México promedian ~6% anual (Global Property Guide, dic. 2026), con variaciones importantes por zona y modelo operativo. En renta vacacional bien gestionada los resultados pueden ser mayores, pero dependen de ocupación, temporada y cumplimiento fiscal — por eso el análisis serio se hace propiedad por propiedad, no con porcentajes genéricos.</p>
       </Callout>
 
       <H2>¿Puede un canadiense comprar propiedad en la costa? Sí — así funciona</H2>
@@ -350,7 +350,7 @@ export const RetiringCanadianBody = () => {
       />
       <FaqItem
         q="¿Conviene comprar ahora o esperar?"
-        a="Nadie serio te garantiza el futuro. Lo que dicen los datos: Quintana Roo lideró la apreciación nacional en 2025 (+14.3%, SHF), hay ~22,000 unidades nuevas en el pipeline estatal 2025-2026 que darán más opciones de compra, y Banxico bajó su tasa a 7% en diciembre de 2025. La decisión correcta depende de tu horizonte, tu liquidez y la zona — y eso se analiza caso por caso."
+        a="Nadie serio te garantiza el futuro. Lo que dicen los datos: Quintana Roo lideró la apreciación nacional en 2026 (+14.3%, SHF), hay ~22,000 unidades nuevas en el pipeline estatal 2026-2026 que darán más opciones de compra, y Banxico bajó su tasa a 7% en diciembre de 2026. La decisión correcta depende de tu horizonte, tu liquidez y la zona — y eso se analiza caso por caso."
       />
 
       <H2>Por qué los canadienses trabajan con Rivana</H2>
@@ -373,10 +373,10 @@ export const RetiringCanadianBody = () => {
 
       <H3>Fuentes y referencias</H3>
       <ul className="list-disc pl-6 space-y-2 text-sm">
-        <li>Snowbird Advisor (encuesta a 4,000 snowbirds, oct. 2025), citada por The Globe and Mail y TravelPulse Canada — cambio del 12% al 23% en destinos no-EE.UU.</li>
+        <li>Snowbird Advisor (encuesta a 4,000 snowbirds, oct. 2026), citada por The Globe and Mail y TravelPulse Canada — cambio del 12% al 23% en destinos no-EE.UU.</li>
         <li><a href="https://www.cbc.ca/news/canada/toronto/ontario-snowbirds-choose-mexico-9.7063503" rel="nofollow noopener" target="_blank" className="underline">CBC News (ene. 2026). "Meet the Ontario snowbirds ditching the U.S. and wintering in Mexico".</a></li>
-        <li>Sociedad Hipotecaria Federal (SHF) — índice de precios: Quintana Roo +12.2% (T1 2025) y +14.3% anual 2025; Benito Juárez +12.8%. Vía <a href="https://www.globalpropertyguide.com/latin-america/mexico/price-history" rel="nofollow noopener" target="_blank" className="underline">Global Property Guide</a>.</li>
-        <li>Global Property Guide (dic. 2025) — rendimientos brutos de renta ~6% promedio nacional.</li>
+        <li>Sociedad Hipotecaria Federal (SHF) — índice de precios: Quintana Roo +12.2% (T1 2026) y +14.3% anual 2026; Benito Juárez +12.8%. Vía <a href="https://www.globalpropertyguide.com/latin-america/mexico/price-history" rel="nofollow noopener" target="_blank" className="underline">Global Property Guide</a>.</li>
+        <li>Global Property Guide (dic. 2026) — rendimientos brutos de renta ~6% promedio nacional.</li>
         <li><a href="https://www.mexperience.com/financial-criteria-for-residency-in-mexico/" rel="nofollow noopener" target="_blank" className="underline">Mexperience — "Financial Criteria for Legal Residency in Mexico 2026" (UMA 2026: $117.31 MXN).</a></li>
         <li>Consulados de México — guías de visa 2026, incluida la vía de propiedad (~USD $624,000+).</li>
         <li>ExpatDen / Mexico Relocation Guide — cambios 2026: duplicación de tarifas, umbrales ~USD $4,400/mes o ~$74,000 en ahorros.</li>

@@ -197,7 +197,7 @@ export const PreSaleGuideBodyES = () => {
       <h2 className="text-foreground" id="ventana-2026">La ventana de 2026 — por qué este año específicamente</h2>
       <p>El 2026 concentra tres catalizadores que rara vez se alinean simultáneamente en el mismo mercado:</p>
       <p><strong className="text-foreground">El Mundial FIFA 2026</strong> está generando una demanda global de atención sobre el Caribe Mexicano sin precedente histórico. Los compradores internacionales que evalúan el mercado por primera vez están llegando con el torneo como detonante.</p>
-      <p><strong className="text-foreground">La ventana de preventa a precios de 2024–2025 se está cerrando.</strong> En proyectos como Mondrian Residences at Grand Island Cancun, el precio aumenta 33% el 1 de junio de 2026. Una vez que los proyectos alcanzan su fase de entrega o de comercialización abierta, los precios de entrada habrán subido entre 15 y 33% sobre los actuales.</p>
+      <p><strong className="text-foreground">La ventana de preventa a precios de 2024–2026 se está cerrando.</strong> En proyectos como Mondrian Residences at Grand Island Cancun, el precio aumenta 33% el 1 de junio de 2026. Una vez que los proyectos alcanzan su fase de entrega o de comercialización abierta, los precios de entrada habrán subido entre 15 y 33% sobre los actuales.</p>
       <p><strong className="text-foreground">La infraestructura sigue llegando.</strong> El corredor Nichupté, las expansiones del aeropuerto y los nuevos accesos viales al norte de Cancún continúan comprimiendo los tiempos de traslado y expandiendo el valor de zonas como Costa Mujeres y Puerto Morelos.</p>
 
       {/* ── Preventa vs Reventa ── */}
@@ -386,7 +386,7 @@ export const PreSaleGuideBodyEN = () => {
       <h2 className="text-foreground" id="window-2026">The 2026 window — why this specific year</h2>
       <p>2026 concentrates three catalysts that rarely align simultaneously in the same market:</p>
       <p><strong className="text-foreground">FIFA World Cup 2026</strong> is generating unprecedented global attention on the Mexican Caribbean. International buyers evaluating the market for the first time are arriving with the tournament as the trigger.</p>
-      <p><strong className="text-foreground">The pre-sale window at 2024–2025 prices is closing.</strong> In projects like Mondrian Residences at Grand Island Cancun, the price increases 33% on June 1, 2026. Once projects reach delivery or open-market commercialization, entry prices will have risen 15 to 33% above current levels.</p>
+      <p><strong className="text-foreground">The pre-sale window at 2024–2026 prices is closing.</strong> In projects like Mondrian Residences at Grand Island Cancun, the price increases 33% on June 1, 2026. Once projects reach delivery or open-market commercialization, entry prices will have risen 15 to 33% above current levels.</p>
       <p><strong className="text-foreground">Infrastructure keeps arriving.</strong> The Nichupté corridor, airport expansions and new road access to northern Cancún continue compressing transfer times and expanding the value of zones like Costa Mujeres and Puerto Morelos.</p>
 
       {/* ── Pre-sale vs Resale ── */}

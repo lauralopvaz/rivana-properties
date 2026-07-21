@@ -33,8 +33,8 @@ export const PlusvaliaCancun2026Body = () => {
       <JTable
         headers={['Indicador oficial', 'Dato']}
         rows={[
-          ['Quintana Roo — apreciación anual 2025', '+14.3% (la mayor de todos los estados; promedio nacional ~8.2%)'],
-          ['Benito Juárez (Cancún) — 1T 2025', '+12.8% (arriba de Guadalajara +9.8%, Querétaro +6.7%, Valle de México +5.3%)'],
+          ['Quintana Roo — apreciación anual 2026', '+14.3% (la mayor de todos los estados; promedio nacional ~8.2%)'],
+          ['Benito Juárez (Cancún) — 1T 2026', '+12.8% (arriba de Guadalajara +9.8%, Querétaro +6.7%, Valle de México +5.3%)'],
           ['Consistencia plurianual', '+11.8% a +13.4% en 2023-2024 — tres años de tendencia, no un pico aislado'],
           ['Precio residencial promedio Cancún', '~USD $2,400/m²'],
           ['Zona Hotelera y frentes de playa', 'USD $3,000 a $4,500/m²'],
@@ -52,8 +52,8 @@ export const PlusvaliaCancun2026Body = () => {
           ['1. Infraestructura de conectividad regional', 'El Tren Maya integró la península y la modernización aeroportuaria amplió la capacidad del segundo aeropuerto más transitado de México. Más accesibilidad = más demanda de fondo.'],
           ['2. Obra urbana que reconfigura la ciudad', 'El Puente Nichupté —conexión directa del centro a la Zona Hotelera— y la ampliación del Bulevar Colosio están cambiando tiempos de traslado. La regla histórica: el valor sigue a la conectividad.'],
           ['3. Demanda profunda y diversificada', '70-75% de las transacciones de Quintana Roo son de compradores nacionales (Monterrey, Guadalajara, Bajío). Se suma el capital extranjero: los snowbirds canadienses eligiendo destinos fuera de EE.UU. casi se duplicó (12% → 23%, Snowbird Advisor).'],
-          ['4. Absorción sana de la oferta nueva', 'Pipeline estatal de ~22,000 unidades para 2025-2026 con ciclos de inventario de 14-18 meses. Hay oferta nueva sin sobreoferta que erosione precios.'],
-          ['5. Costo de capital descendente', 'Banxico recortó su tasa a 7% en diciembre de 2025. La dirección del ciclo amplía gradualmente la base de compradores nacionales — más demanda futura para el activo que compres hoy.'],
+          ['4. Absorción sana de la oferta nueva', 'Pipeline estatal de ~22,000 unidades para 2026-2026 con ciclos de inventario de 14-18 meses. Hay oferta nueva sin sobreoferta que erosione precios.'],
+          ['5. Costo de capital descendente', 'Banxico recortó su tasa a 7% en diciembre de 2026. La dirección del ciclo amplía gradualmente la base de compradores nacionales — más demanda futura para el activo que compres hoy.'],
         ]}
       />
 
@@ -92,7 +92,7 @@ export const PlusvaliaCancun2026Body = () => {
         rows={[
           ['1. El vehículo: la preventa amplifica', 'Comprar en precio de lanzamiento durante la construcción convierte la apreciación del mercado en apreciación sobre tu precio de entrada, con planes de pago sin intereses bancarios. Es la mecánica detrás de Mondrian Residences at Grand Island (desde $9,050,000 MXN, entrega Q2 2027, operación Accor, diseño Filipao Nunes).'],
           ['2. La unidad dentro del desarrollo', 'Nivel, vista y tipología determinan la reventa. Dos unidades del mismo edificio pueden apreciarse a ritmos distintos; la selección fina es donde un asesor con acceso a disponibilidad real agrega valor medible.'],
-          ['3. La capacidad de producir mientras esperas', 'Una unidad que renta —vacacional con permisos (como los penthouses de Salvia en la Zona Hotelera) o largo plazo— suma flujo a la apreciación. Los rendimientos brutos de renta en México promedian ~6% anual (Global Property Guide, dic. 2025); la vacacional bien operada puede superarlo.'],
+          ['3. La capacidad de producir mientras esperas', 'Una unidad que renta —vacacional con permisos (como los penthouses de Salvia en la Zona Hotelera) o largo plazo— suma flujo a la apreciación. Los rendimientos brutos de renta en México promedian ~6% anual (Global Property Guide, dic. 2026); la vacacional bien operada puede superarlo.'],
         ]}
       />
       <Callout title="El retorno total">
@@ -106,7 +106,7 @@ export const PlusvaliaCancun2026Body = () => {
       <JTable
         headers={['Riesgo', 'Qué implica']}
         rows={[
-          ['La plusvalía pasada no garantiza la futura', '+14.3% es un dato de 2025, no una promesa de 2026. Los motores estructurales sugieren continuidad; ningún analista honesto firma un porcentaje.'],
+          ['La plusvalía pasada no garantiza la futura', '+14.3% es un dato de 2026, no una promesa de 2026. Los motores estructurales sugieren continuidad; ningún analista honesto firma un porcentaje.'],
           ['No todo Cancún se aprecia igual', 'El promedio estatal esconde corredores extraordinarios y zonas planas. Comprar "en Cancún" no es una tesis; comprar en el corredor correcto, sí.'],
           ['El desarrollador importa tanto como la zona', 'Una preventa mal estructurada puede congelar tu capital. Historial de entregas, contrato ante notario, licencias y situación del suelo: el filtro de cinco puntos de la Selección Premium de Rivana existe por esto.'],
           ['La renta exige regla', 'Impuesto al hospedaje, registro estatal y reglamento del condominio. La unidad "ideal para Airbnb" sin permisos es un pasivo disfrazado.'],

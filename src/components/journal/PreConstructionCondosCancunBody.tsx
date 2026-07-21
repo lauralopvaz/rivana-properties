@@ -20,7 +20,7 @@ export const PreConstructionCondosCancunBody = () => {
         Pre-construction is the strategy sophisticated investors use to buy tomorrow's market at
         today's launch price — and there is no market in Mexico where that mechanism currently
         works harder than Cancún. The state posted the country's highest home-price appreciation in
-        2025 (+14.3%, per the Federal Mortgage Society's official index), and pre-construction is
+        2026 (+14.3%, per the Federal Mortgage Society's official index), and pre-construction is
         the vehicle that converts market appreciation into appreciation <em>on your entry price</em>
         , financed by interest-free developer payment plans along the way.
       </p>
@@ -50,7 +50,7 @@ export const PreConstructionCondosCancunBody = () => {
         <strong>Interest-free leverage.</strong> The typical Cancún structure: 20-30% down, staged
         payments through construction, balance at delivery. You control an appreciating asset with
         a fraction of its price deployed — without bank interest. That matters more than usual in
-        2026: even after Banxico cut its benchmark rate to 7% in December 2025, Mexican mortgage
+        2026: even after Banxico cut its benchmark rate to 7% in December 2026, Mexican mortgage
         rates still run 10-12%. The developer plan <em>is</em> the financing.
       </p>
       <p>
@@ -58,7 +58,7 @@ export const PreConstructionCondosCancunBody = () => {
         come from Mexican national buyers building patrimony; foreign capital adds the second layer
         — now including the documented Canadian shift away from U.S. winters (non-U.S. snowbird
         destinations doubled from 12% to 23% in a year, per Snowbird Advisor). The state's
-        ~22,000-unit pipeline for 2025-2026 is absorbing at healthy 14-18 month inventory cycles —
+        ~22,000-unit pipeline for 2026-2026 is absorbing at healthy 14-18 month inventory cycles —
         depth without glut.
       </p>
 

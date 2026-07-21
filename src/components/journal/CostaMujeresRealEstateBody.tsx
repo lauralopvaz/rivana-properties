@@ -66,9 +66,9 @@ export const CostaMujeresRealEstateBody = () => {
       <ul className="list-disc pl-6 space-y-3">
         <li>
           <strong>The state leads Mexico in appreciation:</strong> Quintana Roo posted{' '}
-          <strong>+14.3% home-price growth in 2025</strong> (SHF official index), the highest of
+          <strong>+14.3% home-price growth in 2026</strong> (SHF official index), the highest of
           any state, after double-digit years in 2023-2024. Neighboring Benito Juárez (Cancún) ran
-          +12.8% in Q1 2025 alone.
+          +12.8% in Q1 2026 alone.
         </li>
         <li>
           <strong>Finite beachfront:</strong> continental first-line near Cancún cannot be
@@ -178,7 +178,7 @@ export const CostaMujeresRealEstateBody = () => {
       </p>
       <p>
         On returns, we give you the frame rather than a promotional number: Mexico's gross rental
-        yields average <strong>~6% annually</strong> (Global Property Guide, Dec 2025);
+        yields average <strong>~6% annually</strong> (Global Property Guide, Dec 2026);
         well-operated beachfront product in resort corridors can outperform that average — and the
         real number for a real unit depends on rate, seasonality, occupancy, and operating costs.
         That's the per-unit financial model, with conservative, base, and optimistic scenarios,

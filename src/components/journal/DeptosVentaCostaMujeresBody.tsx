@@ -58,7 +58,7 @@ export const DeptosVentaCostaMujeresBody = () => {
       <JTable
         headers={['Motor', 'Qué está pasando']}
         rows={[
-          ['Estado líder en apreciación', 'Quintana Roo cerró 2025 con +14.3% de apreciación anual (SHF), la más alta de México. Costa Mujeres pertenece al municipio de Isla Mujeres, contiguo a Benito Juárez, que registró +12.8% solo en Q1 de 2025.'],
+          ['Estado líder en apreciación', 'Quintana Roo cerró 2026 con +14.3% de apreciación anual (SHF), la más alta de México. Costa Mujeres pertenece al municipio de Isla Mujeres, contiguo a Benito Juárez, que registró +12.8% solo en Q1 de 2026.'],
           ['Demanda de lujo en expansión', 'El mercado inmobiliario de lujo mexicano alcanzó ventas récord en años recientes, y los corredores de playa nuevos con marcas hoteleras son sus principales receptores. Costa Mujeres aparece consistentemente como zona emergente de alto potencial.'],
           ['Escasez estructural en formación', 'El frente de playa continental cerca de Cancún es finito. Cada resort y torre terminada reduce el inventario de primera línea restante — el mecanismo clásico de soporte de valor a largo plazo.'],
           ['Nueva demanda internacional', 'El giro de los snowbirds canadienses hacia México (de 12% a 23% eligiendo destinos no-EE.UU. en un año, Snowbird Advisor) apunta al perfil de Costa Mujeres: nuevo, privado, de playa y con servicios de resort.'],
@@ -132,7 +132,7 @@ export const DeptosVentaCostaMujeresBody = () => {
         de playa, golf, marina y tranquilidad, con el comercio y los hospitales mayores de Cancún a
         20-30 minutos. Para el propietario que renta, eso define el perfil del huésped —estadías de
         descanso de alto poder adquisitivo— y la estrategia de operación. Los rendimientos brutos de
-        renta en México promedian ~6% anual (Global Property Guide, dic. 2025); en producto de playa
+        renta en México promedian ~6% anual (Global Property Guide, dic. 2026); en producto de playa
         bien operado el desempeño puede ser superior, y como siempre, el número real se calcula
         unidad por unidad, no con promedios. Rivana ofrece administración de rentas post-venta para
         propietarios remotos.
