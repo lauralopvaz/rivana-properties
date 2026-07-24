@@ -145,7 +145,7 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
         <button
           onClick={() =>
             window.open(
-              `https://wa.me/529988457224?text=${encodeURIComponent(`Hola, me interesa ${propertyName}`)}`,
+              `https://wa.me/529988457224?text=${encodeURIComponent(`Hola, me interesa ${propertyName}`)}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=property-contact-form`,
               "_blank"
             )
           }

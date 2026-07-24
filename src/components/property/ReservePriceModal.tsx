@@ -200,7 +200,7 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
               <button
                 onClick={() =>
                   window.open(
-                    `https://wa.me/529988457224?text=${encodeURIComponent(`Reserva de precio — ${propertyName}`)}`,
+                    `https://wa.me/529988457224?text=${encodeURIComponent(`Reserva de precio — ${propertyName}`)}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=reserve-price-modal`,
                     "_blank"
                   )
                 }

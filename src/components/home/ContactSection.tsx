@@ -230,7 +230,7 @@ export const ContactSection = () => {
                       {loading ? (L === 'es' ? 'Enviando...' : 'Sending...') : (L === 'es' ? 'Agendar Mi Asesoría' : 'Schedule My Advisory')}
                     </button>
                     <a
-                      href="https://wa.me/529988457224?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20asesor%C3%ADa%20con%20un%20asesor%20de%20Rivana%20Properties."
+                      href="https://wa.me/529988457224?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20asesor%C3%ADa%20con%20un%20asesor%20de%20Rivana%20Properties.&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=home-contact-section"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full transition-colors duration-300"

@@ -141,8 +141,8 @@ const Home = () => {
             <Button variant="gold" size="lg" className="rounded-none text-[hsl(var(--deep-black))]" asChild>
               <a
                 href={language === 'es'
-                  ? 'https://wa.me/529988457224?text=HOME%20HERO%20%E2%80%94%20Quiero%20iniciar%20mi%20asesor%C3%ADa%20inmobiliaria'
-                  : 'https://wa.me/529988457224?text=HOME%20HERO%20EN%20-%20I%20want%20to%20start%20my%20real%20estate%20advisory'}
+                  ? 'https://wa.me/529988457224?text=HOME%20HERO%20%E2%80%94%20Quiero%20iniciar%20mi%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=home-hero-es'
+                  : 'https://wa.me/529988457224?text=HOME%20HERO%20EN%20-%20I%20want%20to%20start%20my%20real%20estate%20advisory&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=home-hero-en'}
                 target="_blank"
                 rel="noopener noreferrer"
               >

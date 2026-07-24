@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 
-const WHATSAPP_LINK = 'https://wa.me/529988457224';
+const WHATSAPP_LINK = 'https://wa.me/529988457224?utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-uruguay-mayakoba';
 
 const PropertyCard = () => (
   <div className="my-10 border border-[#D9CAB3] rounded-sm overflow-hidden">

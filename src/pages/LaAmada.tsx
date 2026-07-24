@@ -426,7 +426,7 @@ export default function LaAmada() {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
-                      href={`${WHATSAPP}?text=${waMessage(u.code)}`}
+                      href={`${WHATSAPP}?text=${waMessage(u.code)}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=la-amada-unit`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 inline-flex items-center justify-center h-12 px-6 bg-[#1C1C1C] text-white font-body text-sm tracking-wide hover:bg-[#1C1C1C]/90 transition"
@@ -565,7 +565,7 @@ export default function LaAmada() {
                 isEnglish
                   ? "Hi Rivana, I'd like to learn more about La Amada Residences."
                   : "Hola Rivana, me gustaría conocer más sobre La Amada Residences."
-              )}`}
+              )}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=la-amada-cta`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-14 px-10 font-body text-sm tracking-wide hover:brightness-110 transition bg-slate-100 text-slate-800"

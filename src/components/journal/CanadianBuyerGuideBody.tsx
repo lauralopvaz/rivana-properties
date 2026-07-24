@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const WHATSAPP_LINK = 'https://wa.me/529988457224';
+const WHATSAPP_LINK = 'https://wa.me/529988457224?utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-canadian-buyer-guide';
 
 const FaqItem = ({ q, a }: { q: string; a: string }) => (
   <details className="group border-b border-border py-4">

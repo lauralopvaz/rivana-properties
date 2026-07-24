@@ -485,7 +485,7 @@ const PropertyDetail = () => {
               </div>
               <button className={`${goldBtnClass} mb-2.5`}>Solicitar Información</button>
               <a
-                href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
+                href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=property-detail-hero"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 bg-[#25d366]/10 border border-[#25d366]/30 text-[#25d366] font-body text-[10px] tracking-[2px] uppercase py-3 rounded-none hover:bg-[#25d366]/20 transition-colors mb-2.5"
@@ -583,7 +583,7 @@ const PropertyDetail = () => {
                   <div className="space-y-2.5">
                     <button onClick={() => setUnitFormOpen(true)} className={goldBtnClass}>Agendar una Cita</button>
                     <a
-                      href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria"
+                      href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=property-detail-body"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full flex items-center justify-center gap-2 border border-[#25d366]/30 text-[#25d366] font-body text-[10px] tracking-[2px] uppercase py-3 rounded-none hover:bg-[#25d366]/5 transition-colors"

@@ -205,7 +205,7 @@ export const CancunROIBodyES = () => {
         <p className="text-sm text-muted-foreground font-body mb-6">Habla hoy con un asesor Rivana — bilingüe, especializado en el mercado de Cancún y con acceso directo a los números reales de cada desarrollo.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Button variant="gold" asChild>
-            <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer">Quiero asesoría inmobiliaria</a>
+            <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-cancun-roi-es" target="_blank" rel="noopener noreferrer">Quiero asesoría inmobiliaria</a>
           </Button>
           <Button variant="gold-outline" asChild>
             <Link to={localePath('/listings')}>Ver todas las propiedades</Link>
@@ -405,7 +405,7 @@ export const CancunROIBodyEN = () => {
         <p className="text-sm text-muted-foreground font-body mb-6">Connect with a Rivana advisor today — bilingual, specialized in the Cancún market and with direct access to the real numbers behind every development.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Button variant="gold" asChild>
-            <a href="https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory" target="_blank" rel="noopener noreferrer">I Want Real Estate Advisory</a>
+            <a href="https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-cancun-roi-en" target="_blank" rel="noopener noreferrer">I Want Real Estate Advisory</a>
           </Button>
           <Button variant="gold-outline" asChild>
             <Link to={localePath('/listings')}>View all properties</Link>

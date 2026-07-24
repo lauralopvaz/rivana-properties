@@ -239,7 +239,7 @@ export const SchedulingModal = () => {
                 {loading ? (L === 'es' ? 'Enviando...' : 'Sending...') : (L === 'es' ? 'Confirmar Solicitud' : 'Confirm Request')}
               </button>
               <a
-                href="https://wa.me/529988457224?text=Quiero%20agendar%20una%20cita"
+                href="https://wa.me/529988457224?text=Quiero%20agendar%20una%20cita&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=scheduling-modal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 uppercase transition-colors duration-300"
