@@ -157,7 +157,7 @@ export const MondrianPresaleBodyES = () => {
           <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')}>
             <Button variant="gold" size="lg">Ver la propiedad completa →</Button>
           </Link>
-          <a href="https://wa.me/529988457224?text=Quiero%20información%20sobre%20The%20Residences%20at%20Grand%20Island%20Cancun" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/529988457224?text=Quiero%20información%20sobre%20The%20Residences%20at%20Grand%20Island%20Cancun&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-mondrian-presale-es" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg">Hablar con un asesor por WhatsApp</Button>
           </a>
         </div>
@@ -313,7 +313,7 @@ export const MondrianPresaleBodyEN = () => {
           <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')}>
             <Button variant="gold" size="lg">View the full property listing →</Button>
           </Link>
-          <a href="https://wa.me/529988457224?text=I%20want%20information%20about%20The%20Residences%20at%20Grand%20Island%20Cancun" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/529988457224?text=I%20want%20information%20about%20The%20Residences%20at%20Grand%20Island%20Cancun&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-mondrian-presale-en" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg">Talk to an advisor on WhatsApp</Button>
           </a>
         </div>

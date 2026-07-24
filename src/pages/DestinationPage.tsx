@@ -956,7 +956,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                 {language === 'es' ? 'Recibir Precios' : 'Get Pricing & Floor Plans'}
               </Button>
               <Button variant="whatsapp" size="sm" asChild>
-                <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer">utm_medium=whatsapp529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer">utm_campaign=lead&utm_content=destination-page" target="_blank" rel="noopener noreferrer">
                   <ChatIcon className="w-4 h-4" /> WhatsApp
                 </a>
               </Button>

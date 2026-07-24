@@ -89,7 +89,7 @@ export const PuenteNichupteBodyES = () => {
           <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')}>
             <Button variant="gold" size="lg">Ver Mondrian Residences at Grand Island →</Button>
           </Link>
-          <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-puente-nichupte" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg">Asesoría por WhatsApp</Button>
           </a>
         </div>

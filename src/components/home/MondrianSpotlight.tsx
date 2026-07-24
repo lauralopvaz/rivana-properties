@@ -70,7 +70,7 @@ export const MondrianSpotlight = () => {
   const { openModal } = useSchedulingModal();
   const L = language;
 
-  const whatsappLink = 'https://wa.me/529988457224?text=Hola%20Rivana%2C%20me%20interesa%20Mondrian%20Residences';
+  const whatsappLink = 'https://wa.me/529988457224?text=Hola%20Rivana%2C%20me%20interesa%20Mondrian%20Residences&utm_source=web'https://wa.me/529988457224?text=Hola%20Rivana%2C%20me%20interesa%20Mondrian%20Residences'utm_medium=whatsapp'https://wa.me/529988457224?text=Hola%20Rivana%2C%20me%20interesa%20Mondrian%20Residences'utm_campaign=lead&utm_content=home-mondrian-spotlight';
 
   return (
     <section className="py-16 lg:py-24 bg-background overflow-hidden">
