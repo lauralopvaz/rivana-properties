@@ -157,7 +157,7 @@ export const MayakobaVsPuertoBodyES = () => {
         <h3 className="text-xl mb-3 text-foreground">¿Quieres saber cuál se ajusta mejor a tu objetivo?</h3>
         <p className="text-muted-foreground font-body mb-6">Habla hoy con un asesor Rivana — bilingüe, con acceso directo a The Reserve at Mayakoba, SLS Ocean Beach, Vellmari y todas las propiedades mencionadas.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=webQuiero%20asesor%C3%ADa%20inmobiliaria"utm_medium=whatsappQuiero%20asesor%C3%ADa%20inmobiliaria"utm_campaign=lead&utm_content=journal-mayakoba-vs-puerto-es" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase hover:bg-primary/90 transition-colors">Quiero asesoría inmobiliaria</a>
+          <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-mayakoba-vs-puerto-es" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase hover:bg-primary/90 transition-colors">Quiero asesoría inmobiliaria</a>
           <Link to={localePath('/listings')} className="inline-flex items-center justify-center gap-2 border border-border px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase text-foreground hover:border-primary/40 transition-colors">Ver todas las propiedades</Link>
         </div>
       </div>
@@ -258,7 +258,7 @@ export const MayakobaVsPuertoBodyEN = () => {
         <h3 className="text-xl mb-3 text-foreground">Want to know which fits your investment objective?</h3>
         <p className="text-muted-foreground font-body mb-6">Connect with a Rivana advisor today — bilingual, with direct access to The Reserve at Mayakoba, SLS Ocean Beach, Vellmari and all the properties mentioned here.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory&utm_source=webI%20want%20real%20estate%20advisory"utm_medium=whatsappI%20want%20real%20estate%20advisory"utm_campaign=lead&utm_content=journal-mayakoba-vs-puerto-en" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase hover:bg-primary/90 transition-colors">I Want Real Estate Advisory</a>
+          <a href="https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-mayakoba-vs-puerto-en" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase hover:bg-primary/90 transition-colors">I Want Real Estate Advisory</a>
           <Link to={localePath('/listings')} className="inline-flex items-center justify-center gap-2 border border-border px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase text-foreground hover:border-primary/40 transition-colors">View all properties</Link>
         </div>
       </div>

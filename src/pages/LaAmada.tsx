@@ -426,7 +426,7 @@ export default function LaAmada() {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
-                      href={`${WHATSAPP}?text=${waMessage(u.code)}&utm_source=web`${WHATSAPP}?text=${waMessage(u.code)}`utm_medium=whatsapp`${WHATSAPP}?text=${waMessage(u.code)}`utm_campaign=lead&utm_content=la-amada-unit`}
+                      href={`${WHATSAPP}?text=${waMessage(u.code)}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=la-amada-unit`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 inline-flex items-center justify-center h-12 px-6 bg-[#1C1C1C] text-white font-body text-sm tracking-wide hover:bg-[#1C1C1C]/90 transition"

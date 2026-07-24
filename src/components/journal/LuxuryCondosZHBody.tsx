@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-const WHATSAPP_ES = 'https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web'https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria'utm_medium=whatsapp'https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria'utm_campaign=lead&utm_content=journal-luxury-condos-zh-es';
-const WHATSAPP_EN = 'https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory&utm_source=web'https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory'utm_medium=whatsapp'https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory'utm_campaign=lead&utm_content=journal-luxury-condos-zh-en';
+const WHATSAPP_ES = 'https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-luxury-condos-zh-es';
+const WHATSAPP_EN = 'https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-luxury-condos-zh-en';
 
 const H2 = ({ children }: { children: React.ReactNode }) => (
   <h2 className="text-foreground font-display text-3xl mt-12 mb-4 border-b border-[#CFAE60]/30 pb-3">{children}</h2>

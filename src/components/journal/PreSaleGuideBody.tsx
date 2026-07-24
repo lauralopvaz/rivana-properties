@@ -242,7 +242,7 @@ export const PreSaleGuideBodyES = () => {
         <h3 className="text-xl mb-3 text-foreground">¿Quieres conocer las opciones de preventa disponibles hoy?</h3>
         <p className="text-muted-foreground font-body mb-6">Habla con un asesor Rivana — bilingüe, especializado en el Caribe Mexicano y con acceso directo a precios, planos y condiciones de todos los desarrollos mencionados.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=webQuiero%20asesor%C3%ADa%20inmobiliaria"utm_medium=whatsappQuiero%20asesor%C3%ADa%20inmobiliaria"utm_campaign=lead&utm_content=journal-presale-guide-es" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase hover:bg-primary/90 transition-colors">
+          <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-presale-guide-es" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase hover:bg-primary/90 transition-colors">
             Quiero asesoría inmobiliaria
           </a>
           <Link to={localePath('/presale')} className="inline-flex items-center justify-center gap-2 border border-border px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase text-foreground hover:border-primary/40 transition-colors">
@@ -431,7 +431,7 @@ export const PreSaleGuideBodyEN = () => {
         <h3 className="text-xl mb-3 text-foreground">Want to explore the pre-sale options available today?</h3>
         <p className="text-muted-foreground font-body mb-6">Connect with a Rivana advisor — bilingual, specialized in the Mexican Caribbean and with direct access to pricing, floor plans and conditions for every development mentioned here.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory&utm_source=webI%20want%20real%20estate%20advisory"utm_medium=whatsappI%20want%20real%20estate%20advisory"utm_campaign=lead&utm_content=journal-presale-guide-en" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase hover:bg-primary/90 transition-colors">
+          <a href="https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-presale-guide-en" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase hover:bg-primary/90 transition-colors">
             I Want Real Estate Advisory
           </a>
           <Link to={localePath('/presale')} className="inline-flex items-center justify-center gap-2 border border-border px-6 py-3 rounded-sm text-sm font-body tracking-wider uppercase text-foreground hover:border-primary/40 transition-colors">

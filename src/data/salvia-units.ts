@@ -376,7 +376,7 @@ export const salviaUnitPath = (slug: string, isEnglish: boolean) =>
   `${salviaLandingPath(isEnglish)}/${slug}`
 
 export const salviaWhatsAppUrl = (msg: string) =>
-  `https://wa.me/529988457224?text=${encodeURIComponent(msg)}&utm_source=web`https://wa.me/529988457224?text=${encodeURIComponent(msg)}`utm_medium=whatsapp`https://wa.me/529988457224?text=${encodeURIComponent(msg)}`utm_campaign=lead&utm_content=salvia-unit-card`
+  `https://wa.me/529988457224?text=${encodeURIComponent(msg)}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=salvia-unit-card`
 
 export const getSalviaUnitBySlug = (slug?: string) =>
   salviaUnits.find((u) => u.slug === slug)

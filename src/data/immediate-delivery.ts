@@ -164,4 +164,4 @@ export const unitDetailPath = (isEnglish: boolean) =>
   isEnglish ? '/en/costa-mujeres/la-amada#units' : '/costa-mujeres/la-amada#units'
 
 export const whatsappUrl = (msg: string) =>
-  `https://wa.me/529988457224?text=${encodeURIComponent(msg)}&utm_source=web`https://wa.me/529988457224?text=${encodeURIComponent(msg)}`utm_medium=whatsapp`https://wa.me/529988457224?text=${encodeURIComponent(msg)}`utm_campaign=lead&utm_content=immediate-delivery-card`
+  `https://wa.me/529988457224?text=${encodeURIComponent(msg)}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=immediate-delivery-card`
