@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const WHATSAPP_LINK = 'https://wa.me/529988457224';
+const WHATSAPP_LINK = 'https://wa.me/529988457224?utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-foreign-buyer-guide';
 
 const DiagramImage = ({ src, alt }: { src: string; alt: string }) => (
   <div className="my-8">

@@ -162,7 +162,7 @@ const BeachfrontCondos = () => {
   const [buyerOrigin, setBuyerOrigin] = useState<'American' | 'Canadian'>('American');
 
   const whatsappText = encodeURIComponent(`Hi, I'm a ${buyerOrigin} buyer interested in Cancún condos`);
-  const whatsappUrl = `https://wa.me/529988457224?text=${whatsappText}`;
+  const whatsappUrl = `https://wa.me/529988457224?text=${whatsappText}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=beachfront-condos`;
 
   const schema = {
     '@context': 'https://schema.org',

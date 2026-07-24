@@ -206,7 +206,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
 
   const openWhatsApp = () => {
     window.open(
-      `https://wa.me/529988457224?text=${encodeURIComponent(`Hola, me interesa ${property.name}`)}`,
+      `https://wa.me/529988457224?text=${encodeURIComponent(`Hola, me interesa ${property.name}`)}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=property-page`,
       "_blank"
     );
   };

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const WHATSAPP_LINK = 'https://wa.me/529988457224';
+const WHATSAPP_LINK = 'https://wa.me/529988457224?utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-retire-cancun';
 
 const H2 = ({ children }: { children: React.ReactNode }) => (
   <h2 className="text-foreground border-b border-[hsl(var(--gold)_/_0.4)] pb-2">{children}</h2>
