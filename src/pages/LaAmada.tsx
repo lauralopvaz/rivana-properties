@@ -255,12 +255,12 @@ export default function LaAmada() {
 
   const path = isEnglish ? "/en/costa-mujeres/la-amada" : "/costa-mujeres/la-amada";
 
-  const waMessage = (unitCode: string) =>
-    encodeURIComponent(
+  const unitWaUrl = (u: Unit) =>
+    `${WHATSAPP}?text=${encodeURIComponent(
       isEnglish
-        ? `Hi Rivana, I'm interested in La Amada Unit ${unitCode} in Costa Mujeres.`
-        : `Hola Rivana, me interesa la unidad ${unitCode} en La Amada, Costa Mujeres.`
-    );
+        ? `Hi Rivana, I'm interested in La Amada Unit ${u.code} — ${u.name.en} (${formatMXN(u.priceMXN)}), Costa Mujeres.`
+        : `Hola Rivana, me interesa la Unidad ${u.code} — ${u.name.es} (${formatMXN(u.priceMXN)}) en La Amada, Costa Mujeres.`
+    )}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=${`la-amada-unit-${u.id}`}`;
 
   const schema = {
     "@context": "https://schema.org",
@@ -426,12 +426,22 @@ export default function LaAmada() {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
-                      href={`${WHATSAPP}?text=${waMessage(u.code)}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=la-amada-unit`}
+                      href={unitWaUrl(u)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center h-12 px-6 bg-[#1C1C1C] text-white font-body text-sm tracking-wide hover:bg-[#1C1C1C]/90 transition"
+                      aria-label={t(
+                        `Escribir por WhatsApp sobre la unidad ${u.code} en La Amada`,
+                        `Message on WhatsApp about Unit ${u.code} at La Amada`
+                      )}
+                      className="flex-1 inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#25D366] text-[#1C1C1C] font-body text-sm tracking-wide hover:brightness-95 transition"
                     >
-                      {u.secondaryCta[language]}
+                      <svg viewBox="0 0 256 256" className="w-4 h-4 shrink-0" aria-hidden="true">
+                        <path
+                          fill="currentColor"
+                          d="M128.5 54c-40.9 0-74.1 33.2-74.1 74.1 0 13.1 3.4 25.9 9.9 37.2L54 202l37.6-9.8a74 74 0 0 0 36.9 9.4h.1c40.8 0 74.1-33.2 74.1-74.1 0-19.8-7.7-38.4-21.7-52.4A73.7 73.7 0 0 0 128.5 54zm33.8 89.8c-1.8-.9-10.9-5.4-12.6-6-1.7-.6-2.9-.9-4.1.9s-4.7 6-5.8 7.2c-1.1 1.2-2.1 1.4-3.9.5-1.8-.9-7.8-2.9-14.9-9.2-5.5-4.9-9.2-10.9-10.3-12.7-1.1-1.8-.1-2.8.8-3.7.8-.8 1.8-2.1 2.7-3.2.9-1.1 1.2-1.8 1.8-3 .6-1.2.3-2.3-.2-3.2-.5-.9-4.1-9.9-5.7-13.5-1.5-3.6-3-3.1-4.1-3.1l-3.5-.1c-1.2 0-3.2.5-4.9 2.3-1.7 1.8-6.4 6.3-6.4 15.3 0 9 6.6 17.7 7.5 19 .9 1.2 13 19.8 31.5 27.8 4.4 1.9 7.8 3 10.5 3.9 4.4 1.4 8.4 1.2 11.6.7 3.5-.5 10.9-4.5 12.5-8.8 1.5-4.3 1.5-8 1.1-8.8-.5-.8-1.6-1.2-3.4-2.1z"
+                        />
+                      </svg>
+                      {t(`WhatsApp · Unidad ${u.code}`, `WhatsApp · Unit ${u.code}`)}
                     </a>
                     <button
                       onClick={() => openModal()}
@@ -505,6 +515,27 @@ export default function LaAmada() {
                   {compareUnits.map((u) => (
                     <td key={u.id} className="py-5 px-4 font-display font-light" style={{ fontSize: "20px", color: "#CFAE60" }}>
                       {formatMXN(u.priceMXN)}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="py-5 pr-6 font-body text-xs uppercase tracking-wider text-muted-foreground">
+                    {t("Contacto", "Contact")}
+                  </td>
+                  {compareUnits.map((u) => (
+                    <td key={u.id} className="py-5 px-4">
+                      <a
+                        href={unitWaUrl(u)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={t(
+                          `Escribir por WhatsApp sobre la unidad ${u.code} en La Amada`,
+                          `Message on WhatsApp about Unit ${u.code} at La Amada`
+                        )}
+                        className="inline-flex items-center justify-center h-10 px-4 bg-[#25D366] text-[#1C1C1C] font-body text-xs tracking-wide hover:brightness-95 transition"
+                      >
+                        {t(`WhatsApp · ${u.code}`, `WhatsApp · ${u.code}`)}
+                      </a>
                     </td>
                   ))}
                 </tr>
