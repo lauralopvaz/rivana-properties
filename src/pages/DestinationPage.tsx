@@ -877,22 +877,38 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
       </section>
 
       {/* Related Article — Mayakoba vs Puerto Cancún */}
-      {destinationKey === 'costa-mujeres' && language === 'es' && (
+      {destinationKey === 'costa-mujeres' && (
         <section className="py-12">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <ScrollReveal>
               <div className="border border-border p-6 flex items-center justify-between gap-4 bg-card hover:border-primary/30 transition-colors">
                 <div>
-                  <p className="eyebrow text-xs mb-1">Asesoría Local</p>
+                  <p className="eyebrow text-xs mb-1">
+                    {language === 'es' ? 'Asesoría Local' : 'Local Advisory'}
+                  </p>
                   <p className="font-display text-lg">
-                    Trabaja con un{' '}
-                    <Link to="/agente-inmobiliario-costa-mujeres" className="text-primary hover:underline">
-                      agente inmobiliario en Costa Mujeres
-                    </Link>
+                    {language === 'es' ? (
+                      <>
+                        Trabaja con un{' '}
+                        <Link to="/agente-inmobiliario-costa-mujeres" className="text-primary hover:underline">
+                          agente inmobiliario en Costa Mujeres
+                        </Link>
+                      </>
+                    ) : (
+                      <>
+                        Work with a{' '}
+                        <Link to="/en/real-estate-agent-costa-mujeres" className="text-primary hover:underline">
+                          real estate agent in Costa Mujeres
+                        </Link>
+                      </>
+                    )}
                   </p>
                 </div>
-                <Link to="/agente-inmobiliario-costa-mujeres" className="text-primary font-body text-sm whitespace-nowrap hover:underline">
-                  Ver →
+                <Link
+                  to={language === 'es' ? '/agente-inmobiliario-costa-mujeres' : '/en/real-estate-agent-costa-mujeres'}
+                  className="text-primary font-body text-sm whitespace-nowrap hover:underline"
+                >
+                  {language === 'es' ? 'Ver →' : 'View →'}
                 </Link>
               </div>
             </ScrollReveal>
