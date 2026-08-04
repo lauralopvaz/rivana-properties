@@ -65,6 +65,7 @@ const entries: Entry[] = [
   { es: "/cancun/departamentos-en-venta", en: "/en/cancun/condos-for-sale", priority: "0.7", changefreq: "weekly" },
   { en: "/en/cancun/beachfront-condos-for-sale", priority: "0.7", changefreq: "weekly" },
   { en: "/en/advisory", priority: "0.6", changefreq: "monthly" },
+  { en: "/en/free-buyer-agent-cancun", priority: "0.8", changefreq: "monthly" },
 
   // Geo service pages
   { es: "/preventa-cancun", en: "/en/pre-construction-cancun", priority: "0.8", changefreq: "weekly" },

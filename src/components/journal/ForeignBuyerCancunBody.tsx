@@ -170,7 +170,11 @@ export const ForeignBuyerCancunBody = () => {
           <Link to={localePath('/cancun/costa-mujeres')} className={gold}>
             Costa Mujeres real estate
           </Link>
-          .
+          . Either way, you can do it with a{' '}
+          <Link to="/en/free-buyer-agent-cancun" className={gold}>
+            free buyer&apos;s agent in Cancún
+          </Link>
+          — the seller pays the commission, not you.
         </p>
       </Callout>
 

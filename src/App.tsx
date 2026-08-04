@@ -34,6 +34,7 @@ const SalviaBuilding = lazy(() => import("./pages/SalviaBuilding"));
 const SalviaUnit = lazy(() => import("./pages/SalviaUnit"));
 const PreventaCancun = lazy(() => import("./pages/PreventaCancun"));
 const AgenteCostaMujeres = lazy(() => import("./pages/AgenteCostaMujeres"));
+const FreeBuyerAgent = lazy(() => import("./pages/FreeBuyerAgent"));
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
@@ -150,6 +151,7 @@ const AppRoutes = () => (
     <Route path="/en/presale" element={<PreSale />} />
     <Route path="/en/pre-construction-cancun" element={<PreventaCancun />} />
     <Route path="/en/real-estate-agent-costa-mujeres" element={<AgenteCostaMujeres />} />
+    <Route path="/en/free-buyer-agent-cancun" element={<FreeBuyerAgent />} />
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/en/cancun/condos-for-sale" element={<CancunCondos />} />

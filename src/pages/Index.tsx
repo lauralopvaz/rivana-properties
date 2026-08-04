@@ -229,6 +229,10 @@ const Home = () => {
                   <Link to="/en/real-estate-agent-costa-mujeres" className="text-primary underline underline-offset-4">
                     real estate agent in Costa Mujeres
                   </Link>
+                  . Canadian or U.S. buyer? Work with a{' '}
+                  <Link to="/en/free-buyer-agent-cancun" className="text-primary underline underline-offset-4">
+                    free buyer&apos;s agent in Cancún
+                  </Link>
                   .
                 </>
               )}

@@ -126,7 +126,11 @@ export const FideicomisoBody = () => {
           <Link to={localePath('/journal/cancun-condos-for-sale')} className={gold}>
             Cancún condos for sale in 2026
           </Link>
-          .
+          . And before you contact any sales office, understand why a{' '}
+          <Link to="/en/free-buyer-agent-cancun" className={gold}>
+            free buyer&apos;s agent in Cancún
+          </Link>{' '}
+          costs you nothing.
         </p>
       </Callout>
 
