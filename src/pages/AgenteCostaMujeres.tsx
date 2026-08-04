@@ -8,6 +8,12 @@ import { properties } from '@/lib/properties';
 const WA =
   'https://wa.me/529988457224?text=COSTA%20MUJERES%20%E2%80%94%20Quiero%20asesor%C3%ADa%20de%20un%20agente%20en%20Costa%20Mujeres&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=agente-costa-mujeres';
 
+const WA_EN =
+  'https://wa.me/529988457224?text=COSTA%20MUJERES%20%E2%80%94%20I%20want%20to%20speak%20with%20a%20real%20estate%20agent%20in%20Costa%20Mujeres&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=real-estate-agent-costa-mujeres-en';
+
+const ES_PATH = '/agente-inmobiliario-costa-mujeres';
+const EN_PATH = '/en/real-estate-agent-costa-mujeres';
+
 const CM_REGEX = /Costa Mujeres|Playa Mujeres|Amada/i;
 
 const formatPrice = (usd: number) => {
@@ -17,17 +23,22 @@ const formatPrice = (usd: number) => {
 };
 
 const AgenteCostaMujeres = () => {
-  const { localePath } = useLanguage();
+  const { localePath, isEnglish } = useLanguage();
 
   const cmProperties = properties.filter(
     (p) => CM_REGEX.test(p.zone) || CM_REGEX.test(p.name),
   );
 
-  const h1 = 'Agente Inmobiliario en Costa Mujeres';
-  const seoTitle = 'Agente Inmobiliario en Costa Mujeres | Rivana Properties';
-  const seoDesc =
-    'Agente inmobiliario en Costa Mujeres: asesoría boutique para comprar departamentos y residencias frente al mar en Playa Mujeres y La Amada. Atención privada.';
-  const path = '/agente-inmobiliario-costa-mujeres';
+  const h1 = isEnglish
+    ? 'Real Estate Agent in Costa Mujeres'
+    : 'Agente Inmobiliario en Costa Mujeres';
+  const seoTitle = isEnglish
+    ? 'Real Estate Agent in Costa Mujeres | Rivana Properties'
+    : 'Agente Inmobiliario en Costa Mujeres | Rivana Properties';
+  const seoDesc = isEnglish
+    ? 'Buyer-side real estate agent in Costa Mujeres and Playa Mujeres. Private advisory for foreign buyers: bank trust, closing costs and honest rental numbers.'
+    : 'Agente inmobiliario en Costa Mujeres: asesoría boutique para comprar departamentos y residencias frente al mar en Playa Mujeres y La Amada. Atención privada.';
+  const path = isEnglish ? EN_PATH : ES_PATH;
   const url = `https://rivanaproperties.com${path}`;
 
   const schema = [
@@ -76,7 +87,7 @@ const AgenteCostaMujeres = () => {
 
   const CtaWhatsApp = ({ label }: { label?: string }) => (
     <a
-      href={WA}
+      href={isEnglish ? WA_EN : WA}
       target="_blank"
       rel="noopener noreferrer"
       className="inline-block uppercase transition-colors duration-300 hover:bg-[#b89a4a]"
@@ -101,9 +112,8 @@ const AgenteCostaMujeres = () => {
         description={seoDesc}
         path={path}
         schema={schema}
-        /* PENDIENTE: cuando exista /en/real-estate-agent-costa-mujeres, apuntar hreflangEn allí */
-        hreflangEs={path}
-        hreflangEn={path}
+        hreflangEs={ES_PATH}
+        hreflangEn={EN_PATH}
       />
 
       {/* ── Hero / Intro ── */}
