@@ -66,6 +66,10 @@ const entries: Entry[] = [
   { en: "/en/cancun/beachfront-condos-for-sale", priority: "0.7", changefreq: "weekly" },
   { en: "/en/advisory", priority: "0.6", changefreq: "monthly" },
 
+  // Geo service pages
+  { es: "/preventa-cancun", en: "/en/pre-construction-cancun", priority: "0.8", changefreq: "weekly" },
+  { es: "/agente-inmobiliario-costa-mujeres", en: "/en/real-estate-agent-costa-mujeres", priority: "0.7", changefreq: "monthly" },
+
   // Salvia building (Zona Hotelera)
   { es: "/zona-hotelera/edificio-salvia", en: "/en/hotel-zone/salvia-building", priority: "0.6", changefreq: "monthly" },
 

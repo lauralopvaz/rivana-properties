@@ -149,6 +149,7 @@ const AppRoutes = () => (
     <Route path="/en/listings" element={<Listings />} />
     <Route path="/en/presale" element={<PreSale />} />
     <Route path="/en/pre-construction-cancun" element={<PreventaCancun />} />
+    <Route path="/en/real-estate-agent-costa-mujeres" element={<AgenteCostaMujeres />} />
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/en/cancun/condos-for-sale" element={<CancunCondos />} />
@@ -164,6 +165,8 @@ const AppRoutes = () => (
     <Route path="/propiedades" element={<Navigate to="/listings" replace />} />
     <Route path="/en/preventa-cancun" element={<Navigate to="/en/pre-construction-cancun" replace />} />
     <Route path="/pre-construction-cancun" element={<Navigate to="/preventa-cancun" replace />} />
+    <Route path="/en/agente-inmobiliario-costa-mujeres" element={<Navigate to="/en/real-estate-agent-costa-mujeres" replace />} />
+    <Route path="/real-estate-agent-costa-mujeres" element={<Navigate to="/agente-inmobiliario-costa-mujeres" replace />} />
     <Route path="/nosotros" element={<Navigate to="/about" replace />} />
 
     {/* Legacy WordPress / old-site catch-all redirects */}
