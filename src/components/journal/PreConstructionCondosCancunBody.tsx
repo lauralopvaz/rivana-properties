@@ -178,7 +178,11 @@ export const PreConstructionCondosCancunBody = () => {
           <Link to={localePath('/journal/cancun-condos-for-sale')} className={gold}>
             Cancún condos for sale guide
           </Link>{' '}
-          for corridor-by-corridor pricing and buyer profiles.
+          for corridor-by-corridor pricing and buyer profiles, or browse the curated list of{' '}
+          <Link to="/preventa-cancun" className={gold}>
+            propiedades en preventa Cancún
+          </Link>
+          .
         </p>
       </Callout>
 
