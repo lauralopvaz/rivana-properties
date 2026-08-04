@@ -34,6 +34,7 @@ const SalviaBuilding = lazy(() => import("./pages/SalviaBuilding"));
 const SalviaUnit = lazy(() => import("./pages/SalviaUnit"));
 const PreventaCancun = lazy(() => import("./pages/PreventaCancun"));
 const AgenteCostaMujeres = lazy(() => import("./pages/AgenteCostaMujeres"));
+const FreeBuyerAgent = lazy(() => import("./pages/FreeBuyerAgent"));
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
