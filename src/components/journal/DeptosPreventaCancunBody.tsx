@@ -158,6 +158,13 @@ export const DeptosPreventaCancunBody = () => {
 
       <H2>Sigue explorando</H2>
       <p>
+        Puedes ver todas las{' '}
+        <Link to="/preventa-cancun" className={gold}>
+          propiedades en preventa Cancún
+        </Link>{' '}
+        con precios de lanzamiento y planes de pago vigentes.
+      </p>
+      <p>
         Si quieres profundizar, revisa nuestro análisis de{' '}
         <Link to={localePath('/journal/cancun-roi-rental-yield')} className={gold}>
           plusvalía y rendimientos de renta en Cancún 2026
