@@ -174,6 +174,50 @@ const Home = () => {
       {/* ── MONDRIAN SPOTLIGHT ── */}
       <MondrianSpotlight />
 
+      {/* ── PILLAR LINK: PREVENTA CANCÚN ── */}
+      <section className="py-12 bg-background">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <ScrollReveal>
+            <div className="border-t border-b border-border py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+              <div>
+                <p className="eyebrow mb-3">{language === 'es' ? 'Preventa 2026' : 'Pre-Construction 2026'}</p>
+                <h2 className="text-secondary text-2xl md:text-3xl mb-3">
+                  {language === 'es'
+                    ? 'Precios de lanzamiento antes de la entrega'
+                    : 'Launch prices before delivery'}
+                </h2>
+                <p className="font-body text-muted-foreground max-w-xl">
+                  {language === 'es' ? (
+                    <>
+                      Consulta nuestra selección curada de{' '}
+                      <Link to="/preventa-cancun" className="text-primary underline underline-offset-4">
+                        propiedades en preventa Cancún
+                      </Link>{' '}
+                      con planes de pago diferido y plusvalía proyectada del 15–33%.
+                    </>
+                  ) : (
+                    <>
+                      Browse our curated selection of{' '}
+                      <Link to="/en/pre-construction-cancun" className="text-primary underline underline-offset-4">
+                        pre-construction properties in Cancún
+                      </Link>{' '}
+                      with deferred payment plans and 15–33% projected appreciation.
+                    </>
+                  )}
+                </p>
+              </div>
+              <Link
+                to={language === 'es' ? '/preventa-cancun' : '/en/pre-construction-cancun'}
+                className="shrink-0 inline-flex items-center gap-2 text-sm font-body uppercase tracking-[3px] text-primary"
+              >
+                {language === 'es' ? 'propiedades en preventa Cancún' : 'pre-construction properties Cancún'}
+                <ArrowRightIcon className="w-3 h-3" />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ── FEATURED PROPERTIES ── */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
