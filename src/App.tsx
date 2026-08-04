@@ -32,6 +32,7 @@ const LaAmada = lazy(() => import("./pages/LaAmada"));
 const ImmediateDelivery = lazy(() => import("./pages/ImmediateDelivery"));
 const SalviaBuilding = lazy(() => import("./pages/SalviaBuilding"));
 const SalviaUnit = lazy(() => import("./pages/SalviaUnit"));
+const PreventaCancun = lazy(() => import("./pages/PreventaCancun"));
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
@@ -95,6 +96,7 @@ const AppRoutes = () => (
     <Route path="/about" element={<About />} />
     <Route path="/listings" element={<Listings />} />
     <Route path="/presale" element={<PreSale />} />
+    <Route path="/preventa-cancun" element={<PreventaCancun />} />
     <Route path="/es/presale" element={<Navigate to="/presale" replace />} />
     <Route path="/propiedad/:slug" element={<PropertyDetailNew locale="es" />} />
     <Route path="/aviso-de-privacidad" element={<PrivacyPolicy />} />
@@ -144,6 +146,7 @@ const AppRoutes = () => (
     <Route path="/en/about" element={<About />} />
     <Route path="/en/listings" element={<Listings />} />
     <Route path="/en/presale" element={<PreSale />} />
+    <Route path="/en/pre-construction-cancun" element={<PreventaCancun />} />
     <Route path="/en/property/:slug" element={<PropertyDetailNew locale="en" />} />
     <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/en/cancun/condos-for-sale" element={<CancunCondos />} />
