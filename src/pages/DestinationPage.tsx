@@ -877,6 +877,29 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
       </section>
 
       {/* Related Article — Mayakoba vs Puerto Cancún */}
+      {destinationKey === 'costa-mujeres' && language === 'es' && (
+        <section className="py-12">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+            <ScrollReveal>
+              <div className="border border-border p-6 flex items-center justify-between gap-4 bg-card hover:border-primary/30 transition-colors">
+                <div>
+                  <p className="eyebrow text-xs mb-1">Asesoría Local</p>
+                  <p className="font-display text-lg">
+                    Trabaja con un{' '}
+                    <Link to="/agente-inmobiliario-costa-mujeres" className="text-primary hover:underline">
+                      agente inmobiliario en Costa Mujeres
+                    </Link>
+                  </p>
+                </div>
+                <Link to="/agente-inmobiliario-costa-mujeres" className="text-primary font-body text-sm whitespace-nowrap hover:underline">
+                  Ver →
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
       {(destinationKey === 'mayakoba' || destinationKey === 'puerto-cancun') && !subPage && (
         <section className="py-12">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
