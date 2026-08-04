@@ -525,6 +525,27 @@ export default function LaAmada() {
                     </td>
                   ))}
                 </tr>
+                <tr className="border-t border-border">
+                  <td className="py-5 pr-6 font-body text-xs uppercase tracking-wider text-muted-foreground">
+                    {t("Contacto", "Contact")}
+                  </td>
+                  {compareUnits.map((u) => (
+                    <td key={u.id} className="py-5 px-4">
+                      <a
+                        href={unitWaUrl(u)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={t(
+                          `Escribir por WhatsApp sobre la unidad ${u.code} en La Amada`,
+                          `Message on WhatsApp about Unit ${u.code} at La Amada`
+                        )}
+                        className="inline-flex items-center justify-center h-10 px-4 bg-[#25D366] text-[#1C1C1C] font-body text-xs tracking-wide hover:brightness-95 transition"
+                      >
+                        {t(`WhatsApp · ${u.code}`, `WhatsApp · ${u.code}`)}
+                      </a>
+                    </td>
+                  ))}
+                </tr>
               </tbody>
             </table>
           </div>
