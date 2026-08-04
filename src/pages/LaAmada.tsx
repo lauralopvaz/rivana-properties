@@ -255,13 +255,6 @@ export default function LaAmada() {
 
   const path = isEnglish ? "/en/costa-mujeres/la-amada" : "/costa-mujeres/la-amada";
 
-  const waMessage = (unitCode: string) =>
-    encodeURIComponent(
-      isEnglish
-        ? `Hi Rivana, I'm interested in La Amada Unit ${unitCode} in Costa Mujeres.`
-        : `Hola Rivana, me interesa la unidad ${unitCode} en La Amada, Costa Mujeres.`
-    );
-
   const unitWaUrl = (u: Unit) =>
     `${WHATSAPP}?text=${encodeURIComponent(
       isEnglish
