@@ -214,6 +214,15 @@ const Home = () => {
                 <ArrowRightIcon className="w-3 h-3" />
               </Link>
             </div>
+            {language === 'es' && (
+              <p className="font-body text-muted-foreground text-sm mt-6">
+                ¿Buscas en el norte de Cancún? Habla con un{' '}
+                <Link to="/agente-inmobiliario-costa-mujeres" className="text-primary underline underline-offset-4">
+                  agente inmobiliario en Costa Mujeres
+                </Link>
+                .
+              </p>
+            )}
           </ScrollReveal>
         </div>
       </section>

@@ -33,6 +33,7 @@ const ImmediateDelivery = lazy(() => import("./pages/ImmediateDelivery"));
 const SalviaBuilding = lazy(() => import("./pages/SalviaBuilding"));
 const SalviaUnit = lazy(() => import("./pages/SalviaUnit"));
 const PreventaCancun = lazy(() => import("./pages/PreventaCancun"));
+const AgenteCostaMujeres = lazy(() => import("./pages/AgenteCostaMujeres"));
 import { useParams } from "react-router-dom";
 
 /** Redirect /property/:slug → /en/property/:slug */
@@ -97,6 +98,7 @@ const AppRoutes = () => (
     <Route path="/listings" element={<Listings />} />
     <Route path="/presale" element={<PreSale />} />
     <Route path="/preventa-cancun" element={<PreventaCancun />} />
+    <Route path="/agente-inmobiliario-costa-mujeres" element={<AgenteCostaMujeres />} />
     <Route path="/es/presale" element={<Navigate to="/presale" replace />} />
     <Route path="/propiedad/:slug" element={<PropertyDetailNew locale="es" />} />
     <Route path="/aviso-de-privacidad" element={<PrivacyPolicy />} />
