@@ -308,8 +308,8 @@ const AgenteCostaMujeres = () => {
                 claros: oferta y contrato, permiso de la Secretaría de Relaciones Exteriores, constitución del
                 fideicomiso, cierre ante notario y RFC para efectos fiscales. Explicamos cada etapa a detalle
                 en nuestra{' '}
-                <Link to="/journal/fideicomiso-comprar-propiedad-mexico-extranjeros" style={{ color: '#CFAE60' }}>
-                  guía del fideicomiso
+                <Link to="/en/journal/fideicomiso-mexico-bank-trust-explained" style={{ color: '#CFAE60' }}>
+                  guía del fideicomiso (EN)
                 </Link>
                 .
               </p>
