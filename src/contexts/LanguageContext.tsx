@@ -134,23 +134,27 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     if (isEnglish) {
       if (path === '/') return '/en';
       if (path === '/preventa-cancun') return '/en/pre-construction-cancun';
+      if (path === '/agente-inmobiliario-costa-mujeres') return '/en/real-estate-agent-costa-mujeres';
       // Translate ES route segments to EN equivalents
       const translated = path.replace(/^\/propiedad\//, '/property/');
       return `/en${translated}`;
     }
     if (path === '/en/pre-construction-cancun') return '/preventa-cancun';
+    if (path === '/en/real-estate-agent-costa-mujeres') return '/agente-inmobiliario-costa-mujeres';
     return path;
   };
 
   const switchLanguageUrl = () => {
     if (isEnglish) {
       if (location.pathname === '/en/pre-construction-cancun') return '/preventa-cancun';
+      if (location.pathname === '/en/real-estate-agent-costa-mujeres') return '/agente-inmobiliario-costa-mujeres';
       // Remove /en prefix and translate EN routes to ES equivalents
       const esPath = location.pathname.replace(/^\/en/, '') || '/';
       // /property/slug → /propiedad/slug
       return esPath.replace(/^\/property\//, '/propiedad/');
     }
     if (location.pathname === '/preventa-cancun') return '/en/pre-construction-cancun';
+    if (location.pathname === '/agente-inmobiliario-costa-mujeres') return '/en/real-estate-agent-costa-mujeres';
     // Add /en prefix and translate ES routes to EN equivalents
     const basePath = location.pathname === '/' ? '/en' : `/en${location.pathname}`;
     // /propiedad/slug → /en/property/slug
