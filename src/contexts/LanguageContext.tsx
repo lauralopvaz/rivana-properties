@@ -133,20 +133,24 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const localePath = (path: string) => {
     if (isEnglish) {
       if (path === '/') return '/en';
+      if (path === '/preventa-cancun') return '/en/pre-construction-cancun';
       // Translate ES route segments to EN equivalents
       const translated = path.replace(/^\/propiedad\//, '/property/');
       return `/en${translated}`;
     }
+    if (path === '/en/pre-construction-cancun') return '/preventa-cancun';
     return path;
   };
 
   const switchLanguageUrl = () => {
     if (isEnglish) {
+      if (location.pathname === '/en/pre-construction-cancun') return '/preventa-cancun';
       // Remove /en prefix and translate EN routes to ES equivalents
       const esPath = location.pathname.replace(/^\/en/, '') || '/';
       // /property/slug → /propiedad/slug
       return esPath.replace(/^\/property\//, '/propiedad/');
     }
+    if (location.pathname === '/preventa-cancun') return '/en/pre-construction-cancun';
     // Add /en prefix and translate ES routes to EN equivalents
     const basePath = location.pathname === '/' ? '/en' : `/en${location.pathname}`;
     // /propiedad/slug → /en/property/slug
