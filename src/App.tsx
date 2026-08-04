@@ -160,6 +160,8 @@ const AppRoutes = () => (
     <Route path="/property/:slug" element={<RedirectPropertyEN />} />
     <Route path="/en/propiedad/:slug" element={<RedirectToENProperty />} />
     <Route path="/propiedades" element={<Navigate to="/listings" replace />} />
+    <Route path="/en/preventa-cancun" element={<Navigate to="/en/pre-construction-cancun" replace />} />
+    <Route path="/pre-construction-cancun" element={<Navigate to="/preventa-cancun" replace />} />
     <Route path="/nosotros" element={<Navigate to="/about" replace />} />
 
     {/* Legacy WordPress / old-site catch-all redirects */}
