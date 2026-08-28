@@ -141,16 +141,34 @@ function getDifferentiator(property: PropertyDetail, locale: Locale): string {
   return desc.split('.')[0];
 }
 
+/** Zones that are part of greater Cancún (safe to append the city name). */
+const cancunZones = ['zona hotelera', 'costa mujeres', 'residencial cancún', 'residencial cancun'];
+
+function getZoneLabel(property: PropertyDetail, locale: Locale): string {
+  const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
+  const shortZone = zone.split(',')[0].trim();
+  const lower = shortZone.toLowerCase();
+  if (lower.includes('cancún') || lower.includes('cancun')) return shortZone;
+  if (cancunZones.includes(lower)) return `${shortZone} Cancún`;
+  return shortZone;
+}
+
 function getSeoTitle(property: PropertyDetail, locale: Locale): string {
   if (locale === 'es') {
     const override = seoTitleEsBySlug[property.slug];
     if (override) return override;
   }
-  const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
-  const shortZone = zone.split(',')[0].trim();
+  const zoneLabel = getZoneLabel(property, locale);
   const type = getPropertyType(property, locale);
-  const price = formatUSD(property.priceFromUSD);
-  return `${property.name} — ${type} desde ${price} | ${shortZone} Cancún | Rivana`;
+  const hasPrice = property.priceFromUSD > 0;
+  const priceLabel = hasPrice
+    ? locale === 'en'
+      ? ` from ${formatUSD(property.priceFromUSD)}`
+      : ` desde ${formatUSD(property.priceFromUSD)}`
+    : locale === 'en'
+      ? ' — Price on Request'
+      : ' — Precio a Consultar';
+  return `${property.name} — ${type}${priceLabel} | ${zoneLabel} | Rivana`;
 }
 
 function getSeoDescription(property: PropertyDetail, locale: Locale): string {
@@ -158,17 +176,19 @@ function getSeoDescription(property: PropertyDetail, locale: Locale): string {
     const override = seoDescEsBySlug[property.slug];
     if (override) return override;
   }
-  const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
-  const shortZone = zone.split(',')[0].trim();
+  const zoneLabel = getZoneLabel(property, locale);
   const differentiator = getDifferentiator(property, locale);
-  const price = formatUSD(property.priceFromUSD);
+  const hasPrice = property.priceFromUSD > 0;
   if (locale === 'en') {
-    const raw = `${property.name} in ${shortZone}. ${differentiator}. From ${price}. Personalized advisory with Rivana Properties.`;
+    const priceSentence = hasPrice ? `From ${formatUSD(property.priceFromUSD)}. ` : 'Price on request. ';
+    const raw = `${property.name} in ${zoneLabel}. ${differentiator}. ${priceSentence}Personalized advisory with Rivana Properties.`;
     return raw.length > 155 ? raw.slice(0, 152) + '...' : raw;
   }
-  const raw = `${property.name} en ${shortZone}. ${differentiator}. Desde ${price}. Asesoría personalizada con Rivana Properties.`;
+  const priceSentence = hasPrice ? `Desde ${formatUSD(property.priceFromUSD)}. ` : 'Precio a consultar. ';
+  const raw = `${property.name} en ${zoneLabel}. ${differentiator}. ${priceSentence}Asesoría personalizada con Rivana Properties.`;
   return raw.length > 155 ? raw.slice(0, 152) + '...' : raw;
 }
+
 
 interface PropertyPageProps {
   property: PropertyDetail;
