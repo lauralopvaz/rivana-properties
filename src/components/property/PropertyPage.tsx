@@ -142,7 +142,7 @@ function getDifferentiator(property: PropertyDetail, locale: Locale): string {
 }
 
 /** Zones that are part of greater Cancún (safe to append the city name). */
-const cancunZones = ['zona hotelera', 'costa mujeres', 'residencial cancún', 'residencial cancun'];
+const cancunZones = ['zona hotelera', 'hotel zone', 'costa mujeres', 'residencial cancún', 'residencial cancun', 'residential cancun'];
 
 function getZoneLabel(property: PropertyDetail, locale: Locale): string {
   const zone = locale === 'en' && property.zoneEn ? property.zoneEn : property.zone;
