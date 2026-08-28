@@ -201,6 +201,18 @@ const AppRoutes = () => (
       element={<Navigate to="/journal/invertir-en-preventa-cancun-riviera-maya-2026" replace />}
     />
 
+    {/* Legacy Canadian buyer guide slug → current bilingual slug */}
+    <Route
+      path="/journal/comprar-propiedad-mexico-canadienses-2026"
+      element={<Navigate to="/journal/buying-property-mexico-canadian-2026-guide" replace />}
+    />
+    <Route
+      path="/en/journal/comprar-propiedad-mexico-canadienses-2026"
+      element={<Navigate to="/en/journal/buying-property-mexico-canadian-2026-guide" replace />}
+    />
+
+
+
     {/* 404 */}
     <Route path="*" element={<NotFound />} />
   </Routes>

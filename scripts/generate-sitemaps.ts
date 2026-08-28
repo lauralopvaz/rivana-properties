@@ -115,8 +115,11 @@ const entries: Entry[] = [
     changefreq: "monthly",
   })),
 
-  // ES-only journal post (Canadian buyers)
-  { es: "/journal/comprar-propiedad-mexico-canadienses-2026", priority: "0.7", changefreq: "monthly" },
+  // Canadian buyers guide (bilingual, same slug)
+  { es: "/journal/buying-property-mexico-canadian-2026-guide", en: "/en/journal/buying-property-mexico-canadian-2026-guide", priority: "0.7", changefreq: "monthly" },
+
+  // ES-only broker guide
+  { es: "/journal/que-es-un-broker-inmobiliario-de-lujo-cancun", priority: "0.7", changefreq: "monthly", lastmod: "2026-07-16" },
 
   // ES-only Tier-1 cluster — transactional
   { es: "/journal/departamentos-en-preventa-cancun", priority: "0.8", changefreq: "monthly", lastmod: "2026-07-12" },
