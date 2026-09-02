@@ -70,7 +70,7 @@ export const ImmediateDeliveryCard = ({ unit, priority = false }: Props) => {
           >
             {language === 'es' ? 'Precio' : 'Price'}
           </span>
-          <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>
+          <span className="font-display text-[22px] font-bold" style={{ color: '#CFAE60' }}>
             {formatMXN(unit.priceMXN)}
           </span>
           {unit.priceNote && (
