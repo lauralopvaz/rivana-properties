@@ -524,7 +524,7 @@ const PreSale = () => {
                 <span style={{ fontFamily: "'Jost', sans-serif", fontSize: 10, color: GOLD, letterSpacing: '0.2em', paddingTop: 6 }}>{v.n}</span>
                 <div>
                   <h3 style={{ ...displayStyle('1.6rem') }}>{v.tt}</h3>
-                  <p style={{ ...bodyStyle, marginTop: 6, fontSize: 14 }}>{v.d}</p>
+                  <p style={{ ...bodyStyle, marginTop: 6, fontSize: 17 }}>{v.d}</p>
                 </div>
               </li>
             ))}
@@ -549,7 +549,7 @@ const PreSale = () => {
         <section style={{ padding: '96px 24px', maxWidth: 720, margin: '0 auto' }}>
           <p style={eyebrowStyle}>{c.unitsEye}</p>
           <h2 style={{ ...displayStyle('clamp(2rem,5vw,2.8rem)'), marginTop: 18 }}>{c.unitsTitle}</h2>
-          <p style={{ ...bodyStyle, marginTop: 16, fontSize: 14 }}>{c.unitsBody}</p>
+          <p style={{ ...bodyStyle, marginTop: 16, fontSize: 17 }}>{c.unitsBody}</p>
           <ul style={{ marginTop: 40, listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 20 }}>
             {c.units.map((u) => (
               <li key={u.name} style={{ background: CARD, border: `1px solid ${BORDER}`, padding: '28px 24px' }}>
@@ -557,7 +557,7 @@ const PreSale = () => {
                   <h3 style={{ ...displayStyle('1.6rem') }}>{u.name}</h3>
                   <span style={{ ...eyebrowStyle, fontSize: 10 }}>{c.unitBadge}</span>
                 </div>
-                <p style={{ ...bodyStyle, marginTop: 12, fontSize: 14 }}>{u.desc}</p>
+                <p style={{ ...bodyStyle, marginTop: 12, fontSize: 17 }}>{u.desc}</p>
                 <dl style={{ marginTop: 20, display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 12, borderTop: `1px solid ${BORDER}`, paddingTop: 16 }}>
                   {[
                     { k: c.unitInt, v: '50.72 m²' },
@@ -587,11 +587,11 @@ const PreSale = () => {
           <div style={{ position: 'relative', maxWidth: 720, margin: '0 auto' }}>
             <p style={eyebrowStyle}>{c.amenEye}</p>
             <h2 style={{ ...displayStyle('clamp(2rem,5vw,2.8rem)'), marginTop: 18 }}>{c.amenTitle}</h2>
-            <p style={{ ...bodyStyle, marginTop: 16, fontSize: 14 }}>{c.amenBody}</p>
+            <p style={{ ...bodyStyle, marginTop: 16, fontSize: 17 }}>{c.amenBody}</p>
             <div style={{ marginTop: 48, display: 'flex', flexDirection: 'column', gap: 40 }}>
               {c.amenGroups.map((g) => (
                 <div key={g.title}>
-                  <p style={{ ...eyebrowStyle, fontSize: 10, borderBottom: `1px solid ${GOLD}40`, paddingBottom: 8 }}>{g.title}</p>
+                  <p style={{ ...eyebrowStyle, fontSize: 13, borderBottom: `1px solid ${GOLD}40`, paddingBottom: 8 }}>{g.title}</p>
                   <ul style={{ marginTop: 18, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
                     {g.items.map((a) => (
                       <li key={a} style={{ display: 'flex', gap: 12, ...bodyStyle, color: INK, fontSize: 15 }}>
@@ -612,7 +612,7 @@ const PreSale = () => {
         <section style={{ padding: '96px 24px', maxWidth: 720, margin: '0 auto' }}>
           <p style={eyebrowStyle}>{c.invEye}</p>
           <h2 style={{ ...displayStyle('clamp(2rem,5vw,2.8rem)'), marginTop: 18 }}>{c.invTitle}</h2>
-          <p style={{ ...bodyStyle, marginTop: 16, fontSize: 14 }}>{c.invBody}</p>
+          <p style={{ ...bodyStyle, marginTop: 16, fontSize: 17 }}>{c.invBody}</p>
           <div style={{ marginTop: 40, display: 'flex', flexDirection: 'column', gap: 20 }}>
             {c.invRows.map((r) => (
               <div key={r.k} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 16, borderBottom: `1px solid ${BORDER}`, paddingBottom: 16 }}>
@@ -643,11 +643,11 @@ const PreSale = () => {
           <div style={{ maxWidth: 480, margin: '0 auto' }}>
             <p style={eyebrowStyle}>{c.formEye}</p>
             <h2 style={{ ...displayStyle('clamp(2rem,5vw,2.6rem)'), marginTop: 18 }}>{c.formTitle}</h2>
-            <p style={{ ...bodyStyle, marginTop: 16, fontSize: 14 }}>{c.formBody}</p>
+            <p style={{ ...bodyStyle, marginTop: 16, fontSize: 17 }}>{c.formBody}</p>
             {sent ? (
               <div style={{ marginTop: 40, border: `1px solid ${GOLD}80`, background: 'rgba(207,174,96,0.08)', padding: 32, textAlign: 'center' }}>
                 <p style={{ ...displayStyle('2rem'), color: GOLD }}>{c.fThanks}</p>
-                <p style={{ ...bodyStyle, marginTop: 12, fontSize: 14 }}>{c.fThanksBody}</p>
+                <p style={{ ...bodyStyle, marginTop: 12, fontSize: 17 }}>{c.fThanksBody}</p>
                 <a href={waUrl(L === 'es' ? 'Hola, acabo de registrarme para recibir información de Mondrian Residences.' : 'Hi, I just registered to receive information about Mondrian Residences.')} target="_blank" rel="noopener noreferrer" style={{ ...btnGold, background: '#25D366', color: '#fff', marginTop: 24 }}>{c.fContinue}</a>
               </div>
             ) : (
@@ -672,7 +672,7 @@ const PreSale = () => {
                 <button type="submit" disabled={submitting} style={{ ...btnGold, width: '100%', marginTop: 12, padding: '20px 24px', opacity: submitting ? 0.6 : 1, cursor: submitting ? 'wait' : 'pointer' }}>
                   {submitting ? (L === 'es' ? 'Enviando…' : 'Sending…') : c.fSubmit}
                 </button>
-                <p style={{ ...eyebrowStyle, textTransform: 'none', letterSpacing: 0, fontSize: 11, color: 'rgba(28,28,28,0.45)', textAlign: 'center', lineHeight: 1.6, fontWeight: 300 }}>{c.fPrivacy}</p>
+                <p style={{ ...eyebrowStyle, textTransform: 'none', letterSpacing: 0, fontSize: 14, color: 'rgba(28,28,28,0.45)', textAlign: 'center', lineHeight: 1.6, fontWeight: 300 }}>{c.fPrivacy}</p>
               </form>
             )}
           </div>
@@ -689,7 +689,7 @@ const PreSale = () => {
                   <span style={{ ...displayStyle('1.15rem'), lineHeight: 1.35 }}>{f.q}</span>
                   <span aria-hidden style={{ color: GOLD, fontSize: 22, flexShrink: 0, fontFamily: "'Cormorant Garamond', serif" }}>+</span>
                 </summary>
-                <p style={{ ...bodyStyle, marginTop: 14, fontSize: 14 }}>{f.a}</p>
+                <p style={{ ...bodyStyle, marginTop: 14, fontSize: 17 }}>{f.a}</p>
               </details>
             ))}
           </div>
@@ -753,7 +753,7 @@ function CTABand({ data, L, dark = false }: { data: { eye: string; title: string
       <div style={{ maxWidth: 520, margin: '0 auto', textAlign: 'center' }}>
         <p style={eyebrowStyle}>{data.eye}</p>
         <h2 style={{ ...displayStyle('clamp(1.8rem,4.6vw,2.4rem)'), color: fg, marginTop: 16 }}>{data.title}</h2>
-        <p style={{ ...bodyStyle, color: sub, marginTop: 16, fontSize: 14, maxWidth: 380, marginLeft: 'auto', marginRight: 'auto' }}>{data.body}</p>
+        <p style={{ ...bodyStyle, color: sub, marginTop: 16, fontSize: 17, maxWidth: 380, marginLeft: 'auto', marginRight: 'auto' }}>{data.body}</p>
         <div style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'center' }}>
           <a
             href={waUrl(L === 'es' ? `Hola, ${data.primary.toLowerCase()} en Mondrian Residences Grand Island.` : `Hi, ${data.primary.toLowerCase()} at Mondrian Residences Grand Island.`)}
