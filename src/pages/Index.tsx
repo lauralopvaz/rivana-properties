@@ -155,7 +155,7 @@ const Home = () => {
           </div>
           <p
             className="font-body animate-fade-up text-[hsl(var(--pearl))]/80"
-            style={{ animationDelay: '1s', fontSize: '13px', letterSpacing: '0.5px', marginTop: '20px', textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
+            style={{ animationDelay: '1s', fontSize: '16px', letterSpacing: '0.5px', marginTop: '20px', textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
           >
             {language === 'es'
               ? 'Propiedades desde $250K USD en Cancún · Puerto Cancún · Costa Mujeres'
