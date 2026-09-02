@@ -6,7 +6,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { destinations } from '@/data/destinations';
 import { journalArticles } from '@/data/journal-articles';
-import { ArrowRightIcon, BedIcon, RulerIcon, DollarIcon, WavesIcon, GolfIcon, SparklesIcon, AnchorIcon, SunIcon, SwimIcon } from '@/components/icons';
+import { ArrowRightIcon } from '@/components/icons';
 import { ContactSection } from '@/components/home/ContactSection';
 import { AllySection } from '@/components/home/AllySection';
 import { MondrianSpotlight } from '@/components/home/MondrianSpotlight';
@@ -28,17 +28,6 @@ import destCancunCentro from '@/assets/cuore-cumbres-hero.jpg';
 import destTulum from '@/assets/dest-tulum.jpg';
 import destPlayaDelCarmen from '@/assets/village-blu-hero.jpg';
 
-// Property images
-const propMondrian = '/images/mondrian/mondrian-hero.jpg';
-import dhamarPrincipal from '@/assets/dhamar-principal.jpg';
-import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
-import reserveHero from '@/assets/reserve-mayakoba-fachada-alberca-jardin.jpg';
-import vellmariHero from '@/assets/vellmari-alberca-fachada-torres.jpg';
-import soleBluHero from '@/assets/sole-blu-fachada-principal-atardecer.jpg';
-import bayViewGrandHero from '@/assets/bvg-rooftop-pool-laguna.jpg';
-
-
-
 const destinationImages: Record<string, string> = {
   'zona-hotelera': destZonaHotelera,
   'puerto-cancun': destPuertoCancun,
@@ -48,28 +37,6 @@ const destinationImages: Record<string, string> = {
   'cancun-centro': destCancunCentro,
   'tulum': destTulum,
   'playa-del-carmen': destPlayaDelCarmen,
-};
-
-
-
-const featuredProperties = [
-  { name: 'Mondrian Residences at Grand Island Cancun', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 165, price: '$514K', amenities: ['ocean', 'pool', 'spa'], image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
-  { name: 'Dhamar', zone: { es: 'Costa Mujeres, Cancún', en: 'Costa Mujeres, Cancún' }, beds: 3, area: 178, price: '$248K', amenities: ['ocean', 'pool', 'spa'], image: dhamarPrincipal, slug: 'dhamar-costa-mujeres' },
-  { name: 'SLS Ocean Beach', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 3, area: 356, price: '$1.6M', amenities: ['ocean', 'marina', 'golf'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
-  { name: 'The Reserve at Mayakoba', zone: { es: 'Mayakoba, Riviera Maya', en: 'Mayakoba, Riviera Maya' }, beds: 4, area: 660, price: '$1.1M', amenities: ['golf', 'spa', 'jungle'], image: reserveHero, slug: 'the-reserve-at-mayakoba' },
-  { name: 'Bay View Grand at Grand Island', zone: { es: 'Zona Hotelera, Cancún', en: 'Hotel Zone, Cancún' }, beds: 3, area: 451, price: '$586K', amenities: ['ocean', 'marina', 'golf'], image: bayViewGrandHero, slug: 'bay-view-grand-grand-island' },
-  { name: 'Vellmari Grand Living', zone: { es: 'Puerto Cancún, Cancún', en: 'Puerto Cancún, Cancún' }, beds: 5, area: 714, price: '$14.8M MXN', amenities: ['marina', 'pool', 'spa'], image: vellmariHero, slug: 'vellmari-grand-living' },
-  { name: 'Sole Blu Ocean Living', zone: { es: 'Puerto Morelos, Riviera Maya', en: 'Puerto Morelos, Riviera Maya' }, beds: 2, area: 122, price: '$295K', amenities: ['ocean', 'pool', 'sunset'], image: soleBluHero, slug: 'sole-blu-ocean-living' },
-];
-
-const amenityIcons: Record<string, { icon: typeof WavesIcon; label: { es: string; en: string } }> = {
-  ocean: { icon: WavesIcon, label: { es: 'Vista al Mar', en: 'Ocean View' } },
-  pool: { icon: SwimIcon, label: { es: 'Alberca', en: 'Pool' } },
-  spa: { icon: SparklesIcon, label: { es: 'Spa', en: 'Spa' } },
-  marina: { icon: AnchorIcon, label: { es: 'Marina', en: 'Marina' } },
-  golf: { icon: GolfIcon, label: { es: 'Golf', en: 'Golf' } },
-  sunset: { icon: SunIcon, label: { es: 'Atardecer', en: 'Sunset' } },
-  jungle: { icon: SunIcon, label: { es: 'Selva', en: 'Jungle' } },
 };
 
 const Home = () => {
@@ -238,63 +205,6 @@ const Home = () => {
               )}
             </p>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ── FEATURED PROPERTIES ── */}
-      <section className="py-16 lg:py-20 bg-background">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">{t('section.featured')}</p>
-            <h2 className="mb-16 text-secondary">{t('section.featuredTitle')}</h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {featuredProperties.slice(0, 6).map((p, i) => {
-              const zoneName = typeof p.zone === 'string' ? p.zone : p.zone[language];
-              return (
-                <ScrollReveal key={p.name} delay={i * 100}>
-                  <Link to={localePath(`/propiedad/${p.slug}`)} className="group block bg-card rounded-sm overflow-hidden shadow-[0_2px_16px_hsl(var(--deep-black)/0.06)] border border-border">
-                    <div className="aspect-[16/10] overflow-hidden">
-                      <img
-                        src={p.image}
-                        alt={`${p.name} — ${zoneName}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <span className="eyebrow text-xs">{zoneName}</span>
-                      <h3 className="text-xl mt-2 mb-4 text-secondary">{p.name}</h3>
-                      <div className="flex items-center gap-5 text-sm text-muted-foreground font-body mb-4">
-                        <span className="flex items-center gap-1.5"><BedIcon className="w-4 h-4" /> {p.beds} {language === 'es' ? 'Rec.' : 'Beds'}</span>
-                        <span className="flex items-center gap-1.5"><RulerIcon className="w-4 h-4" /> {p.area} m²</span>
-                        <span className="flex items-center gap-1.5 font-bold"><DollarIcon className="w-4 h-4" /> {p.price}</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          {p.amenities.map((a) => {
-                            const amenity = amenityIcons[a];
-                            if (!amenity) return null;
-                            const Icon = amenity.icon;
-                            return (
-                              <span key={a} className="flex items-center gap-1 text-xs text-primary font-body">
-                                <Icon className="w-3.5 h-3.5" />
-                                {amenity.label[language]}
-                              </span>
-                            );
-                          })}
-                        </div>
-                        <span className="text-sm text-primary font-body flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                          {t('card.view')} <ArrowRightIcon className="w-3 h-3" />
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                </ScrollReveal>
-              );
-            })}
-          </div>
         </div>
       </section>
 
