@@ -132,13 +132,13 @@ const Home = () => {
           <h1 className="animate-fade-up home-hero-h1 text-[hsl(var(--pearl))]" style={{ animationDelay: '0.4s', fontWeight: 600, textShadow: '0 2px 24px rgba(0,0,0,0.5)', fontSize: 'clamp(3rem, 5vw, 5rem)', marginBottom: '12px' }}>
             {language === 'es' ? 'Tu broker en la Riviera Maya' : 'Your broker in the Riviera Maya'}
           </h1>
-          <p className="font-body text-[hsl(var(--pearl))]/90 max-w-2xl mx-auto animate-fade-up home-hero-subtitle" style={{ animationDelay: '0.6s', fontSize: '24px', fontWeight: 400, textShadow: '0 1px 10px rgba(0,0,0,0.5)', marginBottom: '0' }}>
+          <p className="font-body text-[hsl(var(--pearl))]/90 max-w-3xl mx-auto animate-fade-up home-hero-subtitle" style={{ animationDelay: '0.6s', fontSize: 'clamp(22px, 2.4vw, 32px)', fontWeight: 400, lineHeight: 1.45, textShadow: '0 1px 10px rgba(0,0,0,0.5)', marginBottom: '0' }}>
             {language === 'es'
               ? 'Te acompañamos en cada paso: selección premium, proceso legal y las mejores oportunidades frente al mar'
               : 'We guide you every step of the way: premium selection, legal process, and the best oceanfront opportunities'}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up home-hero-buttons" style={{ animationDelay: '0.8s', marginTop: '36px' }}>
-            <Button variant="gold" size="lg" className="rounded-none text-[hsl(var(--deep-black))]" asChild>
+            <Button variant="gold" size="lg" className="rounded-none text-[hsl(var(--deep-black))] h-16 px-12" style={{ fontSize: '19px' }} asChild>
               <a
                 href={language === 'es'
                   ? 'https://wa.me/529988457224?text=HOME%20HERO%20%E2%80%94%20Quiero%20iniciar%20mi%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=home-hero-es'
@@ -149,7 +149,7 @@ const Home = () => {
                 {language === 'es' ? 'Inicia tu asesoría →' : 'Start your advisory →'}
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="rounded-none border-[hsl(var(--pearl))] text-[hsl(var(--pearl))] hover:bg-[hsl(var(--pearl))]/10" asChild>
+            <Button variant="outline" size="lg" className="rounded-none border-[hsl(var(--pearl))] text-[hsl(var(--pearl))] hover:bg-[hsl(var(--pearl))]/10 h-16 px-12" style={{ fontSize: '19px' }} asChild>
               <Link to={localePath('/listings')}>{language === 'es' ? 'Explorar propiedades' : 'Explore properties'}</Link>
             </Button>
           </div>
