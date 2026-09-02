@@ -72,7 +72,7 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
             >
               {language === 'es' ? 'Precio' : 'Asking Price'}
             </span>
-            <span className="font-display text-[22px]" style={{ color: '#1C1C1C' }}>
+            <span className="font-display text-[22px] font-bold" style={{ color: '#1C1C1C' }}>
               {formatUSD(unit.askingPriceUSD)}
             </span>
           </div>
@@ -83,7 +83,7 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
             >
               {language === 'es' ? 'ROI bruto' : 'Gross ROI'}
             </span>
-            <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>
+            <span className="font-display text-[22px] font-bold" style={{ color: '#CFAE60' }}>
               {unit.grossRoiPct.toFixed(2)}%
             </span>
           </div>

@@ -269,7 +269,7 @@ const Home = () => {
                       <div className="flex items-center gap-5 text-sm text-muted-foreground font-body mb-4">
                         <span className="flex items-center gap-1.5"><BedIcon className="w-4 h-4" /> {p.beds} {language === 'es' ? 'Rec.' : 'Beds'}</span>
                         <span className="flex items-center gap-1.5"><RulerIcon className="w-4 h-4" /> {p.area} m²</span>
-                        <span className="flex items-center gap-1.5"><DollarIcon className="w-4 h-4" /> {p.price}</span>
+                        <span className="flex items-center gap-1.5 font-bold"><DollarIcon className="w-4 h-4" /> {p.price}</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
