@@ -361,10 +361,7 @@ export default function LaAmada() {
               <article key={u.id} className="bg-background p-8 lg:p-12 flex flex-col">
                 <div className="flex items-start justify-between mb-6">
                   <div>
-                    <p className="font-body text-xs tracking-[0.3em] uppercase mb-2" style={{ color: "#CFAE60" }}>
-                      {t("Unidad", "Unit")} {u.code}
-                    </p>
-                    <h3 className="font-display font-light" style={{ fontSize: "34px", lineHeight: 1.1 }}>
+                    <h3 className="font-display font-light" style={{ fontSize: "34px", lineHeight: 1.1, color: "#CFAE60" }}>
                       {u.name[language]}
                     </h3>
                     <p className="font-body font-light text-muted-foreground mt-2" style={{ fontSize: "14px" }}>
