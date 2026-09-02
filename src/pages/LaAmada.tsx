@@ -439,7 +439,7 @@ export default function LaAmada() {
 
                 <ul className="space-y-2 mb-8">
                   {u.highlights[language].slice(0, 5).map((h) => (
-                    <li key={h} className="flex gap-3 font-body font-light" style={{ fontSize: "14px", lineHeight: 1.55 }}>
+                    <li key={h} className="flex gap-3 font-body" style={{ fontSize: "17px", lineHeight: 1.6 }}>
                       <Check className="w-4 h-4 mt-1 shrink-0" style={{ color: "#CFAE60" }} />
                       <span>{h}</span>
                     </li>
@@ -447,24 +447,25 @@ export default function LaAmada() {
                 </ul>
 
                 <div className="mt-auto pt-6 border-t border-border">
-                  <div className="flex items-baseline justify-between mb-2">
-                    <span className="font-body text-xs uppercase tracking-wider text-muted-foreground">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                    <span className="font-body uppercase tracking-wider text-muted-foreground" style={{ fontSize: "14px", fontWeight: 700 }}>
                       {t("Desde", "From")}
                     </span>
-                    <span className="font-body text-xs uppercase tracking-wider" style={{ color: "#CFAE60" }}>
+                    <span className="font-body uppercase tracking-wider" style={{ color: "#CFAE60", fontSize: "14px", fontWeight: 700 }}>
                       {u.status[language]}
                     </span>
                   </div>
                   <div className="flex items-baseline gap-3 mb-6">
-                    <span className="font-display font-medium" style={{ fontSize: "34px" }}>
+                    <span className="font-display font-bold" style={{ fontSize: "34px" }}>
                       {formatMXN(u.priceMXN)}
                     </span>
                     {u.priceLabel && (
-                      <span className="font-body text-xs text-muted-foreground line-through">
+                      <span className="font-body text-muted-foreground line-through" style={{ fontSize: "16px" }}>
                         {u.priceLabel[language]}
                       </span>
                     )}
                   </div>
+
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
                       href={unitWaUrl(u)}
