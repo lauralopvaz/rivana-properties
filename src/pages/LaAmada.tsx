@@ -323,8 +323,8 @@ export default function LaAmada() {
           "La Amada Residences · Costa Mujeres | Rivana Properties"
         )}
         description={t(
-          "4 residencias exclusivas en La Amada, Costa Mujeres. Penthouse, lock-off y suites frente al Caribe. Desde $9.55M MXN. Tu inversión, tu legado.",
-          "4 exclusive residences at La Amada, Costa Mujeres. Penthouse, lock-off and seaside suites on the Caribbean. From $9.55M MXN. Your investment, your legacy."
+          "5 residencias exclusivas en La Amada, Costa Mujeres. Selección Premium por Rivana. Penthouse, lock-off y suites frente al Caribe. Desde $9.55M MXN.",
+          "5 exclusive residences at La Amada, Costa Mujeres. Premium Selection by Rivana. Penthouse, lock-off and seaside suites on the Caribbean. From $9.55M MXN."
         )}
         path={path}
         hreflangEs="/costa-mujeres/la-amada"
@@ -351,8 +351,8 @@ export default function LaAmada() {
           </h1>
           <p className="font-body font-light max-w-2xl mb-10" style={{ fontSize: "19px", lineHeight: 1.6 }}>
             {t(
-              "Cinco residencias distinguidas dentro del enclave más exclusivo del Caribe Mexicano. Selección curada por Rivana — tu inversión, tu legado.",
-              "Five distinguished residences within the Mexican Caribbean's most exclusive enclave. Curated by Rivana — your investment, your legacy."
+              "Cinco residencias distinguidas dentro del complejo más exclusivo del Caribe Mexicano. Selección Premium por Rivana.",
+              "Five distinguished residences within the Mexican Caribbean's most exclusive complex. Premium Selection by Rivana."
             )}
           </p>
           <div className="flex flex-wrap gap-4">
