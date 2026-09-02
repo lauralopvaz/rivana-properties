@@ -42,7 +42,7 @@ const units: Unit[] = [
     bedrooms: { es: "1 Master Suite", en: "1 Master Suite" },
     bathrooms: "1",
     parking: "2",
-    view: { es: "Selva / Laguna", en: "Jungle / Lagoon" },
+    view: { es: "Selva ", en: "Jungle / Lagoon" },
     priceMXN: 9550000,
     status: { es: "Sin amueblar — tu visión", en: "Unfurnished — your vision" },
     furnished: false,
