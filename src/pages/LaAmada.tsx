@@ -34,7 +34,7 @@ const units: Unit[] = [
   {
     id: "305l",
     code: "305L",
-    name: { es: "Refugio en la Selva", en: "Jungle Retreat" },
+    name: { es: "Departamento 305L", en: "Residence 305L" },
     tagline: { es: "1 Recámara · Terraza Privada", en: "1 Bedroom · Private Terrace" },
     area: "169 m²",
     interior: "123 m²",
@@ -76,7 +76,7 @@ const units: Unit[] = [
   {
     id: "205m",
     code: "205M",
-    name: { es: "Santuario Frente al Mar", en: "Seaside Sanctuary" },
+    name: { es: "Departamento 205M", en: "Residence 205M" },
     tagline: { es: "1 Recámara · Vista al Caribe", en: "1 Bedroom · Caribbean View" },
     area: "105 m²",
     interior: "105 m²",
@@ -118,7 +118,7 @@ const units: Unit[] = [
   {
     id: "2br",
     code: "2BR",
-    name: { es: "Residencia Familiar Lock-Off", en: "Family Lock-Off Haven" },
+    name: { es: "Departamento 2BR", en: "Residence 2BR" },
     tagline: { es: "2 Recámaras · 220 m² · Lock-Off", en: "2 Bedrooms · 220 m² · Lock-Off" },
     area: "220 m²",
     interior: "180 m²",
@@ -163,7 +163,7 @@ const units: Unit[] = [
   {
     id: "ph07m",
     code: "PH 07M",
-    name: { es: "Penthouse de Lujo", en: "Luxury Penthouse" },
+    name: { es: "Penthouse 07M", en: "Penthouse 07M" },
     tagline: { es: "Master Suite · Rooftop Privado", en: "Master Suite · Private Rooftop" },
     area: "202 m²",
     interior: "172 m²",
