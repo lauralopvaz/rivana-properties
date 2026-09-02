@@ -663,3 +663,15 @@
     object-position: center 60% !important;
   }
 }
+
+/* === Paragraph font-size bump (+3px) across the whole site ===
+   Unlayered so it overrides Tailwind utility classes (text-base, text-lg, …)
+   which live in @layer utilities. Inline styles still win over these, so
+   inline-sized paragraphs are bumped separately in their components. */
+p { font-size: 19px; }
+p.text-xs   { font-size: 15px; }
+p.text-sm   { font-size: 17px; }
+p.text-base { font-size: 19px; }
+p.text-lg   { font-size: 21px; }
+p.text-xl   { font-size: 23px; }
+p.text-2xl  { font-size: 27px; }

@@ -96,7 +96,7 @@ export default function SalviaUnit() {
             {unit.name[language]}{' '}
             <em className="not-italic text-[#CFAE60]">· {unit.code}</em>
           </h1>
-          <p className="font-body font-light max-w-2xl mb-6" style={{ fontSize: '18px', lineHeight: 1.6 }}>
+          <p className="font-body font-light max-w-2xl mb-6" style={{ fontSize: '21px', lineHeight: 1.6 }}>
             {unit.subtitle[language]}
           </p>
           <div className="flex flex-wrap gap-3">
@@ -279,7 +279,7 @@ export default function SalviaUnit() {
           <h2 className="font-display font-light mb-6" style={{ fontSize: 'clamp(28px, 3.8vw, 44px)' }}>
             {isEnglish ? `Acquire ${unit.name.en}` : `Adquiere el ${unit.name.es}`}
           </h2>
-          <p className="font-body font-light text-white/75 mb-10" style={{ fontSize: '17px' }}>
+          <p className="font-body font-light text-white/75 mb-10" style={{ fontSize: '20px' }}>
             {isEnglish
               ? 'Talk to a Rivana advisor to review the full data room, financial statements and Airbnb history.'
               : 'Habla con un asesor Rivana para revisar el data room completo, los estados financieros y el historial Airbnb.'}

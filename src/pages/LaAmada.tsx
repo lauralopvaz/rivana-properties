@@ -349,7 +349,7 @@ export default function LaAmada() {
           <h1 className="font-display font-light leading-[0.95] mb-6" style={{ fontSize: "clamp(44px, 7vw, 92px)" }}>
             La Amada Residences
           </h1>
-          <p className="font-body font-light max-w-2xl mb-10" style={{ fontSize: "19px", lineHeight: 1.6 }}>
+          <p className="font-body font-light max-w-2xl mb-10" style={{ fontSize: "22px", lineHeight: 1.6 }}>
             {t(
               "Cinco residencias distinguidas dentro del complejo más exclusivo del Caribe Mexicano. Selección Premium por Rivana.",
               "Five distinguished residences within the Mexican Caribbean's most exclusive complex. Premium Selection by Rivana."
@@ -386,7 +386,7 @@ export default function LaAmada() {
               "Five residences. One timeless Caribbean vision."
             )}
           </h2>
-          <p className="font-body font-light text-muted-foreground" style={{ fontSize: "18px", lineHeight: 1.75 }}>
+          <p className="font-body font-light text-muted-foreground" style={{ fontSize: "21px", lineHeight: 1.75 }}>
             {t(
               "De un refugio sobre la selva a un penthouse frente al mar, cada residencia en La Amada ofrece una expresión distinta del lujo caribeño — todas con acceso al club de playa privado, marina y amenidades de cinco estrellas.",
               "From a jungle-top retreat to a beachfront penthouse, each La Amada residence offers a distinct expression of Caribbean luxury — all with access to the private beach club, marina and five-star amenities."
@@ -406,7 +406,7 @@ export default function LaAmada() {
                     <h3 className="font-display font-light" style={{ fontSize: "34px", lineHeight: 1.1, color: "#CFAE60" }}>
                       {u.name[language]}
                     </h3>
-                    <p className="font-body font-light text-muted-foreground mt-2" style={{ fontSize: "14px" }}>
+                    <p className="font-body font-light text-muted-foreground mt-2" style={{ fontSize: "17px" }}>
                       {u.tagline[language]}
                     </p>
                   </div>
@@ -433,7 +433,7 @@ export default function LaAmada() {
                   <Stat label={t("Vista", "View")} value={u.view[language]} />
                 </div>
 
-                <p className="font-body font-light text-muted-foreground mb-6" style={{ fontSize: "15px", lineHeight: 1.7 }}>
+                <p className="font-body font-light text-muted-foreground mb-6" style={{ fontSize: "18px", lineHeight: 1.7 }}>
                   {u.description[language]}
                 </p>
 
@@ -508,7 +508,7 @@ export default function LaAmada() {
             <h2 className="font-display font-light mb-4" style={{ fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.15 }}>
               {t("Lado a lado", "Side by side")}
             </h2>
-            <p className="font-body font-light text-muted-foreground" style={{ fontSize: "16px", lineHeight: 1.7 }}>
+            <p className="font-body font-light text-muted-foreground" style={{ fontSize: "19px", lineHeight: 1.7 }}>
               {selected.length > 0
                 ? t(
                     `Mostrando ${selected.length} unidades seleccionadas. Desmarca para ver todas.`,
@@ -597,7 +597,7 @@ export default function LaAmada() {
               <h2 className="font-display font-light mb-6" style={{ fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.15 }}>
                 {t("Amenidades La Amada", "La Amada amenities")}
               </h2>
-              <p className="font-body font-light text-muted-foreground" style={{ fontSize: "17px", lineHeight: 1.75 }}>
+              <p className="font-body font-light text-muted-foreground" style={{ fontSize: "20px", lineHeight: 1.75 }}>
                 {t(
                   "Acceso completo al club de playa privado, marina y experiencias resort de cinco estrellas — todo dentro de una de las comunidades más reservadas del Caribe Mexicano.",
                   "Full access to the private beach club, marina and five-star resort experiences — all within one of the most reserved communities on the Mexican Caribbean."
@@ -625,7 +625,7 @@ export default function LaAmada() {
           <h2 className="font-display font-light mb-8" style={{ fontSize: "clamp(32px, 5vw, 56px)", lineHeight: 1.1 }}>
             {t("Reserva tu residencia en La Amada", "Reserve your La Amada residence")}
           </h2>
-          <p className="font-body font-light text-white/70 mb-12 max-w-2xl mx-auto" style={{ fontSize: "17px", lineHeight: 1.7 }}>
+          <p className="font-body font-light text-white/70 mb-12 max-w-2xl mx-auto" style={{ fontSize: "20px", lineHeight: 1.7 }}>
             {t(
               "Cada consulta es atendida personalmente por un asesor Rivana — no un chatbot, no un call center.",
               "Every inquiry is handled personally by a Rivana advisor — not a chatbot, not a call center."
@@ -661,7 +661,7 @@ export default function LaAmada() {
 const Stat = ({ label, value }: { label: string; value: string }) => (
   <div>
     <p className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-1">{label}</p>
-    <p className="font-body font-light" style={{ fontSize: "14px" }}>
+    <p className="font-body font-light" style={{ fontSize: "17px" }}>
       {value}
     </p>
   </div>
