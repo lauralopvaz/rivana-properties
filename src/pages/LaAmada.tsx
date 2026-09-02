@@ -536,7 +536,7 @@ export default function LaAmada() {
                   ))}
                 </tr>
               </thead>
-              <tbody className="font-body font-light" style={{ fontSize: "14px" }}>
+              <tbody className="font-body" style={{ fontSize: "17px" }}>
                 <Row label={t("Área total", "Total area")} values={compareUnits.map((u) => u.area)} />
                 <Row label={t("Interior", "Interior")} values={compareUnits.map((u) => u.interior)} />
                 <Row label={t("Exterior", "Outdoor")} values={compareUnits.map((u) => u.outdoor[language])} />
@@ -551,11 +551,11 @@ export default function LaAmada() {
                 />
                 <Row label={t("Ideal para", "Best for")} values={compareUnits.map((u) => u.bestFor[language])} />
                 <tr className="border-t border-foreground/20">
-                  <td className="py-5 pr-6 font-body text-xs uppercase tracking-wider text-muted-foreground">
+                  <td className="py-5 pr-6 font-body uppercase tracking-wider text-muted-foreground" style={{ fontSize: "14px", fontWeight: 600 }}>
                     {t("Precio", "Price")}
                   </td>
                   {compareUnits.map((u) => (
-                    <td key={u.id} className="py-5 px-4 font-display font-light" style={{ fontSize: "20px", color: "#CFAE60" }}>
+                    <td key={u.id} className="py-5 px-4 font-display font-light" style={{ fontSize: "22px", color: "#CFAE60", fontWeight: 600 }}>
                       {formatMXN(u.priceMXN)}
                     </td>
                   ))}
@@ -607,7 +607,7 @@ export default function LaAmada() {
             </div>
             <ul className="grid grid-cols-2 gap-x-6 gap-y-4">
               {amenities[language].map((a) => (
-                <li key={a} className="flex gap-3 font-body font-light" style={{ fontSize: "15px" }}>
+                <li key={a} className="flex gap-3 font-body" style={{ fontSize: "17px" }}>
                   <span className="w-1 h-1 mt-3 rounded-full shrink-0" style={{ background: "#CFAE60" }} />
                   {a}
                 </li>
