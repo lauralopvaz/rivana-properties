@@ -673,7 +673,7 @@ const Stat = ({ label, value }: { label: string; value: string }) => (
 
 const Row = ({ label, values }: { label: string; values: string[] }) => (
   <tr className="border-b border-border">
-    <td className="py-4 pr-6 font-body text-xs uppercase tracking-wider text-muted-foreground align-top">{label}</td>
+    <td className="py-4 pr-6 font-body uppercase tracking-wider text-muted-foreground align-top" style={{ fontSize: "14px", fontWeight: 600 }}>{label}</td>
     {values.map((v, i) => (
       <td key={i} className="py-4 px-4 align-top">
         {v}
