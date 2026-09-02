@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { LA_AMADA_HERO_IMAGE } from "@/data/immediate-delivery";
 
-type UnitId = "305l" | "205m" | "2br" | "ph07m";
+type UnitId = "305l" | "205m" | "2br" | "a4203" | "ph07m";
 
 interface Unit {
   id: UnitId;
@@ -161,6 +161,48 @@ const units: Unit[] = [
     secondaryCta: { es: "Tu Refugio Familiar Caribeño", en: "Own Your Caribbean Family Haven" },
   },
   {
+    id: "a4203",
+    code: "A4-203",
+    name: { es: "Departamento A4-203", en: "Residence A4-203" },
+    tagline: { es: "3 Recámaras · Vista al Mar · 301 m²", en: "3 Bedrooms · Ocean View · 301 m²" },
+    area: "301 m²",
+    interior: "248 m²",
+    outdoor: { es: "53 m² terraza", en: "53 m² terrace" },
+    bedrooms: { es: "3 + cuarto de servicio con baño", en: "3 + service room with bathroom" },
+    bathrooms: "3.5",
+    parking: "2",
+    view: { es: "Al Mar", en: "Ocean view" },
+    priceMXN: 30000000,
+    status: { es: "Amueblada — lista para habitar", en: "Furnished — move-in ready" },
+    furnished: true,
+    bestFor: { es: "Familias / ingreso por renta / inversión", en: "Families / rental income / investment" },
+    highlights: {
+      es: [
+        "301 m² totales: 248 m² interiores + 53 m² de terraza",
+        "3 recámaras más cuarto de servicio con baño propio",
+        "3 baños y medio, adicionales al baño de servicio",
+        "Vista directa al Mar Caribe",
+        "Entregada totalmente amueblada",
+        "2 cajones de estacionamiento",
+        "Acceso completo al club de playa y marina",
+      ],
+      en: [
+        "301 m² total: 248 m² interior + 53 m² terrace",
+        "3 bedrooms plus service room with private bathroom",
+        "3.5 bathrooms, in addition to the service bathroom",
+        "Direct Caribbean Sea views",
+        "Delivered fully furnished",
+        "2 parking spaces",
+        "Full access to the private beach club and marina",
+      ],
+    },
+    description: {
+      es: "La residencia más amplia de nuestra selección en La Amada: 301 m² totales con 248 m² de interiores y una terraza de 53 m² con vista al mar. Tres recámaras más cuarto de servicio con baño la convierten en una opción ideal para familias, ingreso por renta o inversión patrimonial. Se entrega totalmente amueblada.",
+      en: "The largest residence in our La Amada selection: 301 m² total with 248 m² of interiors and a 53 m² ocean-view terrace. Three bedrooms plus a service room with its own bathroom make it ideal for families, rental income or long-term investment. Delivered fully furnished.",
+    },
+    secondaryCta: { es: "Descubre la Residencia A4-203", en: "Discover Residence A4-203" },
+  },
+  {
     id: "ph07m",
     code: "PH 07M",
     name: { es: "Penthouse 07M", en: "Penthouse 07M" },
@@ -309,8 +351,8 @@ export default function LaAmada() {
           </h1>
           <p className="font-body font-light max-w-2xl mb-10" style={{ fontSize: "19px", lineHeight: 1.6 }}>
             {t(
-              "Cuatro residencias distinguidas dentro del enclave más exclusivo del Caribe Mexicano. Selección curada por Rivana — tu inversión, tu legado.",
-              "Four distinguished residences within the Mexican Caribbean's most exclusive enclave. Curated by Rivana — your investment, your legacy."
+              "Cinco residencias distinguidas dentro del enclave más exclusivo del Caribe Mexicano. Selección curada por Rivana — tu inversión, tu legado.",
+              "Five distinguished residences within the Mexican Caribbean's most exclusive enclave. Curated by Rivana — your investment, your legacy."
             )}
           </p>
           <div className="flex flex-wrap gap-4">
@@ -340,8 +382,8 @@ export default function LaAmada() {
           </p>
           <h2 className="font-display font-light mb-8" style={{ fontSize: "clamp(32px, 4.5vw, 52px)", lineHeight: 1.15 }}>
             {t(
-              "Cuatro residencias. Una visión intemporal del Caribe.",
-              "Four residences. One timeless Caribbean vision."
+              "Cinco residencias. Una visión intemporal del Caribe.",
+              "Five residences. One timeless Caribbean vision."
             )}
           </h2>
           <p className="font-body font-light text-muted-foreground" style={{ fontSize: "18px", lineHeight: 1.75 }}>
@@ -472,7 +514,7 @@ export default function LaAmada() {
                     `Mostrando ${selected.length} unidades seleccionadas. Desmarca para ver todas.`,
                     `Showing ${selected.length} selected units. Uncheck to view all.`
                   )
-                : t("Selecciona unidades arriba para comparar, o revisa las cuatro.", "Select units above to compare, or review all four.")}
+                : t("Selecciona unidades arriba para comparar, o revisa las cinco.", "Select units above to compare, or review all five.")}
             </p>
           </div>
 
