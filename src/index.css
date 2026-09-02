@@ -675,3 +675,14 @@ p.text-base { font-size: 19px; }
 p.text-lg   { font-size: 21px; }
 p.text-xl   { font-size: 23px; }
 p.text-2xl  { font-size: 27px; }
+
+/* Legibilidad global (audiencia 40+): tamaños mínimos legibles */
+li { font-size: 17px; }
+li.text-xs   { font-size: 15px; }
+li.text-sm   { font-size: 17px; }
+li.text-base { font-size: 19px; }
+li.text-lg   { font-size: 21px; }
+
+/* Etiquetas pequeñas: mínimo legible */
+.text-\[10px\] { font-size: 12px; }
+.text-\[11px\] { font-size: 13px; }
