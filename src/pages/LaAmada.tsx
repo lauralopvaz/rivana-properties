@@ -351,8 +351,8 @@ export default function LaAmada() {
           </h1>
           <p className="font-body font-light max-w-2xl mb-10" style={{ fontSize: "19px", lineHeight: 1.6 }}>
             {t(
-              "Cinco residencias distinguidas dentro del enclave más exclusivo del Caribe Mexicano. Selección curada por Rivana — tu inversión, tu legado.",
-              "Five distinguished residences within the Mexican Caribbean's most exclusive enclave. Curated by Rivana — your investment, your legacy."
+              "Cinco residencias distinguidas dentro del complejo más exclusivo del Caribe Mexicano. Selección Premium por Rivana.",
+              "Five distinguished residences within the Mexican Caribbean's most exclusive complex. Premium Selection by Rivana."
             )}
           </p>
           <div className="flex flex-wrap gap-4">
