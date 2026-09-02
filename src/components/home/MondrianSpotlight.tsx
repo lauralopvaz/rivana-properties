@@ -18,8 +18,8 @@ const content = {
     en: 'Mondrian',
   },
   subtitle: {
-    es: 'Puerto Cancún',
-    en: 'Puerto Cancún',
+    es: 'Grand Island',
+    en: 'Grand Island',
   },
   description: {
     es: 'Nuestra selección premium para inversionistas exigentes: arquitectura contemporánea, vistas al mar y un plan de pago diseñado para escalonar tu inversión con confianza.',
