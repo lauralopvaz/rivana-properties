@@ -18,8 +18,8 @@ const content = {
     en: 'Mondrian',
   },
   subtitle: {
-    es: 'Puerto Cancún',
-    en: 'Puerto Cancún',
+    es: 'Grand Island',
+    en: 'Grand Island',
   },
   description: {
     es: 'Nuestra selección premium para inversionistas exigentes: arquitectura contemporánea, vistas al mar y un plan de pago diseñado para escalonar tu inversión con confianza.',
@@ -89,7 +89,7 @@ export const MondrianSpotlight = () => {
               <div className="relative z-10 overflow-hidden shadow-2xl group">
                 <img
                   src={mondrianHero}
-                  alt={L === 'es' ? 'Mondrian Residences — vista exterior en Puerto Cancún' : 'Mondrian Residences — exterior view in Puerto Cancún'}
+                  alt={L === 'es' ? 'Mondrian Residences — vista exterior en Grand Island Cancún' : 'Mondrian Residences — exterior view at Grand Island Cancún'}
                   className="w-full aspect-[4/5] object-cover transition-transform duration-1000 group-hover:scale-105"
                   loading="lazy"
                 />
