@@ -27,7 +27,7 @@ export const PreSaleSection = () => {
             <em className="not-italic" style={{ color: '#CFAE60', fontStyle: 'italic' }}>{L === 'es' ? 'Preventa' : 'Pre-Sale'}</em>
           </h2>
 
-          <p className="mx-auto mb-10" style={{ fontFamily: "'Jost', sans-serif", fontSize: '16px', color: '#4B4B4B', fontWeight: 300, lineHeight: 1.85, maxWidth: '560px' }}>
+          <p className="mx-auto mb-10" style={{ fontFamily: "'Jost', sans-serif", fontSize: '19px', color: '#4B4B4B', fontWeight: 300, lineHeight: 1.85, maxWidth: '560px' }}>
             {L === 'es'
               ? 'Accede a los mejores precios antes de que el proyecto salga al mercado. En preventa, tu capital trabaja desde el primer día y la plusvalía comienza a acumularse antes de la entrega.'
               : 'Access the best prices before the project hits the market. In pre-sale, your capital works from day one and appreciation starts building before delivery.'}
@@ -54,7 +54,7 @@ export const PreSaleSection = () => {
             </Link>
           </div>
 
-          <p style={{ fontSize: '13px', color: 'rgba(75,75,75,0.55)', fontStyle: 'italic', fontWeight: 300, fontFamily: "'Jost', sans-serif", lineHeight: 1.7 }}>
+          <p style={{ fontSize: '16px', color: 'rgba(75,75,75,0.55)', fontStyle: 'italic', fontWeight: 300, fontFamily: "'Jost', sans-serif", lineHeight: 1.7 }}>
             {L === 'es' ? '* Rendimientos estimados con base en el mercado actual. No garantizan retorno.' : '* Estimated yields based on current market. Returns are not guaranteed.'}
           </p>
         </ScrollReveal>

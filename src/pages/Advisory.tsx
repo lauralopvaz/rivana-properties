@@ -128,7 +128,7 @@ export default function Advisory() {
           <h1 className="text-secondary mb-5" style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', lineHeight: 1.1 }}>
             Your local advisory team in Cancún and the <em className="text-primary not-italic font-display italic">Riviera Maya</em>
           </h1>
-          <p className="font-body font-light text-muted-foreground max-w-3xl mb-8" style={{ fontSize: '23px', lineHeight: 1.6 }}>
+          <p className="font-body font-light text-muted-foreground max-w-3xl mb-8" style={{ fontSize: '26px', lineHeight: 1.6 }}>
             We search the market. We attend the site visits. We give you the honest picture. You make the decision — from home, with full information.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -139,7 +139,7 @@ export default function Advisory() {
               Browse listings →
             </Link>
           </div>
-          <p className="font-body font-light text-muted-foreground" style={{ fontSize: '15px' }}>
+          <p className="font-body font-light text-muted-foreground" style={{ fontSize: '18px' }}>
             Bilingual · ES · EN · No buyer fees · Response within 2 business hours
           </p>
         </div>
@@ -178,7 +178,7 @@ export default function Advisory() {
                   </div>
                   <div className="flex-1 pt-2">
                     <h3 className="font-display text-2xl text-secondary mb-3">{s.label}</h3>
-                    <p className="font-body font-light text-secondary/85" style={{ fontSize: '19px', lineHeight: 1.8 }}>{s.body}</p>
+                    <p className="font-body font-light text-secondary/85" style={{ fontSize: '22px', lineHeight: 1.8 }}>{s.body}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -224,13 +224,13 @@ export default function Advisory() {
                 <Link to={`/en${z.href}`} className="font-display text-xl text-secondary hover:text-primary transition-colors">
                   {z.label}
                 </Link>
-                <p className="font-body font-light text-secondary/75 mt-1.5" style={{ fontSize: '18px', lineHeight: 1.6 }}>
+                <p className="font-body font-light text-secondary/75 mt-1.5" style={{ fontSize: '21px', lineHeight: 1.6 }}>
                   {z.desc} <span className="text-primary">{z.from}.</span>
                 </p>
               </div>
             ))}
           </div>
-          <p className="font-body font-light text-secondary/80 max-w-3xl" style={{ fontSize: '19px', lineHeight: 1.8 }}>
+          <p className="font-body font-light text-secondary/80 max-w-3xl" style={{ fontSize: '22px', lineHeight: 1.8 }}>
             Not sure which zone fits your profile? That is exactly the conversation we start with. Most buyers arrive thinking they want one zone and end up in a different one after a proper analysis. We have seen it enough times to know: the right zone depends on your specific use case, risk tolerance, and timeline — not on which render looks most beautiful.
           </p>
         </div>
@@ -263,7 +263,7 @@ export default function Advisory() {
           <ScrollReveal>
             <p className="eyebrow mb-4">Start your search</p>
             <h2 className="text-secondary mb-5">Tell us what you're looking for</h2>
-            <p className="font-body font-light text-secondary/80 max-w-2xl mb-12" style={{ fontSize: '19px', lineHeight: 1.7 }}>
+            <p className="font-body font-light text-secondary/80 max-w-2xl mb-12" style={{ fontSize: '22px', lineHeight: 1.7 }}>
               Every Rivana advisory engagement begins the same way: a conversation. Fill in the form below and one of our advisors will contact you within two business hours — by email to confirm, then by video call at a time that works for your schedule.
             </p>
           </ScrollReveal>
@@ -282,11 +282,11 @@ export default function Advisory() {
                   </div>
                   <div>
                     <h3 className="font-display text-lg text-secondary mb-1.5">{label}</h3>
-                    <p className="font-body font-light text-secondary/75" style={{ fontSize: '17px', lineHeight: 1.65 }}>{text}</p>
+                    <p className="font-body font-light text-secondary/75" style={{ fontSize: '20px', lineHeight: 1.65 }}>{text}</p>
                   </div>
                 </div>
               ))}
-              <p className="font-body font-light text-secondary/70 pt-3 border-t border-border" style={{ fontSize: '17px', lineHeight: 1.7 }}>
+              <p className="font-body font-light text-secondary/70 pt-3 border-t border-border" style={{ fontSize: '20px', lineHeight: 1.7 }}>
                 Every inquiry is handled personally by a Rivana advisor — not a chatbot, not a call center.
               </p>
             </aside>
@@ -388,7 +388,7 @@ export default function Advisory() {
                   <button type="submit" disabled={loading} className="w-full mt-2 py-4 font-body font-light uppercase flex items-center justify-center gap-2" style={{ letterSpacing: '3px', backgroundColor: '#CFAE60', color: '#1C1C1C', fontSize: '16px', borderRadius: 0, opacity: loading ? 0.7 : 1, minHeight: 52 }}>
                     {loading ? (<><Loader2 size={14} className="animate-spin" />Sending…</>) : (<>Start my property search →</>)}
                   </button>
-                  <p className="font-body font-light text-center text-secondary/65" style={{ fontSize: '15px', letterSpacing: 'normal', lineHeight: 1.6 }}>
+                  <p className="font-body font-light text-center text-secondary/65" style={{ fontSize: '18px', letterSpacing: 'normal', lineHeight: 1.6 }}>
                     Your information is confidential and will never be shared with third parties. No obligation. No fees. Response within 2 business hours.
                   </p>
                 </form>

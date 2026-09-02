@@ -372,7 +372,7 @@ export default function SalviaBuilding() {
           <h2 className="font-display font-light mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 38px)' }}>
             {isEnglish ? 'Every number is verifiable.' : 'Cada cifra es verificable.'}
           </h2>
-          <p className="font-body font-light text-muted-foreground" style={{ fontSize: '17px', lineHeight: 1.8 }}>
+          <p className="font-body font-light text-muted-foreground" style={{ fontSize: '20px', lineHeight: 1.8 }}>
             {isEnglish
               ? 'Revenue, occupancy and ratings come directly from the active Airbnb listings and operating statements. Request a full data room before your private showing.'
               : 'Los ingresos, la ocupación y las calificaciones provienen directamente de los listings activos en Airbnb y los estados operativos. Solicita el data room completo antes de tu visita privada.'}
@@ -386,7 +386,7 @@ export default function SalviaBuilding() {
           <h2 className="font-display font-light mb-6" style={{ fontSize: 'clamp(30px, 4vw, 48px)' }}>
             {isEnglish ? 'Schedule a private showing' : 'Agenda una visita privada'}
           </h2>
-          <p className="font-body font-light text-muted-foreground mb-10" style={{ fontSize: '17px' }}>
+          <p className="font-body font-light text-muted-foreground mb-10" style={{ fontSize: '20px' }}>
             {isEnglish
               ? 'Walk the building, meet the team and review the books with a Rivana advisor.'
               : 'Recorre el edificio, conoce al equipo y revisa los números con un asesor Rivana.'}

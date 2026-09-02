@@ -53,7 +53,7 @@ export function PersonalSearchSection() {
                 <h2 className="text-secondary mb-3">
                   We find it. <em className="text-primary not-italic font-display italic">You decide.</em>
                 </h2>
-                <p className="font-body font-light text-muted-foreground" style={{ fontSize: '17px' }}>
+                <p className="font-body font-light text-muted-foreground" style={{ fontSize: '20px' }}>
                   Your personal property search service in Cancún and the Riviera Maya.
                 </p>
               </div>
@@ -85,7 +85,7 @@ export function PersonalSearchSection() {
                       <Icon size={18} style={{ color: 'hsl(var(--gold))' }} />
                     </div>
                     <h3 className="font-display mb-2 text-secondary" style={{ fontSize: '21px' }}>{label}</h3>
-                    <p className="font-body font-light text-muted-foreground" style={{ fontSize: '17px', lineHeight: 1.7 }}>{text}</p>
+                    <p className="font-body font-light text-muted-foreground" style={{ fontSize: '20px', lineHeight: 1.7 }}>{text}</p>
                   </div>
                 ))}
               </div>
@@ -138,7 +138,7 @@ export function PersonalSearchSection() {
                   <button type="submit" disabled={loading} className="w-full py-3.5 mt-2 font-body font-light uppercase flex items-center justify-center gap-2" style={{ letterSpacing: '3px', backgroundColor: 'hsl(var(--gold))', color: '#FFFFFF', fontSize: '13px', opacity: loading ? 0.7 : 1, borderRadius: 0 }}>
                     {loading ? (<><Loader2 size={14} className="animate-spin" />Sending…</>) : (<>Find My Property →</>)}
                   </button>
-                  <p className="font-body font-light text-center text-muted-foreground mt-3" style={{ fontSize: '12px' }}>
+                  <p className="font-body font-light text-center text-muted-foreground mt-3" style={{ fontSize: '15px' }}>
                     Bilingual team · ES · EN · Response within 2 business hours · No fees to the buyer · Ever.
                   </p>
                 </form>

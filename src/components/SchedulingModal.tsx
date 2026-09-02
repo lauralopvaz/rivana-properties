@@ -160,7 +160,7 @@ export const SchedulingModal = () => {
             <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '30px', fontWeight: 300, color: '#1C1C1C', marginBottom: '12px' }}>
               {L === 'es' ? '¡Tu solicitud fue recibida!' : 'Your request has been received!'}
             </h3>
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', color: '#4B4B4B', fontWeight: 300, textAlign: 'center' }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '17px', color: '#4B4B4B', fontWeight: 300, textAlign: 'center' }}>
               {L === 'es'
                 ? `Nos comunicamos contigo a la brevedad para confirmar tu ${typeLabels[selectedType].es}.`
                 : `We'll contact you shortly to confirm your ${typeLabels[selectedType].en}.`}
@@ -168,7 +168,7 @@ export const SchedulingModal = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="transition-opacity duration-300" style={{ opacity: fadeOut ? 0 : 1 }}>
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', letterSpacing: '3px', textTransform: 'uppercase', color: '#CFAE60', fontWeight: 400, marginBottom: '16px' }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '15px', letterSpacing: '3px', textTransform: 'uppercase', color: '#CFAE60', fontWeight: 400, marginBottom: '16px' }}>
               {L === 'es' ? '¿Cómo prefieres conectar?' : 'How would you like to connect?'}
             </p>
 
@@ -251,7 +251,7 @@ export const SchedulingModal = () => {
               </a>
             </div>
 
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', fontWeight: 300, fontStyle: 'italic', textAlign: 'center', marginTop: '12px', lineHeight: 1.7 }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '15px', color: '#4B4B4B', fontWeight: 300, fontStyle: 'italic', textAlign: 'center', marginTop: '12px', lineHeight: 1.7 }}>
               {L === 'es' ? 'Un asesor te contactará para confirmar en menos de 2 horas.' : 'An advisor will contact you to confirm within 2 hours.'}
             </p>
           </form>
