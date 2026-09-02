@@ -660,12 +660,15 @@ export default function LaAmada() {
 
 const Stat = ({ label, value }: { label: string; value: string }) => (
   <div>
-    <p className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-1">{label}</p>
-    <p className="font-body font-medium" style={{ fontSize: "19px" }}>
+    <p className="font-body uppercase tracking-[0.16em] text-muted-foreground mb-1" style={{ fontSize: "13px", fontWeight: 600 }}>
+      {label}
+    </p>
+    <p className="font-body font-bold" style={{ fontSize: "22px", lineHeight: 1.3 }}>
       {value}
     </p>
   </div>
 );
+
 
 const Row = ({ label, values }: { label: string; values: string[] }) => (
   <tr className="border-b border-border">
