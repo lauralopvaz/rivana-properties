@@ -456,7 +456,7 @@ export default function LaAmada() {
                     </span>
                   </div>
                   <div className="flex items-baseline gap-3 mb-6">
-                    <span className="font-display font-light" style={{ fontSize: "32px" }}>
+                    <span className="font-display font-medium" style={{ fontSize: "34px" }}>
                       {formatMXN(u.priceMXN)}
                     </span>
                     {u.priceLabel && (
@@ -661,7 +661,7 @@ export default function LaAmada() {
 const Stat = ({ label, value }: { label: string; value: string }) => (
   <div>
     <p className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-1">{label}</p>
-    <p className="font-body font-light" style={{ fontSize: "17px" }}>
+    <p className="font-body font-medium" style={{ fontSize: "19px" }}>
       {value}
     </p>
   </div>
