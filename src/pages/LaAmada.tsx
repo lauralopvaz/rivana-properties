@@ -260,8 +260,8 @@ export default function LaAmada() {
   const unitWaUrl = (u: Unit) =>
     `${WHATSAPP}?text=${encodeURIComponent(
       isEnglish
-        ? `Hi Rivana, I'm interested in La Amada Unit ${u.code} — ${u.name.en} (${formatMXN(u.priceMXN)}), Costa Mujeres.`
-        : `Hola Rivana, me interesa la Unidad ${u.code} — ${u.name.es} (${formatMXN(u.priceMXN)}) en La Amada, Costa Mujeres.`
+        ? `Hi Rivana, I'd like to schedule an appointment for La Amada — Unit ${u.code} (${u.name.en}, ${formatMXN(u.priceMXN)}), Costa Mujeres.`
+        : `Hola Rivana, quiero agendar una cita para La Amada — Unidad ${u.code} (${u.name.es}, ${formatMXN(u.priceMXN)}), Costa Mujeres.`
     )}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=${`la-amada-unit-${u.id}`}`;
 
   const schema = {
