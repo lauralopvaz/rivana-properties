@@ -439,7 +439,7 @@ export default function LaAmada() {
 
                 <ul className="space-y-2 mb-8">
                   {u.highlights[language].slice(0, 5).map((h) => (
-                    <li key={h} className="flex gap-3 font-body font-light" style={{ fontSize: "14px", lineHeight: 1.55 }}>
+                    <li key={h} className="flex gap-3 font-body" style={{ fontSize: "17px", lineHeight: 1.6 }}>
                       <Check className="w-4 h-4 mt-1 shrink-0" style={{ color: "#CFAE60" }} />
                       <span>{h}</span>
                     </li>
@@ -447,24 +447,25 @@ export default function LaAmada() {
                 </ul>
 
                 <div className="mt-auto pt-6 border-t border-border">
-                  <div className="flex items-baseline justify-between mb-2">
-                    <span className="font-body text-xs uppercase tracking-wider text-muted-foreground">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                    <span className="font-body uppercase tracking-wider text-muted-foreground" style={{ fontSize: "14px", fontWeight: 700 }}>
                       {t("Desde", "From")}
                     </span>
-                    <span className="font-body text-xs uppercase tracking-wider" style={{ color: "#CFAE60" }}>
+                    <span className="font-body uppercase tracking-wider" style={{ color: "#CFAE60", fontSize: "14px", fontWeight: 700 }}>
                       {u.status[language]}
                     </span>
                   </div>
                   <div className="flex items-baseline gap-3 mb-6">
-                    <span className="font-display font-medium" style={{ fontSize: "34px" }}>
+                    <span className="font-display font-bold" style={{ fontSize: "34px" }}>
                       {formatMXN(u.priceMXN)}
                     </span>
                     {u.priceLabel && (
-                      <span className="font-body text-xs text-muted-foreground line-through">
+                      <span className="font-body text-muted-foreground line-through" style={{ fontSize: "16px" }}>
                         {u.priceLabel[language]}
                       </span>
                     )}
                   </div>
+
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
                       href={unitWaUrl(u)}
@@ -535,7 +536,7 @@ export default function LaAmada() {
                   ))}
                 </tr>
               </thead>
-              <tbody className="font-body font-light" style={{ fontSize: "14px" }}>
+              <tbody className="font-body" style={{ fontSize: "17px" }}>
                 <Row label={t("Área total", "Total area")} values={compareUnits.map((u) => u.area)} />
                 <Row label={t("Interior", "Interior")} values={compareUnits.map((u) => u.interior)} />
                 <Row label={t("Exterior", "Outdoor")} values={compareUnits.map((u) => u.outdoor[language])} />
@@ -550,11 +551,11 @@ export default function LaAmada() {
                 />
                 <Row label={t("Ideal para", "Best for")} values={compareUnits.map((u) => u.bestFor[language])} />
                 <tr className="border-t border-foreground/20">
-                  <td className="py-5 pr-6 font-body text-xs uppercase tracking-wider text-muted-foreground">
+                  <td className="py-5 pr-6 font-body uppercase tracking-wider text-muted-foreground" style={{ fontSize: "14px", fontWeight: 600 }}>
                     {t("Precio", "Price")}
                   </td>
                   {compareUnits.map((u) => (
-                    <td key={u.id} className="py-5 px-4 font-display font-light" style={{ fontSize: "20px", color: "#CFAE60" }}>
+                    <td key={u.id} className="py-5 px-4 font-display font-light" style={{ fontSize: "22px", color: "#CFAE60", fontWeight: 600 }}>
                       {formatMXN(u.priceMXN)}
                     </td>
                   ))}
@@ -606,7 +607,7 @@ export default function LaAmada() {
             </div>
             <ul className="grid grid-cols-2 gap-x-6 gap-y-4">
               {amenities[language].map((a) => (
-                <li key={a} className="flex gap-3 font-body font-light" style={{ fontSize: "15px" }}>
+                <li key={a} className="flex gap-3 font-body" style={{ fontSize: "17px" }}>
                   <span className="w-1 h-1 mt-3 rounded-full shrink-0" style={{ background: "#CFAE60" }} />
                   {a}
                 </li>
@@ -660,16 +661,19 @@ export default function LaAmada() {
 
 const Stat = ({ label, value }: { label: string; value: string }) => (
   <div>
-    <p className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-1">{label}</p>
-    <p className="font-body font-medium" style={{ fontSize: "19px" }}>
+    <p className="font-body uppercase tracking-[0.16em] text-muted-foreground mb-1" style={{ fontSize: "13px", fontWeight: 600 }}>
+      {label}
+    </p>
+    <p className="font-body font-bold" style={{ fontSize: "22px", lineHeight: 1.3 }}>
       {value}
     </p>
   </div>
 );
 
+
 const Row = ({ label, values }: { label: string; values: string[] }) => (
   <tr className="border-b border-border">
-    <td className="py-4 pr-6 font-body text-xs uppercase tracking-wider text-muted-foreground align-top">{label}</td>
+    <td className="py-4 pr-6 font-body uppercase tracking-wider text-muted-foreground align-top" style={{ fontSize: "14px", fontWeight: 600 }}>{label}</td>
     {values.map((v, i) => (
       <td key={i} className="py-4 px-4 align-top">
         {v}
