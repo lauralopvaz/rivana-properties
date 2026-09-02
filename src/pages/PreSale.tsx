@@ -298,7 +298,7 @@ const displayStyle = (size: string): React.CSSProperties => ({
 });
 const bodyStyle: React.CSSProperties = {
   fontFamily: "'Jost', sans-serif",
-  fontSize: '15px',
+  fontSize: '18px',
   fontWeight: 300,
   lineHeight: 1.85,
   color: MUTED,
