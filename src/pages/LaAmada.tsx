@@ -116,9 +116,9 @@ const units: Unit[] = [
     secondaryCta: { es: "Activa el Potencial de Renta", en: "Unlock Rental Income Potential" },
   },
   {
-    id: "2br",
-    code: "2BR",
-    name: { es: "Departamento 2BR", en: "Residence 2BR" },
+    id: "211l",
+    code: "211L",
+    name: { es: "Departamento 211L", en: "Residence 211L" },
     tagline: { es: "2 Recámaras · 220 m² · Lock-Off", en: "2 Bedrooms · 220 m² · Lock-Off" },
     area: "220 m²",
     interior: "180 m²",
