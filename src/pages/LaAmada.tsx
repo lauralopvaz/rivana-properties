@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { LA_AMADA_HERO_IMAGE } from "@/data/immediate-delivery";
 
-type UnitId = "305l" | "205m" | "2br" | "ph07m";
+type UnitId = "305l" | "205m" | "2br" | "a4203" | "ph07m";
 
 interface Unit {
   id: UnitId;
