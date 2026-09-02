@@ -664,7 +664,7 @@ const Stat = ({ label, value }: { label: string; value: string }) => (
     <p className="font-body uppercase tracking-[0.16em] text-muted-foreground mb-1" style={{ fontSize: "13px", fontWeight: 600 }}>
       {label}
     </p>
-    <p className="font-body font-bold" style={{ fontSize: "22px", lineHeight: 1.3 }}>
+    <p className="font-body font-bold" style={{ fontSize: "13px", lineHeight: 1.3 }}>
       {value}
     </p>
   </div>
