@@ -67,10 +67,10 @@ export const immediateDeliveryUnits: ImmediateUnit[] = [
   {
     id: 'la-amada-211l',
     slug: 'la-amada-unit-211l',
-    code: '211L',
+    code: '311L',
     development: { es: 'La Amada Residences', en: 'La Amada Residences' },
     location: { es: 'Costa Mujeres, Cancún', en: 'Costa Mujeres, Cancún' },
-    subtitle: { es: 'Departamento 211L', en: 'Residence 211L' },
+    subtitle: { es: 'Departamento 311L', en: 'Residence 311L' },
     area: 220,
     interior: 180,
     bedrooms: 2,
@@ -88,8 +88,8 @@ export const immediateDeliveryUnits: ImmediateUnit[] = [
     },
     image: LA_AMADA_INTERIOR,
     whatsappMsg: {
-      es: 'Hola Rivana, me interesa la unidad 211L (Entrega Inmediata) en La Amada, Costa Mujeres.',
-      en: "Hi Rivana, I'm interested in Unit 211L (Immediate Delivery) at La Amada, Costa Mujeres.",
+      es: 'Hola Rivana, me interesa la unidad 311L (Entrega Inmediata) en La Amada, Costa Mujeres.',
+      en: "Hi Rivana, I'm interested in Unit 311L (Immediate Delivery) at La Amada, Costa Mujeres.",
     },
   },
   {
