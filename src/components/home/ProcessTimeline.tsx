@@ -76,7 +76,7 @@ export const ProcessTimeline = () => {
                   <span className="w-[8px] h-[8px] bg-primary" />
                 </span>
                 <div className="md:mt-6">
-                  <span className="font-display text-sm text-primary tracking-widest">
+                  <span className="font-display text-primary tracking-widest" style={{ fontSize: '19px' }}>
                     {step.num}
                   </span>
                   <h3 className="font-display text-2xl text-secondary font-light mt-2 mb-3">
