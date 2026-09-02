@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { LA_AMADA_HERO_IMAGE } from "@/data/immediate-delivery";
 
-type UnitId = "305l" | "205m" | "2br" | "a4203" | "ph07m";
+type UnitId = "305l" | "205m" | "211l" | "a4203" | "ph07m";
 
 interface Unit {
   id: UnitId;
@@ -116,9 +116,9 @@ const units: Unit[] = [
     secondaryCta: { es: "Activa el Potencial de Renta", en: "Unlock Rental Income Potential" },
   },
   {
-    id: "2br",
-    code: "2BR",
-    name: { es: "Departamento 2BR", en: "Residence 2BR" },
+    id: "211l",
+    code: "211L",
+    name: { es: "Departamento 211L", en: "Residence 211L" },
     tagline: { es: "2 Recámaras · 220 m² · Lock-Off", en: "2 Bedrooms · 220 m² · Lock-Off" },
     area: "220 m²",
     interior: "180 m²",
@@ -544,7 +544,7 @@ export default function LaAmada() {
                 <Row label={t("Baños", "Bathrooms")} values={compareUnits.map((u) => u.bathrooms)} />
                 <Row label={t("Estacionamiento", "Parking")} values={compareUnits.map((u) => u.parking)} />
                 <Row label={t("Vista", "View")} values={compareUnits.map((u) => u.view[language])} />
-                <Row label={t("Lock-Off", "Lock-Off")} values={compareUnits.map((u) => (u.id === "2br" ? t("Sí", "Yes") : "—"))} />
+                <Row label={t("Lock-Off", "Lock-Off")} values={compareUnits.map((u) => (u.id === "211l" ? t("Sí", "Yes") : "—"))} />
                 <Row
                   label={t("Amueblado", "Furnished")}
                   values={compareUnits.map((u) => (u.furnished ? t("Sí", "Yes") : t("No", "No")))}
