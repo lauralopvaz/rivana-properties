@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 
 /**
  * Reusable primitives for Journal articles.
@@ -182,7 +183,7 @@ export const WhatsAppCta = ({
           rel="noopener"
           className="inline-flex items-center justify-center px-6 py-3 bg-[hsl(var(--gold))] text-[hsl(var(--foreground))] font-body text-sm uppercase tracking-[0.15em] hover:bg-[hsl(var(--gold)_/_0.85)] transition-colors"
         >
-          {waLabel || (language === 'es' ? 'Escribir por WhatsApp' : 'Message on WhatsApp')}
+          {waCta(language, 'conocer')}
         </a>
         <a
           href={mailHref}
