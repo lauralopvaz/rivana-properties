@@ -7,6 +7,14 @@ import playaPrivada from "@/assets/la-amada/penthouse-la-amada-ph-07m-playa-priv
 import albercaVista from "@/assets/la-amada/penthouse-la-amada-ph-07m-alberca-vista-superior-costa-mujeres-cancun-10.webp.asset.json";
 import marinaAtardecer from "@/assets/la-amada/penthouse-la-amada-ph-07m-marina-atardecer-costa-mujeres-cancun-11.webp.asset.json";
 import palapaLounge from "@/assets/la-amada/penthouse-la-amada-ph-07m-palapa-lounge-areas-comunes-costa-mujeres-cancun-12.webp.asset.json";
+import u311Sala from "@/assets/la-amada/departamento-la-amada-311l-sala-comedor-planta-abierta-costa-mujeres-cancun-01.webp.asset.json";
+import u311Terraza from "@/assets/la-amada/departamento-la-amada-311l-terraza-privada-comedor-exterior-costa-mujeres-cancun-02.webp.asset.json";
+import u311Cocina from "@/assets/la-amada/departamento-la-amada-311l-cocina-integral-premium-costa-mujeres-cancun-03.webp.asset.json";
+import u311Recamara from "@/assets/la-amada/departamento-la-amada-311l-recamara-principal-tina-costa-mujeres-cancun-04.webp.asset.json";
+import u311LockOff from "@/assets/la-amada/departamento-la-amada-311l-recamara-lock-off-costa-mujeres-cancun-05.webp.asset.json";
+import u311Alberca from "@/assets/la-amada/departamento-la-amada-311l-alberca-infinity-rooftop-costa-mujeres-cancun-06.webp.asset.json";
+import u311AereaPlaya from "@/assets/la-amada/departamento-la-amada-311l-vista-aerea-residencial-playa-costa-mujeres-cancun-08.webp.asset.json";
+import u311AereaJardines from "@/assets/la-amada/departamento-la-amada-311l-vista-aerea-jardines-costa-mujeres-cancun-09.webp.asset.json";
 
 export interface GalleryImage {
   src: string;
@@ -77,6 +85,64 @@ export const laAmadaGalleries: Record<string, GalleryImage[]> = {
       alt: {
         es: "Palapa lounge en las áreas comunes de La Amada, Costa Mujeres, Cancún",
         en: "Palapa lounge in the common areas of La Amada, Costa Mujeres, Cancún",
+      },
+    },
+  ],
+  "311l": [
+    {
+      src: u311Sala.url,
+      alt: {
+        es: "Sala y comedor de planta abierta del Departamento 311L en La Amada, Costa Mujeres, Cancún",
+        en: "Open-plan living and dining area of Unit 311L at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u311Terraza.url,
+      alt: {
+        es: "Terraza privada con comedor exterior del Departamento 311L en La Amada, Costa Mujeres, Cancún",
+        en: "Private terrace with outdoor dining at Unit 311L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u311Cocina.url,
+      alt: {
+        es: "Cocina integral premium del Departamento 311L en La Amada, Costa Mujeres, Cancún",
+        en: "Premium fitted kitchen of Unit 311L at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u311Recamara.url,
+      alt: {
+        es: "Recámara principal con tina del Departamento 311L en La Amada, Costa Mujeres, Cancún",
+        en: "Primary bedroom with soaking tub at Unit 311L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u311LockOff.url,
+      alt: {
+        es: "Recámara lock-off con cocineta del Departamento 311L en La Amada, Costa Mujeres, Cancún",
+        en: "Lock-off suite with kitchenette at Unit 311L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u311Alberca.url,
+      alt: {
+        es: "Alberca infinity y camastros en La Amada, Costa Mujeres, Cancún",
+        en: "Infinity pool and sun loungers at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u311AereaPlaya.url,
+      alt: {
+        es: "Vista aérea del residencial frente a la playa de La Amada, Costa Mujeres, Cancún",
+        en: "Aerial view of the beachfront residential complex at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u311AereaJardines.url,
+      alt: {
+        es: "Vista aérea de los jardines y acceso de La Amada, Costa Mujeres, Cancún",
+        en: "Aerial view of the gardens and entrance at La Amada, Costa Mujeres, Cancún",
       },
     },
   ],
