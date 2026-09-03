@@ -64,10 +64,10 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
               className="block text-[10px] uppercase tracking-[2px] font-body font-light"
               style={{ color: '#4B4B4B' }}
             >
-              {language === 'es' ? 'Precio' : 'Asking Price'}
+              {language === 'es' ? 'Precio' : 'Price'}
             </span>
-            <span className="font-display text-[22px] font-bold" style={{ color: '#1C1C1C' }}>
-              {formatUSD(unit.askingPriceUSD)}
+            <span className="font-display text-[22px] font-bold" style={{ color: '#CFAE60' }}>
+              {formatUSD(unit.askingPriceUSD)} USD
             </span>
           </div>
           <div>
