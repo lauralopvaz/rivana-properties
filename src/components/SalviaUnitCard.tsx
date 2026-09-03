@@ -64,7 +64,6 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
           <span>{unit.bedrooms} {language === 'es' ? 'rec.' : 'beds'}</span>
           <span>{unit.bathrooms} {language === 'es' ? 'baños' : 'baths'}</span>
           <span>{unit.floorAreaSqFt} sq ft</span>
-          <span className="text-[#CFAE60]">★ {unit.airbnbRating.toFixed(2)} ({unit.reviews})</span>
         </div>
 
         <div className="pt-3 mb-4 border-t border-border">
