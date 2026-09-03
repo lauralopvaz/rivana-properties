@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
@@ -195,7 +196,7 @@ const About = () => {
                       <PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}
                     </Button>
                     <Button variant="whatsapp" size="sm" className="flex-1" asChild>
-                      <a href={`https://wa.me/52${member.phone}?text=${encodeURIComponent(`Hola, ${member.name}, me gustaría una asesoría inmobiliaria`)}`} target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> WhatsApp</a>
+                      <a href={`https://wa.me/52${member.phone}?text=${encodeURIComponent(`Hola, ${member.name}, me gustaría una asesoría inmobiliaria`)}`} target="_blank" rel="noopener noreferrer"><ChatIcon className="w-3.5 h-3.5" /> {waCta(language, 'conocer')}</a>
                     </Button>
                   </div>
                 </div>
@@ -263,7 +264,7 @@ const About = () => {
               <div className="space-y-3">
                 <a href="mailto:rivanapropertiesmx@gmail.com" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><span className="text-primary">✉</span> rivanapropertiesmx@gmail.com</a>
                 <a href="tel:+529988457224" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><PhoneIcon className="w-4 h-4 text-primary" /> +52 998 845 7224</a>
-                <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=about-page" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> WhatsApp</a>
+                <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=about-page" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-body text-muted-foreground hover:text-primary transition-colors"><ChatIcon className="w-4 h-4 text-primary" /> {waCta(language, 'conocer')}</a>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
