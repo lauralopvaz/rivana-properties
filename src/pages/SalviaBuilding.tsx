@@ -10,6 +10,9 @@ import {
   salviaWhatsAppUrl,
   formatUSD,
 } from '@/data/salvia-units'
+import salviaPlayaChacMool from '@/assets/salvia/condominio-salvia-salvia-playa-chac-mool-vista-aerea-zona-hotelera-cancun-03.webp.asset.json'
+
+const SALVIA_HERO_IMAGE = salviaPlayaChacMool.url
 
 const GENERIC_WHATSAPP = {
   es: 'Hola Rivana, me interesa el Edificio Salvia en la Zona Hotelera de Cancún.',
@@ -86,7 +89,7 @@ export default function SalviaBuilding() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(160deg, rgba(28,28,28,0.55) 0%, rgba(28,28,28,0.15) 55%, rgba(28,28,28,0.8) 100%), url(${SALVIA_BUILDING_IMAGE})`,
+            backgroundImage: `linear-gradient(160deg, rgba(28,28,28,0.55) 0%, rgba(28,28,28,0.15) 55%, rgba(28,28,28,0.8) 100%), url(${SALVIA_HERO_IMAGE})`,
           }}
           aria-hidden
         />
