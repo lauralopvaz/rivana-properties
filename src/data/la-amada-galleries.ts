@@ -24,12 +24,12 @@ export const laAmadaGalleries: Record<string, GalleryImage[]> = {
       },
     },
     {
-      src: comedorInterior,
+      src: comedorInterior.url,
       alt: {
         es: "Comedor interior de diseño del Penthouse 07M en La Amada, Costa Mujeres, Cancún",
         en: "Designer indoor dining room at Penthouse 07M, La Amada, Costa Mujeres, Cancún",
       },
-    } as unknown as GalleryImage,
+    },
     {
       src: cocinaGourmet.url,
       alt: {
