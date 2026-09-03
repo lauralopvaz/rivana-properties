@@ -24,12 +24,6 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
           loading={priority ? 'eager' : 'lazy'}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
-        <span
-          className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 text-[11px] tracking-[2px] uppercase font-body text-white"
-          style={{ background: '#CFAE60' }}
-        >
-          {language === 'es' ? 'Llave en mano · Entrega Inmediata' : 'Turn-Key · Immediate Delivery'}
-        </span>
         {unit.guestFavorite && (
           <span
             className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-3 py-1 text-[11px] tracking-[2px] uppercase font-body"
@@ -42,13 +36,13 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
 
       <div className="px-5 pt-5 pb-5 flex-1 flex flex-col">
         <p
-          className="text-[11px] tracking-[3px] uppercase font-body font-light mb-1"
+          className="text-[11px] tracking-[3px] uppercase font-body font-bold mb-1"
           style={{ color: '#CFAE60' }}
         >
           {language === 'es' ? 'Edificio Salvia' : 'Salvia Building'} · {unit.code}
         </p>
         <h3
-          className="font-display text-[22px] font-light leading-tight mb-1"
+          className="font-display text-[22px] font-bold leading-tight mb-1"
           style={{ color: '#1C1C1C' }}
         >
           {unit.name[language]}
@@ -70,10 +64,10 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
               className="block text-[10px] uppercase tracking-[2px] font-body font-light"
               style={{ color: '#4B4B4B' }}
             >
-              {language === 'es' ? 'Precio' : 'Asking Price'}
+              {language === 'es' ? 'Precio' : 'Price'}
             </span>
-            <span className="font-display text-[22px] font-bold" style={{ color: '#1C1C1C' }}>
-              {formatUSD(unit.askingPriceUSD)}
+            <span className="font-display text-[22px] font-bold" style={{ color: '#CFAE60' }}>
+              {formatUSD(unit.askingPriceUSD)} USD
             </span>
           </div>
           <div>
