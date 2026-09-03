@@ -497,6 +497,7 @@ export default function LaAmada() {
                     </button>
                   </div>
                 </div>
+                </div>
               </article>
             ))}
           </div>
