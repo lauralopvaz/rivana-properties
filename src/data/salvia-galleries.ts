@@ -14,6 +14,14 @@ import ph2aSala from "@/assets/salvia/penthouse-salvia-ph-2a-sala-estar-tv-vista
 import ph2aCocina from "@/assets/salvia/penthouse-salvia-ph-2a-cocina-equipada-zona-hotelera-cancun-05.webp.asset.json";
 import salviaPlaya from "@/assets/salvia/condominio-salvia-salvia-playa-arena-blanca-zona-hotelera-cancun-05.webp.asset.json";
 import salviaMar from "@/assets/salvia/condominio-salvia-salvia-mar-caribe-vista-aerea-zona-hotelera-cancun-06.webp.asset.json";
+import ph3bSalaComedor from "@/assets/salvia/penthouse-salvia-ph-3b-sala-comedor-vista-mar-zona-hotelera-cancun-01.webp.asset.json";
+import ph3bSalaMurphy from "@/assets/salvia/penthouse-salvia-ph-3b-sala-estar-murphy-vista-mar-zona-hotelera-cancun-02.webp.asset.json";
+import ph3bDobleAltura from "@/assets/salvia/penthouse-salvia-ph-3b-doble-altura-escalera-cristal-zona-hotelera-cancun-03.webp.asset.json";
+import ph3bCocina from "@/assets/salvia/penthouse-salvia-ph-3b-cocina-nueva-granito-zona-hotelera-cancun-04.webp.asset.json";
+import ph3bRecamaraDos from "@/assets/salvia/penthouse-salvia-ph-3b-recamara-superior-dos-camas-zona-hotelera-cancun-05.webp.asset.json";
+import ph3bRecamaraPuertas from "@/assets/salvia/penthouse-salvia-ph-3b-recamara-superior-puertas-privacidad-zona-hotelera-cancun-06.webp.asset.json";
+import salviaPlayaCamastros from "@/assets/salvia/condominio-salvia-salvia-playa-camastros-vista-aerea-zona-hotelera-cancun-04.webp.asset.json";
+import salviaPlayaChacMool from "@/assets/salvia/condominio-salvia-salvia-playa-chac-mool-vista-aerea-zona-hotelera-cancun-03.webp.asset.json";
 
 /** Galerías por unidad del Edificio Salvia (Zona Hotelera, Cancún). Clave = slug de la unidad. */
 export const salviaGalleries: Record<string, GalleryImage[]> = {
