@@ -3,6 +3,7 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from '@/components/icons';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext';
 import { formatUSD } from '@/lib/formatPrice';
 
@@ -190,7 +191,7 @@ export const MondrianSpotlight = () => {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={content.whatsappAria[L]}
+                  aria-label={waCta(L, 'conocer')}
                   className="h-14 w-14 flex items-center justify-center border border-foreground/30 text-foreground transition-all hover:bg-[#25d366] hover:border-[#25d366] hover:text-white"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

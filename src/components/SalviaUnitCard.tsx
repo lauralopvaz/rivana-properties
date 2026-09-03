@@ -7,6 +7,7 @@ import {
   salviaWhatsAppUrl,
 } from '@/data/salvia-units'
 import { getSalviaGallery } from '@/data/salvia-galleries'
+import { waCta } from '@/lib/whatsapp-cta'
 import { UnitGalleryCarousel } from '@/components/UnitGalleryCarousel'
 
 interface Props {
@@ -85,7 +86,7 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
             className="text-center py-2.5 text-[11px] tracking-[2px] uppercase font-body text-white"
             style={{ background: '#CFAE60' }}
           >
-            WhatsApp
+            {waCta(language, 'info')}
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSchedulingModal, ContactType } from '@/contexts/SchedulingModalContext';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 import { VideoIcon, PhoneIcon, HouseIcon, BriefcaseIcon, CheckIcon, XIcon, ChatIcon } from '@/components/icons';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
@@ -247,7 +248,7 @@ export const SchedulingModal = () => {
                 onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.20)'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.10)'; }}
               >
-                <ChatIcon className="w-4 h-4" /> {L === 'es' ? 'Contactar por WhatsApp' : 'Contact via WhatsApp'}
+                <ChatIcon className="w-4 h-4" /> {waCta(L, 'recibir')}
               </a>
             </div>
 

@@ -8,6 +8,7 @@ import {
   whatsappUrl,
 } from '@/data/immediate-delivery'
 import { laAmadaGalleries } from '@/data/la-amada-galleries'
+import { waCta } from '@/lib/whatsapp-cta'
 import { UnitGalleryCarousel } from '@/components/UnitGalleryCarousel'
 
 interface Props {
@@ -94,7 +95,7 @@ export const ImmediateDeliveryCard = ({ unit, priority = false }: Props) => {
             className="text-center py-2.5 text-[11px] tracking-[2px] uppercase font-body text-white"
             style={{ background: '#CFAE60' }}
           >
-            {language === 'es' ? 'Agendar Tour' : 'Schedule Tour'}
+            {waCta(language, 'info')}
           </a>
         </div>
       </div>
