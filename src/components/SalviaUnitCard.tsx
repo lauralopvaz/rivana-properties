@@ -33,14 +33,6 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
             />
           </div>
         )}
-        {unit.guestFavorite && (
-          <span
-            className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 text-[11px] tracking-[2px] uppercase font-body"
-            style={{ background: '#1C1C1C', color: '#CFAE60' }}
-          >
-            ★ Guest Favorite
-          </span>
-        )}
       </div>
 
       <div className="px-5 pt-5 pb-5 flex-1 flex flex-col">
