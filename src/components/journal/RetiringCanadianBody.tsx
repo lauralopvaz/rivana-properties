@@ -158,7 +158,7 @@ export const RetiringCanadianBody = () => {
         <CTA
           title="Compare the three corridors with an advisor"
           body="30 minutes with a Rivana advisor to review the three zones, price ranges and delivery timelines that match your profile — no obligation."
-          button="Book a WhatsApp call"
+          button="Get More Info"
           message="Hi Rivana, I'd like to compare Cancún, Puerto Morelos and Costa Mujeres for my retirement"
         />
 
@@ -193,7 +193,7 @@ export const RetiringCanadianBody = () => {
         <CTA
           title="Your winter doesn't have to be grey"
           body="Book a complimentary, no-obligation discovery video call. In 30 minutes we assess your profile, answer your visa and fideicomiso questions, and show you real options in the zone that best fits you. Your investment, your legacy."
-          button="Book via WhatsApp"
+          button="Get More Info"
           message="Hi Rivana, I'm Canadian and I'd like to book a discovery call about retiring in Cancún"
         />
         <p className="text-center">
@@ -327,7 +327,7 @@ export const RetiringCanadianBody = () => {
       <CTA
         title="Compara los tres corredores con un asesor"
         body="30 minutos con un asesor Rivana para revisar las tres zonas, rangos de precio y tiempos de entrega que encajen con tu perfil — sin compromiso."
-        button="Agendar por WhatsApp"
+        button="Recibir más información"
         message="Hola Rivana, quiero comparar Cancún, Puerto Morelos y Costa Mujeres para mi retiro"
       />
 
@@ -362,7 +362,7 @@ export const RetiringCanadianBody = () => {
       <CTA
         title="Tu invierno no tiene que ser gris"
         body="Agenda una videollamada de descubrimiento sin costo y sin compromiso. En 30 minutos evaluamos tu perfil, resolvemos tus dudas sobre visa y fideicomiso, y te mostramos opciones reales en la zona que mejor encaje contigo."
-        button="Agendar por WhatsApp"
+        button="Recibir más información"
         message="Hola Rivana, soy canadiense y quiero agendar una videollamada de descubrimiento sobre retirarme en Cancún"
       />
       <p className="text-center">
