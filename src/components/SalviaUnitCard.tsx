@@ -39,7 +39,7 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
           className="text-[11px] tracking-[3px] uppercase font-body font-bold mb-1"
           style={{ color: '#CFAE60' }}
         >
-          {language === 'es' ? 'Edificio Salvia' : 'Salvia Building'} · {unit.code}
+          {language === 'es' ? 'Edificio Salvia · Primera línea de playa' : 'Salvia Building · Beachfront'}
         </p>
         <h3
           className="font-display text-[22px] font-bold leading-tight mb-1"
