@@ -15,6 +15,15 @@ import u311LockOff from "@/assets/la-amada/departamento-la-amada-311l-recamara-l
 import u311Alberca from "@/assets/la-amada/departamento-la-amada-311l-alberca-infinity-rooftop-costa-mujeres-cancun-06.webp.asset.json";
 import u311AereaPlaya from "@/assets/la-amada/departamento-la-amada-311l-vista-aerea-residencial-playa-costa-mujeres-cancun-08.webp.asset.json";
 import u311AereaJardines from "@/assets/la-amada/departamento-la-amada-311l-vista-aerea-jardines-costa-mujeres-cancun-09.webp.asset.json";
+import u305Terraza1 from "@/assets/la-amada/departamento-la-amada-305l-terraza-privada-vista-selva-costa-mujeres-cancun-01.webp.asset.json";
+import u305Terraza2 from "@/assets/la-amada/departamento-la-amada-305l-terraza-lounge-panoramica-costa-mujeres-cancun-02.webp.asset.json";
+import u305Terraza3 from "@/assets/la-amada/departamento-la-amada-305l-terraza-vista-laguna-costa-mujeres-cancun-03.webp.asset.json";
+import u305Sala from "@/assets/la-amada/departamento-la-amada-305l-sala-estar-amplia-costa-mujeres-cancun-04.webp.asset.json";
+import u305Comedor from "@/assets/la-amada/departamento-la-amada-305l-comedor-ventanales-costa-mujeres-cancun-05.webp.asset.json";
+import u305SalaTerraza from "@/assets/la-amada/departamento-la-amada-305l-sala-comedor-acceso-terraza-costa-mujeres-cancun-06.webp.asset.json";
+import u305Cocina from "@/assets/la-amada/departamento-la-amada-305l-cocina-barra-desayunador-costa-mujeres-cancun-07.webp.asset.json";
+import u305SalaTv from "@/assets/la-amada/departamento-la-amada-305l-sala-tv-recamara-costa-mujeres-cancun-09.webp.asset.json";
+import u305Plano from "@/assets/la-amada/departamento-la-amada-305l-plano-arquitectonico-costa-mujeres-cancun-10.webp.asset.json";
 
 export interface GalleryImage {
   src: string;
@@ -143,6 +152,71 @@ export const laAmadaGalleries: Record<string, GalleryImage[]> = {
       alt: {
         es: "Vista aérea de los jardines y acceso de La Amada, Costa Mujeres, Cancún",
         en: "Aerial view of the gardens and entrance at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+  ],
+  "305l": [
+    {
+      src: u305Terraza1.url,
+      alt: {
+        es: "Terraza privada con vista a la selva del Departamento 305L en La Amada, Costa Mujeres, Cancún",
+        en: "Private terrace with jungle view at Apartment 305L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u305Terraza2.url,
+      alt: {
+        es: "Terraza lounge panorámica del Departamento 305L en La Amada, Costa Mujeres, Cancún",
+        en: "Panoramic lounge terrace at Apartment 305L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u305Terraza3.url,
+      alt: {
+        es: "Terraza con vista a la laguna del Departamento 305L en La Amada, Costa Mujeres, Cancún",
+        en: "Terrace with lagoon view at Apartment 305L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u305Sala.url,
+      alt: {
+        es: "Amplia sala de estar del Departamento 305L en La Amada, Costa Mujeres, Cancún",
+        en: "Spacious living room at Apartment 305L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u305Comedor.url,
+      alt: {
+        es: "Comedor con ventanales del Departamento 305L en La Amada, Costa Mujeres, Cancún",
+        en: "Dining area with floor-to-ceiling windows at Apartment 305L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u305SalaTerraza.url,
+      alt: {
+        es: "Sala y comedor con acceso a la terraza del Departamento 305L en La Amada, Costa Mujeres, Cancún",
+        en: "Living and dining area with terrace access at Apartment 305L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u305Cocina.url,
+      alt: {
+        es: "Cocina integral con barra desayunador del Departamento 305L en La Amada, Costa Mujeres, Cancún",
+        en: "Fitted kitchen with breakfast bar at Apartment 305L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u305SalaTv.url,
+      alt: {
+        es: "Sala de TV en recámara del Departamento 305L en La Amada, Costa Mujeres, Cancún",
+        en: "TV lounge in the bedroom at Apartment 305L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u305Plano.url,
+      alt: {
+        es: "Plano arquitectónico del Departamento 305L en La Amada, Costa Mujeres, Cancún",
+        en: "Architectural floor plan of Apartment 305L, La Amada, Costa Mujeres, Cancún",
       },
     },
   ],
