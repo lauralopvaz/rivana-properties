@@ -134,6 +134,64 @@ export const salviaGalleries: Record<string, GalleryImage[]> = {
       },
     },
   ],
+  "penthouse-3b": [
+    {
+      src: ph3bSalaComedor.url,
+      alt: {
+        es: "Sala y comedor con vista al mar Caribe del Penthouse 3B en Salvia, Zona Hotelera de Cancún",
+        en: "Living and dining area with Caribbean Sea view at Penthouse 3B, Salvia, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: ph3bSalaMurphy.url,
+      alt: {
+        es: "Sala de estar con cama Murphy y vista al mar del Penthouse 3B en Salvia, Cancún",
+        en: "Living area with Murphy bed and ocean view at Penthouse 3B, Salvia, Cancún",
+      },
+    },
+    {
+      src: ph3bDobleAltura.url,
+      alt: {
+        es: "Doble altura con escalera de cristal del Penthouse 3B en Salvia, Zona Hotelera de Cancún",
+        en: "Double-height space with glass staircase at Penthouse 3B, Salvia, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: ph3bCocina.url,
+      alt: {
+        es: "Cocina nueva con cubierta de granito del Penthouse 3B en Salvia, Zona Hotelera de Cancún",
+        en: "New kitchen with granite countertops at Penthouse 3B, Salvia, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: ph3bRecamaraDos.url,
+      alt: {
+        es: "Recámara superior con dos camas del Penthouse 3B en Salvia, Zona Hotelera de Cancún",
+        en: "Upper-level bedroom with two beds at Penthouse 3B, Salvia, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: ph3bRecamaraPuertas.url,
+      alt: {
+        es: "Recámara superior con puertas de privacidad y vista a la laguna del Penthouse 3B en Salvia, Cancún",
+        en: "Upper-level bedroom with privacy doors and lagoon view at Penthouse 3B, Salvia, Cancún",
+      },
+    },
+    {
+      src: salviaPlayaCamastros.url,
+      alt: {
+        es: "Vista aérea de la playa con camastros frente al condominio Salvia en la Zona Hotelera de Cancún",
+        en: "Aerial view of the beach with sun loungers in front of the Salvia building, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: salviaPlayaChacMool.url,
+      alt: {
+        es: "Vista aérea de Playa Chac Mool junto al condominio Salvia en la Zona Hotelera de Cancún",
+        en: "Aerial view of Chac Mool Beach next to the Salvia building, Cancún Hotel Zone",
+      },
+    },
+  ],
 };
 
 export const getSalviaGallery = (slug: string): GalleryImage[] => salviaGalleries[slug] ?? [];
