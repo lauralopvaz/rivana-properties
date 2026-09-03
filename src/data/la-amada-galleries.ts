@@ -15,6 +15,15 @@ import u311LockOff from "@/assets/la-amada/departamento-la-amada-311l-recamara-l
 import u311Alberca from "@/assets/la-amada/departamento-la-amada-311l-alberca-infinity-rooftop-costa-mujeres-cancun-06.webp.asset.json";
 import u311AereaPlaya from "@/assets/la-amada/departamento-la-amada-311l-vista-aerea-residencial-playa-costa-mujeres-cancun-08.webp.asset.json";
 import u311AereaJardines from "@/assets/la-amada/departamento-la-amada-311l-vista-aerea-jardines-costa-mujeres-cancun-09.webp.asset.json";
+import u305Terraza1 from "@/assets/la-amada/departamento-la-amada-305l-terraza-privada-vista-selva-costa-mujeres-cancun-01.webp.asset.json";
+import u305Terraza2 from "@/assets/la-amada/departamento-la-amada-305l-terraza-lounge-panoramica-costa-mujeres-cancun-02.webp.asset.json";
+import u305Terraza3 from "@/assets/la-amada/departamento-la-amada-305l-terraza-vista-laguna-costa-mujeres-cancun-03.webp.asset.json";
+import u305Sala from "@/assets/la-amada/departamento-la-amada-305l-sala-estar-amplia-costa-mujeres-cancun-04.webp.asset.json";
+import u305Comedor from "@/assets/la-amada/departamento-la-amada-305l-comedor-ventanales-costa-mujeres-cancun-05.webp.asset.json";
+import u305SalaTerraza from "@/assets/la-amada/departamento-la-amada-305l-sala-comedor-acceso-terraza-costa-mujeres-cancun-06.webp.asset.json";
+import u305Cocina from "@/assets/la-amada/departamento-la-amada-305l-cocina-barra-desayunador-costa-mujeres-cancun-07.webp.asset.json";
+import u305SalaTv from "@/assets/la-amada/departamento-la-amada-305l-sala-tv-recamara-costa-mujeres-cancun-09.webp.asset.json";
+import u305Plano from "@/assets/la-amada/departamento-la-amada-305l-plano-arquitectonico-costa-mujeres-cancun-10.webp.asset.json";
 
 export interface GalleryImage {
   src: string;
