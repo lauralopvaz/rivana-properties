@@ -24,6 +24,9 @@ import u305SalaTerraza from "@/assets/la-amada/departamento-la-amada-305l-sala-c
 import u305Cocina from "@/assets/la-amada/departamento-la-amada-305l-cocina-barra-desayunador-costa-mujeres-cancun-07.webp.asset.json";
 import u305SalaTv from "@/assets/la-amada/departamento-la-amada-305l-sala-tv-recamara-costa-mujeres-cancun-09.webp.asset.json";
 import u305Plano from "@/assets/la-amada/departamento-la-amada-305l-plano-arquitectonico-costa-mujeres-cancun-10.webp.asset.json";
+import a4203Golf from "@/assets/la-amada/departamento-la-amada-a4-203-vista-campo-golf-playa-mujeres.webp.asset.json";
+import a4203Marina from "@/assets/la-amada/departamento-la-amada-a4-203-marina-playa-mujeres.webp.asset.json";
+import a4203MarinaYates from "@/assets/la-amada/departamento-la-amada-a4-203-marina-yates-costa-mujeres.webp.asset.json";
 import u205Recamara from "@/assets/la-amada/departamento-la-amada-205m-recamara-principal-costa-mujeres-cancun-01.webp.asset.json";
 import u205SalaComedor from "@/assets/la-amada/departamento-la-amada-205m-sala-comedor-costa-mujeres-cancun-02.webp.asset.json";
 import u205SalaTv from "@/assets/la-amada/departamento-la-amada-205m-sala-estar-tv-costa-mujeres-cancun-04.webp.asset.json";
@@ -283,6 +286,29 @@ export const laAmadaGalleries: Record<string, GalleryImage[]> = {
       alt: {
         es: "Marina con yates frente a las residencias de La Amada, Costa Mujeres, Cancún",
         en: "Marina with yachts in front of La Amada residences, Costa Mujeres, Cancún",
+      },
+    },
+  ],
+  a4203: [
+    {
+      src: a4203Golf.url,
+      alt: {
+        es: "Vista aérea del campo de golf y el mar Caribe desde el Departamento A4-203 en La Amada, Playa Mujeres, Cancún",
+        en: "Aerial view of the golf course and Caribbean Sea from Apartment A4-203 at La Amada, Playa Mujeres, Cancún",
+      },
+    },
+    {
+      src: a4203Marina.url,
+      alt: {
+        es: "Marina privada con yates frente a las residencias La Amada en Playa Mujeres, Cancún",
+        en: "Private marina with yachts in front of La Amada residences, Playa Mujeres, Cancún",
+      },
+    },
+    {
+      src: a4203MarinaYates.url,
+      alt: {
+        es: "Vista aérea de la marina y residencias frente al mar en La Amada, Costa Mujeres, Cancún",
+        en: "Aerial view of the marina and oceanfront residences at La Amada, Costa Mujeres, Cancún",
       },
     },
   ],
