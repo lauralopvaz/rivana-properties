@@ -7,6 +7,8 @@ import {
   unitDetailPath,
   whatsappUrl,
 } from '@/data/immediate-delivery'
+import { laAmadaGalleries } from '@/data/la-amada-galleries'
+import { UnitGalleryCarousel } from '@/components/UnitGalleryCarousel'
 
 interface Props {
   unit: ImmediateUnit
@@ -15,17 +17,23 @@ interface Props {
 
 export const ImmediateDeliveryCard = ({ unit, priority = false }: Props) => {
   const { language, isEnglish } = useLanguage()
+  const gallery = laAmadaGalleries[unit.id.replace('la-amada-', '')] ?? []
 
   return (
     <article className="group bg-white border border-border flex flex-col h-full">
-      <div className="relative overflow-hidden" style={{ paddingTop: '70%' }}>
-        <img
-          src={unit.image}
-          alt={`${unit.development[language]} — ${unit.subtitle[language]}`}
-          loading={priority ? 'eager' : 'lazy'}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-        />
-      </div>
+      {gallery.length > 0 ? (
+        <UnitGalleryCarousel images={gallery} language={language} />
+      ) : (
+        <div className="relative overflow-hidden" style={{ paddingTop: '70%' }}>
+          <img
+            src={unit.image}
+            alt={`${unit.development[language]} — ${unit.subtitle[language]}`}
+            loading={priority ? 'eager' : 'lazy'}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          />
+        </div>
+      )}
+
 
       <div className="px-5 pt-5 pb-5 flex-1 flex flex-col">
         <p

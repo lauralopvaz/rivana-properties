@@ -5,6 +5,8 @@ import { useSchedulingModal } from "@/contexts/SchedulingModalContext";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { LA_AMADA_HERO_IMAGE } from "@/data/immediate-delivery";
+import { laAmadaGalleries } from "@/data/la-amada-galleries";
+import { UnitGalleryCarousel } from "@/components/UnitGalleryCarousel";
 
 type UnitId = "305l" | "205m" | "211l" | "a4203" | "ph07m";
 
@@ -400,7 +402,11 @@ export default function LaAmada() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
             {units.map((u) => (
-              <article key={u.id} className="bg-background p-8 lg:p-12 flex flex-col">
+              <article key={u.id} className="bg-background flex flex-col">
+                {laAmadaGalleries[u.id]?.length > 0 && (
+                  <UnitGalleryCarousel images={laAmadaGalleries[u.id]} language={language} />
+                )}
+                <div className="p-8 lg:p-12 flex flex-col flex-1">
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <h3 className="font-display font-light" style={{ fontSize: "34px", lineHeight: 1.1, color: "#CFAE60" }}>
@@ -492,6 +498,7 @@ export default function LaAmada() {
                       {t("Agendar visita", "Schedule visit")}
                     </button>
                   </div>
+                </div>
                 </div>
               </article>
             ))}
