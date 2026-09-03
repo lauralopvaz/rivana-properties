@@ -67,29 +67,16 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
           <span className="text-[#CFAE60]">★ {unit.airbnbRating.toFixed(2)} ({unit.reviews})</span>
         </div>
 
-        <div className="pt-3 mb-4 border-t border-border grid grid-cols-2 gap-3">
-          <div>
-            <span
-              className="block text-[10px] uppercase tracking-[2px] font-body font-light"
-              style={{ color: '#4B4B4B' }}
-            >
-              {language === 'es' ? 'Precio' : 'Price'}
-            </span>
-            <span className="font-display text-[22px] font-bold" style={{ color: '#CFAE60' }}>
-              {formatUSD(unit.askingPriceUSD)} USD
-            </span>
-          </div>
-          <div>
-            <span
-              className="block text-[10px] uppercase tracking-[2px] font-body font-light"
-              style={{ color: '#4B4B4B' }}
-            >
-              {language === 'es' ? 'ROI bruto' : 'Gross ROI'}
-            </span>
-            <span className="font-display text-[22px] font-bold" style={{ color: '#CFAE60' }}>
-              {unit.grossRoiPct.toFixed(2)}%
-            </span>
-          </div>
+        <div className="pt-3 mb-4 border-t border-border">
+          <span
+            className="block text-[10px] uppercase tracking-[2px] font-body font-light"
+            style={{ color: '#4B4B4B' }}
+          >
+            {language === 'es' ? 'Precio' : 'Price'}
+          </span>
+          <span className="font-display text-[22px] font-bold" style={{ color: '#CFAE60' }}>
+            {formatUSD(unit.askingPriceUSD)} USD
+          </span>
         </div>
 
         <div className="mt-auto grid grid-cols-2 gap-2">
