@@ -24,6 +24,9 @@ import u305SalaTerraza from "@/assets/la-amada/departamento-la-amada-305l-sala-c
 import u305Cocina from "@/assets/la-amada/departamento-la-amada-305l-cocina-barra-desayunador-costa-mujeres-cancun-07.webp.asset.json";
 import u305SalaTv from "@/assets/la-amada/departamento-la-amada-305l-sala-tv-recamara-costa-mujeres-cancun-09.webp.asset.json";
 import u305Plano from "@/assets/la-amada/departamento-la-amada-305l-plano-arquitectonico-costa-mujeres-cancun-10.webp.asset.json";
+import a4203Golf from "@/assets/la-amada/departamento-la-amada-a4-203-vista-campo-golf-playa-mujeres.webp.asset.json";
+import a4203Marina from "@/assets/la-amada/departamento-la-amada-a4-203-marina-playa-mujeres.webp.asset.json";
+import a4203MarinaYates from "@/assets/la-amada/departamento-la-amada-a4-203-marina-yates-costa-mujeres.webp.asset.json";
 import u205Recamara from "@/assets/la-amada/departamento-la-amada-205m-recamara-principal-costa-mujeres-cancun-01.webp.asset.json";
 import u205SalaComedor from "@/assets/la-amada/departamento-la-amada-205m-sala-comedor-costa-mujeres-cancun-02.webp.asset.json";
 import u205SalaTv from "@/assets/la-amada/departamento-la-amada-205m-sala-estar-tv-costa-mujeres-cancun-04.webp.asset.json";
