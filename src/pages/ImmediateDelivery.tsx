@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { SEOHead } from '@/components/SEOHead'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { waCta } from '@/lib/whatsapp-cta'
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext'
 import { Button } from '@/components/ui/button'
 import {
@@ -699,7 +700,7 @@ export default function ImmediateDelivery() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-14 px-10 font-body text-base tracking-wide bg-[#1C1C1C] text-white border border-white/40 hover:bg-[#1C1C1C]/90 transition-colors"
             >
-              Mas información de Salvia
+              {waCta(language, 'info')}
             </a>
           </div>
           <p className="mt-6 font-body text-[13px] text-white/50">

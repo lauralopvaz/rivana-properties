@@ -410,7 +410,7 @@ export default function SalviaBuilding() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-14 px-10 font-body text-base tracking-wide bg-[#1C1C1C] text-white hover:bg-[#1C1C1C]/90 transition-colors"
             >
-              Mas información de Salvia
+              {waCta(language, 'info')}
             </a>
           </div>
         </div>
