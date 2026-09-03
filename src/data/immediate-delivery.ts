@@ -65,8 +65,8 @@ export const immediateDeliveryUnits: ImmediateUnit[] = [
     },
   },
   {
-    id: 'la-amada-211l',
-    slug: 'la-amada-unit-211l',
+    id: 'la-amada-311l',
+    slug: 'la-amada-unit-311l',
     code: '311L',
     development: { es: 'La Amada Residences', en: 'La Amada Residences' },
     location: { es: 'Costa Mujeres, Cancún', en: 'Costa Mujeres, Cancún' },
