@@ -75,6 +75,57 @@ export const salviaGalleries: Record<string, GalleryImage[]> = {
       },
     },
   ],
+  "penthouse-2a": [
+    {
+      src: ph2aRecamara.url,
+      alt: {
+        es: "Recámara de planta baja con vista al mar del Penthouse 2A en Salvia, Zona Hotelera de Cancún",
+        en: "Lower-level ocean-view bedroom at Penthouse 2A, Salvia, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: ph2aBalcon.url,
+      alt: {
+        es: "Balcón con vista frontal al mar Caribe del Penthouse 2A en Salvia, Zona Hotelera de Cancún",
+        en: "Balcony with direct Caribbean Sea view at Penthouse 2A, Salvia, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: ph2aPlantaBaja.url,
+      alt: {
+        es: "Vista superior de la planta baja del Penthouse 2A en Salvia, Zona Hotelera de Cancún",
+        en: "Upper-level view of the lower floor at Penthouse 2A, Salvia, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: ph2aSala.url,
+      alt: {
+        es: "Sala de estar con TV y vista al mar del Penthouse 2A en Salvia, Zona Hotelera de Cancún",
+        en: "Living area with TV and ocean view at Penthouse 2A, Salvia, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: ph2aCocina.url,
+      alt: {
+        es: "Cocina equipada del Penthouse 2A en Salvia, Zona Hotelera de Cancún",
+        en: "Equipped kitchen at Penthouse 2A, Salvia, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: salviaPlaya.url,
+      alt: {
+        es: "Playa de arena blanca frente al condominio Salvia en la Zona Hotelera de Cancún",
+        en: "White-sand beach in front of the Salvia building, Cancún Hotel Zone",
+      },
+    },
+    {
+      src: salviaMar.url,
+      alt: {
+        es: "Vista aérea del mar Caribe frente al condominio Salvia en la Zona Hotelera de Cancún",
+        en: "Aerial view of the Caribbean Sea in front of the Salvia building, Cancún Hotel Zone",
+      },
+    },
+  ],
 };
 
 export const getSalviaGallery = (slug: string): GalleryImage[] => salviaGalleries[slug] ?? [];
