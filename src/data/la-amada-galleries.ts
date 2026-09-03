@@ -228,4 +228,62 @@ export const laAmadaGalleries: Record<string, GalleryImage[]> = {
       },
     },
   ],
+  "205m": [
+    {
+      src: u205SalaComedor.url,
+      alt: {
+        es: "Sala y comedor con plafón de madera del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Living and dining room with wood ceiling at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205SalaTv.url,
+      alt: {
+        es: "Sala de estar con TV del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Living room with TV at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205Recamara.url,
+      alt: {
+        es: "Recámara principal con cabecera de madera del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Primary bedroom with wood headboard at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205RecJardin.url,
+      alt: {
+        es: "Recámara con vista al jardín del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Bedroom with garden view at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205RecBalcon.url,
+      alt: {
+        es: "Recámara con acceso al balcón privado del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Bedroom with private balcony access at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205ClubPlaya.url,
+      alt: {
+        es: "Club de playa con palapas frente al Caribe en La Amada, Costa Mujeres, Cancún",
+        en: "Beach club with palapas facing the Caribbean at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205Alberca.url,
+      alt: {
+        es: "Alberca exterior con camastros y pérgolas en La Amada, Costa Mujeres, Cancún",
+        en: "Outdoor pool with loungers and pergolas at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205Marina.url,
+      alt: {
+        es: "Marina con yates frente a las residencias de La Amada, Costa Mujeres, Cancún",
+        en: "Marina with yachts in front of La Amada residences, Costa Mujeres, Cancún",
+      },
+    },
+  ],
 };
