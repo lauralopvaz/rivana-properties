@@ -115,7 +115,7 @@ export const Navbar = () => {
 
           <Button variant="gold" size="sm" asChild>
             <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=navbar" target="_blank" rel="noopener noreferrer" aria-label={waCta(language, 'conocer')}>
-              {t('nav.advisor')}
+              {waCta(language, 'conocer')}
             </a>
           </Button>
         </div>
@@ -179,7 +179,7 @@ export const Navbar = () => {
 
             <Button variant="gold" className="mt-4" asChild>
             <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=navbar" target="_blank" rel="noopener noreferrer" aria-label={waCta(language, 'conocer')}>
-                {t('nav.advisor')}
+                {waCta(language, 'conocer')}
               </a>
             </Button>
           </div>

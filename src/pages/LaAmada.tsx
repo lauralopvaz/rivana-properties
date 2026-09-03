@@ -651,7 +651,7 @@ export default function LaAmada() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-14 px-10 font-body text-sm tracking-wide hover:brightness-110 transition bg-slate-100 text-slate-800"
             >
-              ​Quiero más información
+              {waCta(language, "recibir")}
             </a>
             <button
               onClick={() => openModal()}
