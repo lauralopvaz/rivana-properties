@@ -286,4 +286,27 @@ export const laAmadaGalleries: Record<string, GalleryImage[]> = {
       },
     },
   ],
+  a4203: [
+    {
+      src: a4203Golf.url,
+      alt: {
+        es: "Vista aérea del campo de golf y el mar Caribe desde el Departamento A4-203 en La Amada, Playa Mujeres, Cancún",
+        en: "Aerial view of the golf course and Caribbean Sea from Apartment A4-203 at La Amada, Playa Mujeres, Cancún",
+      },
+    },
+    {
+      src: a4203Marina.url,
+      alt: {
+        es: "Marina privada con yates frente a las residencias La Amada en Playa Mujeres, Cancún",
+        en: "Private marina with yachts in front of La Amada residences, Playa Mujeres, Cancún",
+      },
+    },
+    {
+      src: a4203MarinaYates.url,
+      alt: {
+        es: "Vista aérea de la marina y residencias frente al mar en La Amada, Costa Mujeres, Cancún",
+        en: "Aerial view of the marina and oceanfront residences at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+  ],
 };
