@@ -381,8 +381,8 @@ export default function ImmediateDelivery() {
                 style={{ fontSize: 'clamp(30px, 4vw, 46px)', lineHeight: 1.15 }}
               >
                 {isEnglish
-                  ? 'Four residences at La Amada'
-                  : 'Cuatro residencias en La Amada'}
+                  ? 'Five residences at La Amada'
+                  : 'Cinco residencias en La Amada'}
               </h2>
             </div>
             <p className="font-body font-light text-muted-foreground max-w-md">
