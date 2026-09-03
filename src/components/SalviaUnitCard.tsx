@@ -24,12 +24,6 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
           loading={priority ? 'eager' : 'lazy'}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
-        <span
-          className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 text-[11px] tracking-[2px] uppercase font-body text-white"
-          style={{ background: '#CFAE60' }}
-        >
-          {language === 'es' ? 'Llave en mano · Entrega Inmediata' : 'Turn-Key · Immediate Delivery'}
-        </span>
         {unit.guestFavorite && (
           <span
             className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-3 py-1 text-[11px] tracking-[2px] uppercase font-body"
