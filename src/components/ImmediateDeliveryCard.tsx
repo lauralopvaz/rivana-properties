@@ -15,7 +15,6 @@ interface Props {
 
 export const ImmediateDeliveryCard = ({ unit, priority = false }: Props) => {
   const { language, isEnglish } = useLanguage()
-  const ready = unit.moveInReady
 
   return (
     <article className="group bg-white border border-border flex flex-col h-full">
