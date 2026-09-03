@@ -26,14 +26,6 @@ export const ImmediateDeliveryCard = ({ unit, priority = false }: Props) => {
           loading={priority ? 'eager' : 'lazy'}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
-        <span
-          className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 text-[11px] tracking-[2px] uppercase font-body text-white"
-          style={{ background: ready ? '#CFAE60' : '#1C1C1C' }}
-        >
-          {ready
-            ? language === 'es' ? '✓ Llave en mano' : '✓ Ready Now'
-            : language === 'es' ? 'Personalización' : 'Custom Build'}
-        </span>
       </div>
 
       <div className="px-5 pt-5 pb-5 flex-1 flex flex-col">
@@ -41,13 +33,13 @@ export const ImmediateDeliveryCard = ({ unit, priority = false }: Props) => {
           className="text-[11px] tracking-[3px] uppercase font-body font-bold mb-1"
           style={{ color: '#CFAE60' }}
         >
-          {unit.location[language]} · {unit.code}
+          {unit.subtitle[language]}
         </p>
         <h3
           className="font-display text-[22px] font-bold leading-tight mb-1"
           style={{ color: '#1C1C1C' }}
         >
-          {unit.subtitle[language]}
+          {unit.location[language]}
         </h3>
         <p className="font-body text-[13px] text-muted-foreground mb-3">
           {unit.development[language]}
