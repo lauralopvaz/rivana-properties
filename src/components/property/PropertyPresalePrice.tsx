@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Tag, MessageCircle, CreditCard } from "lucide-react";
 import { formatNumber } from "@/lib/formatPrice";
 import { tr } from "@/lib/propertyI18n";
+import { waCta } from "@/lib/whatsapp-cta";
 import type { PresalePrice, Locale } from "@/types/property";
 
 export interface PaymentPlanRow {
@@ -193,6 +194,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
         </button>
         <button
           onClick={onWhatsApp}
+          aria-label={waCta(locale, 'info')}
           className="w-[48px] flex items-center justify-center flex-shrink-0"
           style={{ border: "1px solid rgba(37,211,102,0.28)" }}
         >

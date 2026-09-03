@@ -1,5 +1,6 @@
 import { MessageCircle, FileText } from "lucide-react";
 import { tr } from "@/lib/propertyI18n";
+import { waCta } from "@/lib/whatsapp-cta";
 import type { Locale } from "@/types/property";
 
 interface PropertyStickyBarProps {
@@ -33,6 +34,7 @@ export function PropertyStickyBar({ onReserve, onWhatsApp, onBrochure, locale, v
         </button>
         <button
           onClick={onWhatsApp}
+          aria-label={waCta(locale, 'info')}
           className="flex items-center justify-center flex-shrink-0 prop-sticky-wa"
           style={{ border: "1px solid rgba(37,211,102,0.28)" }}
         >
