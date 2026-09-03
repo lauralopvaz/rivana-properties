@@ -79,7 +79,7 @@ export const PortugalMayakobaBodyES = () => {
             <Button variant="gold" size="lg">Ver la propiedad →</Button>
           </Link>
           <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-portugal-mayakoba" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg">Asesoría por WhatsApp</Button>
+            <Button variant="outline" size="lg">Recibir más información</Button>
           </a>
         </div>
       </div>

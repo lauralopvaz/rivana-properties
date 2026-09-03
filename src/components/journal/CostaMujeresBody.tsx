@@ -168,9 +168,9 @@ export const CostaMujeresBodyES = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-[#CFAE60] text-white font-body text-sm uppercase tracking-wider px-6 py-3 hover:bg-[#B8982F] transition-colors"
-          aria-label="Solicitar asesoría inmobiliaria por WhatsApp"
+          aria-label="Recibir más información"
         >
-          Quiero asesoría inmobiliaria
+          Recibir más información
         </a>
         <Link
           to="/cancun/costa-mujeres"
@@ -344,9 +344,9 @@ export const CostaMujeresBodyEN = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-[#CFAE60] text-white font-body text-sm uppercase tracking-wider px-6 py-3 hover:bg-[#B8982F] transition-colors"
-          aria-label="Request real estate advisory via WhatsApp"
+          aria-label="Get More Info"
         >
-          I Want Real Estate Advisory
+          Get More Info
         </a>
         <Link
           to="/en/cancun/costa-mujeres"

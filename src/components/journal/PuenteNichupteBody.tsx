@@ -90,7 +90,7 @@ export const PuenteNichupteBodyES = () => {
             <Button variant="gold" size="lg">Ver Mondrian Residences at Grand Island →</Button>
           </Link>
           <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-puente-nichupte" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg">Asesoría por WhatsApp</Button>
+            <Button variant="outline" size="lg">Recibir más información</Button>
           </a>
         </div>
       </div>

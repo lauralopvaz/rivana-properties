@@ -137,7 +137,7 @@ export const MondrianGrandIslandBodyES = () => {
       {/* CTA 3 — full width */}
       <div className="my-12 text-center">
         <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria%20sobre%20The%20Residences%20at%20Grand%20Island%20Cancun&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-mondrian-grand-island-es" target="_blank" rel="noopener noreferrer" className="block">
-          <Button variant="gold" size="lg" className="w-full max-w-lg mx-auto whitespace-normal h-auto py-3 text-sm sm:text-base leading-tight text-center">Quiero asesoría inmobiliaria</Button>
+          <Button variant="gold" size="lg" className="w-full max-w-lg mx-auto whitespace-normal h-auto py-3 text-sm sm:text-base leading-tight text-center">Recibir más información</Button>
         </a>
       </div>
 
@@ -281,7 +281,7 @@ export const MondrianGrandIslandBodyEN = () => {
       {/* CTA 3 — full width */}
       <div className="my-12 text-center">
         <a href="https://wa.me/529988457224?text=I%20Want%20Real%20Estate%20Advisory%20about%20The%20Residences%20at%20Grand%20Island%20Cancun&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-mondrian-grand-island-en" target="_blank" rel="noopener noreferrer" className="block">
-          <Button variant="gold" size="lg" className="w-full max-w-lg mx-auto whitespace-normal h-auto py-3 text-sm sm:text-base leading-tight text-center">I Want Real Estate Advisory</Button>
+          <Button variant="gold" size="lg" className="w-full max-w-lg mx-auto whitespace-normal h-auto py-3 text-sm sm:text-base leading-tight text-center">Get More Info</Button>
         </a>
       </div>
 
