@@ -33,14 +33,6 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
             />
           </div>
         )}
-        {unit.guestFavorite && (
-          <span
-            className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 text-[11px] tracking-[2px] uppercase font-body"
-            style={{ background: '#1C1C1C', color: '#CFAE60' }}
-          >
-            ★ Guest Favorite
-          </span>
-        )}
       </div>
 
       <div className="px-5 pt-5 pb-5 flex-1 flex flex-col">
@@ -64,7 +56,6 @@ export const SalviaUnitCard = ({ unit, priority = false }: Props) => {
           <span>{unit.bedrooms} {language === 'es' ? 'rec.' : 'beds'}</span>
           <span>{unit.bathrooms} {language === 'es' ? 'baños' : 'baths'}</span>
           <span>{unit.floorAreaSqFt} sq ft</span>
-          <span className="text-[#CFAE60]">★ {unit.airbnbRating.toFixed(2)} ({unit.reviews})</span>
         </div>
 
         <div className="pt-3 mb-4 border-t border-border">
