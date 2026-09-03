@@ -24,6 +24,14 @@ import u305SalaTerraza from "@/assets/la-amada/departamento-la-amada-305l-sala-c
 import u305Cocina from "@/assets/la-amada/departamento-la-amada-305l-cocina-barra-desayunador-costa-mujeres-cancun-07.webp.asset.json";
 import u305SalaTv from "@/assets/la-amada/departamento-la-amada-305l-sala-tv-recamara-costa-mujeres-cancun-09.webp.asset.json";
 import u305Plano from "@/assets/la-amada/departamento-la-amada-305l-plano-arquitectonico-costa-mujeres-cancun-10.webp.asset.json";
+import u205Recamara from "@/assets/la-amada/departamento-la-amada-205m-recamara-principal-costa-mujeres-cancun-01.webp.asset.json";
+import u205SalaComedor from "@/assets/la-amada/departamento-la-amada-205m-sala-comedor-costa-mujeres-cancun-02.webp.asset.json";
+import u205SalaTv from "@/assets/la-amada/departamento-la-amada-205m-sala-estar-tv-costa-mujeres-cancun-04.webp.asset.json";
+import u205RecJardin from "@/assets/la-amada/departamento-la-amada-205m-recamara-vista-jardin-costa-mujeres-cancun-05.webp.asset.json";
+import u205RecBalcon from "@/assets/la-amada/departamento-la-amada-205m-recamara-acceso-balcon-costa-mujeres-cancun-06.webp.asset.json";
+import u205ClubPlaya from "@/assets/la-amada/departamento-la-amada-205m-club-de-playa-palapas-costa-mujeres-cancun-08.webp.asset.json";
+import u205Alberca from "@/assets/la-amada/departamento-la-amada-205m-alberca-exterior-costa-mujeres-cancun-09.jpg.asset.json";
+import u205Marina from "@/assets/la-amada/departamento-la-amada-205m-marina-yates-costa-mujeres-cancun-10.webp.asset.json";
 
 export interface GalleryImage {
   src: string;
@@ -217,6 +225,64 @@ export const laAmadaGalleries: Record<string, GalleryImage[]> = {
       alt: {
         es: "Plano arquitectónico del Departamento 305L en La Amada, Costa Mujeres, Cancún",
         en: "Architectural floor plan of Apartment 305L, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+  ],
+  "205m": [
+    {
+      src: u205SalaComedor.url,
+      alt: {
+        es: "Sala y comedor con plafón de madera del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Living and dining room with wood ceiling at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205SalaTv.url,
+      alt: {
+        es: "Sala de estar con TV del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Living room with TV at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205Recamara.url,
+      alt: {
+        es: "Recámara principal con cabecera de madera del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Primary bedroom with wood headboard at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205RecJardin.url,
+      alt: {
+        es: "Recámara con vista al jardín del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Bedroom with garden view at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205RecBalcon.url,
+      alt: {
+        es: "Recámara con acceso al balcón privado del Departamento 205M en La Amada, Costa Mujeres, Cancún",
+        en: "Bedroom with private balcony access at Apartment 205M, La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205ClubPlaya.url,
+      alt: {
+        es: "Club de playa con palapas frente al Caribe en La Amada, Costa Mujeres, Cancún",
+        en: "Beach club with palapas facing the Caribbean at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205Alberca.url,
+      alt: {
+        es: "Alberca exterior con camastros y pérgolas en La Amada, Costa Mujeres, Cancún",
+        en: "Outdoor pool with loungers and pergolas at La Amada, Costa Mujeres, Cancún",
+      },
+    },
+    {
+      src: u205Marina.url,
+      alt: {
+        es: "Marina con yates frente a las residencias de La Amada, Costa Mujeres, Cancún",
+        en: "Marina with yachts in front of La Amada residences, Costa Mujeres, Cancún",
       },
     },
   ],
