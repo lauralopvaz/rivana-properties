@@ -5,6 +5,8 @@ import { useSchedulingModal } from "@/contexts/SchedulingModalContext";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { LA_AMADA_HERO_IMAGE } from "@/data/immediate-delivery";
+import { laAmadaGalleries } from "@/data/la-amada-galleries";
+import { UnitGalleryCarousel } from "@/components/UnitGalleryCarousel";
 
 type UnitId = "305l" | "205m" | "211l" | "a4203" | "ph07m";
 
