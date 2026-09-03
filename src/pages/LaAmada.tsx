@@ -8,7 +8,7 @@ import { LA_AMADA_HERO_IMAGE } from "@/data/immediate-delivery";
 import { laAmadaGalleries } from "@/data/la-amada-galleries";
 import { UnitGalleryCarousel } from "@/components/UnitGalleryCarousel";
 
-type UnitId = "305l" | "205m" | "211l" | "a4203" | "ph07m";
+type UnitId = "305l" | "205m" | "311l" | "a4203" | "ph07m";
 
 interface Unit {
   id: UnitId;
@@ -118,7 +118,7 @@ const units: Unit[] = [
     secondaryCta: { es: "Activa el Potencial de Renta", en: "Unlock Rental Income Potential" },
   },
   {
-    id: "211l",
+    id: "311l",
     code: "311L",
     name: { es: "Departamento 311L", en: "Residence 311L" },
     tagline: { es: "2 Recámaras · 220 m² · Lock-Off", en: "2 Bedrooms · 220 m² · Lock-Off" },
@@ -551,7 +551,7 @@ export default function LaAmada() {
                 <Row label={t("Baños", "Bathrooms")} values={compareUnits.map((u) => u.bathrooms)} />
                 <Row label={t("Estacionamiento", "Parking")} values={compareUnits.map((u) => u.parking)} />
                 <Row label={t("Vista", "View")} values={compareUnits.map((u) => u.view[language])} />
-                <Row label={t("Lock-Off", "Lock-Off")} values={compareUnits.map((u) => (u.id === "211l" ? t("Sí", "Yes") : "—"))} />
+                <Row label={t("Lock-Off", "Lock-Off")} values={compareUnits.map((u) => (u.id === "311l" ? t("Sí", "Yes") : "—"))} />
                 <Row
                   label={t("Amueblado", "Furnished")}
                   values={compareUnits.map((u) => (u.furnished ? t("Sí", "Yes") : t("No", "No")))}
