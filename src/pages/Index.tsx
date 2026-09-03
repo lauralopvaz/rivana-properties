@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 import { destinations } from '@/data/destinations';
 import { journalArticles } from '@/data/journal-articles';
 import { ArrowRightIcon } from '@/components/icons';
@@ -113,7 +114,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {language === 'es' ? 'Inicia tu asesoría →' : 'Start your advisory →'}
+                {waCta(language, 'conocer')}
               </a>
             </Button>
             <Button variant="outline" size="lg" className="rounded-none border-[hsl(var(--pearl))] text-[hsl(var(--pearl))] hover:bg-[hsl(var(--pearl))]/10 h-16 px-12" style={{ fontSize: '19px' }} asChild>

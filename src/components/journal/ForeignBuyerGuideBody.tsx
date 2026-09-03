@@ -197,7 +197,7 @@ export const ForeignBuyerGuideBodyEN = () => {
           rel="noopener noreferrer"
           className="inline-block bg-[hsl(var(--gold))] text-background font-display text-sm tracking-wider uppercase px-8 py-3 rounded-sm hover:opacity-90 transition-opacity"
         >
-          Foreign Buyer Advisory
+          Get More Info
         </a>
       </div>
     </div>
@@ -365,7 +365,7 @@ export const ForeignBuyerGuideBodyES = () => {
           rel="noopener noreferrer"
           className="inline-block bg-[hsl(var(--gold))] text-background font-display text-sm tracking-wider uppercase px-8 py-3 rounded-sm hover:opacity-90 transition-opacity"
         >
-          Asesoria para extranjeros
+          Recibir más información
         </a>
       </div>
     </div>

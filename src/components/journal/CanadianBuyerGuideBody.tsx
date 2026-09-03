@@ -331,7 +331,7 @@ export const CanadianBuyerGuideBodyEN = () => {
             rel="noopener noreferrer"
             className="inline-block bg-[hsl(var(--gold))] text-background font-display text-sm tracking-wider uppercase px-8 py-3 rounded-sm hover:opacity-90 transition-opacity"
           >
-            Schedule My Advisory →
+            Get More Info
           </a>
           <Link
             to={localePath('/listings')}

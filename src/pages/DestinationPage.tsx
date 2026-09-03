@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 import { useSchedulingModal, ContactType } from '@/contexts/SchedulingModalContext';
 import { getDestination } from '@/data/destinations';
 import { ArrowRightIcon, TrendingUpIcon, BedIcon, RulerIcon, PhoneIcon, VideoIcon, CalendarIcon, BriefcaseIcon, ChatIcon } from '@/components/icons';
@@ -996,7 +997,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
               </Button>
               <Button variant="whatsapp" size="sm" asChild>
                 <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=destination-page" target="_blank" rel="noopener noreferrer">
-                  <ChatIcon className="w-4 h-4" /> WhatsApp
+                  <ChatIcon className="w-4 h-4" /> {waCta(language, 'conocer')}
                 </a>
               </Button>
             </div>

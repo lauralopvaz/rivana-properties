@@ -7,6 +7,7 @@ import { Check } from "lucide-react";
 import { LA_AMADA_HERO_IMAGE } from "@/data/immediate-delivery";
 import { laAmadaGalleries } from "@/data/la-amada-galleries";
 import { UnitGalleryCarousel } from "@/components/UnitGalleryCarousel";
+import { waCta } from "@/lib/whatsapp-cta";
 
 type UnitId = "305l" | "205m" | "311l" | "a4203" | "ph07m";
 
@@ -489,7 +490,7 @@ export default function LaAmada() {
                           d="M128.5 54c-40.9 0-74.1 33.2-74.1 74.1 0 13.1 3.4 25.9 9.9 37.2L54 202l37.6-9.8a74 74 0 0 0 36.9 9.4h.1c40.8 0 74.1-33.2 74.1-74.1 0-19.8-7.7-38.4-21.7-52.4A73.7 73.7 0 0 0 128.5 54zm33.8 89.8c-1.8-.9-10.9-5.4-12.6-6-1.7-.6-2.9-.9-4.1.9s-4.7 6-5.8 7.2c-1.1 1.2-2.1 1.4-3.9.5-1.8-.9-7.8-2.9-14.9-9.2-5.5-4.9-9.2-10.9-10.3-12.7-1.1-1.8-.1-2.8.8-3.7.8-.8 1.8-2.1 2.7-3.2.9-1.1 1.2-1.8 1.8-3 .6-1.2.3-2.3-.2-3.2-.5-.9-4.1-9.9-5.7-13.5-1.5-3.6-3-3.1-4.1-3.1l-3.5-.1c-1.2 0-3.2.5-4.9 2.3-1.7 1.8-6.4 6.3-6.4 15.3 0 9 6.6 17.7 7.5 19 .9 1.2 13 19.8 31.5 27.8 4.4 1.9 7.8 3 10.5 3.9 4.4 1.4 8.4 1.2 11.6.7 3.5-.5 10.9-4.5 12.5-8.8 1.5-4.3 1.5-8 1.1-8.8-.5-.8-1.6-1.2-3.4-2.1z"
                         />
                       </svg>
-                      {t(`WhatsApp · Unidad ${u.code}`, `WhatsApp · Unit ${u.code}`)}
+                      {waCta(language, "info")}
                     </a>
                     <button
                       onClick={() => openModal()}
@@ -583,7 +584,7 @@ export default function LaAmada() {
                         )}
                         className="inline-flex items-center justify-center h-10 px-4 bg-[#25D366] text-[#1C1C1C] font-body text-xs tracking-wide hover:brightness-95 transition"
                       >
-                        {t(`WhatsApp · ${u.code}`, `WhatsApp · ${u.code}`)}
+                        {waCta(language, "info")}
                       </a>
                     </td>
                   ))}
@@ -650,7 +651,7 @@ export default function LaAmada() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-14 px-10 font-body text-sm tracking-wide hover:brightness-110 transition bg-slate-100 text-slate-800"
             >
-              ​Quiero más información
+              {waCta(language, "recibir")}
             </a>
             <button
               onClick={() => openModal()}

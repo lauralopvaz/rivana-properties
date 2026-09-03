@@ -95,7 +95,7 @@ export const GuiaPreventaCancunBodyES = () => {
             href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20sobre%20preventas%20en%20Canc%C3%BAn&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-guia-preventa-es"
             className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
           >
-            Quiero Asesoría de Preventa
+            Recibir más información
           </a>
           <Link
             to={localePath('/presale')}
@@ -203,7 +203,7 @@ export const GuiaPreventaCancunBodyEN = () => {
             href="https://wa.me/529988457224?text=I%20want%20pre-sale%20advisory%20in%20Cancun&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-guia-preventa-en"
             className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
           >
-            I Want Pre-Sale Advisory
+            Get More Info
           </a>
           <Link
             to={localePath('/presale')}

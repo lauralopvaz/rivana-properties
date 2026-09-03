@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 import { BedIcon, RulerIcon, TrendingUpIcon } from '@/components/icons';
 import { properties } from '@/lib/properties';
 
@@ -92,7 +93,7 @@ const PreventaCancun = () => {
         fontFamily: "'Jost', sans-serif",
       }}
     >
-      {label || (es ? 'Hablar por WhatsApp' : 'Chat on WhatsApp')}
+      {label || waCta(es ? 'es' : 'en', 'info')}
     </a>
   );
 

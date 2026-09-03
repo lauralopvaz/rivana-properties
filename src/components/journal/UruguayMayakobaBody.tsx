@@ -165,9 +165,9 @@ export const UruguayMayakobaBodyES = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 border border-[#CFAE60] text-[#CFAE60] font-body text-sm uppercase tracking-wider px-6 py-3 hover:bg-[#CFAE60]/10 transition-colors"
-          aria-label="Contactar asesor Rivana por WhatsApp"
+          aria-label="Recibir más información"
         >
-          WhatsApp: +52 998 845 7224
+          Recibir más información
         </a>
       </div>
     </div>
@@ -321,9 +321,9 @@ export const UruguayMayakobaBodyEN = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 border border-[#CFAE60] text-[#CFAE60] font-body text-sm uppercase tracking-wider px-6 py-3 hover:bg-[#CFAE60]/10 transition-colors"
-          aria-label="Contact Rivana advisor via WhatsApp"
+          aria-label="Get More Info"
         >
-          WhatsApp: +52 998 845 7224
+          Get More Info
         </a>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 
@@ -239,7 +240,7 @@ export const ContactSection = () => {
                       onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.07)'; }}
                     >
                       <WhatsAppIcon className="w-[14px] h-[14px]" />
-                      {L === 'es' ? 'Contactar por WhatsApp' : 'Contact via WhatsApp'}
+                      {waCta(L, 'recibir')}
                     </a>
                   </div>
                   <p className="text-center font-body text-xs text-muted-foreground/45 mt-4 leading-[1.7]">

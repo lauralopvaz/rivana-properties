@@ -3,6 +3,7 @@ import { Check, MessageCircle, Loader2, FileDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { tr } from "@/lib/propertyI18n";
+import { waCta } from "@/lib/whatsapp-cta";
 import type { Locale } from "@/types/property";
 
 interface PropertyContactFormProps {
@@ -158,7 +159,7 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
           }}
         >
           <MessageCircle size={14} />
-          {locale === 'es' ? 'Escribir por WhatsApp' : 'Write on WhatsApp'}
+          {waCta(locale, 'recibir')}
         </button>
 
         {/* Brochure CTA */}

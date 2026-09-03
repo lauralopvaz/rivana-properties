@@ -178,7 +178,7 @@ export const WorldCupBodyES = () => {
         <p className="text-muted-foreground font-body mb-6">Habla hoy con un asesor Rivana — bilingüe, especializado en el mercado de Cancún y la Riviera Maya, con acceso directo a números reales y disponibilidad actualizada de todos los desarrollos del portafolio.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="https://wa.me/529988457224?text=Quiero%20asesor%C3%ADa%20inmobiliaria&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-worldcup-es" target="_blank" rel="noopener noreferrer">
-            <Button variant="gold" size="lg">Quiero asesoría inmobiliaria</Button>
+            <Button variant="gold" size="lg">Recibir más información</Button>
           </a>
           <Link to={localePath('/listings')}>
             <Button variant="outline" size="lg">Ver todas las propiedades</Button>
@@ -352,7 +352,7 @@ export const WorldCupBodyEN = () => {
         <p className="text-muted-foreground font-body mb-6">Connect with a Rivana advisor today — bilingual, specialized in Cancún and Riviera Maya real estate, with direct access to real numbers and updated availability across the entire portfolio.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="https://wa.me/529988457224?text=I%20want%20real%20estate%20advisory&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=journal-worldcup-en" target="_blank" rel="noopener noreferrer">
-            <Button variant="gold" size="lg">I Want Real Estate Advisory</Button>
+            <Button variant="gold" size="lg">Get More Info</Button>
           </a>
           <Link to={localePath('/listings')}>
             <Button variant="outline" size="lg">View all properties</Button>

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { BedIcon, RulerIcon, TrendingUpIcon, ArrowRightIcon, ChatIcon } from '@/components/icons';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 
 const propMondrian = '/images/mondrian/mondrian-hero.jpg';
 import slsVistaPrincipal from '@/assets/sls-vista-principal.jpg';
@@ -160,6 +162,7 @@ const ROICalculator = () => {
 
 const BeachfrontCondos = () => {
   const [buyerOrigin, setBuyerOrigin] = useState<'American' | 'Canadian'>('American');
+  const { language } = useLanguage();
 
   const whatsappText = encodeURIComponent(`Hi, I'm a ${buyerOrigin} buyer interested in Cancún condos`);
   const whatsappUrl = `https://wa.me/529988457224?text=${whatsappText}&utm_source=web&utm_medium=whatsapp&utm_campaign=lead&utm_content=beachfront-condos`;
@@ -419,7 +422,7 @@ const BeachfrontCondos = () => {
               className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[11px] tracking-[3px] uppercase font-body font-[400] transition-colors no-underline"
               style={{ background: '#25D366', color: 'white' }}
             >
-              <ChatIcon className="w-4 h-4" /> Message on WhatsApp
+              <ChatIcon className="w-4 h-4" /> {waCta(language, 'info')}
             </a>
             <Link
               to="/en/listings"

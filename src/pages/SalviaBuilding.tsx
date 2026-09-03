@@ -1,5 +1,6 @@
 import { SEOHead } from '@/components/SEOHead'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { waCta } from '@/lib/whatsapp-cta'
 import { useSchedulingModal } from '@/contexts/SchedulingModalContext'
 import { Button } from '@/components/ui/button'
 import { SalviaUnitCard } from '@/components/SalviaUnitCard'
@@ -127,7 +128,7 @@ export default function SalviaBuilding() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-10 h-14 font-body text-sm tracking-wide border border-white/40 text-white hover:bg-white/10"
             >
-              Mas información de Salvia
+              {waCta(language, 'info')}
             </a>
           </div>
         </div>
@@ -409,7 +410,7 @@ export default function SalviaBuilding() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-14 px-10 font-body text-base tracking-wide bg-[#1C1C1C] text-white hover:bg-[#1C1C1C]/90 transition-colors"
             >
-              Mas información de Salvia
+              {waCta(language, 'info')}
             </a>
           </div>
         </div>

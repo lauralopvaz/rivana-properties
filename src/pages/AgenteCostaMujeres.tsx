@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { waCta } from '@/lib/whatsapp-cta';
 import { BedIcon, RulerIcon, TrendingUpIcon } from '@/components/icons';
 import { properties } from '@/lib/properties';
 
@@ -101,7 +102,7 @@ const AgenteCostaMujeres = () => {
         fontFamily: "'Jost', sans-serif",
       }}
     >
-      {label || 'Hablar por WhatsApp'}
+      {label || waCta(isEnglish ? 'en' : 'es', 'info')}
     </a>
   );
 
