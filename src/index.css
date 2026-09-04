@@ -174,10 +174,17 @@
   /* Cormorant only as display type at 40px+; smaller sizes fall back to Jost 500 */
   .font-display.text-xs, .font-display.text-sm, .font-display.text-base,
   .font-display.text-lg, .font-display.text-xl, .font-display.text-2xl,
-  .font-display.text-3xl, .font-display.text-4xl {
+  .font-display.text-3xl, .font-display.text-4xl,
+  .font-display[class*="text-[1"], .font-display[class*="text-[2"],
+  .font-display[class*="text-[3"],
+  :is(h1, h2, h3, h4, h5, h6):is(.text-xs, .text-sm, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl),
+  :is(h1, h2, h3, h4, h5, h6)[class*="text-[1"],
+  :is(h1, h2, h3, h4, h5, h6)[class*="text-[2"],
+  :is(h1, h2, h3, h4, h5, h6)[class*="text-[3"] {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
   }
+
   .font-body {
     font-family: 'Jost', sans-serif;
   }
