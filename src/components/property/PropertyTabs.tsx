@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronRight, MapPin } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 import { formatMXN } from "@/lib/formatPrice";
