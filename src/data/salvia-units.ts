@@ -1,7 +1,7 @@
-import buildingAsset from '@/assets/salvia/salvia-building.jpg.asset.json'
-import unit3bAsset from '@/assets/salvia/salvia-3b.jpg.asset.json'
-import unit2aAsset from '@/assets/salvia/salvia-2a.jpg.asset.json'
-import unit604abAsset from '@/assets/salvia/salvia-604ab.jpg.asset.json'
+import buildingAsset from '@/assets/salvia/condominio-salvia-salvia-playa-chac-mool-vista-aerea-zona-hotelera-cancun-03.webp.asset.json'
+import unit3bAsset from '@/assets/salvia/penthouse-salvia-ph-3b-sala-comedor-vista-mar-zona-hotelera-cancun-01.webp.asset.json'
+import unit2aAsset from '@/assets/salvia/penthouse-salvia-ph-2a-balcon-vista-frontal-mar-zona-hotelera-cancun-02.webp.asset.json'
+import unit604abAsset from '@/assets/salvia/departamento-salvia-604ab-balcon-vista-mar-caribe-zona-hotelera-cancun-01.webp.asset.json'
 
 export interface SalviaPerfYear {
   year: number
