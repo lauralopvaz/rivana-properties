@@ -169,11 +169,23 @@
 @layer utilities {
   .font-display {
     font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+  }
+  /* Cormorant only as display type at 40px+; smaller sizes fall back to Jost 500 */
+  .font-display.text-xs, .font-display.text-sm, .font-display.text-base,
+  .font-display.text-lg, .font-display.text-xl, .font-display.text-2xl,
+  .font-display.text-3xl, .font-display.text-4xl {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
   }
   .font-body {
     font-family: 'Jost', sans-serif;
   }
+  .font-light, .font-extralight, .font-thin {
+    font-weight: 400;
+  }
 }
+
 
 
 /* WhatsApp pulse */
