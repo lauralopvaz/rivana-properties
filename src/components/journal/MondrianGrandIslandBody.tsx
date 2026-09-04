@@ -27,7 +27,7 @@ export const MondrianGrandIslandBodyES = () => {
 
       <p>Mondrian Residences at Grand Island Cancun no es simplemente un desarrollo inmobiliario con un nombre atractivo. Es un proyecto respaldado por <strong className="text-foreground">Marca Elite internacional</strong>, el grupo hotelero más grande del mundo con más de 5,700 propiedades en 110 países y marcas que van desde Sofitel y Fairmont hasta las colecciones de lujo y lifestyle más reconocidas del planeta.</p>
 
-      <p>Esta es una de las marcas insignia del portafolio de lifestyle de Marca Elite internacional: diseño de vanguardia, experiencias curadas y un estándar de servicio que los huéspedes y residentes de Miami, Londres, Dubai y Los Ángeles ya conocen bien. Cuando Marca Elite internacional pone su nombre en un desarrollo residencial, no es solo marketing — es un compromiso operativo, reputacional y de largo plazo.</p>
+      <p>Esta es una de las marcas insignia del portafolio de lifestyle de Marca Elite internacional: diseño de vanguardia, experiencias seleccionadas y un estándar de servicio que los huéspedes y residentes de Miami, Londres, Dubai y Los Ángeles ya conocen bien. Cuando Marca Elite internacional pone su nombre en un desarrollo residencial, no es solo marketing — es un compromiso operativo, reputacional y de largo plazo.</p>
 
       <p>Para el inversionista, esto se traduce en algo concreto: un activo que mantiene valor por sí solo, que atrae al arrendatario correcto, y que se posiciona en un segmento de mercado con demanda global sostenida. No compras un departamento; compras participación en un ecosistema de marca que ya probó su trayectoria en los destinos más sofisticados del mundo.</p>
 
@@ -64,7 +64,7 @@ export const MondrianGrandIslandBodyES = () => {
         <li>Albercas de diseño con vista al Caribe y a la Laguna de Nichupté</li>
         <li>Spa y centro de bienestar con operación de estándares Marca Elite internacional</li>
         <li>Gimnasio equipado a nivel hotelero de lujo</li>
-        <li>Restaurantes y bares dentro del complejo, con oferta gastronómica curada</li>
+        <li>Restaurantes y bares dentro del complejo, con oferta gastronómica seleccionada</li>
         <li>Marina y acceso directo al agua</li>
         <li>Áreas sociales, salones de eventos y espacios de coworking premium</li>
         <li>Servicio de concierge disponible para residentes — equiparable al de un hotel cinco estrellas</li>

@@ -124,7 +124,7 @@ const furnishedChecklist = {
     'Mobiliario de diseñador',
     'Electrodomésticos completos',
     'Ropa de cama y blancos',
-    'Décor y accesorios curados',
+    'Décor y accesorios seleccionados',
     'Cerraduras digitales',
     'Lista para mudarse',
   ],
@@ -389,7 +389,7 @@ export default function ImmediateDelivery() {
             <p className="font-body font-light text-muted-foreground max-w-md">
               {isEnglish
                 ? 'Curated by Rivana inside Costa Mujeres\' most exclusive beachfront community.'
-                : 'Curadas por Rivana dentro de la comunidad frente al mar más exclusiva de Costa Mujeres.'}
+                : 'Seleccionadas por Rivana dentro de la comunidad frente al mar más exclusiva de Costa Mujeres.'}
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

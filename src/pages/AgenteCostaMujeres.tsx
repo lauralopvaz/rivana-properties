@@ -160,7 +160,7 @@ const AgenteCostaMujeres = () => {
         <CtaWhatsApp label={isEnglish ? 'Talk to a Costa Mujeres agent' : 'Quiero asesoría en Costa Mujeres'} />
       </section>
 
-      {/* ── Listado curado ── */}
+      {/* ── Listado seleccionado ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-20">
         <ScrollReveal>
           <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>

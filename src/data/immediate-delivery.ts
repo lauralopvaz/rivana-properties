@@ -110,7 +110,7 @@ export const immediateDeliveryUnits: ImmediateUnit[] = [
     moveInReady: true,
     status: { es: 'Amueblado de diseñador — llave en mano', en: 'Designer furnished — turnkey' },
     features: {
-      es: ['Rooftop privado', 'Vistas inobstruidas', 'Piezas curadas'],
+      es: ['Rooftop privado', 'Vistas inobstruidas', 'Piezas seleccionadas'],
       en: ['Private rooftop', 'Unobstructed views', 'Curated designer pieces'],
     },
     image: LA_AMADA_PENTHOUSE,

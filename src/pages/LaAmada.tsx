@@ -228,7 +228,7 @@ const units: Unit[] = [
         "Vestidor amplio en la recámara principal",
         "Baño premium con doble lavabo",
         "Cocina gourmet con electrodomésticos de diseñador",
-        "Totalmente amueblado con piezas curadas",
+        "Totalmente amueblado con piezas seleccionadas",
         "2 cajones de estacionamiento independientes",
       ],
       en: [
