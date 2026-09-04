@@ -76,7 +76,7 @@ const ROICalculator = () => {
   return (
     <div className="bg-white border border-[rgba(207,174,96,0.22)] p-6 md:p-8">
       <p className="text-[10px] tracking-[4px] uppercase font-body font-[400] mb-3" style={{ color: '#CFAE60' }}>Investment Calculator</p>
-      <h3 className="font-display text-[22px] font-[300] mb-6" style={{ color: '#1C1C1C' }}>Estimate Your Returns</h3>
+      <h3 className="font-display text-[22px] font-normal mb-6" style={{ color: '#1C1C1C' }}>Estimate Your Returns</h3>
 
       {/* Currency Toggle */}
       <div className="flex gap-2 mb-4">
@@ -107,7 +107,7 @@ const ROICalculator = () => {
           onChange={e => setBudget(e.target.value)}
           min={100000}
           step={50000}
-          className="w-full bg-[#F8F6F2] border border-[rgba(0,0,0,0.10)] px-4 py-3 text-[15px] font-body font-[300] text-[#1C1C1C] focus:outline-none focus:border-[#CFAE60] transition-colors"
+          className="w-full bg-[#F8F6F2] border border-[rgba(0,0,0,0.10)] px-4 py-3 text-[15px] font-body font-normal text-[#1C1C1C] focus:outline-none focus:border-[#CFAE60] transition-colors"
         />
       </label>
 
@@ -139,16 +139,16 @@ const ROICalculator = () => {
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
             <span className="text-[10px] font-body uppercase tracking-[2px] block mb-1" style={{ color: '#4B4B4B' }}>Property Value</span>
-            <span className="font-display text-[24px] font-[300]" style={{ color: '#CFAE60' }}>{fmtNum(futureValue)}</span>
+            <span className="font-display text-[24px] font-normal" style={{ color: '#CFAE60' }}>{fmtNum(futureValue)}</span>
           </div>
           <div>
             <span className="text-[10px] font-body uppercase tracking-[2px] block mb-1" style={{ color: '#4B4B4B' }}>Rental Income</span>
-            <span className="font-display text-[24px] font-[300]" style={{ color: '#2d7a4a' }}>{fmtNum(totalRentalIncome)}</span>
+            <span className="font-display text-[24px] font-normal" style={{ color: '#2d7a4a' }}>{fmtNum(totalRentalIncome)}</span>
           </div>
         </div>
         <div className="bg-[#1C1C1C] p-4 flex items-center justify-between">
           <span className="text-[11px] font-body uppercase tracking-[2px] text-white/60">Estimated Total ROI</span>
-          <span className="font-display text-[28px] font-[300] text-[#CFAE60]">{totalROI}%</span>
+          <span className="font-display text-[28px] font-normal text-[#CFAE60]">{totalROI}%</span>
         </div>
         <p className="text-[10px] font-body text-[#4B4B4B] mt-3 italic leading-[1.6]">
           *Based on 12% annual appreciation and 9% rental yield averages for Cancún beachfront properties. Actual returns may vary. Not financial advice.
@@ -194,13 +194,13 @@ const BeachfrontCondos = () => {
 
       {/* ═══ HERO ═══ */}
       <section className="pt-28 pb-14 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <p className="text-[12px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>
+        <p className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4" style={{ color: '#CFAE60' }}>
           Cancún · For US &amp; Canadian Buyers
         </p>
-        <h1 className="font-display text-[clamp(28px,5vw,48px)] font-[300] mb-5" style={{ color: '#1C1C1C' }}>
+        <h1 className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-5" style={{ color: '#1C1C1C' }}>
           Beachfront Condos for Sale in Cancún
         </h1>
-        <p className="font-body font-[300] text-[16px] max-w-2xl leading-[1.8]" style={{ color: '#4B4B4B' }}>
+        <p className="font-body font-normal text-[16px] max-w-2xl leading-[1.8]" style={{ color: '#4B4B4B' }}>
           From branded residences in the Hotel Zone to marina-front penthouses in Puerto Cancún — explore the Mexican Caribbean's most coveted real estate, curated for international investors.
         </p>
       </section>
@@ -208,10 +208,10 @@ const BeachfrontCondos = () => {
       {/* ═══ H2: Hotel Zone Condos ═══ */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             Hotel Zone Condos — Cancún's Prime Investment Corridor
           </h2>
-          <p className="font-body font-[300] text-[14px] max-w-2xl mb-8" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
+          <p className="font-body font-normal text-[14px] max-w-2xl mb-8" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
             Stretching 23 km along the Caribbean coast, the Hotel Zone is Cancún's most sought-after address. Properties here command premium rental rates and have averaged 12–18% annual appreciation over the past five years.
           </p>
         </ScrollReveal>
@@ -238,18 +238,18 @@ const BeachfrontCondos = () => {
                   </div>
                 </div>
                 <div className="px-5 pt-5 pb-4">
-                  <p className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
-                  <h3 className="font-display text-[22px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
+                  <p className="text-[12px] tracking-[3px] uppercase font-body font-normal mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
+                  <h3 className="font-display text-[22px] font-normal mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
                   <div className="flex items-center gap-[14px] mb-3">
                     <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}><BedIcon className="w-3 h-3" /> {p.beds} Beds</span>
                     <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}><RulerIcon className="w-3 h-3" /> {p.area} m²</span>
                   </div>
                   <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                     <div>
-                      <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>From</span>
+                      <span className="block text-[11px] font-body font-normal uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>From</span>
                       <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price)}</span>
                     </div>
-                    <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
+                    <span className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                       View <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                     </span>
                   </div>
@@ -263,7 +263,7 @@ const BeachfrontCondos = () => {
       {/* ═══ H2: Why US & Canadian Buyers ═══ */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             Why US and Canadian Buyers Choose Cancún
           </h2>
         </ScrollReveal>
@@ -278,9 +278,9 @@ const BeachfrontCondos = () => {
           ].map((item, i) => (
             <ScrollReveal key={i} delay={i * 60}>
               <div className="bg-white border border-[rgba(0,0,0,0.06)] p-6 h-full">
-                <span className="font-display text-[28px] font-[300] block mb-2" style={{ color: '#CFAE60' }}>{item.num}</span>
-                <h3 className="font-display text-[17px] font-[300] mb-2" style={{ color: '#1C1C1C' }}>{item.title}</h3>
-                <p className="font-body text-[13px] font-[300] leading-[1.7]" style={{ color: '#4B4B4B' }}>{item.desc}</p>
+                <span className="font-display text-[28px] font-normal block mb-2" style={{ color: '#CFAE60' }}>{item.num}</span>
+                <h3 className="font-display text-[17px] font-normal mb-2" style={{ color: '#1C1C1C' }}>{item.title}</h3>
+                <p className="font-body text-[13px] font-normal leading-[1.7]" style={{ color: '#4B4B4B' }}>{item.desc}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -292,15 +292,15 @@ const BeachfrontCondos = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div>
             <ScrollReveal>
-              <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-6" style={{ color: '#1C1C1C' }}>
+              <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
                 Pre-Sale vs. Move-In Ready: Which Is Right for You?
               </h2>
             </ScrollReveal>
             <div className="space-y-6">
               <div className="bg-white border border-[rgba(0,0,0,0.06)] p-6">
                 <span className="text-[10px] tracking-[3px] uppercase font-body font-[400] block mb-2" style={{ color: '#26547D' }}>Pre-Sale</span>
-                <h3 className="font-display text-[18px] font-[300] mb-3" style={{ color: '#1C1C1C' }}>Lock In Today's Prices</h3>
-                <ul className="space-y-2 font-body text-[13px] font-[300] leading-[1.7]" style={{ color: '#4B4B4B' }}>
+                <h3 className="font-display text-[18px] font-normal mb-3" style={{ color: '#1C1C1C' }}>Lock In Today's Prices</h3>
+                <ul className="space-y-2 font-body text-[13px] font-normal leading-[1.7]" style={{ color: '#4B4B4B' }}>
                   <li className="flex gap-2"><span style={{ color: '#CFAE60' }}>✓</span> 15–33% projected appreciation by delivery</li>
                   <li className="flex gap-2"><span style={{ color: '#CFAE60' }}>✓</span> Flexible payment plans — as low as 10% down</li>
                   <li className="flex gap-2"><span style={{ color: '#CFAE60' }}>✓</span> Defer 60–70% until delivery (18–24 months)</li>
@@ -309,8 +309,8 @@ const BeachfrontCondos = () => {
               </div>
               <div className="bg-white border border-[rgba(0,0,0,0.06)] p-6">
                 <span className="text-[10px] tracking-[3px] uppercase font-body font-[400] block mb-2" style={{ color: '#1C1C1C' }}>Move-In Ready</span>
-                <h3 className="font-display text-[18px] font-[300] mb-3" style={{ color: '#1C1C1C' }}>Start Earning Immediately</h3>
-                <ul className="space-y-2 font-body text-[13px] font-[300] leading-[1.7]" style={{ color: '#4B4B4B' }}>
+                <h3 className="font-display text-[18px] font-normal mb-3" style={{ color: '#1C1C1C' }}>Start Earning Immediately</h3>
+                <ul className="space-y-2 font-body text-[13px] font-normal leading-[1.7]" style={{ color: '#4B4B4B' }}>
                   <li className="flex gap-2"><span style={{ color: '#CFAE60' }}>✓</span> Generate rental income from day one</li>
                   <li className="flex gap-2"><span style={{ color: '#CFAE60' }}>✓</span> What you see is what you get — no construction risk</li>
                   <li className="flex gap-2"><span style={{ color: '#CFAE60' }}>✓</span> Immediate personal use or vacation home</li>
@@ -330,10 +330,10 @@ const BeachfrontCondos = () => {
       {/* ═══ H2: Buying Process (Fideicomiso) ═══ */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             The Buying Process for Foreign Buyers
           </h2>
-          <p className="font-body font-[300] text-[14px] max-w-2xl mb-8" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
+          <p className="font-body font-normal text-[14px] max-w-2xl mb-8" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
             Mexican law allows foreigners to own property through a <em>fideicomiso</em> (bank trust). Here's how it works — in three simple steps:
           </p>
         </ScrollReveal>
@@ -358,17 +358,17 @@ const BeachfrontCondos = () => {
           ].map((item, i) => (
             <ScrollReveal key={i} delay={i * 80}>
               <div className="bg-white border border-[rgba(207,174,96,0.22)] p-6 h-full">
-                <span className="font-display text-[36px] font-[300] block mb-3" style={{ color: '#CFAE60' }}>{item.step}</span>
-                <h3 className="font-display text-[18px] font-[300] mb-3" style={{ color: '#1C1C1C' }}>{item.title}</h3>
-                <p className="font-body text-[13px] font-[300] leading-[1.7]" style={{ color: '#4B4B4B' }}>{item.desc}</p>
+                <span className="font-display text-[36px] font-normal block mb-3" style={{ color: '#CFAE60' }}>{item.step}</span>
+                <h3 className="font-display text-[18px] font-normal mb-3" style={{ color: '#1C1C1C' }}>{item.title}</h3>
+                <p className="font-body text-[13px] font-normal leading-[1.7]" style={{ color: '#4B4B4B' }}>{item.desc}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
 
         <div className="bg-[#1C1C1C] p-6 md:p-8">
-          <h3 className="font-display text-[20px] font-[300] text-white mb-4">Key Facts About the Fideicomiso</h3>
-          <ul className="space-y-3 font-body text-[13px] font-[300] leading-[1.7] text-white/80">
+          <h3 className="font-display text-[20px] font-normal text-white mb-4">Key Facts About the Fideicomiso</h3>
+          <ul className="space-y-3 font-body text-[13px] font-normal leading-[1.7] text-white/80">
             <li className="flex gap-3">
               <span className="text-[#CFAE60] shrink-0 text-[16px]">→</span>
               <span><strong className="text-white">100% ownership rights</strong> — the trust is a legal mechanism, not a limitation. You have full control to sell, rent, remodel, or pass down to heirs.</span>
@@ -389,10 +389,10 @@ const BeachfrontCondos = () => {
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto pb-20">
         <div className="bg-white border border-[rgba(207,174,96,0.22)] p-8 md:p-12 text-center" style={{ boxShadow: '0 6px 48px rgba(0,0,0,0.06)' }}>
           <p className="text-[10px] tracking-[4px] uppercase font-body font-[400] mb-3" style={{ color: '#CFAE60' }}>Ready to Invest?</p>
-          <h2 className="font-display text-[clamp(22px,4vw,36px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,4vw,36px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
             Speak with a Bilingual Advisor Today
           </h2>
-          <p className="font-body font-[300] text-[14px] max-w-lg mx-auto mb-6" style={{ color: '#4B4B4B', lineHeight: 1.7 }}>
+          <p className="font-body font-normal text-[14px] max-w-lg mx-auto mb-6" style={{ color: '#4B4B4B', lineHeight: 1.7 }}>
             Our team specializes in guiding US and Canadian buyers through every step — from property selection to closing.
           </p>
 

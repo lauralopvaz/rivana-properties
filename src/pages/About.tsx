@@ -188,9 +188,9 @@ const About = () => {
                 {/* Content */}
                 <div className="p-6">
                   <p className="font-body text-[9px] tracking-[3px] uppercase font-[400] text-[#CFAE60] mb-1.5">{member.role[language]}</p>
-                  <h3 className="font-display text-[22px] font-[300] text-[#1C1C1C] mb-1">{member.name}</h3>
+                  <h3 className="font-display text-[22px] font-normal text-[#1C1C1C] mb-1">{member.name}</h3>
                   <p className="font-body text-[11px] tracking-[1px] text-[#4B4B4B] mb-4">{member.zone}</p>
-                  <p className="font-body text-[13px] font-[300] leading-[1.8] text-[#4B4B4B] mb-5">{member.bio[language]}</p>
+                  <p className="font-body text-[13px] font-normal leading-[1.8] text-[#4B4B4B] mb-5">{member.bio[language]}</p>
                   <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="flex-1 border-[rgba(207,174,96,0.3)] hover:border-[#CFAE60] hover:bg-[rgba(207,174,96,0.05)]" onClick={() => openModal('llamada')}>
                       <PhoneIcon className="w-3.5 h-3.5" /> {language === 'es' ? 'Llamar' : 'Call'}

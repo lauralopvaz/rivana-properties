@@ -100,13 +100,13 @@ const CancunCondos = () => {
 
       {/* Hero */}
       <section className="pt-28 pb-12 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <p className="text-[12px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>
+        <p className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4" style={{ color: '#CFAE60' }}>
           {L === 'es' ? 'Cancún · Inversión Inmobiliaria' : 'Cancún · Real Estate Investment'}
         </p>
-        <h1 className="font-display text-[clamp(28px,5vw,48px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+        <h1 className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
           {h1}
         </h1>
-        <p className="font-body font-[300] text-[16px] max-w-2xl leading-[1.8]" style={{ color: '#4B4B4B' }}>
+        <p className="font-body font-normal text-[16px] max-w-2xl leading-[1.8]" style={{ color: '#4B4B4B' }}>
           {L === 'es'
             ? 'Explora departamentos de lujo en las zonas más exclusivas de Cancún: Zona Hotelera, Puerto Cancún, Costa Mujeres y Centro. Preventa y entrega inmediata con asesoría personalizada.'
             : 'Explore luxury condos in Cancún\'s most exclusive zones: Hotel Zone, Puerto Cancún, Costa Mujeres and Downtown. Pre-sale and ready-to-move with personalized advisory.'}
@@ -123,13 +123,13 @@ const CancunCondos = () => {
         return (
           <section key={zone.key} className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
             <ScrollReveal>
-              <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-2" style={{ color: '#1C1C1C' }}>
+              <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-2" style={{ color: '#1C1C1C' }}>
                 {L === 'es'
                   ? `Departamentos en ${zone.es === 'Cancún Centro' ? 'Cancún Centro' : `la ${zone.es} de Cancún`}`
                   : `Condos in ${zone.en === 'Downtown Cancún' ? 'Downtown Cancún' : `Cancún's ${zone.en}`}`}
               </h2>
               {isFirst && (
-                <p className="font-body font-[300] text-[14px] max-w-2xl mb-6" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
+                <p className="font-body font-normal text-[14px] max-w-2xl mb-6" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
                   {L === 'es'
                     ? 'La Zona Hotelera concentra la mayor plusvalía de Cancún con vista directa al Mar Caribe y acceso a playas de arena blanca. Rendimientos de renta del 8–12% anual.'
                     : 'The Hotel Zone holds the highest appreciation in Cancún with direct Caribbean Sea views and white-sand beach access. Rental yields of 8–12% annually.'}
@@ -167,8 +167,8 @@ const CancunCondos = () => {
                       </div>
                     </div>
                     <div className="px-5 pt-5 pb-4">
-                      <p className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
-                      <h3 className="font-display text-[22px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
+                      <p className="text-[12px] tracking-[3px] uppercase font-body font-normal mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
+                      <h3 className="font-display text-[22px] font-normal mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
                       <div className="flex items-center gap-[14px] mb-3">
                         <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
                           <BedIcon className="w-3 h-3" /> {p.beds} {L === 'es' ? 'Rec.' : 'Beds'}
@@ -179,10 +179,10 @@ const CancunCondos = () => {
                       </div>
                       <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                         <div>
-                          <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Desde' : 'From'}</span>
+                          <span className="block text-[11px] font-body font-normal uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Desde' : 'From'}</span>
                           <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price, L)}</span>
                         </div>
-                        <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
+                        <span className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                           {L === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                         </span>
                       </div>
@@ -198,10 +198,10 @@ const CancunCondos = () => {
       {/* ── Section: Preventa 2026 ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             {L === 'es' ? 'Departamentos en Preventa Cancún 2026' : 'Pre-Sale Condos Cancún 2026'}
           </h2>
-          <p className="font-body font-[300] text-[14px] max-w-2xl mb-6" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
+          <p className="font-body font-normal text-[14px] max-w-2xl mb-6" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
             {L === 'es'
               ? 'Comprar en preventa significa asegurar precios de lanzamiento con plusvalía proyectada del 15–33% a la entrega. Esquemas de pago diferido con enganches desde el 10%.'
               : 'Buying pre-sale means securing launch prices with projected 15–33% appreciation by delivery. Deferred payment plans with down payments from 10%.'}
@@ -214,7 +214,7 @@ const CancunCondos = () => {
                 <img src={p.image} alt={`${p.name} — preventa Cancún`} className="w-20 h-20 object-cover shrink-0" loading="lazy" />
                 <div className="min-w-0">
                   <p className="text-[10px] tracking-[2px] uppercase font-body" style={{ color: '#CFAE60' }}>{p.zone}</p>
-                  <p className="font-display text-[16px] font-[300] truncate" style={{ color: '#1C1C1C' }}>{p.name}</p>
+                  <p className="font-display text-[16px] font-normal truncate" style={{ color: '#1C1C1C' }}>{p.name}</p>
                   <p className="font-display text-[16px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price, L)}</p>
                 </div>
               </Link>
@@ -226,7 +226,7 @@ const CancunCondos = () => {
       {/* ── Section: Why Buy ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto pb-20">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             {L === 'es' ? '¿Por qué comprar un departamento en Cancún?' : 'Why Buy a Condo in Cancún?'}
           </h2>
         </ScrollReveal>
@@ -251,9 +251,9 @@ const CancunCondos = () => {
           ].map((item, i) => (
             <ScrollReveal key={i} delay={i * 80}>
               <div className="bg-white border border-[rgba(0,0,0,0.06)] p-6">
-                <span className="font-display text-[28px] font-[300] block mb-2" style={{ color: '#CFAE60' }}>0{i + 1}</span>
-                <h3 className="font-display text-[18px] font-[300] mb-2" style={{ color: '#1C1C1C' }}>{item.title[L]}</h3>
-                <p className="font-body text-[13px] font-[300] leading-[1.7]" style={{ color: '#4B4B4B' }}>{item.desc[L]}</p>
+                <span className="font-display text-[28px] font-normal block mb-2" style={{ color: '#CFAE60' }}>0{i + 1}</span>
+                <h3 className="font-display text-[18px] font-normal mb-2" style={{ color: '#1C1C1C' }}>{item.title[L]}</h3>
+                <p className="font-body text-[13px] font-normal leading-[1.7]" style={{ color: '#4B4B4B' }}>{item.desc[L]}</p>
               </div>
             </ScrollReveal>
           ))}

@@ -86,7 +86,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
           <span className="font-body uppercase block prop-presale-label" style={{ letterSpacing: "3px", color: "hsl(var(--gold))", fontWeight: 400 }}>
             {tr(locale, 'presaleSpecialPrice')}
           </span>
-          <span className="font-body block prop-presale-sublabel" style={{ color: "#4B4B4B", fontWeight: 300 }}>
+          <span className="font-body block prop-presale-sublabel" style={{ color: "#4B4B4B", fontWeight: 400 }}>
             {tr(locale, 'exclusiveForEarlyBuyers')}
           </span>
         </div>
@@ -97,7 +97,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
         className="flex items-center gap-3 py-4 my-4"
         style={{ borderTop: "1px solid rgba(0,0,0,0.07)", borderBottom: "1px solid rgba(0,0,0,0.07)" }}
       >
-        <span className="font-display prop-title-sm line-through" style={{ color: "rgba(75,75,75,0.35)" }}>
+        <span className="font-display prop-title-sm line-through" style={{ color: "#4B4B4B" }}>
           ${formatNumber(presalePrice.originalMXN)}
         </span>
         <span style={{ color: "rgba(176,58,46,0.6)" }}>→</span>
@@ -147,7 +147,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
             className="flex items-center justify-between py-[7px]"
             style={{ borderBottom: idx < plan.length - 1 ? "1px solid rgba(0,0,0,0.05)" : "none" }}
           >
-            <span className="font-display prop-unit-price" style={{ color: "hsl(var(--gold))", fontWeight: 300 }}>
+            <span className="font-display prop-unit-price" style={{ color: "hsl(var(--gold))", fontWeight: 400 }}>
               {row.percent}
             </span>
             <span className="font-body font-light prop-text-xs" style={{ color: "#4B4B4B" }}>

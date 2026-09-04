@@ -154,7 +154,7 @@ const FreeBuyerAgent = () => {
 
   const H2 = ({ children }: { children: React.ReactNode }) => (
     <h2
-      className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4"
+      className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4"
       style={{ color: '#1C1C1C' }}
     >
       {children}
@@ -163,7 +163,7 @@ const FreeBuyerAgent = () => {
 
   const Body = ({ children }: { children: React.ReactNode }) => (
     <div
-      className="font-body font-[300] text-[16px] space-y-4"
+      className="font-body font-normal text-[16px] space-y-4"
       style={{ color: '#4B4B4B', lineHeight: 1.9 }}
     >
       {children}
@@ -184,19 +184,19 @@ const FreeBuyerAgent = () => {
       {/* ── Hero / Intro ── */}
       <section className="pt-28 pb-12 px-6 lg:px-10 max-w-[1400px] mx-auto">
         <p
-          className="text-[12px] tracking-[4px] uppercase font-body font-[300] mb-4"
+          className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4"
           style={{ color: '#CFAE60' }}
         >
           Buyer Representation · Cancún
         </p>
         <h1
-          className="font-display text-[clamp(28px,5vw,48px)] font-[300] mb-4"
+          className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-4"
           style={{ color: '#1C1C1C' }}
         >
           Free Buyer&apos;s Agent in Cancún — For Canadian &amp; U.S. Buyers
         </h1>
         <div
-          className="font-body font-[300] text-[16px] max-w-2xl leading-[1.8] mb-8 space-y-4"
+          className="font-body font-normal text-[16px] max-w-2xl leading-[1.8] mb-8 space-y-4"
           style={{ color: '#4B4B4B' }}
         >
           <p>
@@ -218,7 +218,7 @@ const FreeBuyerAgent = () => {
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-20">
         <ScrollReveal>
           <h2
-            className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-6"
+            className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6"
             style={{ color: '#1C1C1C' }}
           >
             Foreign-friendly luxury listings we represent buyers on
@@ -253,12 +253,12 @@ const FreeBuyerAgent = () => {
                 </div>
                 <div className="px-5 pt-5 pb-4">
                   <p
-                    className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5"
+                    className="text-[12px] tracking-[3px] uppercase font-body font-normal mb-1.5"
                     style={{ color: '#CFAE60' }}
                   >
                     {p.zoneEn || p.zone}
                   </p>
-                  <h3 className="font-display text-[22px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>
+                  <h3 className="font-display text-[22px] font-normal mb-2.5" style={{ color: '#1C1C1C' }}>
                     {p.name}
                   </h3>
                   <div className="flex items-center gap-[14px] mb-3">
@@ -275,7 +275,7 @@ const FreeBuyerAgent = () => {
                   >
                     <div>
                       <span
-                        className="block text-[11px] font-body font-[300] uppercase tracking-[2px]"
+                        className="block text-[11px] font-body font-normal uppercase tracking-[2px]"
                         style={{ color: '#4B4B4B' }}
                       >
                         From
@@ -285,7 +285,7 @@ const FreeBuyerAgent = () => {
                       </span>
                     </div>
                     <span
-                      className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]"
+                      className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]"
                       style={{ color: '#4B4B4B' }}
                     >
                       View <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
@@ -528,7 +528,7 @@ const FreeBuyerAgent = () => {
                 </button>
                 {openFaq === i && (
                   <div
-                    className="px-6 pb-5 font-body font-[300] text-[15px]"
+                    className="px-6 pb-5 font-body font-normal text-[15px]"
                     style={{ color: '#4B4B4B', lineHeight: 1.9 }}
                   >
                     {faq.a}
@@ -545,7 +545,7 @@ const FreeBuyerAgent = () => {
         <ScrollReveal>
           <H2>Start with a conversation, not a sales pitch</H2>
           <p
-            className="font-body font-[300] text-[16px] mb-8 max-w-xl mx-auto"
+            className="font-body font-normal text-[16px] mb-8 max-w-xl mx-auto"
             style={{ color: '#4B4B4B', lineHeight: 1.9 }}
           >
             Tell us your budget, your timeline and whether this is for use, income or both. We will come

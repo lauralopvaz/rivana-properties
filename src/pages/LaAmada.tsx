@@ -383,7 +383,7 @@ export default function LaAmada() {
           <p className="font-body text-xs tracking-[0.4em] uppercase mb-6" style={{ color: "#CFAE60" }}>
             {t("Selección Premium", "Premium Selection")}
           </p>
-          <h2 className="font-display font-light mb-8" style={{ fontSize: "clamp(32px, 4.5vw, 52px)", lineHeight: 1.15 }}>
+          <h2 className="font-display font-light mb-8" style={{ fontSize: "clamp(40px, 4.5vw,52px)", lineHeight: 1.15 }}>
             {t(
               "Cinco residencias. Una visión intemporal del Caribe.",
               "Five residences. One timeless Caribbean vision."
@@ -514,7 +514,7 @@ export default function LaAmada() {
             <p className="font-body text-xs tracking-[0.4em] uppercase mb-4" style={{ color: "#CFAE60" }}>
               {t("Comparativo", "Comparison")}
             </p>
-            <h2 className="font-display font-light mb-4" style={{ fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.15 }}>
+            <h2 className="font-display font-light mb-4" style={{ fontSize: "clamp(40px, 4vw,46px)", lineHeight: 1.15 }}>
               {t("Lado a lado", "Side by side")}
             </h2>
             <p className="font-body font-light text-muted-foreground" style={{ fontSize: "19px", lineHeight: 1.7 }}>
@@ -603,7 +603,7 @@ export default function LaAmada() {
               <p className="font-body text-xs tracking-[0.4em] uppercase mb-4" style={{ color: "#CFAE60" }}>
                 {t("Estilo de Vida", "Lifestyle")}
               </p>
-              <h2 className="font-display font-light mb-6" style={{ fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.15 }}>
+              <h2 className="font-display font-light mb-6" style={{ fontSize: "clamp(40px, 4vw,46px)", lineHeight: 1.15 }}>
                 {t("Amenidades La Amada", "La Amada amenities")}
               </h2>
               <p className="font-body font-light text-muted-foreground" style={{ fontSize: "20px", lineHeight: 1.75 }}>
@@ -631,7 +631,7 @@ export default function LaAmada() {
           <p className="font-body text-xs tracking-[0.4em] uppercase mb-6" style={{ color: "#CFAE60" }}>
             {t("Tu inversión, tu legado", "Your investment, your legacy")}
           </p>
-          <h2 className="font-display font-light mb-8" style={{ fontSize: "clamp(32px, 5vw, 56px)", lineHeight: 1.1 }}>
+          <h2 className="font-display font-light mb-8" style={{ fontSize: "clamp(40px, 5vw,56px)", lineHeight: 1.1 }}>
             {t("Reserva tu residencia en La Amada", "Reserve your La Amada residence")}
           </h2>
           <p className="font-body font-light text-white/70 mb-12 max-w-2xl mx-auto" style={{ fontSize: "20px", lineHeight: 1.7 }}>

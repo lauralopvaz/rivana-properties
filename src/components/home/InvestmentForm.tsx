@@ -18,7 +18,7 @@ const inputStyle: React.CSSProperties = {
   padding: '14px 16px',
   fontFamily: "'Jost', sans-serif",
   fontSize: '14px',
-  fontWeight: 300,
+  fontWeight: 400,
   color: '#1C1C1C',
   width: '100%',
   outline: 'none',
@@ -154,12 +154,12 @@ export const InvestmentForm = () => {
                       <select
                         aria-label={L === 'es' ? 'Presupuesto estimado' : 'Estimated budget'}
                         value={budget}
-                        onChange={(e) => { setBudget(e.target.value); e.currentTarget.style.color = e.currentTarget.value ? '#1C1C1C' : 'rgba(75,75,75,0.42)'; }}
-                        style={{ ...inputStyle, appearance: 'none', paddingRight: '40px', color: budget ? '#1C1C1C' : 'rgba(75,75,75,0.42)' }}
+                        onChange={(e) => { setBudget(e.target.value); e.currentTarget.style.color = e.currentTarget.value ? '#1C1C1C' : '#4B4B4B'; }}
+                        style={{ ...inputStyle, appearance: 'none', paddingRight: '40px', color: budget ? '#1C1C1C' : '#4B4B4B' }}
                         onFocus={handleFocus as any}
                         onBlur={handleBlur as any}
                       >
-                        <option value="" disabled style={{ color: 'rgba(75,75,75,0.42)' }}>
+                        <option value="" disabled style={{ color: '#4B4B4B' }}>
                           {L === 'es' ? 'Presupuesto estimado' : 'Estimated budget'}
                         </option>
                         {budgetOptions.map((o) => (
@@ -183,7 +183,7 @@ export const InvestmentForm = () => {
                     type="submit"
                     disabled={loading}
                     className="w-full uppercase transition-colors duration-300 mt-[2px]"
-                    style={{ background: 'hsl(var(--primary))', color: 'white', padding: '16px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, border: 'none', cursor: 'pointer', opacity: loading ? 0.6 : 1 }}
+                    style={{ background: 'hsl(var(--primary))', color: 'white', padding: '16px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 500, border: 'none', cursor: 'pointer', opacity: loading ? 0.6 : 1 }}
                     onMouseEnter={(e) => { e.currentTarget.style.background = '#b89a4a'; }}
                     onMouseLeave={(e) => { e.currentTarget.style.background = 'hsl(var(--primary))'; }}
                   >

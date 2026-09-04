@@ -119,13 +119,13 @@ const AgenteCostaMujeres = () => {
 
       {/* ── Hero / Intro ── */}
       <section className="pt-28 pb-12 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <p className="text-[12px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>
+        <p className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4" style={{ color: '#CFAE60' }}>
           Costa Mujeres · Playa Mujeres
         </p>
-        <h1 className="font-display text-[clamp(28px,5vw,48px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+        <h1 className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
           {h1}
         </h1>
-        <div className="font-body font-[300] text-[16px] max-w-2xl leading-[1.8] mb-8 space-y-4" style={{ color: '#4B4B4B' }}>
+        <div className="font-body font-normal text-[16px] max-w-2xl leading-[1.8] mb-8 space-y-4" style={{ color: '#4B4B4B' }}>
           {isEnglish ? (
             <>
               <p>
@@ -163,7 +163,7 @@ const AgenteCostaMujeres = () => {
       {/* ── Listado curado ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-20">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             {isEnglish
               ? 'Properties in Costa Mujeres and Playa Mujeres'
               : 'Propiedades en Costa Mujeres y Playa Mujeres'}
@@ -198,10 +198,10 @@ const AgenteCostaMujeres = () => {
                   )}
                 </div>
                 <div className="px-5 pt-5 pb-4">
-                  <p className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>
+                  <p className="text-[12px] tracking-[3px] uppercase font-body font-normal mb-1.5" style={{ color: '#CFAE60' }}>
                     {p.zone}
                   </p>
-                  <h3 className="font-display text-[22px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
+                  <h3 className="font-display text-[22px] font-normal mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
                   <div className="flex items-center gap-[14px] mb-3">
                     <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
                       <BedIcon className="w-3 h-3" /> {p.bedrooms} {isEnglish ? 'BR' : 'Rec.'}
@@ -212,12 +212,12 @@ const AgenteCostaMujeres = () => {
                   </div>
                   <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                     <div>
-                      <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>
+                      <span className="block text-[11px] font-body font-normal uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>
                         {isEnglish ? 'From' : 'Desde'}
                       </span>
                       <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPrice(p.priceFromUSD)}</span>
                     </div>
-                    <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
+                    <span className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                       {isEnglish ? 'View' : 'Ver'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                     </span>
                   </div>
@@ -245,10 +245,10 @@ const AgenteCostaMujeres = () => {
           {isEnglish ? (
             <>
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Why buyers are choosing Costa Mujeres
                 </h2>
-                <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+                <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
                   <p>
                     Ten years ago the coastline north of Punta Sam was mangrove and empty sand. Today it holds
                     the densest cluster of new branded hotels in the Mexican Caribbean, and a residential
@@ -277,10 +277,10 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   The sub-markets inside Costa Mujeres
                 </h2>
-                <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+                <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
                   <p>
                     <strong style={{ color: '#1C1C1C' }}>Playa Mujeres</strong> is the master-planned core: a
                     Greg Norman golf course, a working marina, gated access and beach clubs. It offers the most
@@ -305,10 +305,10 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   How we work with buyers
                 </h2>
-                <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+                <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
                   <p>
                     We represent the buyer, never the developer. Our job is to filter — permits, verified
                     construction progress, the developer&apos;s delivery record, and whether the asking price
@@ -328,10 +328,10 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Notes for foreign buyers
                 </h2>
-                <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+                <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
                   <p>
                     Foreigners buy freely in Costa Mujeres. Because the area sits inside the coastal restricted
                     zone, title is held through a <em>fideicomiso</em> — a Mexican bank acts as trustee and you
@@ -357,10 +357,10 @@ const AgenteCostaMujeres = () => {
           ) : (
             <>
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Por qué invertir en Costa Mujeres
                 </h2>
-                <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+                <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
                   <p>
                     Costa Mujeres es el frente de crecimiento del norte de Cancún. Hasta hace una década era una
                     franja costera prácticamente sin desarrollar; hoy concentra la mayor apertura de hotelería de
@@ -391,10 +391,10 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Zonas dentro de Costa Mujeres
                 </h2>
-                <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+                <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
                   <p>
                     <strong style={{ color: '#1C1C1C' }}>Playa Mujeres</strong> es el corazón del destino: un
                     master plan con campo de golf firmado por Greg Norman, marina, clubes de playa y acceso
@@ -419,10 +419,10 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Cómo trabajamos
                 </h2>
-                <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+                <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
                   <p>
                     Representamos al comprador, no al desarrollador. Nuestra función es filtrar: revisar qué
                     proyectos cumplen con permisos, avance real de obra, historial del desarrollador y precio
@@ -443,10 +443,10 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Para compradores extranjeros
                 </h2>
-                <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+                <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
                   <p>
                     Un extranjero puede comprar en Costa Mujeres sin restricciones. Como la zona está dentro de la
                     franja costera, la propiedad se adquiere mediante fideicomiso bancario: un banco mexicano
@@ -474,10 +474,10 @@ const AgenteCostaMujeres = () => {
       {/* ── CTA final ── */}
       <section className="px-6 lg:px-10 max-w-[900px] mx-auto pb-24 text-center">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
             {isEnglish ? 'Speak with a Costa Mujeres agent' : 'Habla con un agente en Costa Mujeres'}
           </h2>
-          <p className="font-body font-[300] text-[16px] mb-7 max-w-xl mx-auto" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+          <p className="font-body font-normal text-[16px] mb-7 max-w-xl mx-auto" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
             {isEnglish
               ? 'Live availability, current price tiers and per-project rental numbers — straight from your advisor.'
               : 'Disponibilidad real, precios por etapa y números de renta por proyecto, directo con tu asesora.'}

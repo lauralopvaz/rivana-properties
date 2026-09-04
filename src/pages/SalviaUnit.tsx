@@ -145,7 +145,7 @@ export default function SalviaUnit() {
             <p className="font-body text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#CFAE60' }}>
               {isEnglish ? 'Features & Upgrades' : 'Características y mejoras'}
             </p>
-            <h2 className="font-display font-light mb-6" style={{ fontSize: 'clamp(26px, 3vw, 38px)' }}>
+            <h2 className="font-body  font-semibold mb-6" style={{ fontSize: 'clamp(26px, 3vw, 38px)' }}>
               {isEnglish ? 'What\u2019s inside' : 'Qué incluye'}
             </h2>
             <ul className="space-y-3 font-body font-light text-[16px]">
@@ -162,7 +162,7 @@ export default function SalviaUnit() {
             <p className="font-body text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#CFAE60' }}>
               {isEnglish ? 'Financial Snapshot' : 'Resumen Financiero'}
             </p>
-            <h2 className="font-display font-light mb-6" style={{ fontSize: 'clamp(24px, 2.8vw, 32px)' }}>
+            <h2 className="font-body  font-semibold mb-6" style={{ fontSize: 'clamp(24px, 2.8vw, 32px)' }}>
               {isEnglish ? 'Verified income & expenses' : 'Ingresos y gastos verificados'}
             </h2>
             <dl className="grid grid-cols-2 gap-x-6 gap-y-4 font-body text-[15px] font-light">
@@ -195,7 +195,7 @@ export default function SalviaUnit() {
             <p className="font-body text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#CFAE60' }}>
               {isEnglish ? 'Performance History' : 'Historial de Desempeño'}
             </p>
-            <h2 className="font-display font-light" style={{ fontSize: 'clamp(26px, 3vw, 38px)' }}>
+            <h2 className="font-body  font-semibold" style={{ fontSize: 'clamp(26px, 3vw, 38px)' }}>
               {unit.trackRecordYears} {isEnglish ? 'years of verified Airbnb income' : 'años de ingresos Airbnb verificados'}
             </h2>
           </div>
@@ -239,7 +239,7 @@ export default function SalviaUnit() {
             <p className="font-body text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#CFAE60' }}>
               {isEnglish ? 'Also in Salvia Building' : 'También en Edificio Salvia'}
             </p>
-            <h2 className="font-display font-light" style={{ fontSize: 'clamp(26px, 3vw, 38px)' }}>
+            <h2 className="font-body  font-semibold" style={{ fontSize: 'clamp(26px, 3vw, 38px)' }}>
               {isEnglish ? 'Compare with the other penthouses' : 'Compara con los otros penthouses'}
             </h2>
           </div>
@@ -277,7 +277,7 @@ export default function SalviaUnit() {
       {/* CTA */}
       <section className="py-20 lg:py-24 text-center border-t border-border" style={{ background: '#1C1C1C', color: '#fff' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
-          <h2 className="font-display font-light mb-6" style={{ fontSize: 'clamp(28px, 3.8vw, 44px)' }}>
+          <h2 className="font-display font-light mb-6" style={{ fontSize: 'clamp(40px, 3.8vw,44px)' }}>
             {isEnglish ? `Acquire ${unit.name.en}` : `Adquiere el ${unit.name.es}`}
           </h2>
           <p className="font-body font-light text-white/75 mb-10" style={{ fontSize: '20px' }}>

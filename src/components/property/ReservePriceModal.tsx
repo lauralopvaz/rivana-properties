@@ -125,7 +125,7 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
                   <span className="font-body font-light prop-text-xs block" style={{ color: "#4B4B4B" }}>
                     {tr(locale, 'listPrice')}
                   </span>
-                  <span className="font-display prop-text-sm line-through" style={{ color: "rgba(75,75,75,0.5)" }}>
+                  <span className="font-display prop-text-sm line-through" style={{ color: "#4B4B4B" }}>
                     ${formatNumber(presalePrice.originalMXN)}
                   </span>
                 </div>

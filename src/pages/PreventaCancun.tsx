@@ -110,13 +110,13 @@ const PreventaCancun = () => {
 
       {/* ── Hero ── */}
       <section className="pt-28 pb-12 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <p className="text-[12px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>
+        <p className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4" style={{ color: '#CFAE60' }}>
           {es ? 'Cancún · Preventa 2026' : 'Cancún · Pre-Construction 2026'}
         </p>
-        <h1 className="font-display text-[clamp(28px,5vw,48px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+        <h1 className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
           {h1}
         </h1>
-        <p className="font-body font-[300] text-[16px] max-w-2xl leading-[1.8] mb-8" style={{ color: '#4B4B4B' }}>
+        <p className="font-body font-normal text-[16px] max-w-2xl leading-[1.8] mb-8" style={{ color: '#4B4B4B' }}>
           {es
             ? 'Selección curada de proyectos en preventa en Zona Hotelera, Puerto Cancún, Costa Mujeres y Cancún Centro: precios de lanzamiento, esquemas de pago diferido y plusvalía capturada antes de la entrega.'
             : 'A curated selection of pre-construction projects in the Hotel Zone, Puerto Cancún, Costa Mujeres and Downtown Cancún: launch pricing, deferred payment plans and appreciation captured before delivery.'}
@@ -127,7 +127,7 @@ const PreventaCancun = () => {
       {/* ── Listado curado de preventa ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-20">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             {es ? 'Proyectos en Preventa Disponibles en Cancún' : 'Available Pre-Construction Projects in Cancún'}
           </h2>
         </ScrollReveal>
@@ -164,10 +164,10 @@ const PreventaCancun = () => {
                   </div>
                 </div>
                 <div className="px-5 pt-5 pb-4">
-                  <p className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>
+                  <p className="text-[12px] tracking-[3px] uppercase font-body font-normal mb-1.5" style={{ color: '#CFAE60' }}>
                     {es ? p.zone : p.zoneEn || p.zone}
                   </p>
-                  <h3 className="font-display text-[22px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
+                  <h3 className="font-display text-[22px] font-normal mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
                   <div className="flex items-center gap-[14px] mb-3">
                     <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
                       <BedIcon className="w-3 h-3" /> {es ? p.bedrooms : p.bedroomsEn || p.bedrooms} {es ? 'Rec.' : 'Beds'}
@@ -178,12 +178,12 @@ const PreventaCancun = () => {
                   </div>
                   <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                     <div>
-                      <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>
+                      <span className="block text-[11px] font-body font-normal uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>
                         {es ? 'Desde' : 'From'}
                       </span>
                       <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPrice(p.priceFromUSD, L)}</span>
                     </div>
-                    <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
+                    <span className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                       {es ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                     </span>
                   </div>
@@ -199,10 +199,10 @@ const PreventaCancun = () => {
       <section className="px-6 lg:px-10 max-w-[900px] mx-auto pb-4">
         <article className="space-y-12">
           <ScrollReveal>
-            <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+            <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
               {es ? 'Por qué invertir en preventa en Cancún' : 'Why invest in pre-construction in Cancún'}
             </h2>
-            <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+            <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
               <p>
                 {es
                   ? 'Comprar en preventa en Cancún significa entrar al proyecto en su etapa de lanzamiento, cuando el desarrollador necesita colocar las primeras unidades y ofrece el precio más bajo de todo el ciclo comercial. Ese diferencial —normalmente entre 15% y 33% respecto al precio de entrega— es la ganancia patrimonial más previsible del mercado inmobiliario del Caribe mexicano: no depende de una revalorización especulativa, sino de la propia estructura de precios del desarrollo, que sube por etapas conforme avanza la obra.'
@@ -222,10 +222,10 @@ const PreventaCancun = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+            <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
               {es ? 'ROI y rendimiento anual esperado' : 'ROI and expected annual yield'}
             </h2>
-            <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+            <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
               <p>
                 {es
                   ? 'El rendimiento de una propiedad en preventa en Cancún se compone de dos fuentes independientes. La primera es la plusvalía: la diferencia entre el precio de lanzamiento que pagas hoy y el valor comercial de la unidad al momento de la entrega. La segunda es el flujo de renta: una vez entregada y amueblada, una unidad bien ubicada en Zona Hotelera o Puerto Cancún opera entre 8% y 12% de rendimiento bruto anual con esquemas de renta vacacional, y entre 5% y 7% con renta residencial de largo plazo.'
@@ -245,10 +245,10 @@ const PreventaCancun = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+            <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
               {es ? 'Esquemas de financiamiento y facilidades de pago' : 'Financing schemes and payment plans'}
             </h2>
-            <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+            <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
               <p>
                 {es
                   ? 'La preventa se paga por etapas, no de golpe. El esquema más común en Cancún es 30/20/50: 30% de enganche a la firma, 20% en pagos mensuales sin intereses durante la construcción y 50% contra entrega. Hay desarrollos que abren con enganches desde el 10% y otros que ofrecen descuento adicional por pago de contado. Todo el financiamiento durante obra lo otorga el desarrollador, sin trámite bancario ni historial de crédito mexicano.'
@@ -268,10 +268,10 @@ const PreventaCancun = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+            <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
               {es ? 'Zonas clave y su potencial' : 'Key zones and their potential'}
             </h2>
-            <div className="font-body font-[300] text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+            <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
               <p>
                 {es
                   ? 'La Zona Hotelera es el corredor con mayor demanda de renta vacacional del país: playa de arena blanca, vista al Caribe y una base hotelera que garantiza flujo turístico durante todo el año. El suelo disponible es prácticamente nulo, así que cada nuevo proyecto entra a un mercado con oferta cerrada.'
@@ -290,10 +290,10 @@ const PreventaCancun = () => {
       {/* ── Bloques long-tail con enlace interno ── */}
       <section className="px-6 lg:px-10 max-w-[900px] mx-auto pb-16 space-y-12">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             {es ? 'Preventa en Puerto Cancún' : 'Pre-Construction in Puerto Cancún'}
           </h2>
-          <p className="font-body font-[300] text-[16px] mb-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+          <p className="font-body font-normal text-[16px] mb-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
             {es
               ? 'Marina privada, campo de golf de 18 hoyos y acceso controlado en un master plan ya consolidado. Los lanzamientos en Puerto Cancún se colocan rápido porque el inventario de suelo dentro del desarrollo es limitado.'
               : 'Private marina, 18-hole golf course and controlled access inside an already consolidated master plan. Launches in Puerto Cancún sell quickly because land inventory inside the development is limited.'}
@@ -308,10 +308,10 @@ const PreventaCancun = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             {es ? 'Departamentos en Preventa en Zona Hotelera' : 'Pre-Construction Condos in the Hotel Zone'}
           </h2>
-          <p className="font-body font-[300] text-[16px] mb-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+          <p className="font-body font-normal text-[16px] mb-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
             {es
               ? 'El corredor con la mayor plusvalía histórica de Cancún y la renta vacacional más alta. Vista directa al Mar Caribe, acceso a playa y demanda turística todo el año.'
               : 'Cancún’s highest historical appreciation corridor and its strongest vacation rental market. Direct Caribbean Sea views, beach access and year-round tourist demand.'}
@@ -326,10 +326,10 @@ const PreventaCancun = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             {es ? 'Condos Frente al Mar en Preventa en Cancún' : 'Beachfront Pre-Construction Condos in Cancún'}
           </h2>
-          <p className="font-body font-[300] text-[16px] mb-5" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+          <p className="font-body font-normal text-[16px] mb-5" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
             {es
               ? 'Unidades con frente de playa o vista abierta al Caribe — el producto más escaso del mercado y el que mejor sostiene su valor.'
               : 'Units with beachfront or open Caribbean views — the scarcest product in the market and the one that holds value best.'}
@@ -339,7 +339,7 @@ const PreventaCancun = () => {
               <li key={p.slug}>
                 <Link
                   to={localePath(`/propiedad/${p.slug}`)}
-                  className="font-body font-[300] text-[15px] hover:text-[#CFAE60] transition-colors"
+                  className="font-body font-normal text-[15px] hover:text-[#CFAE60] transition-colors"
                   style={{ color: '#1C1C1C' }}
                 >
                   {p.name} — {es ? p.zone : p.zoneEn || p.zone}
@@ -353,10 +353,10 @@ const PreventaCancun = () => {
       {/* ── CTA final ── */}
       <section className="px-6 lg:px-10 max-w-[900px] mx-auto pb-24 text-center">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-[300] mb-4" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
             {es ? 'Recibe la lista completa de preventas' : 'Get the full pre-construction list'}
           </h2>
-          <p className="font-body font-[300] text-[16px] mb-7 max-w-xl mx-auto" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
+          <p className="font-body font-normal text-[16px] mb-7 max-w-xl mx-auto" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
             {es
               ? 'Precios de lanzamiento, planes de pago y unidades disponibles por proyecto, directo con tu asesora.'
               : 'Launch prices, payment plans and available units per project, straight from your advisor.'}
