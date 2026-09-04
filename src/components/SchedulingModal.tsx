@@ -38,7 +38,7 @@ const inputStyle: React.CSSProperties = {
   padding: '13px 16px',
   fontFamily: "'Jost', sans-serif",
   fontSize: '14px',
-  fontWeight: 300,
+  fontWeight: 400,
   color: '#1C1C1C',
   width: '100%',
   outline: 'none',
@@ -158,10 +158,10 @@ export const SchedulingModal = () => {
                 <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
-            <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '30px', fontWeight: 300, color: '#1C1C1C', marginBottom: '12px' }}>
+            <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '30px', fontWeight: 400, color: '#1C1C1C', marginBottom: '12px' }}>
               {L === 'es' ? '¡Tu solicitud fue recibida!' : 'Your request has been received!'}
             </h3>
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '17px', color: '#4B4B4B', fontWeight: 300, textAlign: 'center' }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '17px', color: '#4B4B4B', fontWeight: 400, textAlign: 'center' }}>
               {L === 'es'
                 ? `Nos comunicamos contigo a la brevedad para confirmar tu ${typeLabels[selectedType].es}.`
                 : `We'll contact you shortly to confirm your ${typeLabels[selectedType].en}.`}
@@ -192,7 +192,7 @@ export const SchedulingModal = () => {
                   >
                     <span style={{ color: isActive ? '#CFAE60' : '#1C1C1C' }}><Icon className="w-[22px] h-[22px]" /></span>
                     <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 400, color: '#1C1C1C' }}>{title[L]}</span>
-                    <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 300, color: '#4B4B4B', textAlign: 'center' }}>{desc[L]}</span>
+                    <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 500, color: '#4B4B4B', textAlign: 'center' }}>{desc[L]}</span>
                   </button>
                 );
               })}
@@ -233,7 +233,7 @@ export const SchedulingModal = () => {
                 type="submit"
                 disabled={loading}
                 className="w-full uppercase transition-colors duration-300"
-                style={{ background: '#CFAE60', color: 'white', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, border: 'none', borderRadius: 0, cursor: 'pointer', opacity: loading ? 0.6 : 1 }}
+                style={{ background: '#CFAE60', color: 'white', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 500, border: 'none', borderRadius: 0, cursor: 'pointer', opacity: loading ? 0.6 : 1 }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = '#b89a4a'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = '#CFAE60'; }}
               >
@@ -244,7 +244,7 @@ export const SchedulingModal = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 uppercase transition-colors duration-300"
-                style={{ background: 'rgba(37,211,102,0.10)', border: '1px solid rgba(37,211,102,0.30)', color: '#25d366', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, borderRadius: 0, textDecoration: 'none', cursor: 'pointer' }}
+                style={{ background: 'rgba(37,211,102,0.10)', border: '1px solid rgba(37,211,102,0.30)', color: '#25d366', padding: '15px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 500, borderRadius: 0, textDecoration: 'none', cursor: 'pointer' }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.20)'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.10)'; }}
               >
@@ -252,7 +252,7 @@ export const SchedulingModal = () => {
               </a>
             </div>
 
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '15px', color: '#4B4B4B', fontWeight: 300, fontStyle: 'italic', textAlign: 'center', marginTop: '12px', lineHeight: 1.7 }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '15px', color: '#4B4B4B', fontWeight: 400, fontStyle: 'italic', textAlign: 'center', marginTop: '12px', lineHeight: 1.7 }}>
               {L === 'es' ? 'Un asesor te contactará para confirmar en menos de 2 horas.' : 'An advisor will contact you to confirm within 2 hours.'}
             </p>
           </form>

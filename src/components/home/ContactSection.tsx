@@ -29,7 +29,7 @@ const inputStyle: React.CSSProperties = {
   padding: '14px 16px',
   fontFamily: "'Jost', sans-serif",
   fontSize: '14px',
-  fontWeight: 300,
+  fontWeight: 400,
   color: '#1C1C1C',
   width: '100%',
   outline: 'none',
@@ -224,7 +224,7 @@ export const ContactSection = () => {
                       type="submit"
                       disabled={loading}
                       className="w-full uppercase transition-colors duration-300"
-                      style={{ background: 'hsl(var(--primary))', color: 'white', padding: '16px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 400, border: 'none', cursor: 'pointer', opacity: loading ? 0.6 : 1 }}
+                      style={{ background: 'hsl(var(--primary))', color: 'white', padding: '16px', fontFamily: "'Jost', sans-serif", fontSize: '13px', letterSpacing: '3px', fontWeight: 500, border: 'none', cursor: 'pointer', opacity: loading ? 0.6 : 1 }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = '#b89a4a'; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = 'hsl(var(--primary))'; }}
                     >
@@ -235,7 +235,7 @@ export const ContactSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full transition-colors duration-300"
-                      style={{ gap: '9px', padding: '14px', background: 'rgba(37,211,102,0.07)', border: '1px solid rgba(37,211,102,0.28)', color: '#1a9e52', fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 300 }}
+                      style={{ gap: '9px', padding: '14px', background: 'rgba(37,211,102,0.07)', border: '1px solid rgba(37,211,102,0.28)', color: '#1a9e52', fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 500 }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.13)'; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(37,211,102,0.07)'; }}
                     >

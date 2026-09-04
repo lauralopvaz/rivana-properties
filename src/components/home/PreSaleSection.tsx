@@ -16,18 +16,18 @@ export const PreSaleSection = () => {
         <ScrollReveal>
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="w-8 h-px" style={{ background: 'rgba(207,174,96,0.5)' }} />
-            <span className="uppercase" style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', letterSpacing: '5px', color: '#CFAE60', fontWeight: 300 }}>
+            <span className="uppercase" style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', letterSpacing: '5px', color: '#CFAE60', fontWeight: 500 }}>
               {L === 'es' ? 'Oportunidad de Inversión' : 'Investment Opportunity'}
             </span>
             <span className="w-8 h-px" style={{ background: 'rgba(207,174,96,0.5)' }} />
           </div>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontSize: 'clamp(44px, 6vw, 72px)', lineHeight: 1.05 }} className="mb-6">
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: 'clamp(44px, 6vw, 72px)', lineHeight: 1.05 }} className="mb-6">
             <span style={{ color: '#26547D' }}>{L === 'es' ? 'Proyectos en ' : 'Projects in '}</span>
             <em className="not-italic" style={{ color: '#CFAE60', fontStyle: 'italic' }}>{L === 'es' ? 'Preventa' : 'Pre-Sale'}</em>
           </h2>
 
-          <p className="mx-auto mb-10" style={{ fontFamily: "'Jost', sans-serif", fontSize: '19px', color: '#4B4B4B', fontWeight: 300, lineHeight: 1.85, maxWidth: '560px' }}>
+          <p className="mx-auto mb-10" style={{ fontFamily: "'Jost', sans-serif", fontSize: '19px', color: '#4B4B4B', fontWeight: 400, lineHeight: 1.85, maxWidth: '560px' }}>
             {L === 'es'
               ? 'Accede a los mejores precios antes de que el proyecto salga al mercado. En preventa, tu capital trabaja desde el primer día y la plusvalía comienza a acumularse antes de la entrega.'
               : 'Access the best prices before the project hits the market. In pre-sale, your capital works from day one and appreciation starts building before delivery.'}
@@ -36,8 +36,8 @@ export const PreSaleSection = () => {
           <div className="inline-flex flex-col sm:flex-row mx-auto mb-10" style={{ border: '1px solid rgba(207,174,96,0.24)', background: 'white' }}>
             {stats.map((s, i) => (
               <div key={s.label} className="sm:border-r last:border-r-0 border-b sm:border-b-0 last:border-b-0" style={{ padding: '18px 24px', borderColor: 'rgba(207,174,96,0.24)' }}>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#CFAE60', fontWeight: 300, lineHeight: 1.2 }}>{s.value}</div>
-                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 300, marginTop: '6px' }}>{s.label}</div>
+                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#CFAE60', fontWeight: 400, lineHeight: 1.2 }}>{s.value}</div>
+                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', color: '#4B4B4B', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 500, marginTop: '6px' }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -46,7 +46,7 @@ export const PreSaleSection = () => {
             <Link
               to={localePath('/presale')}
               className="inline-block uppercase transition-all duration-300"
-              style={{ background: '#CFAE60', color: 'white', fontSize: '13px', letterSpacing: '3px', fontWeight: 400, padding: '17px 52px', fontFamily: "'Jost', sans-serif" }}
+              style={{ background: '#CFAE60', color: 'white', fontSize: '13px', letterSpacing: '3px', fontWeight: 500, padding: '17px 52px', fontFamily: "'Jost', sans-serif" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = '#b89a4a'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = '#CFAE60'; e.currentTarget.style.transform = 'translateY(0)'; }}
             >
@@ -54,7 +54,7 @@ export const PreSaleSection = () => {
             </Link>
           </div>
 
-          <p style={{ fontSize: '16px', color: 'rgba(75,75,75,0.55)', fontStyle: 'italic', fontWeight: 300, fontFamily: "'Jost', sans-serif", lineHeight: 1.7 }}>
+          <p style={{ fontSize: '16px', color: 'rgba(75,75,75,0.55)', fontStyle: 'italic', fontWeight: 400, fontFamily: "'Jost', sans-serif", lineHeight: 1.7 }}>
             {L === 'es' ? '* Rendimientos estimados con base en el mercado actual. No garantizan retorno.' : '* Estimated yields based on current market. Returns are not guaranteed.'}
           </p>
         </ScrollReveal>

@@ -290,7 +290,7 @@ const eyebrowStyle: React.CSSProperties = {
 };
 const displayStyle = (size: string): React.CSSProperties => ({
   fontFamily: "'Cormorant Garamond', serif",
-  fontWeight: 300,
+  fontWeight: 400,
   fontSize: size,
   lineHeight: 1.08,
   color: INK,
@@ -299,7 +299,7 @@ const displayStyle = (size: string): React.CSSProperties => ({
 const bodyStyle: React.CSSProperties = {
   fontFamily: "'Jost', sans-serif",
   fontSize: '18px',
-  fontWeight: 300,
+  fontWeight: 400,
   lineHeight: 1.85,
   color: MUTED,
 };
@@ -672,7 +672,7 @@ const PreSale = () => {
                 <button type="submit" disabled={submitting} style={{ ...btnGold, width: '100%', marginTop: 12, padding: '20px 24px', opacity: submitting ? 0.6 : 1, cursor: submitting ? 'wait' : 'pointer' }}>
                   {submitting ? (L === 'es' ? 'Enviando…' : 'Sending…') : c.fSubmit}
                 </button>
-                <p style={{ ...eyebrowStyle, textTransform: 'none', letterSpacing: 0, fontSize: 14, color: 'rgba(28,28,28,0.45)', textAlign: 'center', lineHeight: 1.6, fontWeight: 300 }}>{c.fPrivacy}</p>
+                <p style={{ ...eyebrowStyle, textTransform: 'none', letterSpacing: 0, fontSize: 14, color: 'rgba(28,28,28,0.45)', textAlign: 'center', lineHeight: 1.6, fontWeight: 400 }}>{c.fPrivacy}</p>
               </form>
             )}
           </div>
@@ -711,7 +711,7 @@ const selectStyle: React.CSSProperties = {
   color: INK,
   fontFamily: "'Jost', sans-serif",
   fontSize: 15,
-  fontWeight: 300,
+  fontWeight: 400,
   outline: 'none',
   borderRadius: 0,
 };
@@ -735,7 +735,7 @@ function Field({ label, name, type }: { label: string; name: string; type: strin
           color: INK,
           fontFamily: "'Jost', sans-serif",
           fontSize: 15,
-          fontWeight: 300,
+          fontWeight: 400,
           outline: 'none',
           borderRadius: 0,
         }}

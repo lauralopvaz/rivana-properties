@@ -217,7 +217,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
                   >
                     {tr(locale, 'exactLocation')}
                   </span>
-                  <span className="font-display block mt-1 prop-unit-name" style={{ color: "#1C1C1C", fontWeight: 300 }}>
+                  <span className="font-display block mt-1 prop-unit-name" style={{ color: "#1C1C1C", fontWeight: 400 }}>
                     {property.address}
                   </span>
                   {(property.addressNote || property.addressNoteEn) && (
