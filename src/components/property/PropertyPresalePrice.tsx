@@ -97,7 +97,7 @@ export function PropertyPresalePrice({ presalePrice, locale, onReserve, onWhatsA
         className="flex items-center gap-3 py-4 my-4"
         style={{ borderTop: "1px solid rgba(0,0,0,0.07)", borderBottom: "1px solid rgba(0,0,0,0.07)" }}
       >
-        <span className="font-display prop-title-sm line-through" style={{ color: "rgba(75,75,75,0.35)" }}>
+        <span className="font-display prop-title-sm line-through" style={{ color: "#4B4B4B" }}>
           ${formatNumber(presalePrice.originalMXN)}
         </span>
         <span style={{ color: "rgba(176,58,46,0.6)" }}>→</span>

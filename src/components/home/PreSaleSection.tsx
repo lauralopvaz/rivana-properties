@@ -54,7 +54,7 @@ export const PreSaleSection = () => {
             </Link>
           </div>
 
-          <p style={{ fontSize: '16px', color: 'rgba(75,75,75,0.55)', fontStyle: 'italic', fontWeight: 400, fontFamily: "'Jost', sans-serif", lineHeight: 1.7 }}>
+          <p style={{ fontSize: '16px', color: '#4B4B4B', fontStyle: 'italic', fontWeight: 400, fontFamily: "'Jost', sans-serif", lineHeight: 1.7 }}>
             {L === 'es' ? '* Rendimientos estimados con base en el mercado actual. No garantizan retorno.' : '* Estimated yields based on current market. Returns are not guaranteed.'}
           </p>
         </ScrollReveal>

@@ -22,7 +22,7 @@ const CARD = '#FFFFFF';
 const INK = '#1C1C1C';
 const GOLD = '#CFAE60';
 const MUTED = '#4B4B4B';
-const BORDER = 'rgba(28,28,28,0.08)';
+const BORDER = '#4B4B4B';
 
 type L = 'es' | 'en';
 
@@ -506,7 +506,7 @@ const PreSale = () => {
           <dl style={{ marginTop: 48, display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', columnGap: 24, rowGap: 32, borderTop: `1px solid ${BORDER}`, paddingTop: 40 }}>
             {c.stats.map((s) => (
               <div key={s.k}>
-                <dt style={{ ...eyebrowStyle, color: 'rgba(28,28,28,0.5)', fontSize: '10px' }}>{s.k}</dt>
+                <dt style={{ ...eyebrowStyle, color: '#4B4B4B', fontSize: '10px' }}>{s.k}</dt>
                 <dd style={{ ...displayStyle('2rem'), color: GOLD, marginTop: 8 }}>{s.v}</dd>
               </div>
             ))}
@@ -565,7 +565,7 @@ const PreSale = () => {
                     { k: c.unitTot, v: '91.20 m²' },
                   ].map((d) => (
                     <div key={d.k}>
-                      <dt style={{ ...eyebrowStyle, fontSize: 9, color: 'rgba(28,28,28,0.45)' }}>{d.k}</dt>
+                      <dt style={{ ...eyebrowStyle, fontSize: 9, color: '#4B4B4B' }}>{d.k}</dt>
                       <dd style={{ ...displayStyle('1.15rem'), color: GOLD, marginTop: 6 }}>{d.v}</dd>
                     </div>
                   ))}
@@ -627,14 +627,14 @@ const PreSale = () => {
               {c.plan.map((p) => (
                 <li key={p.a} style={{ display: 'flex', justifyContent: 'space-between', gap: 16, ...bodyStyle, color: INK, fontSize: 15 }}>
                   <span>{p.a}</span>
-                  <span style={{ color: 'rgba(28,28,28,0.55)' }}>{p.b}</span>
+                  <span style={{ color: '#4B4B4B' }}>{p.b}</span>
                 </li>
               ))}
             </ul>
           </div>
           <blockquote style={{ marginTop: 48, borderLeft: `2px solid ${GOLD}`, paddingLeft: 20, fontStyle: 'italic', ...displayStyle('1.4rem'), lineHeight: 1.35 }}>
             {c.quote}
-            <footer style={{ marginTop: 12, ...eyebrowStyle, fontStyle: 'normal', fontSize: 10, color: 'rgba(28,28,28,0.5)' }}>{c.quoteBy}</footer>
+            <footer style={{ marginTop: 12, ...eyebrowStyle, fontStyle: 'normal', fontSize: 10, color: '#4B4B4B' }}>{c.quoteBy}</footer>
           </blockquote>
         </section>
 
@@ -672,7 +672,7 @@ const PreSale = () => {
                 <button type="submit" disabled={submitting} style={{ ...btnGold, width: '100%', marginTop: 12, padding: '20px 24px', opacity: submitting ? 0.6 : 1, cursor: submitting ? 'wait' : 'pointer' }}>
                   {submitting ? (L === 'es' ? 'Enviando…' : 'Sending…') : c.fSubmit}
                 </button>
-                <p style={{ ...eyebrowStyle, textTransform: 'none', letterSpacing: 0, fontSize: 14, color: 'rgba(28,28,28,0.45)', textAlign: 'center', lineHeight: 1.6, fontWeight: 400 }}>{c.fPrivacy}</p>
+                <p style={{ ...eyebrowStyle, textTransform: 'none', letterSpacing: 0, fontSize: 14, color: '#4B4B4B', textAlign: 'center', lineHeight: 1.6, fontWeight: 400 }}>{c.fPrivacy}</p>
               </form>
             )}
           </div>

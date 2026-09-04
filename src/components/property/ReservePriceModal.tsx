@@ -77,7 +77,7 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
   return (
     <div
       className="fixed inset-0 z-[200] flex items-end justify-center"
-      style={{ backgroundColor: "rgba(28,28,28,0.55)", backdropFilter: "blur(3px)" }}
+      style={{ backgroundColor: "#4B4B4B", backdropFilter: "blur(3px)" }}
       onClick={onClose}
     >
       <div
@@ -125,7 +125,7 @@ export function ReservePriceModal({ isOpen, onClose, presalePrice, propertyName,
                   <span className="font-body font-light prop-text-xs block" style={{ color: "#4B4B4B" }}>
                     {tr(locale, 'listPrice')}
                   </span>
-                  <span className="font-display prop-text-sm line-through" style={{ color: "rgba(75,75,75,0.5)" }}>
+                  <span className="font-display prop-text-sm line-through" style={{ color: "#4B4B4B" }}>
                     ${formatNumber(presalePrice.originalMXN)}
                   </span>
                 </div>

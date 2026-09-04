@@ -457,7 +457,7 @@ const PropertyDetail = () => {
               </div>
 
               <div className="border-t border-[rgba(0,0,0,0.06)] pt-3 mb-4">
-                <p className="font-body text-[8px] text-[rgba(75,75,75,0.52)] italic leading-[1.65]">
+                <p className="font-body text-[8px] text-[#4B4B4B] italic leading-[1.65]">
                   * Los rendimientos son estimados con base en el mercado actual de renta vacacional en la zona. No constituyen una garantía de retorno. Los resultados pueden variar según ocupación, administración y condiciones del mercado.
                 </p>
               </div>

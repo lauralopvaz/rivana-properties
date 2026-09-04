@@ -154,12 +154,12 @@ export const InvestmentForm = () => {
                       <select
                         aria-label={L === 'es' ? 'Presupuesto estimado' : 'Estimated budget'}
                         value={budget}
-                        onChange={(e) => { setBudget(e.target.value); e.currentTarget.style.color = e.currentTarget.value ? '#1C1C1C' : 'rgba(75,75,75,0.42)'; }}
-                        style={{ ...inputStyle, appearance: 'none', paddingRight: '40px', color: budget ? '#1C1C1C' : 'rgba(75,75,75,0.42)' }}
+                        onChange={(e) => { setBudget(e.target.value); e.currentTarget.style.color = e.currentTarget.value ? '#1C1C1C' : '#4B4B4B'; }}
+                        style={{ ...inputStyle, appearance: 'none', paddingRight: '40px', color: budget ? '#1C1C1C' : '#4B4B4B' }}
                         onFocus={handleFocus as any}
                         onBlur={handleBlur as any}
                       >
-                        <option value="" disabled style={{ color: 'rgba(75,75,75,0.42)' }}>
+                        <option value="" disabled style={{ color: '#4B4B4B' }}>
                           {L === 'es' ? 'Presupuesto estimado' : 'Estimated budget'}
                         </option>
                         {budgetOptions.map((o) => (

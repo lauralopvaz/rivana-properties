@@ -78,7 +78,7 @@ export default function SalviaUnit() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(180deg, rgba(28,28,28,0.25) 0%, rgba(28,28,28,0.7) 100%), url(${unit.image})`,
+            backgroundImage: `linear-gradient(180deg, #4B4B4B 0%, rgba(28,28,28,0.7) 100%), url(${unit.image})`,
           }}
           aria-hidden
         />
