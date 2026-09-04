@@ -84,7 +84,7 @@ export function PersonalSearchSection() {
                     <div className="w-10 h-10 flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
                       <Icon size={18} style={{ color: 'hsl(var(--gold))' }} />
                     </div>
-                    <h3 className="font-display mb-2 text-secondary" style={{ fontSize: '21px' }}>{label}</h3>
+                    <h3 className="font-body font-medium mb-2 text-secondary" style={{ fontSize: '21px' }}>{label}</h3>
                     <p className="font-body font-light text-muted-foreground" style={{ fontSize: '20px', lineHeight: 1.7 }}>{text}</p>
                   </div>
                 ))}
