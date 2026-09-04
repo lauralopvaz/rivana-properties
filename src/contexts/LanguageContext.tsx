@@ -34,13 +34,13 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Hero
   'hero.tagline': { es: 'Tu inversión, tu legado.', en: 'Your investment, your legacy.' },
-  'hero.subtitle': { es: 'Propiedades exclusivas en Cancún y la Riviera Maya, curadas para inversionistas visionarios.', en: 'Exclusive properties in Cancún and the Riviera Maya, curated for visionary investors.' },
+  'hero.subtitle': { es: 'Propiedades exclusivas en Cancún y la Riviera Maya, seleccionadas para inversionistas visionarios.', en: 'Exclusive properties in Cancún and the Riviera Maya, curated for visionary investors.' },
   'hero.explore': { es: 'Explorar Propiedades', en: 'Explore Properties' },
   'hero.destinations': { es: 'Nuestros Destinos', en: 'Our Destinations' },
 
   // Services
   'services.01': { es: 'Facilitamos cada paso del proceso legal y notarial', en: 'We facilitate every step of the legal and notarial process' },
-  'services.02': { es: 'Inventario curado de propiedades con alto potencial de retorno', en: 'Curated inventory of high-return potential properties' },
+  'services.02': { es: 'Inventario seleccionado de propiedades con alto potencial de retorno', en: 'Curated inventory of high-return potential properties' },
   'services.03': { es: 'Acceso a preventas con condiciones exclusivas para nuestros clientes', en: 'Access to pre-sales with exclusive conditions for our clients' },
   'services.04': { es: 'Asesoría especializada para inversionistas internacionales', en: 'Specialized advisory for international investors' },
 
@@ -116,7 +116,7 @@ const translations: Record<string, Record<Language, string>> = {
   // Listings
   'listings.browse': { es: 'Explorar', en: 'Browse' },
   'listings.title': { es: 'Propiedades en Venta', en: 'Property Listings' },
-  'listings.subtitle': { es: 'Explora nuestra colección curada de propiedades de lujo en Cancún y la Riviera Maya.', en: 'Explore our curated collection of luxury properties across Cancún and the Riviera Maya.' },
+  'listings.subtitle': { es: 'Explora nuestra colección seleccionada de propiedades de lujo en Cancún y la Riviera Maya.', en: 'Explore our curated collection of luxury properties across Cancún and the Riviera Maya.' },
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

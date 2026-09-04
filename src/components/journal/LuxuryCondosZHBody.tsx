@@ -38,7 +38,7 @@ const PropertyCardEN = ({ name, tagline, link }: { name: string; tagline: string
 export const LuxuryCondosZHBodyES = () => (
   <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
     <p>
-      La Zona Hotelera de Cancún es una de las franjas costeras más codiciadas de América. Veintitrés kilómetros de playa del Caribe, con el mar turquesa por un lado y la laguna del Nichupté por el otro, conectados por el Bulevar Kukulcán. En esa franja conviven los resorts más reconocidos del mundo con un mercado residencial de lujo que ha evolucionado dramáticamente en la última década. Esta guía te da todo lo que necesitas saber para navegar ese mercado correctamente en 2026 — con referencias directas a los desarrollos que Rivana ha verificado, curado y tiene disponibles hoy.
+      La Zona Hotelera de Cancún es una de las franjas costeras más codiciadas de América. Veintitrés kilómetros de playa del Caribe, con el mar turquesa por un lado y la laguna del Nichupté por el otro, conectados por el Bulevar Kukulcán. En esa franja conviven los resorts más reconocidos del mundo con un mercado residencial de lujo que ha evolucionado dramáticamente en la última década. Esta guía te da todo lo que necesitas saber para navegar ese mercado correctamente en 2026 — con referencias directas a los desarrollos que Rivana ha verificado, seleccionado y tiene disponibles hoy.
     </p>
 
     <H2>¿Qué hace única a la Zona Hotelera para inversión?</H2>

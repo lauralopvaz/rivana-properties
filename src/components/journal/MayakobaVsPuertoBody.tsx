@@ -71,7 +71,7 @@ export const MayakobaVsPuertoBodyES = () => {
   const { localePath } = useLanguage();
   return (
     <div className="text-muted-foreground font-body text-[17px] leading-[1.8] space-y-6">
-      <p>Dos destinos. Dos filosofías de lujo. Dos tesis de inversión completamente distintas. Mayakoba, en la Riviera Maya, es la naturaleza más curada de México — un ecosistema privado que comparte ADN con los resorts Fairmont, Rosewood, Banyan Tree y Andaz, donde el 65% del terreno es conservación natural y donde la selección de Uruguay eligió concentrarse durante el Mundial FIFA 2026. Puerto Cancún es el urbanismo de lujo más sofisticado del Caribe — una marina privada rodeada de torres de cristal, campo de golf de 18 hoyos, comercio premium y acceso directo al Caribe en el corazón de la ciudad.</p>
+      <p>Dos destinos. Dos filosofías de lujo. Dos tesis de inversión completamente distintas. Mayakoba, en la Riviera Maya, es la naturaleza más seleccionada de México — un ecosistema privado que comparte ADN con los resorts Fairmont, Rosewood, Banyan Tree y Andaz, donde el 65% del terreno es conservación natural y donde la selección de Uruguay eligió concentrarse durante el Mundial FIFA 2026. Puerto Cancún es el urbanismo de lujo más sofisticado del Caribe — una marina privada rodeada de torres de cristal, campo de golf de 18 hoyos, comercio premium y acceso directo al Caribe en el corazón de la ciudad.</p>
       <p>Elegir entre los dos no es una decisión trivial. Tampoco debería serlo. Esta comparativa te da los números reales, el perfil real de cada mercado y las propiedades específicas que Rivana tiene disponibles en ambas zonas hoy.</p>
 
       <h2 className="text-foreground">Mayakoba — el lujo que se integra a la naturaleza</h2>

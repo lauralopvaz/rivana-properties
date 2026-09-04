@@ -159,7 +159,7 @@ const Home = () => {
                 <p className="font-body text-muted-foreground max-w-xl">
                   {language === 'es' ? (
                     <>
-                      Consulta nuestra selección curada de{' '}
+                      Consulta nuestra selección seleccionada de{' '}
                       <Link to="/preventa-cancun" className="text-primary underline underline-offset-4">
                         propiedades en preventa Cancún
                       </Link>{' '}

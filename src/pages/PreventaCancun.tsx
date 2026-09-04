@@ -24,7 +24,7 @@ const PreventaCancun = () => {
   const { language: L, localePath } = useLanguage();
   const es = L === 'es';
 
-  // Catálogo curado: solo propiedades en estado "preventa" en la zona de Cancún
+  // Catálogo seleccionado: solo propiedades en estado "preventa" en la zona de Cancún
   const presaleProperties = properties.filter(
     (p) => p.status === 'preventa' && CANCUN_ZONES.some((z) => p.zone.includes(z)),
   );
@@ -118,13 +118,13 @@ const PreventaCancun = () => {
         </h1>
         <p className="font-body font-normal text-[16px] max-w-2xl leading-[1.8] mb-8" style={{ color: '#4B4B4B' }}>
           {es
-            ? 'Selección curada de proyectos en preventa en Zona Hotelera, Puerto Cancún, Costa Mujeres y Cancún Centro: precios de lanzamiento, esquemas de pago diferido y plusvalía capturada antes de la entrega.'
+            ? 'Selección seleccionada de proyectos en preventa en Zona Hotelera, Puerto Cancún, Costa Mujeres y Cancún Centro: precios de lanzamiento, esquemas de pago diferido y plusvalía capturada antes de la entrega.'
             : 'A curated selection of pre-construction projects in the Hotel Zone, Puerto Cancún, Costa Mujeres and Downtown Cancún: launch pricing, deferred payment plans and appreciation captured before delivery.'}
         </p>
         <CtaWhatsApp label={es ? 'Quiero información de preventa' : 'I want pre-construction info'} />
       </section>
 
-      {/* ── Listado curado de preventa ── */}
+      {/* ── Listado seleccionado de preventa ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-20">
         <ScrollReveal>
           <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
