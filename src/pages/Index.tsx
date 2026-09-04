@@ -126,8 +126,8 @@ const Home = () => {
             style={{ animationDelay: '1s', fontSize: '16px', letterSpacing: '0.5px', marginTop: '20px', textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
           >
             {language === 'es'
-              ? 'Propiedades desde $250K USD en Cancún · Puerto Cancún · Costa Mujeres'
-              : 'Properties from $250K USD in Cancún · Puerto Cancún · Costa Mujeres'}
+              ? 'Propiedades desde $450K USD en Cancún · Puerto Cancún · Costa Mujeres'
+              : 'Properties from $450K USD in Cancún · Puerto Cancún · Costa Mujeres'}
           </p>
         </div>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-scroll-hint">
