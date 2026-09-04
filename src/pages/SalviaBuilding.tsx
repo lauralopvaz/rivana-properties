@@ -90,7 +90,7 @@ export default function SalviaBuilding() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(160deg, #4B4B4B 0%, #4B4B4B 55%, rgba(28,28,28,0.8) 100%), url(${SALVIA_HERO_IMAGE})`,
+            backgroundImage: `linear-gradient(160deg, rgba(28,28,28,0.55) 0%, rgba(28,28,28,0.15) 55%, rgba(28,28,28,0.8) 100%), url(${SALVIA_HERO_IMAGE})`,
           }}
           aria-hidden
         />

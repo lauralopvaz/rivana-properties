@@ -22,7 +22,7 @@ const CARD = '#FFFFFF';
 const INK = '#1C1C1C';
 const GOLD = '#CFAE60';
 const MUTED = '#4B4B4B';
-const BORDER = '#4B4B4B';
+const BORDER = 'rgba(28,28,28,0.08)';
 
 type L = 'es' | 'en';
 

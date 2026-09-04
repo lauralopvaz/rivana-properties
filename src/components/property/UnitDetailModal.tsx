@@ -39,7 +39,7 @@ export function UnitDetailModal({ unit, locale, onClose, onRequestInfo }: UnitDe
   return (
     <div
       className="fixed inset-0 z-[200] flex items-end justify-center"
-      style={{ backgroundColor: "#4B4B4B", backdropFilter: "blur(3px)" }}
+      style={{ backgroundColor: "rgba(28,28,28,0.55)", backdropFilter: "blur(3px)" }}
       onClick={onClose}
     >
       <div
