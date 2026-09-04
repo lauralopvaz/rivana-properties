@@ -41,13 +41,13 @@ export const ImmediateDeliveryCard = ({ unit, priority = false }: Props) => {
           className="text-[11px] tracking-[3px] uppercase font-body font-bold mb-1"
           style={{ color: '#CFAE60' }}
         >
-          {unit.subtitle[language]}
+          {unit.location[language]}
         </p>
         <h3
           className="font-display text-[22px] font-bold leading-tight mb-1"
           style={{ color: '#1C1C1C' }}
         >
-          {unit.location[language]}
+          {unit.subtitle[language]}
         </h3>
         <p className="font-body text-[13px] text-muted-foreground mb-3">
           {unit.development[language]}
