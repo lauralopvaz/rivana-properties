@@ -166,7 +166,7 @@ const FilterDropdown = ({ label, activeLabel, isOpen, onToggle, children }: {
     <div ref={ref} className="relative">
       <button
         onClick={onToggle}
-        className="flex items-center gap-2 bg-white px-4 py-[11px] text-[14px] font-body font-[300] rounded-none transition-colors"
+        className="flex items-center gap-2 bg-white px-4 py-[11px] text-[14px] font-body font-normal rounded-none transition-colors"
         style={{ border: `1px solid ${isOpen || hasActive ? '#CFAE60' : 'rgba(0,0,0,0.10)'}`, color: hasActive ? '#CFAE60' : '#1C1C1C' }}
       >
         <span>{activeLabel || label}</span>
@@ -272,9 +272,9 @@ const Listings = () => {
 
       {/* Header */}
       <section className="pt-28 pb-8 px-6 lg:px-10 max-w-[1400px] mx-auto">
-        <p className="text-[12px] tracking-[4px] uppercase font-body font-[300] mb-4" style={{ color: '#CFAE60' }}>{L === 'es' ? 'Explorar' : 'Browse'}</p>
-        <h1 className="font-display text-[clamp(32px,5vw,52px)] font-[300] mb-3" style={{ color: '#1C1C1C' }}>{L === 'es' ? 'Propiedades en Venta' : 'Properties for Sale'}</h1>
-        <p className="font-body font-[300] text-[16px] max-w-xl" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>{L === 'es' ? 'Explora nuestra colección curada de propiedades de lujo en Cancún y la Riviera Maya.' : 'Explore our curated collection of luxury properties in Cancún and the Riviera Maya.'}</p>
+        <p className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4" style={{ color: '#CFAE60' }}>{L === 'es' ? 'Explorar' : 'Browse'}</p>
+        <h1 className="font-display text-[clamp(32px,5vw,52px)] font-normal mb-3" style={{ color: '#1C1C1C' }}>{L === 'es' ? 'Propiedades en Venta' : 'Properties for Sale'}</h1>
+        <p className="font-body font-normal text-[16px] max-w-xl" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>{L === 'es' ? 'Explora nuestra colección curada de propiedades de lujo en Cancún y la Riviera Maya.' : 'Explore our curated collection of luxury properties in Cancún and the Riviera Maya.'}</p>
       </section>
 
       {/* Filters */}
@@ -283,7 +283,7 @@ const Listings = () => {
           {/* Zone */}
           <FilterDropdown label={allZones} activeLabel={zone} isOpen={openFilter === 'zone'} onToggle={() => toggle('zone')}>
             {zonesL.map(z => (
-              <button key={z} onClick={() => { setZone(z); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: z === zone ? '#CFAE60' : '#1C1C1C' }}>
+              <button key={z} onClick={() => { setZone(z); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-normal hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: z === zone ? '#CFAE60' : '#1C1C1C' }}>
                 {z}
               </button>
             ))}
@@ -292,7 +292,7 @@ const Listings = () => {
           {/* Availability (Disponibilidad) */}
           <FilterDropdown label={availabilityLabel} activeLabel={status === allStatus ? availabilityLabel : status} isOpen={openFilter === 'status'} onToggle={() => toggle('status')}>
             {statusesL.map(s => (
-              <button key={s} onClick={() => { setStatus(s); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: s === status ? '#CFAE60' : '#1C1C1C' }}>
+              <button key={s} onClick={() => { setStatus(s); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-normal hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: s === status ? '#CFAE60' : '#1C1C1C' }}>
                 {s}
               </button>
             ))}
@@ -301,7 +301,7 @@ const Listings = () => {
           {/* Type */}
           <FilterDropdown label={allTypes} activeLabel={type} isOpen={openFilter === 'type'} onToggle={() => toggle('type')}>
             {typesL.map(t => (
-              <button key={t} onClick={() => { setType(t); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-[300] hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: t === type ? '#CFAE60' : '#1C1C1C' }}>
+              <button key={t} onClick={() => { setType(t); setOpenFilter(null); }} className="block w-full text-left px-4 py-2.5 text-[14px] font-body font-normal hover:bg-[rgba(207,174,96,0.06)] transition-colors" style={{ color: t === type ? '#CFAE60' : '#1C1C1C' }}>
                 {t}
               </button>
             ))}
@@ -326,7 +326,7 @@ const Listings = () => {
                     >
                       {checked && <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>}
                     </span>
-                    <span className="text-[14px] font-body font-[300]" style={{ color: '#1C1C1C' }}>{badgeConfig[key].label[L]}</span>
+                    <span className="text-[14px] font-body font-normal" style={{ color: '#1C1C1C' }}>{badgeConfig[key].label[L]}</span>
                   </label>
                 );
               })}
@@ -347,7 +347,7 @@ const Listings = () => {
           >
             <div className="p-4 w-[280px] sm:w-[320px]">
               {/* Currency toggle */}
-              <p className="text-[11px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Moneda' : 'Currency'}</p>
+              <p className="text-[11px] tracking-[3px] uppercase font-body font-normal mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Moneda' : 'Currency'}</p>
               <div className="flex mb-4">
                 {(['USD', 'MXN'] as const).map(c => (
                   <button
@@ -366,7 +366,7 @@ const Listings = () => {
                 ))}
               </div>
 
-              <p className="text-[11px] tracking-[3px] uppercase font-body font-[300] mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Rango de Precio' : 'Price Range'} ({currency})</p>
+              <p className="text-[11px] tracking-[3px] uppercase font-body font-normal mb-2" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Rango de Precio' : 'Price Range'} ({currency})</p>
               <div className="flex items-center gap-2 mb-4">
                 <input
                   type="text"
@@ -376,7 +376,7 @@ const Listings = () => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([Math.min(v, priceRange[1]), priceRange[1]]);
                   }}
-                   className="flex-1 py-[9px] px-3 text-[14px] font-body font-[300] rounded-none"
+                   className="flex-1 py-[9px] px-3 text-[14px] font-body font-normal rounded-none"
                   style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
                 <span className="text-[14px] font-body" style={{ color: '#4B4B4B' }}>—</span>
@@ -388,7 +388,7 @@ const Listings = () => {
                     const v = parseInt(e.target.value.replace(/[^0-9]/g, '')) || 0;
                     setPriceRange([priceRange[0], Math.max(v, priceRange[0])]);
                   }}
-                  className="flex-1 py-[9px] px-3 text-[14px] font-body font-[300] rounded-none"
+                  className="flex-1 py-[9px] px-3 text-[14px] font-body font-normal rounded-none"
                   style={{ background: '#F8F6F2', border: '1px solid rgba(0,0,0,0.09)' }}
                 />
               </div>
@@ -416,7 +416,7 @@ const Listings = () => {
             </div>
           </FilterDropdown>
         </div>
-        <p className="max-w-[1400px] mx-auto mt-3 text-[14px] font-body font-[300]" style={{ color: '#4B4B4B' }}>
+        <p className="max-w-[1400px] mx-auto mt-3 text-[14px] font-body font-normal" style={{ color: '#4B4B4B' }}>
           {filtered.length} {L === 'es' ? 'propiedades encontradas' : 'properties found'}
         </p>
       </section>
@@ -426,7 +426,7 @@ const Listings = () => {
         <h2 className="sr-only">{L === 'es' ? 'Resultados de propiedades' : 'Property Results'}</h2>
         {filtered.length === 0 ? (
           <div className="text-center py-20">
-            <p className="font-display text-[24px] font-[300] mb-4" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'No encontramos propiedades con esos filtros.' : 'No properties found with those filters.'}</p>
+            <p className="font-display text-[24px] font-normal mb-4" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'No encontramos propiedades con esos filtros.' : 'No properties found with those filters.'}</p>
             <button onClick={clearFilters} className="px-6 py-3 text-[12px] tracking-[3px] uppercase font-body" style={{ border: '1px solid #CFAE60', color: '#CFAE60', background: 'transparent' }}>
               {L === 'es' ? 'Limpiar filtros' : 'Clear filters'}
             </button>
@@ -465,8 +465,8 @@ const Listings = () => {
 
                 {/* Content */}
                 <div className="px-5 pt-5 pb-4">
-                     <p className="text-[12px] tracking-[3px] uppercase font-body font-[300] mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
-                     <h3 className="font-display text-[24px] font-[300] mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
+                     <p className="text-[12px] tracking-[3px] uppercase font-body font-normal mb-1.5" style={{ color: '#CFAE60' }}>{p.zone}</p>
+                     <h3 className="font-display text-[24px] font-normal mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
 
                   {/* Specs row */}
                   <div className="flex items-center gap-[14px] mb-3">
@@ -485,13 +485,13 @@ const Listings = () => {
                         const cfg = badgeConfig[b];
                         const Icon = cfg.icon;
                         return (
-                          <span key={b} className="flex items-center gap-1 px-[10px] py-[4px] text-[12px] font-body font-[300]" style={{ background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)', color: '#1C1C1C' }}>
+                          <span key={b} className="flex items-center gap-1 px-[10px] py-[4px] text-[12px] font-body font-normal" style={{ background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)', color: '#1C1C1C' }}>
                             <Icon className="w-[10px] h-[10px]" /> {cfg.label[L]}
                           </span>
                         );
                       })}
                       {p.badges.length > 3 && (
-                        <span className="px-[10px] py-[4px] text-[12px] font-body font-[300]" style={{ color: '#4B4B4B', background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
+                        <span className="px-[10px] py-[4px] text-[12px] font-body font-normal" style={{ color: '#4B4B4B', background: 'rgba(207,174,96,0.08)', border: '1px solid rgba(207,174,96,0.22)' }}>
                           +{p.badges.length - 3} {L === 'es' ? 'más' : 'more'}
                         </span>
                       )}
@@ -501,12 +501,12 @@ const Listings = () => {
                   {/* Bottom row */}
                   <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                     <div>
-                       <span className="block text-[11px] font-body font-[300] uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Desde' : 'From'}</span>
+                       <span className="block text-[11px] font-body font-normal uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Desde' : 'From'}</span>
                        <span className="font-display text-[22px] font-bold" style={{ color: '#CFAE60' }}>
                          {p.price === 0 ? (L === 'es' ? 'Consultar' : 'Contact Us') : `${formatPriceInCurrency(p.price, appliedCurrency)} ${appliedCurrency}`}
                        </span>
                      </div>
-                     <span className="text-[13px] font-body font-[300] flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
+                     <span className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                       {L === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                     </span>
                   </div>

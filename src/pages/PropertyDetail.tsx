@@ -192,7 +192,7 @@ const PropertyDetail = () => {
     return { bg: 'bg-[#b03a2e]/10', text: 'text-[#b03a2e]', label: `${count} disponibles` };
   };
 
-  const inputClass = "w-full bg-[#F8F6F2] border border-[rgba(0,0,0,0.09)] rounded-none px-3 py-3 text-[13px] font-body font-[300] text-[#1C1C1C] placeholder:text-[#4B4B4B]/50 focus:outline-none focus:border-[#CFAE60] transition-colors";
+  const inputClass = "w-full bg-[#F8F6F2] border border-[rgba(0,0,0,0.09)] rounded-none px-3 py-3 text-[13px] font-body font-normal text-[#1C1C1C] placeholder:text-[#4B4B4B]/50 focus:outline-none focus:border-[#CFAE60] transition-colors";
   const goldBtnClass = "w-full bg-[#CFAE60] text-white font-body text-[9px] tracking-[3px] uppercase py-3.5 rounded-none border-none cursor-pointer hover:brightness-110 transition-all";
   const sectionLabel = "font-body text-[9px] text-[#CFAE60] tracking-[4px] uppercase font-[400]";
 
@@ -298,7 +298,7 @@ const PropertyDetail = () => {
               <span className="text-[#4B4B4B]/40">·</span>
               <span className="text-[#4B4B4B]">{p.zone}</span>
             </nav>
-            <h1 className="font-display font-[300] text-[#1C1C1C] mb-3" style={{ fontSize: 'clamp(36px, 5vw, 56px)' }}>
+            <h1 className="font-display font-normal text-[#1C1C1C] mb-3" style={{ fontSize: 'clamp(36px, 5vw, 56px)' }}>
               Residencial <em className="text-[#CFAE60] italic">{p.nameItalic}</em>
             </h1>
             <div className="flex items-baseline gap-3 mb-8">
@@ -337,7 +337,7 @@ const PropertyDetail = () => {
                       className="flex items-center gap-2 bg-white border border-[rgba(207,174,96,0.28)] px-3.5 py-2.5 hover:border-[#CFAE60] hover:-translate-y-px hover:shadow-[0_4px_16px_rgba(207,174,96,0.12)] transition-all duration-200 cursor-default"
                     >
                       {b.icon}
-                      <span className="font-body text-[10px] text-[#1C1C1C] font-[300]">{b.label}</span>
+                      <span className="font-body text-[10px] text-[#1C1C1C] font-normal">{b.label}</span>
                     </div>
                   ))}
                 </div>
@@ -365,7 +365,7 @@ const PropertyDetail = () => {
             {activeTab === 'general' && (
               <div className="space-y-4 max-w-[580px] animate-fade-in">
                 {p.description.map((par, i) => (
-                  <p key={i} className="font-body text-[13px] text-[#4B4B4B] leading-[1.85] font-[300]">{par}</p>
+                  <p key={i} className="font-body text-[13px] text-[#4B4B4B] leading-[1.85] font-normal">{par}</p>
                 ))}
               </div>
             )}
@@ -377,7 +377,7 @@ const PropertyDetail = () => {
                   {p.amenities.map((a) => (
                     <div key={a} className="flex items-center gap-2 py-1.5 border-b border-[rgba(0,0,0,0.04)]">
                       <span className="w-[5px] h-[5px] rounded-full bg-[#CFAE60] flex-shrink-0" />
-                      <span className="font-body text-[12px] text-[#1C1C1C] font-[300]">{a}</span>
+                      <span className="font-body text-[12px] text-[#1C1C1C] font-normal">{a}</span>
                     </div>
                   ))}
                 </div>
@@ -470,7 +470,7 @@ const PropertyDetail = () => {
                 <img src={advisorImg} alt={p.advisorName} className="w-[38px] h-[38px] rounded-full border border-[#CFAE60] object-cover" />
                 <div>
                   <p className="font-body text-[12px] text-[#1C1C1C] font-[400]">{p.advisorName}</p>
-                  <p className="font-body text-[9px] text-[#4B4B4B] font-[300]">{p.advisorRole}</p>
+                  <p className="font-body text-[9px] text-[#4B4B4B] font-normal">{p.advisorRole}</p>
                 </div>
               </div>
 
@@ -558,7 +558,7 @@ const PropertyDetail = () => {
               <button onClick={closeUnitModal} className="absolute top-4 right-4 text-[#4B4B4B] hover:text-[#CFAE60] transition-colors border border-[rgba(0,0,0,0.08)] hover:border-[#CFAE60] p-1.5 rounded-none">
                 <XIcon className="w-4 h-4" />
               </button>
-              <h3 className="font-display text-[30px] text-[#1C1C1C] font-[300] mb-1">{selectedUnit.name}</h3>
+              <h3 className="font-display text-[30px] text-[#1C1C1C] font-normal mb-1">{selectedUnit.name}</h3>
               <p className={`${sectionLabel} mb-5`}>Residencial {p.name} · {p.destination}</p>
               <div className="grid grid-cols-2 gap-2 mb-5">
                 {[
@@ -625,7 +625,7 @@ const PropertyDetail = () => {
               <XIcon className="w-4 h-4" />
             </button>
             <p className={`${sectionLabel} mb-2`}>Material Exclusivo</p>
-            <h3 className="font-display text-[28px] text-[#1C1C1C] font-[300] mb-2">
+            <h3 className="font-display text-[28px] text-[#1C1C1C] font-normal mb-2">
               Descarga el <em className="text-[#CFAE60] italic">Brochure</em>
             </h3>
             <p className="font-body text-[12px] text-[#4B4B4B] leading-[1.7] mb-6">
