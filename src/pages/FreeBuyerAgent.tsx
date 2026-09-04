@@ -154,7 +154,7 @@ const FreeBuyerAgent = () => {
 
   const H2 = ({ children }: { children: React.ReactNode }) => (
     <h2
-      className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4"
+      className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4"
       style={{ color: '#1C1C1C' }}
     >
       {children}
@@ -190,7 +190,7 @@ const FreeBuyerAgent = () => {
           Buyer Representation · Cancún
         </p>
         <h1
-          className="font-display text-[clamp(28px,5vw,48px)] font-normal mb-4"
+          className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-4"
           style={{ color: '#1C1C1C' }}
         >
           Free Buyer&apos;s Agent in Cancún — For Canadian &amp; U.S. Buyers
@@ -218,7 +218,7 @@ const FreeBuyerAgent = () => {
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-20">
         <ScrollReveal>
           <h2
-            className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-6"
+            className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6"
             style={{ color: '#1C1C1C' }}
           >
             Foreign-friendly luxury listings we represent buyers on

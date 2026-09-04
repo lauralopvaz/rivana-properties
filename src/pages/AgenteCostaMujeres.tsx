@@ -122,7 +122,7 @@ const AgenteCostaMujeres = () => {
         <p className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4" style={{ color: '#CFAE60' }}>
           Costa Mujeres · Playa Mujeres
         </p>
-        <h1 className="font-display text-[clamp(28px,5vw,48px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+        <h1 className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
           {h1}
         </h1>
         <div className="font-body font-normal text-[16px] max-w-2xl leading-[1.8] mb-8 space-y-4" style={{ color: '#4B4B4B' }}>
@@ -163,7 +163,7 @@ const AgenteCostaMujeres = () => {
       {/* ── Listado curado ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-20">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             {isEnglish
               ? 'Properties in Costa Mujeres and Playa Mujeres'
               : 'Propiedades en Costa Mujeres y Playa Mujeres'}
@@ -245,7 +245,7 @@ const AgenteCostaMujeres = () => {
           {isEnglish ? (
             <>
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Why buyers are choosing Costa Mujeres
                 </h2>
                 <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -277,7 +277,7 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   The sub-markets inside Costa Mujeres
                 </h2>
                 <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -305,7 +305,7 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   How we work with buyers
                 </h2>
                 <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -328,7 +328,7 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Notes for foreign buyers
                 </h2>
                 <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -357,7 +357,7 @@ const AgenteCostaMujeres = () => {
           ) : (
             <>
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Por qué invertir en Costa Mujeres
                 </h2>
                 <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -391,7 +391,7 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Zonas dentro de Costa Mujeres
                 </h2>
                 <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -419,7 +419,7 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Cómo trabajamos
                 </h2>
                 <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -443,7 +443,7 @@ const AgenteCostaMujeres = () => {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+                <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
                   Para compradores extranjeros
                 </h2>
                 <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -474,7 +474,7 @@ const AgenteCostaMujeres = () => {
       {/* ── CTA final ── */}
       <section className="px-6 lg:px-10 max-w-[900px] mx-auto pb-24 text-center">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
             {isEnglish ? 'Speak with a Costa Mujeres agent' : 'Habla con un agente en Costa Mujeres'}
           </h2>
           <p className="font-body font-normal text-[16px] mb-7 max-w-xl mx-auto" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>

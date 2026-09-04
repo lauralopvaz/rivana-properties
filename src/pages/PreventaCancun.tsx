@@ -113,7 +113,7 @@ const PreventaCancun = () => {
         <p className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4" style={{ color: '#CFAE60' }}>
           {es ? 'Cancún · Preventa 2026' : 'Cancún · Pre-Construction 2026'}
         </p>
-        <h1 className="font-display text-[clamp(28px,5vw,48px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+        <h1 className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
           {h1}
         </h1>
         <p className="font-body font-normal text-[16px] max-w-2xl leading-[1.8] mb-8" style={{ color: '#4B4B4B' }}>
@@ -127,7 +127,7 @@ const PreventaCancun = () => {
       {/* ── Listado curado de preventa ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-20">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             {es ? 'Proyectos en Preventa Disponibles en Cancún' : 'Available Pre-Construction Projects in Cancún'}
           </h2>
         </ScrollReveal>
@@ -199,7 +199,7 @@ const PreventaCancun = () => {
       <section className="px-6 lg:px-10 max-w-[900px] mx-auto pb-4">
         <article className="space-y-12">
           <ScrollReveal>
-            <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+            <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
               {es ? 'Por qué invertir en preventa en Cancún' : 'Why invest in pre-construction in Cancún'}
             </h2>
             <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -222,7 +222,7 @@ const PreventaCancun = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+            <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
               {es ? 'ROI y rendimiento anual esperado' : 'ROI and expected annual yield'}
             </h2>
             <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -245,7 +245,7 @@ const PreventaCancun = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+            <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
               {es ? 'Esquemas de financiamiento y facilidades de pago' : 'Financing schemes and payment plans'}
             </h2>
             <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -268,7 +268,7 @@ const PreventaCancun = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+            <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
               {es ? 'Zonas clave y su potencial' : 'Key zones and their potential'}
             </h2>
             <div className="font-body font-normal text-[16px] space-y-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -290,7 +290,7 @@ const PreventaCancun = () => {
       {/* ── Bloques long-tail con enlace interno ── */}
       <section className="px-6 lg:px-10 max-w-[900px] mx-auto pb-16 space-y-12">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             {es ? 'Preventa en Puerto Cancún' : 'Pre-Construction in Puerto Cancún'}
           </h2>
           <p className="font-body font-normal text-[16px] mb-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -308,7 +308,7 @@ const PreventaCancun = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             {es ? 'Departamentos en Preventa en Zona Hotelera' : 'Pre-Construction Condos in the Hotel Zone'}
           </h2>
           <p className="font-body font-normal text-[16px] mb-4" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -326,7 +326,7 @@ const PreventaCancun = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             {es ? 'Condos Frente al Mar en Preventa en Cancún' : 'Beachfront Pre-Construction Condos in Cancún'}
           </h2>
           <p className="font-body font-normal text-[16px] mb-5" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>
@@ -353,7 +353,7 @@ const PreventaCancun = () => {
       {/* ── CTA final ── */}
       <section className="px-6 lg:px-10 max-w-[900px] mx-auto pb-24 text-center">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
             {es ? 'Recibe la lista completa de preventas' : 'Get the full pre-construction list'}
           </h2>
           <p className="font-body font-normal text-[16px] mb-7 max-w-xl mx-auto" style={{ color: '#4B4B4B', lineHeight: 1.9 }}>

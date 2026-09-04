@@ -197,7 +197,7 @@ const BeachfrontCondos = () => {
         <p className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4" style={{ color: '#CFAE60' }}>
           Cancún · For US &amp; Canadian Buyers
         </p>
-        <h1 className="font-display text-[clamp(28px,5vw,48px)] font-normal mb-5" style={{ color: '#1C1C1C' }}>
+        <h1 className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-5" style={{ color: '#1C1C1C' }}>
           Beachfront Condos for Sale in Cancún
         </h1>
         <p className="font-body font-normal text-[16px] max-w-2xl leading-[1.8]" style={{ color: '#4B4B4B' }}>
@@ -208,7 +208,7 @@ const BeachfrontCondos = () => {
       {/* ═══ H2: Hotel Zone Condos ═══ */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             Hotel Zone Condos — Cancún's Prime Investment Corridor
           </h2>
           <p className="font-body font-normal text-[14px] max-w-2xl mb-8" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
@@ -263,7 +263,7 @@ const BeachfrontCondos = () => {
       {/* ═══ H2: Why US & Canadian Buyers ═══ */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             Why US and Canadian Buyers Choose Cancún
           </h2>
         </ScrollReveal>
@@ -292,7 +292,7 @@ const BeachfrontCondos = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div>
             <ScrollReveal>
-              <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-6" style={{ color: '#1C1C1C' }}>
+              <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
                 Pre-Sale vs. Move-In Ready: Which Is Right for You?
               </h2>
             </ScrollReveal>
@@ -330,7 +330,7 @@ const BeachfrontCondos = () => {
       {/* ═══ H2: Buying Process (Fideicomiso) ═══ */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             The Buying Process for Foreign Buyers
           </h2>
           <p className="font-body font-normal text-[14px] max-w-2xl mb-8" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
@@ -389,7 +389,7 @@ const BeachfrontCondos = () => {
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto pb-20">
         <div className="bg-white border border-[rgba(207,174,96,0.22)] p-8 md:p-12 text-center" style={{ boxShadow: '0 6px 48px rgba(0,0,0,0.06)' }}>
           <p className="text-[10px] tracking-[4px] uppercase font-body font-[400] mb-3" style={{ color: '#CFAE60' }}>Ready to Invest?</p>
-          <h2 className="font-display text-[clamp(22px,4vw,36px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,4vw,36px)] font-semibold mb-4" style={{ color: '#1C1C1C' }}>
             Speak with a Bilingual Advisor Today
           </h2>
           <p className="font-body font-normal text-[14px] max-w-lg mx-auto mb-6" style={{ color: '#4B4B4B', lineHeight: 1.7 }}>

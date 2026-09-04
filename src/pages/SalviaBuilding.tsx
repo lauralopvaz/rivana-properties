@@ -244,7 +244,7 @@ export default function SalviaBuilding() {
             <p className="font-body text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#CFAE60' }}>
               {isEnglish ? 'Side-by-Side Comparison' : 'Comparativa Lado a Lado'}
             </p>
-            <h2 className="font-display font-light" style={{ fontSize: 'clamp(28px, 3.6vw, 42px)' }}>
+            <h2 className="font-display font-light" style={{ fontSize: 'clamp(40px, 3.6vw,42px)' }}>
               {isEnglish ? 'Specs · performance · pricing' : 'Especificaciones · desempeño · precio'}
             </h2>
           </div>
@@ -303,7 +303,7 @@ export default function SalviaBuilding() {
             <p className="font-body text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#CFAE60' }}>
               {isEnglish ? 'Location & Amenities' : 'Ubicación y Amenidades'}
             </p>
-            <h2 className="font-display font-light" style={{ fontSize: 'clamp(28px, 3.6vw, 42px)' }}>
+            <h2 className="font-display font-light" style={{ fontSize: 'clamp(40px, 3.6vw,42px)' }}>
               {salviaBuilding.location[language]}
             </h2>
             <p className="font-body font-light text-muted-foreground mt-3">
@@ -373,7 +373,7 @@ export default function SalviaBuilding() {
           <p className="font-body text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#CFAE60' }}>
             {isEnglish ? 'Financial Transparency' : 'Transparencia Financiera'}
           </p>
-          <h2 className="font-display font-light mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 38px)' }}>
+          <h2 className="font-body  font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 38px)' }}>
             {isEnglish ? 'Every number is verifiable.' : 'Cada cifra es verificable.'}
           </h2>
           <p className="font-body font-light text-muted-foreground" style={{ fontSize: '20px', lineHeight: 1.8 }}>
@@ -387,7 +387,7 @@ export default function SalviaBuilding() {
       {/* FINAL CTA */}
       <section className="py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
-          <h2 className="font-display font-light mb-6" style={{ fontSize: 'clamp(30px, 4vw, 48px)' }}>
+          <h2 className="font-display font-light mb-6" style={{ fontSize: 'clamp(40px, 4vw,48px)' }}>
             {isEnglish ? 'Schedule a private showing' : 'Agenda una visita privada'}
           </h2>
           <p className="font-body font-light text-muted-foreground mb-10" style={{ fontSize: '20px' }}>

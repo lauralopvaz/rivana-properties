@@ -103,7 +103,7 @@ const CancunCondos = () => {
         <p className="text-[12px] tracking-[4px] uppercase font-body font-normal mb-4" style={{ color: '#CFAE60' }}>
           {L === 'es' ? 'Cancún · Inversión Inmobiliaria' : 'Cancún · Real Estate Investment'}
         </p>
-        <h1 className="font-display text-[clamp(28px,5vw,48px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
+        <h1 className="font-display text-[clamp(40px,5vw,48px)] font-normal mb-4" style={{ color: '#1C1C1C' }}>
           {h1}
         </h1>
         <p className="font-body font-normal text-[16px] max-w-2xl leading-[1.8]" style={{ color: '#4B4B4B' }}>
@@ -123,7 +123,7 @@ const CancunCondos = () => {
         return (
           <section key={zone.key} className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
             <ScrollReveal>
-              <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-2" style={{ color: '#1C1C1C' }}>
+              <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-2" style={{ color: '#1C1C1C' }}>
                 {L === 'es'
                   ? `Departamentos en ${zone.es === 'Cancún Centro' ? 'Cancún Centro' : `la ${zone.es} de Cancún`}`
                   : `Condos in ${zone.en === 'Downtown Cancún' ? 'Downtown Cancún' : `Cancún's ${zone.en}`}`}
@@ -198,7 +198,7 @@ const CancunCondos = () => {
       {/* ── Section: Preventa 2026 ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto mb-16">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-3" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-3" style={{ color: '#1C1C1C' }}>
             {L === 'es' ? 'Departamentos en Preventa Cancún 2026' : 'Pre-Sale Condos Cancún 2026'}
           </h2>
           <p className="font-body font-normal text-[14px] max-w-2xl mb-6" style={{ color: '#4B4B4B', lineHeight: 1.8 }}>
@@ -226,7 +226,7 @@ const CancunCondos = () => {
       {/* ── Section: Why Buy ── */}
       <section className="px-6 lg:px-10 max-w-[1400px] mx-auto pb-20">
         <ScrollReveal>
-          <h2 className="font-display text-[clamp(22px,3.5vw,32px)] font-normal mb-6" style={{ color: '#1C1C1C' }}>
+          <h2 className="font-body text-[clamp(22px,3.5vw,32px)] font-semibold mb-6" style={{ color: '#1C1C1C' }}>
             {L === 'es' ? '¿Por qué comprar un departamento en Cancún?' : 'Why Buy a Condo in Cancún?'}
           </h2>
         </ScrollReveal>

@@ -298,7 +298,7 @@ const PropertyDetail = () => {
               <span className="text-[#4B4B4B]/40">·</span>
               <span className="text-[#4B4B4B]">{p.zone}</span>
             </nav>
-            <h1 className="font-display font-normal text-[#1C1C1C] mb-3" style={{ fontSize: 'clamp(36px, 5vw, 56px)' }}>
+            <h1 className="font-display font-normal text-[#1C1C1C] mb-3" style={{ fontSize: 'clamp(40px, 5vw,56px)' }}>
               Residencial <em className="text-[#CFAE60] italic">{p.nameItalic}</em>
             </h1>
             <div className="flex items-baseline gap-3 mb-8">
