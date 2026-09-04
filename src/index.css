@@ -60,22 +60,46 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Jost', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.8;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: auto;
+  }
+  /* Never render running text below Jost 400 */
+  .font-light, .font-extralight, .font-thin {
+    font-weight: 400 !important;
+  }
+  /* Small text: captions, labels, technical specs */
+  small, figcaption, caption, label,
+  .text-xs, .text-sm {
+    font-weight: 500;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.15;
   }
   h1 { font-size: clamp(2.8rem, 6vw, 5.4rem); }
-  h2 { font-size: clamp(2rem, 4vw, 3.6rem); }
+  h2 { font-size: clamp(2.5rem, 4vw, 3.6rem); font-weight: 600; }
+  /* Below 40px Cormorant hairlines disappear → use Jost */
+  h3, h4, h5, h6 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+  }
   h3 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
   h4 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+  /* Cormorant only as display type at 40px+ */
+  .font-display.text-xs, .font-display.text-sm, .font-display.text-base,
+  .font-display.text-lg, .font-display.text-xl, .font-display.text-2xl,
+  .font-display.text-3xl, .font-display.text-4xl {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+  }
+  .font-display {
+    font-weight: 500;
+  }
 }
+
 
 @layer components {
   .eyebrow {
