@@ -104,8 +104,8 @@ const Home = () => {
           </h1>
           <p className="font-body text-[hsl(var(--pearl))]/90 max-w-3xl mx-auto animate-fade-up home-hero-subtitle" style={{ animationDelay: '0.6s', fontSize: 'clamp(22px, 2.4vw, 32px)', fontWeight: 400, lineHeight: 1.45, textShadow: '0 1px 10px rgba(0,0,0,0.5)', marginBottom: '0' }}>
             {language === 'es'
-              ? 'Te acompañamos en cada paso: selección premium, proceso legal y las mejores oportunidades frente al mar'
-              : 'We guide you every step of the way: premium selection, legal process, and the best oceanfront opportunities'}
+              ? 'Te acompañamos en la selección de propiedades, certeza jurídica en cada etapa y acceso privilegiado a las mejores oportunidades'
+              : 'We accompany you in selecting properties, legal certainty at every stage, and privileged access to the best opportunities'}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up home-hero-buttons" style={{ animationDelay: '0.8s', marginTop: '36px' }}>
             <Button variant="gold" size="lg" className="rounded-none text-[hsl(var(--deep-black))] h-16 px-12" style={{ fontSize: '19px' }} asChild>
