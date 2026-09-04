@@ -29,7 +29,7 @@ import soleBluHero from '@/assets/sole-blu-fachada-principal-atardecer.jpg';
 import cuoreCumbresHero from '@/assets/cuore-cumbres-hero.jpg';
 
 import destZonaHotelera from '@/assets/dest-zona-hotelera.jpg';
-import salviaBeachAsset from '@/assets/salvia/salvia-beach.jpg.asset.json';
+import salviaBeachAsset from '@/assets/salvia/condominio-salvia-salvia-playa-camastros-vista-aerea-zona-hotelera-cancun-04.webp.asset.json';
 import { salviaLandingPath } from '@/data/salvia-units';
 import destPuertoCancun from '@/assets/dest-puerto-cancun.jpg';
 import destCostaMujeres from '@/assets/dest-costa-mujeres.jpg';
