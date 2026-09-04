@@ -79,7 +79,9 @@ const Home = () => {
     ],
   };
 
-  const recentArticles = journalArticles.slice(0, 3);
+  const recentArticles = journalArticles
+    .filter((a) => (language === 'es' ? !a.enOnly : !a.esOnly))
+    .slice(0, 3);
 
   useEffect(() => {
     window.scrollTo(0, 0);
