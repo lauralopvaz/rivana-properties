@@ -191,6 +191,10 @@
   .font-light, .font-extralight, .font-thin {
     font-weight: 400;
   }
+  .font-display.font-light, .font-display.font-extralight, .font-display.font-thin {
+    font-weight: 500;
+  }
+
 }
 
 
