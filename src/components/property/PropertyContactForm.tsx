@@ -81,6 +81,7 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
   return (
     <section className="prop-section-contact" style={{ backgroundColor: "#FFFFFF", borderTop: "1px solid hsl(var(--border))", height: "auto", overflow: "visible" }}>
       <div className="prop-contact-inner">
+        <div className="prop-contact-intro">
         <p className="font-body font-light uppercase prop-label mb-1" style={{ letterSpacing: "4px", color: "hsl(var(--gold))" }}>
           {tr(locale, 'requestInfo')}
         </p>
@@ -91,7 +92,9 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
         <p className="font-body font-light prop-text-sm mb-5" style={{ color: "#4B4B4B" }}>
           {tr(locale, 'formDesc')}
         </p>
+        </div>
 
+        <div className="prop-contact-actions">
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <input
             value={nombre}
@@ -181,6 +184,7 @@ export function PropertyContactForm({ propertyName, locale, brochureUrl }: Prope
             {tr(locale, 'brochureUnavailable')}
           </p>
         )}
+        </div>
       </div>
     </section>
   );
