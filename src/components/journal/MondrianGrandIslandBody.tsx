@@ -81,7 +81,7 @@ export const MondrianGrandIslandBodyES = () => {
           <tbody>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Operador</td><td className="p-3">Marca Elite internacional</td></tr>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Complejo</td><td className="p-3">Grand Island Cancún</td></tr>
-            <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Entrega estimada</td><td className="p-3">Q2 2027</td></tr>
+            <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Entrega estimada</td><td className="p-3">Q2 2028</td></tr>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Precio de preventa desde</td><td className="p-3">$9,050,000 MXN</td></tr>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Precio proyectado post-preventa</td><td className="p-3">$12,000,000 MXN</td></tr>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Plan de pago</td><td className="p-3">30% enganche / 20% en parcialidades / 50% a la entrega</td></tr>
@@ -105,7 +105,7 @@ export const MondrianGrandIslandBodyES = () => {
       <p>Así se estructura:</p>
       <ul className="list-disc pl-6 space-y-2">
         <li><strong className="text-foreground">30%</strong> de enganche al momento de firma del contrato</li>
-        <li><strong className="text-foreground">20%</strong> distribuido en mensualidades durante el periodo de construcción (hasta entrega Q2 2027)</li>
+        <li><strong className="text-foreground">20%</strong> distribuido en mensualidades durante el periodo de construcción (hasta entrega Q2 2028)</li>
         <li><strong className="text-foreground">50%</strong> a la entrega, financiable con crédito hipotecario o recursos propios</li>
       </ul>
 
@@ -118,7 +118,7 @@ export const MondrianGrandIslandBodyES = () => {
 
       <p>Históricamente, los destinos sede de grandes eventos deportivos registran incrementos sostenidos en valor inmobiliario durante los 24 meses previos y posteriores al evento. Cancún ya está dentro de esa ventana.</p>
 
-      <p>Mondrian Residences at Grand Island Cancun, con entrega en Q2 2027, llega justo cuando ese ciclo está en su punto más alto. Quien entre en preventa hoy no solo captura la plusvalía del proyecto — captura además el momentum de un destino que el mundo está redescubriendo.</p>
+      <p>Mondrian Residences at Grand Island Cancun, con entrega en Q2 2028, llega justo cuando ese ciclo está en su punto más alto. Quien entre en preventa hoy no solo captura la plusvalía del proyecto — captura además el momentum de un destino que el mundo está redescubriendo.</p>
 
       {/* ── SECTION: Para quién ── */}
       <h2 className="text-foreground">¿Para quién es este proyecto?</h2>
@@ -225,7 +225,7 @@ export const MondrianGrandIslandBodyEN = () => {
           <tbody>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Operator</td><td className="p-3">Marca Elite internacional</td></tr>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Complex</td><td className="p-3">Grand Island Cancún</td></tr>
-            <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Estimated delivery</td><td className="p-3">Q2 2027</td></tr>
+            <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Estimated delivery</td><td className="p-3">Q2 2028</td></tr>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Pre-sale price from</td><td className="p-3">$9,050,000 MXN</td></tr>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Projected post-presale price</td><td className="p-3">$12,000,000 MXN</td></tr>
             <tr className="border-b border-border"><td className="p-3 font-semibold text-foreground">Payment plan</td><td className="p-3">30% down / 20% during construction / 50% at delivery</td></tr>
@@ -249,11 +249,11 @@ export const MondrianGrandIslandBodyEN = () => {
       <p>Here's how it breaks down:</p>
       <ul className="list-disc pl-6 space-y-2">
         <li><strong className="text-foreground">30%</strong> down payment at contract signing</li>
-        <li><strong className="text-foreground">20%</strong> in monthly installments during the construction period (through Q2 2027 delivery)</li>
+        <li><strong className="text-foreground">20%</strong> in monthly installments during the construction period (through Q2 2028 delivery)</li>
         <li><strong className="text-foreground">50%</strong> at delivery — financeable with a mortgage or personal funds</li>
       </ul>
 
-      <p>In practical terms: with a structured entry point and manageable monthly payments through 2027, you can secure a unit whose projected value at delivery will already reflect significant appreciation — while the asset is still being built, your position in it is already generating return.</p>
+      <p>In practical terms: with a structured entry point and manageable monthly payments through 2028, you can secure a unit whose projected value at delivery will already reflect significant appreciation — while the asset is still being built, your position in it is already generating return.</p>
 
       <p>For international buyers, Cancún real estate is fully accessible through a bank trust (fideicomiso), a secure and well-established legal structure that grants foreigners the same rights as domestic buyers. Our team handles the full process — no complexity, no surprises.</p>
 
@@ -262,7 +262,7 @@ export const MondrianGrandIslandBodyEN = () => {
 
       <p>Cancún's luxury real estate market is at an inflection point that rarely repeats: growing demand, limited branded pre-sale inventory, and a global external catalyst — the <strong className="text-foreground">2026 FIFA World Cup</strong>, with matches scheduled in Cancún — already driving interest from domestic and international buyers.</p>
 
-      <p>Historically, host-city real estate markets see sustained value increases in the 24 months before and after major sporting events. Cancún is already inside that window. Mondrian Residences at Grand Island Cancun, delivering in Q2 2027, lands right at the peak of that cycle. Those who enter at pre-sale today don't just capture the project's appreciation — they capture the momentum of a destination the world is actively rediscovering.</p>
+      <p>Historically, host-city real estate markets see sustained value increases in the 24 months before and after major sporting events. Cancún is already inside that window. Mondrian Residences at Grand Island Cancun, delivering in Q2 2028, lands right at the peak of that cycle. Those who enter at pre-sale today don't just capture the project's appreciation — they capture the momentum of a destination the world is actively rediscovering.</p>
 
       {/* ── SECTION: Who is it for ── */}
       <h2 className="text-foreground">Who is this project for?</h2>

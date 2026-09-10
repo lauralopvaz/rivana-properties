@@ -29,7 +29,7 @@ export const MondrianPresaleBodyES = () => {
       <h2 className="text-foreground">Qué es Mondrian Residences at Grand Island Cancun</h2>
       <p>Mondrian Residences at Grand Island Cancun es un proyecto de <strong className="text-foreground">residencias de marca</strong> (<em>branded residences</em>) ubicado dentro del desarrollo maestro Grand Island, en el kilómetro 16.5 de la Zona Hotelera de Cancún — una franja de 23 hectáreas que representa la apuesta de mayor escala en el mercado inmobiliario de lujo de Quintana Roo en los últimos veinte años.</p>
 
-      <p>El proyecto ofrece unidades de <strong className="text-foreground">1 a 3 recámaras más loft</strong>, con superficies entre 76.96 y 164.75 m², diseñadas por <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — la firma portuguesa responsable del lenguaje visual de sus propiedades insignia en Dubai y Doha — y operadas por Marca Elite internacional, con entrega programada para <strong className="text-foreground">Q2 2027</strong>.</p>
+      <p>El proyecto ofrece unidades de <strong className="text-foreground">1 a 3 recámaras más loft</strong>, con superficies entre 76.96 y 164.75 m², diseñadas por <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — la firma portuguesa responsable del lenguaje visual de sus propiedades insignia en Dubai y Doha — y operadas por Marca Elite internacional, con entrega programada para <strong className="text-foreground">Q2 2028</strong>.</p>
 
       <p>Lo que distingue a este proyecto de cualquier otro en la Zona Hotelera es simple: es el único desarrollo residencial en Cancún en el que la marca operadora, el diseñador de arquitectura y el desarrollador tienen historial probado operando juntos. No es una marca licenciada a un desarrollador desconocido. Es Grupo Murano — la misma empresa que construyó y opera la propiedad de la marca en Ciudad de México — replicando el modelo en Cancún.</p>
 
@@ -115,7 +115,7 @@ export const MondrianPresaleBodyES = () => {
       <ul className="list-disc pl-6 space-y-2">
         <li><strong className="text-foreground">30%</strong> de enganche al firma de contrato</li>
         <li><strong className="text-foreground">20%</strong> diferido en 12 mensualidades durante la construcción</li>
-        <li><strong className="text-foreground">50%</strong> a la entrega (Q2 2027)</li>
+        <li><strong className="text-foreground">50%</strong> a la entrega (Q2 2028)</li>
       </ul>
 
       <h2 className="text-foreground">El contexto macroeconómico: por qué Cancún en 2026</h2>
@@ -145,7 +145,7 @@ export const MondrianPresaleBodyES = () => {
         <li><strong className="text-foreground">Firma de contrato</strong> — instrumento notarial con el desarrollador, con las condiciones de preventa</li>
         <li><strong className="text-foreground">Enganche (30%)</strong> — primer desembolso al firma</li>
         <li><strong className="text-foreground">Mensualidades (20%)</strong> — 12 pagos durante la etapa de construcción</li>
-        <li><strong className="text-foreground">Escrituración y entrega (50%)</strong> — Q2 2027</li>
+        <li><strong className="text-foreground">Escrituración y entrega (50%)</strong> — Q2 2028</li>
       </ol>
 
       <p>Rivana Properties es asesor autorizado de Mondrian Residences at Grand Island Cancun. Nuestro equipo puede acompañarte desde la primera consulta hasta la escritura, incluyendo asesoría en fideicomiso para compradores extranjeros.</p>
@@ -180,7 +180,7 @@ export const MondrianPresaleBodyEN = () => {
       <h2 className="text-foreground">What Is Mondrian Residences at Grand Island Cancun?</h2>
       <p>Mondrian Residences at Grand Island Cancun is a <strong className="text-foreground">branded residences</strong> project within the Grand Island master development, located at <strong className="text-foreground">km 16.5 of Cancun's Hotel Zone</strong> — a 23-hectare estate that represents the largest luxury real estate bet in Quintana Roo in two decades.</p>
 
-      <p>The project offers units ranging from <strong className="text-foreground">1 to 3 bedrooms plus loft</strong>, with surfaces between 829 and 1,773 sq ft, designed by <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — the Portuguese firm behind the brand's flagship properties in Dubai and Doha — and operated by Marca Elite internacional, with delivery scheduled for <strong className="text-foreground">Q2 2027</strong>.</p>
+      <p>The project offers units ranging from <strong className="text-foreground">1 to 3 bedrooms plus loft</strong>, with surfaces between 829 and 1,773 sq ft, designed by <strong className="text-foreground">Filipao Nunes Arquitectos</strong> — the Portuguese firm behind the brand's flagship properties in Dubai and Doha — and operated by Marca Elite internacional, with delivery scheduled for <strong className="text-foreground">Q2 2028</strong>.</p>
 
       <p>What separates this project from every other development in Cancun's Hotel Zone is straightforward: it's the only residential development in the city where the brand operator, the architect, and the developer have a proven track record working together. This isn't a licensed brand on an unknown developer. It's Grupo Murano — the same company that built and operates the brand's property in Mexico City — replicating the model in Cancun.</p>
 
@@ -266,7 +266,7 @@ export const MondrianPresaleBodyEN = () => {
       <ul className="list-disc pl-6 space-y-2">
         <li><strong className="text-foreground">30%</strong> down payment at contract signing</li>
         <li><strong className="text-foreground">20%</strong> deferred over 12 monthly installments during construction</li>
-        <li><strong className="text-foreground">50%</strong> at delivery (Q2 2027)</li>
+        <li><strong className="text-foreground">50%</strong> at delivery (Q2 2028)</li>
       </ul>
 
       <h2 className="text-foreground">The Macro Context: Why Cancun in 2026</h2>
@@ -301,7 +301,7 @@ export const MondrianPresaleBodyEN = () => {
         <li><strong className="text-foreground">Contract signing</strong> — notarized instrument with the developer, with presale conditions</li>
         <li><strong className="text-foreground">Down payment (30%)</strong> — first disbursement at signing</li>
         <li><strong className="text-foreground">Monthly installments (20%)</strong> — 12 payments during construction</li>
-        <li><strong className="text-foreground">Closing and delivery (50%)</strong> — Q2 2027, with deed transfer</li>
+        <li><strong className="text-foreground">Closing and delivery (50%)</strong> — Q2 2028, with deed transfer</li>
       </ol>
 
       <p>Rivana Properties is an authorized advisor for Mondrian Residences at Grand Island Cancun. Our team accompanies you from first consultation to deed transfer, including fideicomiso advisory for foreign buyers.</p>

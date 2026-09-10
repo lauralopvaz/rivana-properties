@@ -91,7 +91,7 @@ export const CancunCondosForSaleBody = () => {
           Mondrian Residences at Grand Island
         </Link>
         , the corridor's flagship pre-construction, operated by Accor's Mondrian brand with
-        delivery in Q2 2027.
+        delivery in Q2 2028.
       </p>
 
       <H3>Puerto Cancún: the master-planned luxury enclave</H3>

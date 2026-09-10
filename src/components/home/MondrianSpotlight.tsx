@@ -45,7 +45,7 @@ const content = {
     },
     delivery: {
       label: { es: 'Entrega Estimada', en: 'Estimated Delivery' },
-      value: { es: 'Q2 2027', en: 'Q2 2027' },
+      value: { es: 'Q2 2028', en: 'Q2 2028' },
     },
     status: {
       label: { es: 'Estatus', en: 'Status' },

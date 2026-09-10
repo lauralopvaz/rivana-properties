@@ -90,7 +90,7 @@ export const PlusvaliaCancun2026Body = () => {
       <JTable
         headers={['Decisión', 'Impacto en tu plusvalía']}
         rows={[
-          ['1. El vehículo: la preventa amplifica', 'Comprar en precio de lanzamiento durante la construcción convierte la apreciación del mercado en apreciación sobre tu precio de entrada, con planes de pago sin intereses bancarios. Es la mecánica detrás de Mondrian Residences at Grand Island (desde $9,050,000 MXN, entrega Q2 2027, operación Accor, diseño Filipao Nunes).'],
+          ['1. El vehículo: la preventa amplifica', 'Comprar en precio de lanzamiento durante la construcción convierte la apreciación del mercado en apreciación sobre tu precio de entrada, con planes de pago sin intereses bancarios. Es la mecánica detrás de Mondrian Residences at Grand Island (desde $9,050,000 MXN, entrega Q2 2028, operación Accor, diseño Filipao Nunes).'],
           ['2. La unidad dentro del desarrollo', 'Nivel, vista y tipología determinan la reventa. Dos unidades del mismo edificio pueden apreciarse a ritmos distintos; la selección fina es donde un asesor con acceso a disponibilidad real agrega valor medible.'],
           ['3. La capacidad de producir mientras esperas', 'Una unidad que renta —vacacional con permisos (como los penthouses de Salvia en la Zona Hotelera) o largo plazo— suma flujo a la apreciación. Los rendimientos brutos de renta en México promedian ~6% anual (Global Property Guide, dic. 2026); la vacacional bien operada puede superarlo.'],
         ]}

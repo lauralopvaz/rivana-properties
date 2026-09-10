@@ -103,7 +103,7 @@ export const DeptosVentaZonaHoteleraBody = () => {
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className={gold}>
           Mondrian Residences at Grand Island Cancún
         </Link>
-        : preventa desde $9,050,000 MXN, entrega estimada en el segundo trimestre de 2027, operación
+        : preventa desde $9,050,000 MXN, entrega estimada en el segundo trimestre de 2028, operación
         de la marca Mondrian por Accor y diseño de Filipao Nunes. Comprar durante la construcción en
         la zona de mayor apreciación del país es la combinación que los inversionistas sofisticados
         buscan — y la razón por la que las listas de precios de este proyecto han subido desde su

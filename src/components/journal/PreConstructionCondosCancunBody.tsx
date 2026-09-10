@@ -149,7 +149,7 @@ export const PreConstructionCondosCancunBody = () => {
           with staged payment plans through the build.
         </li>
         <li>
-          <strong>Delivery: Q2 2027</strong> — approximately a year of construction runway ahead to
+          <strong>Delivery: Q2 2028</strong> — approximately a year of construction runway ahead to
           capture appreciation before keys.
         </li>
         <li>
