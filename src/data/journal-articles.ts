@@ -388,8 +388,8 @@ export const journalArticles: JournalArticle[] = [
     },
     category: { es: 'Inversión', en: 'Investment' },
     excerpt: {
-      es: 'El relanzamiento más esperado de la Zona Hotelera. Precios desde $9M MXN, ROI 33%, entrega Q2 2027 y operación Marca Elite internacional desde el día uno.',
-      en: 'The most anticipated branded residences launch in Cancun\'s Hotel Zone. Prices from $514K USD, 33% ROI, Q2 2027 delivery, and Marca Elite internacional operation from day one.',
+      es: 'El relanzamiento más esperado de la Zona Hotelera. Precios desde $9M MXN, ROI 33%, entrega Q2 2028 y operación Marca Elite internacional desde el día uno.',
+      en: 'The most anticipated branded residences launch in Cancun\'s Hotel Zone. Prices from $514K USD, 33% ROI, Q2 2028 delivery, and Marca Elite internacional operation from day one.',
     },
     date: 'Mar 25, 2026',
     readTime: '9 min',

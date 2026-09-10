@@ -33,7 +33,7 @@ const t = {
     heroSub: 'Departamentos de lujo en preventa con amenidades de resort cinco estrellas, marina privada y vida frente al mar.',
     heroCta: 'Haz tuya esta vista única',
     heroFrom: 'Desde $514K USD',
-    heroDelivery: 'Entrega Q2 2027',
+    heroDelivery: 'Entrega Q2 2028',
     introEye: 'La inversión',
     introTitle: 'Un departamento frente al mar. Una vida de resort. Una plusvalía sin techo.',
     introBody:
@@ -42,7 +42,7 @@ const t = {
       { k: 'Recámaras', v: '1–3' },
       { k: 'M² interior', v: '77–165' },
       { k: 'Marina', v: 'Privada' },
-      { k: 'Entrega', v: 'Q2 2027' },
+      { k: 'Entrega', v: 'Q2 2028' },
     ],
     viewsEye: 'Vista 360°',
     viewsTitle: 'Tres paisajes. Una sola residencia.',
@@ -99,7 +99,7 @@ const t = {
     invRows: [
       { k: 'Preventa desde', v: '$514K USD' },
       { k: 'Plan de pago', v: '30 / 20 / 50' },
-      { k: 'Entrega', v: 'Q2 2027' },
+      { k: 'Entrega', v: 'Q2 2028' },
     ],
     planTitle: 'Plan de pago flexible',
     plan: [
@@ -130,7 +130,7 @@ const t = {
     faqs: [
       { q: '¿Dónde se ubica Mondrian Residences at Grand Island Cancún?', a: 'En Boulevard Kukulcán km 16.5, dentro del desarrollo maestro Grand Island, en el corazón de la Zona Hotelera de Cancún. Es el único proyecto de la Zona Hotelera con vistas simultáneas a la Laguna Nichupté, al Mar Caribe y al campo de golf de 18 hoyos.' },
       { q: '¿Cuánto cuesta un departamento en preventa en Grand Island Cancún?', a: 'La preventa inicia en $514,000 USD (aproximadamente $9,050,000 MXN) para las tipologías más accesibles. Los precios se ajustan hacia arriba conforme avanza la comercialización y se alcanzan hitos de obra, por lo que el momento de entrada define directamente la plusvalía capturada.' },
-      { q: '¿Cuándo entregan las unidades y qué incluye la entrega llave en mano?', a: 'La entrega está proyectada para el segundo trimestre de 2027 (Q2 2027). Cada residencia se entrega llave en mano: totalmente amueblada, equipada con acabados firma de Filipao Nunes Arquitectos y lista para habitarse o incorporarse al programa de renta desde el primer día.' },
+      { q: '¿Cuándo entregan las unidades y qué incluye la entrega llave en mano?', a: 'La entrega está proyectada para el segundo trimestre de 2028 (Q2 2028). Cada residencia se entrega llave en mano: totalmente amueblada, equipada con acabados firma de Filipao Nunes Arquitectos y lista para habitarse o incorporarse al programa de renta desde el primer día.' },
       { q: '¿Cómo funciona el plan de pagos 30 / 20 / 50?', a: 'Es un esquema flexible pensado para preventa: 30% de enganche a la firma para congelar precio, 20% diferido en 12 meses sin intereses durante la construcción, y 50% restante a la entrega — pagadero con recursos propios o crédito hipotecario mexicano o internacional.' },
       { q: '¿Puede un extranjero comprar un departamento frente al mar en Cancún?', a: 'Sí. Los extranjeros pueden adquirir propiedad en la zona restringida (dentro de 50 km de la costa) a través de un fideicomiso bancario, figura regulada por la Ley de Inversión Extranjera. Es el instrumento estándar utilizado por inversionistas de EE.UU., Canadá y Europa; Rivana coordina notaría, fiduciario y traducciones.' },
       { q: '¿Qué tipologías y metrajes hay disponibles?', a: 'Residencias de 1, 2 y 3 recámaras, además de lofts y penthouses, con superficies interiores de 76.96 a 164.75 m². Todas las unidades incluyen terraza privada y vistas panorámicas al Caribe, la laguna o el golf.' },
@@ -153,7 +153,7 @@ const t = {
     heroSub: 'Pre-sale luxury condos with five-star resort amenities, a private marina, and life at the edge of the Caribbean.',
     heroCta: 'Claim this one-of-a-kind view',
     heroFrom: 'From $514K USD',
-    heroDelivery: 'Delivery Q2 2027',
+    heroDelivery: 'Delivery Q2 2028',
     introEye: 'The investment',
     introTitle: 'A beachfront residence. A resort lifestyle. Uncapped appreciation.',
     introBody:
@@ -162,7 +162,7 @@ const t = {
       { k: 'Bedrooms', v: '1–3' },
       { k: 'Interior sqm', v: '77–165' },
       { k: 'Marina', v: 'Private' },
-      { k: 'Delivery', v: 'Q2 2027' },
+      { k: 'Delivery', v: 'Q2 2028' },
     ],
     viewsEye: '360° view',
     viewsTitle: 'Three landscapes. A single residence.',
@@ -219,7 +219,7 @@ const t = {
     invRows: [
       { k: 'Pre-sale from', v: '$514K USD' },
       { k: 'Payment plan', v: '30 / 20 / 50' },
-      { k: 'Delivery', v: 'Q2 2027' },
+      { k: 'Delivery', v: 'Q2 2028' },
     ],
     planTitle: 'Flexible payment plan',
     plan: [
@@ -250,7 +250,7 @@ const t = {
     faqs: [
       { q: 'Where is Mondrian Residences at Grand Island Cancún located?', a: 'On Boulevard Kukulcán km 16.5, inside the Grand Island master-planned community in the heart of Cancún\'s Hotel Zone. It is the only project in the Hotel Zone with simultaneous views over Nichupté Lagoon, the Caribbean Sea, and the 18-hole golf course.' },
       { q: 'How much does a pre-sale condo at Grand Island Cancún cost?', a: 'Pre-sale starts at $514,000 USD (about $9,050,000 MXN) for the entry tiers. Prices step up as marketing advances and construction milestones are reached, so entry timing directly defines the appreciation you capture.' },
-      { q: 'When are units delivered and what does "turnkey delivery" include?', a: 'Delivery is scheduled for Q2 2027. Every residence is delivered fully turnkey: furnished, equipped, and finished with the signature Filipao Nunes Arquitectos palette — ready to occupy or plug into the rental program from day one.' },
+      { q: 'When are units delivered and what does "turnkey delivery" include?', a: 'Delivery is scheduled for Q2 2028. Every residence is delivered fully turnkey: furnished, equipped, and finished with the signature Filipao Nunes Arquitectos palette — ready to occupy or plug into the rental program from day one.' },
       { q: 'How does the 30 / 20 / 50 payment plan work?', a: 'It is a flexible pre-sale schedule: 30% down at signing to lock your price, 20% deferred over 12 months with zero interest during construction, and the remaining 50% at delivery — payable with own funds, a Mexican mortgage, or international financing.' },
       { q: 'Can foreigners buy beachfront property in Cancún?', a: 'Yes. Foreign buyers can own property inside Mexico\'s restricted coastal zone through a bank trust (fideicomiso), regulated by the Foreign Investment Law. It is the standard vehicle used by US, Canadian, and European investors; Rivana coordinates the notary, the trustee bank, and certified translations.' },
       { q: 'What unit types and floor plans are available?', a: '1, 2, and 3-bedroom residences plus lofts and penthouses, with interior areas from 76.96 to 164.75 sqm. Every unit includes a private terrace and panoramic views over the Caribbean, the lagoon, or the golf course.' },
@@ -419,8 +419,8 @@ const PreSale = () => {
           ? 'Mondrian Residences Grand Island Cancún · Preventa desde $514K | Rivana'
           : 'Mondrian Residences Grand Island Cancún · Pre-Sale from $514K | Rivana'}
         description={L === 'es'
-          ? 'Preventa Mondrian Residences en Grand Island, Zona Hotelera Cancún. Vistas 360° al Mar Caribe, Laguna Nichupté y golf. Desde $514K USD, entrega Q2 2027, plan 30/20/50.'
-          : 'Mondrian Residences pre-sale inside Grand Island, Cancún Hotel Zone. 360° views over the Caribbean Sea, Nichupté Lagoon and golf course. From $514K USD, delivery Q2 2027, 30/20/50 plan.'}
+          ? 'Preventa Mondrian Residences en Grand Island, Zona Hotelera Cancún. Vistas 360° al Mar Caribe, Laguna Nichupté y golf. Desde $514K USD, entrega Q2 2028, plan 30/20/50.'
+          : 'Mondrian Residences pre-sale inside Grand Island, Cancún Hotel Zone. 360° views over the Caribbean Sea, Nichupté Lagoon and golf course. From $514K USD, delivery Q2 2028, 30/20/50 plan.'}
         ogImage={IMG_HERO}
         path={L === 'en' ? '/en/presale' : '/presale'}
         hreflangEs="/presale"
@@ -431,8 +431,8 @@ const PreSale = () => {
             '@type': 'Residence',
             name: 'Mondrian Residences at Grand Island Cancún',
             description: L === 'es'
-              ? 'Residencias de marca en Grand Island, Zona Hotelera de Cancún, con vistas 360° a la Laguna Nichupté, Mar Caribe y campo de golf. Preventa desde $514,000 USD, entrega llave en mano Q2 2027.'
-              : 'Branded residences at Grand Island, Cancún Hotel Zone, with 360° views over Nichupté Lagoon, the Caribbean Sea, and the golf course. Pre-sale from $514,000 USD, turnkey delivery Q2 2027.',
+              ? 'Residencias de marca en Grand Island, Zona Hotelera de Cancún, con vistas 360° a la Laguna Nichupté, Mar Caribe y campo de golf. Preventa desde $514,000 USD, entrega llave en mano Q2 2028.'
+              : 'Branded residences at Grand Island, Cancún Hotel Zone, with 360° views over Nichupté Lagoon, the Caribbean Sea, and the golf course. Pre-sale from $514,000 USD, turnkey delivery Q2 2028.',
             url: `https://rivanaproperties.com${L === 'en' ? '/en/presale' : '/presale'}`,
             image: `https://rivanaproperties.com${IMG_HERO}`,
             inLanguage: L === 'en' ? 'en' : 'es',

@@ -73,7 +73,7 @@ export const InvertirBienesRaicesCancunBody = () => {
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className={gold}>
           Mondrian Residences at Grand Island
         </Link>{' '}
-        (desde $9,050,000 MXN, entrega Q2 2027, operación Accor, diseño Filipao Nunes) — la preventa
+        (desde $9,050,000 MXN, entrega Q2 2028, operación Accor, diseño Filipao Nunes) — la preventa
         de marca más completa del corredor.
       </p>
 

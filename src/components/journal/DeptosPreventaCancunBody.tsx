@@ -135,7 +135,7 @@ export const DeptosPreventaCancunBody = () => {
         headers={['Variable', 'Detalle']}
         rows={[
           ['Precio de preventa', 'Desde $9,050,000 MXN con planes de pago durante la construcción.'],
-          ['Entrega estimada', 'Segundo trimestre de 2027 — ~1 año de obra por delante para capturar apreciación.'],
+          ['Entrega estimada', 'Segundo trimestre de 2028 — ~1 año de obra por delante para capturar apreciación.'],
           ['Operación', 'Accor bajo la marca Mondrian: estándares hoteleros internacionales y canal de huéspedes integrado.'],
           ['Diseño', 'Filipao Nunes — una de las firmas de arquitectura e interiorismo más reconocidas de México.'],
           ['Ubicación', 'Grand Island, el megadesarrollo que redefine el perfil residencial de la Zona Hotelera.'],

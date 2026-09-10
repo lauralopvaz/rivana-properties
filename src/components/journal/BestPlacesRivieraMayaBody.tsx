@@ -70,7 +70,7 @@ export const BestPlacesRivieraMayaBody = () => {
         <Link to={localePath('/propiedad/mondrian-residences-grand-island-cancun')} className={gold}>
           Mondrian Residences at Grand Island
         </Link>{' '}
-        (Accor operation, Q2 2027 delivery). <em>Best for: cash-flow investors and defensive
+        (Accor operation, Q2 2028 delivery). <em>Best for: cash-flow investors and defensive
         appreciation.</em>
       </p>
 
