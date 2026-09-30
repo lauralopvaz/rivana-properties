@@ -67,6 +67,7 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
   const description = locale === 'en' && property.descriptionEn ? property.descriptionEn : property.description;
   const features = locale === 'en' && property.featuresEn ? property.featuresEn : property.features;
   const priceNote = locale === 'en' && property.priceNoteEn ? property.priceNoteEn : property.priceNote;
+  const isThompson = property.id === 'thompson-residences-puerto-cancun';
 
   /* Scroll-spy: highlight the section closest to the top of the viewport. */
   useEffect(() => {
@@ -155,38 +156,81 @@ export function PropertyTabs({ property, locale, onUnitClick }: PropertyTabsProp
       <section id="prop-section-units" className="prop-stack-section">
         {sectionTitle(tr(locale, 'tabUnits'))}
         <div className="prop-stack-units">
-          {property.units.map((unit, idx) => (
-            <button
-              key={idx}
-              onClick={() => onUnitClick(unit)}
-              className="flex items-center justify-between py-4 text-left cursor-pointer w-full"
-              style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}
-            >
-              <div>
-                <span className="font-display prop-unit-name block" style={{ color: "#1C1C1C" }}>
-                  {locale === 'en' && unit.nameEn ? unit.nameEn : unit.name}
-                </span>
-                <span className="font-body prop-text-xs" style={{ color: "#4B4B4B" }}>
-                  {unit.sqm} m²
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="text-right">
-                  <span className="font-body prop-badge uppercase block" style={{ letterSpacing: "1px", color: "#4B4B4B", fontWeight: 500 }}>
-                    {tr(locale, 'from')}
-                  </span>
-                  <span className="font-display prop-unit-price block" style={{ color: "hsl(var(--gold))" }}>
-                    {formatMXN(unit.priceMXN)}
-                  </span>
-                  <div className="mt-1">
+          {property.units.map((unit, idx) => {
+            if (!isThompson) {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => onUnitClick(unit)}
+                  className="flex items-center justify-between py-4 text-left cursor-pointer w-full"
+                  style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}
+                >
+                  <div>
+                    <span className="font-display prop-unit-name block" style={{ color: "#1C1C1C" }}>
+                      {locale === 'en' && unit.nameEn ? unit.nameEn : unit.name}
+                    </span>
+                    <span className="font-body prop-text-xs" style={{ color: "#4B4B4B" }}>
+                      {unit.sqm} m²
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="text-right">
+                      <span className="font-body prop-badge uppercase block" style={{ letterSpacing: "1px", color: "#4B4B4B", fontWeight: 500 }}>
+                        {tr(locale, 'from')}
+                      </span>
+                      <span className="font-display prop-unit-price block" style={{ color: "hsl(var(--gold))" }}>
+                        {formatMXN(unit.priceMXN)}
+                      </span>
+                      <div className="mt-1">
+                        <AvailabilityBadge count={unit.available} locale={locale} />
+                      </div>
+                    </div>
+                    <ChevronRight size={16} style={{ color: "rgba(0,0,0,0.25)" }} />
+                  </div>
+                </button>
+              );
+            }
+
+            const unitName = locale === 'en' && unit.nameEn ? unit.nameEn : unit.name;
+            const waText = locale === 'en'
+              ? `THOMPSON — Hi, I'm interested in unit ${unitName} at Thompson Residences. Could you share pricing and availability?`
+              : `THOMPSON — Hola, me interesa la unidad ${unitName} de Thompson Residences. ¿Me compartes precio y disponibilidad?`;
+            return (
+              <div key={idx} className="py-5" style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}>
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <span className="font-display prop-unit-name block" style={{ color: "#1C1C1C" }}>
+                      {unitName}
+                    </span>
+                    <span className="font-body prop-text-xs block mt-1" style={{ color: "#4B4B4B" }}>
+                      {unit.sqm} m²
+                    </span>
+                  </div>
+                  <div className="text-right flex-shrink-0">
                     <AvailabilityBadge count={unit.available} locale={locale} />
                   </div>
                 </div>
-                <ChevronRight size={16} style={{ color: "rgba(0,0,0,0.25)" }} />
+                <span className="font-body prop-text-sm block mt-3" style={{ color: "#4B4B4B" }}>
+                  {tr(locale, 'priceWithAdvisor')}
+                </span>
+                <a
+                  href={`https://wa.me/529988457224?text=${encodeURIComponent(waText)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full text-center py-3 mt-3 font-body font-light uppercase prop-btn inline-block"
+                  style={{ letterSpacing: "2px", backgroundColor: "hsl(var(--gold))", color: "#FFFFFF" }}
+                >
+                  {tr(locale, 'askAboutUnit')}
+                </a>
               </div>
-            </button>
-          ))}
+            );
+          })}
         </div>
+        {isThompson && (
+          <p className="font-body prop-text-sm mt-4" style={{ color: "#4B4B4B" }}>
+            {tr(locale, 'advisorPricingNote')}
+          </p>
+        )}
         {priceNote && (
           <p className="font-body italic prop-text-xs mt-4" style={{ color: "#4B4B4B" }}>
             {priceNote}
