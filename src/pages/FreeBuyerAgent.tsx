@@ -1,3 +1,4 @@
+import { formatPropertyFrom, offerPrice } from '@/lib/formatPrice';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
@@ -123,8 +124,7 @@ const FreeBuyerAgent = () => {
           url: `https://rivanaproperties.com/en/property/${p.slug}`,
           offers: {
             '@type': 'Offer',
-            price: p.priceFromUSD || undefined,
-            priceCurrency: 'USD',
+            ...offerPrice(p),
             availability: 'https://schema.org/InStock',
           },
         },
@@ -281,7 +281,7 @@ const FreeBuyerAgent = () => {
                         From
                       </span>
                       <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>
-                        {formatPrice(p.priceFromUSD)}
+                        {p.priceFromUSD ? formatPrice(p.priceFromUSD) : p.priceFromMXN ? formatPropertyFrom(p) : formatPrice(0)}
                       </span>
                     </div>
                     <span

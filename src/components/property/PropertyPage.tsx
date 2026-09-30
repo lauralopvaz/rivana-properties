@@ -1,3 +1,4 @@
+import { formatPropertyFrom, offerPrice } from '@/lib/formatPrice';
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
@@ -160,11 +161,11 @@ function getSeoTitle(property: PropertyDetail, locale: Locale): string {
   }
   const zoneLabel = getZoneLabel(property, locale);
   const type = getPropertyType(property, locale);
-  const hasPrice = property.priceFromUSD > 0;
+  const hasPrice = property.priceFromUSD > 0 || property.priceFromMXN > 0;
   const priceLabel = hasPrice
     ? locale === 'en'
-      ? ` from ${formatUSD(property.priceFromUSD)}`
-      : ` desde ${formatUSD(property.priceFromUSD)}`
+      ? ` from ${formatPropertyFrom(property)}`
+      : ` desde ${formatPropertyFrom(property)}`
     : locale === 'en'
       ? ' — Price on Request'
       : ' — Precio a Consultar';
@@ -178,13 +179,13 @@ function getSeoDescription(property: PropertyDetail, locale: Locale): string {
   }
   const zoneLabel = getZoneLabel(property, locale);
   const differentiator = getDifferentiator(property, locale);
-  const hasPrice = property.priceFromUSD > 0;
+  const hasPrice = property.priceFromUSD > 0 || property.priceFromMXN > 0;
   if (locale === 'en') {
-    const priceSentence = hasPrice ? `From ${formatUSD(property.priceFromUSD)}. ` : 'Price on request. ';
+    const priceSentence = hasPrice ? `From ${formatPropertyFrom(property)}. ` : 'Price on request. ';
     const raw = `${property.name} in ${zoneLabel}. ${differentiator}. ${priceSentence}Personalized advisory with Rivana Properties.`;
     return raw.length > 155 ? raw.slice(0, 152) + '...' : raw;
   }
-  const priceSentence = hasPrice ? `Desde ${formatUSD(property.priceFromUSD)}. ` : 'Precio a consultar. ';
+  const priceSentence = hasPrice ? `Desde ${formatPropertyFrom(property)}. ` : 'Precio a consultar. ';
   const raw = `${property.name} en ${zoneLabel}. ${differentiator}. ${priceSentence}Asesoría personalizada con Rivana Properties.`;
   return raw.length > 155 ? raw.slice(0, 152) + '...' : raw;
 }
@@ -282,8 +283,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
     },
     offers: {
       '@type': 'Offer',
-      price: String(Math.round(Number(property.priceFromUSD))),
-      priceCurrency: 'USD',
+      ...offerPrice(property),
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'RealEstateAgent',

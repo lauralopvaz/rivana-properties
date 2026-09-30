@@ -332,7 +332,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const pcEnFaqs = [
     {
       q: 'What is the price range for condos and residences in Puerto Cancún?',
-      a: 'Entry-level condominiums in Puerto Cancún start at approximately $400,000 USD for non-view units in standard buildings. Branded residences — SLS Ocean Beach, Thompson Private Residences, and Vellmari Grand Living — start at $730,000 USD for Thompson and $1.6M USD for SLS, reflecting the premium associated with branded hotel management and beachfront or marina positioning. Marina waterfront homes with private dock access reach $15M USD and above. The zone commands the highest sustained price-per-square-metre in the Cancún metropolitan area, with pricing in the marina sub-zone running approximately $3,800 USD per square metre for new branded developments.',
+      a: 'Entry-level condominiums in Puerto Cancún start at approximately $400,000 USD for non-view units in standard buildings. Branded residences — SLS Ocean Beach, Thompson Private Residences, and Vellmari Grand Living — start from $14.6M MXN for Thompson Private Residences Puerto Cancún and $1.6M USD for SLS, reflecting the premium associated with branded hotel management and beachfront or marina positioning. Marina waterfront homes with private dock access reach $15M USD and above. The zone commands the highest sustained price-per-square-metre in the Cancún metropolitan area, with pricing in the marina sub-zone running approximately $3,800 USD per square metre for new branded developments.',
     },
     {
       q: "What makes Puerto Cancún different from Cancún's Hotel Zone?",
