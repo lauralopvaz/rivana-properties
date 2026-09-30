@@ -55,7 +55,7 @@ const propertyTypeBySlug: Record<string, { es: string; en: string }> = {
   'vellmari-grand-living': { es: 'Residencia', en: 'Residence' },
   'village-blu-beach': { es: 'Depto Frente al Mar', en: 'Beachfront Condo' },
   'arbolada-towers': { es: 'Depto Entrega Inmediata', en: 'Immediate Delivery Condo' },
-  'thompson-residences-puerto-cancun': { es: 'Penthouse', en: 'Penthouse' },
+  'thompson-residences-puerto-cancun': { es: 'Residencias', en: 'Residences' },
   'sole-blu-ocean-living': { es: 'Depto Frente al Mar', en: 'Beachfront Condo' },
   'kabeek-marina-condos': { es: 'Depto en Preventa', en: 'Pre-Sale Condo' },
   'the-reserve-at-mayakoba': { es: 'Residencia', en: 'Residence' },
@@ -395,6 +395,7 @@ export function PropertyPage({ property, locale }: PropertyPageProps) {
       <UnitDetailModal
         unit={selectedUnit}
         locale={locale}
+        isThompson={property.id === 'thompson-residences-puerto-cancun'}
         onClose={() => setSelectedUnit(null)}
         onRequestInfo={() => {
           setSelectedUnit(null);
