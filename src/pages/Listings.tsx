@@ -1,3 +1,4 @@
+import { THOMPSON_PRICE_MXN, THOMPSON_PRICE_SHORT, thompsonBedsLabel } from '@/lib/thompson';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
@@ -86,6 +87,8 @@ interface Property {
   badges: BadgeKey[];
   image: string;
   slug: string;
+  priceMXN?: number;
+  bedsLabel?: { es: string; en: string };
 }
 
 const allProperties: Property[] = [
@@ -98,7 +101,7 @@ const allProperties: Property[] = [
   { id: 14, name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', type: 'condominio', beds: 4, area: 670, price: 0, priceM2: 0, status: 'preventa', badges: ['vista-mar', 'vista-marina', 'wellness', 'club-privado'], image: kabeekHero, slug: 'kabeek-marina-condos' },
   { id: 15, name: 'Bay View Grand at Grand Island', zone: 'Zona Hotelera', type: 'condominio', beds: 3, area: 451, price: 586146, priceM2: 1298, status: 'preventa', badges: ['vista-mar', 'vista-marina', 'golf', 'wellness', 'beach-club', 'pet-friendly'], image: bayViewGrandHero, slug: 'bay-view-grand-grand-island' },
   { id: 16, name: 'Arbolada Towers', zone: 'Residencial Cancún', type: 'condominio', beds: 2, area: 94, price: 263000, priceM2: 2805, status: 'entrega-inmediata', badges: ['alberca-infinity', 'comunidad-cerrada'], image: arboladaHero, slug: 'arbolada-towers' },
-  { id: 17, name: 'Thompson Residences', zone: 'Puerto Cancún', type: 'condominio', beds: 5, area: 803, price: 730000, priceM2: 909, status: 'preventa', badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
+  { id: 17, name: 'Thompson Residences', zone: 'Puerto Cancún', type: 'condominio', beds: 5, area: 803, price: Math.round(THOMPSON_PRICE_MXN / 17.5), priceMXN: THOMPSON_PRICE_MXN, bedsLabel: { es: thompsonBedsLabel('es'), en: thompsonBedsLabel('en') }, priceM2: 0, status: 'preventa', badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
   { id: 18, name: 'Sole Blu Ocean Living', zone: 'Puerto Morelos', type: 'condominio', beds: 2, area: 136, price: 392000, priceM2: 2882, status: 'preventa', yield: '~10%', badges: ['frente-mar', 'beach-club', 'alberca-infinity', 'pet-friendly'], image: soleBluHero, slug: 'sole-blu-ocean-living' },
   { id: 19, name: 'Cuore Cumbres', zone: 'Cancún Centro', type: 'condominio', beds: 3, area: 346, price: 0, priceM2: 0, status: 'preventa', badges: ['alberca-infinity', 'pet-friendly', 'comunidad-cerrada'], image: cuoreCumbresHero, slug: 'cuore-cumbres-cancun' },
 ]; // properties
@@ -228,7 +231,9 @@ const Listings = () => {
     })
     .filter(p => appliedAmenities.length === 0 || appliedAmenities.every(a => p.badges.includes(a)))
     .filter(p => {
-      const pPrice = appliedCurrency === 'MXN' ? p.price * MXN_RATE : p.price;
+      const pPrice = p.priceMXN
+        ? (appliedCurrency === 'MXN' ? p.priceMXN : p.priceMXN / MXN_RATE)
+        : (appliedCurrency === 'MXN' ? p.price * MXN_RATE : p.price);
       return pPrice >= appliedPrice[0] && pPrice <= appliedPrice[1];
     });
 
@@ -471,7 +476,7 @@ const Listings = () => {
                   {/* Specs row */}
                   <div className="flex items-center gap-[14px] mb-3">
                      <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
-                       <BedIcon className="w-3 h-3" /> {p.beds} {L === 'es' ? 'Rec.' : 'Beds'}
+                       <BedIcon className="w-3 h-3" /> {p.bedsLabel ? p.bedsLabel[L] : `${p.beds} ${L === 'es' ? 'Rec.' : 'Beds'}`}
                      </span>
                      <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
                        <RulerIcon className="w-3 h-3" /> {p.area} m²
@@ -503,7 +508,7 @@ const Listings = () => {
                     <div>
                        <span className="block text-[11px] font-body font-normal uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Desde' : 'From'}</span>
                        <span className="font-display text-[22px] font-bold" style={{ color: '#CFAE60' }}>
-                         {p.price === 0 ? (L === 'es' ? 'Consultar' : 'Contact Us') : `${formatPriceInCurrency(p.price, appliedCurrency)} ${appliedCurrency}`}
+                         {p.priceMXN ? THOMPSON_PRICE_SHORT : p.price === 0 ? (L === 'es' ? 'Consultar' : 'Contact Us') : `${formatPriceInCurrency(p.price, appliedCurrency)} ${appliedCurrency}`}
                        </span>
                      </div>
                      <span className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>

@@ -1,3 +1,4 @@
+import { THOMPSON_PRICE_MXN, THOMPSON_PRICE_SHORT, thompsonBedsLabel } from '@/lib/thompson';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -21,6 +22,8 @@ interface Property {
   beds: number;
   area: number;
   price: number;
+  priceMXN?: number;
+  bedsLabel?: { es: string; en: string };
   status: 'preventa' | 'entrega-inmediata';
   yield?: string;
   image: string;
@@ -31,7 +34,7 @@ const cancunProperties: Property[] = [
   { name: 'Mondrian Residences at Grand Island Cancun', zone: 'Zona Hotelera', zoneKey: 'zona-hotelera', beds: 3, area: 165, price: 514000, status: 'preventa', yield: '33%', image: propMondrian, slug: 'mondrian-residences-grand-island-cancun' },
   { name: 'Kabeek Marina & Condos', zone: 'Zona Hotelera', zoneKey: 'zona-hotelera', beds: 4, area: 670, price: 0, status: 'preventa', image: kabeekHero, slug: 'kabeek-marina-condos' },
   { name: 'Bay View Grand at Grand Island', zone: 'Zona Hotelera', zoneKey: 'zona-hotelera', beds: 3, area: 451, price: 586146, status: 'preventa', image: bayViewGrandHero, slug: 'bay-view-grand-grand-island' },
-  { name: 'Thompson Residences', zone: 'Puerto Cancún', zoneKey: 'puerto-cancun', beds: 5, area: 803, price: 730000, status: 'preventa', image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
+  { name: 'Thompson Residences', zone: 'Puerto Cancún', zoneKey: 'puerto-cancun', beds: 5, area: 803, price: THOMPSON_PRICE_MXN, priceMXN: THOMPSON_PRICE_MXN, bedsLabel: { es: thompsonBedsLabel('es'), en: thompsonBedsLabel('en') }, status: 'preventa', image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
   { name: 'SLS Ocean Beach', zone: 'Puerto Cancún', zoneKey: 'puerto-cancun', beds: 3, area: 356, price: 1600000, status: 'preventa', image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
   { name: 'Vellmari Grand Living', zone: 'Puerto Cancún', zoneKey: 'puerto-cancun', beds: 5, area: 714, price: 845714, status: 'preventa', image: vellmariHero, slug: 'vellmari-grand-living' },
   { name: 'Dhamar', zone: 'Costa Mujeres', zoneKey: 'costa-mujeres', beds: 3, area: 178, price: 248000, status: 'preventa', image: dhamarPrincipal, slug: 'dhamar-costa-mujeres' },
@@ -171,7 +174,7 @@ const CancunCondos = () => {
                       <h3 className="font-display text-[22px] font-normal mb-2.5" style={{ color: '#1C1C1C' }}>{p.name}</h3>
                       <div className="flex items-center gap-[14px] mb-3">
                         <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
-                          <BedIcon className="w-3 h-3" /> {p.beds} {L === 'es' ? 'Rec.' : 'Beds'}
+                          <BedIcon className="w-3 h-3" /> {p.bedsLabel ? p.bedsLabel[L] : `${p.beds} ${L === 'es' ? 'Rec.' : 'Beds'}`}
                         </span>
                         <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
                           <RulerIcon className="w-3 h-3" /> {p.area} m²
@@ -180,7 +183,7 @@ const CancunCondos = () => {
                       <div className="flex items-end justify-between pt-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                         <div>
                           <span className="block text-[11px] font-body font-normal uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{L === 'es' ? 'Desde' : 'From'}</span>
-                          <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price, L)}</span>
+                          <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{p.priceMXN ? THOMPSON_PRICE_SHORT : formatPrice(p.price, L)}</span>
                         </div>
                         <span className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                           {L === 'es' ? 'Ver' : 'View'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
@@ -215,7 +218,7 @@ const CancunCondos = () => {
                 <div className="min-w-0">
                   <p className="text-[10px] tracking-[2px] uppercase font-body" style={{ color: '#CFAE60' }}>{p.zone}</p>
                   <p className="font-display text-[16px] font-normal truncate" style={{ color: '#1C1C1C' }}>{p.name}</p>
-                  <p className="font-display text-[16px]" style={{ color: '#CFAE60' }}>{formatPrice(p.price, L)}</p>
+                  <p className="font-display text-[16px]" style={{ color: '#CFAE60' }}>{p.priceMXN ? THOMPSON_PRICE_SHORT : formatPrice(p.price, L)}</p>
                 </div>
               </Link>
             </ScrollReveal>
