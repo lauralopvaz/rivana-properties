@@ -1,3 +1,4 @@
+import { thompsonUnitAdvisor, thompsonUnitWaUrl } from '@/lib/thompson';
 import { X } from "lucide-react";
 import { formatMXN, formatUSD } from "@/lib/formatPrice";
 import { tr } from "@/lib/propertyI18n";
@@ -8,6 +9,7 @@ interface UnitDetailModalProps {
   locale: Locale;
   onClose: () => void;
   onRequestInfo: () => void;
+  isThompson?: boolean;
 }
 
 function AvailabilityBadge({ count, locale }: { count: number; locale: Locale }) {
@@ -31,7 +33,7 @@ function AvailabilityBadge({ count, locale }: { count: number; locale: Locale })
   );
 }
 
-export function UnitDetailModal({ unit, locale, onClose, onRequestInfo }: UnitDetailModalProps) {
+export function UnitDetailModal({ unit, locale, onClose, onRequestInfo, isThompson }: UnitDetailModalProps) {
   if (!unit) return null;
 
   const unitName = locale === 'en' && unit.nameEn ? unit.nameEn : unit.name;
@@ -85,13 +87,30 @@ export function UnitDetailModal({ unit, locale, onClose, onRequestInfo }: UnitDe
 
           {/* Price */}
           <div className="mb-4 p-3" style={{ backgroundColor: "#F8F6F2", border: "1px solid rgba(0,0,0,0.07)" }}>
+            {isThompson ? (
+              <>
+                <span className="font-body font-medium prop-text-sm block mb-2" style={{ color: "#1C1C1C" }}>
+                  {thompsonUnitAdvisor(locale === 'en' ? 'en' : 'es')}
+                </span>
+                <a
+                  href={thompsonUnitWaUrl(locale === 'en' ? 'en' : 'es', unitName)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body font-medium prop-text-sm"
+                  style={{ color: "#CFAE60" }}
+                >
+                  {locale === 'en' ? 'Ask about this unit →' : 'Consulta esta unidad →'}
+                </a>
+              </>
+            ) : (<>
             <span className="font-body font-light uppercase prop-badge block" style={{ letterSpacing: "1px", color: "#4B4B4B" }}>
               {tr(locale, 'from')}
             </span>
             <span className="font-display prop-unit-price block" style={{ color: "#CFAE60" }}>
               {formatMXN(unit.priceMXN)}
             </span>
-            {unit.priceUSD && (
+            </>)}
+            {!isThompson && unit.priceUSD && (
               <span className="font-body font-light prop-text-xs block mt-1" style={{ color: "#4B4B4B" }}>
                 ≈ {formatUSD(unit.priceUSD)} USD
               </span>

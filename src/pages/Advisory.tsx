@@ -9,7 +9,7 @@ import { toast } from '@/hooks/use-toast';
 
 const ZONES = [
   { label: 'Hotel Zone', desc: 'Beachfront luxury. Highest rental demand.', from: 'From $514K', href: '/cancun/zona-hotelera' },
-  { label: 'Puerto Cancún', desc: 'Marina lifestyle. Branded residences.', from: 'From $730K', href: '/cancun/puerto-cancun' },
+  { label: 'Puerto Cancún', desc: 'Marina lifestyle. Branded residences.', from: 'From $14.6M MXN', href: '/cancun/puerto-cancun' },
   { label: 'Costa Mujeres', desc: 'Highest appreciation upside. Pre-sale window open.', from: 'From $248K', href: '/cancun/costa-mujeres' },
   { label: 'Mayakoba', desc: 'Inside the resort estate. Fixed supply.', from: 'From $1.1M', href: '/mayakoba' },
   { label: 'Puerto Morelos', desc: 'Reef-protected. Quiet. Established expat community.', from: 'From $273K', href: '/puerto-morelos' },

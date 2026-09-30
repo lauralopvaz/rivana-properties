@@ -179,7 +179,7 @@ export const destinations: DestinationConfig[] = [
     },
     stats: [
       { val: '3', label: { es: 'Proyectos', en: 'Projects' } },
-      { val: '$730K', label: { es: 'Desde USD', en: 'From USD' } },
+      { val: '$14.6M', label: { es: 'Desde MXN', en: 'From MXN' } },
       { val: '15%', label: { es: 'Plusvalía Anual', en: 'YoY Growth' } },
       { val: '150+', label: { es: 'Unidades Disponibles', en: 'Units Available' } },
     ],

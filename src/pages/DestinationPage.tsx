@@ -1,3 +1,4 @@
+import { THOMPSON_PRICE_MXN, THOMPSON_PRICE_SHORT, thompsonBedsLabel } from '@/lib/thompson';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import laAmadaAsset from '@/assets/la-amada.jpg.asset.json';
@@ -101,6 +102,8 @@ interface DestProject {
   image: string;
   slug: string;
   href?: string;
+  priceMXN?: number;
+  bedsLabel?: { es: string; en: string };
 }
 
 const projectsByDestination: Record<string, DestProject[]> = {
@@ -111,7 +114,7 @@ const projectsByDestination: Record<string, DestProject[]> = {
     { name: 'Edificio Salvia', zone: 'Zona Hotelera', status: 'entrega-inmediata', yield: '11.4%', beds: 3, area: 93, price: 360000, badges: ['frente-mar', 'vista-mar', 'beach-club'], image: salviaBeachAsset.url, slug: 'edificio-salvia', href: '/zona-hotelera/edificio-salvia' },
   ],
   'puerto-cancun': [
-    { name: 'Thompson Residences', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 803, price: 730000, badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
+    { name: 'Thompson Residences', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 803, price: THOMPSON_PRICE_MXN, priceMXN: THOMPSON_PRICE_MXN, bedsLabel: { es: thompsonBedsLabel('es'), en: thompsonBedsLabel('en') }, badges: ['vista-mar', 'club-privado', 'golf', 'wellness', 'comunidad-cerrada'], image: thompsonHero, slug: 'thompson-residences-puerto-cancun' },
     { name: 'SLS Ocean Beach', zone: 'Puerto Cancún', status: 'preventa', beds: 3, area: 356, price: 1600000, badges: ['frente-mar', 'club-privado', 'golf', 'wellness', 'beach-club'], image: slsVistaPrincipal, slug: 'sls-ocean-beach-puerto-cancun' },
     { name: 'Vellmari Grand Living', zone: 'Puerto Cancún', status: 'preventa', beds: 5, area: 714, price: 845714, badges: ['vista-marina', 'golf', 'wellness', 'pet-friendly'], image: vellmariHero, slug: 'vellmari-grand-living' },
   ],
@@ -220,7 +223,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
     : isCMEn
       ? 'Pre-sale condos and oceanfront residences in Costa Mujeres from $248K USD. The fastest-appreciating luxury corridor north of Cancún — St. Regis, 22% YoY growth, and Dhamar available now through Rivana.'
       : isPCEn
-        ? 'Marina residences, branded condos, and beachfront penthouses in Puerto Cancún from $730K USD. SLS, Thompson Hotels by Hyatt, Grand Hyatt — the most prestigious residential address in Cancún. Rivana advisory.'
+        ? 'Marina residences, branded condos, and beachfront penthouses in Puerto Cancún from $14.6M MXN. SLS, Thompson Residences by Hyatt, Grand Hyatt — the most prestigious residential address in Cancún. Rivana advisory.'
         : isMKEn
           ? 'Luxury villas and residences inside Mayakoba — home to Four Seasons, Rosewood, Banyan Tree, and Fairmont. The Reserve at Mayakoba from $1.1M USD. FIFA World Cup 2026 base camp. Rivana advisory.'
           : subPageConfig ? subPageConfig.seo.description[language] : config.seo.description[language];
@@ -329,7 +332,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
   const pcEnFaqs = [
     {
       q: 'What is the price range for condos and residences in Puerto Cancún?',
-      a: 'Entry-level condominiums in Puerto Cancún start at approximately $400,000 USD for non-view units in standard buildings. Branded residences — SLS Ocean Beach, Thompson Private Residences, and Vellmari Grand Living — start at $730,000 USD for Thompson and $1.6M USD for SLS, reflecting the premium associated with branded hotel management and beachfront or marina positioning. Marina waterfront homes with private dock access reach $15M USD and above. The zone commands the highest sustained price-per-square-metre in the Cancún metropolitan area, with pricing in the marina sub-zone running approximately $3,800 USD per square metre for new branded developments.',
+      a: 'Entry-level condominiums in Puerto Cancún start at approximately $400,000 USD for non-view units in standard buildings. Branded residences — SLS Ocean Beach, Thompson Private Residences, and Vellmari Grand Living — start from $14.6M MXN for Thompson Private Residences Puerto Cancún and $1.6M USD for SLS, reflecting the premium associated with branded hotel management and beachfront or marina positioning. Marina waterfront homes with private dock access reach $15M USD and above. The zone commands the highest sustained price-per-square-metre in the Cancún metropolitan area, with pricing in the marina sub-zone running approximately $3,800 USD per square metre for new branded developments.',
     },
     {
       q: "What makes Puerto Cancún different from Cancún's Hotel Zone?",
@@ -757,7 +760,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                       {/* Specs */}
                       <div className="flex items-center gap-[14px] mb-3">
                          <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
-                           <BedIcon className="w-3 h-3" /> {p.beds} {language === 'es' ? 'Rec.' : 'Beds'}
+                           <BedIcon className="w-3 h-3" /> {p.bedsLabel ? p.bedsLabel[language] : `${p.beds} ${language === 'es' ? 'Rec.' : 'Beds'}`}
                          </span>
                          <span className="flex items-center gap-1 text-[14px] font-body" style={{ color: '#4B4B4B' }}>
                            <RulerIcon className="w-3 h-3" /> {p.area} m²
@@ -790,7 +793,7 @@ const DestinationPage = ({ destinationKey, subPage }: DestinationPageProps) => {
                         <div>
                            <span className="block text-[11px] font-body font-normal uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>{language === 'es' ? 'Desde' : 'From'}</span>
                            <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>
-                             {p.price === 0 ? (language === 'es' ? 'Consultar' : 'Contact Us') : `${formatPrice(p.price)} USD`}
+                             {p.priceMXN ? THOMPSON_PRICE_SHORT : p.price === 0 ? (language === 'es' ? 'Consultar' : 'Contact Us') : `${formatPrice(p.price)} USD`}
                            </span>
                          </div>
                          <span className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>

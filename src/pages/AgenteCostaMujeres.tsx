@@ -1,3 +1,4 @@
+import { formatPropertyFrom, offerPrice } from '@/lib/formatPrice';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
 import { ScrollReveal } from '@/components/ScrollReveal';
@@ -77,8 +78,7 @@ const AgenteCostaMujeres = () => {
           url: `https://rivanaproperties.com/propiedad/${p.slug}`,
           offers: {
             '@type': 'Offer',
-            price: p.priceFromUSD || undefined,
-            priceCurrency: 'USD',
+            ...offerPrice(p),
             availability: 'https://schema.org/InStock',
           },
         },
@@ -215,7 +215,7 @@ const AgenteCostaMujeres = () => {
                       <span className="block text-[11px] font-body font-normal uppercase tracking-[2px]" style={{ color: '#4B4B4B' }}>
                         {isEnglish ? 'From' : 'Desde'}
                       </span>
-                      <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{formatPrice(p.priceFromUSD)}</span>
+                      <span className="font-display text-[22px]" style={{ color: '#CFAE60' }}>{p.priceFromUSD ? formatPrice(p.priceFromUSD) : p.priceFromMXN ? formatPropertyFrom(p) : formatPrice(0)}</span>
                     </div>
                     <span className="text-[13px] font-body font-normal flex items-center gap-1 transition-colors group-hover:text-[#CFAE60]" style={{ color: '#4B4B4B' }}>
                       {isEnglish ? 'View' : 'Ver'} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>

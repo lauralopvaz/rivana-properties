@@ -1,3 +1,4 @@
+import { formatPropertyFrom } from '@/lib/formatPrice';
 import { Link } from "react-router-dom";
 import { ArrowLeft, Bed, Maximize, CalendarClock } from "lucide-react";
 import { formatUSD } from "@/lib/formatPrice";
@@ -93,7 +94,7 @@ export function PropertyHero({ property, locale, onViewPrices }: PropertyHeroPro
                 className="font-display prop-hero-price"
                 style={{ color: "hsl(var(--gold))", textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}
               >
-                {property.priceFromUSD === 0 ? (locale === 'en' ? 'Contact Us' : 'Consultar') : formatUSD(property.priceFromUSD)}
+                {formatPropertyFrom(property) || (locale === 'en' ? 'Contact Us' : 'Consultar')}
               </span>
             </div>
             <button

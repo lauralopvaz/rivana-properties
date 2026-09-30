@@ -20,3 +20,17 @@ export function formatSavings(original: number, discount: number): string {
   if (diff >= 1_000) return `-$${Math.round(diff / 1_000)}K`;
   return `-$${diff.toLocaleString('es-MX')}`;
 }
+
+/** Entry price for a property: USD when available, otherwise MXN (e.g. Thompson). */
+export function formatPropertyFrom(p: { priceFromUSD: number; priceFromMXN: number }): string {
+  if (p.priceFromUSD > 0) return formatUSD(p.priceFromUSD);
+  if (p.priceFromMXN > 0) return formatMXN(p.priceFromMXN);
+  return '';
+}
+
+/** Schema.org Offer price + currency matching the displayed entry price. */
+export function offerPrice(p: { priceFromUSD: number; priceFromMXN: number }): { price?: string; priceCurrency: string } {
+  if (p.priceFromUSD > 0) return { price: String(Math.round(p.priceFromUSD)), priceCurrency: 'USD' };
+  if (p.priceFromMXN > 0) return { price: String(Math.round(p.priceFromMXN)), priceCurrency: 'MXN' };
+  return { price: undefined, priceCurrency: 'USD' };
+}
