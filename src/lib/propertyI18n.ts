@@ -69,6 +69,9 @@ export const t = {
     requestUnitInfo: 'Solicitar información de esta unidad',
     close: 'Cerrar',
     surface: 'Superficie',
+    priceWithAdvisor: 'Precio y disponibilidad con tu asesor',
+    askAboutUnit: 'Consulta esta unidad →',
+    advisorPricingNote: 'Tu asesor Rivana te comparte precios vigentes, planos y esquemas de pago de cada residencia.',
   },
   en: {
     backToProperties: 'Properties',
@@ -138,6 +141,9 @@ export const t = {
     requestUnitInfo: 'Request information for this unit',
     close: 'Close',
     surface: 'Surface',
+    priceWithAdvisor: 'Pricing and availability with your advisor',
+    askAboutUnit: 'Ask about this unit →',
+    advisorPricingNote: 'Your Rivana advisor will share current pricing, floor plans and payment schemes for each residence.',
   }
 } as const;
 
